@@ -1,0 +1,192 @@
+<head>
+<title> Crea un Bot de Telegram con Bash y una sola línea de Terminal. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Crea un Bot de Telegram con Bash y una sola línea de Terminal" />
+<meta property="og:description" content="Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html" />
+
+<meta name="twitter:title" content=" Crea un Bot de Telegram con Bash y una sola línea de Terminal" />
+<meta name="twitter:description" content="Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="crea-un-bot-de-telegram-con-bash-y-una-sola-línea-de-terminal-1" title="Crea un Bot de Telegram con Bash y una sola línea de Terminal" data-export_file_name="Crea un Bot de Telegram con Bash y una sola linea de Terminal" data-description="Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc" data-export_date="2019-03-14 21:30" data-category="telegram" data-tag="bot, telegram" data-image="./images-blog/telegram.jpg">Crea un Bot de Telegram con Bash y una sola línea de Terminal</h1>
+<h5>Tiempo estimado de lectura: 9 minutos. 1040 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
+<center>
+<p><img src="../images-blog/telegram.jpg" /></p>
+</center>
+<p>Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc… si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc…</p>
+<p>Si, pero… ¿Que nos puede notificar?.</p>
+<p>Voy a mostraros algunos ejemplos que yo utilizo:</p>
+<ul>
+<li>Notificación al iniciar un servidor</li>
+<li>Notificación cuando alguien se conecta vía SSH, mostrándome la IP del dispositivo que se conecta</li>
+<li>Cuando ha finalizado la ejecución de un script. Por ejemplo una sicronización con rsync, copia de seguridad…</li>
+</ul>
+<p>Gracias a cron, podemos programar mensajes a determinados momentos del día para que nos notifique:</p>
+<ul>
+<li>Consumo de Ram</li>
+<li>Temperatura de la Raspberry</li>
+<li>IP pública de mi red</li>
+<li>Mis tareas pendientes en mi OrgMode</li>
+</ul>
+<p>Estos son tan solo unos ejemplos que yo utilizo, pero con un bot de Telegram, puedes hacer tanto como imagines.</p>
+<p>Incluso mi Router con OpenWrt, va enviándome mensajes, jejeje</p>
+<p>Durante mucho tiempo he estado utilizando Bots desarrollados en Python, pero en este Post voy a explicaros como hacerlo desde de Bash que es muchísimos más sencillo. De momento vamos a enviar mensajes de Texto.</p>
+<h2 id="primer-paso-para-crear-un-bot">Primer paso para crear un Bot</h2>
+<p>Voy a explicar en sencillos pasos como crear un Bot con <a href="https://t.me/BotFather"><span class="citation" data-cites="BotFather">@BotFather</span></a>, que es el padre de todos los Bots, creado por Telegram con el fin de facilitar la creación de estos:</p>
+<ul>
+<li><p>Clicamos este enlace <a href="https://t.me/BotFather"><span class="citation" data-cites="BotFather">@BotFather</span></a> e iniciamos el Bot.</p></li>
+<li><p>Seleccionamos o escribimos <strong>/newbot</strong>. Nos preguntará: ¿Que nombre quieres dar a tu bot?. Escribimos un nombre.</p></li>
+<li><p>El Bot nos respone ahora: ¿Que nick quieres usar para este bot?, recuerda que el nick debe de acabar en bot o _bot. ejem: <span class="citation" data-cites="nick_bot">@nick_bot</span>, <span class="citation" data-cites="nickbot">@nickbot</span>,…</p></li>
+<li><p><span class="citation" data-cites="BotFather">@BotFather</span> ya nos ha creado el bot!!!. Ahora ya tenemos nuestro numero de Token para poder utilizar nuestro bot.</p></li>
+</ul>
+<p>Si escribimos en <span class="citation" data-cites="BotFather">@BotFather</span>: <strong>/setuserpic</strong>, podremos elegir una foto para nuestro bot. Hay muchas mas opciones como añadir una descripción y demas, pero eso ya os lo dejo a vosotros…</p>
+<p>Cada usuario en Telegram tenemos un identificador, <strong>ID</strong>. Podemos saber el nuestro iniciando este bot <a href="https://t.me/userinfobot"><span class="citation" data-cites="userinfobot">@userinfobot</span></a>.</p>
+<p>Si queremos añadir el Bot en un Grupo o Canal, para que envíe mensajes o haga cualquier función, tendremos que averiguar el <strong>ID</strong> de ese Grupo o Canal. Para ello reenvía un mensaje desde el Canal/Grupo al Bot <a href="https://t.me/ChannelIdBot"><span class="citation" data-cites="ChannelIdBot">@ChannelIdBot</span></a>.</p>
+<h2 id="vamos-a-crear-nuestro-bot">Vamos a crear nuestro Bot</h2>
+<p>Lo primero que haremos, es confirmar que realmente podemos enviar mensajes con nuestro bot desde la terminal.</p>
+<p>Creamos el script: <code>nano mi_bot_telegram.sh</code></p>
+<p>Una vez abierto nano, vamos a copiar el contenido añadiendo el <strong>TOKEN</strong> del bot y nuestro <strong>ID</strong>.</p>
+<pre><code>#!/bin/bash
+
+TOKEN=&quot;escribe tu token aquí&quot;
+ID=&quot;escribe tu id aquí&quot;
+MENSAJE=&quot;Esto es un Mensaje de Prueba&quot;
+URL=&quot;https://api.telegram.org/bot$TOKEN/sendMessage&quot;
+
+curl -s -X POST $URL -d chat_id=$ID -d text=&quot;$MENSAJE&quot;
+</code></pre>
+<p>Ahora daremos permisos de ejecución:</p>
+<p><code>sudo chmod +x mi_bot_telegram.sh</code></p>
+<p>Vamos a ejecutarlo:</p>
+<p><code>sh mi_bot_telegram.sh</code></p>
+<p>FUNCIONA!!!!!!!!</p>
+<p>Si hemos escrito correctamente tanto el <strong>TOKEN</strong> como el número de nuestro <strong>ID</strong>, habremos recibido un mensaje en el chat del bot que hayamos creado con el contenido: <strong>Esto es un Mensaje de Prueba</strong></p>
+<p>Si somos un poco mas atrevidos o conocemos mejor bash, te abras dado cuenta que no era necesario hacer un script y podemos enviar el mensaje desde una única línea de Terminal. Sustituye añade el valor de las variables en la última línea del script así:</p>
+<pre><code>curl -s -X POST https://api.telegram.org/bot&quot;30534591:AAH5d23KtktfTQSWJMT9CiuginbsFQiF_2nB4&quot;/sendMessage -d chat_id=&quot;57384545&quot; -d text=&quot;Esto es un Mensaje de Prueba&quot;
+</code></pre>
+<p>Como puedes ver, he puesto unos valores inventados de muestra.</p>
+<h2 id="muestra-la-ip-de-la-máquina-que-se-conecta-por-ssh">Muestra la Ip de la máquina que se conecta por SSH</h2>
+<p>Si utilizas Bash, sabes que cada vez que te conectas por ssh o inicias una nueva sesión en tu terminal, Bash lee el archivo <strong>.bashrc</strong>. En él, al final de este archivo de configuración, añadiremos la línea de nuestro Bot y dentro del mensaje de texto, en lugar de un mensaje escribiremos:</p>
+<pre><code>$(echo $SSH_CLIENT | awk &#39;{ print $1}&#39;)
+</code></pre>
+<p>Quedaría de la siguiente manera:</p>
+<pre><code>curl -s -X POST https://api.telegram.org/bot&quot;30534591:AAH5d23KtktfTQSWJMT9CiuginbsFQiF_2nB4&quot;/sendMessage -d chat_id=&quot;57384545&quot; -d text=&quot;Se acaba de contecta por ssh con la IP $(echo $SSH_CLIENT | awk &#39;{ print $1}&#39;)&quot;
+</code></pre>
+<p>Si quieres probar que realmente funciona desde tu terminal, escribe en ella:</p>
+<p><code>echo $SSH_CLIENT | awk '{ print $1}'</code></p>
+<h2 id="ip-pública">Ip Pública</h2>
+<p>Vamos a conocer la IP pública y conectarnos directamente con nuestra Raspberry:</p>
+<p><code>curl ifconfig.co</code></p>
+<p>Como en el caso anterior, sustituiremos el texto plano por esto:</p>
+<p><code>$(curl ifconfig.co)</code></p>
+<h2 id="temperatura-de-tu-raspberry">Temperatura de tu Raspberry</h2>
+<p>Con este comando, tendré controlada la temperatura de mi raspberry y además, quedará guardado el historial en el chat del Bot:</p>
+<pre><code>/opt/vc/bin/vcgencmd measure_temp
+</code></pre>
+<p>Sustituye el texto del Bot por:</p>
+<pre><code>$(/opt/vc/bin/vcgencmd measure_temp)
+</code></pre>
+<h2 id="al-iniciar-mi-servidor">Al Iniciar mi servidor</h2>
+<p>He creado una carpeta llamada &quot;scripts&quot; en el &quot;Home&quot; del usuario. Allí he creado el script del Bot llamado <strong>inicio.sh</strong>, con un mesaje de texto tipo:</p>
+<p><strong>Se ha iniciado mi Raspberry</strong></p>
+<p>Para que esto funciones, vamos a escribir en cron, que cada vez que inicie nuestro servidor, PC, raspberry,… Nos envíe el mensaje:</p>
+<p>Escribe en la Terminal:</p>
+<p><code>crontab -e</code></p>
+<p>Y en la primera línea, escribiremos lo siguiente:</p>
+<p><code>@reboot ( sleep 100 ; sh $HOME/scripts/inicio.sh )</code></p>
+<p>Esto significa que tras 100 segundos después del inicio de nuestro servidor, pc, raspberry,… ejecutará el script <strong>inicio.sh</strong>, de manera que nos enviará el texto que pusimos en el script &quot;<strong>Se ha iniciado mi Raspberry</strong>&quot;.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Espero que te haya gustado este Post y Podcast. Ahora te toca a ti experimentar y juguetear con tu Bot de Telegram. Comenta tu experiencia en el Grupo de uGeek en Telegram.</p>
+<br>
+<p>Publicado por Angel el jueves 14 marzo del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-08-varias-cuentas-de-telegram-en-un-mismo-pc.html">Varias cuentas de telegram en un mismo PC</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-28-telegram-desktop-atajos-de-teclado.html">Telegram Desktop. Atajos de teclado</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html">Docker: Gotify. Tu servidor de Notificaciones</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html">Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html">Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

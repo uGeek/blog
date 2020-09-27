@@ -1,0 +1,131 @@
+<head>
+<title> Instalar Docker en Raspberry Pi con Raspbian. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Instalar Docker en Raspberry Pi con Raspbian" />
+<meta property="og:description" content="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html" />
+
+<meta name="twitter:title" content=" Instalar Docker en Raspberry Pi con Raspbian" />
+<meta name="twitter:description" content="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instalar-docker-en-raspberry-pi-con-raspbian-1" title="Instalar Docker en Raspberry Pi con Raspbian" data-export_file_name="Instalar Docker en Raspberry Pi con Raspbian" data-description="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" data-export_date="2019-02-03 19:45" data-category="docker" data-tag="raspberry,raspbian" data-image="./images-blog/ugeek.png">Instalar Docker en Raspberry Pi con Raspbian</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 243 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este.</p>
+<h2 id="instala-primero-algunos-paquetes-que-necesitamos">Instala primero algunos paquetes que necesitamos</h2>
+<p><code>sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common</code></p>
+<h2 id="obtener-la-clave-de-firma-docker-para-paquetes">Obtener la clave de firma Docker para paquetes</h2>
+<p><code>sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo &quot;$ID&quot;)/gpg | sudo apt-key add -</code></p>
+<h2 id="añadimos-los-repositorios-oficiales">Añadimos los repositorios oficiales</h2>
+<pre><code>sudo echo &quot;deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; echo &quot;$ID&quot;) \
+     $(lsb_release -cs) stable&quot; | \
+    sudo tee /etc/apt/sources.list.d/docker.list
+</code></pre>
+<h2 id="instalamos-docker">Instalamos Docker</h2>
+<pre><code>sudo apt update
+sudo apt install docker-ce
+</code></pre>
+<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
+<pre><code>sudo systemctl enable docker
+sudo systemctl start docker
+</code></pre>
+<h2 id="crear-el-grupo-docker-para-no-tener-que-poner-sudo">Crear el grupo Docker, para no tener que poner sudo</h2>
+<pre><code>sudo groupadd docker
+sudo usermod -aG docker $USER
+</code></pre>
+<p>Salir de la terminal y volver a entrar</p>
+<h2 id="instalar-portainer">Instalar Portainer</h2>
+<p><code>docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></p>
+<br>
+<p>Publicado por Angel el domingo 03 febrero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

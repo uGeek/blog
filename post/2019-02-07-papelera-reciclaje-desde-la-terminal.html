@@ -1,0 +1,167 @@
+<head>
+<title> Papelera Reciclaje desde la Terminal. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer 2019-02-07-papelera-reciclaje-desde-la-terminal.org y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Papelera Reciclaje desde la Terminal" />
+<meta property="og:description" content="Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer 2019-02-07-papelera-reciclaje-desde-la-terminal.org y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/papelera.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html" />
+
+<meta name="twitter:title" content=" Papelera Reciclaje desde la Terminal" />
+<meta name="twitter:description" content="Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer 2019-02-07-papelera-reciclaje-desde-la-terminal.org y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/papelera.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="papelera-reciclaje-desde-la-terminal-1" title="Papelera Reciclaje desde la Terminal" data-export_file_name="Papelera Reciclaje desde la Terminal" data-description="Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal." data-export_date="2019-02-07 17:15" data-category="bash" data-tag="terminal,zsh" data-image="./images-blog/papelera.jpg">Papelera Reciclaje desde la Terminal</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 542 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<center>
+<p><img src="../images-blog/papelera.jpg" /></p>
+</center>
+<p>Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer <strong>rm</strong> y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.</p>
+<h2 id="donde-están-los-archivos-de-mi-papelera">¿Donde están los archivos de mi Papelera?</h2>
+<p>Todos los archivos que eliminamos por interfaz gráfica, van a la papelera. La ruta de esta, es:</p>
+<p><code>~/.local/share/Trash/files</code></p>
+<h2 id="instalando-trash-cli">Instalando trash-cli</h2>
+<p>La instalación de trash-cli, es muy simple, ya que está en los repositorios oficiales:</p>
+<p><code>sudo apt install trash-cli</code></p>
+<h2 id="tabla-de-comandos">Tabla de comandos</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>trash-put</td>
+<td>Enviar archivos a la Papelera</td>
+</tr>
+<tr class="even">
+<td>trash-empty</td>
+<td>Vaciar la papelera</td>
+</tr>
+<tr class="odd">
+<td>trash-list</td>
+<td>Listar archivos que hay en la papelera</td>
+</tr>
+<tr class="even">
+<td>trash-restore</td>
+<td>Restaura un archivo de la papelera</td>
+</tr>
+<tr class="odd">
+<td>trash-rm</td>
+<td>Elimina archivos individuales de la papelera</td>
+</tr>
+</tbody>
+</table>
+<h2 id="buscar-un-archivo-en-la-papelera">Buscar un Archivo en la Papelera</h2>
+<p>Si combinamos trash-cli con grep, podremos buscar archivos y carpetas que hay en nuestra papelera, mediante el nombre</p>
+<p><code>trash-list | grep foo</code></p>
+<p>También podriamos jugar con nuestro comandos favoritos, como conocer cuantos archivos y carpetas tenemos:</p>
+<p><code>trash-list | wc -l</code></p>
+<h2 id="eliminar-solo-los-archivos-que-coincidan-con-un-patrón">Eliminar solo los archivos que coincidan con un patrón:</h2>
+<p>Aquí, por ejemplo, eliminaremos todos los archivos con extensión .txt</p>
+<p><code>trash-rm \ *.txt</code></p>
+<h2 id="eliminar-en-función-de-los-dias">Eliminar en función de los dias</h2>
+<p>Eliminar los archivos enviados a la papelera los últimos 10 dias.</p>
+<p><code>trash-empty 10</code></p>
+<h2 id="puedo-alias-rm-a-trash-put">¿Puedo alias rm a trash-put?</h2>
+<p>Si no me acuerdo de lo que hice ayer, menos me voy a acordar de esta magnífica aplicación. Así que para no borrar de una forma drástica mis archivos o carpetas y hacer uso de esta aplicación, he sustituido mediante el archivo de configuración <strong>.bashrc</strong>, que cuando ejecute el comando <strong>rm</strong>, en realidad ejecute el comando <strong>trash-put</strong> para que lo envie a la papelera.</p>
+<p>Para hacer esto, vamos ha hacer uso de los alias:</p>
+<p>Con tu editor de texto favorito en terminal, en este caso utilizaremos nano, añadiremos al final esta línea:</p>
+<p><code>nano ~/.bashrc</code></p>
+<pre><code>alias rm=&#39;trash-put&#39;
+</code></pre>
+<p>Ahora cada vez que hagamos un <strong>rm</strong>, enviará los archivos o carpetas a la papelera.</p>
+<p>Otra opción, sería el borrar los archivos mediante cron, programando periódicamente el borrado cada x días</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Como veis, gracias a esta aplicación y a nuestro ingenio con la terminal, podemos automatizar y tener mas controlados nuestros archivos.</p>
+<p>Disfrutar de la terminal 😜</p>
+<ul>
+<li><a href="https://github.com/andreafrancia/trash-cli">Repositorio</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el jueves 07 febrero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-listar-paquetes-instalados-y-hacer-un-poco-de-limpieza.html">Listar paquetes instalados y hacer un poco de limpieza</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-21-screen-enviar-scripts-a-segundo-plano.html">Screen. Enviar scripts a segundo plano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

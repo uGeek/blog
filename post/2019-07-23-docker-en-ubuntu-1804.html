@@ -1,0 +1,143 @@
+<head>
+<title>Docker en Ubuntu 18.04. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Vamos a instalar docker en Ubuntu 18.04" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker en Ubuntu 18.04" />
+<meta property="og:description" content="Vamos a instalar docker en Ubuntu 18.04" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-23-docker-en-ubuntu-1804.html" />
+
+<meta name="twitter:title" content="Docker en Ubuntu 18.04" />
+<meta name="twitter:description" content="Vamos a instalar docker en Ubuntu 18.04" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="docker-en-ubuntu-18.04-1" title="Docker en Ubuntu 18.04" data-export_file_name="Docker en Ubuntu 1804" data-description="Vamos a instalar docker en Ubuntu 18.04" data-export_date="2019-07-23 18:30" data-category="docker" data-tag="terminal,ubuntu" data-image="./images-blog/docker.png">Docker en Ubuntu 18.04</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 253 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Vamos a instalar docker en Ubuntu 18.04:</p>
+<center>
+<p><img src="../images-blog/docker.png" /></p>
+</center>
+<h2 id="requisitos-previos">Requisitos Previos</h2>
+<p>Instalaremos primero unos requisitos que permitiran a apt usar paquetes mediante https:</p>
+<p><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
+<h2 id="clave-gpg">Clave GPG</h2>
+<p><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
+<h2 id="repositorio">Repositorio</h2>
+<p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
+<pre><code>sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable&quot;
+</code></pre>
+<p>Actualizamos:</p>
+<p><code>sudo apt update</code></p>
+<p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
+<p><code>apt-cache policy docker-ce</code></p>
+<h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
+<pre><code>apt -y install docker-ce docker-compose
+</code></pre>
+<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
+<pre><code>systemctl enable docker
+systemctl start docker
+</code></pre>
+<h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
+<p><code>docker -v</code></p>
+<h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
+<p>Creamos el grupo docker:</p>
+<pre><code>groupadd docker
+</code></pre>
+<p>Añadimos al usuario:</p>
+<pre><code>usermod -aG docker $USER
+</code></pre>
+<h2 id="instalando-portainer">Instalando Portainer</h2>
+<p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>
+<pre><code>docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+</code></pre>
+<br>
+<p>Publicado por Angel el martes 23 julio del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

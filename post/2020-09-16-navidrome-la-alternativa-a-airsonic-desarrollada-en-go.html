@@ -1,0 +1,174 @@
+<head>
+<title>Navidrome. La alternativa a Airsonic desarrollada en Go. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Navidrome. La alternativa a Airsonic desarrollada en Go" />
+<meta property="og:description" content="Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/navidrome.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html" />
+
+<meta name="twitter:title" content="Navidrome. La alternativa a Airsonic desarrollada en Go" />
+<meta name="twitter:description" content="Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/navidrome.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="navidrome.-la-alternativa-a-airsonic-desarrollada-en-go-1" title="Navidrome. La alternativa a Airsonic desarrollada en Go" data-export_file_name="navidrome-la-alternativa-a-airsonic-desarrollada-en-go" data-description="Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo" data-export_date="2020-09-16 18:45" data-category="subsonic" data-tag="servidor,música" data-image="./images-blog/navidrome.png">Navidrome. La alternativa a Airsonic desarrollada en Go</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 394 palabras.    <a href="https://ugeek.github.io/blog/categories/subsonic">subsonic</a></h5>
+<p>Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo móvil. ¡Es como tu Spotify personal!</p>
+<p><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=es&amp;pto=aue&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;u=https://www.navidrome.org/demo/&amp;usg=ALkJrhjBly3sgwOBW24Lv39WuY7lBJAAxw">Aquí hay una Demo</a>, para que veáis el servicio en acción.</p>
+<center>
+<p><img src="../images-blog/navidrome.png" /></p>
+</center>
+<p>Cosas que me gustan:</p>
+<ul>
+<li>Página web del servicio</li>
+<li>Descargar canción o album en formato .zip</li>
+<li>Actualización si añades nuevo álbum</li>
+<li>Descargar archivos de listas y exportar listas en .m3u</li>
+<li>Listas públicas y privadas</li>
+</ul>
+<h2 id="características">Características</h2>
+<ul>
+<li>Maneja colecciones de música muy grandes</li>
+<li>Transmite prácticamente cualquier formato de audio disponible</li>
+<li>Lee y usa todos sus metadatos</li>
+<li>Gran soporte para compilaciones (álbumes de varios artistas) y conjuntos de cajas (álbumes de varios discos)</li>
+<li>Multiusuario , cada usuario tiene sus propios recuentos de reproducción, listas de reproducción, favoritos, etc.</li>
+<li>Uso de recursos muy bajo</li>
+<li>Multiplataforma , se ejecuta en macOS, Linux y Windows. También se proporcionan imágenes de Docker</li>
+<li>Binarios listos para usar para todas las plataformas principales, incluida Raspberry Pi</li>
+<li>Supervisa automáticamente su biblioteca en busca de cambios, importa nuevos archivos y recarga nuevos metadatos</li>
+<li>Interfaz web moderna y receptiva basada en Material UI</li>
+<li>Compatible con todos los clientes Subsonic, Madsonic, Airsonic</li>
+<li>Transcodificación sobre la marcha. Se puede configurar por usuario/reproductor. Se admite la codificación Opus</li>
+<li>Traducido a varios idiomas</li>
+</ul>
+<h2 id="docker">Docker</h2>
+<p>Tenemos disponible el docker para arquitectura amd64, arm y arm64.</p>
+<pre><code>docker run -d    --name navidrome    --restart=unless-stopped    --user $(id -u):$(id -g)    -v $HOME/docker/media/Musica:/music    -v $HOME/navidrome:/data    -p 4533:4533
+-e ND_LOGLEVEL=info    deluan/navidrome:latest
+</code></pre>
+<h2 id="docker-raspberry">Docker Raspberry</h2>
+<p>Vamos, que también podemos instalarlo en nuestra Raspberry Pi.</p>
+<pre><code>docker run -d    --name navidrome    --restart=unless-stopped    --user $(id -u):$(id -g)    -v $HOME/docker/media/Musica:/music    -v $HOME/navidrome:/data    -p 4533:4533
+-e ND_LOGLEVEL=info    deluan/navidrome:pi
+</code></pre>
+<h2 id="docker-compose">Docker Compose</h2>
+<pre><code>version: &quot;3&quot;
+services:
+navidrome:
+image: deluan/navidrome:latest
+ports:
+- &quot;4533:4533&quot;
+environment:
+# All options with their default values:
+ND_MUSICFOLDER: /music
+ND_DATAFOLDER: /data
+ND_SCANINTERVAL: 1m
+ND_LOGLEVEL: info
+ND_PORT: 4533
+ND_TRANSCODINGCACHESIZE: 100MB
+ND_SESSIONTIMEOUT: 24h
+ND_BASEURL: &quot;&quot;
+volumes:
+- &quot;$HOME/navidrome:/data&quot;
+- &quot;$HOME/docker/media/Musica:/music:ro&quot;
+
+</code></pre>
+<h2 id="reescanear-biblioteca">Reescanear biblioteca</h2>
+<p>Entramos dentro del docker y ejecutamos</p>
+<pre><code>/app/navidrome scan -f
+</code></pre>
+<h2 id="ayuda">Ayuda</h2>
+<pre><code>/app/navidrome --help
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://www.navidrome.org" class="uri">https://www.navidrome.org</a></li>
+<li><a href="https://github.com/deluan/navidrome" class="uri">https://github.com/deluan/navidrome</a></li>
+<li><a href="https://www.navidrome.org/docs/installation/docker/" class="uri">https://www.navidrome.org/docs/installation/docker/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el miércoles 16 septiembre del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html">Gonic. El mejor y más ligero servidor de música con api Subsonic</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-31-supysonic-0-5-0-total-compatibilidad-con-todos-los-clientes-subsonic.html">Supysonic 0.5.0. Total compatibilidad con todos los clientes Subsonic</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html">Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html">Docker: Supysonic. El mejor y más ligero servidor de música</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,160 @@
+<head>
+<title>Bsync. Sincronización de archivos bidireccional, que utiliza Rsync. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Tal como expliqué en algún que otro Podcast-Artículo, GitHub nos ofrece muchos proyectos súper interesantes y útiles. Es el caso de Bsync, un una herramienta de sincronización de archivos bidireccional," />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Bsync. Sincronización de archivos bidireccional, que utiliza Rsync" />
+<meta property="og:description" content="Tal como expliqué en algún que otro Podcast-Artículo, GitHub nos ofrece muchos proyectos súper interesantes y útiles. Es el caso de Bsync, un una herramienta de sincronización de archivos bidireccional," />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/sync.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html" />
+
+<meta name="twitter:title" content="Bsync. Sincronización de archivos bidireccional, que utiliza Rsync" />
+<meta name="twitter:description" content="Tal como expliqué en algún que otro Podcast-Artículo, GitHub nos ofrece muchos proyectos súper interesantes y útiles. Es el caso de Bsync, un una herramienta de sincronización de archivos bidireccional," />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/sync.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="bsync.-sincronización-de-archivos-bidireccional-que-utiliza-rsync-1" title="Bsync. Sincronización de archivos bidireccional, que utiliza Rsync" data-export_file_name="bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync" data-description="Tal como expliqué en algún que otro Podcast-Artículo, GitHub nos ofrece muchos proyectos súper interesantes y útiles. Es el caso de Bsync, un una herramienta de sincronización de archivos bidireccional," data-export_date="2019-10-24 22:22" data-category="sync" data-tag="python,backup,servidor,bsync" data-image="./images-blog/sync.png">Bsync. Sincronización de archivos bidireccional, que utiliza Rsync</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 410 palabras.    <a href="https://ugeek.github.io/blog/categories/sync">sync</a></h5>
+<p>Tal como expliqué en algún que otro Podcast-Artículo, GitHub nos ofrece muchos proyectos súper interesantes y útiles. Es el caso de Bsync, un una herramienta de sincronización de archivos bidireccional, que utiliza rsync desarrollada por <a href="http://positon.org/">Marc MAURICE</a>.</p>
+<p>Bsync es una alternativa a Unison escrita en Python3. Puede detectar y aplicar archivos movidos de un lado a otro, Unison, en cambio, usa llamadas de copia para manejar los archivos movidos.</p>
+<center>
+<p><img src="../images-blog/sync.png" /></p>
+</center>
+<p>Bsync tiene licencia GPL.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Instalación la haremos descargando el script directamente desde GitHub.</p>
+<pre><code>wget https://raw.github.com/dooblem/bsync/master/bsync
+chmod +x bsync
+</code></pre>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<h3 id="ejemplos-de-sincronización">Ejemplos de sincronización</h3>
+<p>Sincronización en local:</p>
+<pre><code>./bsync DIRECTORIO1 DIRECTORIO2
+</code></pre>
+<p>Si no quieres que te pregunte bsync para confirmar el archivo bueno en la sincronización, puedes utilizar la opción <strong>-b</strong>.</p>
+<pre><code>./bsync DIRECTORIO1 DIRECTORIO2 -b
+</code></pre>
+<p>Sincronización vía SSH:</p>
+<pre><code>./bsync ALICE_DIR  bob@sshserver:BOB_DIR
+</code></pre>
+<h3 id="directorio-maestro-a-modo-de-servidor">Directorio Maestro a modo de servidor</h3>
+<p>El desarrollador nos facilita el poder utilizar bsync con un directorio maestro, que podría ser la carpeta de un servidor:</p>
+<p>Alice hace cambios en local</p>
+<pre><code>./bsync ALICE_DIR MASTER_DIR
+./bsync BOB_DIR   MASTER_DIR
+</code></pre>
+<p>Bob recibirá los cambios de Alice, enviando sus cambios a master al mismo tiempo</p>
+<h2 id="bsync-ignore">.bsync-ignore</h2>
+<p>Podemos ignorar archivos y carpetas, para que no se sincronizen, añadiendo la ruta completa del archivo o carpeta en un archivo de texto plano que situaremos en la carpeta raíz de la carpeta a sincronizar.</p>
+<p>Este archivo tendrá el nombre de <strong>.bsync-ignore</strong></p>
+<p>En este archivo, no podemos añadir comentarios.</p>
+<pre><code>/home/angel/DIRECTORIO-SYNC/archivo.org
+/home/angel/DIRECTORIO-SYNC/.config
+</code></pre>
+<h2 id="ayuda">Ayuda</h2>
+<p>Comando de ayuda</p>
+<pre><code>./bsync -h
+</code></pre>
+<h2 id="algunas-características">Algunas Características</h2>
+<ul>
+<li>Detección de archivos movidos (usando números de inodes)</li>
+<li>Directorios remotos usando SSH</li>
+<li>No hay problema con enlaces simbólicos o permisos</li>
+<li>Detección de conflictos</li>
+<li>Python no es necesario en el lado remoto (solo GNU find y rsync)</li>
+<li>Excluir algunos subdirectorios de la sincronización (solo cree un .bsync-ignorearchivo)</li>
+<li>Mueva sus directorios de sincronización sin perder memoria de sincronización (listas de archivos almacenadas dentro de directorios en .bsync-snap-*archivos)</li>
+<li>Permisos de desactivación automática en sistemas de archivos gordos</li>
+<li>Soporte para MacOSX (requisito: GNU find instalado)</li>
+</ul>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/dooblem/bsync" class="uri">https://github.com/dooblem/bsync</a></li>
+<li><a href="https://github.com/uGeek/bsync" class="uri">https://github.com/uGeek/bsync</a> No me he podido resistir a Forkear el Repositorio😜</li>
+</ul>
+<br>
+<p>Publicado por Angel el jueves 24 octubre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-01-etesync-tareas-contactos-y-agendas-sincronizadas-de-extremo-a-extremo.html">EteSync. Tareas, Contactos y Calendarios, sincronizadas de extremo a extremo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-26-rclone-bidireccional-con-rclonesync.html">Rclone bidireccional con Rclonesync</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-01-rclone-instalando-la-ultima-version.html">Rclone. Instalando la última versión</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html">Bsync. Sincronización de archivos bidireccional, que utiliza Rsync</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-22-orzly-tus-orgmode-syncronizados-por-webdav.html">Orzly. Tus OrgMode syncronizados por WebDav</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-06-instalando-syncthing-por-reposistorios.html">Instalando Syncthing por reposistorios</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

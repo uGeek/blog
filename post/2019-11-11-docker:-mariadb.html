@@ -1,0 +1,162 @@
+<head>
+<title>Docker: Mariadb. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker: Mariadb" />
+<meta property="og:description" content="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/mariadb.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-11-11-docker:-mariadb.html" />
+
+<meta name="twitter:title" content="Docker: Mariadb" />
+<meta name="twitter:description" content="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/mariadb.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="docker-mariadb-1" title="Docker: Mariadb" data-export_file_name="Docker: Mariadb" data-description="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" data-export_date="2019-11-11 17:55" data-category="docker" data-tag="mariadb" data-image="./images-blog/mariadb.png">Docker: Mariadb</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 352 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,… Pero yo he optado por crear uno yo mismo.</p>
+<p>El Docker que creé lo subí al DockerHub, y dos meses después ya supera mucho más de 10.000 descargas.</p>
+<center>
+<p><img src="../images-blog/mariadb.png" /></p>
+</center>
+<p>El objetivo erá utilizar un mariadb muy ligero que partiera de un Alpine Linux.</p>
+<h2 id="montar-el-docker">Montar el Docker</h2>
+<p>El puerto por defecto de mariadb, que es el 3306, yo en le ejemplo lo estoy desviando al 3307. Puedes utilizar el que tu desees.</p>
+<p>Recuerda poner la contraseña de la base de datos, poniéndola en lugar de <code>my-secret-pw</code>.</p>
+<p>Si creas el contenedor como está aquí:</p>
+<ul>
+<li>usuario -&gt; root</li>
+<li>ip -&gt; La del servidor</li>
+<li>Puerto -&gt; 3307</li>
+<li>Contraseña -&gt; my-secret-pw</li>
+</ul>
+<p>Las carpetas que están en <strong>-v</strong>, son las carpetas de configuración de mariadb.</p>
+<h3 id="para-arm">Para ARM</h3>
+<pre><code>docker run --name mariadb \
+-p  3307:3306 \
+-v $HOME/docker/mariadb/config:/var/lib/mysql \
+-v $HOME/docker/mariadb/conf.d:/etc/mysql/conf.d \
+-e MYSQL_ROOT_PASSWORD=my-secret-pw -d \
+ugeek/mariadb:arm
+</code></pre>
+<h3 id="para-amd64">Para amd64</h3>
+<p>Arquitectura 64bits</p>
+<pre><code>docker run --name mariadb \
+-p  3307:3306 \
+-v $HOME/docker/mariadb/config:/var/lib/mysql \
+-v $HOME/docker/mariadb/conf.d:/etc/mysql/conf.d \
+-e MYSQL_ROOT_PASSWORD=my-secret-pw -d \
+ugeek/mariadb:amd64
+</code></pre>
+<h2 id="crea-la-base-de-datos">Crea la base de datos</h2>
+<p>Entramos dentro del contenedor:</p>
+<pre><code>docker exec -i -t mariadb sh
+</code></pre>
+<p>Una vez dentro, ejecutaremos los siguiente comandos.</p>
+<h3 id="ejecutamos-mariadb">Ejecutamos mariadb</h3>
+<pre><code>mysql -u root -p
+</code></pre>
+<h3 id="creamos-la-base-de-datos">Creamos la base de datos</h3>
+<pre><code>CREATE DATABASE IF NOT EXISTS &lt;name&gt;; 
+</code></pre>
+<p>Damos privilegios para que acceda el servicio:</p>
+<pre><code>GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;localhost&#39;;
+</code></pre>
+<pre><code>flush privileges;
+</code></pre>
+<p>Salimos de mariadb:</p>
+<pre><code>\q
+</code></pre>
+<p>Salimos del contenedor:</p>
+<pre><code>exit
+</code></pre>
+<br>
+<p>Publicado por Angel el lunes 11 noviembre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

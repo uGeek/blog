@@ -1,0 +1,130 @@
+<head>
+<title> Montar un servidor webdav con dafs2. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Montar un servidor webdav con dafs2" />
+<meta property="og:description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html" />
+
+<meta name="twitter:title" content=" Montar un servidor webdav con dafs2" />
+<meta name="twitter:description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="montar-un-servidor-webdav-con-dafs2-1" title="Montar un servidor webdav con dafs2" data-export_file_name="Montar un servidor webdav con dafs2" data-description="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" data-export_date="2019-06-11 20:20" data-category="servidor" data-tag="webdav,raspberry" data-image="./images-blog/dav.png">Montar un servidor webdav con dafs2</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 265 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<p>En próximos Podcast y Posts, os hablaré de como montar un servidor con webdav, para sincronizar nuestros archivos.</p>
+<center>
+<p><img src="../images-blog/dav.png" /></p>
+</center>
+<p>Ahora de momento, vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex… en una carpeta local. Para ello vamos a utilizar dafs2.</p>
+<h2 id="instalación">Instalación</h2>
+<p>La instalación la haremos desde los repositorios:</p>
+<p><code>sudo apt-get install davfs2</code></p>
+<p>Seleccionanos <strong>YES</strong>, indicando que cualquiera que no sea usuario root, pueda montar una unidad.</p>
+<p>Creamos una carpeta, por ejemplo la llamaremos webdav, para montar después nuestro servidor.</p>
+<p><code>mkdir -p ~/webdav</code></p>
+<p>Reconfigurar davfs2:</p>
+<p><code>sudo dpkg-reconfigure davfs2</code></p>
+<h2 id="montar">Montar</h2>
+<p>Vamos a montar nuestra servidor webdav en la carpeta local llamada webdav.</p>
+<p><code>sudo mount.davfs https://&lt;URL&gt;/ ~/webdav</code></p>
+<p>también podemos utilizar:</p>
+<pre><code>sudo mount -t davfs -o noexec https://&lt;URL&gt;/ ~/webdav
+</code></pre>
+<h2 id="desmontar">Desmontar</h2>
+<pre><code>sudo fusermount -u ~/webdav
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>En pocos pasos, podemos acceder a la totalidad de los archivos del servidor webdav y sincronizarlos con todos nuestros dispositivos.</p>
+<br>
+<p>Publicado por Angel el martes 11 junio del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html">Navidrome. La alternativa a Airsonic desarrollada en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html">gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html">Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html">FreshRSS. Mi servidor de RSS</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-07-servidor-de-ebooks-con-calibre.html">Servidor de ebooks en Ubuntu, Debian, Raspbian,… con Calibre</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

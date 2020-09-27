@@ -1,0 +1,214 @@
+<head>
+<title>Calendario en la terminal. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Calendario en la terminal" />
+<meta property="og:description" content="Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/calendar.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-11-calendario-en-la-terminal.html" />
+
+<meta name="twitter:title" content="Calendario en la terminal" />
+<meta name="twitter:description" content="Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/calendar.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="calendario-en-la-terminal-1" title="Calendario en la terminal" data-export_file_name="Calendario en la terminal" data-description="Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el" data-export_date="2019-10-11 17:55" data-category="terminal" data-tag="bash,calendario" data-image="./images-blog/calendar.jpg">Calendario en la terminal</h1>
+<h5>Tiempo estimado de lectura: 5 minutos. 568 palabras.    <a href="https://ugeek.github.io/blog/categories/terminal">terminal</a></h5>
+<p>Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el uso de scripts,</p>
+<center>
+<p><img src="../images-blog/calendar.jpg" /></p>
+</center>
+<p>Vamos a ver algunos ejemplos del uso de <strong>cal</strong> y <strong>ncal</strong></p>
+<h2 id="cal-y-ncal">cal y ncal</h2>
+<h3 id="cal">cal</h3>
+<p>Con el comando <strong>cal</strong>, nos presenta el calendario con los días en la parte superior</p>
+<pre><code>  Septiembre 2019     
+do lu ma mi ju vi sá  
+ 1  2  3  4  5  6  7  
+ 8  9 10 11 12 13 14  
+15 16 17 18 19 20 21  
+22 23 24 25 26 27 28  
+29 30     
+</code></pre>
+<h3 id="ncal">ncal</h3>
+<p>Con <strong>ncal</strong>, nos muestra los días de la semana a la izquierda</p>
+<pre><code>    Septiembre 2019   
+lu     2  9 16 23 30
+ma     3 10 17 24   
+mi     4 11 18 25   
+ju     5 12 19 26   
+vi     6 13 20 27   
+sá     7 14 21 28   
+do  1  8 15 22 29   
+</code></pre>
+<h2 id="ejemplos-de-cal-y-ncal">Ejemplos de cal y ncal</h2>
+<h3 id="calendario-mes-actual">Calendario mes actual</h3>
+<pre><code>cal
+</code></pre>
+<pre><code>ncal
+</code></pre>
+<h3 id="calendario-de-un-mes-en-concreto.">Calendario de un mes en concreto.</h3>
+<p>Ejemplo: Mes número 3, (<strong>-m3</strong>).</p>
+<pre><code>cal -m3
+</code></pre>
+<h3 id="año-completo">Año completo</h3>
+<p>Por ejemplo 2019. Opción <strong>-y</strong> de year, año.</p>
+<pre><code>cal -y 2019
+</code></pre>
+<h3 id="mes-y-un-año-en-concreto">Mes y un año en concreto</h3>
+<p>Ejemplo el mes 7 del año 2017</p>
+<pre><code>cal -d 2017-07
+</code></pre>
+<h3 id="número-de-semana">Número de Semana</h3>
+<pre><code>ncal -w
+</code></pre>
+<p>Para saber en que número de semana estamos, necesitamos utilizar <strong>ncal</strong> y la opción <strong>-w</strong> de week.</p>
+<pre><code>    Septiembre 2019   
+lu     2  9 16 23 30
+ma     3 10 17 24   
+mi     4 11 18 25   
+ju     5 12 19 26   
+vi     6 13 20 27   
+sá     7 14 21 28   
+do  1  8 15 22 29   
+   35 36 37 38 39 40
+</code></pre>
+<h3 id="meses-precedentes-posterior">Meses precedentes, posterior…</h3>
+<p>Mostrar el mes actual, precedente y posterior. Este comanda vale tanto para <strong>cal</strong> como <strong>ncal</strong>.</p>
+<pre><code>cal -3
+</code></pre>
+<p>Mostrar los 2 meses posteriores</p>
+<pre><code>cal -A2
+</code></pre>
+<p>Mostrar los 2 meses anteriores</p>
+<pre><code>cal -B2
+</code></pre>
+<p>Podemos combinar ambas opciones</p>
+<pre><code>cal -B1 -A2
+</code></pre>
+<h3 id="número-del-día-en-el-año">Número del día en el año</h3>
+<p>Número del día del año</p>
+<pre><code>cal -j
+</code></pre>
+<p>Mostrar todos los días del año</p>
+<pre><code>cal -j 2019
+</code></pre>
+<h3 id="iniciar-semana-en-lunes">Iniciar semana en Lunes</h3>
+<p>Iniciar la semana en Lunes. Esta opción solo está disponible con <strong>ncal</strong></p>
+<pre><code>ncal -M
+</code></pre>
+<p>Para mostrar el calendario, comenzando por el lunes como lo haría <strong>cal</strong>, vanos a ejecutar este miniscript:</p>
+<pre><code>cal | awk &#39;{ print &quot; &quot;$0; getline; print &quot; Lu Ma Mi Ju Vi Sa Do&quot;; \
+getline; if (substr($0,1,2) == &quot; 1&quot;) print &quot;                    1 &quot;; \
+do { prevline=$0; if (getline == 0) exit; print &quot; &quot; \
+substr(prevline,4,17) &quot; &quot; substr($0,1,2) &quot; &quot;; } while (1) }&#39;
+</code></pre>
+<h3 id="filtrar-con-grep">Filtrar con grep</h3>
+<p>Filtrar los miércoles del mes actual</p>
+<pre><code>ncal | grep mi
+</code></pre>
+<pre><code>mi     4 11 18 25
+</code></pre>
+<h3 id="que-pasó-el-día-de-hoy-hace-años">Que pasó el día de hoy hace años</h3>
+<p>La opción <strong>-l</strong>, muestra lo que pasó y <strong>0</strong> en el día de hoy</p>
+<pre><code>calendar -l 0
+</code></pre>
+<p>En los próximos 5 días</p>
+<pre><code>calendar -l 5
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://www.computerhope.com/unix/ucal.htm" class="uri">https://www.computerhope.com/unix/ucal.htm</a></li>
+<li><a href="https://www.howtoforge.com/linux-cal-ncal-command/" class="uri">https://www.howtoforge.com/linux-cal-ncal-command/</a></li>
+<li><a href="https://pixabay.com/es/photos/calendario-calendario-mural-d%C3%ADas-1990453/">imagen</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el viernes 11 octubre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html">Saltando de un directorio a otro con Jump</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html">Gestionando mis tareas en la terminal con topydo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html">Simplenote para terminal. Sncli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html">W3M. Navegador para Terminal y Emacs</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

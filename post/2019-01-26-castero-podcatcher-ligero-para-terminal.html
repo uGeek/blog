@@ -1,0 +1,151 @@
+<head>
+<title> Castero. Podcatcher ligero para Terminal. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Castero. Podcatcher ligero para Terminal" />
+<meta property="og:description" content="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/castero.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html" />
+
+<meta name="twitter:title" content=" Castero. Podcatcher ligero para Terminal" />
+<meta name="twitter:description" content="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/castero.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="castero.-podcatcher-ligero-para-terminal-1" title="Castero. Podcatcher  ligero para Terminal" data-export_file_name="Castero Podcatcher ligero para Terminal" data-description="Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal." data-export_date="2019-01-26 14:00" data-category="terminal" data-tag="podcast,bash" data-image="./images-blog/castero.png">Castero. Podcatcher ligero para Terminal</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 409 palabras.    <a href="https://ugeek.github.io/blog/categories/terminal">terminal</a></h5>
+<p>Hay muchas aplicaciones para escuchar podcast, pero ninguna tan ligera como esta. Desarrollada en python, <a href="https://github.com/xgi/castero">Castero</a> nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal.</p>
+<center>
+<p><img src="../images-blog/castero.png" /></p>
+</center>
+<h2 id="instalación">Instalación</h2>
+<p>Si no tenemos los módulos de python pip: <code>sudo apt install python3-pip</code></p>
+<p>Instalación de castero:</p>
+<p><code>sudo pip3 install castero</code></p>
+<p>Para poder escuchar los podcast, requiere de aplicaciones externas como vlc versión 2.2.3 o superior o mpv con libmpv</p>
+<h2 id="iniciando-castero">Iniciando Castero</h2>
+<p>Tan simple como escribir en tu terminal</p>
+<p><code>caster</code></p>
+<p>Se abrirá una pantalla dividida en 3 partes:</p>
+<ul>
+<li>Feed: Los podcast que estamos suscritos a través de su Feed</li>
+<li>Episodies: Los episodios disponibles para ser escuchados</li>
+<li>Metadata: La información del episodio seleccionado</li>
+</ul>
+<h2 id="uso">Uso</h2>
+<p>La verdad es que es muy sencillo de utilizar. No iremos desplazando por las columnas de la pantalla con los cursores de izquierda, derecha, arriba, abajo.</p>
+<p>Para salir, como la mayoría de las app's de ternimal <strong>q</strong>.</p>
+<p>Para añadir el Feed deseado <strong>a</strong>…</p>
+<pre><code>Comandos
+    h - pantalla de ayuda
+    q - salir del cliente
+    a - añadir un feed
+    d - eliminar el feed seleccionado
+    r - recargar / actualizar feeds
+    s - guardar el episodio para la reproducción sin conexión
+    flechas - navegar por los menús
+    página arriba / abajo - menús de desplazamiento
+    entrar - reproducir el feed / episodio seleccionado
+    espacio - agregar el feed / episodio seleccionado a la cola
+    c - borrar la cola
+    n - ir al siguiente episodio en la cola
+    i - Invertir el orden del menú
+    p o k - pausa / reproducir el episodio actual
+    f o l - buscar hacia adelante
+    b o j - buscar hacia atrás
+</code></pre>
+<h2 id="archivos-de-configuración">Archivos de configuración</h2>
+<p>El archivo de configuración se encuentra en {HOME}/.config/castero/ después de que el cliente se haya ejecutado al menos una vez. La información de los Podcast está en {HOME}/.local/share/castero/feeds , pero este archivo no se puede editar de forma manual.</p>
+<ul>
+<li><a href="https://github.com/xgi/castero">Repositorio de Castero</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el sábado 26 enero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html">Saltando de un directorio a otro con Jump</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html">Gestionando mis tareas en la terminal con topydo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html">Simplenote para terminal. Sncli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html">W3M. Navegador para Terminal y Emacs</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

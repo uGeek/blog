@@ -1,0 +1,258 @@
+<head>
+<title> Controla tu Raspberry, Servidor o PC desde Telegram. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Controla tu Raspberry, Servidor o PC desde Telegram" />
+<meta property="og:description" content="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/tocar_movil.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html" />
+
+<meta name="twitter:title" content=" Controla tu Raspberry, Servidor o PC desde Telegram" />
+<meta name="twitter:description" content="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/tocar_movil.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="controla-tu-raspberry-servidor-o-pc-desde-telegram-1" title="Controla tu Raspberry, Servidor o PC desde Telegram" data-export_file_name="Controla tu Raspberry Servidor o PC desde Telegram" data-description="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" data-export_date="2019-04-11 17:45" data-category="telegram" data-tag="domotica" data-image="./images-blog/tocar_movil.jpg">Controla tu Raspberry, Servidor o PC desde Telegram</h1>
+<h5>Tiempo estimado de lectura: 10 minutos. 1165 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
+<p>Voy a explicarte como configurar un Bot de Telegram, que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente.</p>
+<center>
+<p><img src="../images-blog/tocar_movil.jpg" /></p>
+</center>
+<p>Con este Bot no solo podrás conocer la temperatura, IP pública, … Tal como te expliqué en el Post <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, sino que también podrás interactuar con él, iniciando o deteniendo servicios, mediante el GPIO podrás conectar luces, motores de persianas, puertas… ejecutar comandos que ejecutarías en la terminal, actualizar tu servidor… En definitiva, para todo aquello que dé tu imaginación.</p>
+<p>Lo mejor de todo, es que nos conectaremos a través de la API de Telegram, de modo que no necesitaremos utilizar ningún servicio tipo VPN. Nuestro Bot de Telegram, puede convertirse en un mando a distancia, teniendo el control total de todo lo que suceda en tu casa y lo mejor de todo, sin tener conocimientos de programación. Vamos a utilizar nuevamente Bash, como lenguaje de programación y añadiendo cuatro parámetros, vas a comenzar a controlarlo todo.</p>
+<p>He hecho un Fork de BaTBot en su última versión modificada por eliafino y lo he traducido al Castellano para el fácil comprensión. BaTBot en la versión 1.4.3.4 lo encontrarás en mi <a href="https://github.com/uGeek/BaTbot">Repositorio en GitHub</a>.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Lo primero que vamos ha hacer es descargar BaTbot y clonar el repositorio, por ejemplo, en la carpeta de usuario de nuestra distro:</p>
+<pre><code>cd                                             # Esto nos llevará a la carpeta de usuario
+git clone https://github.com/uGeek/BaTbot.git  # Clonamos el repositorio
+cd ~/BaTbot/bin/                               # Accedemos a la carpeta ~/BaTbot/bin
+</code></pre>
+<p>Dentro de la carpeta <strong>bin</strong>, encontraremos el script del bot llamado <strong>batbot</strong>.</p>
+<h2 id="configurando-batbot">Configurando BaTbot</h2>
+<p>Vamos a editar el archivo <strong>batbot</strong> y añadir las variables necesarias:</p>
+<pre><code>nano ~/BaTbot/bin/batbot
+</code></pre>
+<p>La configuración va a ser muy simple. Necesitamos añadir las siguientes variables en el script:</p>
+<ul>
+<li>TELEGRAMTOKEN= &lt;TOKEN&gt;</li>
+<li>PERSONALID= &lt;ID DEL USUARIO MAESTRO O MÁXIMO ADMINISTRADOR&gt;</li>
+<li>BATBOTUSR= &lt; RUTA DE LA CARPETA .batbot &gt;</li>
+</ul>
+<p>El TOKEN si recordáis, lo obteníamos a través de <a href="https://t.me/BotFather"><span class="citation" data-cites="BotFather">@BotFather</span></a> y el ID, mediante el Bot <a href="https://t.me/ChannelIdBot"><span class="citation" data-cites="ChannelIdBot">@ChannelIdBot</span></a>.</p>
+<p>Si no recuerdas bien los pasos, te invito a leer el Post <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, donde explico los pasos con mas detalle.</p>
+<p>La ruta de la carpeta <strong>.batbot</strong>, hay que ponerla completa. Dentro de esta carpeta está la lista de usuarios que tendrán permisos para utilizar nuestro Bot.</p>
+<p>Aquí tienes un ejemplo, con parámetros inventados, como quedaría:</p>
+<pre><code># Ingrese el token BOT devuelto por BotFather                                                                                               
+TELEGRAMTOKEN=&quot;780756347993:AAEhwrthws_Y9SOdPMl2NI2jM0oyQX0DMg&quot;
+
+# Ingrese el ID del usuario maestro, para notificaciones de uso                                                                               
+PERSONALID=&quot;68690969&quot;
+
+# Ruta donde está nuestra carpeta .batbot en nuestro servidor, Raspberry,...                                       
+BATBOTUSR=&quot;$HOME/BaTbot/.batbot&quot;
+</code></pre>
+<p>Por defecto, BaTbot revisará cada 5 segundos si hay un nuevo mensaje. Esta opción la podemos personalizar poniendo el tiempo en segundos que deseemos:</p>
+<pre><code># revisar nuevos mensajes cada X segundos:                                                                                                  
+CHECKNEWMSG=5
+</code></pre>
+<h2 id="añadiendo-nuestro-id-al-listado-usuarios-habilitados-al-uso-del-bot">Añadiendo Nuestro ID al listado usuarios habilitados al uso del Bot</h2>
+<p>Ahora vamos a añadir nuestro ID de usuario, al listado de usuarios que tienen permisos para utilizar el Bot. Para ello, accederemos al archivo <strong>allowed_users</strong> :</p>
+<pre><code>nano ~/BaTbot/.batbot/allowed_users
+</code></pre>
+<p>Borraremos los números de ID que vienen de ejemplo y añadiremos nuestro ID o todos aquellos ID que tendrán permiso para poder utilizar el Bot.</p>
+<p>Recuerda que si no ponemos nuestro ID en esta lista, no podremos interactuar con nuestro Bot.</p>
+<h2 id="ejecutar-el-bot">Ejecutar el Bot</h2>
+<p>Ahora volveremos a la carpeta <strong>bin</strong> y ejecutaremos <strong>./batbot</strong></p>
+<pre><code>cd ~/BaTbot/bin/
+./batbot
+</code></pre>
+<p>Ya puedes enviar mensajes al Bot. Escribe el comando <strong>/menu</strong>, para que te muestre el menú.</p>
+<p>En la terminal podremos ver todos los mensajes que recibe el Bot en tiempo real y que usuarios lo envían.</p>
+<h2 id="configurar-un-menú-y-añadir-comandos">Configurar un menú y añadir comandos</h2>
+<p>Esta parte del script, es donde podremos añadir comandos para que los ejecute nuestro Bot.</p>
+<p>Aquí hay algunos de ejemplo, pero si no los vas a utilizar, elimínalos de la lista. Deja solo aquellos comandos que utilizaras.</p>
+<p>Para recordar los comandos, crea el comando llamado por ejemplo <strong>/menu</strong> y añade todos los comandos disponibles.</p>
+<p>El Bot solo reconocerá como comando las palabras que empiezan por <strong>/</strong>.</p>
+<pre><code>declare -A botcommands=(
+        [&quot;/start&quot;]=&#39;exec userlist @USERID:@FIRSTNAME@LASTNAME&#39;
+        [&quot;/myid&quot;]=&#39;echo Tu ID es: @USERID&#39;
+        [&quot;/myuser&quot;]=&#39;echo Tu nombre de usuario es: @USERNAME&#39;
+        [&quot;/ping ([a-zA-Z0-9]+)&quot;]=&#39;echo Pong: @R1&#39;
+        [&quot;/uptime&quot;]=&quot;uptime&quot;
+        [&quot;/add ([0-9]+)&quot;]=&#39;exec admadduser @USERID @R1&#39;
+        [&quot;/del ([0-9]+)&quot;]=&#39;exec admdeluser @USERID @R1&#39;
+        [&quot;/lista&quot;]=&#39;exec admlistuser @USERID&#39;
+        [&quot;/run (.*)&quot;]=&quot;exec @R1&quot;
+        [&quot;/docker_nginx_start&quot;]=&quot;docker stop nginx&quot;
+        [&quot;/docker_nginx_stop&quot;]=&quot;docker start nginx&quot;
+        [&quot;/menu&quot;]=&quot;echo -e Bienvenido a Mi Bot\n/myid \n/myuser \n/uptime \n/run \n/ping \n\nDockers:\n/docker_nginx_start \n/docker_nginx_stop \n\n\n/menu&quot;)
+</code></pre>
+<p>En el chat del Bot, si ejecutamos el comando <strong>/menu</strong>, nos contestará:</p>
+<pre><code>Bienvenido a Mi Bot
+/myid 
+/myuser 
+/uptime 
+/run 
+/ping 
+
+Dockers:
+/docker_nginx_start 
+/docker_nginx_stop 
+
+
+/menu
+</code></pre>
+<p>Si envías el comando <strong>/run</strong>, sería lo mismo que si estuvieras escribiendo en tu terminal</p>
+<h2 id="comandos-simples">Comandos simples</h2>
+<p>Podemos ejecutar comandos simples como por ejemplo:</p>
+<ul>
+<li>Ejecutas <strong>/hello</strong> y responde <strong>Hola</strong></li>
+</ul>
+<pre><code>[&quot;/hello&quot;]=&quot;echo Hola&quot;    
+</code></pre>
+<ul>
+<li>¿Quieres saber el tiempo de actividad de tu servidor? No hay problema:</li>
+</ul>
+<pre><code>[&quot;/uptime&quot;]=&quot;/usr/bin/uptime&quot;
+</code></pre>
+<ul>
+<li>¿Queres conocer el espacio en disco libre a través de Telegram?</li>
+</ul>
+<pre><code>[&quot;/disks&quot;]=&quot;/bin/df -h&quot;
+</code></pre>
+<ul>
+<li>Ejecutar script un externo:</li>
+</ul>
+<pre><code>[&quot;/auth ([a-zA-Z0-9]+)&quot;]=&quot;/usr/local/bin/auth.sh @R1&quot;
+</code></pre>
+<h2 id="variables">Variables:</h2>
+<p>Puedes usar variables! por ejemplo:</p>
+<pre><code>[&quot;/hello&quot;]=&quot;echo Hola @FIRSTNAME, encantado de conocerte :)&quot;
+</code></pre>
+<h2 id="lista-de-varibales">Lista de Varibales</h2>
+<ul>
+<li><span class="citation" data-cites="USERID">@USERID</span> (int) ID del usuario que envió el comando activado</li>
+<li><span class="citation" data-cites="USERNAME">@USERNAME</span> (string) Nombre de usuario de usuario en Telegram</li>
+<li><span class="citation" data-cites="FIRSTNAME">@FIRSTNAME</span> (string) El primer nombre del usuario</li>
+<li><span class="citation" data-cites="LASTNAME">@LASTNAME</span> (string) El apellido del usuario</li>
+<li><span class="citation" data-cites="CHATID">@CHATID</span> (int) El ID de chat donde el usuario envió un comando</li>
+<li><span class="citation" data-cites="MSGID">@MSGID</span> (int) ID del mensaje que activó un comando</li>
+<li><span class="citation" data-cites="TEXT">@TEXT</span> (string) El texto completo de un mensaje recibido</li>
+<li><span class="citation" data-cites="FROMID">@FROMID</span> (int) ID del usuario que envió un mensaje</li>
+</ul>
+<p>Regex group extract</p>
+<ul>
+<li><span class="citation" data-cites="R1">@R1</span> Contenido del primer grupo (.*)</li>
+<li><span class="citation" data-cites="R2">@R2</span> Contenido del segundo grupo (.*)</li>
+<li><span class="citation" data-cites="R3">@R3</span> Contenido del tercero grupo (.*)</li>
+</ul>
+<h2 id="comando-con-expresiones-regulares">Comando con expresiones regulares</h2>
+<p>También puedes configurar un comando con argumentos, por ejemplo: &quot;/ping 1234&quot;. Todos los argumentos pueden ser expresiones regulares, por ejemplo:</p>
+<pre><code>[&quot;/ping ([0-9]+)&quot;]=&quot;echo Pong: @R1&quot;
+
+[&quot;/blacklist ([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)&quot;]=&quot;/sbin/iptables -A INPUT -s @R1 -j DROP&quot;
+
+[&quot;/whois ([a-zA-Z0-9\.\-]+)&quot;]=&quot;/usr/bin/whois @R1&quot;
+
+[&quot;/host ([a-zA-Z0-9\.\-]+)&quot;]=&quot;/usr/bin/host @R1&quot;
+</code></pre>
+<h2 id="enviar-mensaje">Enviar mensaje</h2>
+<p>Cuando BaTbot se está ejecutando, puedes enviar un mensaje utilizando el ID del usuario, usando el comando <strong>.msg</strong> directamente en la consola.</p>
+<pre><code>.msg &lt;ID&gt; &lt;MENSAJE&gt;
+</code></pre>
+<p>Por ejemplo:</p>
+<pre><code>[chat 110440209, from  110440209] &lt;theMiddle - Andrea Menin&gt; hi bot :)
+.msg 110440209 No utilices más mi Bot!!!
+</code></pre>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Hay muchas mas opciones que podemos configurar desde el propio Bot, como añadir usuarios al listado desde el propio chat del Bot, etc… La verdad es que no he tenido suficiente tiempo de hacer todas las pruebas. El Objetivo de Gestionar nuestro servidor remotamente, cumple perfectamente.</p>
+<p>Si quieres hacer pruebas, la carpeta que hay en el repositorio <strong>.batbot</strong>, donde esta el archivo <strong>allowed_users</strong>, tendría que estar en al carpeta <code>$HOME/.batbot</code>. Yo en el Post lo he dejado en la misma carpeta igual que el repositorio, para tener todos las carpetas en el mismo lugar.</p>
+<br>
+<p>Publicado por Angel el jueves 11 abril del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-08-varias-cuentas-de-telegram-en-un-mismo-pc.html">Varias cuentas de telegram en un mismo PC</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-28-telegram-desktop-atajos-de-teclado.html">Telegram Desktop. Atajos de teclado</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html">Docker: Gotify. Tu servidor de Notificaciones</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html">Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html">Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

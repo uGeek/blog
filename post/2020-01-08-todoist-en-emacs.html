@@ -1,0 +1,141 @@
+<head>
+<title>Todoist en Emacs. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Todoist en Emacs" />
+<meta property="og:description" content="Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/todoist.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-01-08-todoist-en-emacs.html" />
+
+<meta name="twitter:title" content="Todoist en Emacs" />
+<meta name="twitter:description" content="Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/todoist.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="todoist-en-emacs-1" title="Todoist en Emacs" data-export_file_name="todoist-en-emacs" data-description="Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas." data-export_date="2020-01-08 17:50" data-category="emacs" data-tag="orgmode,tareas" data-image="./images-blog/todoist.png">Todoist en Emacs</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 336 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<p>Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas.</p>
+<center>
+<p><img src="../images-blog/todoist.png" /></p>
+</center>
+<h2 id="instalación">Instalación</h2>
+<p>Podemos instalarlo desde los <a href="https://melpa.org/#/todoist">repositorios de Melpa</a></p>
+<pre><code>M-x package-install todoist
+</code></pre>
+<p>También podemos añadir el archivo todoist.el, que encontraremos en el <a href="https://github.com/abrochard/emacs-todoist">repositorio del proyecto</a>.</p>
+<h2 id="copia-tu-token">Copia tu Token</h2>
+<p>Todoist nos proporciona un Token para utilizar su api, vamos a <a href="https://todoist.com/Users/viewPrefs?page=integrations">acceder aquí para copiar nuestro Token</a></p>
+<h2 id="archivo-de-configuración">Archivo de configuración</h2>
+<p>Copia en tu <strong>.emacs</strong> o <strong>init.el</strong>, la siguiente línea sustituyendo las &quot;XXX…&quot;, por nuestro token</p>
+<pre><code>(setq todoist-token &quot;XXXXXXXXXXXXXXXXXXXX&quot;)
+</code></pre>
+<p>Ejemplo. Este token es inventado.</p>
+<pre><code>(setq todoist-token &quot;13fc4b42rtrte370a7gqerg0880bae6f4909a71qerg7d&quot;)
+</code></pre>
+<h2 id="ejecuta-todoist">Ejecuta todoist</h2>
+<p>Vamos a acceder a todosit. Para ello tenemos que introducir en emacs</p>
+<pre><code>M-x todoist
+</code></pre>
+<h2 id="uso-todoist">Uso todoist</h2>
+<ul>
+<li><strong>C-x t</strong> =&gt; Abrir el menú de tareas. Crear, actualizar, borrar, cerrar.</li>
+<li><strong>C-x p</strong> =&gt; Abrir el menú de proyectos Nuevo proyecto, actualizar y borrar proyecto</li>
+</ul>
+<h3 id="utilizar-como-orgmode">Utilizar como Orgmode</h3>
+<p>También podemos utilizarlo como el OrgMode. Simplemente añadimos una nueva tarea y para que suba a todoist, teclearemos el siguiente atajo <code>C-x t u</code>.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Es una muy buena opción para quien comparte tareas con otros usuarios o está muy habituado a utilizar <strong>Todoist</strong>. Aún así, el orgmode como gestión de tareas, aporta muchísimas más opciones. Pero esta es una demostración más que Emacs es un pequeño sistema operativo.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/abrochard/emacs-todoist" class="uri">https://github.com/abrochard/emacs-todoist</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el miércoles 08 enero del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-29-integracion-total-de-todotxt-en-emacs.html">Integración total de todotxt en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-17-copiando-una-pagina-web-o-parte-de-ella-a-orgmode.html">Copiando una página web o parte de ella a OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html">W3M. Navegador para Terminal y Emacs</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

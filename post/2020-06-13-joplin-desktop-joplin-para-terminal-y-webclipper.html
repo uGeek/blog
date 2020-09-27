@@ -1,0 +1,728 @@
+<head>
+<title>Joplin Desktop, Joplin para Terminal y WebClipper. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Joplin Desktop, Joplin para Terminal y WebClipper" />
+<meta property="og:description" content="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/joplin.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html" />
+
+<meta name="twitter:title" content="Joplin Desktop, Joplin para Terminal y WebClipper" />
+<meta name="twitter:description" content="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/joplin.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="joplin-desktop-joplin-para-terminal-y-webclipper-1" title="Joplin Desktop, Joplin para Terminal y WebClipper" data-export_file_name="joplin-desktop-joplin-para-terminal-y-webclipper" data-description="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." data-export_date="2020-06-13 19:30" data-category="joplin" data-tag="notas,terminal" data-image="./images-blog/joplin.png">Joplin Desktop, Joplin para Terminal y WebClipper</h1>
+<h5>Tiempo estimado de lectura: 26 minutos. 2946 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
+<p>Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav.</p>
+<center height="250" width="250">
+<p><img src="../images-blog/joplin.png" /></p>
+</center>
+<p>Voy a explicaros la instalación de algunos de sus clientes y conocer el funcionamiento de la versión de terminal.</p>
+<h2 id="appimage">AppImage</h2>
+<p>Para instalar la versión de escritorio con AppImage.</p>
+<ul>
+<li>Podemos descargar la versión de escritorio <a href="https://github.com/laurent22/joplin/releases">desde su repositorio en GitHub</a></li>
+<li>Damos permisos de ejecución al archivo descargado <code>sudo chmod +x ./*.AppImage</code></li>
+<li>Lanzamos el AppImage</li>
+</ul>
+<p>En debian Buster, me da un problema al ejecurar el AppImage, ya que me dice que el sandbox no está bien configurado. Para poder arrancarlo utilizo:</p>
+<pre><code>./Joplin-1.0.218.AppImage --no-sandbox
+</code></pre>
+<p>Para configurar correctamente el sandbox, ejecutaremos:</p>
+<pre><code>sudo sysctl kernel.unprivileged_userns_clone=1
+</code></pre>
+<ul>
+<li><a href="https://github.com/ramboxapp/community-edition/issues/2481">Fuente</a></li>
+</ul>
+<h2 id="snap">Snap</h2>
+<p>Si tienes snap en tu sistema, es tan sencillo como:</p>
+<pre><code>sudo snap install joplin-james-carroll
+</code></pre>
+<ul>
+<li><a href="https://snapcraft.io/joplin-james-carroll" class="uri">https://snapcraft.io/joplin-james-carroll</a></li>
+<li><a href="https://joplinapp.org/#terminal-application" class="uri">https://joplinapp.org/#terminal-application</a></li>
+</ul>
+<h2 id="webclipper">WebClipper</h2>
+<p>Por si solo, el plugin no funciona. Necesita tener abierta la versión desktop de joplin, ya que esta utiliza el puerto <strong>41184</strong> para enviar el contenido del navegador.</p>
+<p>Para habilitar que WebClipper y envíe el contenido de una web a joplin desktop, tenemos que ir <strong>Herramientas/Opciones/Web Clipper</strong> y habilitar el servicio.</p>
+<p>Después, como no, tenemos que instalar la extensión para Firefox o Google Chrome.</p>
+<h2 id="control-de-versiones">Control de versiones</h2>
+<p>Joplin ya permite el control de versiones de una nota. Esto quiere decir que podemos volver atrás en el tiempo, a una edición anterior. Esta opción actualmente solo está disponible en la versión desktop pulsando sobre la &quot;i&quot; de información de la nota o tarea.</p>
+<h2 id="sublibretas">SubLibretas</h2>
+<p>También podemos crear sublibretas. Esta opción también a día de hoy, es exclusiva en la versión desktop. EL desarrollador ya ha comunicado que en breve estará en la versión mobile.</p>
+<h2 id="joplin-para-terminal">Joplin para Terminal</h2>
+<p>Vamos a instalar la versión para utilizar Joplin desde la terminal.</p>
+<h3 id="instalando-node">Instalando Node</h3>
+<p>Primero instalaremos Node 10 o superior</p>
+<pre><code>sudo apt update
+sudo apt install nodejs
+</code></pre>
+<p>Ahora npm</p>
+<pre><code>sudo apt install npm
+</code></pre>
+<h3 id="instalando-joplin-cli">Instalando Joplin-cli</h3>
+<p>Podemos instalar la versión de terminal en nuestro pc con arquitectura amd64 o en nuestra Raspberry Pi con arquitectura ARM.</p>
+<pre><code>NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplin
+</code></pre>
+<p>Creamos un enlace, así en la terminal, con solo escribir joplin, nos abrirá joplin-cli.</p>
+<pre><code>sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin
+</code></pre>
+<h3 id="carpeta-de-configuración">Carpeta de configuración</h3>
+<p>Los archivos de configuración, pueden estar en la carpeta</p>
+<pre><code>~/.config/joplin
+</code></pre>
+<p>Carpeta donde están las imágenes</p>
+<pre><code>~/.config/joplin/resources
+</code></pre>
+<h3 id="uso">Uso</h3>
+<p>La app de terminal es muy intuitiva. Aparecerán tres grandes columnas, con las libretas, notas y contenido de estas. Utilizaremos la tecla <strong>TAB</strong> para saltar de una columna a otra.</p>
+<p>Para introducir un comando, tendremos que escribir <strong>:</strong> seguido del comando.</p>
+<p>También permite el autocompletado mediante <strong>TAB</strong>. De manera que si escribimos <em>:sy</em> y pulsamos <strong>TAB</strong>, auto escribirá <strong>:sync</strong>.</p>
+<p>Para salir de la aplicación, lo haremos escribiendo <code>:exit</code> o pulsando <strong>Ctrl+d</strong>.</p>
+<h3 id="algunos-comandos-útiles">Algunos comandos útiles</h3>
+<pre><code>:mknote &quot;Título de Nota&quot;   # Crear nota
+:mn     &quot;Título de Nota&quot;   # Crear nota
+:mktodo &quot;Título de tarea&quot;  # Crear tarea -&gt; Pulsa la tecla *space*, para marcar la tarea como realizada
+:mt     &quot;Título de tarea&quot;  # Crear tarea
+:mkbook &quot;Nombre Libreta&quot;   # Crear una libreta
+:mb     &quot;Nombre Libreta&quot;   # Crear una libreta
+:ren $n &quot;Nuevo nombre&quot;     # Renombrar la nota en la que estás situado, con el nombre &quot;Nuevo nombre&quot;
+:mv  $n &quot;Tareas&quot;           # Mover la nota en la que estás situado, a la libreta &quot;Tareas&quot;
+:yn       cp $n
+:dn       mv $n &quot;&quot;
+:search                    # Buscar
+:mv TAB                    # Mover una nota. Si pulsas TAB, nos aparecera todas las notas a seleccionar
+:sync                      # Sincronizar con el servidor
+:status                    # Ver estado. Número de notas, libretas,...
+:config editor &quot;nano&quot;      # Cambiar editor por defecto
+:help                      # Ayuda
+:help all                  # Ayuda más completa
+:help keymap               # Atajos
+:help shortcuts
+</code></pre>
+<h3 id="atajos">Atajos</h3>
+<pre><code>tm        # Ver metadata de una nota
+tc        # Entrar y salir al modo consola
+Enter     # Encima de una nota, editarla
+suprimir  # Da la opción a borrar una nota, tarea, libreta
+Backspace # Da la opción a borrar una nota, tarea, libreta
+/         # Buscar
+TAB       # Saltar entre columnas y autoescritura
+Ctrl+d    # Salir
+</code></pre>
+<h3 id="personalizar-atajos">Personalizar atajos</h3>
+<p>Crea el siguiente archivo, si no lo tienes creado</p>
+<pre><code>nano ~/.config/joplin/keymap.json
+</code></pre>
+<p>Añade el siguiente contenido</p>
+<pre><code>[
+{ &quot;keys&quot;: [&quot;:&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;enter_command_line_mode&quot; },
+{ &quot;keys&quot;: [&quot;TAB&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;focus_next&quot; },
+{ &quot;keys&quot;: [&quot;SHIFT_TAB&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;focus_previous&quot; },
+{ &quot;keys&quot;: [&quot;UP&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;move_up&quot; },
+{ &quot;keys&quot;: [&quot;DOWN&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;move_down&quot; },
+{ &quot;keys&quot;: [&quot;PAGE_UP&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;page_up&quot; },
+{ &quot;keys&quot;: [&quot;PAGE_DOWN&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;page_down&quot; },
+{ &quot;keys&quot;: [&quot;ENTER&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;activate&quot; },
+{ &quot;keys&quot;: [&quot;DELETE&quot;, &quot;BACKSPACE&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;delete&quot; },
+{ &quot;keys&quot;: [&quot; &quot;], &quot;command&quot;: &quot;todo toggle $n&quot; },
+{ &quot;keys&quot;: [&quot;tc&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;toggle_console&quot; },
+{ &quot;keys&quot;: [&quot;tm&quot;], &quot;type&quot;: &quot;function&quot;, &quot;command&quot;: &quot;toggle_metadata&quot; },
+{ &quot;keys&quot;: [&quot;/&quot;], &quot;type&quot;: &quot;prompt&quot;, &quot;command&quot;: &quot;search &quot;&quot;&quot;, &quot;cursorPosition&quot;: -2 },
+{ &quot;keys&quot;: [&quot;mn&quot;], &quot;type&quot;: &quot;prompt&quot;, &quot;command&quot;: &quot;mknote &quot;&quot;&quot;, &quot;cursorPosition&quot;: -2 },
+{ &quot;keys&quot;: [&quot;mt&quot;], &quot;type&quot;: &quot;prompt&quot;, &quot;command&quot;: &quot;mktodo &quot;&quot;&quot;, &quot;cursorPosition&quot;: -2 },
+{ &quot;keys&quot;: [&quot;mb&quot;], &quot;type&quot;: &quot;prompt&quot;, &quot;command&quot;: &quot;mkbook &quot;&quot;&quot;, &quot;cursorPosition&quot;: -2 },
+{ &quot;keys&quot;: [&quot;yn&quot;], &quot;type&quot;: &quot;prompt&quot;, &quot;command&quot;: &quot;cp $n &quot;&quot;&quot;, &quot;cursorPosition&quot;: -2 },
+{ &quot;keys&quot;: [&quot;dn&quot;], &quot;type&quot;: &quot;prompt&quot;, &quot;command&quot;: &quot;mv $n &quot;&quot;&quot;, &quot;cursorPosition&quot;: -2 }
+]
+</code></pre>
+<p>Sustituye o personaliza a tu gusto</p>
+<h3 id="configuración-para-webdav-nexcloud-owncloud">Configuración para Webdav, Nexcloud, OwnCloud</h3>
+<p>Nubes disponibles: 2: File system 3: OneDrive 5: Nextcloud 6: WebDAV 7: Dropbox</p>
+<p>Yo en mi caso, utilizaré mi servidor webdav, así que utilizaré el número 6.</p>
+<pre><code>:config sync.target 6
+:config sync.6.path https://mi-url/joplin
+:config sync.6.username USUARIO
+:config sync.6.password CONTRASEÑA
+</code></pre>
+<h3 id="iniciar-la-sincronizar">Iniciar la Sincronizar</h3>
+<pre><code>:sync
+</code></pre>
+<h3 id="cifrado-extremo-a-extremo">Cifrado extremo a extremo</h3>
+<p>Poner la contraseña</p>
+<pre><code>:e2ee decrypt
+</code></pre>
+<p>Introduzca la contraseña maestra:</p>
+<h3 id="cambiar-el-editor">Cambiar el editor</h3>
+<p>Cambiar el editor a emacs por defecto a:</p>
+<pre><code>:config editor &quot;emacs -nw&quot;
+</code></pre>
+<h2 id="joplin-modo-shell">Joplin modo shell</h2>
+<p>Los comandos son los mismos que la versión terminal, solo que el comando se ejecuta y nos devuelve el resultado. Voy a resumir algunos de los comandos:</p>
+<h3 id="varios">Varios</h3>
+<pre><code>joplin config editor                    # Muestra el editor que estamos utilizando
+joplin config editor &quot;gedit&quot;            # Utilizar gedit como editor
+joplin config dateFormat DD-MM-YYYY     # Cambiar formato de fecha
+joplin mknote &quot;nueva tarea&quot;             # Crear la tarea llamada &quot;nueva tarea&quot;
+joplin edit &quot;nueva tarea&quot;               # Editar la tarea
+joplin cat &quot;nueva tarea&quot;                # Mostrar en terminal el contenido de la tarea
+joplin cat -v &quot;nueva tarea&quot;             # Mostrar contenido y metadata de la tarea
+joplin mkbook tareas                    # Crea la libreta tareas
+joplin ls /                             # Listar libretas desde la raíz
+joplin tag list                         # Listar etiquetas
+joplin tag list &quot;linux&quot;                 # Listar notas con la etiqueta linux
+joplin set fd297 titulo &quot;nuevo titulo&quot;  # Cambiar título de una nota
+joplin use tareas                       # Situate dentro de la libreta tareas
+joplin sync                             # Sincronizar todas las tareas
+joplin import linux.md linux            # Importa un documento .md llamado linux en joplin con el título linux
+joplin version                          # Versión de joplin
+
+joplin export --note &lt;node-id&gt; --format md &lt;output-dir&gt;
+</code></pre>
+<ul>
+<li><a href="http://leetschau.github.io/joplin-notes.html" class="uri">http://leetschau.github.io/joplin-notes.html</a></li>
+</ul>
+<h3 id="listar">Listar</h3>
+<p>Listar la raíz de tu Joplin</p>
+<pre><code>joplin ls /
+</code></pre>
+<p>Listar la raíz de tu Joplin con los id</p>
+<pre><code>joplin ls / -l
+</code></pre>
+<p>Listar y mostrar los id de las notas:</p>
+<pre><code>joplin ls -l
+</code></pre>
+<h3 id="cambiar-de-libreta">Cambiar de libreta</h3>
+<pre><code>joplin use &quot;nombre de libreta&quot;
+</code></pre>
+<p>Ahora podemos listar las notas o tareas de esa libreta:</p>
+<pre><code>joplin ls
+</code></pre>
+<h3 id="editar-nota-o-tarea">Editar Nota o Tarea</h3>
+<p>Editar nota con id 073ac</p>
+<pre><code>joplin edit 073ac
+</code></pre>
+<h3 id="ver-nota">Ver nota</h3>
+<pre><code>joplin cat &quot;nombre nota&quot;
+</code></pre>
+<pre><code>joplin cat id
+</code></pre>
+<h3 id="marcar-tarea-como-realizada-o-no-realizada">Marcar tarea como realizada o no realizada</h3>
+<pre><code>done &quot;nombre tarea&quot;
+</code></pre>
+<pre><code>undone &quot;nombre tarea&quot;
+</code></pre>
+<h3 id="exportar-una-nota">Exportar una nota</h3>
+<p>Listamos las notas en la ubicación que estamos</p>
+<pre><code>joplin ls -l
+</code></pre>
+<p>Con cat seguido del nombre de la nota/tarea o el id, exportamos su contenido a el archivo llamado <strong>nota.md</strong>.</p>
+<pre><code>joplin cat id &gt; nota.md
+</code></pre>
+<h3 id="ayuda">Ayuda</h3>
+<p>Ayuda simple</p>
+<pre><code>joplin help
+</code></pre>
+<p>Ayuda completa</p>
+<pre><code>joplin help all
+</code></pre>
+<p>Muestra de ayuda con todos los comandos</p>
+<pre><code>attach &lt;note&gt; &lt;file&gt;
+
+Adjuntar archivo a la nota.
+
+cat &lt;note&gt;
+
+Mostrar la nota dada.
+
+-v, --verbose  Mostrar la información completa acerca de la nota.
+
+config [name] [value]
+
+Obtener o configurar un valor. Si no se provee el [valor], se mostrará el
+valor de [nombre]. Si no se provee [nombre] ni [valor], se listará la
+configuración actual.
+
+-v, --verbose         También muestra variables ocultas o no configuradas.
+--export              Writes all settings to STDOUT as JSON including
+secure variables.
+--import              Reads in JSON formatted settings from STDIN.
+--import-file &lt;file&gt;  Reads in settings from &lt;file&gt;. &lt;file&gt; must contain
+valid JSON.
+
+Claves/valores posbiles:
+
+sync.target                    Destino de sincronización.
+El destino de la sincronización. Cada
+destino de la sincronización puede tener
+parámetros adicionales los cuales son
+llamados como `sync.NUM.NAME` (todos abajo
+documentados).
+Tipo: Enumeración.
+Posibles valores: 2 (File system), 3
+(OneDrive), 5 (Nextcloud), 6 (WebDAV), 7
+(Dropbox).
+Por defecto: 7
+
+sync.2.path                    Directorio con el que sincronizarse (ruta
+completa).
+Attention: If you change this location,
+make sure you copy all your content to it
+before syncing, otherwise all files will be
+removed! See the FAQ for more details:
+https://joplinapp.org/faq/
+Tipo: string.
+
+sync.5.path                    Servidor WebDAV de Nextcloud.
+Attention: If you change this location,
+make sure you copy all your content to it
+before syncing, otherwise all files will be
+removed! See the FAQ for more details:
+https://joplinapp.org/faq/
+Tipo: string.
+
+sync.5.username                Usuario de Nextcloud.
+Tipo: string.
+
+sync.5.password                Contraseña de Nextcloud.
+Tipo: string.
+
+sync.6.path                    Servidor WebDAV.
+Attention: If you change this location,
+make sure you copy all your content to it
+before syncing, otherwise all files will be
+removed! See the FAQ for more details:
+https://joplinapp.org/faq/
+Tipo: string.
+
+sync.6.username                Usuario de WebDAV.
+Tipo: string.
+
+sync.6.password                Contraseña de WebDAV.
+Tipo: string.
+
+sync.maxConcurrentConnections  Conexiones simultáneas máximas.
+Tipo: int.
+Por defecto: 5
+
+locale                         Idioma.
+Tipo: Enumeración.
+Posibles valores: ar (Arabic (87%)), eu
+(Basque (37%)), bs_BA (Bosnian (81%)),
+bg_BG (Bulgarian (73%)), ca (Catalan
+(58%)), hr_HR (Croatian (31%)), cs_CZ
+(Czech (90%)), da_DK (Dansk (81%)), de_DE
+(Deutsch (97%)), et_EE (Eesti Keel (72%)),
+en_GB (English (UK) (100%)), en_US (English
+(US) (100%)), es_ES (Español (90%)), eo
+(Esperanto (41%)), fr_FR (Français (91%)),
+gl_ES (Galician (47%)), it_IT (Italiano
+(96%)), nl_BE (Nederlands (37%)), nl_NL
+(Nederlands (92%)), nb_NO (Norwegian
+(97%)), fa (Persian (36%)), pl_PL (Polski
+(84%)), pt_PT (Português (98%)), pt_BR
+(Português (Brasil) (98%)), ro (Română
+(37%)), sl_SI (Slovenian (47%)), sv
+(Svenska (78%)), th_TH (Thai (58%)), vi
+(Tiếng Việt (94%)), tr_TR (Türkçe (100%)),
+el_GR (Ελληνικά (89%)), ru_RU (Русский
+(97%)), sr_RS (српски језик (78%)), zh_CN
+(中文 (简体) (97%)), zh_TW (中文 (繁體) (98%)),
+ja_JP (日本語 (100%)), ko (한국어 (95%)).
+Por defecto: &quot;en_GB&quot;
+
+dateFormat                     Formato de fecha.
+Tipo: Enumeración.
+Posibles valores: DD/MM/YYYY (30/01/2017),
+DD/MM/YY (30/01/17), MM/DD/YYYY
+(01/30/2017), MM/DD/YY (01/30/17),
+YYYY-MM-DD (2017-01-30), DD.MM.YYYY
+(30.01.2017), YYYY.MM.DD (2017.01.30).
+Por defecto: &quot;DD/MM/YYYY&quot;
+
+timeFormat                     Formato de hora.
+Tipo: Enumeración.
+Posibles valores: HH:mm (20:30), h:mm A
+(8:30 PM).
+Por defecto: &quot;HH:mm&quot;
+
+uncompletedTodosOnTop          Mostrar tareas incompletas al inicio de las
+listas.
+Tipo: bool.
+Por defecto: true
+
+showCompletedTodos             Mostrar tareas completadas.
+Tipo: bool.
+Por defecto: true
+
+notes.sortOrder.field          Ordenar notas por.
+Tipo: Enumeración.
+Posibles valores: user_updated_time (Fecha
+de actualización), user_created_time (Fecha
+de creación), title (Título).
+Por defecto: &quot;user_updated_time&quot;
+
+notes.sortOrder.reverse        Invierte el orden.
+Tipo: bool.
+Por defecto: true
+
+folders.sortOrder.field        Ordenar libretas por.
+Tipo: Enumeración.
+Posibles valores: title (Título),
+last_note_user_updated_time (Fecha de
+actualización).
+Por defecto: &quot;title&quot;
+
+folders.sortOrder.reverse      Invierte el orden.
+Tipo: bool.
+Por defecto: false
+
+trackLocation                  Guardar geolocalización en las notas.
+Tipo: bool.
+Por defecto: true
+
+sync.interval                  Intervalo de sincronización.
+Tipo: Enumeración.
+Posibles valores: 0 (Deshabilitado), 300 (5
+minutos), 600 (10 minutos), 1800 (30
+minutos), 3600 (1 hora), 43200 (12 horas),
+86400 (24 horas).
+Por defecto: 300
+
+editor                         Editor de texto.
+El comando del editor (puede incluir
+argumentos) que se utilizará para abrir una
+nota. Si no se provee ninguno se intentará
+auto detectar el editor por defecto.
+Tipo: string.
+
+net.customCertificates         Certificados TLS personalizados.
+Lista de rutas de los directorios de dónde
+cargar los certificados separados por
+comas, o la ruta individual de los
+certificados. Por ejemplo: /mi/cert_dir,
+/otro/personalizado.pem. Tenga en cuenta
+que si realiza cambios en la configuración
+de los certificados debe guardar los
+cambios antes de pulsar en «Comprobar la
+configuración de sincronización».
+Tipo: string.
+
+net.ignoreTlsErrors            Ignorar errores en certificados TLS.
+Tipo: bool.
+Por defecto: false
+
+sync.wipeOutFailSafe           Fail-safe.
+A prueba de fallos: No borre los datos
+locales cuando el objetivo de
+sincronización esté vacío (a menudo como
+resultado de una configuración errónea o de
+un error).
+Tipo: bool.
+Por defecto: true
+
+
+revisionService.enabled        Habilitar historial de notas.
+Tipo: bool.
+Por defecto: true
+
+revisionService.ttlDays        Mantener historial de la nota durante.
+Tipo: int.
+Por defecto: 90
+
+layout.folderList.factor       Notebook list growth factor.
+The factor property sets how the item will
+grow or shrink to fit the available space
+in its container with respect to the other
+items. Thus an item with a factor of 2 will
+take twice as much space as an item with a
+factor of 1.Restart app to see changes.
+Tipo: int.
+Por defecto: 1
+
+layout.noteList.factor         Note list growth factor.
+The factor property sets how the item will
+grow or shrink to fit the available space
+in its container with respect to the other
+items. Thus an item with a factor of 2 will
+take twice as much space as an item with a
+factor of 1.Restart app to see changes.
+Tipo: int.
+Por defecto: 1
+
+layout.note.factor             Note area growth factor.
+The factor property sets how the item will
+grow or shrink to fit the available space
+in its container with respect to the other
+items. Thus an item with a factor of 2 will
+take twice as much space as an item with a
+factor of 1.Restart app to see changes.
+Tipo: int.
+Por defecto: 2
+
+cp &lt;note&gt; [notebook]
+
+Duplica las notas que coincidan con &lt;note&gt; en la libreta. Si no se
+especifica una libreta la nota se duplica en la libreta actual.
+
+done &lt;note&gt;
+
+Marca una tarea como hecha.
+
+e2ee &lt;command&gt; [path]
+
+Gestiona la configuración E2EE. Los comandos disponibles son: `enable`,
+`disable`, `decrypt`, `status`, `decrypt-file` y `target-status`.
+
+-p, --password &lt;password&gt;  Use this password as master password (For
+security reasons, it is not recommended to use
+this option).
+-v, --verbose              More verbose output for the `target-status`
+command
+-o, --output &lt;directory&gt;   Output directory
+--retry-failed-items       Applies to `decrypt` command - retries
+decrypting items that previously could not be
+decrypted.
+
+edit &lt;note&gt;
+
+Editar una nota.
+
+export &lt;path&gt;
+
+Exporta datos de Joplin al directorio indicado. Por defecto, se exportará
+la base de datos completa incluyendo libretas, notas, etiquetas y
+recursos.
+
+--format &lt;format&gt;      Formato de destino: jex (Archivo de exportación de
+Joplin), raw (Directorio para exportar de Joplin),
+json (Directorio para exportar JSON), md
+(Markdown), html (Archivo HTML), html (Directorio
+HTML)
+--note &lt;note&gt;          Exporta únicamente la nota indicada.
+--notebook &lt;notebook&gt;  Exporta únicamente la libreta indicada.
+
+geoloc &lt;note&gt;
+
+Muestra la URL de la geolocalización de la nota.
+
+help [command]
+
+Muestra información de uso.
+
+import &lt;path&gt; [notebook]
+
+Importa los datos en Joplin.
+
+--format &lt;format&gt;  Formato de origen: auto, jex, md, raw, enex, enex
+-f, --force        No requiere confirmación.
+
+ls [note-pattern]
+
+Muestra las notas en la libreta actual. Usa `ls /` para mostrar la lista
+de libretas.
+
+-n, --limit &lt;num&gt;      Muestra las primeras &lt;num&gt; notas.
+-s, --sort &lt;field&gt;     Ordena los elementos por campo ( ej. title,
+updated_time, created_time).
+-r, --reverse          Invierte el orden.
+-t, --type &lt;type&gt;      Muestra únicamente los elementos de los tipos
+especificados. Pueden ser `n` para notas, `t` para
+tareas, o `nt` para libretas y tareas (ej. `-tt`
+mostrará unicamente las tareas, mientras `-ttd`
+mostrará notas y tareas).
+-f, --format &lt;format&gt;  Puede ser «text» o «json»
+-l, --long             Usar formato largo de lista. El formato es ID,
+NOTE_COUNT ( para libretas), DATE,TODO_CHECKED (
+para tareas), TITLE
+
+mkbook &lt;new-notebook&gt;
+
+Crea una nueva libreta.
+
+mknote &lt;new-note&gt;
+
+Crea una nueva nota.
+
+mktodo &lt;new-todo&gt;
+
+Crea una nueva lista de tareas.
+
+mv &lt;note&gt; [notebook]
+
+Mueve las notas que coincidan con &lt;note&gt; a la [libreta].
+
+ren &lt;item&gt; &lt;name&gt;
+
+Renombra el elemento dado &lt;item&gt; (nota o libreta) a &lt;name&gt;.
+
+rmbook &lt;notebook&gt;
+
+Elimina la libreta dada.
+
+-f, --force  Elimina una libreta sin pedir confirmación.
+
+rmnote &lt;note-pattern&gt;
+
+Elimina las notas que coinciden con &lt;note-pattern&gt;.
+
+-f, --force  Elimina las notas sin pedir confirmación.
+
+server &lt;command&gt;
+
+Inicie, pare o compruebe el servidor API. Para especificar el puerto que
+debe ejecutarse use api.port como variable en la configuración. Los
+comandos son (start|stop|status). This is an experimental feature - use at
+your own risks! It is recommended that the server runs off its own
+separate profile so that no two CLI instances access that profile at the
+same time. Use --profile to specify the profile path.
+
+set &lt;note&gt; &lt;name&gt; [value]
+
+Asigna el valor [value] a la propiedad &lt;name&gt; de la nota indicada &lt;note&gt;.
+Propiedades disponibles:
+
+parent_id (text), title (text), body (text), created_time (int),
+updated_time (int), is_conflict (int), latitude (numeric), longitude
+(numeric), altitude (numeric), author (text), source_url (text), is_todo
+(int), todo_due (int), todo_completed (int), source (text),
+source_application (text), application_data (text), order (int),
+user_created_time (int), user_updated_time (int), encryption_cipher_text
+(text), encryption_applied (int), markup_language (int), is_shared (int)
+
+status
+
+Muestra un resumen acerca de las notas y las libretas.
+
+sync
+
+Sincroniza con el almacenamiento remoto.
+
+--target &lt;target&gt;  Sincroniza con el destino indicado (por defecto al
+valor de configuración sync.target)
+
+tag &lt;tag-command&gt; [tag] [note]
+
+&lt;tag-command&gt; puede ser «add», «remove», «list», o «notetags» para asignar
+o eliminar [etiqueta] de [nota], o para listar las notas asociadas con
+[etiqueta], o para listar las etiquetas asociadas con [nota]. El comando
+`tag list` puede ser usado para listar todas las etiquetas (usa -l para la
+opción larga).
+
+-l, --long  Usar formato largo de lista. El formato es ID, NOTE_COUNT (
+para libretas), DATE,TODO_CHECKED ( para tareas), TITLE
+
+todo &lt;todo-command&gt; &lt;note-pattern&gt;
+
+&lt;todo-command&gt; puede ser «toggle» o «clear». Usa «toggle» para cambiar la
+tarea dada entre estado completado y sin completar. (Si el objetivo es una
+nota regular se convertirá en una tarea). Usa «clear» para convertir la
+tarea a una nota regular.
+
+undone &lt;note&gt;
+
+Marca una tarea como no completada.
+
+use &lt;notebook&gt;
+
+Cambia una [libreta] - todas las demás operaciones se realizan en ésta
+libreta.
+
+version
+
+Muestra información de la versión
+</code></pre>
+<h3 id="fuentes">Fuentes</h3>
+<ul>
+<li><a href="https://joplinapp.org/terminal/" class="uri">https://joplinapp.org/terminal/</a></li>
+<li><a href="https://www.npmjs.com/package/joplin" class="uri">https://www.npmjs.com/package/joplin</a></li>
+</ul>
+<h2 id="fuentes-1">Fuentes</h2>
+<ul>
+<li><a href="https://joplinapp.org/" class="uri">https://joplinapp.org/</a></li>
+<li><a href="https://appimage.github.io/Joplin/" class="uri">https://appimage.github.io/Joplin/</a></li>
+<li><a href="https://discourse.joplinapp.org/" class="uri">https://discourse.joplinapp.org/</a> (Foro)</li>
+</ul>
+<br>
+<p>Publicado por Angel el sábado 13 junio del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-07-instalar-node-js-12-version-estable.html">Instalar Node.js 12. Versión estable</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

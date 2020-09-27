@@ -1,0 +1,165 @@
+<head>
+<title>Descargando un directorio de git con gitdir. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Hoy ojeando *Reddit*, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural," />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Descargando un directorio de git con gitdir" />
+<meta property="og:description" content="Hoy ojeando *Reddit*, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural," />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html" />
+
+<meta name="twitter:title" content="Descargando un directorio de git con gitdir" />
+<meta name="twitter:description" content="Hoy ojeando *Reddit*, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural," />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="descargando-un-directorio-de-git-con-gitdir-1" title="Descargando un directorio de git con gitdir" data-export_file_name="descargando-un-directorio-de-git-con-gitdir" data-description="Hoy ojeando *Reddit*, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural," data-export_date="2020-01-06 17:50" data-category="git" data-tag="git,repositorio,github,gitlab" data-image="./images-blog/git.png">Descargando un directorio de git con gitdir</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 392 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<p>Hoy ojeando <strong>Reddit</strong>, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural, tenemos que tener instalado tanto <strong>Python 3</strong>, así como <strong>Pip3</strong>.</p>
+<center>
+<p><img src="../images-blog/git.png" /></p>
+</center>
+<h2 id="instalación">Instalación</h2>
+<h3 id="desde-pip3">Desde Pip3</h3>
+<pre><code>pip3 install --user gitdir
+</code></pre>
+<p>En Debian y Raspbian, he tenido que buscar donde se había guardado <strong>gitdir</strong>. <code>/home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py</code></p>
+<p>Cambia <strong>angel</strong>, por tu usuario.</p>
+<pre><code>python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py  -h
+</code></pre>
+<p>La opción <strong>-h</strong>, es para ofrecernos la ayuda.</p>
+<pre><code>usage: gitdir [-h] [--flatten] url
+
+Download directories/folders from GitHub
+
+positional arguments:
+  url
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --flatten, -f  Flatten directory structures. Do not create extra directory
+                 and download found files to current directory.
+</code></pre>
+<h3 id="creando-un-alias">Creando un alias</h3>
+<p>He creado un alias para en cualquier lugar de mi máquina, cuando escriba <strong>gitdir</strong>, pueda utilizar esta aplicación.</p>
+<pre><code>alias gitdir=&quot;python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py&quot;
+</code></pre>
+<h3 id="clonando-el-repositorio">Clonando el Repositorio</h3>
+<p>Otro método de instalación, sería instalando <strong>gitdir</strong> clonando el repositorio de <strong>GitHub</strong>. Primero voy a situarme en raíz del home.</p>
+<pre><code>cd
+</code></pre>
+<p>Ahora clonamos el repositorio</p>
+<pre><code>git clone https://github.com/sdushantha/gitdir.git
+</code></pre>
+<p>Desde esta misma ruta, recién clonado el repositorio, ya podemos correr <strong>gitdir</strong>.</p>
+<pre><code>python3 gitdir/gitdir/gitdir.py
+</code></pre>
+<p>Como veis, está en el directorio <code>gitdir/gitdir.py</code> dentro del repositorio.</p>
+<h3 id="creando-alias">Creando alias</h3>
+<p>Si hemos clonado el respositorio en la raíz del Home, vamos a crear también el alias.</p>
+<pre><code>alias gitdir=&quot;python3 ~/gitdir/gitdir/gitdir.py&quot;
+</code></pre>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<p>Ya tenemos <strong>gitdir</strong> en nuestro sistema, ahora vamos a utilizarlo.</p>
+<p>Navega por la web de <strong>GitHub</strong>, por ejemplo, y copia la <strong>url</strong> de una carpeta de un repositorio.</p>
+<pre><code>gitdir &lt;URL&gt;
+</code></pre>
+<p>Voy a utilizar esta: <a href="https://github.com/sdushantha/gitdir/tree/master/gitdir" class="uri">https://github.com/sdushantha/gitdir/tree/master/gitdir</a></p>
+<pre><code>gitdir https://github.com/sdushantha/gitdir/tree/master/gitdir
+</code></pre>
+<p>Se descargará la carpeta con todos los archivos que contiene.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://www.reddit.com/r/commandline/comments/avbai1/gitdir_download_a_single_directoryfolder_from_a/" class="uri">https://www.reddit.com/r/commandline/comments/avbai1/gitdir_download_a_single_directoryfolder_from_a/</a></li>
+<li><a href="https://github.com/sdushantha/gitdir" class="uri">https://github.com/sdushantha/gitdir</a></li>
+<li>He forqueado el Repositorio: <a href="https://github.com/Bash-Projects/gitdir" class="uri">https://github.com/Bash-Projects/gitdir</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el lunes 06 enero del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html">Gonic. El mejor y más ligero servidor de música con api Subsonic</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-15-creando-una-pagina-web-de-tu-proyecto-en-github.html">Creando una página web de tu proyecto en GitHub</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html">Descargando un directorio de git con gitdir</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html">Bullet Journal Digital en OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html">Bsync. Sincronización de archivos bidireccional, que utiliza Rsync</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html">youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

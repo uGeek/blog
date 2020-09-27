@@ -1,0 +1,194 @@
+<head>
+<title>Docker: Supysonic. El mejor y más ligero servidor de música. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo [[https://www.spotify.com][Spotify]]." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker: Supysonic. El mejor y más ligero servidor de música" />
+<meta property="og:description" content="Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo [[https://www.spotify.com][Spotify]]." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/subsonic.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html" />
+
+<meta name="twitter:title" content="Docker: Supysonic. El mejor y más ligero servidor de música" />
+<meta name="twitter:description" content="Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo [[https://www.spotify.com][Spotify]]." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/subsonic.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="docker-supysonic.-el-mejor-y-más-ligero-servidor-de-música-1" title="Docker: Supysonic. El mejor y más ligero servidor de música" data-export_file_name="Docker: Supysonic. El mejor y más ligero servidor de música" data-description="Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo [[https://www.spotify.com][Spotify]]." data-export_date="2019-10-07 18:00" data-category="docker" data-tag="musica,raspberry,servidor,jamstash,supysonic" data-image="./images-blog/subsonic.png">Docker: Supysonic. El mejor y más ligero servidor de música</h1>
+<h5>Tiempo estimado de lectura: 6 minutos. 698 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo <a href="https://www.spotify.com">Spotify</a>.</p>
+<center>
+<p><img src="../images-blog/subsonic.png" /></p>
+</center>
+<p>He utilizado servidores como <strong>Plex</strong>, <strong>Jellyfin</strong>, <strong>DLNA</strong>,… Pero aunque todos ellos engloban todo el tema multimedia, buscaba algo más ligero y que únicamente fuera un servidor de música.</p>
+<p>De todos los que he utilizado, el que más me gustó fue <a href="http://www.subsonic.org">Subsonic</a>. Subsonic tiene una cuata mensual de 1€ al mes, así que aparecieron nuevos Forks gratuitos y 100% Software Libre como Libresonic, Airsonic,…</p>
+<p>Todos ellos tienen un problema y es que están desarrollados en <strong>java</strong>. Eso significa que si quieres correr este servicio en tu Raspberry, va a devorar tu Ram.</p>
+<p>Para solucionar este problema y para satisfacer a los amantes de este servidor y clientes de Subsonic, nació Supysonic. Un servidor de música desarrollado en <strong>python</strong> que utiliza la api de subsonic, de manera que podremos utilizar los clientes igual que lo hacemos con Subsonic.</p>
+<p>He creado el Docker para que sea más simple la instalación y lo he guardado en mi repositorio del <a href="https://hub.docker.com/r/ugeek/supysonic">DockerHub</a>.</p>
+<h2 id="docker">Docker</h2>
+<p>Vamos a montar el docker dependiendo de la arquitectura que utilices.</p>
+<p>La carpeta <code>/media</code>, es la carpeta donde pondremos la música. Personalízalo a tu gusto.</p>
+<h3 id="raspberry-and-arm">Raspberry and ARM</h3>
+<ol>
+<li><p>Versión 0.4.1</p>
+<pre><code>docker run --name supysonic --restart=unless-stopped -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:arm-0.4.1
+</code></pre></li>
+<li><p>Versión 0.4</p>
+<pre><code>docker run --name supysonic --restart=unless-stopped -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:arm
+</code></pre></li>
+</ol>
+<h3 id="amd64">amd64</h3>
+<ol>
+<li><p>Versión 0.4.1</p>
+<pre><code>docker run --name supysonic -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:amd64-0.4.1
+</code></pre></li>
+<li><p>Versión 0.4</p>
+<pre><code>docker run --name supysonic -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:amd64
+</code></pre></li>
+</ol>
+<h3 id="i386">i386</h3>
+<ol>
+<li><p>Versión 0.4.1</p>
+<pre><code>docker run --name supysonic -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:i386-0.4.1
+</code></pre></li>
+</ol>
+<h2 id="iniciar-servidor">Iniciar Servidor</h2>
+<p>Vamos a iniciar el servidor</p>
+<pre><code>docker start supysonic
+</code></pre>
+<p>Si abres tu navegador e introduces la ip:8080, aparecerá la página de administración de supysonic. Ahora no podrás acceder porque no tienes el usuario y contraseña de administración. Vamos a crearlo.</p>
+<h2 id="crear-usuario-y-contraseña-de-administrador">Crear usuario y contraseña de administrador</h2>
+<p>Ahora entraremos dentro del contenedor para crear el usuario administrador y contraseña.</p>
+<pre><code>docker exec -it supysonic sh
+</code></pre>
+<p>Vamos a crear el el usuario y contraseña</p>
+<pre><code>supysonic-cli user add &quot;NOMBRE ADMINISTRADOR&quot; -a -p &quot;CONTRASEÑA&quot;
+</code></pre>
+<h2 id="añadir-carpeta-con-tu-música-utilizando-el-navegador-web">Añadir carpeta con tu música utilizando el navegador web</h2>
+<p>Ya podemos utilizar la página de administración desde tu navegador, introduce la dirección <a href="http://tu_ip:8080" class="uri">http://tu_ip:8080</a></p>
+<p>De todas maneras, si utilizas la terminal verás que es más practico.</p>
+<h2 id="añadir-carpeta-con-tu-música-utilizando-la-terminal">Añadir carpeta con tu música utilizando la Terminal</h2>
+<p>Entramos al contenedor</p>
+<pre><code>docker exec -it supysonic sh
+</code></pre>
+<p>Creamos una nueva biblioteca indicando la capeta:</p>
+<pre><code>supysonic-cli folder add &quot;NOMBRE BIBLIOTECA&quot; /media/musica
+</code></pre>
+<p>Ejemplo: Hay una biblioteca de música que tengo y llamo <strong>Favoritos</strong>. Voy a crear la biblioteca e indicar la ruta de la carpeta</p>
+<pre><code>supysonic-cli folder add Favoritos /media/Favoritos/
+</code></pre>
+<h3 id="sin-entrar-al-contenedor">Sin entrar al contenedor</h3>
+<p>Podría haber utilizado este comando sin entrar dentro del contenedor</p>
+<pre><code>docker exec -it supysonic supysonic-cli folder add Favoritos /media/Favoritos/
+</code></pre>
+<h2 id="escanear-tu-música">Escanear tu música</h2>
+<p>Entramos al contenedor</p>
+<pre><code>docker exec -it supysonic sh
+</code></pre>
+<p>Una vez añadida tu música, necesitas escanearla para que se añada al servidor.</p>
+<pre><code>supysonic-cli folder scan &quot;NOMBRE BIBLIOTECA&quot;
+</code></pre>
+<h3 id="escanear-sin-entrar-al-contenedor">Escanear sin entrar al contenedor</h3>
+<p>Escanea mediante una única línea. Puedes utilizar <strong>cron</strong>, para escanear periódicamente tu biblioteca</p>
+<pre><code>docker exec -it supysonic supysonic-cli folder scan &quot;NOMBRE BIBLIOTECA&quot;
+</code></pre>
+<p>Mi biblioteca <strong>Favoritos</strong> la escaneo así:</p>
+<pre><code>docker exec -it supysonic supysonic-cli folder scan Favoritos
+</code></pre>
+<h2 id="clientes">Clientes</h2>
+<p>Para poder escuchar tu música, puedes utilizar clientes de Android como <a href="https://play.google.com/store/apps/details?id=github.daneren2005.dsub">DSub</a> o <a href="https://play.google.com/store/apps/details?id=org.moire.ultrasonic">Ultrasonic</a>.</p>
+<p>Uno de los defectos que tiene Supysonic, es no tener reproductor web integrado en el servidor. Así que si queremos utilizarlo mediante un navegador web podemos utilizar <a href="http://jamstash.com/#/settings">Jamstash</a>. En el próximo artículo explicaré como montar el Docker de este servicio en tu servidor.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/spl0k/supysonic" class="uri">https://github.com/spl0k/supysonic</a></li>
+<li><a href="https://hub.docker.com/r/ugeek/supysonic" class="uri">https://hub.docker.com/r/ugeek/supysonic</a></li>
+<li><a href="https://github.com/uGeek/docker-supysonic" class="uri">https://github.com/uGeek/docker-supysonic</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el lunes 07 octubre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

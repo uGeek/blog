@@ -1,0 +1,2 @@
+#!/bin/bash                                                                                                                            
+cp org-bash-blog /usr/bin

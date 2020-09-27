@@ -1,0 +1,174 @@
+<head>
+<title>Escuchando música de mi servidor Jellyfin con jellycli. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Escuchando música de mi servidor Jellyfin con jellycli" />
+<meta property="og:description" content="Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jellifin.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-03-10-escuchando-musica-de-mi-servidor-jellyfin-con-jellycli.html" />
+
+<meta name="twitter:title" content="Escuchando música de mi servidor Jellyfin con jellycli" />
+<meta name="twitter:description" content="Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/jellifin.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="escuchando-música-de-mi-servidor-jellyfin-con-jellycli-1" title="Escuchando música de mi servidor Jellyfin con jellycli" data-export_file_name="escuchando-musica-de-mi-servidor-jellyfin-con-jellycli" data-description="Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar." data-export_date="2020-03-10 20:20" data-category="jellyfin" data-tag="música,servidor,raspberry" data-image="./images-blog/jellifin.png">Escuchando música de mi servidor Jellyfin con jellycli</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 540 palabras.    <a href="https://ugeek.github.io/blog/categories/jellyfin">jellyfin</a></h5>
+<p>Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar. Y es que Jellycli es una aplicación desarrollada por el finlandés <a href="https://github.com/tryffel">Tero Vierimaa</a>, que nos permite el poder escuchar toda la biblioteca musical que tenemos en Jellyfin, en nuestro escritorio y a través de la terminal.</p>
+<center>
+<p><img src="../images-blog/jellifin.png" /></p>
+</center>
+<p>Jellycli está desarrollada en Go y actualmente tiene las siguientes características:</p>
+<ul>
+<li>Reproducir canciones</li>
+<li>Reproducir álbumes</li>
+<li>Agregar canciones a la cola</li>
+<li>Controla (y ve) el estado de reproducción a través de la integración Dbus</li>
+</ul>
+<p>Control desde otros clientes a través de websocket. Actualmente implementado:</p>
+<ul>
+<li>Reproducir / pausar / detener</li>
+<li>Regular volumen</li>
+<li>Siguiente pista</li>
+</ul>
+<center>
+<p><img src="../images-blog/jellycli.png" /></p>
+</center>
+<p>Acaba de actualizar la aplicación a la versión 0.2.0 y gracias a una consulta/sugerencia que hice, el desarrollador ha implementado el que podamos tener un archivo de configuración y gracias a esto, el poder exportarlo a otra cliente o crear múltiples archivos de configuración para varios servidores.</p>
+<h2 id="instalar-go">Instalar Go</h2>
+<p>No voy a extenderme a explicar en este artículo como instalar Go ya que no es el propósito del mismo, pero si quieres instalarlo de un modo rápido y sin complicarte, podemos instalarlo con snap.</p>
+<pre><code>sudo snap install go --classic
+</code></pre>
+<h2 id="instalar-jellycli">Instalar Jellycli</h2>
+<p>Clonaremos el repositorio desde GitHub y vamos a construir el paquete</p>
+<h3 id="con-go-instalado-en-el-sistema">Con Go instalado en el sistema</h3>
+<pre><code>git clone https://github.com/tryffel/jellycli.git
+cd jellycli
+go build .
+./jellycli
+</code></pre>
+<h3 id="con-go-instalado-mediante-snap">Con Go instalado mediante snap</h3>
+<pre><code>git clone https://github.com/tryffel/jellycli.git
+cd jellycli
+/snap/bin/go build .
+./jellycli
+</code></pre>
+<h2 id="iniciando-jellycli">Iniciando Jellycli</h2>
+<p>Vamos a iniciar la aplicación dentro del directorio, una vez construido el paquete de Jellycli y conectarlo con mi servidor Jellyfin, siguiendo mi ejemplo.</p>
+<p>La primera vez que iniciamos, la aplicación solicita:</p>
+<ul>
+<li>El host Jellyfin: <a href="http://192.168.1.100:8096" class="uri">http://192.168.1.100:8096</a></li>
+<li>Nombre de usuario: angel</li>
+<li>Contraseña: 1234</li>
+<li>Número de Biblioteca donde está la música: En mi caso es el 1</li>
+</ul>
+<h2 id="archivo-de-configuración">Archivo de Configuración</h2>
+<p>Una vez iniciada la sesión, se crea una archivo de configuración en la siguiente ruta <code>~/.config/jellycli/jellycli.yaml</code>.</p>
+<p>Puedes usar varios servidores con sus diferentes archivos de configuración, ejecutando:</p>
+<pre><code>jellycli --config /home/angel/.config/jellycli/rp4.yaml
+</code></pre>
+<pre><code>jellycli --config /home/angel/.config/jellycli/debian.yaml
+</code></pre>
+<h2 id="uso">Uso</h2>
+<p>Una vez abierta la aplicación, veremos que tenemos disponible la ayuda pulsando la tecla <strong>F1</strong>.</p>
+<p>Todas las funciones visibles de la aplicación, al lado tienen a que tecla corresponden.</p>
+<p>Para movernos por los paneles, utilizaremos la tecla <strong>TAB</strong>, para seleccionar la tecla <strong>ENTER</strong> y para salir de la aplicación <strong>Ctrl+c</strong>.</p>
+<p>Subir y bajar por las canciones, artistas,… podemos utilizar tanto las flechas del teclado, así como los atajos de Vim.</p>
+<ul>
+<li>Subir y bajar -&gt; j,k</li>
+<li>Arriba de la página o Abajo -&gt; g,G</li>
+<li>Página arriba, página abajo -&gt; Ctrl+F , Ctrl+B</li>
+</ul>
+<h2 id="alias">Alias</h2>
+<p>He creado un alias para no tener que acceder a la carpeta de jellycli cada vez que quiero utilizarlo. Así con un simple <strong>jellycli</strong>, estoy escuchando mi música favorita.</p>
+<pre><code>alias jellycli=&#39;/home/angel/jellycli/jellycli&#39;
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/tryffel/jellycli" class="uri">https://github.com/tryffel/jellycli</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el martes 10 marzo del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-10-escuchando-musica-de-mi-servidor-jellyfin-con-jellycli.html">Escuchando música de mi servidor Jellyfin con jellycli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-09-el-mejor-y-mas-ligero-cliente-para-tu-escritorio-de-jellyfin-jellyfin-cli.html">El mejor y más ligero cliente para tu Escritorio de Jellyfin. Jellyfin-cli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-27-ordena-renombra-y-actualiza-tus-metadatos-con-tiny-media-manager.html">Ordena, renombra y actualiza tus metadatos con Tiny Media Manager</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-08-21-cada-vez-mas-clientes-de-jellyfin.html">Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html">El Adiós a Plex y Emby. Llega Jellyfin</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

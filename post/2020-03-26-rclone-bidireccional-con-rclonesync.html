@@ -1,0 +1,167 @@
+<head>
+<title>Rclone bidireccional con Rclonesync. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content=":DESCRIPTION:" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Rclone bidireccional con Rclonesync" />
+<meta property="og:description" content=":DESCRIPTION:" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/rclone.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-03-26-rclone-bidireccional-con-rclonesync.html" />
+
+<meta name="twitter:title" content="Rclone bidireccional con Rclonesync" />
+<meta name="twitter:description" content=":DESCRIPTION:" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/rclone.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="rclone-bidireccional-con-rclonesync-1" title="Rclone bidireccional con Rclonesync" data-export_file_name="rclone-bidireccional-con-rclonesync" data-description="" data-export_date="2020-03-26 20:10" data-category="rclone" data-tag="sincronización,sync,webdav,dropbox,drive" data-image="./images-blog/rclone.png">Rclone bidireccional con Rclonesync</h1>
+<h5>Tiempo estimado de lectura: 6 minutos. 687 palabras.    <a href="https://ugeek.github.io/blog/categories/rclone">rclone</a></h5>
+<p>Rclone Es una herramienta genial que permite copiar y sincronizar archivos de tus nubes públicas o privadas. Pero tiene un pequeño defecto dentro de su perfección, esta sincronización es como rsync, en un único sentido.</p>
+<p>Gracias a este script desarrollado en python por <a href="https://github.com/cjnaz">Chris cjnaz</a>, solucionamos esta limitación podiento tener un directorio con una réplica exacta del contenido de tu nube en local y totalmente sincronizada de un modo bidireccional.</p>
+<p>De manera que si se modifica un archivo tanto en local como en el servidor, estos se sincronizaran instantáneamente teniendo una copia exacta en ambos sitios.</p>
+<center>
+<p><img src="../images-blog/rclone.png" /></p>
+</center>
+<p>De momento rclonesync ha sido probado con Dropbox, Google Drive, Box.com, OneDrive, Nextcloud, Owncloud, Webdav,… y en todos estos funciona perfectamente.</p>
+<p>Vamos a ver las opciones básicas de uso e instalación en el propio sistema.</p>
+<p>Si utilizas otros sistema operativo como Windows, si, en Windows también funciona, descarga únicamente el archivo <strong>rclonesync.py</strong> y ejecútalo con python.</p>
+<h2 id="instalación">Instalación</h2>
+<p>He creado <a href="https://github.com/cjnaz/rclonesync-V2">un Fork del proyecto original</a>, para que si hay modificaciones en el código original, no haya problemas, ya que esta la he probado tanto en la Raspberry como en procesadores de 64 y 32 bits.</p>
+<p>De todas maneras, eres libre de instalar la versión del proyecto original si han habido actualizaciones.</p>
+<p>Vamos a instalarlo en el sistema.</p>
+<pre><code>sudo curl   -L https://raw.githubusercontent.com/Bash-Projects/rclonesync-V2/master/rclonesync.py   -o /usr/local/bin/rclonesync &amp;&amp; sudo chmod +x /usr/local/bin/rclonesync
+</code></pre>
+<p>Para no instalarlo en tu propio sistema y ejecutarlo con python:</p>
+<pre><code>curl -L https://raw.githubusercontent.com/Bash-Projects/rclonesync-V2/master/rclonesync.py -o rclonesync.py
+</code></pre>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<p>El funcionamiento es muy simple, ejecutamos <strong>rclonesync</strong> ruta origen y ruta destino.</p>
+<pre><code>rclonesync [RUTA_ORIGEN] [RUTA_DESTINO]
+</code></pre>
+<h2 id="iniciando">Iniciando</h2>
+<p>Solo la primera vez que iniciamos, tenemos que poner como <strong>ruta origen</strong>, el directorio <strong>no que tiene archivos</strong>.</p>
+<p>Y <strong>solo la primera vez</strong>, iniciaremos el scritp con la opción <code>--first-sync</code>. En la ayuda también se especifica que podemos utilizar la opción <code>-1</code>.</p>
+<h3 id="dropbox">Dropbox</h3>
+<p>Ejemplo de cuenta una con dropbox, la he probado y funciona perfecto. Este seria el ejemplo de mi primera sincronización:</p>
+<pre><code>rclonesync /home/angel/dropbox  dropbox: --first-sync --verbose
+</code></pre>
+<h3 id="drive">Drive</h3>
+<p>Utilizando Google Drive. Voy a sincronizar una subdirectorio dentro de mi Google Drive llamada sync:</p>
+<p>Además, en este caso, estoy utilizando otro archivo de configuración de rclone.</p>
+<pre><code>rclonesync  drive:sync /home/angel/drive --config &quot;/home/angel/.config/rclone/otra_configuración.conf&quot; --first-sync --verbose
+</code></pre>
+<h3 id="webdav">Webdav</h3>
+<p>Esto es una maravilla. Mi servidor de webdav, mediante rclonesync, es el mejor cliente para tener mis archivos orgmode y todo.txt sincronizado en todos mis servidores, pc, etc…</p>
+<pre><code>rclonesync  webdav:  /home/angel/webdav --first-sync --verbose
+</code></pre>
+<h2 id="forzar">Forzar</h2>
+<p>Si se supera el 50% de archivos y carpetas para el borrado, tenemos que forzar con la opción <code>--force</code>, esta es una opción para evitar el que por error borremos archivos mediante la sincronización.</p>
+<pre><code>--force
+</code></pre>
+<h2 id="sincronización-automatizada-con-cron.">Sincronización automatizada con cron.</h2>
+<p>Ahora vamos a tener sincronizado de forma automatizada, nuestra carpeta local con el contenido que tenemos en el servidor. Para ello utilizaremos <strong>cron</strong>. En este ejemplo he decidido que el directorio se sincronice cada 5 minutos.</p>
+<pre><code>*/5 * * * * /usr/local/bin/rclonesync /home/angel/todo webdav:todo --verbose &gt;&gt; ~/.config/log_webdav_todo 2&gt;&amp;1
+</code></pre>
+<p>Cada 5 minutos, a parte de producirse la sincronización, todo quedará registrado en el archivo <code>~/.config/log_webdav_todo</code>. De esta manera puedo comprobar que todo funciona correctamente.</p>
+<h2 id="excluir-archivos-o-directorios-en-la-sincronización">Excluir archivos o directorios en la sincronización</h2>
+<p>Mediante la opción <code>--filters-file</code>, podremos excluir archivos y directorios.</p>
+<p>También podemos <code>--check-access</code> para una mejor medida adicional.</p>
+<p>Este sería el cron:</p>
+<pre><code>*/5 * * * * ~/scripts/rclonesync.py /home/angel/drive/ drive: --check-access --filters-file ~/.rclonesyncwd/Filters  &gt;&gt; ~/.config/log_drive 2&gt;&amp;1
+</code></pre>
+<h2 id="error-en-sincronización">Error en sincronización</h2>
+<p>Es posible que se produzca un error de sincronización. Para solucionar este problema, rclonesync nos pedirá hacer un <code>--first-sync</code>.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Rclonesync tiene muchísimas más opciones que puedes consultar en la documentación o ejecutando en tu terminal:</p>
+<pre><code>rclonesync -h
+</code></pre>
+<p>Este artículo solo es una guía de iniciación. No descarto en un futuro profundizar más el resto de opciones.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/cjnaz/rclonesync-V2" class="uri">https://github.com/cjnaz/rclonesync-V2</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el jueves 26 marzo del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-26-rclone-bidireccional-con-rclonesync.html">Rclone bidireccional con Rclonesync</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html">Instalando, Compilando el última versión de Rclone-Browser</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-01-rclone-instalando-la-ultima-version.html">Rclone. Instalando la última versión</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html">Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

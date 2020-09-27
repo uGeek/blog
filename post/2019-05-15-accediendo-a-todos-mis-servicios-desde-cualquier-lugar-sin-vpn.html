@@ -1,0 +1,210 @@
+<head>
+<title>Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN" />
+<meta property="og:description" content="Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/mountain-man.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html" />
+
+<meta name="twitter:title" content="Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN" />
+<meta name="twitter:description" content="Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/mountain-man.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="docker-letsencript.-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn-1" title="Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN" data-export_file_name="Accediendo a todos mis servicios desde cualquier lugar sin VPN" data-description="Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios" data-export_date="2019-05-15 20:30 2019-09-13" data-category="servidor" data-tag="nginx,raspberry,raspbian,docker" data-image="./images-blog/mountain-man.jpg">Docker: Letsencript. Accediendo a todos mis servicios, desde cualquier lugar, sin VPN</h1>
+<h5>Tiempo estimado de lectura: 7 minutos. 878 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<center>
+<p><img src="../images-blog/mountain-man.jpg" /></p>
+</center>
+<p>Este fin de semana, con la ayuda de <a href="https://elblogdelazaro.gitlab.io/">Carlos del Blog de Lazaro</a>, a quien agradezco todo el tiempo dedicado a responder todas mis preguntas, he montado por fin el <a href="https://hub.docker.com/r/lsioarmhf/letsencrypt">Docker de Let's Encrypt de la comunidad Linux Server</a>, que no solo te permite generar un certificado automáticamente y totalmente gratuito, para acceder a un servicio fuera de tu red local, si no que ademas permite crear un servidor de Proxy Inverso, permitiendo gracias a los <a href="https://www.duckdns.org">subdominios de Duck DNS</a>, poder acceder a mas de un servicio, teniendo solo un puerto abierto.</p>
+<p>Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios.</p>
+<p>También podremos dar acceso a otros usuarios, amigos, familiares, etc… Ya que nosotros como administradores del servicio, tenemos el control total del mismo.</p>
+<p>Servicios como Nextcloud, Jellyfin, tt-rss, Dokuwiki, Wordpress, etc… Los podremos utilizar en cualquier lugar, teniéndolos en nuestra Raspberry o Servidor y manteniendo el control total de todos nuestros datos.</p>
+<p>Recuerda que gracias al certificado de Let's Encrypt, todos los datos entre servidor y cliente, irán totalmente cifrados.</p>
+<p>Yo os voy a explicar como montarlo en Raspbian o cualquier servidor Linux, pero si eres de los que utilizan <a href="https://www.openmediavault.org/">Open Media Vault,</a> en breve <a href="https://elblogdelazaro.gitlab.io/">Carlos</a> publicará un Post paso a paso de como hacerlo.</p>
+<h2 id="subdominio-de-duck-dns">Subdominio de Duck DNS</h2>
+<p>Accediendo a <a href="https://www.duckdns.org/" class="uri">https://www.duckdns.org/</a>, podremos dar de alta hasta cinco subdominios totalmente gratuitos. Dalos de alta y apunta el <strong>TOKEN</strong> que será necesario para el montaje del contenedor.</p>
+<h2 id="montar-el-docker">Montar el Docker</h2>
+<p>Este es un ejemplo de lo que tenemos que introducir en la terminal para la montaje del Docker de Proxy inverso, donde debes de sustituir los siguiente valores:</p>
+<ul>
+<li>SUBDOMAINS</li>
+<li>DUCKDNSTOKEN</li>
+<li>EMAIL</li>
+</ul>
+<pre><code>docker create \
+  --name=letsencrypt \
+  --cap-add=NET_ADMIN \
+  --restart unless-stopped \
+  -e ONLY_SUBDOMAINS=true \
+  -e PUID=1000 \
+  -e PGID=100 \
+  -e TZ=Europe/Madrid \
+  -e URL=duckdns.org \
+  -e SUBDOMAINS=subdominio-uno,subdominio-dos,subdominio-tres \
+  -e VALIDATION=http \
+  -e DUCKDNSTOKEN=41fc1578-7fev7-4fb9-b20d-6d8vgemj6a9359 \
+  -e EMAIL=ugeekpodcast@gmail.com \
+  -e DHLEVEL=2048 \
+  -p 443:443 \
+  -p 80:80 \
+  -v $HOME/docker/letsencript:/config \
+  linuxserver/letsencrypt
+</code></pre>
+<p>En el caso de la Raspberry, yo he utilizado estas misma líneas de terminal y me ha funcionado perfectamente sin problemas</p>
+<h2 id="archivos-de-configuración">Archivos de Configuración</h2>
+<p>Ya tenemos creado nuestro Docker. Ahora accederemos a la carpeta donde están los archivos de configuración de muestra (Hay muchos servicios de ejemplo) y vamos a modificar el archivo, añadiendo nuestra <strong>IP</strong> y <strong>puerto</strong> del servicio que queramos añadir en el Proxy Inverso.</p>
+<pre><code>~/docker/letsencript/nginx/proxy-confs
+</code></pre>
+<p>Recuerda renombrar el archivo, dejando que acabe en <strong>.conf</strong>, para que el servidor interprete que es un archivo de configuración válido.</p>
+<h3 id="ejemplo-de-archivo">Ejemplo de archivo</h3>
+<p>Vamos a crear un archivo para Nextcloud, pero en realidad puedes hacer lo mismo para cualquier servicio.</p>
+<p>Creamos el nuevo archivo de configuración para Nexcloud.</p>
+<pre><code>nano ~/docker/letsencript/nginx/proxy-confs/nextcloud.subdomain.conf
+</code></pre>
+<p>Sustituye las siguientes líneas y pon tus datos. Dominio, ip, puerto.</p>
+<p>Nextcloud lo tengo montado con letsencript, por eso la ruta del servidor es https. Si tu servicio utiliza http, ponlo así.</p>
+<ul>
+<li><code>server_name mi_dominio.duckdns.org;</code></li>
+<li><code>proxy_pass https://192.168.1.100:81;</code></li>
+</ul>
+<pre><code>server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    server_name mi_dominio.duckdns.org;
+    include /config/nginx/ssl.conf;
+    client_max_body_size 0;
+
+    # enable for ldap auth, fill in ldap details in ldap.conf                                                                                                                                                                                                
+    #include /config/nginx/ldap.conf;                                                                                                                                                                                                                        
+
+    location / {
+        # enable the next two lines for http auth                                                                                                                                                                                                            
+        #auth_basic &quot;Restricted&quot;;                                                                                                                                                                                                                            
+        #auth_basic_user_file /config/nginx/.htpasswd;                                                                                                                                                                                                       
+
+        # enable the next two lines for ldap auth                                                                                                                                                                                                            
+        #auth_request /auth;                                                                                                                                                                                                                                 
+        #error_page 401 =200 /login;                                                                                                                                                                                                                         
+
+        include /config/nginx/proxy.conf;
+        resolver 127.0.0.11 valid=30s;
+        set $upstream_nextcloud nextcloud;
+        proxy_pass https://192.168.1.100:81;
+    }    
+}
+</code></pre>
+<h3 id="indexado-de-buscadores">Indexado de buscadores</h3>
+<p>Para que los buscadores como Google <strong>no</strong> indexen el servicio que tienes expuesto en el docker de Letsencrypt, añade al archivo de configuración las siguientes lineas:</p>
+<pre><code>add_header X-Robots-Tag &quot;noindex, nofollow, nosnippet, noarchive&quot;;
+add_header X-Robots-Tag &quot;none&quot;;
+</code></pre>
+<h2 id="iniciar-detener-reiniciar-el-docker">Iniciar, detener, reiniciar el Docker</h2>
+<p>Iniciar, reiniciar o detener el contenedor, no va a ser diferente a cualquier Docker que tengamos corriendo en nuestro servidor:</p>
+<h3 id="iniciar">Iniciar</h3>
+<pre><code>docker start letsencrypt
+</code></pre>
+<h3 id="detener">Detener</h3>
+<pre><code>docker stop letsencrypt
+</code></pre>
+<h3 id="reiniciar">Reiniciar</h3>
+<pre><code>docker restart letsencrypt
+</code></pre>
+<h2 id="comprobar-que-todo-vaya-bien">Comprobar que todo vaya bien</h2>
+<p>Es recomendable la primera vez que iniciamos el Docker, comprobar que todo funciona correctamente y no hay ningún error en algún archivo de configuración.</p>
+<p>Si lo hubiera, el <strong>log</strong> nos mostrará donde está este error.</p>
+<pre><code>docker logs -f letsencrypt
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>Os puedo garantizar que el poder acceder desde el exterior de tu red local, a todos estos servicios de un modo seguro y teniendo el control de tus datos tu, es una sensación muy agradable. Montar el Docker no lleva mas de 5 minutos, así que te recomiendo el probarlo y que me cuentes tu experiencia.</p>
+<br>
+<p>Publicado por Angel el miércoles 15 mayo del 2019 y <strong>actualizado</strong> el viernes 13 septiembre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html">Navidrome. La alternativa a Airsonic desarrollada en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html">gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html">Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html">FreshRSS. Mi servidor de RSS</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-07-servidor-de-ebooks-con-calibre.html">Servidor de ebooks en Ubuntu, Debian, Raspbian,… con Calibre</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

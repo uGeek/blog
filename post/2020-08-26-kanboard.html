@@ -1,0 +1,182 @@
+<head>
+<title>Kanboard. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Kanboard es un servicio que nos permite gestionar nuestras tareas siguiendo el método Kanban." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Kanboard" />
+<meta property="og:description" content="Kanboard es un servicio que nos permite gestionar nuestras tareas siguiendo el método Kanban." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/kanboard.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-08-26-kanboard.html" />
+
+<meta name="twitter:title" content="Kanboard" />
+<meta name="twitter:description" content="Kanboard es un servicio que nos permite gestionar nuestras tareas siguiendo el método Kanban." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/kanboard.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="kanboard-1" title="Kanboard" data-export_file_name="kanboard" data-description="Kanboard es un servicio que nos permite gestionar nuestras tareas siguiendo el método Kanban." data-export_date="2020-08-26 17:30" data-category="docker" data-tag="kanban" data-image="./images-blog/kanboard.png">Kanboard</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 453 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Kanboard es un servicio que nos permite gestionar nuestras tareas siguiendo el método Kanban.</p>
+<center>
+<p><img src="../images-blog/kanboard.png" /></p>
+</center>
+<p>He instalado el servicio después de mucho tiempo tanto en mi Raspberry como mi Servidor amd64, de un modo súper sencillo y rápido, gracias a Docker.</p>
+<h2 id="docker">Docker</h2>
+<p>El docker lo tenemos disponible tanto para arquitectura amd64, arm, arm64…</p>
+<h3 id="docker-amd64">Docker amd64</h3>
+<pre><code>docker create --name=kanboard       -p &quot;80:80&quot;       -v $HOME/docker/kanboard/data:/var/www/app/data       -v $HOME/docker/kanboard/plugins:/var/www/app/plugins       -v $HOME/docker/kanboard/ssl:/etc/nginx/ssl kanboard/kanboard:latest
+</code></pre>
+<h3 id="docker-arm-o-raspberry-pi">Docker arm o Raspberry Pi</h3>
+<pre><code>docker create --name=kanboard       -p &quot;80:80&quot;       -v $HOME/docker/kanboard/data:/var/www/app/data       -v $HOME/docker/kanboard/plugins:/var/www/app/plugins       -v $HOME/docker/kanboard/ssl:/etc/nginx/ssl kanboard/kanboard:arm32v7-latest
+</code></pre>
+<h3 id="docker-más-arquitecturas">Docker más arquitecturas</h3>
+<p>Si quieres otra arquitectura, revisa en <a href="https://hub.docker.com/r/kanboard/kanboard/tags">DockerHub</a> todas las etiquetas disponibles, cambiando la etiqueta que corresponda.</p>
+<h3 id="docker-compose-para-traefik-y-proxy-inverso">Docker Compose para Traefik y Proxy Inverso</h3>
+<p>Si utilizas un proxy inverso, podemos montar el contenedor con este docker-compose</p>
+<pre><code>version: &quot;3&quot;
+
+networks:
+web:
+external: true
+
+services:
+kanboard:
+image: kanboard/kanboard:latest
+ports:
+- &quot;83:80&quot;
+volumes:
+- $HOME/docker/kanboard/data:/var/www/app/data
+- $HOME/docker/kanboard/plugins:/var/www/app/plugins
+- $HOME/docker/kanboard/ssl:/etc/nginx/ssl
+labels:
+- traefik.backend=kanboard
+- traefik.frontend.rule=Host:kanboard.midominio.duckdns.org
+- traefik.docker.network=web
+- traefik.port=80
+- traefik.enable=true
+networks:
+- web
+</code></pre>
+<h2 id="iniciar-kanboard-y-cambiar-usuario-y-contraseña">Iniciar Kanboard y cambiar usuario y contraseña</h2>
+<p>La primera vez que iniciamos Kanboard, para utilizar el servicio, utilizaremos el usuario y contraseña por defecto:</p>
+<p>Username: admin Password: admin</p>
+<p>Es importante el cambiar el usuario y contraseña. Para hacerlo, lo haremos del siguiente modo pulsando en el icono del usuario.</p>
+<ul>
+<li>Cambiar usuario: Gestión de usuarios -&gt; Acciones -&gt; Editar perfil</li>
+<li>Cambiar contraseña: Gestión de usuarios -&gt; Acciones -&gt; Cambiar contraseña</li>
+</ul>
+<h2 id="habilitar-plugins">Habilitar plugins</h2>
+<p>Por defecto y por seguridad, vienen deshabilitada la posibilidad de instalar plugins. Si deseas instalar cualquiera del gran número de plugins disponibles, entramos dentro del contenedor y editaremos con vi el archivo <strong>config.php</strong>.</p>
+<pre><code>vi /var/www/app/config.php
+</code></pre>
+<pre><code>// Plugins directory
+define(&#39;PLUGINS_DIR&#39;, &#39;plugins&#39;);
+
+// Plugins directory URL
+define(&#39;PLUGIN_API_URL&#39;, &#39;https://kanboard.org/plugins.json&#39;);
+
+// Enable/Disable plugin installer
+define(&#39;PLUGIN_INSTALLER&#39;, true);
+</code></pre>
+<p><strong>Restaurar el docker, para que los cambios tengan efecto</strong>.</p>
+<h2 id="temas">Temas</h2>
+<p>Hay varios temas disponible, que harán de Kanboard una interfaz más amigable, bonita y moderna.</p>
+<p>En mi caso he instalado la de <strong>Greenwing</strong>.</p>
+<h2 id="notificaciones">Notificaciones</h2>
+<p>Si creamos un Bot con su Token en Telegram, podremos hacer que nos notifique cada vez que cambiemos una tarea de estado.</p>
+<p>Recuerda el Podcast y Artículo donde explico como hacerlo paso a paso : <a href="https://ugeek.github.io/post/2018-02-09-kanboard-con-notificaciones-en-telegram.html" class="uri">https://ugeek.github.io/post/2018-02-09-kanboard-con-notificaciones-en-telegram.html</a></p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://docs.kanboard.org/en/latest/admin_guide/docker.html" class="uri">https://docs.kanboard.org/en/latest/admin_guide/docker.html</a></li>
+<li><a href="https://hub.docker.com/r/kanboard/kanboard/tags" class="uri">https://hub.docker.com/r/kanboard/kanboard/tags</a></li>
+<li><a href="https://www.ochobitshacenunbyte.com/2019/04/26/kanboard-instalacion-de-plugins-via-web/" class="uri">https://www.ochobitshacenunbyte.com/2019/04/26/kanboard-instalacion-de-plugins-via-web/</a></li>
+<li><a href="https://github.com/Confexion/Greenwing" class="uri">https://github.com/Confexion/Greenwing</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el miércoles 26 agosto del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

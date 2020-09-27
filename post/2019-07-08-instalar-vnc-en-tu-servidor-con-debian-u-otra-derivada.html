@@ -1,0 +1,133 @@
+<head>
+<title>Instalar VNC en tu servidor con debian u otra derivada. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Hay sistemas operativos que instalo una interfaz gráfica en el servidor y accedo remotamente vía VNC" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Instalar VNC en tu servidor con debian u otra derivada" />
+<meta property="og:description" content="Hay sistemas operativos que instalo una interfaz gráfica en el servidor y accedo remotamente vía VNC" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html" />
+
+<meta name="twitter:title" content="Instalar VNC en tu servidor con debian u otra derivada" />
+<meta name="twitter:description" content="Hay sistemas operativos que instalo una interfaz gráfica en el servidor y accedo remotamente vía VNC" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada-1" title="Instalar VNC en tu servidor con debian u otra derivada" data-export_file_name="Instalar VNC en tu servidor con debian u otra derivada" data-description="Hay sistemas operativos que instalo una interfaz gráfica en el servidor y accedo remotamente vía VNC" data-export_date="2019-07-08 21:10" data-category="debian" data-tag="terminal,ssh,vnc" data-image="./images-blog/docker.png">Instalar VNC en tu servidor con debian u otra derivada</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 308 palabras.    <a href="https://ugeek.github.io/blog/categories/debian">debian</a></h5>
+<p>Hay sistemas operativos que instalo una interfaz gráfica en el servidor y accedo remotamente vía VNC. Pero…, ¿Como lo instalamos y hacemos que sea accesible siempre el servidor desde el inicio del sistema?.</p>
+<p>Este es el método mas fácil y el que siempre empleo yo.</p>
+<center>
+<p><img src="../images-blog/vnc.png" /></p>
+</center>
+<p>Recuerda que tal como explico en este tutorial, <strong>el tráfico no está cifrado</strong>.</p>
+<h2 id="instalamos-vnc">Instalamos VNC</h2>
+<p>Accedemos como root:</p>
+<pre><code>apt install x11vnc
+</code></pre>
+<h2 id="creamos-contraseña">Creamos contraseña</h2>
+<p><strong>Entramos en la sesión de nuestro usuario</strong> y escribimos en la terminal:</p>
+<p><code>x11vnc -storepasswd</code></p>
+<p>Escribimos la contraseña 2 veces y escribimos <strong>Yes</strong></p>
+<h2 id="iniciamos-el-servidor-desde-el-usuario">Iniciamos el servidor desde el usuario</h2>
+<p>Vamos a ver si podemos acceder desde nuestro móvil, tablet o PC. Vamos a iniciar nuestro servidor VNC:</p>
+<p><strong>Sustituye &lt;USUARIO&gt; por tu usuario:</strong></p>
+<pre><code>x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/&lt;USUARIO&gt;/.vnc/passwd -rfbport 5900 -shared
+</code></pre>
+<h2 id="que-inicie-siempre-al-iniciar-al-sistema">Que inicie siempre al iniciar al sistema</h2>
+<p><strong>Entramos nuevamente como root</strong> y escribimos en la terminal:</p>
+<p><code>crontab -e</code></p>
+<p>Ahora añadiremos en el archivo de cron:</p>
+<p><strong>Sustituye &lt;USUARIO&gt; por tu usuario:</strong></p>
+<pre><code>@reboot ( sleep 100 ; x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/&lt;USUARIO&gt;/.vnc/passwd -rfbport 5900 -shared )
+</code></pre>
+<p>Recuerda que como iniciamos el servidor desde cron, tenemos que especificar la ruta del archivo de configuración de VNC, en la sesión de usuario, que era donde habíamos añadido la contraseña.</p>
+<br>
+<p>Publicado por Angel el lunes 08 julio del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-07-servidor-de-ebooks-con-calibre.html">Servidor de ebooks en Ubuntu, Debian, Raspbian,… con Calibre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-06-instalar-brave-en-ubuntu-debian-linux-mint.html">Instalar Brave en Ubuntu, Debian, Linux Mint</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html">Instalando, Compilando el última versión de Rclone-Browser</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html">Wireguard en 2 minutos con wgc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-28-instalar-un-servidor-con-debian.html">Instalar un Servidor con Debian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-20-habilitar-repositorios-privativos-en-debian.html">Habilitar Repositorios Privativos en Debian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-04-los-paquetes-snap-no-aparecen-una-vez-instalados.html">Los paquetes snap no aparecen una vez instalados</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-13-compilando-la-ultima-version-de-emacs.html">Compilando la última versión de Emacs</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,129 @@
+<head>
+<title>Comando para saber los dockers corriendo y sus puertos. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Tengo tantos contenedores corriendo, que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Comando para saber los dockers corriendo y sus puertos" />
+<meta property="og:description" content="Tengo tantos contenedores corriendo, que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html" />
+
+<meta name="twitter:title" content="Comando para saber los dockers corriendo y sus puertos" />
+<meta name="twitter:description" content="Tengo tantos contenedores corriendo, que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="comando-para-saber-los-dockers-corriendo-y-sus-puertos-1" title="Comando para saber los dockers corriendo y sus puertos" data-export_file_name="Comando para saber los dockers corriendo y sus puertos" data-description="Tengo tantos contenedores corriendo, que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor." data-export_date="2019-09-23 17:55" data-category="docker" data-tag="bash,terminal" data-image="./images-blog/docker.png">Comando para saber los dockers corriendo y sus puertos</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 261 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Tengo tantos contenedores corriendo, que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor.</p>
+<center>
+<p><img src="../images-blog/docker.png" /></p>
+</center>
+<p>En mi servidor he creado mediante alias un nuevo comando llamado dockers, que soluciona a este problema.</p>
+<h2 id="comando">Comando</h2>
+<p>Vamos a editar el archivo .bashrc si tienes bash o .zshrc si tienes zsh.</p>
+<p><code>nano .bashrc</code> o <code>nano .zshrc</code>.</p>
+<p>Y añadiremos la siguiente línea:</p>
+<pre><code>alias dockers=&quot;docker ps --format &#39;table {{.Names}}\t{{.Ports}}&#39; |  sed &#39;s|NAMES||g&#39; |  sed &#39;s|PORTS||g&#39; | sort&quot;
+</code></pre>
+<p>Lo que hace este comando es hacer un <code>docker ps</code>, filtrando las columnas de nombres y puertos.</p>
+<p><strong>Reiniciamos la terminal</strong></p>
+<h2 id="ejecutando-el-comando">Ejecutando el comando</h2>
+<p>Ahora, cada vez que introduzcamos el comando <strong>dockers</strong>, la terminal nos devolverá todos los contenedores que estén corriendo en ese momento, ordenados por orden alfabético y los puertos que tienen asignados.</p>
+<p>En mi caso la terminal me devuelve:</p>
+<pre><code>letsencrypt         0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp
+mariadb             0.0.0.0:3306-&gt;3306/tcp
+nextcloud           80/tcp, 0.0.0.0:82-&gt;443/tcp
+tt-rss              443/tcp, 0.0.0.0:81-&gt;80/tcp
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>Una vez más, un comando en bash nos hace la vida más fácil.</p>
+<br>
+<p>Publicado por Angel el lunes 23 septiembre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

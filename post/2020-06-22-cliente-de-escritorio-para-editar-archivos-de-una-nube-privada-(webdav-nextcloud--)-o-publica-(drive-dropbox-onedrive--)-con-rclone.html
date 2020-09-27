@@ -1,0 +1,148 @@
+<head>
+<title>Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone" />
+<meta property="og:description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/rclone.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html" />
+
+<meta name="twitter:title" content="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone" />
+<meta name="twitter:description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/rclone.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-webdav-nextcloud-o-pública-drive-dropbox-onedrive-con-rclone-1" title="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone" data-export_file_name="cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone" data-description="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." data-export_date="2020-06-22 22:22" data-category="rclone" data-tag="webdav,nextcloud,dropbox,nube,ssh" data-image="./images-blog/rclone.png">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 509 palabras.    <a href="https://ugeek.github.io/blog/categories/rclone">rclone</a></h5>
+<p>Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt.</p>
+<p>Para ello, aunque existe otros clientes webdav, me ha parecido más simple y eficaz utilizar rclone.</p>
+<p>Esto podremos hacerlo con cualquier nube pública, privada, como Webdav, Nextcloud, Dropbox, Google Drive, OneDrive,… SSH, SFTP,… vamos, todas las opciones disponibles con Rclone.</p>
+<center>
+<p><img src="../images-blog/rclone.png" /></p>
+</center>
+<p>Incluso, una opción interesante, cifrar el contenido de una carpeta local con rclone, sincronizar esta con Syncthing y montarla con rclone en otro pc o servidor.</p>
+<p>Voy a explicarlo paso a paso.</p>
+<p>Para entender más en profundidad como montar una nube con rclone, recomiendo <a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">este artículo que hice profundizando sobre el tema</a>.</p>
+<h2 id="crear-el-directorio-donde-montaremos-el-contenido">Crear el directorio donde montaremos el contenido</h2>
+<p>Voy a crear la carpeta donde montaré mis archivos <strong>orgmode</strong>. La llamaré <strong>org</strong>.</p>
+<pre class="example"><code>mkdir ~/org
+</code></pre>
+<h2 id="descomenta-allow-others">Descomenta –allow-others</h2>
+<p>Descomenta la línea –allow-others, para permitir a usuarios no root, montar unidades</p>
+<pre class="example"><code>sudo nano /etc/fuse.conf
+</code></pre>
+<p>Descomenta –allow-others</p>
+<pre class="example"><code># Allow non-root users to specify the allow_other or allow_root mount options.
+--allow-others
+</code></pre>
+<p>Reinicia</p>
+<h2 id="montando-la-nube">Montando la nube</h2>
+<p>Tan sencillo como utilizar <code>rclone mount</code>.</p>
+<pre class="example"><code>rclone mount drive:org ~/org
+</code></pre>
+<p>Para enviar el comando a segundo plano y siempre corriendo, podemos añadir al final de esta línea <strong>&amp;</strong>.</p>
+<p>Esto puede dar una serie de lecturas en la terminal, que solucionaremos tal como explico en el automontado. El automontado es con cron, pero ese mismo comando, puedes ejecutarlo en la terminal.</p>
+<h2 id="automontando-al-inicio-de-sesión-del-sistema-operativo">Automontando al inicio de sesión del sistema operativo</h2>
+<p>Para automontar la nube al inicio de Debian, Ubuntu,… podemos hacerlo de varias maneras.</p>
+<p>Voy a utilizar el método más sencillo que he utilizado, con cron.</p>
+<p>Abrimos cron desde la sesión del usuario</p>
+<pre class="example"><code>crontab -e
+</code></pre>
+<p>Añadímos la siguiente línea</p>
+<pre class="example"><code>@reboot ( sleep 25 &amp;&amp; nohup rclone mount drive:org /home/angel/org --vfs-cache-mode full -v --allow-other  2&gt;/dev/null &amp; )
+</code></pre>
+<p>Este comando en crontab, indica que cada vez que iniciamos el sistema operativo, con <code>@reboot</code>, esperará 25 segundos y montará la nube que tengo en rclone con el nombre <code>drive:org</code>, en la carpeta <code>~/org</code>.</p>
+<p><strong>nohup</strong> y <strong>2&gt;/dev/null</strong>, envía a esta posición de memoria el resultado que muestra la terminal, una posición de memoria que tiene nuestro sistema operativo precisamente para no mostrar nada en terminal.</p>
+<p><strong>&amp;</strong>, dejará corriendo el comando indefinidamente, a no ser que lo detengamos nosotros.</p>
+<p><strong>–vfs-cache-mode full</strong>, activa la caché de lectura y escritura</p>
+<p><strong>–allow-other,</strong> permite a otros usuarios que se conecten a este directorio</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Así es como monto mi nube webdav en mi escritorio para editar mis archivos orgmode. Cada vez que inicio el sistema operativo, siempre está disponible ahí mi nube.</p>
+<p>También podemos hacer lo mismo, pero en lugar de utilizar cron, podemos crear un servicio, pero esto lo dejo para otro artículo.</p>
+<br>
+<p>Publicado por Angel el lunes 22 junio del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-26-rclone-bidireccional-con-rclonesync.html">Rclone bidireccional con Rclonesync</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html">Instalando, Compilando el última versión de Rclone-Browser</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-01-rclone-instalando-la-ultima-version.html">Rclone. Instalando la última versión</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html">Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,186 @@
+<head>
+<title>Editor de Texto Nano. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="En anteriores artículos, hemos visto como compilar nano, ahora veremos un poco como utilizarlo y conocer sus atajos." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Editor de Texto Nano" />
+<meta property="og:description" content="En anteriores artículos, hemos visto como compilar nano, ahora veremos un poco como utilizarlo y conocer sus atajos." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nano.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html" />
+
+<meta name="twitter:title" content="Editor de Texto Nano" />
+<meta name="twitter:description" content="En anteriores artículos, hemos visto como compilar nano, ahora veremos un poco como utilizarlo y conocer sus atajos." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nano.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="editor-de-texto-nano-1" title="Editor de Texto Nano" data-export_file_name="editor-de-texto-nano" data-description="En anteriores artículos, hemos visto como compilar nano, ahora veremos un poco como utilizarlo y conocer sus atajos." data-export_date="2020-01-15 20:12" data-category="nano" data-tag="ssh,terminal" data-image="./images-blog/nano.png">Editor de Texto Nano</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 549 palabras.    <a href="https://ugeek.github.io/blog/categories/nano">nano</a></h5>
+<p>En anteriores artículos, hemos visto como compilar nano, ahora veremos un poco como utilizarlo y conocer sus atajos.</p>
+<center>
+<p><img src="../images-blog/nano.png" /></p>
+</center>
+<h2 id="atajos">Atajos</h2>
+<p><strong>Ctrl+g</strong> o <strong>F1</strong>, muestra la ayuda y no solo nos explica el funcionamiento de nano, sino también todos los atajos.</p>
+<p>Vamos a ver algunos de los atajos más útiles.</p>
+<ul>
+<li>Ctrl-c : cancela comando actual</li>
+<li>Ctrl-s : Guardar el documento actual</li>
+<li><p>Ctrl-x o F2: Salir y guardar o no documento</p></li>
+<li>Ctrl-w o F6: Buscar</li>
+<li><p>Alt-r o Ctrl-\ : Buscar y remplazar texto</p></li>
+<li><p>Ctrl-_ o Ctrl-Shift–: Ir a un determinado número de línea</p></li>
+<li>Ctrl-r : Insertar otro archivo de texto en el que esté abierto en ese momento</li>
+<li><p>Ctrl-l : Actualizar el buffer, en el caso que dos personas esten editando el documento</p></li>
+</ul>
+<h3 id="rehacer---deshacer">Rehacer - Deshacer</h3>
+<ul>
+<li>Alt-u : Deshacer</li>
+<li>Alt-e : Rehacer</li>
+</ul>
+<h3 id="copiar-cortar-pegar-y-seleccionar-un-texto">Copiar, Cortar, Pegar y seleccionar un texto</h3>
+<ul>
+<li>Alt-a : Seleccionamos un texto que desdeamos copiar o cortar. Pulsa <strong>Alt-a</strong> una vez has seleccionado el texto</li>
+<li>Ctrl-k : Cortar</li>
+<li>Alt-6 : Copiar</li>
+<li>Ctrl-u : Pegar</li>
+</ul>
+<h3 id="otros">Otros</h3>
+<ul>
+<li>Alt-i : Habilitar y deshabilitar el auto identado</li>
+<li>Alt-m : Habilitar el uso del ratón</li>
+</ul>
+<h2 id="corrector-ortográfico">Corrector Ortográfico</h2>
+<h3 id="instalación">Instalación</h3>
+<pre><code>sudo apt install spell
+</code></pre>
+<p>Ahora para poder corregir el texto mediante <strong>nano</strong>, pulsaremos las teclas <strong>Ctrl-t</strong>. Nano se desplazará hasta la palabra con error de ortografía para que sustituyamos el texo.</p>
+<h2 id="todos-los-atajos">Todos los Atajos</h2>
+<ul>
+<li>^ es igual a la tecla <strong>Ctrl</strong></li>
+<li><strong>M</strong> es igual a la tecla <strong>Alt</strong></li>
+</ul>
+<pre><code>ATAJOS          DESCRIPCIÓN
+
+^G    (F1)      Mostrar esta ayuda
+^X    (F2)      Cerrar el búfer actual / Salir de nano
+^O    (F3)      Escribir el búfer actual (o la región marcada) a disco
+^R    (Ins)     Insertar otro fichero en el búfer actual (o en un nuevo búfer)
+
+^W    (F6)      Buscar hacia delante una cadena o expresión regular
+^\    (M-R)     Reemplazar una cadena o expresión regular
+^K    (F9)      Cortar la línea actual (o la región marcada) y guardarla en el cutbuffer
+^U    (F10)     Pegar el cutbuffer en la línea actual
+
+^J    (F4)      Justificar el párrafo actual
+^T    (F12)     Invocar el corrector ortográfico (si está disponible)
+
+^C    (F11)     Mostrar la posición del cursor
+^_    (M-G)     Ir a una línea y columna
+
+M-U             Deshacer la última operación
+M-E             Rehacer la última operación deshecha
+
+M-A   (^6)      Marcar texto desde la posición actual del cursor
+M-6   (M-^)     Copiar la línea actual (o la región marcada) y guardarla en el cutbuffer
+
+M-]             Ir a la llave correspondiente
+
+^Q              Buscar hacia atrás una cadena o expresión regular
+M-Q   (M-▲)     Seguir buscando hacia atrás
+M-W   (M-▼)     Seguir buscando hacia delante
+
+^B    (◀)       Ir hacia atrás un carácter
+^F    (▶)       Ir hacia delante un carácter
+^◀    (M-Space) Ir hacia atrás una palabra
+^▶    (^Space)  Ir hacia delante una palabra
+^A    (Home)    Ir al principio de la línea actual
+^E    (End)     Ir al final de la línea actual
+
+^P    (▲)       Ir a la línea anterior
+^N    (▼)       Ir a la siguiente línea
+M--   (M-_)     Desplazar el texto una línea arriba sin mover el cursor textualmente
+M-+   (M-=)     Desplazar el texto una línea abajo sin mover el cursor textualmente
+
+</code></pre>
+<br>
+<p>Publicado por Angel el miércoles 15 enero del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-13-compilando-la-ultima-version-de-emacs.html">Compilando la última versión de Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-12-compilando-la-ultima-version-de-nano.html">Compilando La última versión de Nano</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

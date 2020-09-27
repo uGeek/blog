@@ -1,0 +1,203 @@
+<head>
+<title> Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="En el Podcast, os he hablado muchas veces de las virtudes de docker: sencillez, seguridad, etc... En el artículo de hoy, voy a instalar un servidor ejabberd para raspberry, que no he encontrado en el Docker Hub y porque no decirlo, para los mas paranoicos, porque no instalarlo paso a paso" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile" />
+<meta property="og:description" content="En el Podcast, os he hablado muchas veces de las virtudes de docker: sencillez, seguridad, etc... En el artículo de hoy, voy a instalar un servidor ejabberd para raspberry, que no he encontrado en el Docker Hub y porque no decirlo, para los mas paranoicos, porque no instalarlo paso a paso" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ejabberd.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html" />
+
+<meta name="twitter:title" content=" Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile" />
+<meta name="twitter:description" content="En el Podcast, os he hablado muchas veces de las virtudes de docker: sencillez, seguridad, etc... En el artículo de hoy, voy a instalar un servidor ejabberd para raspberry, que no he encontrado en el Docker Hub y porque no decirlo, para los mas paranoicos, porque no instalarlo paso a paso" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ejabberd.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="servidor-jabberxmpp-en-tu-raspberry-mediante-docker-y-dockerfile" title="Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile" data-export_file_name="Servidor ejabberd xmpp en tu Raspberry mediante Docker y Dockerfile" data-description="En el Podcast, os he hablado muchas veces de las virtudes de docker: sencillez, seguridad, etc... En el artículo de hoy, voy a instalar un servidor ejabberd para raspberry, que no he encontrado en el Docker Hub y porque no decirlo, para los mas paranoicos, porque no instalarlo paso a paso" data-export_date="2019-02-10 22:25" data-category="docker" data-tag="debian,alpinelinux,mensajeria,docker" data-image="./images-blog/ejabberd.png">Servidor Jabber/XMPP en tu Raspberry mediante Docker y Dockerfile</h1>
+<h5>Tiempo estimado de lectura: 9 minutos. 1005 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<center>
+<p><img src="../images-blog/ejabberd.png" /></p>
+</center>
+<p>En el Podcast, os he hablado muchas veces de las virtudes de docker: sencillez, seguridad, etc… En el artículo de hoy, voy a instalar un servidor ejabberd para raspberry, que no he encontrado en el Docker Hub y porque no decirlo, para los mas paranoicos, porque no instalarlo paso a paso…</p>
+<p>El Dockerfile es una archivo en texto plano que nos permite, del mismo modo que hacemos en un script, escribir línea a línea todos los comandos que queremos que se ejecuten en el momento de crear el Docker. Partimos en la primera línea descargando de un sistema operativo y después sucesivamente se ejecutaran todos esos comandos, cerrando por último nuestra imagen.</p>
+<p>Vamos a crear un servidor ejabberd de mensajería, partiendo de una distro debian para arm32v7.</p>
+<p>En próximos posts explicaré como hacer Dockers partiendo de una distro que tan solo ocupa 5 Mb, Alpine Linux. Pero para ejabberd, no hay una versión estable del servicio para arm. Así que… Vamos a utilizar una debian que es lo que conozco bien.</p>
+<h2 id="dockerfile">Dockerfile</h2>
+<p>Crea con tu editor texto favorito, un archivo sin extensión llamado <strong>Dockerfile</strong> y dentro copiar este contenido.</p>
+<pre><code>FROM arm32v7/debian:latest
+MAINTAINER angel &lt;ugeekpodcast@gmail.com&gt;
+
+RUN apt-get -y update; \
+    apt-get -y upgrade; \
+    apt-get -y install apt-utils \
+    ejabberd; 
+
+
+EXPOSE 5280
+EXPOSE 5222
+EXPOSE 5269
+
+VOLUME /etc/ejabberd/
+
+
+ENTRYPOINT service ejabberd start &amp;&amp; /bin/bash
+CMD [&quot;bash&quot;]
+</code></pre>
+<ul>
+<li>La primera línea, <strong>FROM</strong>, nos descargará de Docker Hub la distro debian para arm32v7.</li>
+<li><strong>MAINTAINER</strong>, son los datos de quien va a mantener el contenedor. En este caso no es necesario, ya que mi intención no es subirlo al Docker Hub, pero vamos a ponerlo.</li>
+<li><strong>RUN</strong>, Comando que se ejecutaran del mismo modo que un script en bash. Actualizamos repositorios e instalamos todo aquello que necesitamos para crear nuestro servidor.</li>
+<li><strong>EXPOSE</strong>, son los puertos que quedarán abiertos en el contenedor.</li>
+<li><strong>VOLUME</strong>, es la carpeta del contenedor que deseamos que quede accesible desde fuera del contenedor. Esto es ideal en este caso para dejar el archivo de configuración fuera del contenedor y así si después actualizamos el Docker o se rompe, restaurando a partir de la imagen. Dejando el archivo de configuración, todo funcionará como si no hubiera pasado nada.</li>
+<li><strong>ENTRYPOINT</strong>, Comando que ejecutaremos una vez montado el contenedor.</li>
+</ul>
+<h2 id="creando-la-imagen">Creando la Imagen</h2>
+<p>Nos situaremos en la carpeta donde está el archivo <strong>Dockerfile</strong> y ejecutaremos el siguiente comando:</p>
+<p><code>docker build -t ejabberd_imagen:dockerfile .</code></p>
+<h2 id="veamos-si-se-ha-creado-la-imagen">Veamos si se ha creado la imagen</h2>
+<p>Con este comando veremos todas las imágenes que tenemos en el servidor. La última, corresponderá la imagen que hemos creado:</p>
+<p><code>docker images</code></p>
+<p>Tenemos una nueva imagen de 155Mb con el nombre que habíamos puesto!!!</p>
+<pre><code>REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+ejabberd_imagen           dockerfile          983bc10a3e5b        47 seconds ago      155MB
+</code></pre>
+<h2 id="creando-del-contenedor">Creando del Contenedor</h2>
+<p>Ya tenemos nuestra imagen, ahora vamos a crear el contenedor. A la imagen la nombramos <strong>ejabberd_imagen</strong> y al contenedor, lo pondremos el nombre de <strong>ejabberd</strong></p>
+<p>Solo hay 2 valores que tiene que añadir:</p>
+<ul>
+<li>$USUARIO : Escribe tu usuario</li>
+<li>$IMAGE_ID : Escribe el número de <strong>IMAGE ID</strong>, que te apareció en el paso anterior.</li>
+</ul>
+<p>=docker run -dti –name ejabberd –restart=unless-stopped -p 5280:5280 -p 5222:5222 -v <em>home/$USUARIO/docker/ejabberd_config:/etc/ejabberd</em> $IMAGE_ID=</p>
+<p>En la carpeta <code>/home/$USUARIO/docker/ejabberd_config</code>, encontraremos el archivo de configuración del servidor.</p>
+<h2 id="entrar-en-el-docker">Entrar en el Docker</h2>
+<p>Ahora vamos a entrar al interior del Docker. Una vez dentro de este, estaremos en una versión de debian, con todo lo justo para que funcione nuestro servidor y para que sea del mínimo tamaño.</p>
+<p><code>docker exec -i -t ejabberd /bin/bash</code></p>
+<p>ejabberd es el nombre que habíamos dado a nuestro contenedor.</p>
+<h2 id="vamos-a-configurar-nuestro-servidor">Vamos a configurar nuestro servidor</h2>
+<p>Una vez dentro, mediante este comando, daremos nombre al servidor, nombre de administrador y contraseña del mismo.</p>
+<p><code>dpkg-reconfigure ejabberd</code></p>
+<p>Es posible que de error. Si es así, pararemos el servidor y lo volveremos a iniciar.</p>
+<p><span class="underline">Detener el servidor</span></p>
+<p><code>service ejabberd stop</code></p>
+<p><span class="underline">Iniciar el servidor</span></p>
+<p><code>service ejabberd start</code></p>
+<h2 id="configurando-el-servidor">Configurando el servidor</h2>
+<p>Ahora nos conectamos a <code>https://ip:5280/admin</code>, que es la web de administración del servicio. Nos pedirá para acceder el nombre del servidor y usuario del administrador, que hemos puesto en el paso anterior.</p>
+<p>Nombre de usuario: admin@localhost Contraseña: password</p>
+<p>Archivo de configuración está en: <code>/etc/ejabberd/ejabberd.yml</code></p>
+<h2 id="añadir-usuarios">Añadir usuarios</h2>
+<p>Para añadir usuarios desde la interfaz de administración web, seleccionaremos en el menú <strong>Dominios Virtuales</strong> -&gt; <strong>Dominio</strong> -&gt; <strong>Usuarios</strong>. Ahí, añadiremos nuestros usuarios y sus contraseñas. Esto sería en el caso que únicamente el administrador del servidor, sea el único que permita el registro de usuarios, tal como viene por defecto. También podríamos hacer que cada usuario que quiera, pueda registrarse.</p>
+<h2 id="aumentar-la-velocidad-de-transferencia-de-archivos.-traffic-shapers">Aumentar la velocidad de transferencia de archivos. TRAFFIC SHAPERS</h2>
+<p>Ejabberd/xmpp, no está diseñado para transferir archivos, aún así, notarás que la transferencia de archivos es muy lenta y es debido a que el archivo de configuración tiene limitación en la transferencia por defecto, por si el número de usuarios que van a utilizar el servidor es muy grande. También tiene limitado el tamaño máximo de archivo a compartir. Desmarca mediante <strong>#</strong> o personaliza a tu gusto los parametros en <strong>ejabberd.yml</strong>, Recuerda que puedes acceder desde fuera del contenedor, gracias al volumen que creamos al crear el mismo.</p>
+<pre><code>shaper:
+  ##
+  ## The &quot;normal&quot; shaper limits traffic speed to 1000 B/s
+  ##
+##########  normal: 10000000
+
+  ##
+  ## The &quot;fast&quot; shaper limits traffic speed to 50000 B/s
+  ##
+##########  fast: 50000
+
+##
+## This option specifies the maximum number of elements in the queue
+## of the FSM. Refer to the documentation for details.
+##
+#max_fsm_queue: 1000
+</code></pre>
+<p>Podemos personalizar absolutamente nuestro servidor desde este archivo, pero es muy complejo. Visita la web de ejabberd para ver ejemplos y sobretodo, haz una copia del archivo antes de modificarlo.</p>
+<h2 id="web-ejabberd">Web ejabberd</h2>
+<ul>
+<li><a href="https://www.ejabberd.im/" class="uri">https://www.ejabberd.im/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el domingo 10 febrero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

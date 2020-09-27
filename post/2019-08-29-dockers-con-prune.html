@@ -1,0 +1,179 @@
+<head>
+<title>Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune" />
+<meta property="og:description" content="Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-29-dockers-con-prune.html" />
+
+<meta name="twitter:title" content="Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune" />
+<meta name="twitter:description" content="Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="borrar-contenedores-imágenes-volúmenes-y-redes-de-tus-dockers-con-prune-1" title="Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune" data-export_file_name="Dockers con Prune" data-description="Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores" data-export_date="2019-08-29 10:30" data-category="docker" data-tag="ssh, terminal" data-image="./images-blog/docker.png">Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</h1>
+<h5>Tiempo estimado de lectura: 5 minutos. 618 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores, imágenes y volúmenes colgados, que ya no están en uso y han quedado obsoletos en tu disco ocupando espacio. Si tienes muchos, es una labor muy tediosa tener que borrar uno a uno todos los contenedores e imágenes. Hay un modo sencillo de borrarlo, vamos a utilizar <strong>prune</strong>.</p>
+<center>
+<p><img src="../images-blog/docker.png" /></p>
+</center>
+<h2 id="detener-todos-los-contenedores">Detener todos los contenedores</h2>
+<p>Lo primero que haremos con un comando en bash, detener todos los contenedores para iniciar solo aquellos que queremos conservar</p>
+<pre><code>docker stop $(docker ps -q)
+</code></pre>
+<h2 id="contenedores">Contenedores</h2>
+<p>Ya tenemos todos los contenedores detenidos. <strong>Inicia aquellos que quieres conservar</strong>, ya que <strong>prune eliminará todos los contenedores detenidos</strong>.</p>
+<h3 id="borrar-contenedores-detenidos">Borrar Contenedores detenidos</h3>
+<pre><code>docker container prune
+</code></pre>
+<p>Aparecerá un mensaje para que confirmes si realmente deseas borrarlos. Si no deseas que te pregunte, añade el flag <strong>-f</strong>.</p>
+<pre><code>docker container prune - f
+</code></pre>
+<h2 id="imágenes">Imágenes</h2>
+<p>Ya has eliminado los contenedores que no deseabas y ahora habrán quedado imágenes <strong>colgadas</strong>, que no pertenecen a ningún contenedor.</p>
+<p>Las imágenes colgadas son aquellas que en su día utilizaste con un contenedor y ahora no pertenece a ninguno, quedando en tu servidor.</p>
+<p>También cada vez que actualizamos un contenedor, descarga una nueva imagen. La versión anterior queda en nuestro servidor <strong>colgada</strong>.</p>
+<p>Docker no elimina las imágenes antiguas, ya que el objetivo de docker es que nosotros tengamos el control total de nuestros datos, así seremos nosotros los encargados de hacerlo.</p>
+<h3 id="ver-imágenes-colgadas">Ver imágenes colgadas</h3>
+<pre><code>docker image ls -f &quot;dangling=true&quot;
+</code></pre>
+<h3 id="borrar-únicamente-las-imagenes-colgadas">Borrar <strong>únicamente las imagenes colgadas</strong></h3>
+<pre><code>docker image prune
+</code></pre>
+<h3 id="borrar-imágenes-que-no-están-siendo-utilizadas-por-ningún-contenedor-en-el-momento-de-ejecutar-el-comando">Borrar imágenes que no están siendo utilizadas por ningún contenedor, en el momento de ejecutar el comando</h3>
+<pre><code>docker image prune -a
+</code></pre>
+<h2 id="volúmenes">Volúmenes</h2>
+<p>Docker crea unos volúmenes para compartir información con el contenedor. Muchos de estos volúmenes, también quedan colgados como sucede con las imágenes. Nuevamente somos nosotros quien tenemos que borrar estos volúmenes en desuso.</p>
+<h3 id="listar-volúmenes">Listar volúmenes</h3>
+<pre><code>docker volume ls
+</code></pre>
+<h3 id="eliminar-todos-los-volúmenes-que-no-sean-utilizados-contenedor.">Eliminar todos los volúmenes que no sean utilizados contenedor.</h3>
+<pre><code>docker volume prune
+</code></pre>
+<h2 id="redes">Redes</h2>
+<p>Docker crea tres redes predeterminadas, bridge,host y none. Es posible que nosotros hayamos creado mas redes y ahora queramos eliminarlas</p>
+<h3 id="listar-redes">Listar redes</h3>
+<pre><code>docker network ls
+</code></pre>
+<h3 id="eliminar-redes-no-utilizadas">Eliminar Redes no utilizadas</h3>
+<pre><code>docker network prune
+</code></pre>
+<h2 id="todo-de-una-vez">Todo de una vez</h2>
+<p>Hay un método que te permitirá hacer todos los pasos anteriores de una vez.</p>
+<h3 id="borrar-contenedores-imágenes-redes-colgados">Borrar Contenedores, imágenes, redes colgados</h3>
+<pre><code>docker system prune
+</code></pre>
+<p>La terminal te pedirá que confirmes si deseas eliminarlos</p>
+<h3 id="contenedores-imágenes-redes-colgados-detenidos">Contenedores, imágenes, redes colgados detenidos</h3>
+<p>Borrar todos los contenedores <strong>detenidos</strong>, todas <strong>las redes no utilizadas</strong> por al menos un contenedor, <strong>todas las imágenes sin al menos un contenedor</strong> asociado a ellas y <strong>todo el caché</strong> de construcción.</p>
+<pre><code>docker system prune -a
+</code></pre>
+<h3 id="añadir-también-los-volumenes">Añadir también los volumenes</h3>
+<p>Por defecto, no elimina los volúmenes. Si quieres incluir también estos</p>
+<pre><code>docker system prune --volumes
+</code></pre>
+<h2 id="borrar-contenedores-por-tiempo">Borrar Contenedores por tiempo</h2>
+<p>Si nos ponemos ha hacer pruebas montando contenedores, también podemos borrar estos por tiempo de creación. Por ejemplo, con este comando borraremos todos los contenedores creado hasta hace 2 horas</p>
+<pre><code>docker container prune --force --filter &quot;until=2h&quot;
+</code></pre>
+<h2 id="ayudas">Ayudas</h2>
+<p>Puedes acceder a las ayudas desde tu terminal. Por ejemplo, la ayuda de <strong>system prune</strong>:</p>
+<pre><code>docker system prune --help.
+</code></pre>
+<h2 id="fuente">Fuente</h2>
+<ul>
+<li><a href="https://takacsmark.com/docker-prune/" class="uri">https://takacsmark.com/docker-prune/</a></li>
+<li><a href="https://www.vidaxp.com/tecnologia/como-borrar-imagenes-contenedores-y-volumenes-docker/" class="uri">https://www.vidaxp.com/tecnologia/como-borrar-imagenes-contenedores-y-volumenes-docker/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el jueves 29 agosto del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

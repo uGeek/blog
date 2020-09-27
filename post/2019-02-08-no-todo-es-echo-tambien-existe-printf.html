@@ -1,0 +1,390 @@
+<head>
+<title> No todo es echo. También existe printf. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" No todo es echo. También existe printf" />
+<meta property="og:description" content="Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html" />
+
+<meta name="twitter:title" content=" No todo es echo. También existe printf" />
+<meta name="twitter:description" content="Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="no-todo-es-echo.-también-existe-printf-1" title="No todo es echo. También existe printf" data-export_file_name="No todo es echo Tambien existe printf" data-description="Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf." data-export_date="2019-02-08 22:15" data-category="bash" data-tag="terminal" data-image="./images-blog/ugeek.png">No todo es echo. También existe printf</h1>
+<h5>Tiempo estimado de lectura: 9 minutos. 1087 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Cuando hacemos scritps en bash, habitualmente utilizamos <strong>echo</strong> para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc… para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.</p>
+<h2 id="iniciandonos-con-printf">Iniciandonos con printf</h2>
+<p>printf es mucho mas simple que echo, vamos a comenzar con algunos simples ejemplos:</p>
+<pre><code>$ printf &quot;Hola Mundo&quot;
+Hola Mundo
+</code></pre>
+<h2 id="salto-de-línea">Salto de línea</h2>
+<p>Del mismo modo que <strong>echo</strong>, podemos hacer salto de líneas. Vamos a ver varios ejemplos:</p>
+<pre><code>$ printf &quot;%s\n&quot; &quot;Hola Mundo&quot;
+Hola Mundo
+</code></pre>
+<pre><code>$ printf &quot;Hola \nMundo&quot;
+Hola
+Mundo
+</code></pre>
+<pre><code>$ printf &quot;%s\n&quot; &quot;Hola&quot; &quot;Mundo&quot;
+Hola
+Mundo
+</code></pre>
+<pre><code>$ printf &quot;%*s\n&quot; $(tput cols) &quot;Hola Mundo!&quot;
+Hola
+Mundo
+!
+</code></pre>
+<h2 id="imprimir-al-final-de-la-línea">Imprimir al final de la línea</h2>
+<p>Ahora vamos a desplazar la línea al final del margen derecho:</p>
+<pre><code>$ printf &quot;%*s\n&quot; $(tput cols) &quot;Hola Mundo!&quot;
+
+                                 Hola Mundo!
+</code></pre>
+<h2 id="llamada-de-fechas-host-rutas">Llamada de Fechas, host, rutas</h2>
+<p>Podemos llamar diferentes formatos de fecha, host, rutas,…</p>
+<pre><code>$ printf &#39;Esta es la semana %(%U/%Y)T.\n&#39; -1
+Esta es la semana 05/2019.
+</code></pre>
+<p>Mostrando la fecha y host:</p>
+<pre><code>$ printf &quot;%s:%s\n&quot; &quot;$(date)&quot; &quot;$(hostname)&quot;
+vie feb  8 22:16:26 CET 2019:angel
+</code></pre>
+<p>Ruta de mi carpeta home:</p>
+<pre><code>$ printf &quot;La ruta de mi home es %s.\n&quot; $HOME
+La ruta de mi home es /home/angel.
+</code></pre>
+<p>Añadiendo el nombre con el que nos hemos logeado en la sesión:</p>
+<pre><code>$ printf &quot;Hola, Soy %s.\n&quot; $LOGNAME
+Hola, Soy angel.
+</code></pre>
+<p>Fecha y hora:</p>
+<pre><code>$ printf &quot;%(%m-%d-%Y %H:%M:%S)T\n&quot; $(date +%s)
+02-08-2019 21:10:35
+</code></pre>
+<p>Tabla con el código del formato de fecha:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Código de Formato</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>%%</td>
+<td>un% literal</td>
+</tr>
+<tr class="even">
+<td>%a</td>
+<td>el nombre abreviado del día de la semana de locale (por ejemplo, Lun)</td>
+</tr>
+<tr class="odd">
+<td>%A</td>
+<td>el nombre completo del día laborable de la localidad (por ejemplo, domingo)</td>
+</tr>
+<tr class="even">
+<td>%b</td>
+<td>el nombre abreviado del mes de la localidad (por ejemplo, enero)</td>
+</tr>
+<tr class="odd">
+<td>%B</td>
+<td>el nombre completo del mes del local (por ejemplo, enero)</td>
+</tr>
+<tr class="even">
+<td>%c</td>
+<td>Fecha y hora del local (por ejemplo, jue 3 de marzo 23:05:25 2005)</td>
+</tr>
+<tr class="odd">
+<td>%C</td>
+<td>siglo; como% Y, excepto omitir los últimos dos dígitos (por ejemplo, 20)</td>
+</tr>
+<tr class="even">
+<td>%d</td>
+<td>día del mes (por ejemplo, 01)</td>
+</tr>
+<tr class="odd">
+<td>%D</td>
+<td>fecha; igual que% m /% d /% y</td>
+</tr>
+<tr class="even">
+<td>%e</td>
+<td>día del mes, espacio acolchado; igual que% _d</td>
+</tr>
+<tr class="odd">
+<td>%F</td>
+<td>fecha completa igual que% Y-% m-% d</td>
+</tr>
+<tr class="even">
+<td>%g</td>
+<td>los dos últimos dígitos del año del número de semana ISO (ver% G)</td>
+</tr>
+<tr class="odd">
+<td>%G</td>
+<td>año del número de semana ISO (ver% V); Normalmente útil solo con% V</td>
+</tr>
+<tr class="even">
+<td>%h</td>
+<td>igual que% b</td>
+</tr>
+<tr class="odd">
+<td>%H</td>
+<td>hora (00..23)</td>
+</tr>
+<tr class="even">
+<td>%I</td>
+<td>hora (01..12)</td>
+</tr>
+<tr class="odd">
+<td>%j</td>
+<td>día del año (001..366)</td>
+</tr>
+<tr class="even">
+<td>%k</td>
+<td>hora, espacio rellenado (0..23); igual que% _H</td>
+</tr>
+<tr class="odd">
+<td>%l</td>
+<td>hora, espacio acolchado (1..12); igual que% _I</td>
+</tr>
+<tr class="even">
+<td>%m</td>
+<td>mes (01..12)</td>
+</tr>
+<tr class="odd">
+<td>%M</td>
+<td>minuto (00..59)</td>
+</tr>
+<tr class="even">
+<td>%n</td>
+<td>una nueva linea</td>
+</tr>
+<tr class="odd">
+<td>%N</td>
+<td>nanosegundos (000000000..999999999)</td>
+</tr>
+<tr class="even">
+<td>%p</td>
+<td>el equivalente local de AM o PM; en blanco si no se conoce</td>
+</tr>
+<tr class="odd">
+<td>%P</td>
+<td>como% p, pero minúscula</td>
+</tr>
+<tr class="even">
+<td>%q</td>
+<td>trimestre del año (1..4)</td>
+</tr>
+<tr class="odd">
+<td>%r</td>
+<td>el reloj de 12 horas del local (por ejemplo, 11:11:04 PM)</td>
+</tr>
+<tr class="even">
+<td>%R</td>
+<td>Hora y minuto de 24 horas; igual que% H:% M</td>
+</tr>
+<tr class="odd">
+<td>%s</td>
+<td>segundos desde 1970-01-01 00:00:00 UTC</td>
+</tr>
+<tr class="even">
+<td>%S</td>
+<td>segundo (00..60)</td>
+</tr>
+<tr class="odd">
+<td>%t</td>
+<td>una pestaña</td>
+</tr>
+<tr class="even">
+<td>%T</td>
+<td>hora; igual que% H:% M:% S</td>
+</tr>
+<tr class="odd">
+<td>%u</td>
+<td>día de la semana (1..7); 1 es lunes</td>
+</tr>
+<tr class="even">
+<td>%U</td>
+<td>Número de la semana del año, con el domingo como primer día de la semana (00..53)</td>
+</tr>
+<tr class="odd">
+<td>%V</td>
+<td>Número de semana ISO, con el lunes como primer día de la semana (01..53)</td>
+</tr>
+<tr class="even">
+<td>%w</td>
+<td>día de la semana (0..6); 0 es domingo</td>
+</tr>
+<tr class="odd">
+<td>%W</td>
+<td>Número de la semana del año, con el lunes como primer día de la semana (00..53)</td>
+</tr>
+<tr class="even">
+<td>%x</td>
+<td>Representación de la fecha de la localidad (por ejemplo, 31/12/99)</td>
+</tr>
+<tr class="odd">
+<td>%X</td>
+<td>Representación del tiempo del local (por ejemplo, 23:13:48)</td>
+</tr>
+<tr class="even">
+<td>%y</td>
+<td>los dos últimos dígitos del año (00..99)</td>
+</tr>
+<tr class="odd">
+<td>%Y</td>
+<td>año</td>
+</tr>
+<tr class="even">
+<td>%z</td>
+<td>+ hhmm zona horaria numérica (por ejemplo, -0400)</td>
+</tr>
+<tr class="odd">
+<td>%:z</td>
+<td>+ hh: mm zona horaria numérica (por ejemplo, -04: 00)</td>
+</tr>
+<tr class="even">
+<td>%::z</td>
+<td>+ hh: mm: ss zona horaria numérica (por ejemplo, -04: 00: 00)</td>
+</tr>
+<tr class="odd">
+<td>%:::z</td>
+<td>zona horaria numérica con: a la precisión necesaria (por ejemplo, -04, +05: 30)</td>
+</tr>
+<tr class="even">
+<td>%Z</td>
+<td>abreviatura alfabética de la zona horaria (por ejemplo, EDT)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="editar-texto">Editar texto</h2>
+<p>Cortar Texto:</p>
+<pre><code>$ printf &quot;%.*s&quot; 12 &quot;Muestra solo las cinco primeras letras&quot;
+Muestra solo
+</code></pre>
+<pre><code>$ printf &quot;Me llamo \&quot;%s\&quot;.\nEs un placer conocerte.&quot; &quot;Angel&quot;
+Me llamo &quot;Angel&quot;.
+Es un placer conocerte.
+</code></pre>
+<p>Indentado:</p>
+<pre><code>$ printf &quot;%*s\n&quot; 25 &quot;Hola Mundo&quot;
+
+               Hola Mundo
+</code></pre>
+<h2 id="números">Números</h2>
+<pre><code>$ printf &quot;2 + 2 son %d\n&quot; $((2+2))
+2 + 2 son 4
+</code></pre>
+<pre><code>$ printf &quot;Aquí en solo %d pondremos estos %d valores.\n\ndoble salto de línea&quot; 1 2
+
+Aquí en solo 1 pondremos estos 2 valores.
+
+doble salto de línea
+</code></pre>
+<p>Creando 2 columnas:</p>
+<pre><code>$ printf &quot;%-10d %-10d\n&quot; 1 500 2 550
+
+1          500       
+2          550
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>Como podéis ver, printf tiene muchísimas posibilidades y aquí solo he descrito unas pocas. Si os soy sincero, soy un clásico y tiro por comandos como <strong>date</strong> y <strong>echo</strong>. Pero lo que si que es cierto, que si llegas a un momento de desesperación con las comillas en un script, printf es una gran solución.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://www.computerhope.com/unix/uprintf.htm" class="uri">https://www.computerhope.com/unix/uprintf.htm</a></li>
+<li><a href="https://wiki.bash-hackers.org/commands/builtin/printf" class="uri">https://wiki.bash-hackers.org/commands/builtin/printf</a></li>
+<li><a href="https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-script/" class="uri">https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-script/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el viernes 08 febrero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-listar-paquetes-instalados-y-hacer-un-poco-de-limpieza.html">Listar paquetes instalados y hacer un poco de limpieza</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-21-screen-enviar-scripts-a-segundo-plano.html">Screen. Enviar scripts a segundo plano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

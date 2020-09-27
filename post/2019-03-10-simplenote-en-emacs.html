@@ -1,0 +1,212 @@
+<head>
+<title> Simplenote en Emacs. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Simplenote en Emacs" />
+<meta property="og:description" content="Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/simplenote.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html" />
+
+<meta name="twitter:title" content=" Simplenote en Emacs" />
+<meta name="twitter:description" content="Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/simplenote.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="simplenote-en-emacs-1" title="Simplenote en Emacs" data-export_file_name="Simplenote en Emacs" data-description="Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS... Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa." data-export_date="2019-03-10 17:15" data-category="emacs" data-tag="orgmode,emacs" data-image="./images-blog/simplenote.png">Simplenote en Emacs</h1>
+<h5>Tiempo estimado de lectura: 8 minutos. 886 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<center>
+<p><img src="../images-blog/simplenote.png" /></p>
+</center>
+<p>Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS… Y lo mejor de todo, podemos utilizarla en Emacs con el paquete <strong>simplenote2</strong>, disponible en los repositorios de Melpa.</p>
+<p>Simplenote va a permitir la sincronización de nuestras notas en texto plano o markdown por defecto. Pero ya que estamos en Emacs, <strong>voy a habilitar el modo org y tener sincronizado mis archivos orgmode</strong>.</p>
+<p>El paquete <strong>simplenote2</strong>, crea una carpeta oculta en la raíz de nuestro Home, llamada <strong>.simplenote2</strong>. Dentro, encontraremos todas nuestras notas de un modo transparente, igual que si fuera una carpeta de sincronización de Dropbox. Así nuestras notas también estarán siempre en nuestro PC.</p>
+<p>Si utilizamos Emacs en versión terminal, también podremos utilizar el paquete. Así que ya tenemos aplicación de notas desde nuestra terminal.</p>
+<p>Recuerda que una de las virtudes de Simplenote, es compartir nuestras notas o documentos orgmode, tener un control de versiones y colaborar en equipo editando simultaneamente estas, varios usuarios.</p>
+<p>Te recomiendo escuchar el Podcast donde hablo de todo esto.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Instalaremos desde Melpa:</p>
+<p><code>M-x package-install RET simplenote2 RET</code></p>
+<h2 id="configuración">Configuración</h2>
+<p>Añadiremos en nuestro archivo de configuración, ya sea <strong>.emacs</strong> o <strong>init.el</strong>, los siguientes requisitos:</p>
+<pre><code>(require &#39;simplenote2)
+(setq simplenote2-email &quot;email@ejemplo.com&quot;)
+(setq simplenote2-password &quot;tu_contraseña&quot;)
+(simplenote2-setup)
+</code></pre>
+<p>Para acceder a la pantalla principal de Simplenote mediante un atajo (C-c C-s), he añadido el siguiente código:</p>
+<p><code>(global-set-key (kbd &quot;C-c C-s&quot;) 'simplenote2-browse)</code></p>
+<p>Estas líneas son opcionales. Permiten crear mediante atajos: tags, así como empujar o descargar la nota que estamos editando en ese momento.</p>
+<pre><code>(add-hook &#39;simplenote2-note-mode-hook
+          (lambda ()
+            (local-set-key (kbd &quot;C-c C-t&quot;) &#39;simplenote2-add-tag)
+            (local-set-key (kbd &quot;C-c C-c&quot;) &#39;simplenote2-push-buffer)
+            (local-set-key (kbd &quot;C-c C-d&quot;) &#39;simplenote2-pull-buffer)))
+</code></pre>
+<h2 id="utilizando-simplenote">Utilizando Simplenote</h2>
+<p>Para acceder a la pantalla principal de Simplenote sin el atajo antes descrito, introduciremos el comando:</p>
+<p><code>M-x simplenote2-browse</code></p>
+<p>La primera vez que accedas, estará sin contenido, ejecuta en la parte superior <strong>[Sync with server]</strong>, para que descargue tus notas del servidor a la aplicación. Si no añadiste tu correo y contraseña, Simplenote te preguntará por ellas para que lo introduzcas.</p>
+<p>A la parte derecha de cada nota, nos aparece <strong>[Delete]</strong>. Si pulsamos para borrar y después pulsamos <strong>[Sync with server]</strong> o sincronizamos pulsando la letra <strong>g</strong> (En el siguiente apartado, aparecen todos estos atajo), actualizará todas las notas y borrará la que habíamos seleccionado, enviándola a la papelera.</p>
+<p>Como ves, la interfaz es muy intuitiva, podemos crear nuevas notas, editar o eliminar notas existentes…</p>
+<h2 id="atajos">Atajos</h2>
+<p>Estando <strong>dentro de la ventana de Simplenote en Emacs</strong>, podremos utilizar los siguientes atajos:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tecla</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>g</td>
+<td>sincronizar con el servidor (igual que M-x simplenote2-sync-notes)</td>
+</tr>
+<tr class="even">
+<td>a</td>
+<td>crear una nueva nota</td>
+</tr>
+<tr class="odd">
+<td>Enter</td>
+<td>nota abierta sobre la linea actual</td>
+</tr>
+<tr class="even">
+<td>d</td>
+<td>marca nota en la línea actual para eliminar</td>
+</tr>
+<tr class="odd">
+<td>u</td>
+<td>desmarque la nota en la línea actual para eliminar</td>
+</tr>
+<tr class="even">
+<td>t</td>
+<td>establecer etiquetas para el filtrado (igual que M-x simplenote2-filter-note-by-tag)</td>
+</tr>
+<tr class="odd">
+<td>'^'</td>
+<td>alternar las condiciones de filtrado de etiquetas entre &quot;AND&quot; y &quot;OR&quot;</td>
+</tr>
+<tr class="even">
+<td>'/'</td>
+<td>establecer regexp para el filtrado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enviando-todo-a-simplenote">Enviando todo a Simplenote</h2>
+<p>Si estás en cualquier buffer, fuera de Simplenote, creando una nota o escribiendo cualquier texto, si ejecutamos el siguiente comando, este bufer será enviado en forma de nota a Simplenote.</p>
+<p><code>M-x simplenote2-create-note-from-buffer</code></p>
+<h2 id="sincronizando-las-modificaciones">Sincronizando las modificaciones</h2>
+<p>Tal como hacemos en git, podemos empujar la nota actual que estamos editando al servidor o descargarla:</p>
+<ul>
+<li>Empujar nota al servidor: <code>M-x simplenote2-push-buffer</code></li>
+<li>Descargar la nota del servidor. Cuando la nota se modifique localmente, preguntará si la envía al servidor. Si la respuesta es afirmativa, este comando actúa como <code>M-x simplenote2-push-buffer</code>: <code>M-x simplenote2-pull-buffer</code></li>
+</ul>
+<p>Para salir, utilizaremos <code>C-u M-x</code></p>
+<h2 id="etiquetas">Etiquetas</h2>
+<p>Simplenote utiliza etiquetas para poder clasificar y posteriormente filtrarlas medieante <code>M-x simplenote2-filter-notes-by-tag</code>. Este comando, preguntará el nombre de la etiqueta.</p>
+<h2 id="creando-atajo-preestablecido">Creando atajo preestablecido</h2>
+<p>En Nuestro archivo de configuración <strong>.emacs</strong> o <strong>init.el</strong>, podemos añadir un filtro preestablecido con un atajo de teclado. Ejemplo:</p>
+<p><code>(setq simplenote2-filter-note-tag-list '(&quot;tag1&quot; &quot;tag2&quot; &quot;tag3&quot;))</code></p>
+<h2 id="añadir-etiquetas-o-atributos">Añadir etiquetas o atributos</h2>
+<p>Puede establecer etiquetas o atributos para nuevas notas de forma predeterminada utilizando la variable de personalización <code>simplenote2-create-note-hook</code></p>
+<pre><code>(add-hook &#39;simplenote2-create-note-hook
+      (lambda ()
+        (simplenote2-set-markdown)
+        (simplenote2-add-tag &quot;tag1&quot;)))
+</code></pre>
+<h2 id="anclar-notas-en-la-parte-superior">Anclar Notas En la parte superior</h2>
+<p>Para anclar en la parte superior las notas que deseemos, estando dentro de esta nota ejecutaremos el comando:</p>
+<p><code>M-x simplenote2-set-pinned</code></p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Una herramienta fantástica para aquellos que necesitan una aplicación de notas que podemos compartir, trabajar en equipo, tener un control de versiones… Y lo mejor de todo, en texto plano, markdown y en Emacs, habilitando el modo org, orgmode.</p>
+<p>Mas Información en el repositorio de simplenote2: <a href="https://github.com/alpha22jp/simplenote2.el" class="uri">https://github.com/alpha22jp/simplenote2.el</a></p>
+<br>
+<p>Publicado por Angel el domingo 10 marzo del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-29-integracion-total-de-todotxt-en-emacs.html">Integración total de todotxt en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-17-copiando-una-pagina-web-o-parte-de-ella-a-orgmode.html">Copiando una página web o parte de ella a OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html">W3M. Navegador para Terminal y Emacs</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,130 @@
+<head>
+<title> Que aparezca en el Prompt en que rama estamos. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Que aparezca en el Prompt en que rama estamos" />
+<meta property="og:description" content="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html" />
+
+<meta name="twitter:title" content=" Que aparezca en el Prompt en que rama estamos" />
+<meta name="twitter:description" content="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="que-aparezca-en-el-prompt-en-que-rama-estamos-1" title="Que aparezca en el Prompt en que rama estamos" data-export_file_name="Que aparezca en el Prompt en que rama estamos" data-description="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" data-export_date="2019-01-29 16:15" data-category="bash" data-tag="terminal" data-image="./images-blog/ugeek.png">Que aparezca en el Prompt en que rama estamos</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 264 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás. Es cierto que con un <strong>git status</strong>, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos:</p>
+<h2 id="descargando-.git-prompt.sh">Descargando .git-prompt.sh</h2>
+<p>Descargamos con wget .git-prompt.sh:</p>
+<p><code>wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh</code></p>
+<h2 id="editamos-.bashrc">Editamos ~/.bashrc</h2>
+<p>Vamos al archivo de configuración de bash <strong>~/.bashrc</strong> para editarlo con emacs:</p>
+<p><code>emacs ~/.bashrc</code></p>
+<p>Y añadimos el siguiente código:</p>
+<pre><code>source ~/.git-prompt.sh
+PS1=&quot;\n[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;33m\]\u\[\033[32m\]$ \[\033[0m\]&quot;
+</code></pre>
+<h2 id="personalizando">Personalizando</h2>
+<p>Aquí te dejo esta tabla, por si quieres personalizar a tu gusto un poco mas el prompt:</p>
+<h3 id="texto">Texto</h3>
+<pre><code>Usuario, nombre de host y su color de visualización = \u@\h \[\033[32m\]               
+Directorio de trabajo actual y su color de visualización = \w\[\033[33m\]                  
+Nombre de rama de git y su color de visualización = \$(parse_git_branch)\[\033[00m\] 
+</code></pre>
+<h3 id="colores">Colores</h3>
+<pre><code>Rojo = \[\033[0;31m\]  
+Amarillo = \[\033[0;33m\]  
+Verde = \[\033[0;32m\]&quot; 
+Sin color = \[\033[0m\]&quot;    
+</code></pre>
+<br>
+<p>Publicado por Angel el martes 29 enero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-listar-paquetes-instalados-y-hacer-un-poco-de-limpieza.html">Listar paquetes instalados y hacer un poco de limpieza</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-21-screen-enviar-scripts-a-segundo-plano.html">Screen. Enviar scripts a segundo plano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

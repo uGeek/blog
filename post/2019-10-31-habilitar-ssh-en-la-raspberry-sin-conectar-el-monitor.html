@@ -1,0 +1,118 @@
+<head>
+<title>Habilitar SSH en la Raspberry sin conectar el Monitor. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Una vez grabado Raspbian en una SD o USB, casi seguro que querrás conectarte vía SSH. Para habilitar el servidor SSH, siempre te recomiendan el conectar tu Raspberry Pi a" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Habilitar SSH en la Raspberry sin conectar el Monitor" />
+<meta property="og:description" content="Una vez grabado Raspbian en una SD o USB, casi seguro que querrás conectarte vía SSH. Para habilitar el servidor SSH, siempre te recomiendan el conectar tu Raspberry Pi a" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-31-habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor.html" />
+
+<meta name="twitter:title" content="Habilitar SSH en la Raspberry sin conectar el Monitor" />
+<meta name="twitter:description" content="Una vez grabado Raspbian en una SD o USB, casi seguro que querrás conectarte vía SSH. Para habilitar el servidor SSH, siempre te recomiendan el conectar tu Raspberry Pi a" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor-1" title="Habilitar SSH en la Raspberry sin conectar el Monitor" data-export_file_name="habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor" data-description="Una vez grabado Raspbian en una SD o USB, casi seguro que querrás conectarte vía SSH. Para habilitar el servidor SSH, siempre te recomiendan el conectar tu Raspberry Pi a" data-export_date="2019-10-31 18:00" data-category="raspberry" data-tag="ssh,bash" data-image="./images-blog/raspberrypi.jpg">Habilitar SSH en la Raspberry sin conectar el Monitor</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 257 palabras.    <a href="https://ugeek.github.io/blog/categories/raspberry">raspberry</a></h5>
+<p>Una vez grabado Raspbian en una SD o USB, casi seguro que querrás conectarte vía SSH. Para habilitar el servidor SSH, siempre te recomiendan el conectar tu Raspberry Pi a una TV vía HDMI y entrando en la configuración, habilitar el servidor SSH.</p>
+<center>
+<p><img src="../images-blog/raspberrypi.jpg" /></p>
+</center>
+<p>En realidad esto no es necesario, es mucho más simple.</p>
+<p>Cuando copiamos el SD o USB, se crean dos particiones. La carpeta <strong>boot</strong>, es donde está el arranque y simplemente creando un archivo vacío llamado ssh, ya tendremos habilitado el acceso a nuestra Raspberry Pi por SSH.</p>
+<h2 id="creando-el-archivo">Creando el archivo</h2>
+<p>En nuestro PC averiguamos donde está montada la partición <strong>boot</strong> y accedemos a ella.</p>
+<p>Ahora procedemos a crear el archivo <strong>ssh</strong>.</p>
+<pre><code>touch ssh
+</code></pre>
+<p>Ya está!!!. Ahora cuando encendamos nuestra Raspberry Pi, ya podremos acceder vía SSH.</p>
+<br>
+<p>Publicado por Angel el jueves 31 octubre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-09-zram-ampliando-la-ram-y-no-utilizando--quemando-la-sd-de-mi-raspberry.html">ZRAM. Doblando la RAM y no utilizando - quemando la SD de mi Raspberry</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-07-servidor-de-ebooks-con-calibre.html">Servidor de ebooks en Ubuntu, Debian, Raspbian,… con Calibre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html">Gonic. El mejor y más ligero servidor de música con api Subsonic</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html">Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html">Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-10-escuchando-musica-de-mi-servidor-jellyfin-con-jellycli.html">Escuchando música de mi servidor Jellyfin con jellycli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html">Wireguard en 2 minutos con wgc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-22-nuevo-firmware-de-la-raspberry-4-para-bajar-la-temperatura.html">Nuevo firmware de la Raspberry 4 para bajar la temperatura</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

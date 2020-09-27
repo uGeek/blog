@@ -1,0 +1,163 @@
+<head>
+<title>Instalar Oh My ZSH. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Instalar Oh My ZSH" />
+<meta property="og:description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html" />
+
+<meta name="twitter:title" content="Instalar Oh My ZSH" />
+<meta name="twitter:description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instalar-oh-my-zsh-1" title="Instalar Oh My ZSH" data-export_file_name="Instalar Oh My ZSH" data-description="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" data-export_date="2019-07-22 21:20 2019-07-23 2020-06-07" data-category="zsh" data-tag="bash,zsh,terminal" data-image="./images-blog/omzsh.png">Instalar Oh My ZSH</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 428 palabras.    <a href="https://ugeek.github.io/blog/categories/zsh">zsh</a></h5>
+<p>Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal, así como en caso de utilizar git, conocer en que rama estamos. Voy a instalar un tema muy conocido, <strong>agnoster</strong>.</p>
+<center>
+<p><img src="../images-blog/omzsh.png" /></p>
+</center>
+<p>Mediante este Post, vamos a aprender a instalarlo, de un modo muy sencillo.</p>
+<h2 id="instalando-zsh-y-git-core">Instalando ZSH y git-core</h2>
+<p>Instalando desde los repositorios:</p>
+<p><code>sudo apt install zsh git-core</code></p>
+<h2 id="descargando-oh-my-zsh-y-ejecutarlo">Descargando Oh My ZSH y ejecutarlo</h2>
+<p>Llegó la hora de Instalar Oh My Zsh</p>
+<p><code>wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh</code></p>
+<h2 id="desinstalar-oh-my-zsh">Desinstalar Oh My ZSH</h2>
+<p>Si no te ha gustado oh my zsh, desinstalarlo es tan sencillo como ejecutar en la terminal:</p>
+<p><code>uninstall_oh_my_zsh</code></p>
+<h2 id="cambiar-la-shell-a-zsh">Cambiar la shell a ZSH</h2>
+<p>Vamos a cambiar nuestra Shell actual a zsh:</p>
+<p><code>chsh -s `which zsh`</code></p>
+<p>Si quieres cambiar la terminal a otro usuario siendo administrador, en mi ejemplo, al usuario <strong>angel</strong>.</p>
+<pre><code>sudo chsh -s /usr/bin/zsh angel
+</code></pre>
+<p>Ahora, para que surja efecto, será necesario <strong>reiniciar la terminal</strong>. Si no funciona, quizás sea necesario reiniciar el Sistema Operativo.</p>
+<p>Si no nos convence Zsh u otra shell, volveremos a bash así:</p>
+<p><code>chsh -s `which bash`</code></p>
+<h2 id="que-shells-hay-disponibles-en-nuestro-sistema">Que Shells hay disponibles en nuestro sistema</h2>
+<p>Para saber las shells tenemos instaladas en nuestro sistema:</p>
+<p><code>cat /etc/shells</code></p>
+<h2 id="saber-nuestra-shell-actual">Saber nuestra shell actual</h2>
+<p><code>echo $SHELL</code></p>
+<p>Si tenemos zsh, nos devolverá:</p>
+<p><code>/usr/bin/zsh</code></p>
+<h2 id="instalando-las-fuentes-powerline-para-zsh">Instalando las Fuentes Powerline para ZSH</h2>
+<p>Si en tu terminal no aparecen correctamente los símbolos, es necesario instalar:</p>
+<p><code>sudo apt install fonts-powerline</code></p>
+<h2 id="temas">Temas</h2>
+<p>Voy a cambiar el tema <strong>robbyrussell</strong> e instalar el tema agnoster:</p>
+<p><code>nano ~/.zshrc</code></p>
+<p>Sustituye:</p>
+<pre><code># ZSH_THEME=&quot;robbyrussell&quot;
+ZSH_THEME=&quot;agnoster&quot;
+</code></pre>
+<h2 id="buscar-en-el-historial">Buscar en el historial</h2>
+<p>En la raíz del directorio $HOME, crearemos el archivo oculto <strong>.inputrc</strong>. Utilizaremos por ejemplo <strong>nano</strong>, para crear el archivo.</p>
+<p><code>nano .inputrc</code></p>
+<p>Una vez abierto, copiaremos en el siguiente contenido:</p>
+<pre><code>## Flecha Arriba
+&quot;\e[A&quot;:history-search-backward
+## Flecha Abajo
+&quot;\e[B&quot;:history-search-forward
+</code></pre>
+<h2 id="instalarlo-todo-automatizado-desde-un-script">Instalarlo todo automatizado desde un script</h2>
+<p>He creado este script para que la instalación sea muchísimo más rápida:</p>
+<p><code>wget https://raw.githubusercontent.com/uGeek/blog/master/scripts/ohmyzsh ; bash  ohmyzsh ; rm ohmyzsh</code></p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://ohmyz.sh/" class="uri">https://ohmyz.sh/</a></li>
+<li><a href="http://zshwiki.org/" class="uri">http://zshwiki.org/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el lunes 22 julio del 2019 y <strong>actualizado</strong> el martes 23 julio del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-21-screen-enviar-scripts-a-segundo-plano.html">Screen. Enviar scripts a segundo plano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-04-bat-el-cat-enriquecido.html">Bat, el Cat enriquecido</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-20-test-de-velocidad-en-la-terminal.html">Test de velocidad en la terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-13-compilando-la-ultima-version-de-emacs.html">Compilando la última versión de Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-12-compilando-la-ultima-version-de-nano.html">Compilando La última versión de Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html">Simplifica o abrevia tus conexiones SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-08-19-configuracion-y-diferencias-entre-bashrc-bash-profile.html">Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

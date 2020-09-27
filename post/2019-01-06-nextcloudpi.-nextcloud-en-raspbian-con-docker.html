@@ -1,0 +1,122 @@
+<head>
+<title> NextcloudPi. Nextcloud en Raspbian con Docker. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" NextcloudPi. Nextcloud en Raspbian con Docker" />
+<meta property="og:description" content="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html" />
+
+<meta name="twitter:title" content=" NextcloudPi. Nextcloud en Raspbian con Docker" />
+<meta name="twitter:description" content="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="nextcloudpi.-nextcloud-en-raspbian-con-docker-1" title="NextcloudPi. Nextcloud en Raspbian con Docker" data-export_file_name="NextcloudPi. Nextcloud en Raspbian con Docker" data-description="Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi" data-export_date="2019-01-06 14:33" data-category="servidor" data-tag="docker, nextcloud" data-image="./images-blog/ugeek.png">NextcloudPi. Nextcloud en Raspbian con Docker</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 331 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<h2 id="descargar-imagen-y-crear-contenedor-nextcloudpi">Descargar Imagen y Crear Contenedor NextcloudPi</h2>
+<p>Tal como os prometí en el podcast, entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi.</p>
+<p>Si tenemos un servidor como apache2, vamos a detener el servicio para no utilizar el puerto 80, que éste utiliza por defecto.</p>
+<p>Tendrás que modificar en este comando el usuario <strong>pi</strong> por tu usuario y la ip <strong>192.168.1.100</strong> por la ip local de tu raspberry.</p>
+<pre><code>sudo docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /home/pi/docker/nextcloudplus/:/data --name nextcloudpi ownyourbits/nextcloudplus-armhf 192.168.1.100
+</code></pre>
+<h2 id="iniciar-nextcloud">Iniciar Nextcloud</h2>
+<p>Una vez montado, nos conectaremos a nuestra ip:443. Nos aparecerá una web con el usuario ncp y dos contraseñas creadas de forma aleatoria.</p>
+<p>Guardamos las 2 contraseñas y le damos a <strong>Activar</strong> en la parte inferior.</p>
+<p>Una contraseña será para la web de administración de <strong>NextcloudPi</strong> por el puerto 4443 y la otra contraseña será para el servicio <strong>Nextcloud</strong> por el puerto 80 o 443.</p>
+<h2 id="crear-certificado">Crear Certificado</h2>
+<p>Si no tenemos una ip pública estática, recomiendo el utilizar un servicio como Duck DNS.</p>
+<p>Ahora vamos a ip::4443 y vamos a crear el certificado en el apartado: Let’s Encrypt.</p>
+<p>Abriremos los puertos 443 y 80 de nuestro Router, dirigiendo el tráfico a la ip local de nuestra Raspberry y clicaremos <strong>Ejecutar</strong>.</p>
+<p>De forma automática, nos generará el certificado por 3 meses.</p>
+<p><a href="https://ownyourbits.com/nextcloudpi/">NextcloudPi</a></p>
+<br>
+<p>Publicado por Angel el domingo 06 enero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html">Navidrome. La alternativa a Airsonic desarrollada en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html">gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html">Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html">FreshRSS. Mi servidor de RSS</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-07-servidor-de-ebooks-con-calibre.html">Servidor de ebooks en Ubuntu, Debian, Raspbian,… con Calibre</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

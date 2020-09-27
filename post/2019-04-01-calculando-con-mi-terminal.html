@@ -1,0 +1,185 @@
+<head>
+<title>Calculando con mi terminal. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Calculando con mi terminal" />
+<meta property="og:description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/expr.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html" />
+
+<meta name="twitter:title" content="Calculando con mi terminal" />
+<meta name="twitter:description" content="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/expr.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="calculando-con-mi-terminal-1" title="Calculando con mi terminal" data-export_file_name="Calculando con mi terminal" data-description="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" data-export_date="2019-04-01 20:40" data-category="terminal" data-tag="bash,unix" data-image="./images-blog/expr.jpg">Calculando con mi terminal</h1>
+<h5>Tiempo estimado de lectura: 5 minutos. 560 palabras.    <a href="https://ugeek.github.io/blog/categories/terminal">terminal</a></h5>
+<p>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, <strong>expr</strong> (evalúa los argumentos como una expresión) y <strong>calc</strong> (Calculadora de precisión arbitraria).</p>
+<center>
+<p><img src="../images-blog/expr.jpg" /></p>
+</center>
+<p><strong>Expr</strong> viene preinstalado en Ubuntu por defecto, cosa que no sucede con <strong>calc</strong>. Y os preguntareis: ¿Porque utilizar dos comandos? <strong>expr</strong> no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de <strong>calc</strong>.</p>
+<p>Otro método de hacer cálculos sería con <strong>bc</strong>, pero lo dejo para otro Post porque <strong>expr</strong> y <strong>calc</strong> diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora.</p>
+<p>Con <strong>expr</strong> vamos a ejecutar operaciones aritméticas o de comparación. Vamos a ver como funciona:</p>
+<p><code>expr &lt;número&gt; &lt;operador matemático&gt; &lt;número&gt;</code></p>
+<h2 id="suma">Suma</h2>
+<p>Hay que dejar un espacio en blanco entre los números y símbolo de <strong>+</strong>.</p>
+<p><code>expr 8 + 4</code></p>
+<p>Suma con números negativos:</p>
+<p><code>expr -30 + 47</code></p>
+<h2 id="resta">Resta</h2>
+<p><code>expr 8 - 4</code></p>
+<h2 id="multiplicación">Multiplicación</h2>
+<p>Lleva la contrabarra <strong>\</strong> para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:</p>
+<p><code>expr 8 \* 4</code></p>
+<h2 id="división">División</h2>
+<p><code>expr 8 / 4</code></p>
+<h2 id="porcentaje">Porcentaje</h2>
+<p><code>expr 10 % 100</code></p>
+<h2 id="comparaciones">Comparaciones</h2>
+<p>Otra cosa que nos permite <strong>expr</strong> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <strong>1</strong>, si es falsa <strong>0</strong>. Aquí también hay símbolos que llevan la contrabarra <strong>\</strong> para escapar.</p>
+<pre><code>expr 10 =   7   # Igual
+expr 10 !=  7   # No es igual
+expr 10 \&gt;  7   # Mayor que
+expr 10 \&lt;  7   # Menor que
+expr 10 \&lt;= 7   # Menor o igual
+expr 10 \&gt;= 7   # Mayor o igual
+</code></pre>
+<h2 id="contando-el-número-de-letras">Contando el número de letras</h2>
+<p>También podemos contar el número de letras que hay en una frase:</p>
+<p><code>expr length &quot;hola mundo&quot;</code></p>
+<p>O en un archivo de texto plano:</p>
+<p><code>expr length &quot;$(cat mis_notas.txt)&quot;</code></p>
+<h2 id="manual">Manual</h2>
+<p>Hay muchas mas opciones. Lee en manual para conocerlas:</p>
+<p><code>man expr</code></p>
+<h2 id="instalación-de-calc">Instalación de Calc</h2>
+<p>Calc no viene instalado por defecto en Ubuntu. Lo instalaremos así:</p>
+<p><code>sudo apt install apcalc</code></p>
+<h2 id="suma-1">Suma</h2>
+<p>Suma con decimales:</p>
+<pre><code>calc 12.5 + 21.4
+    33.9
+</code></pre>
+<p>Aquí ya podemos sumar números negativos. Al poner el signo negativo, tiene que ir entre paréntesis.</p>
+<pre><code>calc &#39;(-30 + 47)&#39;
+    17
+</code></pre>
+<h2 id="dos-números-negativos">Dos números negativos</h2>
+<pre><code>calc &#39;(-30 - 47)&#39;
+    -77
+</code></pre>
+<h2 id="multiplicación-1">Multiplicación</h2>
+<p>En el caso de la multiplicación, <strong>calc</strong> no necesita <strong>\</strong> de escape:</p>
+<pre><code>calc 30*2
+    60
+</code></pre>
+<pre><code>calc &#39;(-2 * 10)&#39;
+    -20
+</code></pre>
+<pre><code>calc 30\*2
+    60
+</code></pre>
+<h2 id="división-1">División</h2>
+<pre><code>calc 200/10
+    20
+</code></pre>
+<h2 id="porcentaje-1">Porcentaje</h2>
+<pre><code>calc 10%100
+    10
+</code></pre>
+<h2 id="manual-1">Manual</h2>
+<p>Hay muchas mas en manual:</p>
+<p><code>man calc</code></p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,… y muchas más cosas Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.</p>
+<br>
+<p>Publicado por Angel el lunes 01 abril del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html">Saltando de un directorio a otro con Jump</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html">Gestionando mis tareas en la terminal con topydo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html">Simplenote para terminal. Sncli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html">W3M. Navegador para Terminal y Emacs</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

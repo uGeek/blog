@@ -1,0 +1,169 @@
+<head>
+<title> Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux" />
+<meta property="og:description" content="El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html" />
+
+<meta name="twitter:title" content=" Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux" />
+<meta name="twitter:description" content="El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnulinux-1" title="Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux" data-export_file_name="Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU-Linux" data-description="El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian" data-export_date="2019-02-24 17:30" data-category="docker" data-tag="docker" data-image="./images-blog/docker.png">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</h1>
+<h5>Tiempo estimado de lectura: 7 minutos. 819 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<center>
+<p><img src="../images-blog/docker.png" /></p>
+</center>
+<p>El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un <strong>Ubuntu 18.04</strong> en una Raspberry con sistema operativo <strong>Raspbian</strong>.</p>
+<p>De esta manera, podremos acceder a los repositorios de Ubuntu en su última versión, con paquetes totalmente actualizados utilizando Raspbian.</p>
+<p>Parece muy complejo, pero es muy sencillo.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Vamos a instalar Docker desde los repositorios oficiales:</p>
+<p><code>sudo apt install docker</code></p>
+<p>También lo tenemos disponible en la paquetería snap, así que a dia de hoy, es muy sencilla su instalación.</p>
+<h2 id="crear-el-grupo-docker-para-no-tener-que-poner-siempre-sudo">Crear el grupo docker, para no tener que poner siempre sudo</h2>
+<p>Para no tener que utilizar Docker como usuario root y así evitar el tener que poner siempre <strong>sudo</strong>, crearemos el grupo docker y añadiremos los usuarios.</p>
+<pre><code>sudo groupadd docker
+sudo usermod -aG docker $USER
+</code></pre>
+<p>También es muy útil a nivel de seguridad deshabilitar el usuario root, para iniciar y detener servicios con la sesión del propio usuario o mediante el cron este, programar el encendido y apagado de los contenedores.</p>
+<h2 id="creando-un-contendedor-con-ubuntu-en-su-ultima-versión">Creando un contendedor con Ubuntu en su ultima versión</h2>
+<p>Creando el nuevo contenedor con la última versión de Ubuntu para Raspberry o cualquier arquitectura de procesador y entrando directamente a este contenedor una vez creado:</p>
+<p><code>docker run -t -i ubuntu:latest /bin/bash</code></p>
+<p>Para nuestra Raspberry, si queremos, también podemos especificar la arquitectura con la que queremos montar en nuestro contenedor:</p>
+<p><code>docker run -t -i arm32v7/ubuntu:latest /bin/bash</code></p>
+<p>La versión <strong>&quot;latest&quot;</strong>, es la 18.04, si queremos utilizar una en concreto, deberemos especificarlo.</p>
+<p>Una vez creado el contenedor y dentro de él, podemos salir pulsando <code>exit</code> o <code>Ctrl-d</code>. Esto dentendrá nuestro contenedor, para que esto no suceda, pulsa <code>Ctrl+p+q</code></p>
+<h2 id="listar-todos-los-contenedores-de-nuestro-servidor">Listar todos los Contenedores de nuestro servidor</h2>
+<p>Vamos a listar todos los contenedores que tenemos en nuestro servidor, indistintamente si están corriendo ahora o no:</p>
+<p><code>docker ps -a</code></p>
+<p>No confundir con ver todos los contenedores que están corriendo ahora mismo en nuestro servidor, que lo haríamos así:</p>
+<p><code>docker ps</code></p>
+<h2 id="iniciar-o-detener-un-contenedor">Iniciar o detener un contenedor</h2>
+<p>Super sencillo, con docker <strong>start/stop</strong>:</p>
+<p><code>docker start nombre_del_contenedor</code></p>
+<p><code>docker stop nombre_del_contenedor</code></p>
+<h2 id="entrar-dentro-del-docker-vía-terminal">Entrar dentro del Docker vía terminal</h2>
+<p>Para entrar a la terminal de nuestro contenedor, tenemos que ejecutar: <code>docker exec -i -t nombre_del_contenedor /bin/bash</code></p>
+<h2 id="ejemplo-práctico-de-todo-lo-visto.-descargar-imagen-y-crear-e-iniciar-contenedor">Ejemplo práctico de todo lo visto. Descargar imagen y crear e iniciar contenedor</h2>
+<p>Voy a explicar, con el servicio garbera de ejemplo, como descargar la imagen, crear el contenedor e iniciarlo con una única línea de terminal.</p>
+<p><code>docker run -t -i --name gerbera -p 1900:1900 -p 49152:49152 -v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root arm32v7/ubuntu:latest /bin/bash</code></p>
+<p>Vamos a entenderlo:</p>
+<ul>
+<li>Poner un nombre al contenedor que se creará <code>--name gerbera</code> El nombre será gerbera</li>
+<li>Crea imagen con la ultima versión de ubuntu con arquitectura para raspberry: <code>arm32v7/ubuntu:latest</code>. Si fuera para cualquier arquitectura y que se instale el más adecuado: <code>ubuntu:latest</code></li>
+<li>Que el contenedor creado, tenga abiertos los puertos 1900 y 49152 <code>-p 1900:1900 -p 49152:49152</code></li>
+<li>Tener 2 carpetas de intercambio de archivos, entre carpetas del servidor y carpetas internas del contenedor <code>-v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root</code></li>
+</ul>
+<p>Una vez estemos dentro del contenedor, igual que haríamos si nos hubiéramos conectado a un servidor por ssh, instalaremos e iniciaremos el servicio:</p>
+<p><strong>Recuerda sustituir &quot;usuario&quot;, por tu usuario, no hagas un copia y pega</strong> 😜</p>
+<h2 id="borrar-un-contenedor">Borrar un contenedor</h2>
+<p>Si ya has acabado con tus pruebas, voy a explicarte algunos comando muy útiles, como borrar el contenedor, imagenes, etc… que ya no vamos a utilizar:</p>
+<p>Detenemos el contentedor:</p>
+<p><code>docker stop nombre_del_contenedor</code></p>
+<p>Borramos el contendedor:</p>
+<p><code>docker rm nombre_del_contenedor</code></p>
+<h2 id="listar-y-borrar-imagenes">Listar y borrar imagenes</h2>
+<p>Es posible que quieras eliminar la imagen con la que habíamos creado nuestro Docker, para ello, listaremos y borraremos así:</p>
+<p>Listar todas las imágenes:</p>
+<p><code>docker images</code></p>
+<p>Borrar la imagen (rm&quot;i&quot; de imágen, para recordar):</p>
+<p><code>docker rmi nombre_de_la_imagen</code></p>
+<h2 id="renombrar-contenedor">Renombrar Contenedor</h2>
+<p>En caso que quisieras cambiar el nombre del contenedor, haremos lo siguiente:</p>
+<p><code>docker rename nombre_actual nombre_nuevo</code></p>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Con un poco de práctica, como ves, Docker puede ayudarte a probar, practicar y utilizar servicios o aplicaciones, dentro de estos de un modo muy limpio y sencillo. El punto fuerte es que no vas a romper nada del sistema operativo anfitrión, y además, en el caso de la Raspberry, utilizar aplicaciones a la última que no están disponibles en Raspbian.</p>
+<br>
+<p>Publicado por Angel el domingo 24 febrero del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

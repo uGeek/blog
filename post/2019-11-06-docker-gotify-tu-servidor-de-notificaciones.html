@@ -1,0 +1,242 @@
+<head>
+<title>Docker: Gotify. Tu servidor de Notificaciones. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Después de montar un bot con Telegram y Mastodon, ha llegado el momento de crear tu propio servicio de notificaciones. No vamos a depender de servicios de terceros para saber" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker: Gotify. Tu servidor de Notificaciones" />
+<meta property="og:description" content="Después de montar un bot con Telegram y Mastodon, ha llegado el momento de crear tu propio servicio de notificaciones. No vamos a depender de servicios de terceros para saber" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/gotify.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html" />
+
+<meta name="twitter:title" content="Docker: Gotify. Tu servidor de Notificaciones" />
+<meta name="twitter:description" content="Después de montar un bot con Telegram y Mastodon, ha llegado el momento de crear tu propio servicio de notificaciones. No vamos a depender de servicios de terceros para saber" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/gotify.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="docker-gotify.-tu-servidor-de-notificaciones-1" title="Docker: Gotify. Tu servidor de Notificaciones" data-export_file_name="docker-gotify-tu-servidor-de-notificaciones" data-description="Después de montar un bot con Telegram y Mastodon, ha llegado el momento de crear tu propio servicio de notificaciones. No vamos a depender de servicios de terceros para saber" data-export_date="2019-11-06 17:55" data-category="docker" data-tag="bot,gotify" data-image="./images-blog/gotify.png">Docker: Gotify. Tu servidor de Notificaciones</h1>
+<h5>Tiempo estimado de lectura: 6 minutos. 717 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Después de montar un bot con Telegram y Mastodon, ha llegado el momento de crear tu propio servicio de notificaciones. No vamos a depender de servicios de terceros para saber todo lo que sucede en nuestros servidores, Raspberry,… allá donde quieras utilizarlo</p>
+<center>
+<p><img src="../images-blog/gotify.png" /></p>
+</center>
+<p>Gotify es un servidor de notificaciones de Software Libre muy fácil de instalar mediante docker.</p>
+<h2 id="docker-para-arm">Docker para ARM</h2>
+<p>Para montar nuestro servidor <strong>Gotify</strong> de notificaciones, por ejemplo por el puerto 90:</p>
+<pre><code>docker create \
+  --name=gotify \
+  -p 90:80 \
+  -v $HOME/docker/gotify/data:/app/data \
+  gotify/server-arm7
+</code></pre>
+<p>Puedes utilizar cualquier puerto disponible.</p>
+<p>Una vez montado el servidor, abrimos nuestro navegador y nos conectamos a <a href="http://ip:90" class="uri">http://ip:90</a>.</p>
+<p>El usuario es <strong>admin</strong> y la contraseña <strong>admin</strong>.</p>
+<h2 id="docker-para-amd64">Docker para amd64</h2>
+<pre><code>docker create \
+  --name=gotify \
+  -p 90:80 \
+  -v $HOME/docker/gotify/data:/app/data \
+  gotify/server
+</code></pre>
+<h2 id="docker-compose-para-traefik">docker-compose para traefik</h2>
+<pre><code>version: &quot;3&quot;
+
+services:
+ gotify:
+  image: gotify/server
+  container_name: gotify
+  restart: unless-stopped
+
+  networks:
+   - web
+
+  restart: always
+  volumes:
+   - $HOME/docker/gotify/data:/app/data 
+  labels:
+   - traefik.backend=gotify
+   - traefik.frontend.rule=Host:gotify.mi-dominio.duckdns.org
+   - traefik.docker.network=web
+   - traefik.port=80
+   - traefik.enable=true
+
+networks:
+ web:
+  external: true
+</code></pre>
+<h2 id="crear-una-aplicación">Crear una aplicación</h2>
+<p>En Gotify, aplicaciones sería lo mismo que en Telegram el canal del bot.</p>
+<p>Una vez creada la aplicación desde la página web de administración de Gotify, podemos subir una imagen a esta aplicación, para identificar rápidamente esta.</p>
+<p>Copiamos el <strong>Token</strong> de la aplicación que hemos creado. Con el Token y la <strong>ip:puerto</strong>, ya podremos enviar información al servidor y así recibir notificaciones en los clientes.</p>
+<h2 id="enviar-notificaciones-con-bash">Enviar notificaciones con bash</h2>
+<p>Enviar una notificación desde tu terminal es muy sencillo. Este es un script de ejemplo. Recuerda que el Token, ip y puerto que utilizo, es inventado.</p>
+<pre><code>curl -X POST &quot;http://192.168.1.100:90/message?token=A8EPKuUcvb9sm&quot; \
+ -F &quot;title=Título&quot; \
+ -F &quot;message=Aquí va mi mensaje&quot; \
+ -F &quot;priority=1&quot;
+</code></pre>
+<p>El mensaje se compone:</p>
+<ul>
+<li>Título</li>
+<li>Mensaje</li>
+<li>Prioridad</li>
+</ul>
+<h2 id="notificaciones-con-python">Notificaciones con Python</h2>
+<p>Si eres más amante de Python, también puedes enviar información al servidor mediante este código de ejemplo.</p>
+<pre><code>import requests #pip install requests                                                                                                       
+resp = requests.post(&#39;http://192.168.1.100:90/message?token=A8EPKuUcvb9sm&#39;, json={
+    &quot;message&quot;: &quot;Este es mi mensaje&quot;,
+    &quot;priority&quot;: 2,
+    &quot;title&quot;: &quot;Título del Mensaje&quot;
+})
+</code></pre>
+<h2 id="instalando-gotify-cli">Instalando gotify-cli</h2>
+<p>Vamos a <a href="https://github.com/gotify/cli">esta url y descargaremos la versión para nuestra arquitectura</a>. En mi caso voy a utilizar la Raspberry, así que descargaré la versión para arm-7</p>
+<h3 id="descargando">Descargando</h3>
+<pre><code>wget -O gotify  https://github.com/gotify/cli/releases/download/v2.1.1/gotify-cli-linux-arm-7
+</code></pre>
+<h3 id="dando-permisos-de-ejecución">Dando permisos de ejecución</h3>
+<pre><code>chmod +x gotify
+</code></pre>
+<h3 id="configurando-gotify-cli">Configurando gotify-cli</h3>
+<p>Para configurarlo, teclearemos en la terminal:</p>
+<pre><code>./gotify ini 
+</code></pre>
+<p>Nos preguntará:</p>
+<pre><code>Gotify URL:
+</code></pre>
+<ul>
+<li>Introducimos la <a href="http://ip:port" class="uri">http://ip:port</a> de nuestro servidor</li>
+</ul>
+<pre><code>Connecting -&gt; Success!
+Gotify v2.0.10@2019-10-19-08:49:54
+
+Configure an application token
+1. Enter an application-token
+2. Create an application token (with user/pass)
+Enter 1 or 2: 
+</code></pre>
+<ul>
+<li><p>Ahora si ya tienes el token de tu aplicación, introducelo. Si no es así te permite el crear una nueva aplicación con su token.</p></li>
+<li><p>En el momento en que introduzcamos nuestro token, si todo ha ido bien, recibiremos un mensaje.</p></li>
+<li><p>Por último nos pedirá en que lugar queremos guardar el archivo de configuración que hemos creado.</p></li>
+</ul>
+<h2 id="ejemplos-de-gotify-cli">Ejemplos de gotify-cli</h2>
+<h3 id="enviar-un-mensaje">Enviar un Mensaje</h3>
+<pre><code>./gotify push &quot;Mensaje&quot; 
+</code></pre>
+<h3 id="enviar-el-resultado-de-un-script">Enviar el resultado de un script</h3>
+<pre><code>MENSAJE=&quot;Este es un mensaje&quot;
+echo $MENSAJE | gotify push
+</code></pre>
+<h3 id="enviar-un-archivo-de-texto">Enviar un archivo de texto</h3>
+<pre><code>gotify push &lt; archivo.txt
+</code></pre>
+<h3 id="enviar-con-título-y-prioridad">Enviar con título y prioridad</h3>
+<pre><code>./gotify push -t &quot;Mi titulo&quot; -p 10 &quot;Este es mi mensaje&quot;
+</code></pre>
+<p>Ayuda</p>
+<pre><code>./gotify -h
+</code></pre>
+<p>Más información <a href="https://github.com/gotify/cli">en el repositorio en GitHub</a>.</p>
+<h2 id="cada-vez-más-clientes">Cada vez más clientes</h2>
+<p>Actualmente no disponemos de un gran número de clientes de Gotify, pero esta lista va creciendo cada día más.</p>
+<p>Tengo instalado Gotify en mi Android. Podemos instalarla tanto desde <a href="https://f-droid.org/de/packages/com.github.gotify/">F-Droid</a>, <a href="https://github.com/gotify/android/releases/latest">apk</a> así como desde <a href="https://play.google.com/store/apps/details?id=com.github.gotify">Google Play</a>.</p>
+<p>También hay una extensión para <a href="https://addons.mozilla.org/es/firefox/addon/gotify-for-firefox/">Firefox</a> y <a href="https://github.com/rorpage/gotify-chrome">Google Chrome</a>.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Gotify se ha convertido en un servicio imprescindible para mi. Si lo complementas con el docker de Letsencrypt, te permitirá abrir el servicio a internet de un modo seguro y recibir las notificaciones estés donde estés.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://gotify.net" class="uri">https://gotify.net</a></li>
+<li><a href="https://github.com/gotify/cli" class="uri">https://github.com/gotify/cli</a></li>
+<li><a href="https://hub.docker.com/r/gotify/server-arm7" class="uri">https://hub.docker.com/r/gotify/server-arm7</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el miércoles 06 noviembre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

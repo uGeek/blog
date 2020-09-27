@@ -1,0 +1,154 @@
+<head>
+<title>El Adiós a Plex y Emby. Llega Jellyfin. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="El Adiós a Plex y Emby. Llega Jellyfin" />
+<meta property="og:description" content="Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jellifin.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html" />
+
+<meta name="twitter:title" content="El Adiós a Plex y Emby. Llega Jellyfin" />
+<meta name="twitter:description" content="Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/jellifin.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="el-adiós-a-plex-y-emby.-llega-jellyfin-1" title="El Adiós a Plex y Emby. Llega Jellyfin" data-export_file_name="El Adios a Plex y Emby. Llega Jellyfin" data-description="Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar" data-export_date="2019-05-07 20:00 2019-11-30" data-category="servidor" data-tag="ubuntu, raspberry" data-image="./images-blog/jellifin.png">El Adiós a Plex y Emby. Llega Jellyfin</h1>
+<h5>Tiempo estimado de lectura: 6 minutos. 683 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<p>Emby llega a la versión 3.6 y decide cerrar el código, pasando a ser privativo. Un equipo de desarrolladores, decide hacer un Fork de la versión 3.5.2 de Emby para crear una alternativa 100% Software Libre y totalmente gratuita a Plex y Emby. Nace Jellyfin.</p>
+<center>
+<p><img src="../images-blog/jellifin.png" /></p>
+</center>
+<p>Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros… Organizados y centralizados en un único lugar.</p>
+<p>El punto fuerte de Jellyfin, no solo es que sea 100% Software Libre y gratuito, sino que tenemos la total garantía que todo nuestro contenido Multimedia, así como nuestras fotos o vídeos domésticos, mantienen la total privacidad, ya que nuestro servidor de Jellyfin, en ningún caso se conectará a servidores de terceros del mismo modo que lo hace Plex o Emby.</p>
+<p>El servidor podemos instalarlo en todo tipo de Sistemas Operativos, ya que es totalmente multiplataforma. Windows, Linux, Mac. Yo en este Post os explicaré como instalarlo mediante Docker.</p>
+<p><a href="https://repo.jellyfin.org/releases/client/">Actualmente hay clientes disponibles para Jellyfin en Android, Android TV, Amazón Fire TV o Kodi</a>. También podemos utilizar la versión web, mediante un navegador web, DLNA, Chromecast, Roku, … El equipo de Jellyfin, está abierto como todo proyecto de Software Libre, a la colaboración para el resto de dispositivos y Sistemas Operativos, como IOS, etc… Solo tiene 5 meses Jellyfin, así que irán apareciendo en breve.</p>
+<p>Las versiones de Android, siguen estando en Beta y esta previsto que en muy breve espacio de tiempo, ya estén disponibles en Google Play o F-Droid, pero en una versión ya estable.</p>
+<p>El servidor actualmente se mueve muchísimo más rápido y ligero que Emby en su versión 3.5.2. Esto es debido a que están optimizando tanto la interfaz web, mejora en el rendimiento con arquitectura para procesadores ARM de 64 Bits, registro de contraseñas mucho mas seguro, etc…. También está previsto que dividan partes del servidor para que sea el propio usuario, en función del uso que quiera darle al servidor, instale mediante Plugins aquello que desee.</p>
+<p>Esta previsto que se añada compatibilidad con clientes de Subsonic y muchísimas más sugerencias que están apareciendo en el canal en Reddit de Jellyfin.</p>
+<h2 id="instalación-por-docker">Instalación por Docker</h2>
+<p>Las líneas para la instalación del servicio mediante Dockers, he puesto que cada vez que encendamos el servidor, PC, Raspberry… Inicie Jellyfin. También he puesto que queden expuestos todos los puertos del contenedor, así podremos hacer uso si lo deseamos, de DLNA y futuras implementaciones al servicio por otros puertos.</p>
+<p>Para ser mas correctos, deberíamos especificar el tipo de arquitectura del procesador que vamos a utilizar. Aún así, en la práctica, yo he montado estos Dockers con exactamente estas líneas en mi Raspberry y Ubuntu Server sin ningún tipo de Problema.</p>
+<p>Para tener la última versión del servidor Jellyfin, utilizaremos la siguiente líneas:</p>
+<pre><code>docker run -d \
+ --name jellyfin \
+ --restart=unless-stopped \
+ --network=host \
+ -v $HOME/docker/jellyfin/config:/config \
+ -v /media:/media \
+ -e UID=1000 -e GID=100 \
+ jellyfin/jellyfin:latest
+</code></pre>
+<p>Si queremos exponer el Jellyfin a la red mediante un Proxy Inverso, para acceder sin VPN, sería conveniente abrir solamente el puerto <strong>8096</strong>. Lo haríamos del siguiente modo:</p>
+<pre><code>docker run -d \
+ --name jellyfin \
+ --restart=unless-stopped \
+ -p 8096:8096 \
+ -v $HOME/docker/jellyfin/config:/config \
+ -v /media:/media \
+ -e UID=1000 -e GID=100 \
+ jellyfin/jellyfin:latest
+</code></pre>
+<h2 id="accediendo-al-servicio">Accediendo al servicio</h2>
+<p>Para acceder al servicio, escribiremos en nuestro navegador: <a href="http://miservidor:8096/jellyfin/" class="uri">http://miservidor:8096/jellyfin/</a></p>
+<h2 id="enlaces">Enlaces</h2>
+<ul>
+<li><a href="https://jellyfin.github.io/">Web de Jellyfin</a></li>
+<li><a href="https://repo.jellyfin.org/releases/client/">Repositorio de Clientes de Jellyfin</a></li>
+<li><a href="https://github.com/jellyfin/jellyfin">Repositorio en GitHub</a></li>
+<li><a href="https://jellyfin.readthedocs.io/en/latest/">Documentación</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/">Canal en Reddit</a></li>
+</ul>
+<h2 id="conclusión">Conclusión</h2>
+<p>Hace dos meses y medio que tengo Jellyfin corriendo en mi Raspberry y dos versiones más de Jellyfin en mi Ubuntu Server. La verdad es que estoy encantado con el servicio y cada dos semanas, aparecen mejoras importantes.</p>
+<p>Jellyfin está destinado a ser uno de los grandes servicios de Software Libre como Nextcloud o Syncthing.</p>
+<p>Os recomiendo darle una probada porque os sorprenderá.</p>
+<br>
+<p>Publicado por Angel el martes 07 mayo del 2019 y <strong>actualizado</strong> el sábado 30 noviembre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html">Navidrome. La alternativa a Airsonic desarrollada en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html">gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html">Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html">FreshRSS. Mi servidor de RSS</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-07-servidor-de-ebooks-con-calibre.html">Servidor de ebooks en Ubuntu, Debian, Raspbian,… con Calibre</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

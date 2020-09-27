@@ -1,0 +1,261 @@
+<head>
+<title>Creando contenedores con dockerc. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="El motivo de crear esta aplicación es bash que he desarrollado, es tener en una carpeta archivos de texto plano con la extensión .docker y en su contenido las líneas" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Creando contenedores con dockerc" />
+<meta property="og:description" content="El motivo de crear esta aplicación es bash que he desarrollado, es tener en una carpeta archivos de texto plano con la extensión .docker y en su contenido las líneas" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html" />
+
+<meta name="twitter:title" content="Creando contenedores con dockerc" />
+<meta name="twitter:description" content="El motivo de crear esta aplicación es bash que he desarrollado, es tener en una carpeta archivos de texto plano con la extensión .docker y en su contenido las líneas" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="creando-contenedores-con-dockerc-1" title="Creando contenedores con dockerc" data-export_file_name="creando-contenedores-con-dockerc" data-description="El motivo de crear esta aplicación es bash que he desarrollado, es tener en una carpeta archivos de texto plano con la extensión .docker y en su contenido las líneas" data-export_date="2020-03-31 15:48" data-category="docker" data-tag="app" data-image="./images-blog/docker.png">Creando contenedores con dockerc</h1>
+<h5>Tiempo estimado de lectura: 8 minutos. 917 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>El motivo de crear esta aplicación es bash que he desarrollado, es tener en una carpeta, archivos de texto plano con la extensión .docker y en su contenido, las líneas de terminal para montar el contenedor.</p>
+<center>
+<p><img src="../images-blog/docker.png" /></p>
+</center>
+<p>La aplicación te permite tanto el crear el archivo para guardar estas líneas, así como poder montar un contenedor o un grupo de contendores, todo de manera automatizada.</p>
+<p>Si tienes tu lista de dockers favoritos en una carpeta, instalar de cero una Raspberry Pi, por ejemplo, con un simple <code>dockerc a</code> auto instalará todos los dockers que hayamos guardado en esa carpeta.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Si tienes Linux, es tan simple como:</p>
+<pre><code>sudo curl -L https://raw.githubusercontent.com/uGeek/dockerc/master/dockerc           -o /usr/bin/dockerc &amp;&amp; sudo chmod +x /usr/bin/dockerc
+</code></pre>
+<h2 id="archivo-de-configuración">Archivo de Configuración</h2>
+<p>La primera vez que ejecutemos cualquier comando con dockerc, nos hará dos preguntas:</p>
+<ul>
+<li>En que directorio vamos a guardar nuestros dockers</li>
+<li>Que editor de texto queremos utilizar para editarlos</li>
+</ul>
+<p>Tras responder estas preguntas, dockerc creará una archivo de configuración en <code>~/.config/dockerc/dockerc.conf</code>.</p>
+<h2 id="guardar-un-docker">Guardar un docker</h2>
+<p>Para guardar un docker con dockerc, tienes que ejecutar el comando</p>
+<pre><code>dockerc n
+</code></pre>
+<p>Dockerc te preguntará:</p>
+<ul>
+<li>En que grupo de contenedores quieres guardarlo.</li>
+<li>Nombre del docker</li>
+</ul>
+<p>Te abrirá el editor de texto, por si quieres editar alguna opción antes de crearlo y creará un archivo de texto plano con la extensión .docker.</p>
+<h3 id="ejemplo">Ejemplo</h3>
+<p>Supongamos que he elegido el directorio <code>/home/angel/dockerc/</code>, yo he creado los siguientes grupos de dockers, rpi, amd64 y automontaje.</p>
+<p>Las rutas de estos directorios serina:</p>
+<ul>
+<li><code>/home/angel/dockerc/rpi</code></li>
+<li><code>/home/angel/dockerc/amd64/</code></li>
+<li><code>/home/angel/dockerc/automontaje</code></li>
+</ul>
+<p>En la carpeta rpi, dejo los archivos de los dockers para Raspberry Pi, en la <strong>amd64</strong>, los dockers para arquitectura 64bits y en automontaje, los dockers que quiero montar en mi Raspberry Pi de forma automatizada.</p>
+<p>Un archivo <code>.docker</code>, tendría la siguiente estructura:</p>
+<pre><code># Docker Supysonic
+docker run --name supysonic --restart=unless-stopped -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:arm-0.5.0
+</code></pre>
+<p>Si le decimos a <strong>dockerc</strong> que este docker es Supysonic y pertenece al grupo de rpi, dockerc creará un archivo de texto plano con este contenido en la ruta <code>/home/angel/dockerc/rpi/supysonic.docker</code></p>
+<h3 id="crealo-como-quieras">Crealo como quieras</h3>
+<p>No es necesario crearlos con dockerc, cualquier archivo que contenga las líneas de terminal que pondrías en la terminal para montar el docker y estén en el directorio, dockerc los visualizará y podrá montarlos.</p>
+<p>La idea es que puedas guardar estos archivos y compartirlos o utilizarlos en otra máquina y poder hacer el automontaje de todos los contenedores de una vez.</p>
+<h2 id="crear-un-docker">Crear un docker</h2>
+<p>Para crear un docker que tengamos guardado, es tan simple como escribir en tal terminal:</p>
+<pre><code>dockerc
+</code></pre>
+<p>Dockerc te preguntará:</p>
+<ul>
+<li>¿A Que grupo pertenece?. En mi ejemplo <code>rpi</code>. Te listará todos los dockers que tienes guardados en esa carpeta</li>
+<li>¿Que docker quieres crear?. En mi caso voy crear el de Supysonic</li>
+<li>Abre el editor de texto con el archivo <code>suypysonic.docker</code>, por si quieres cambiar una opción antes de montarlo, como puertos, volumenes…</li>
+</ul>
+<p>Una vez contestado todo, comienza la creación del docker.</p>
+<h2 id="montar-muchos-dockers-automatizado">Montar muchos dockers automatizado</h2>
+<p>Yo utilizo la carpeta automontaje pero podría ser cualquier otra donde tubieras todos tus archivos .docker.</p>
+<p>Para automontarlos:</p>
+<pre><code>dockerc a
+</code></pre>
+<p>Dockerc te preguntará en que grupo o directorio están los .docker que quieres crear. Dockerc comenzará a crear todos los contenedores un tras otro de forma automátizada.</p>
+<h2 id="contenedores-y-sus-puertos">Contenedores y sus puertos</h2>
+<p>Dockerc te permite visualizar todos los contenedores que están corriendo y sus puertos. Para verlos:</p>
+<pre><code>dockerc c
+</code></pre>
+<p>También admite con la opción <strong>ls</strong>.</p>
+<pre><code>dockerc ls
+</code></pre>
+<p>Veriamos en la terminal:</p>
+<pre><code>----------------------------------
+CONTAINERS CORRIENDO Y SUS PUERTOS
+----------------------------------
+bitwarden           3012/tcp, 0.0.0.0:1000-&gt;80/tcp
+duckdns
+ejabberd            0.0.0.0:5222-&gt;5222/tcp, 0.0.0.0:5280-&gt;5280/tcp, 5269/tcp
+jellyfin            0.0.0.0:8096-&gt;8096/tcp
+mariadb             0.0.0.0:3306-&gt;3306/tcp
+portainer           0.0.0.0:9000-&gt;9000/tcp
+supysonic           0.0.0.0:8080-&gt;8080/tcp
+syncthing           21027/udp, 0.0.0.0:8385-&gt;8384/tcp, 0.0.0.0:22001-&gt;22000/tcp
+tt-rss              443/tcp, 0.0.0.0:81-&gt;80/tcp
+webdav              0.0.0.0:80-&gt;80/tcp
+</code></pre>
+<h2 id="contenedores-creados">Contenedores creados</h2>
+<p>Podemos ver todos los contenedores creados con el comando</p>
+<pre><code>dockerc c -a
+</code></pre>
+<p>o</p>
+<pre><code>dockerc ls -a
+</code></pre>
+<p>Veriamos en la terminal:</p>
+<pre><code>----------------------
+CONTAINERS DISPONIBLES
+----------------------
+bitwarden
+duckdns
+ejabberd
+jellyfin
+letsencrypt
+mariadb
+mumble
+musikcube
+nginx
+ouroboros
+portainer
+resilio
+supysonic
+syncthing
+tautulli
+tt-rss
+wallabag
+webdav
+</code></pre>
+<h2 id="imágenes-con-su-fecha-de-creación">Imágenes con su fecha de creación</h2>
+<p>Para seguir las actualizaciones de las imágenes, dockerc ordena estas por fecha. Para visualizar las imágenes</p>
+<pre><code>dockerc i
+</code></pre>
+<p>La terminal muestra</p>
+<pre><code>--------
+IMAGENES
+--------
+CREATED             REPOSITORY:TAG                     SIZE
+3 days ago          ugeek/traefik:arm                  63.4MB
+4 days ago          bitwardenrs/server:raspberry       140MB
+5 days ago          ugeek/mumble-ubuntu:arm            87.3MB
+7 days ago          python:alpine                      77.1MB
+7 days ago          alpine:latest                      3.81MB
+7 days ago          arm32v6/alpine:3.11                4.81MB
+7 days ago          ugeek/webdab-apache:arm            84MB
+</code></pre>
+<h2 id="ayuda">Ayuda</h2>
+<pre><code>dockerc -h
+</code></pre>
+<p>o</p>
+<pre><code>dockerc --help
+</code></pre>
+<pre><code>
+Modo de empleo: dockerc [OPCIONES]
+
+dockerc                 -&gt; Menú para crear un contendor guardado
+dockerc   a             -&gt; Automontaje de todos los dockers de un grupo
+dockerc   n             -&gt; Guarda un nuevo docker
+dockerc   i             -&gt; Imagenes listadas por creación
+dockerc   c,    ls      -&gt; Dockers que están corriendo y sus puertos
+dockerc   c -a ,ls -a   -&gt; Todos los Dockers disponibles
+dockerc  -h, --help     -&gt; Ayuda
+
+
+dockerc v0.8 30/03/2020
+Copyright (C) 2020 Angel. uGeek
+ugeekpodcast@gmail.com
+
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>Esta es una aplicación que he creado para mi, que me ha sido de mucha utilidad. Espero que si tienes la misma necesidad que yo, la disfrutes mucho.</p>
+<br>
+<p>Publicado por Angel el martes 31 marzo del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

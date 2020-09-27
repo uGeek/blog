@@ -1,0 +1,114 @@
+<head>
+<title> Descargar todos los episodios de un Podcast con wget. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Descargar todos los episodios de un Podcast con wget" />
+<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
+
+<meta name="twitter:title" content=" Descargar todos los episodios de un Podcast con wget" />
+<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget-1" title="Descargar todos los episodios de un Podcast con wget" data-export_file_name="descargar-todos-los-episodios-de-un-podcast-con-bash" data-description="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." data-export_date="2018-12-28 10:00" data-category="terminal" data-tag="bash,podcast,unix,terminal" data-image="./images-blog/ugeek.png">Descargar todos los episodios de un Podcast con wget</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 197 palabras.    <a href="https://ugeek.github.io/blog/categories/terminal">terminal</a></h5>
+<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
+<p>Tan simple como escribir esta única línea sustituyendo <strong>&quot;FEED&quot;</strong>, por el Feed del Podcast que desees descargar.</p>
+<pre><code>wget -q -O- &quot;FEED&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+</code></pre>
+<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
+<pre><code>wget -q -O- &quot;http://feeds.feedburner.com/ugeek&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+</code></pre>
+<p>A disfrutar con la magia de la terminal…</p>
+<br>
+<p>Publicado por Angel el viernes 28 diciembre del 2018</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html">Saltando de un directorio a otro con Jump</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html">Gestionando mis tareas en la terminal con topydo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html">Simplenote para terminal. Sncli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html">W3M. Navegador para Terminal y Emacs</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

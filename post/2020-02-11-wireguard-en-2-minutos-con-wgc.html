@@ -1,0 +1,190 @@
+<head>
+<title>Wireguard en 2 minutos con wgc. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Uno de los defectos que he encontrado a Wireguard, es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Wireguard en 2 minutos con wgc" />
+<meta property="og:description" content="Uno de los defectos que he encontrado a Wireguard, es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/wireguard.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html" />
+
+<meta name="twitter:title" content="Wireguard en 2 minutos con wgc" />
+<meta name="twitter:description" content="Uno de los defectos que he encontrado a Wireguard, es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/wireguard.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="wireguard-en-2-minutos-con-wgc-1" title="Wireguard en 2 minutos con wgc" data-export_file_name="wireguard-en-2-minutos-con-wgc" data-description="Uno de los defectos que he encontrado a Wireguard,  es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable" data-export_date="2020-02-11 19:02" data-category="wireguard" data-tag="vpn,raspberry,debian,ubuntu" data-image="./images-blog/wireguard.png">Wireguard en 2 minutos con wgc</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 494 palabras.    <a href="https://ugeek.github.io/blog/categories/wireguard">wireguard</a></h5>
+<p>Uno de los defectos que he encontrado a Wireguard, es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable y eso al final puede hacer que te desanimes.</p>
+<center>
+<p><img src="../images-blog/wireguard.png" /></p>
+</center>
+<p>¿Te imaginas montar un servidor y configuración de clientes en tan solo 2 minutos?</p>
+<p>Gracias al pequeño script que he creado llamado wgc, podras hacer tus sueños realidad.</p>
+<p>Vamos a conocer su funcionamiento.</p>
+<h3 id="descargar-wgc">Descargar wgc</h3>
+<p>Creamos la carpeta <code>/etc/wireguard</code></p>
+<p>Tenemos que crearla como <strong>sudo</strong>. Para acceder, <code>sudo su</code></p>
+<pre><code>mkdir -p /etc/wireguard ; cd /etc/wireguard
+</code></pre>
+<p>Descargamos <strong>wgc</strong>.</p>
+<pre><code>wget https://raw.githubusercontent.com/uGeek/wgc/master/wgc
+</code></pre>
+<p>Damos permisos de ejecución</p>
+<pre><code>sudo chmod +x wgc
+</code></pre>
+<p>Ejecutamos <strong>wgc</strong> y nos mostrará la ayuda</p>
+<pre><code>./wgc
+</code></pre>
+<h2 id="instalar-wireguard">Instalar Wireguard</h2>
+<p>Si no lo tienes instalado, <strong>wgc</strong> lo hará por tí.</p>
+<p>Debian</p>
+<pre><code>./wgc -id
+</code></pre>
+<p>Raspbian</p>
+<pre><code>./wgc -ir
+</code></pre>
+<p>Ubuntu</p>
+<pre><code>./wgc -iu
+</code></pre>
+<p>Recuerda que tras la instalación, tu sistema se reiniciará.</p>
+<h2 id="conocer-mi-interfaz-de-red-y-ip">Conocer mi interfaz de red y ip</h2>
+<p>Para conocer nuestra interfaz de red e ip, tenemos que ejecutar en la terminal:</p>
+<pre><code>ip a
+</code></pre>
+<p>Nos mostrará algo parecido a esto</p>
+<pre><code>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens172: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:0c:29:cb:b3:7e brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.111/24 brd 192.168.1.255 scope global dynamic ens172
+       valid_lft 42939sec preferred_lft 42939sec
+    inet6 fe80::22c:27ff:fecb:b57e/64 scope link 
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>La interfaz de red, en mi caso, es la número 2, <strong>ens172</strong> y la ip <strong>192.168.1.111</strong>.</p>
+<h2 id="crear-archivo-de-configuración-del-servidor">Crear archivo de configuración del servidor</h2>
+<p>Para Debian</p>
+<pre><code>sudo ./wgc -sd
+</code></pre>
+<p>Para Ubuntu</p>
+<pre><code>sudo ./wgc -su
+</code></pre>
+<p>Para Raspbian</p>
+<pre><code>sudo ./wgc -sr
+</code></pre>
+<p>Creará el archivo <strong>wg0.conf</strong> de configuración del servidor. También creará 2 archivos más, la llave pública y privada del servidor.</p>
+<p><strong>Wgc</strong> nos devolverá la llave pública del servidor para que la añadas al propio <strong>wgc</strong>.</p>
+<p>Utiliza tu editor de texto favorito. En mi caso, voy a utilizar <strong>nano</strong>.</p>
+<pre><code>nano wgc
+</code></pre>
+<p>Ahora añadimos la <strong>ip</strong> pública, tipo ugeek.duckdns.org o en mi caso, voy a utilizar la privada, <strong>192.168.1.111</strong> y la llave pública que ha devuelto <strong>wgc</strong>.</p>
+<h2 id="crear-cliente">Crear Cliente</h2>
+<p>Para crear el cliente, utilizaremos el comando <strong>wgc</strong> seguido del nombre que daremos al cliente.</p>
+<p>Yo tengo un Xiami A3, así que le pondré de nombre <strong>A3</strong>.</p>
+<pre><code>./wgc A3 
+</code></pre>
+<p>Añadimos el número de cliente, este será el <strong>1</strong>, ya que es el primero que creamos.</p>
+<ul>
+<li>Nos mostrará un código <strong>QR</strong> para capturarlo con nuestro móvil, tablet,…</li>
+<li>Dos líneas para añadir en el servidor</li>
+</ul>
+<p>*Ahora crea tantos Clientes como quieras!!!*</p>
+<h2 id="levantar-el-servidor">Levantar el servidor</h2>
+<p>Para levantar el servidor, utilizaremos:</p>
+<pre><code>sudo wg-quick up wg0
+</code></pre>
+<h2 id="comprobar-que-wireguard-funciona-correctamente">Comprobar que Wireguard funciona correctamente</h2>
+<pre><code>sudo wg
+</code></pre>
+<h2 id="detener-el-servidor">Detener el servidor</h2>
+<pre><code>sudo wg-quick down wg0
+</code></pre>
+<h2 id="iniciar-wireguard-al-encender-nuestra-raspberry-servidor">Iniciar Wireguard al encender nuestra Raspberry, Servidor,…</h2>
+<p>Para ello, una vez más utilizaremos systemd.</p>
+<pre><code>sudo systemctl enable wg-quick@wg0.service
+</code></pre>
+<p>Iniciamos</p>
+<pre><code>sudo systemctl start wg-quick@wg0.service
+</code></pre>
+<br>
+<p>Publicado por Angel el martes 11 febrero del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

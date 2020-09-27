@@ -1,0 +1,128 @@
+<head>
+<title>Docker: KodExplorer. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker: KodExplorer" />
+<meta property="og:description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html" />
+
+<meta name="twitter:title" content="Docker: KodExplorer" />
+<meta name="twitter:description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="docker-kodexplorer-1" title="Docker: KodExplorer" data-export_file_name="Docker KodExplorer" data-description="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" data-export_date="2019-09-09 21:40" data-category="docker" data-tag="ssh, terminal, nas, servicios" data-image="./images-blog/kodexplorer.png">Docker: KodExplorer</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 324 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Ya os he hablado en más de una ocasión sobre KodExplorer. KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming,… a través del navegador web.</p>
+<center>
+<p><img src="../images-blog/kodexplorer.png" /></p>
+</center>
+<p>En esta versión del docker, podemos enlazar en la sesión de administrador, con una de las carpetas de nuestro servidor, Raspberry,… La ruta de esta carpeta la tienes que introducir donde aparece <strong>&lt;RUTA&gt;</strong>. Yo he montado una nube cifrada que tengo mediante rclone, de esta manera me permite subir y bajar archivos a la nube remotamente, desde el navegador web.</p>
+<p>Puedes <a href="http://demo.kodcloud.com/index.php?user/login">ver una demo aquí</a>.</p>
+<h2 id="montar-docker">Montar Docker</h2>
+<h3 id="montar-docker-para-raspberry-pi-o-arm-32bits">Montar Docker para Raspberry Pi o ARM 32bits</h3>
+<pre><code>docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v &lt;RUTA&gt;:/var/www/html/data/User/admin/home ugeek/kodexplorer:arm
+</code></pre>
+<h3 id="montar-docker-para-amd64">Montar Docker para amd64</h3>
+<pre><code>docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v &lt;RUTA&gt;:/var/www/html/data/User/admin/home ugeek/kodexplorer:amd64
+</code></pre>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<p>La primera vez que iniciamos KodExplorer, nos pedirá que introduzcamos dos veces la contraseña de la cuenta <strong>admin</strong>, que va a ser la que vamos a utilizar para enlazar con nuestra carpeta local en la <strong>&lt;RUTA&gt;</strong>.</p>
+<p>Tras iniciar el servicio, KodExplorer nos pedirá que actualicemos, ya que hay una versión más actualizada no disponible actualmente en GitHub. Le daremos a actualizar.</p>
+<p>Listo!!!! Ya tenemos nuestro KodExplorer totalmente funcional y actualizado a la última</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/kalcaddle/KodExplorer">Repositorio en GitHub</a></li>
+<li><a href="https://cloud.docker.com/u/ugeek/repository/docker/ugeek/kodexplorer">Docker en DockerHub</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el lunes 09 septiembre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

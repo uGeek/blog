@@ -1,0 +1,134 @@
+<head>
+<title>Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" />
+<meta property="og:description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram-desktop.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html" />
+
+<meta name="twitter:title" content="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" />
+<meta name="twitter:description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/telegram-desktop.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instala-telegram-desktop-y-rclone-browser-en-una-raspberry-pi-o-servidor" title="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" data-export_file_name="Instalar Telegram Desktop y Rclone Browser" data-description="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" data-export_date="2019-09-17 5:15" data-category="telegram" data-tag="ssh, raspberry" data-image="./images-blog/telegram-desktop.png">Instala Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 458 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
+<p>Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar Telegram Desktop o Rclone-Browser en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio, como si fuera una aplicación nativa de tu PC, pero descargando el contenido de Telegram o Rclone en tu Raspberry o Servidor.</p>
+<p>En el caso de Telegram, está genial para todo aquel que desea descargar intercambiar archivos entre dispositivos, o descargar archivos que tengas en Telegram, en un canal privado que utilices de nube, o subir archivos a este canal privado.</p>
+<p>Si utilizas Rclone, también podríamos utilizar Rclone-Browser para intercambiar el contenido de tu nube en Telegram con el resto de nubes.</p>
+<center height="50">
+<p><img src="../images-blog/telegram-desktop.png" /></p>
+</center>
+<p>Todo esto lo vamos ha hacer posible gracias a x11. En Linux podemos utilizarlo en cualquier distro. Si utilizas Windows o Mac, tendrás que instalar un programa para poder utilizarlo.</p>
+<p>X11 es un servidor gráfico que nos permite el exportar el display de un servidor remoto a nuestro escritorio local. De manera que podremos visualizar aplicaciones gráficas del servidor en nuestro escritorio. Lo que se conoce como forwarding a través de SSH.</p>
+<h2 id="instalación-de-telegram-desktop">Instalación de Telegram Desktop</h2>
+<p>Telegram Desktop la instalaremos en nuestra Raspberry o Servidor, del mismo modo que en nuestro escritorio Linux. Abriremos la terminal de nuestra Raspberry y escribiremos:</p>
+<pre><code>sudo apt install telegram-desktop
+</code></pre>
+<h2 id="instalando-rclone-browser">Instalando Rclone-Browser</h2>
+<p>También podemos instalar Rclone Browser, para gestionar nuestras nubes de un modo gráfico</p>
+<pre><code>sudo apt install rclone-browser
+</code></pre>
+<h2 id="conexión-desde-tu-escritorio-linux-a-telegram-desktop">Conexión desde tu escritorio Linux a Telegram Desktop</h2>
+<p>Nos conectamos vía ssh añadiendo el flag <strong>-X</strong> y se nos abrirá la aplicación de Telegram con interfaz gráfica en nuestro PC.</p>
+<p>Sustituye tu nombre de usuario por <strong>angel</strong> y tu <strong>ip</strong> por la ip de tu Raspberry o servidor.</p>
+<pre><code>ssh -X angel@192.168.1.100 telegram-desktop
+</code></pre>
+<p>Yo, una vez más, os recomendaría crear un alias para arrancar desde tu PC, el Telegram remoto de tu Raspberry.</p>
+<p>Ejemplo:</p>
+<pre><code>alias telegram-pi=&#39;ssh -X angel@192.168.1.100 telegram-desktop&#39;
+</code></pre>
+<h2 id="conexión-a-rclone-browser">Conexión a Rclone Browser</h2>
+<p>Del mismo modo, haremos lo propio para abrir Rclone Browser y si lo deseamos, crear un alias.</p>
+<pre><code>ssh -X angel@192.168.1.100 rclone-browser
+</code></pre>
+<br>
+<p>Publicado por Angel el martes 17 septiembre del 2019</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-08-varias-cuentas-de-telegram-en-un-mismo-pc.html">Varias cuentas de telegram en un mismo PC</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-28-telegram-desktop-atajos-de-teclado.html">Telegram Desktop. Atajos de teclado</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html">Docker: Gotify. Tu servidor de Notificaciones</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html">Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html">Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
