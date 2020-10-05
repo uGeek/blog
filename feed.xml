@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Crear enlaces simbólicos a otros directorios o archivos</title>
+    <link>https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="Crear enlaces simbólicos a otros directorios o archivos"&gt;
+&lt;br&gt;&lt;p&gt;Un enlace simbólico, sería algo similar a crear un acceso directo de un directorio o archivo, a otro dentro en un mismo dispositivo.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html&gt;Crear enlaces simbólicos a otros directorios o archivos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 05 Oct 2020  +0100</pubDate>
+    <category>bash</category>
+    <category>zsh</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html</guid>
+   </item>
+   <item>
     <title>Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal</title>
     <link>https://ugeek.github.io/blog/post/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 20 Sep 2020  +0100</pubDate>
+    <pubDate>Sun, 20 Sep 2020 22:10 +0100</pubDate>
     <category>sincronización</category>
     <category>sync</category>
     <category>go</category>
@@ -2030,7 +2063,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

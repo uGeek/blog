@@ -1,5 +1,5 @@
 <head>
-<title>pandoc</title>
+<title>Crear enlaces simbólicos a otros directorios o archivos. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,15 +47,81 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>pandoc</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="crear-enlaces-simbólicos-a-otros-directorios-o-archivos-1" title="Crear enlaces simbólicos a otros directorios o archivos" data-export_file_name="crear-enlaces-simbolicos-a-otros-directorios-o-archivos" data-description="Un enlace simbólico, sería algo similar a crear un acceso directo de un directorio o archivo, a otro dentro en un mismo dispositivo." data-export_date="2020-10-05 22:10" data-category="bash" data-tag="zsh" data-image="./images-blog/bash.png">Crear enlaces simbólicos a otros directorios o archivos</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 171 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Un enlace simbólico, sería algo similar a crear un acceso directo de un directorio o archivo, a otro dentro en un mismo dispositivo.</p>
+<center>
+<p><img src="../images-blog/bash.png" /></p>
+</center>
+<h2 id="crear-enlace-simbólico">Crear enlace simbólico</h2>
+<p>Crear enlace simbólico con directorios:</p>
+<pre class="shell"><code>ln -s ~/directorio_origen ~/directorio_destino
+</code></pre>
+<p>También podemos hacerlo con archivos:</p>
+<pre class="shell"><code>ln -s ~/directorio/archivo_origen.txt ~/directorio/archivo_destino.txt
+</code></pre>
+<h2 id="eliminar-en-enlace-simbólico">Eliminar en enlace simbólico</h2>
+<p>Para eliminar el enlace simbólico.</p>
+<pre class="shell"><code>unlink ruta_del_enlace
+</code></pre>
+<p>También podríamos utilizar:</p>
+<pre class="shell"><code>rm ~/directorio_destino
+</code></pre>
+<p>Enlace simbólico de un directorio:</p>
+<pre class="shell"><code>rm -Rf ~/directorio_destino
+</code></pre>
+<br>
+<p>Publicado por Angel el lunes 05 octubre del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html>Instala la última versión de Pandoc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html>Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html">Saltando de un directorio a otro con Jump</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-listar-paquetes-instalados-y-hacer-un-poco-de-limpieza.html">Listar paquetes instalados y hacer un poco de limpieza</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-21-screen-enviar-scripts-a-segundo-plano.html">Screen. Enviar scripts a segundo plano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

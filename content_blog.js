@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Crear enlaces simbólicos a otros directorios o archivos',
+            'text': 'Un enlace simbólico, sería algo similar a crear un acceso directo de un directorio o archivo, a otro dentro en un mismo dispositivo.', 
+            'tags': 'bash,zsh,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html' 
+},
+{
             'title': 'Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal',
             'text': 'Croc una herramienta que permite transferir archivos,directorios y texto, de forma sencilla y segura, entre dos PC,s, servidores, etc....', 
             'tags': 'sincronización,sync,go,,,', 
