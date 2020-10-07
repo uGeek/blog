@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</title>
+    <link>https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/sd.png" alt="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux"&gt;
+&lt;br&gt;&lt;p&gt;Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html&gt;Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 07 Oct 2020  +0100</pubDate>
+    <category>bash</category>
+    <category>sd</category>
+    <category>ssd</category>
+    <category>usb</category>
+    <guid>https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html</guid>
+   </item>
+   <item>
     <title>Crear enlaces simbólicos a otros directorios o archivos</title>
     <link>https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 05 Oct 2020  +0100</pubDate>
+    <pubDate>Mon, 05 Oct 2020 07:30 +0100</pubDate>
     <category>bash</category>
     <category>zsh</category>
     <category></category>
@@ -2063,7 +2096,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

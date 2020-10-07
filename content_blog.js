@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux',
+            'text': 'Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal.', 
+            'tags': 'bash,sd,ssd,usb,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html' 
+},
+{
             'title': 'Crear enlaces simbólicos a otros directorios o archivos',
             'text': 'Un enlace simbólico, sería algo similar a crear un acceso directo de un directorio o archivo, a otro dentro en un mismo dispositivo.', 
             'tags': 'bash,zsh,,,,', 

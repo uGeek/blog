@@ -1,5 +1,5 @@
 <head>
-<title>Recupera archivos borrados con Test Disk. uGeek Blog </title>
+<title>Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content=":DESCRIPTION:" />
+<meta name="description" content="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Recupera archivos borrados con Test Disk" />
-<meta property="og:description" content=":DESCRIPTION:" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/testdisk.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-15-recupera-archivos-borrados-con-test-disk.html" />
+<meta property="og:title" content="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" />
+<meta property="og:description" content="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/sd.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html" />
 
-<meta name="twitter:title" content="Recupera archivos borrados con Test Disk" />
-<meta name="twitter:description" content=":DESCRIPTION:" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/testdisk.png" />
+<meta name="twitter:title" content="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" />
+<meta name="twitter:description" content="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/sd.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,29 +85,35 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="recupera-archivos-borrados-con-test-disk-1" title="Recupera archivos borrados con Test Disk" data-export_file_name="Recupera archivos borrados con Test Disk" data-description="" data-export_date="2019-08-15 22:00" data-category="bash" data-tag="bash" data-image="./images-blog/testdisk.png">Recupera archivos borrados con Test Disk</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 254 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Si has borrado por error un archivo en tu terminal, no temas, quizás estas a tiempo de recuperarlo. Voy a explicarte un método muy sencillo de hacerlo con TestDisk</p>
-<center height="250" width="250"> 
-<p><img src="../images-blog/testdisk.png" /></p>
+<h1 id="montar-un-usb-tarjeta-sd-disco-duro-o-ssd-formateado-en-ext4-fat32-o-ntfs-en-un-directorio-con-linux-1" title="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" data-export_file_name="" data-description="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." data-export_date="2020-10-07 07:30" data-category="bash" data-tag="sd,ssd,usb" data-image="./images-blog/sd.png">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 218 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal.</p>
+<center>
+<p><img src="../images-blog/sd.png" /></p>
 </center>
-<h2 id="instalación">Instalación</h2>
-<p><code>sudo apt install testdisk</code></p>
-<h2 id="funcionamiento">Funcionamiento</h2>
-<p>Le daremos a: <code>&gt;[ Create ] Create a new log file</code></p>
-<p>Ahora nos mostrará todas las unidades que tenemos en nuestro sistema. Seleccionaremos la unidad desde la que queremos recuperar los datos.</p>
-<p>Pulsaremos esta opción: <code>&gt;[None   ] Non partitioned media</code></p>
-<p>Ahora le daremos a la opción avanzada: <code>&gt;[ Advanced ] Filesystem Utils</code></p>
-<p><strong>En la parte inferior</strong>, seleccionaremos <code>[  List  ]</code></p>
-<p>Ahora navegaremos por nuestro disco. En color rojo saldrán los archivos borrados.</p>
-<h2 id="recuperar-archivo">Recuperar archivo</h2>
-<p>Para recuperar un archivo, nos situaremos encima del archivo rojo y seleccionaremos la letra <strong>C</strong>.</p>
-<p>Ahora TestDisk nos preguntará donde queremos guardar el archivo, volvemos a pulsar la tecla <strong>C</strong> y…</p>
-<p>YA ESTÁ RECUPERADO!!!</p>
-<h2 id="salir-o-ir-hacia-atras">Salir o ir hacia atras</h2>
-<p>Tan sencillo como pulsar la tecla <strong>q</strong>.</p>
+<h2 id="ver-unidades">Ver unidades</h2>
+<p>Para saber el nombre de la partición que utiliza el sistema operativo y así poder montarla en el directorio que deseemos:</p>
+<pre class="shell"><code>lsblk
+</code></pre>
+<h2 id="montar-unidad-ext4">Montar unidad EXT4</h2>
+<pre><code>sudo mount -t ext4 -o defaults /dev/sda1 /media/usb
+</code></pre>
+<h2 id="montar-unidad-fat32">Montar unidad FAT32</h2>
+<pre><code>sudo mount -t vfat /dev/sdb1 /media/usb
+</code></pre>
+<h2 id="montar-unidad-ntfs">Montar unidad NTFS</h2>
+<p>Para montar una partición NTFS, utilizaremos:</p>
+<pre><code>sudo mount -t ntfs-3g /dev/sdb1 /media/usb
+</code></pre>
+<h2 id="comprobar-si-la-unidad-se-ha-montado-correctamente">Comprobar si la unidad se ha montado correctamente</h2>
+<p>Sería tan fácil como hacer un <strong>ls</strong> en el directorio donde hemos montado la unidad, pero para ver un resumen del resto de unidades:</p>
+<pre><code>df -l
+</code></pre>
+<h2 id="desmontar-una-unidad">Desmontar una unidad</h2>
+<pre><code>sudo umount /media/usb
+</code></pre>
 <br>
-<p>Publicado por Angel el jueves 15 agosto del 2019</p>
+<p>Publicado por Angel el miércoles 07 octubre del 2020</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
