@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'duf. Visualizando el almacenamiento',
+            'text': 'Normalmente para ver el tamaño de mis unidades de almacenamiento, utilizo =du -h.= Si quiero conocer el tamaño de un directorio, me situo dentro del mismo y hago un =du', 
+            'tags': 'bash,tesrminal,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html' 
+},
+{
             'title': 'Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux',
             'text': 'Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal.', 
             'tags': 'bash,sd,ssd,usb,,', 

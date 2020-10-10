@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>duf. Visualizando el almacenamiento</title>
+    <link>https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="duf. Visualizando el almacenamiento"&gt;
+&lt;br&gt;&lt;p&gt;Normalmente para ver el tamaño de mis unidades de almacenamiento, utilizo =du -h.= Si quiero conocer el tamaño de un directorio, me situo dentro del mismo y hago un =du... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html&gt;duf. Visualizando el almacenamiento&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 10 Oct 2020  +0100</pubDate>
+    <category>bash</category>
+    <category>tesrminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html</guid>
+   </item>
+   <item>
     <title>Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</title>
     <link>https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 07 Oct 2020  +0100</pubDate>
+    <pubDate>Wed, 07 Oct 2020 08:15 +0100</pubDate>
     <category>bash</category>
     <category>sd</category>
     <category>ssd</category>
