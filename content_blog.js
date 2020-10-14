@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Buscar texto en un directorio, archivo,... con grep y find',
+            'text': 'Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble.', 
+            'tags': 'bash,terminal,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html' 
+},
+{
             'title': 'duf. Visualizando el almacenamiento',
             'text': 'Normalmente para ver el tamaño de mis unidades de almacenamiento, utilizo =du -h.= Si quiero conocer el tamaño de un directorio, me situo dentro del mismo y hago un =du', 
             'tags': 'bash,tesrminal,,,,', 

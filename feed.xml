@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Buscar texto en un directorio, archivo,... con grep y find</title>
+    <link>https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="Buscar texto en un directorio, archivo,... con grep y find"&gt;
+&lt;br&gt;&lt;p&gt;Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html&gt;Buscar texto en un directorio, archivo,... con grep y find&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 14 Oct 2020  +0100</pubDate>
+    <category>bash</category>
+    <category>terminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html</guid>
+   </item>
+   <item>
     <title>duf. Visualizando el almacenamiento</title>
     <link>https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 10 Oct 2020  +0100</pubDate>
+    <pubDate>Sat, 10 Oct 2020 07:45 +0100</pubDate>
     <category>bash</category>
     <category>tesrminal</category>
     <category></category>

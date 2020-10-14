@@ -1,5 +1,5 @@
 <head>
-<title> Crear listas m3u para minidlna o vlc. uGeek Blog </title>
+<title>Buscar texto en un directorio, archivo,... con grep y find. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
+<meta name="description" content="Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Crear listas m3u para minidlna o vlc" />
-<meta property="og:description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html" />
+<meta property="og:title" content="Buscar texto en un directorio, archivo,... con grep y find" />
+<meta property="og:description" content="Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html" />
 
-<meta name="twitter:title" content=" Crear listas m3u para minidlna o vlc" />
-<meta name="twitter:description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Buscar texto en un directorio, archivo,... con grep y find" />
+<meta name="twitter:description" content="Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,31 +85,50 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="crear-listas-m3u-para-minidlna-o-vlc-1" title="Crear listas m3u para minidlna o vlc" data-export_file_name="crear-listas-m3u-para-minidlna-o-vlc" data-description="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." data-export_date="2019-01-02 20:00" data-category="bash" data-tag="bash, grep ,ls ,unix ,servidor, minidlna, multimedia" data-image="./images-blog/ugeek.png">Crear listas m3u para minidlna o vlc</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 314 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Un archivo <strong>.m3u</strong>, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc. Cuando viste el artículo de <a href="https://ugeek.gitlab.io/2018-12-27-minidlna.html">minidlna</a>, te preguntarías como hacer las playlist de este servidor. Pues ahora te explicaré como crear automáticamente listas desde tu terminal en segundos.</p>
-<h2 id="crear-lista-para-minidlna">Crear lista para minidlna</h2>
+<h1 id="buscar-texto-en-un-directorio-archivo-con-grep-y-find-1" title="Buscar texto en un directorio, archivo,... con grep y find" data-export_file_name="buscar-texto-en-un-directorio-archivo---con-grep-y-find" data-description="Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble." data-export_date="2020-10-14 07:45" data-category="bash" data-tag="terminal" data-image="./images-blog/bash.png">Buscar texto en un directorio, archivo,… con grep y find</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 329 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble.</p>
+<center>
+<p><img src="../images-blog/bash.png" /></p>
+</center>
+<p>Con grep y find podemos buscar directorios, archivos o el texto que contenga estos archivos. Ideal para encontrar todo aquello que no recuerdes donde lo has dejado.</p>
+<h2 id="grep">grep</h2>
+<h3 id="buscar-en-un-directorio-con-grep">Buscar en un directorio con grep</h3>
+<p>Buscamos la palabra “texto” en el directorio &quot;directorio&quot;:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">grep</span> <span class="st">&quot;texto&quot;</span> ~/directorio</a></code></pre></div>
+<h3 id="busqueda-recursiva-con-grep">Busqueda recursiva con grep</h3>
+<p>La opción <strong>-R</strong>, busca de forma recursiva en los subdirectorios</p>
 <ul>
-<li>Para crear la lista, no hace falta que especifiquemos la ruta del archivo en nuestro servidor, solo poniendo el nombre del mismo, minidlna buscará en su base de datos donde está este para reproducirlo.</li>
-<li>No importa el lugar donde esté el archivo .m3u, nuestro servidor minidlna lo agregará a su base de datos y así al grupo de playlists.</li>
+<li>-R = Recursivo mostrando también los enlaces simbólicos</li>
+<li>-r = recursivo</li>
+<li>-i = No distingue entre mayúsculas o minúsculas</li>
+<li>-l = Mostrar la ruta del archivo que tenga la palabra buscada</li>
 </ul>
-<h2 id="lista-dentro-de-un-directorio">Lista dentro de un directorio</h2>
-<ol>
-<li>Nos situamos en el directorio:</li>
-</ol>
-<p>=ls -1 | grep .mp3 &gt; lista.m3u=</p>
-<h3 id="explicación-del-comando-de-listado">Explicación del comando de listado</h3>
-<ul>
-<li>ls -&gt; lista archivos dentro de la carpeta</li>
-<li>-1 -&gt; mostrar un archivo por línea</li>
-</ul>
-<p>Después, podríamos ordenar el listado de diferente maneras, por ejemplo con comandos como <strong>sort</strong>.</p>
-<h2 id="lista-recursiva-entrando-dentro-de-subcarpetas">Lista recursiva entrando dentro de subcarpetas</h2>
-<p><code>ls -1 -R | grep .mp3 &gt; lista.m3u</code></p>
-<h2 id="reproducir-la-lista-desde-nuestra-terminal-con-vlc">Reproducir la lista desde nuestra terminal con vlc</h2>
-<p><code>vlc lista.m3u</code></p>
+<div class="sourceCode" id="cb2" data-org-language="C"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb2-1" title="1">grep -R <span class="st">&quot;texto&quot;</span> ~/directorio</a></code></pre></div>
+<div class="sourceCode" id="cb3" data-org-language="C"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb3-1" title="1">grep -ir <span class="st">&quot;texto&quot;</span> ~/directorio</a></code></pre></div>
+<p>Buscar la palabra linux en el contenido de todos los archivos y mostrar su ruta</p>
+<pre><code>grep -ril &quot;linux&quot; .
+</code></pre>
+<h3 id="excluyendo-determinados-directorios-o-archivos">Excluyendo determinados directorios o archivos</h3>
+<pre><code>grep -ir --color --exclude-dir={directorio1,directorio2,.git} --exclude={*.txt,*.md} /
+</code></pre>
+<h2 id="find">find</h2>
+<h3 id="buscar-archivo-directorios-con-find">Buscar archivo, directorios con find</h3>
+<p>A partir del directorio donde estamos, busca recursivamente:</p>
+<pre><code>find . -name &quot;archivo&quot;
+</code></pre>
+<p>Buscar en todo el dispositivo:</p>
+<pre><code>find / -name &quot;archivo&quot;
+</code></pre>
+<p>No tener en cuenta mayúsculas o minúsculas</p>
+<pre><code>find . -iname &quot;archivo&quot;
+</code></pre>
+<p>Podemos utilizar expresiones regulares para ayudarnos a encontrar lo que deseamos, si no recordamos la palabra exacta.</p>
+<p>No recuerdo como empieza y acaba la palabra &quot;archivo&quot;…</p>
+<pre><code>find . -iname &quot;*chiv*&quot;
+</code></pre>
 <br>
-<p>Publicado por Angel el miércoles 02 enero del 2019</p>
+<p>Publicado por Angel el miércoles 14 octubre del 2020</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
