@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker: Wireguard para Raspberry, Ubuntu, Debian,...</title>
+    <link>https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/wireguard.png" alt="Docker: Wireguard para Raspberry, Ubuntu, Debian,..."&gt;
+&lt;br&gt;&lt;p&gt;Ya hemos visto como instalar Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html&gt;Docker: Wireguard para Raspberry, Ubuntu, Debian,...&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 19 Oct 2020  +0100</pubDate>
+    <category>vpn</category>
+    <category>wireguard</category>
+    <category>terminal</category>
+    <category>servidor</category>
+    <guid>https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html</guid>
+   </item>
+   <item>
     <title>Buscar texto en un directorio, archivo,... con grep y find</title>
     <link>https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 14 Oct 2020  +0100</pubDate>
+    <pubDate>Wed, 14 Oct 2020 14:30 +0100</pubDate>
     <category>bash</category>
     <category>terminal</category>
     <category></category>

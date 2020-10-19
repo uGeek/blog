@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker: Wireguard para Raspberry, Ubuntu, Debian,...',
+            'text': 'Ya hemos visto como instalar Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del', 
+            'tags': 'vpn,wireguard,terminal,servidor,raspberry,ubuntu', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html' 
+},
+{
             'title': 'Buscar texto en un directorio, archivo,... con grep y find',
             'text': 'Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble.', 
             'tags': 'bash,terminal,,,,', 
