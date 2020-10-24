@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Añadiendo texto al principio de cada línea en Emacs',
+            'text': 'Como podéis imaginar, yo creo y edito mis scripts con Emacs. Hay momentos en los que quiero añadir "#" en un bloque de código para que no se ejecute, o', 
+            'tags': 'emacs,bash,script,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html' 
+},
+{
             'title': 'Docker: Wireguard para Raspberry, Ubuntu, Debian,...',
             'text': 'Ya hemos visto como instalar Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del', 
             'tags': 'vpn,wireguard,terminal,servidor,raspberry,ubuntu', 
