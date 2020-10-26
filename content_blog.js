@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Borrando líneas en blanco de un texto con Emacs',
+            'text': 'A veces cuando copio un documento en la terminal, lo hace dejando líneas en blanco entre líneas. Para eliminar esto con Emacs es muy sencillo:', 
+            'tags': 'emacs,terminal,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html' 
+},
+{
             'title': 'Añadiendo texto al principio de cada línea en Emacs',
             'text': 'Como podéis imaginar, yo creo y edito mis scripts con Emacs. Hay momentos en los que quiero añadir "#" en un bloque de código para que no se ejecute, o', 
             'tags': 'emacs,bash,script,,,', 

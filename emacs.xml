@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Borrando líneas en blanco de un texto con Emacs</title>
+    <link>https://ugeek.github.io/blog/post/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/emacs.png" alt="Borrando líneas en blanco de un texto con Emacs"&gt;
+&lt;br&gt;&lt;p&gt;A veces cuando copio un documento en la terminal, lo hace dejando líneas en blanco entre líneas. Para eliminar esto con Emacs es muy sencillo:... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html&gt;Borrando líneas en blanco de un texto con Emacs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 26 Oct 2020  +0100</pubDate>
+    <category>emacs</category>
+    <category>terminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html</guid>
+   </item>
+   <item>
     <title>Añadiendo texto al principio de cada línea en Emacs</title>
     <link>https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 24 Oct 2020  +0100</pubDate>
+    <pubDate>Sat, 24 Oct 2020 11:30 +0100</pubDate>
     <category>emacs</category>
     <category>bash</category>
     <category>script</category>
