@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 's-screen. Gestionando mis procesos en segundo plano de un modo sencillo',
+            'text': 'Este artículo es una recopilación de los dos anteriores, dónde íntegro todo lo aprendido dentro de un script.', 
+            'tags': 'bash,screen,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html' 
+},
+{
             'title': 'Borrando líneas en blanco de un texto con Emacs',
             'text': 'A veces cuando copio un documento en la terminal, lo hace dejando líneas en blanco entre líneas. Para eliminar esto con Emacs es muy sencillo:', 
             'tags': 'emacs,terminal,,,,', 

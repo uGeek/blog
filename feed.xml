@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>s-screen. Gestionando mis procesos en segundo plano de un modo sencillo</title>
+    <link>https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="s-screen. Gestionando mis procesos en segundo plano de un modo sencillo"&gt;
+&lt;br&gt;&lt;p&gt;Este artículo es una recopilación de los dos anteriores, dónde íntegro todo lo aprendido dentro de un script.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html&gt;s-screen. Gestionando mis procesos en segundo plano de un modo sencillo&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 28 Oct 2020  +0100</pubDate>
+    <category>bash</category>
+    <category>screen</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html</guid>
+   </item>
+   <item>
     <title>Borrando líneas en blanco de un texto con Emacs</title>
     <link>https://ugeek.github.io/blog/post/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 26 Oct 2020  +0100</pubDate>
+    <pubDate>Mon, 26 Oct 2020 18:45 +0100</pubDate>
     <category>emacs</category>
     <category>terminal</category>
     <category></category>

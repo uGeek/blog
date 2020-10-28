@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="screen.-enviar-scripts-a-segundo-plano-1" title="Screen. Enviar scripts a segundo plano" data-export_file_name="screen-enviar-scripts-a-segundo-plano" data-description="Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano." data-export_date="2020-01-21 20:50" data-category="bash" data-tag="screen,zsh" data-image="./images-blog/bash.png">Screen. Enviar scripts a segundo plano</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 273 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 320 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
 <p>Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano.</p>
 <center>
 <p><img src="../images-blog/bash.png" /></p>
@@ -108,6 +108,11 @@ $("#tipue_search_input").tipuesearch();
 <p>Si no recuerdas el nombre de sesión o simplemente, quieres ver cuantos procesos están corriendo en segundo plano con <strong>screen</strong>, escribiremos el siguiente comando</p>
 <pre><code>screen -ls 
 </code></pre>
+<h2 id="cambiar-el-nombre-de-la-sesión">Cambiar el nombre de la sesión</h2>
+<p>Imaginemos que el número de sesión es 22180 y queremos ponerle el nombre backup-rclone una vez iniciado:</p>
+<pre><code>screen -S 22180 -X sessionname backup-rclone
+</code></pre>
+<p>En lugar de utilizar en número, también podemos canbiar el nombre sesión</p>
 <h2 id="matar-la-sesión">Matar la sesión</h2>
 <pre><code>screen -XS nombre_sesion quit
 </code></pre>
@@ -116,6 +121,7 @@ $("#tipue_search_input").tipuesearch();
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html">Buscar texto en un directorio, archivo,… con grep y find</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html">duf. Visualizando el almacenamiento</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</a></li>
@@ -125,6 +131,5 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-02-listar-paquetes-instalados-y-hacer-un-poco-de-limpieza.html">Listar paquetes instalados y hacer un poco de limpieza</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,… con neofetch</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

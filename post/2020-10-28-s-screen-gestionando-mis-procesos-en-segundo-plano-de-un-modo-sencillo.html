@@ -1,5 +1,5 @@
 <head>
-<title>Crea tu cron de un modo gráfico. uGeek Blog </title>
+<title>s-screen. Gestionando mis procesos en segundo plano de un modo sencillo. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si queremos automatizar un script, utilizamos cron. Pero hay que reconocer que hasta que no le pillas el tranquillo, los parametros que tenemos que introducir para esta programación son muy" />
+<meta name="description" content="Este artículo es una recopilación de los dos anteriores, dónde íntegro todo lo aprendido dentro de un script." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Crea tu cron de un modo gráfico" />
-<meta property="og:description" content="Si queremos automatizar un script, utilizamos cron. Pero hay que reconocer que hasta que no le pillas el tranquillo, los parametros que tenemos que introducir para esta programación son muy" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/cron.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-23-crea-tu-cron-de-un-modo-gráfico.html" />
+<meta property="og:title" content="s-screen. Gestionando mis procesos en segundo plano de un modo sencillo" />
+<meta property="og:description" content="Este artículo es una recopilación de los dos anteriores, dónde íntegro todo lo aprendido dentro de un script." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html" />
 
-<meta name="twitter:title" content="Crea tu cron de un modo gráfico" />
-<meta name="twitter:description" content="Si queremos automatizar un script, utilizamos cron. Pero hay que reconocer que hasta que no le pillas el tranquillo, los parametros que tenemos que introducir para esta programación son muy" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/cron.png" />
+<meta name="twitter:title" content="s-screen. Gestionando mis procesos en segundo plano de un modo sencillo" />
+<meta name="twitter:description" content="Este artículo es una recopilación de los dos anteriores, dónde íntegro todo lo aprendido dentro de un script." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,26 +85,63 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="crea-tu-cron-de-un-modo-gráfico-1" title="Crea tu cron de un modo gráfico" data-export_file_name="Crea tu cron de un modo gráfico" data-description="Si queremos automatizar un script, utilizamos cron. Pero hay que reconocer que hasta que no le pillas el tranquillo, los parametros que tenemos que introducir para esta programación son muy" data-export_date="2019-10-23 18:00" data-category="bash" data-tag="terminal,ubuntu,debian,cron" data-image="./images-blog/cron.png">Crea tu cron de un modo gráfico</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 212 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Si queremos automatizar un script, utilizamos cron. Pero hay que reconocer que hasta que no le pillas el tranquillo, los parametros que tenemos que introducir para esta programación son muy complejos.</p>
+<h1 id="s-screen.-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo-1" title="s-screen. Gestionando mis procesos en segundo plano de un modo sencillo" data-export_file_name="s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo" data-description="Este artículo es una recopilación de los dos anteriores, dónde íntegro todo lo aprendido dentro de un script." data-export_date="2020-10-28 18:45" data-category="bash" data-tag="screen" data-image="./images-blog/bash.png">s-screen. Gestionando mis procesos en segundo plano de un modo sencillo</h1>
+<h5>Tiempo estimado de lectura: 5 minutos. 564 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Este artículo es una recopilación de los dos anteriores, dónde íntegro todo lo aprendido dentro de un script.</p>
 <center>
-<p><img src="../images-blog/cron.png" /></p>
+<p><img src="../images-blog/bash.png" /></p>
 </center>
-<p>Al azahar, he encontrado una serie de páginas que nos facilita la construcción de estos parámetros para cron</p>
-<h2 id="páginas-para-generar-tu-cron">Páginas para generar tu cron</h2>
-<ul>
-<li><a href="https://crontab.guru/" class="uri">https://crontab.guru/</a></li>
-<li><a href="https://crontab-generator.org/" class="uri">https://crontab-generator.org/</a></li>
-<li><a href="http://www.cronmaker.com/" class="uri">http://www.cronmaker.com/</a></li>
-<li><a href="http://corntab.com/" class="uri">http://corntab.com/</a></li>
-<li><a href="http://cron.schlitt.info/" class="uri">http://cron.schlitt.info/</a></li>
-<li><a href="https://www.easycron.com/" class="uri">https://www.easycron.com/</a> (Este necesita crear una cuenta)</li>
-</ul>
-<h2 id="fork-de-crontab.guru">Fork de crontab.guru</h2>
-<p>Si en algún momento deja de existir <a href="https://crontab.guru/" class="uri">https://crontab.guru/</a>, he <a href="https://github.com/uGeek/crontab.guru">Forkeado el repositorio para montar mi crontab.guru</a></p>
+<p>Recordar los comandos, a veces suele ser una tarea dura, así que si no te quieres calentar la cabeza, una solución sería el crear alias o mejor aún, como en este caso, englobar dentro todo de un script, donde además podremos gestionar las respuestas a modo de menú sin tener que introducir ningún texto en la terminal.</p>
+<p>Rápido y sencillo</p>
+<p>De todos los atajos que aprendimos, solo tenemos que recordar el de <strong>Control + a + d</strong>, para salir de la sesión.</p>
+<h2 id="instalación">Instalación</h2>
+<p>El script está en GitHub, de manera que podemos instalarlo gracias a curl con este sencillo comando.</p>
+<pre><code>sudo curl -L https://raw.githubusercontent.com/uGeek/s-screen/main/s -o /usr/bin/s &amp;&amp; sudo chmod +x /usr/bin/s
+</code></pre>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<p>A partir de ahora, utilizaremos la letra <strong>s</strong> en lugar, para ejecutar el script.</p>
+<p>Paralelamente, si así lo deseas, también puedes utilizar screen. Este método no te obliga a utilizar sí o sí el script.</p>
+<h2 id="crear-una-nueva-sesión">Crear una nueva sesión</h2>
+<p>Hay dos modos de crear una nueva sesión.</p>
+<h3 id="crear-sesión">Crear sesión</h3>
+<p>Igual que hacemos con screen, en lugar de utilizar la palabra screen para iniciar una nueva sesión, en este caso utilizaremos la letra <strong>s.</strong></p>
+<pre><code>s
+</code></pre>
+<h3 id="crear-sesión-con-nombre">Crear sesión con nombre</h3>
+<p>Para crear una nueva sesión y además nombrarla, utilizaremos el comando:</p>
+<pre><code>s n
+</code></pre>
+<p>recuerda que para salir de la sesión tienes que utilizar el atajo, control + a + d.</p>
+<h2 id="listar-sesiones">Listar sesiones</h2>
+<p>Para listar las sesiones que están corriendo en este momento, utilizaremos el comando.</p>
+<pre><code>s ls
+</code></pre>
+<h2 id="cambiar-nombre-de-una-sesión">Cambiar nombre de una sesión</h2>
+<p>Una vez creada la sesión, hayas nombrado o no ésta, puedes cambiar el nombre o crear uno nuevo si previamente no lo has hecho.</p>
+<p>Tan sencillo como utilizar el comando:</p>
+<pre><code>s n
+</code></pre>
+<h2 id="entrar-dentro-de-una-sesión">Entrar dentro de una sesión</h2>
+<p>Para entrar en una de las sesiones están corriendo, utilizaremos el comando</p>
+<pre><code>s i
+</code></pre>
+<p>Primero <strong>s</strong> coma listar a todas las sesiones que hay corriendo con un número delante, en produce el número de la sesión que quieres entrar y listo.</p>
+<h2 id="cerrar-una-sesión">Cerrar una sesión</h2>
+<p>Quizás lo te deseas es cerrar una sesión esté abierta con un proceso o no dentro.</p>
+<p>Para ello utiliza el comando:</p>
+<pre><code>s k
+</code></pre>
+<p>nuevamente para todas las sesiones numeradas, induce el número de la sesión que quieres cerrar.</p>
+<h2 id="ayuda">Ayuda</h2>
+<pre><code>s h
+</code></pre>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Como puedes ver, de un modo sencillo podemos crear un script que nos permitan facilitarnos poco vida y no tener que recordar complejos comandos.</p>
+<p>Esto tengo que decir que crea dependencia del script, pero a la vez te hace disfrutar mucho más de la terminal.</p>
+<p>También aquel que crea el script, lo disfruta muchísimo.</p>
+<p>Espero que disfrutéis del script.</p>
 <br>
-<p>Publicado por Angel el miércoles 23 octubre del 2019</p>
+<p>Publicado por Angel el miércoles 28 octubre del 2020</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
