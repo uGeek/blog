@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Nuevas DNS de Cloudflare',
+            'text': 'Ahora se añade nuevos filtros a la familia de DNS CloudFlare.', 
+            'tags': 'dns,internet,web,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-10-29-nuevas-dns-de-cloudflare.html' 
+},
+{
             'title': 's-screen. Gestionando mis procesos en segundo plano de un modo sencillo',
             'text': 'Este artículo es una recopilación de los dos anteriores, dónde íntegro todo lo aprendido dentro de un script.', 
             'tags': 'bash,screen,,,,', 
