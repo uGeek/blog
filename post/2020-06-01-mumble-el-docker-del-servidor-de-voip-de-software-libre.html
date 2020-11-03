@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="mumble.-el-docker-del-servidor-de-voip-de-software-libre" title="Mumble. El docker del servidor de VoIP de Software Libre." data-export_file_name="mumble-el-docker-del-servidor-de-voip-de-software-libre" data-description="No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para" data-export_date="2020-06-01 19:45" data-category="docker" data-tag="voip" data-image="./images-blog/mumble.png">Mumble. El docker del servidor de VoIP de Software Libre</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 250 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 254 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para arquitectura arm y amd64.</p>
 <p>Este contenedor parte de un Alpine Linux, así que es una imagen muy pequeña, tan solo ocupa 11.47Mb la versión para arm y 19.91Mb la de amd64.</p>
 <center>
@@ -94,10 +94,10 @@ $("#tipue_search_input").tipuesearch();
 </center>
 <p>Vamos a ver como instalarlo y configurarlo</p>
 <h2 id="arm-raspberry-pi">ARM, Raspberry Pi</h2>
-<pre><code>docker run -d --name mumble -p 64738:64738 ugeek/mumble:arm
+<pre><code>docker run -d --name mumble -p 64738:64738  -p 64738:64738/udp ugeek/mumble:arm
 </code></pre>
 <h2 id="amd64">amd64</h2>
-<pre><code>docker run -d --name mumble -p 64738:64738 ugeek/mumble:amd64
+<pre><code>docker run -d --name mumble -p 64738:64738  -p 64738:64738/udp ugeek/mumble:amd64
 </code></pre>
 <h2 id="configuración">Configuración</h2>
 <p>Para configurar el servicio, vamos a entrar dentro del contenedor</p>
