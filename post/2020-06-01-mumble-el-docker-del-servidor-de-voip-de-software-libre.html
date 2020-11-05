@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="mumble.-el-docker-del-servidor-de-voip-de-software-libre" title="Mumble. El docker del servidor de VoIP de Software Libre." data-export_file_name="mumble-el-docker-del-servidor-de-voip-de-software-libre" data-description="No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para" data-export_date="2020-06-01 19:45" data-category="docker" data-tag="voip" data-image="./images-blog/mumble.png">Mumble. El docker del servidor de VoIP de Software Libre</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 254 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 267 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para arquitectura arm y amd64.</p>
 <p>Este contenedor parte de un Alpine Linux, así que es una imagen muy pequeña, tan solo ocupa 11.47Mb la versión para arm y 19.91Mb la de amd64.</p>
 <center>
@@ -96,6 +96,14 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="arm-raspberry-pi">ARM, Raspberry Pi</h2>
 <pre><code>docker run -d --name mumble -p 64738:64738  -p 64738:64738/udp ugeek/mumble:arm
 </code></pre>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb2-3" title="3">  <span class="ex">webdav</span>:</a>
+<a class="sourceLine" id="cb2-4" title="4">    <span class="ex">container_name</span>: mumble-server</a>
+<a class="sourceLine" id="cb2-5" title="5">    <span class="ex">image</span>: ugeek/mumble:arm</a>
+<a class="sourceLine" id="cb2-6" title="6">    <span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb2-7" title="7">      <span class="ex">-</span> 64738:64738/udp</a>
+<a class="sourceLine" id="cb2-8" title="8">      <span class="ex">-</span> 64738:64738</a></code></pre></div>
 <h2 id="amd64">amd64</h2>
 <pre><code>docker run -d --name mumble -p 64738:64738  -p 64738:64738/udp ugeek/mumble:amd64
 </code></pre>
