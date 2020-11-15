@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin</title>
+    <link>https://ugeek.github.io/blog/post/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/jellyfin.png" alt="Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin"&gt;
+&lt;br&gt;&lt;p&gt;Dado que la comunidad está creando muchos temas para jellyfin, cambiando el aspecto de nuestro servidor multimedia, un desarrollador ha decidido crear un repositorio dentro de las extensiones de jellyfin,... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html&gt;Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 15 Nov 2020  +0100</pubDate>
+    <category>jellyfin</category>
+    <category>docker</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html</guid>
+   </item>
+   <item>
     <title>Nuevas DNS de Cloudflare</title>
     <link>https://ugeek.github.io/blog/post/2020-10-29-nuevas-dns-de-cloudflare.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 29 Oct 2020  +0100</pubDate>
+    <pubDate>Thu, 29 Oct 2020 18:20 +0100</pubDate>
     <category>dns</category>
     <category>internet</category>
     <category>web</category>

@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin',
+            'text': 'Dado que la comunidad está creando muchos temas para jellyfin, cambiando el aspecto de nuestro servidor multimedia, un desarrollador ha decidido crear un repositorio dentro de las extensiones de jellyfin,', 
+            'tags': 'jellyfin,docker,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html' 
+},
+{
             'title': 'Nuevas DNS de Cloudflare',
             'text': 'Ahora se añade nuevos filtros a la familia de DNS CloudFlare.', 
             'tags': 'dns,internet,web,,,', 
