@@ -116,7 +116,7 @@ HEAD_PAGE_POST=$(echo '
 # MAIN CONTENT. INDEX PAGE
 INDEX=$(echo "Bienvenido al Blog del Podcast de *uGeek*. Aquí encontraras tutoriales y notas que voy tomando en el proceso de aprendizaje de todo aquello que os explico en el [[https://ugeek.github.io][Podcast]]. En la sección [[https://ugeek.github.io/blog/tag.html][Tags]], encontraras todos los Artículos y Podcast, clasificados por temáticas.
 
-También puedes encontra mis aplicaciones desarrolladas en bash: [[https://ugeek.github.io/dockerc][dockerc]], [[https://ugeek.github.io/wgc][wgc]], [[https://ugeek.github.io/org-bash-blog/][org-bash-blog]], [[https://ugeek.github.io/org-bash-podcast/][org-bash-podcast]], [[https://ugeek.github.io/todo.txt-sync/][todo.txt-sync]]...
+También puedes encontra mis aplicaciones desarrolladas en bash: [[https://ugeek.github.io/dk][dk]], [[https://ugeek.github.io/wgc][wgc]], [[https://ugeek.github.io/org-bash-blog/][org-bash-blog]], [[https://ugeek.github.io/org-bash-podcast/][org-bash-podcast]], [[https://ugeek.github.io/todo.txt-sync/][todo.txt-sync]]...
 
 
 
