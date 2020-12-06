@@ -89,15 +89,13 @@ $("#tipue_search_input").tipuesearch();
 <h5>Tiempo estimado de lectura: 1 minutos. 163 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>He creado un docker para poder utilizar Telegram desde tu terminal, ya estes en tu PC o Raspberry Pi.</p>
 <center>
-<p><img src="../images-blog/telegram.png" /></p>
+<p><img src="../images-blog/telegram.jpg" /></p>
 </center>
 <h2 id="dockers-en-dos-versiones">Dockers en dos versiones</h2>
 <h3 id="crear-docker-para-amd64">Crear docker para amd64</h3>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> create</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="ex">--name</span> telegram-cli   -e TZ=Europe/Madrid  -v <span class="va">$HOME</span>/docker/telegram-cli:/root/.telegram-cli   ugeek/telegram-cli:amd64</a></code></pre></div>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> create --name telegram-cli -e TZ=Europe/Madrid -v <span class="va">$HOME</span>/docker/telegram-cli:/root/.telegram-cli ugeek/telegram-cli:amd64</a></code></pre></div>
 <h3 id="crear-docker-para-arm-y-raspberry-pi">Crear docker para arm y Raspberry Pi</h3>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> create</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="ex">--name</span> telegram-cli   -e TZ=Europe/Madrid  -v <span class="va">$HOME</span>/docker/telegram-cli:/root/.telegram-cli   ugeek/telegram-cli:arm</a></code></pre></div>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> create --name telegram-cli -e TZ=Europe/Madrid -v <span class="va">$HOME</span>/docker/telegram-cli:/root/.telegram-cli ugeek/telegram-cli:arm</a></code></pre></div>
 <h2 id="iniciar-el-docker">Iniciar el docker</h2>
 <pre><code>docker start telegram-cli
 </code></pre>
