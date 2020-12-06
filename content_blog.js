@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker: Telegram de terminal para Raspberry Pi y amd64',
+            'text': 'He creado un docker para poder utilizar Telegram desde tu terminal, ya estes en tu PC o Raspberry Pi.', 
+            'tags': 'docker,telegram,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html' 
+},
+{
             'title': 'Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin',
             'text': 'Dado que la comunidad está creando muchos temas para jellyfin, cambiando el aspecto de nuestro servidor multimedia, un desarrollador ha decidido crear un repositorio dentro de las extensiones de jellyfin,', 
             'tags': 'jellyfin,docker,,,,', 
