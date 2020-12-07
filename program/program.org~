@@ -1,0 +1,180 @@
+* TODO Gelli y Jellyamp. Clientes de Jellyfin para Android y Escritorio Linux, Windows y Mac
+:PROPERTIES:
+:TITLE: Clientes de Jellyfin para Android y Escritorio Linux, Windows y Mac
+:EXPORT_FILE_NAME: clientes-de-jellyfin-para-android-y-escritorio-linux-windows-y-mac
+:DESCRIPTION: Crecen los clientes de Jellyfin.
+:EXPORT_DATE: 2021-07-11 21:40
+:CATEGORY: jellyfin
+:TAG: servidor
+:IMAGE: ./images-blog/jellyfin.png
+:END:
+
+Crecen los clientes de Jellyfin.
+#+HTML: <center>
+[[./images-blog/jellyfin.png]]
+#+HTML: </center>
+
+
+** Gelli
+
+
+
+
+#+HTML: <center>
+[[./images-blog/gelli.png]]
+#+HTML: </center>
+
+
+- [[https://github.com/dkanada/gelli][Fuente]]
+
+
+** Jellyamp
+El desarrollador de esta app, se resistia a cambiar del servidor Plex a Jellyfin, por la aplicación PlexAmp.
+
+Cuando se publicó Gelli, decidío desarrollar JellyAmp inspirada en PlexAmp.
+
+- [[https://github.com/m0ngr31/jellyamp][Fuente]]
+
+#+HTML: <center>
+[[./images-blog/jellyamp.png]]
+#+HTML: </center>
+#+HTML: <center>
+[[./images-blog/jellyamp1.png]]
+#+HTML: </center>
+#+HTML: <center>
+[[./images-blog/jellyamp2.png]]
+#+HTML: </center>
+
+* TODO Servidor de Samba fácil
+:PROPERTIES:
+:TITLE: Servidor de Samba fácil
+:EXPORT_FILE_NAME: servidor-de-samba-facil
+:DESCRIPTION: Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.
+:EXPORT_DATE: 2021-04-02 15:24
+:CATEGORY: servidor
+:TAG: samba
+:IMAGE: ./images-blog/samba.png
+:END:
+
+Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.
+#+HTML: <center>
+[[./images-blog/samba.png]]
+#+HTML: </center>
+
+Para acceder a los datos de esta carpeta, no va a ser necesario utilizar usuario y contraseña, pero para darle un mínimo de seguridad, vamos a permitir el acceso a esta carpeta a determinados dispositivos en función de us IP.
+
+El modo más correcto y seguro de compartir una carpeta por *Samba*, es crear un grupo donde ponemos un número de usuarios dentro de este y donde todos estos usuarios tienen usuario y contraseña.
+
+He optado por esta configuración, porque es mucho más sencilla y he visto algo parecido en *Recalbox*. Una capeta que todos los usuarios de la red local tienen acceso y pueden depositar ahí sus archivos para compartir.
+
+** Instalación
+
+Instalación de Samba
+#+BEGIN_SRC
+sudo apt install samba
+#+END_SRC
+
+** Compartiendo Carpeta
+
+Damos permisos para compartir la carpeta por *Samba* y que puede acceder cualquier usuario.
+#+BEGIN_SRC
+sudo chmod -R 777 /home/angel/samba/
+#+END_SRC
+
+** Archivo de configuración
+
+Editamos el archivo de configuración.
+#+BEGIN_SRC
+sudo nano /etc/samba/smb.conf
+#+END_SRC
+
+#+BEGIN_SRC
+[samba]                     # Nombre del servidor que veran los clientes
+
+path=/home/angel/samba      # Ruta de la carpeta compartida
+public=yes                  # Disponible para usuarios invitados u otros. Si ponemos no, solo los usuarios autorizados accederan
+writable=yes                # Puede escribir y editar el contenido
+guest ok = yes
+browseable = yes            # El directorio, puede ser visible
+read only = no
+
+create mask = 0777          # Permisos de escritura y lectura de cualquier cliente
+directory mask = 0777
+force create mode = 777
+force directory mode = 777
+force security mode = 777
+force directory security mode = 777
+#+END_SRC
+
+Desmarcamos el compartir impresoras
+#+BEGIN_SRC
+#[print$]
+#   comment = Printer Drivers
+#   path = /var/lib/samba/printers
+#   browseable = yes
+#   read only = yes
+#   guest ok = no
+#+END_SRC
+
+Verifica con *testparm* si hay un error en el archivo de configuración
+#+BEGIN_SRC
+testparm
+#+END_SRC
+
+** Permitir de unas ip's en concreto
+
+Para dar un poquito más de seguridad desde el servidor, solo vamos a permitir el acceso a determinadas ip's.
+#+BEGIN_SRC
+hosts allow = 192.168.1.100, 192.168.1.101
+* TODO Conectandose por SSH introduciendo la contraseña en una única línea de terminal
+:PROPERTIES:
+:TITLE: Conectándote por SSH introduciendo la contraseña en una única línea de terminal
+:EXPORT_FILE_NAME: conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal
+:DESCRIPTION: El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.
+:EXPORT_DATE: 2020-12-07 17:03
+:CATEGORY: bash
+:TAG: ssh
+:IMAGE: ./images-blog/bash.png
+:END:
+
+El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.
+
+Aparte de ser más rápido y cómodo, es mucho más seguro, ya que enviando las llaves, también puedes deshabilitar el tener que introducir la contraseña.
+
+Pero si por algún motivo no tienes la posibilidad de enviar las llaves al servidor, siempre puedes utilizar sshpass.
+
+#+HTML: <center>
+[[./images-blog/bash.png]]
+#+HTML: </center>
+
+
+Sshpass es una herramienta que vienen todas las distros Linux pero no viene instalada por defecto y te permite el poder añadir en una única línea de terminal la dirección del servidor y la contraseña.
+
+Cómo explicaba al inicio del artículo, es un método un poco inseguro ya que sí entra en el historial de todo aquello que hemos tecleado en la terminal o si añadimos esta opción en un script, queda de un modo visible la contraseña del servidor.
+
+Vamos a ver cómo instalarlo y conocer algunos ejemplos. 
+
+** Instalación
+
+En todas distro derivadas de Debian lo haremos del siguiente modo
+
+#+begin_src sh 
+sudo apt install sshpass
+#+end_src
+
+
+** Utilizando sshpass
+
+Conectarnos por ssh, suponiendo que nuestra ip es "192.168.1.100" y el usuario "pi", con la contraseña en una misma línea seria:
+
+#+begin_example sh
+sshpass -p 'contraseña' ssh pi@192.168.1.100
+#+end_example
+
+
+Para especificar un puerto, ejemplo puerto "9122"
+
+#+begin_src sh
+sshpass -p 'contraseña' ssh pi@192.168.1.100 -p 9122
+#+end_src
+

@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Conectándote por SSH introduciendo la contraseña en una única línea de terminal',
+            'text': 'El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.', 
+            'tags': 'bash,ssh,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html' 
+},
+{
             'title': 'Docker: Telegram de terminal para Raspberry Pi y amd64',
             'text': 'He creado un docker para poder utilizar Telegram desde tu terminal, ya estes en tu PC o Raspberry Pi.', 
             'tags': 'docker,telegram,,,,', 

@@ -1,5 +1,5 @@
 <head>
-<title> Crear Alias. uGeek Blog </title>
+<title>Conectándote por SSH introduciendo la contraseña en una única línea de terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando" />
+<meta name="description" content="El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Crear Alias" />
-<meta property="og:description" content="Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html" />
+<meta property="og:title" content="Conectándote por SSH introduciendo la contraseña en una única línea de terminal" />
+<meta property="og:description" content="El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html" />
 
-<meta name="twitter:title" content=" Crear Alias" />
-<meta name="twitter:description" content="Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Conectándote por SSH introduciendo la contraseña en una única línea de terminal" />
+<meta name="twitter:description" content="El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,23 +85,28 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="crear-alias-1" title="Crear Alias" data-export_file_name="Crear Alias" data-description="Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando" data-export_date="2019-01-31 21:15" data-category="bash" data-tag="terminal,zsh" data-image="./images-blog/ugeek.png">Crear Alias</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 257 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los <strong>alias</strong>. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando.</p>
-<h2 id="crear-alias-2">Crear Alias</h2>
-<p>Para crear el alias, editaremos el archivo <strong>.bashrc</strong> <strong><em>home/usuario</em>.bashrc</strong></p>
-<pre><code>sudo nano /home/usuario/.bashrc
+<h1 id="conectandose-por-ssh-introduciendo-la-contraseña-en-una-única-línea-de-terminal" title="Conectándote por SSH introduciendo la contraseña en una única línea de terminal" data-export_file_name="conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal" data-description="El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña." data-export_date="2020-12-07 17:10" data-category="bash" data-tag="ssh" data-image="./images-blog/bash.png">Conectandose por SSH introduciendo la contraseña en una única línea de terminal</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 340 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.</p>
+<p>Aparte de ser más rápido y cómodo, es mucho más seguro, ya que enviando las llaves, también puedes deshabilitar el tener que introducir la contraseña.</p>
+<p>Pero si por algún motivo no tienes la posibilidad de enviar las llaves al servidor, siempre puedes utilizar sshpass.</p>
+<center>
+<p><img src="../images-blog/bash.png" /></p>
+</center>
+<p>Sshpass es una herramienta que vienen todas las distros Linux pero no viene instalada por defecto y te permite el poder añadir en una única línea de terminal la dirección del servidor y la contraseña.</p>
+<p>Cómo explicaba al inicio del artículo, es un método un poco inseguro ya que sí entra en el historial de todo aquello que hemos tecleado en la terminal o si añadimos esta opción en un script, queda de un modo visible la contraseña del servidor.</p>
+<p>Vamos a ver cómo instalarlo y conocer algunos ejemplos.</p>
+<h2 id="instalación">Instalación</h2>
+<p>En todas distro derivadas de Debian lo haremos del siguiente modo</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install sshpass</a></code></pre></div>
+<h2 id="utilizando-sshpass">Utilizando sshpass</h2>
+<p>Conectarnos por ssh, suponiendo que nuestra ip es &quot;192.168.1.100&quot; y el usuario &quot;pi&quot;, con la contraseña en una misma línea seria:</p>
+<pre class="example"><code>sshpass -p &#39;contraseña&#39; ssh pi@192.168.1.100
 </code></pre>
-<p>Al final del contenido de este archivo, iremos introduciendo los alias así:</p>
-<pre><code>alias palabra=&#39;comando&#39;
-</code></pre>
-<h2 id="ejemplo-de-alias">Ejemplo de Alias</h2>
-<p>Si añadimos esta línea en Ubuntu, cada vez que escribamos en la terminal <strong>actualizar</strong>, se ejecutará los comandos para actualizar y además al final aparecerá un mensaje de: &quot;Sistema Operativo Actualizado&quot;</p>
-<pre><code>alias actualizar=&#39;sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; clear &amp;&amp; echo &quot;Sistema Operativo Actualizado&quot;&#39;
-</code></pre>
-<p>Con una simple palabra, hemos actualizado nuestro Ubuntu. Practica y diviértete creando <strong>alias</strong></p>
+<p>Para especificar un puerto, ejemplo puerto &quot;9122&quot;</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">sshpass</span> -p <span class="st">&#39;contraseña&#39;</span> ssh pi@192.168.1.100 -p 9122</a></code></pre></div>
 <br>
-<p>Publicado por Angel el jueves 31 enero del 2019</p>
+<p>Publicado por Angel el lunes 07 diciembre del 2020</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
