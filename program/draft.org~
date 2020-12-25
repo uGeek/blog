@@ -11199,7 +11199,7 @@ docker exec -it telegram-cli telegram-cli -N -W
 ** Fuente
 - https://hub.docker.com/r/ugeek/telegram-cli
 
-* TODO Conectándote por SSH introduciendo la contraseña en una única línea de terminal
+* DONE Conectandose por SSH introduciendo la contraseña en una única línea de terminal
 :PROPERTIES:
 :TITLE: Conectándote por SSH introduciendo la contraseña en una única línea de terminal
 :EXPORT_FILE_NAME: conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal
@@ -11210,26 +11210,17 @@ docker exec -it telegram-cli telegram-cli -N -W
 :IMAGE: ./images-blog/bash.png
 :END:
 
+El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.
+
+Aparte de ser más rápido y cómodo, es mucho más seguro, ya que enviando las llaves, también puedes deshabilitar el tener que introducir la contraseña.
+
+Pero si por algún motivo no tienes la posibilidad de enviar las llaves al servidor, siempre puedes utilizar sshpass.
+
 #+HTML: <center>
 [[./images-blog/bash.png]]
 #+HTML: </center>
 
 
-
-
-* Conectándote por SSH introduciendo la contraseña en una única línea de terminal
-  :PROPERTIES:
-  :ARCHIVE_TIME: 2020-12-07 lun 17:03
-  :ARCHIVE_FILE: /webdav/org/tareas.org
-  :ARCHIVE_CATEGORY: tareas
-  :END:
-
-El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.
-
-Aparte de ser más rápido y cómodo, es mucho más seguro, ya que enviando las llaves, también puedes deshabilitar el tener que introducir la contraseña.
-
-Pero si por algún motivo no tienes la posibilidad de enviar las llaves al servidor, siempre puedes utilizar sshpass.
-
 Sshpass es una herramienta que vienen todas las distros Linux pero no viene instalada por defecto y te permite el poder añadir en una única línea de terminal la dirección del servidor y la contraseña.
 
 Cómo explicaba al inicio del artículo, es un método un poco inseguro ya que sí entra en el historial de todo aquello que hemos tecleado en la terminal o si añadimos esta opción en un script, queda de un modo visible la contraseña del servidor.
@@ -11260,47 +11251,97 @@ Para especificar un puerto, ejemplo puerto "9122"
 sshpass -p 'contraseña' ssh pi@192.168.1.100 -p 9122
 #+end_src
 
+* TODO Trilium. Notas jerarquicas en Markdown
+:PROPERTIES:
+:TITLE: Trilium. Notas jerarquicas en Markdown
+:EXPORT_FILE_NAME: trilium-notas-jerarquicas-en-markdown
+:DESCRIPTION:
+:EXPORT_DATE: 2020-12-25 20:35
+:CATEGORY: markdown
+:TAG: servidor
+:IMAGE: ./images-blog/trilium.png
+:END:
 
-* Conectándote por SSH introduciendo la contraseña en una única línea de terminal
-  :PROPERTIES:
-  :ARCHIVE_TIME: 2020-12-07 lun 17:03
-  :ARCHIVE_FILE: /webdav/org/tareas.org
-  :ARCHIVE_CATEGORY: tareas
-  :END:
+Quizás ha llegado el momento de tomar notas para seres humanos, voy a
+hablar de Trilum.
 
-El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.
+Trilium es un método jerárquico para tomar notas, tareas,... donde estás
+se gestionan con un método jerarquico como el orgmode y las podemos
+exportar a posterior a HTML, Markdown o incluso imprimirlas en pdf. 
 
-Aparte de ser más rápido y cómodo, es mucho más seguro, ya que enviando las llaves, también puedes deshabilitar el tener que introducir la contraseña.
+#+HTML: <center>
+[[./images-blog/trilium.png]]
+#+HTML: </center>
 
-Pero si por algún motivo no tienes la posibilidad de enviar las llaves al servidor, siempre puedes utilizar sshpass.
+El método para introducir el texto es mediante la sintaxis markdown.
 
-Sshpass es una herramienta que vienen todas las distros Linux pero no viene instalada por defecto y te permite el poder añadir en una única línea de terminal la dirección del servidor y la contraseña.
+He probado diferentes dockers para la arquitectura AMD64 y ARM y
+finalmente me quedo con él dockers oficial para amd64 y otro que he
+encontrado de (=hlince)=para arm, que funciona muy bien en Raspberry.
 
-Cómo explicaba al inicio del artículo, es un método un poco inseguro ya que sí entra en el historial de todo aquello que hemos tecleado en la terminal o si añadimos esta opción en un script, queda de un modo visible la contraseña del servidor.
+** Docker amd64
+   :PROPERTIES:
+   :CUSTOM_ID: docker-amd64
+   :END:
 
-Vamos a ver cómo instalarlo y conocer algunos ejemplos. 
+El docker oficial y más actualizado para amd64 es:
 
-** Instalación
+#+BEGIN_EXAMPLE
+     docker run -t -i -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data zadam/trilium
+#+END_EXAMPLE
 
-En todas distro derivadas de Debian lo haremos del siguiente modo
+- [[https://github.com/zadam/trilium/wiki/Docker-server-installation]]
 
-#+begin_src sh 
-sudo apt install sshpass
-#+end_src
+Fork ugeek
+
+#+BEGIN_EXAMPLE
+     docker run -t -i -p 127.0.0.1:99:8080 \
+          -v ~/trilium-data:/root/trilium-data \
+          ugeek/trilium:amd64
+#+END_EXAMPLE
+
+** Docker para arm
+   :PROPERTIES:
+   :CUSTOM_ID: docker-para-arm
+   :END:
+
+Es docker-compose para arm o Raspberry y funciona a la perfeción:
+
+#+BEGIN_EXAMPLE
+    trilium:
+        image: hlince/trilium:latest-stable-arm
+        restart: always
+        ports:
+        - 99:8080
+        environment:
+        - TRILIUM_DATA_DIR=/data
+        volumes:
+        - ./trilium/data:/data
+#+END_EXAMPLE
+
+- https://hub.docker.com/r/hlince/trilium
+
+Fork de ugeek
+
+#+BEGIN_EXAMPLE
+    trilium:
+        image: ugeek/trilium:arm
+        restart: always
+        ports:
+        - 99:8080
+        environment:
+        - TRILIUM_DATA_DIR=/data
+        volumes:
+        - ./trilium/data:/data
+#+END_EXAMPLE
+
+** Fuentes
+   :PROPERTIES:
+   :CUSTOM_ID: fuentes
+   :END:
+
+- [[https://github.com/zadam/trilium]]
+- https://www.electronjs.org/apps/trilium-notes
 
 
-** Utilizando sshpass
-
-Conectarnos por ssh, suponiendo que nuestra ip es "192.168.1.100" y el usuario "pi", con la contraseña en una misma línea seria:
-
-#+begin_example sh
-sshpass -p 'contraseña' ssh pi@192.168.1.100
-#+end_example
-
-
-Para especificar un puerto, ejemplo puerto "9122"
-
-#+begin_src sh
-sshpass -p 'contraseña' ssh pi@192.168.1.100 -p 9122
-#+end_src
 

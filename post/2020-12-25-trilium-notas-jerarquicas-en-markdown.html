@@ -1,5 +1,5 @@
 <head>
-<title>QTodoTxt. todo.txt en tu escritorio. uGeek Blog </title>
+<title>Trilium. Notas jerárquicas en Markdown. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Después de mucho probar distintas aplicaciones de todo.txt para Escritorio, mi favorita es QTodoTxt" />
+<meta name="description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="QTodoTxt. todo.txt en tu escritorio" />
-<meta property="og:description" content="Después de mucho probar distintas aplicaciones de todo.txt para Escritorio, mi favorita es QTodoTxt" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/qtodotxt.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-21-qtodotxt.html" />
+<meta property="og:title" content="Trilium. Notas jerárquicas en Markdown" />
+<meta property="og:description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/trilium.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html" />
 
-<meta name="twitter:title" content="QTodoTxt. todo.txt en tu escritorio" />
-<meta name="twitter:description" content="Después de mucho probar distintas aplicaciones de todo.txt para Escritorio, mi favorita es QTodoTxt" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/qtodotxt.png" />
+<meta name="twitter:title" content="Trilium. Notas jerárquicas en Markdown" />
+<meta name="twitter:description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/trilium.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,51 +85,72 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="qtodotxt.-todo.txt-en-tu-escritorio-1" title="QTodoTxt. todo.txt en tu escritorio" data-export_file_name="QTodoTxt" data-description="Después de mucho probar distintas aplicaciones de todo.txt para Escritorio, mi favorita es QTodoTxt" data-export_date="2019-08-21 02:50" data-category="notas" data-tag="ssh, terminal" data-image="./images-blog/qtodotxt.png">QTodoTxt. todo.txt en tu escritorio</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 264 palabras.    <a href="https://ugeek.github.io/blog/categories/notas">notas</a></h5>
-<p>Después de mucho probar distintas aplicaciones de todo.txt para Escritorio, mi favorita es QTodoTxt.</p>
+<h1 id="trilium.-notas-jerárquicas-en-markdown-1" title="Trilium. Notas jerárquicas en Markdown" data-export_file_name="trilium-notas-jerarquicas-en-markdown" data-description="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" data-export_date="2020-12-25 20:41" data-category="markdown" data-tag="servidor" data-image="./images-blog/trilium.png">Trilium. Notas jerárquicas en Markdown</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 301 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
+<p>Quizás ha llegado el momento de tomar notas para seres humanos, voy a hablar de Trilum.</p>
+<p>Trilium es un método jerárquico para tomar notas, tareas,… donde estás se gestionan con un método jerarquico como el orgmode y las podemos exportar a posterior a HTML, Markdown o incluso imprimirlas en pdf. </p>
 <center>
-<p><img src="../images-blog/qtodotxt.png" /></p>
+<p><img src="../images-blog/trilium.png" /></p>
 </center>
-<p>El pequeño problema que tienes esta aplicación, es que su instalación puede resultar un poco complicada. En este Post, lo explico de un modo sencillo, para que la pruebes y puedas disfrutar de ella.</p>
-<h2 id="instalación">Instalación</h2>
-<pre><code>sudo apt-get install python3-pyqt5 qtdeclarative5-models-plugin python3-pyqt5.qtquick qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qt-labs-settings qml-module-qt-labs-folderlistmodel
-</code></pre>
-<p>Clonamos el <a href="https://github.com/QTodoTxt/QTodoTxt2">repositorio</a> en la ruta que decidamos. Voy por ejemplo a utilizar la carpeta $HOME:</p>
-<pre><code>cd ; git clone https://github.com/QTodoTxt/QTodoTxt2
-</code></pre>
-<h2 id="ejecutando-el-programa">Ejecutando el programa</h2>
-<p>Para ejecutar QTodotxt, entramos dentro de la carpeta <strong>bin</strong> y ejecutamos <code>python3 qtodotxt</code></p>
-<p>En el caso anterior, si has clonado la carpeta como yo en el $HOME del usuario, puedes ejecutar:</p>
-<pre><code>python3 ~/QTodoTxt2/bin/qtodotxt
+<p>El método para introducir el texto es mediante la sintaxis markdown.</p>
+<p>He probado diferentes dockers para la arquitectura AMD64 y ARM y finalmente me quedo con él dockers oficial para amd64 y otro que he encontrado de (=hlince)=para arm, que funciona muy bien en Raspberry.</p>
+<h2 id="docker-amd64">Docker amd64</h2>
+<h5>Tiempo estimado de lectura: 2 minutos. 301 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
+<p>El docker oficial y más actualizado para amd64 es:</p>
+<pre class="example"><code>docker run -t -i -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data zadam/trilium
 </code></pre>
 <ul>
-<li><a href="https://github.com/QTodoTxt/QTodoTxt2">Repositorio en GitHub</a></li>
+<li><a href="https://github.com/zadam/trilium/wiki/Docker-server-installation" class="uri">https://github.com/zadam/trilium/wiki/Docker-server-installation</a></li>
 </ul>
-<h2 id="atajos">Atajos</h2>
+<p>Fork ugeek</p>
+<pre class="example"><code>docker run -t -i -p 127.0.0.1:99:8080           -v ~/trilium-data:/root/trilium-data           ugeek/trilium:amd64
+</code></pre>
+<h2 id="docker-para-arm">Docker para arm</h2>
+<h5>Tiempo estimado de lectura: 2 minutos. 301 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
+<p>Es docker-compose para arm o Raspberry y funciona a la perfeción:</p>
+<pre class="example"><code>trilium:
+image: hlince/trilium:latest-stable-arm
+restart: always
+ports:
+- 99:8080
+environment:
+- TRILIUM_DATA_DIR=/data
+volumes:
+- ./trilium/data:/data
+</code></pre>
 <ul>
-<li>Ctrl+n -&gt; Crear Nueva Tarea</li>
-<li>Editar tarea, Situarse sobre la tarea y pulsar <strong>Enter</strong></li>
-<li>añadir fecha al calendario -&gt; due: o t:</li>
-<li>ocultar tarea -&gt; h:1</li>
+<li><a href="https://hub.docker.com/r/hlince/trilium" class="uri">https://hub.docker.com/r/hlince/trilium</a></li>
 </ul>
-<p><a href="https://github.com/QTodoTxt/QTodoTxt/wiki">Documentación</a></p>
-<h2 id="conclusión">Conclusión</h2>
-<p>Gracias a Simpletask en tu movil android y QTodoTxt en tu escritorio, puedes tener tus listas de tareas totalmente accesibles.</p>
+<p>Fork de ugeek</p>
+<pre class="example"><code>trilium:
+image: ugeek/trilium:arm
+restart: always
+ports:
+- 99:8080
+environment:
+- TRILIUM_DATA_DIR=/data
+volumes:
+- ./trilium/data:/data
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<h5>Tiempo estimado de lectura: 2 minutos. 301 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
+<ul>
+<li><a href="https://github.com/zadam/trilium" class="uri">https://github.com/zadam/trilium</a></li>
+<li><a href="https://www.electronjs.org/apps/trilium-notes" class="uri">https://www.electronjs.org/apps/trilium-notes</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el miércoles 21 agosto del 2019</p>
+<p>Publicado por Angel el viernes 25 diciembre del 2020</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html">Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html">Simplenote para terminal. Sncli</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html">Bullet Journal Digital en OrgMode</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-10-22-orzly-tus-orgmode-syncronizados-por-webdav.html">Orzly. Tus OrgMode syncronizados por WebDav</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-09-01-backup-de-mis-notas-de-paper-dropbox.html">Backup de mis Notas de Paper Dropbox</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-08-21-qtodotxt.html">QTodoTxt. todo.txt en tu escritorio</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html">Instala la última versión de Pandoc</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html">Exportando tu Notas de Google Keep a Org Mode o Markdown</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html">youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-con-emacs-tambien-podemos-editar-markdown.html">Con Emacs también podemos editar Markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

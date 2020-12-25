@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Trilium. Notas jerárquicas en Markdown</title>
+    <link>https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/trilium.png" alt="Trilium. Notas jerárquicas en Markdown"&gt;
+&lt;br&gt;&lt;p&gt;Quizás ha llegado el momento de tomar notas para seres humanos, voy a... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html&gt;Trilium. Notas jerárquicas en Markdown&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 25 Dec 2020  +0100</pubDate>
+    <category>markdown</category>
+    <category>servidor</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html</guid>
+   </item>
+   <item>
     <title>Conectándote por SSH introduciendo la contraseña en una única línea de terminal</title>
     <link>https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 07 Dec 2020  +0100</pubDate>
+    <pubDate>Mon, 07 Dec 2020 20:41 +0100</pubDate>
     <category>bash</category>
     <category>ssh</category>
     <category></category>

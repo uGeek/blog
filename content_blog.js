@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Trilium. Notas jerárquicas en Markdown',
+            'text': 'Quizás ha llegado el momento de tomar notas para seres humanos, voy a', 
+            'tags': 'markdown,servidor,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html' 
+},
+{
             'title': 'Conectándote por SSH introduciendo la contraseña en una única línea de terminal',
             'text': 'El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.', 
             'tags': 'bash,ssh,,,,', 
