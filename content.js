@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html' 
 },
 {
+            'title': 'Trilium Web Clipper. Importando el contenido de una web a Trilium',
+            'text': 'Trilium Web Clipper es una extensión del navegador web que permite al', 
+            'tags': 'trilium,markdown,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-12-25-trilium-web-clipper-importando-el-contenido-de-una-web-a-trilium.html' 
+},
+{
             'title': 'Conectándote por SSH introduciendo la contraseña en una única línea de terminal',
             'text': 'El mejor método para conectarse a un servidor por SSH, es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.', 
             'tags': 'bash,ssh,,,,', 

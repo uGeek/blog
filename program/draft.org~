@@ -11251,12 +11251,12 @@ Para especificar un puerto, ejemplo puerto "9122"
 sshpass -p 'contraseña' ssh pi@192.168.1.100 -p 9122
 #+end_src
 
-* TODO Trilium. Notas jerarquicas en Markdown
+* DONE Trilium. Notas jerarquicas en Markdown
 :PROPERTIES:
 :TITLE: Trilium. Notas jerarquicas en Markdown
 :EXPORT_FILE_NAME: trilium-notas-jerarquicas-en-markdown
 :DESCRIPTION:
-:EXPORT_DATE: 2020-12-25 20:35
+:EXPORT_DATE: 2020-12-25 20:45
 :CATEGORY: markdown
 :TAG: servidor
 :IMAGE: ./images-blog/trilium.png
@@ -11342,6 +11342,23 @@ Fork de ugeek
 
 - [[https://github.com/zadam/trilium]]
 - https://www.electronjs.org/apps/trilium-notes
+
+
+
+* TODO Trilium Web Clipper. Importando el contenido de una web a Trilium
+:PROPERTIES:
+:TITLE: Trilium Web Clipper. Importando el contenido de una web a Trilium
+:EXPORT_FILE_NAME: trilium-web-clipper-importando-el-contenido-de-una-web-a-trilium
+:DESCRIPTION:
+:EXPORT_DATE: 2020-12-25 22:33
+:CATEGORY: trilium
+:TAG: markdown
+:IMAGE: ./images-blog/web-clipper-trilium.png
+:END:
+
+#+HTML: <center>
+[[./images-blog/web-clipper-trilium.png]]
+#+HTML: </center>
 
 
 

@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 25 Dec 2020  +0100</pubDate>
+    <pubDate>Fri, 25 Dec 2020 22:40 +0100</pubDate>
     <category>markdown</category>
     <category>servidor</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html</guid>
+   </item>
+   <item>
+    <title>Trilium Web Clipper. Importando el contenido de una web a Trilium</title>
+    <link>https://ugeek.github.io/blog/post/2020-12-25-trilium-web-clipper-importando-el-contenido-de-una-web-a-trilium.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/web-clipper-trilium.png" alt="Trilium Web Clipper. Importando el contenido de una web a Trilium"&gt;
+&lt;br&gt;&lt;p&gt;Trilium Web Clipper es una extensión del navegador web que permite al... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-12-25-trilium-web-clipper-importando-el-contenido-de-una-web-a-trilium.html&gt;Trilium Web Clipper. Importando el contenido de una web a Trilium&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 25 Dec 2020  +0100</pubDate>
+    <category>trilium</category>
+    <category>markdown</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-12-25-trilium-web-clipper-importando-el-contenido-de-una-web-a-trilium.html</guid>
    </item>
    <item>
     <title>Conectándote por SSH introduciendo la contraseña en una única línea de terminal</title>
