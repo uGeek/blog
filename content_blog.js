@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Conectarse a una red Wifi desde la Terminal',
+            'text': 'Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi. Ha', 
+            'tags': 'wifi,terminal,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-12-26-conectarse-a-una-red-wifi-desde-la-terminal.html' 
+},
+{
             'title': 'Trilium. Notas jerárquicas en Markdown',
             'text': 'Quizás ha llegado el momento de tomar notas para seres humanos, voy a', 
             'tags': 'markdown,servidor,,,,', 

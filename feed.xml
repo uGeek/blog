@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Conectarse a una red Wifi desde la Terminal</title>
+    <link>https://ugeek.github.io/blog/post/2020-12-26-conectarse-a-una-red-wifi-desde-la-terminal.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/wifi.png" alt="Conectarse a una red Wifi desde la Terminal"&gt;
+&lt;br&gt;&lt;p&gt;Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi. Ha... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-12-26-conectarse-a-una-red-wifi-desde-la-terminal.html&gt;Conectarse a una red Wifi desde la Terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 26 Dec 2020  +0100</pubDate>
+    <category>wifi</category>
+    <category>terminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-12-26-conectarse-a-una-red-wifi-desde-la-terminal.html</guid>
+   </item>
+   <item>
     <title>Trilium. Notas jerárquicas en Markdown</title>
     <link>https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html</link>
     <description>
@@ -71,7 +104,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 25 Dec 2020  +0100</pubDate>
+    <pubDate>Fri, 25 Dec 2020 21:38 +0100</pubDate>
     <category>trilium</category>
     <category>markdown</category>
     <category></category>
