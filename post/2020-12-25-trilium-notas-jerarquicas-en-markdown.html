@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="trilium.-notas-jerárquicas-en-markdown-1" title="Trilium. Notas jerárquicas en Markdown" data-export_file_name="trilium-notas-jerarquicas-en-markdown" data-description="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" data-export_date="2020-12-25 20:41" data-category="markdown" data-tag="servidor" data-image="./images-blog/trilium.png">Trilium. Notas jerárquicas en Markdown</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 303 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
+<h5>Tiempo estimado de lectura: 3 minutos. 347 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
 <p>Quizás ha llegado el momento de tomar notas para seres humanos, voy a hablar de Trilum.</p>
 <p>Trilium es un método jerárquico para tomar notas, tareas,… donde estás se gestionan con un método jerarquico como el orgmode y las podemos exportar a posterior a HTML, Markdown o incluso imprimirlas en pdf. </p>
 <center>
@@ -129,6 +129,31 @@ environment:
 - TRILIUM_DATA_DIR=/data
 volumes:
 - ./trilium/data:/data
+</code></pre>
+<h2 id="docker-con-proxy-inverso-con-traefik">Docker con Proxy Inverso con Traefik</h2>
+<pre><code>version: &#39;3.7&#39;
+services:
+  web:
+    image: hlince/trilium:latest-stable-arm
+    container_name: trilium
+    environment:
+      - TRILIUM_DATA_DIR=/data
+    volumes:
+      - ./trilium/data:/data  
+    networks:
+      - web
+    labels:
+      - traefik.port=8080
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:trilium.midominio.duckdns.org
+      - &quot;traefik.entrypoints=https&quot;
+      - &quot;traefik.docker.network=web&quot;
+      - &quot;traefik.backend.loadbalancer.stickiness=true&quot;
+      - &quot;traefik.backend.loadbalancer.swarm=true&quot;
+      - &quot;traefik.backend=trilium&quot;      
+networks:                                                                                                                   
+  web:
+   external: true 
 </code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
