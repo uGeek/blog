@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'i3wm en Ubuntu, Debian, Raspbian,... desde 0',
+            'text': 'En Debian, Ubuntu, Raspbian,... por defecto no hay una distro con el', 
+            'tags': 'i3wm,escritorio,debian,ubuntu,raspberry,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-12-28-i3wm-en-ubuntu-debian-raspbian---desde-0.html' 
+},
+{
             'title': 'Conectarse a una red Wifi desde la Terminal',
             'text': 'Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi. Ha', 
             'tags': 'wifi,terminal,,,,', 

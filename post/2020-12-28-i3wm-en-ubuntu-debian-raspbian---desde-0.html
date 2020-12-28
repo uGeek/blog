@@ -1,5 +1,5 @@
 <head>
-<title>snap</title>
+<title>i3wm en Ubuntu, Debian, Raspbian,... desde 0. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,17 +47,79 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>snap</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="i3wm-en-ubuntu-debian-raspbian-desde-0-1" title="i3wm en Ubuntu, Debian, Raspbian,... desde 0" data-export_file_name="i3wm-en-ubuntu-debian-raspbian---desde-0" data-description="En Debian, Ubuntu, Raspbian,... por defecto no hay una distro con el" data-export_date="2020-12-28 16:30" data-category="i3wm" data-tag="escritorio,debian,ubuntu,raspberry" data-image="./images-blog/i3wm.png">i3wm en Ubuntu, Debian, Raspbian,… desde 0</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 311 palabras.    <a href="https://ugeek.github.io/blog/categories/i3wm">i3wm</a></h5>
+<p>En Debian, Ubuntu, Raspbian,… por defecto no hay una distro con el gestor de ventanas de i3wm, pero eso no significa que podamos construir desde cero nuestro entorno.</p>
+<center>
+<p><img src="../images-blog/i3wm.png" /></p>
+</center>
+<p>Si no quieres complicarte la vida, puedes instalar una Debian, Ubuntu,… con un escritorio LXDE y después, con un simple <code>sudo apt install i3</code>, cuando arranques tu ordenador, te dará a elegir entre LXDE y i3. Vamos, que prácticamente viene todo hecho.</p>
+<p>El punto positivo de este método, es que te instalará una serie de aplicaciones, digamos un poco de todo y te evitas este proceso. El punto negativo, es que probablemente, el 90% de las aplicaciones que acabas de instalar, para ti no son necesarias.</p>
+<p>Así que el objetivo de este artículo es instalar desde cero un entorno i3wm.</p>
+<h2 id="instalar-i3wm">Instalar i3wm</h2>
+<p>Vamos a instalar i3wm</p>
+<pre class="example"><code>sudo apt install xorg lightdm i3-wm i3status suckless-tools
+</code></pre>
+<p>Ahora, si reiniciemos, ya tendríamos listo nuestro escritorio para trabajar, pero antes vamos a instalar alguna cosa mas que nos será útil.</p>
+<p>i3blocks nos permite mejorar y personalizar la barra de i3wm.</p>
+<p>Para instalarlo</p>
+<pre class="example"><code>sudo apt install i3blocks
+</code></pre>
+<h2 id="rofi">Rofi</h2>
+<p>Rofi es un lanzador de aplicaciones muy liviano y configurable. En breve hablaré mas en profundizad de él.</p>
+<pre class="example"><code>sudo apt install rofi
+</code></pre>
+<h2 id="pcmanfm">pcmanfm</h2>
+<p>pcmanfm es un explorador de archivos muy ligero.</p>
+<pre class="example"><code>sudo apt install pcmanfm
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>Este sería el método para instalar el escritorio i3wm de un modo limpio partiendo desde una Debian de servidor.</p>
+<p>El punto positivo, es que estas construyendo tu entorno desde cero y sin ningún software innecesario por defecto.</p>
+<p>De todas maneras, si nunca has utilizado i3wm, te recomiendo que partas de un escritorio como LXDE, ya que puede que al principio te encuentres en un callejón sin salida.</p>
+<br>
+<p>Publicado por Angel el lunes 28 diciembre del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html>Paquetes Snap</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html>Simplenote en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html>Emacs siempre a la última versión, betas, edge... gracias a Snap</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-04-los-paquetes-snap-no-aparecen-una-vez-instalados.html>Los paquetes snap no aparecen una vez instalados</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
