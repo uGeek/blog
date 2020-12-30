@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html' 
 },
 {
+            'title': 'Launchers opensource para Android. Personalizando tu móvil',
+            'text': 'Si compras dispositivos de diferentes marcas, como pueden ser Samsung, Xiaomi, Huawei, etcétera,... es posible que vayas un poco perdido a la hora de utilizar tu dispositivo móvil, ya que', 
+            'tags': 'android,launchers,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-12-30-launchers-opensource-para-android.html' 
+},
+{
             'title': 'i3wm en Ubuntu, Debian, Raspbian,... desde 0',
             'text': 'En Debian, Ubuntu, Raspbian,... por defecto no hay una distro con el', 
             'tags': 'i3wm,escritorio,debian,ubuntu,raspberry,', 

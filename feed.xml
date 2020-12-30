@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 30 Dec 2020  +0100</pubDate>
+    <pubDate>Wed, 30 Dec 2020 23:50 +0100</pubDate>
     <category>audio</category>
     <category>musica</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html</guid>
+   </item>
+   <item>
+    <title>Launchers opensource para Android. Personalizando tu móvil</title>
+    <link>https://ugeek.github.io/blog/post/2020-12-30-launchers-opensource-para-android.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/olauncher.png" alt="Launchers opensource para Android. Personalizando tu móvil"&gt;
+&lt;br&gt;&lt;p&gt;Si compras dispositivos de diferentes marcas, como pueden ser Samsung, Xiaomi, Huawei, etcétera,... es posible que vayas un poco perdido a la hora de utilizar tu dispositivo móvil, ya que... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-12-30-launchers-opensource-para-android.html&gt;Launchers opensource para Android. Personalizando tu móvil&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 30 Dec 2020  +0100</pubDate>
+    <category>android</category>
+    <category>launchers</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-12-30-launchers-opensource-para-android.html</guid>
    </item>
    <item>
     <title>i3wm en Ubuntu, Debian, Raspbian,... desde 0</title>
