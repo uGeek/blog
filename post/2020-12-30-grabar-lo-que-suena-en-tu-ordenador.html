@@ -1,5 +1,5 @@
 <head>
-<title>servicios</title>
+<title>Grabar lo que suena en tu ordenador. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,24 +47,77 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>servicios</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="grabar-lo-que-suena-en-tu-ordenador-1" title="Grabar lo que suena en tu ordenador" data-export_file_name="grabar-lo-que-suena-en-tu-ordenador" data-description="La intención es grabar los chats de voz de Telegram en mi PC, pero... ¿Cómo podría hacerlo?" data-export_date="2020-12-30 15:30" data-category="audio" data-tag="musica" data-image="./images-blog/altavoz.png">Grabar lo que suena en tu ordenador</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 176 palabras.    <a href="https://ugeek.github.io/blog/categories/audio">audio</a></h5>
+<p>La intención es grabar los chats de voz de Telegram en mi PC, pero… ¿Cómo podría hacerlo?</p>
+<center>
+<p><img src="../images-blog/altavoz.png" /></p>
+</center>
+<h2 id="instalación-de-configuración-de-pulseaudio">Instalación de Configuración de Pulseaudio</h2>
+<p>Instalamos el <strong>control de volumen de PulseAudio</strong> si no lo tenemos instalado en nuestra máquina.</p>
+<pre class="example"><code>sudo apt install pavucontrol
+</code></pre>
+<p>Para lanzarla con Rofi u otro lanzador, utilizaremos el nombre de <strong>Control de volumen de PulseAudio</strong>.</p>
+<h2 id="grabar-lo-que-suena-en-el-ordenador">Grabar lo que suena en el ordenador</h2>
+<ol>
+<li>Abrimos <strong>Configuración de Pulseaudio y Audacity.</strong></li>
+<li>Vamos al navegador o programa del que deseamos grabar e iniciamos la</li>
+</ol>
+<p>reproducción de audio</p>
+<ol>
+<li>Iniciamos la grabación en <strong>Audacity</strong></li>
+<li>Vamos al programa de <strong>Configuración de Pulseaudio</strong> y accedemos a la</li>
+</ol>
+<p>pestaña grabación.</p>
+<ol>
+<li>Saldrá que hay una aplicación grabando sonido &quot;Audacity&quot; y podremos</li>
+</ol>
+<p>*elegir la fuente que le queremos pasar a Audacity para que la grabe.*</p>
+<br>
+<p>Publicado por Angel el miércoles 30 diciembre del 2020</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html>2 Archivos de configuración, un Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html>Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html>Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html>Docker: KodExplorer</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html>Listado de Servicios con System V y Systemd</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html>Docker: Supysonic. El mejor y más ligero servidor de música</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html>Docker: Duck DNS. Facilitando la conexión a tus servicios</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html>Docker: Gotify. Tu servidor de Notificaciones</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-11-docker:-mariadb.html>Docker: Mariadb</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html>Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html>gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-30-extraer-audio-de-un-vídeo-con-ffmpeg.html">Extraer audio de un vídeo con ffmpeg</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html">Docker: KodExplorer</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

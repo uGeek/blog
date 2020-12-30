@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Grabar lo que suena en tu ordenador</title>
+    <link>https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/altavoz.png" alt="Grabar lo que suena en tu ordenador"&gt;
+&lt;br&gt;&lt;p&gt;La intención es grabar los chats de voz de Telegram en mi PC, pero... ¿Cómo podría hacerlo?... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html&gt;Grabar lo que suena en tu ordenador&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 30 Dec 2020  +0100</pubDate>
+    <category>audio</category>
+    <category>musica</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html</guid>
+   </item>
+   <item>
     <title>i3wm en Ubuntu, Debian, Raspbian,... desde 0</title>
     <link>https://ugeek.github.io/blog/post/2020-12-28-i3wm-en-ubuntu-debian-raspbian---desde-0.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 28 Dec 2020  +0100</pubDate>
+    <pubDate>Mon, 28 Dec 2020 15:30 +0100</pubDate>
     <category>i3wm</category>
     <category>escritorio</category>
     <category>debian</category>

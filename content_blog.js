@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Grabar lo que suena en tu ordenador',
+            'text': 'La intención es grabar los chats de voz de Telegram en mi PC, pero... ¿Cómo podría hacerlo?', 
+            'tags': 'audio,musica,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html' 
+},
+{
             'title': 'i3wm en Ubuntu, Debian, Raspbian,... desde 0',
             'text': 'En Debian, Ubuntu, Raspbian,... por defecto no hay una distro con el', 
             'tags': 'i3wm,escritorio,debian,ubuntu,raspberry,', 
