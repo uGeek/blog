@@ -85,26 +85,47 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="convertir-de-markdown-a-org-mode-gracias-a-pandoc-1" title="Convertir de Markdown a Org Mode gracias a Pandoc" data-export_file_name="Convertir-de-markdown-a-org-Mode-gracias-a-pandoc" data-description="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" data-export_date="2018-12-28 18:05" data-category="emacs" data-tag="emacs,pandoc,orgmode,markdown" data-image="./images-blog/ugeek.png">Convertir de Markdown a Org Mode gracias a Pandoc</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 248 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<h1 id="convertir-de-markdown-a-org-mode-gracias-a-pandoc-1" title="Convertir de Markdown a Org Mode gracias a Pandoc" data-export_file_name="Convertir-de-markdown-a-org-Mode-gracias-a-pandoc" data-description="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" data-export_date="2018-12-28 18:05 2021-01-01" data-category="emacs" data-tag="emacs,pandoc,orgmode,markdown" data-image="./images-blog/ugeek.png">Convertir de Markdown a Org Mode gracias a Pandoc</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 427 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
 <p>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:</p>
 <pre><code>sudo apt install pandoc
 </code></pre>
 <p>Ahora tenemos 2 posibilidades, transformar únicamente un archivo .md a .org, o aprovechando la magnífica gestión de los archivos Org Mode, convertir todos los archivos Markdown de una carpeta a un único archivo Org Mode.</p>
-<ol>
-<li>Markdown a Org Mode. Ejecutamos este comando en la terminal.</li>
-</ol>
+<h2 id="markdown-a-org-mode">Markdown a Org Mode</h2>
+<p>Markdown a Org Mode. Ejecutamos este comando en la terminal.</p>
+<ul>
+<li>Para indicar el número de caracteres por línea que tendrá la conversión, utiliza la opción <code>--columns NUMERO_DE_CARACTERES</code></li>
+<li>La opción <code>-t</code>, significa que transformamos markdown a orgmode</li>
+<li>La opción <code>-o</code>, significa el archivo de salida será el que indiquemos a continuación</li>
+</ul>
+<pre><code>pandoc -s -f markdown -t org archivo_a_convertir.md -o nuevo_archivo.org
+</code></pre>
+<p>Cambiando el orden</p>
 <pre><code>pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md
 </code></pre>
-<ol>
-<li>Muchos archivos Markdown a un único Org Mode.</li>
-</ol>
+<p>Al hacer la conversión, Pandoc incluye en cada cabecera las propieties. Para eliminarlas podemos utilizar <strong>sed</strong></p>
+<pre><code>pandoc  -f markdown -t org archivo.md  --columns 10000 | sed -E  &quot;/^[[:space:]]+:/ d&quot; &gt; nuevo_archivo.org
+</code></pre>
+<h3 id="más-fácil-y-comprensible">Más fácil y comprensible</h3>
+<p>La traducción de lo que estamos haciendo sería: Transformamos con <strong>Pandoc</strong> &quot;<strong>-t</strong>&quot; a <strong>org</strong> el <strong>archivo.md</strong>. Utilizaremos un máximo de 10000 caracteres por línea y con <strong>sed</strong>, eliminamos las propieties</p>
+<pre><code>pandoc -t org archivo.md --columns 10000 | sed -E &quot;/^[[:space:]]+:/ d&quot;
+</code></pre>
+<pre><code>pandoc -t org archivo.md --columns 10000 | sed -E &quot;/^[[:space:]]+:/ d&quot; &gt; archivo.org
+</code></pre>
+<h2 id="muchos-markdown-en-un-único-archivo-org-mode">Muchos Markdown en un único archivo Org Mode</h2>
+<p>Muchos archivos Markdown a un único Org Mode.</p>
+<h3 id="find">find</h3>
 <p>Vamos a la carpeta donde están todos los Markdown que queremos convertir y Llamamos a find vía Pandoc:</p>
 <pre><code>find . -name \*.md -type f -exec pandoc  -f markdown -t org -o {}.org {} \;
 </code></pre>
+<h3 id="for">for</h3>
+<pre><code>for f in `ls *.md`; do 
+  pandoc -f markdown -t org -o ${f}.org ${f}; 
+done
+</code></pre>
 <p>Recordar verificar que la conversión se ha hecho correctamente.</p>
 <br>
-<p>Publicado por Angel el viernes 28 diciembre del 2018</p>
+<p>Publicado por Angel el viernes 28 diciembre del 2018 y <strong>actualizado</strong> el viernes 01 enero del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
