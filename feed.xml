@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Crear una imagen docker desde un repositorio de GitHub</title>
+    <link>https://ugeek.github.io/blog/post/2021-01-2-crear-una-imagen-docker-desde-un-repositorio-de-github.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/docker.png" alt="Crear una imagen docker desde un repositorio de GitHub"&gt;
+&lt;br&gt;&lt;p&gt;Existe la posibilidad de crear imágenes para contenedores Docker, desde un repositorio de GitHub a partir de un Dockerfile.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-2-crear-una-imagen-docker-desde-un-repositorio-de-github.html&gt;Crear una imagen docker desde un repositorio de GitHub&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 02 Jan 2021  +0100</pubDate>
+    <category>docker</category>
+    <category>imagen</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-01-2-crear-una-imagen-docker-desde-un-repositorio-de-github.html</guid>
+   </item>
+   <item>
     <title>Grabar lo que suena en tu ordenador</title>
     <link>https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html</link>
     <description>
@@ -71,7 +104,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 30 Dec 2020  +0100</pubDate>
+    <pubDate>Wed, 30 Dec 2020 17:30 +0100</pubDate>
     <category>android</category>
     <category>launchers</category>
     <category></category>

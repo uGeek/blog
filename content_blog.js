@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Crear una imagen docker desde un repositorio de GitHub',
+            'text': 'Existe la posibilidad de crear imágenes para contenedores Docker, desde un repositorio de GitHub a partir de un Dockerfile.', 
+            'tags': 'docker,imagen,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-2-crear-una-imagen-docker-desde-un-repositorio-de-github.html' 
+},
+{
             'title': 'Grabar lo que suena en tu ordenador',
             'text': 'La intención es grabar los chats de voz de Telegram en mi PC, pero... ¿Cómo podría hacerlo?', 
             'tags': 'audio,musica,,,,', 
