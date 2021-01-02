@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Crear una imagen docker desde un repositorio de GitHub</title>
-    <link>https://ugeek.github.io/blog/post/2021-01-2-crear-una-imagen-docker-desde-un-repositorio-de-github.html</link>
+    <link>https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/docker.png" alt="Crear una imagen docker desde un repositorio de GitHub"&gt;
 &lt;br&gt;&lt;p&gt;Existe la posibilidad de crear imágenes para contenedores Docker, desde un repositorio de GitHub a partir de un Dockerfile.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-2-crear-una-imagen-docker-desde-un-repositorio-de-github.html&gt;Crear una imagen docker desde un repositorio de GitHub&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html&gt;Crear una imagen docker desde un repositorio de GitHub&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -43,7 +43,7 @@
     <category>imagen</category>
     <category></category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2021-01-2-crear-una-imagen-docker-desde-un-repositorio-de-github.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html</guid>
    </item>
    <item>
     <title>Grabar lo que suena en tu ordenador</title>
