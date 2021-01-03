@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</title>
+    <link>https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/nube.png" alt="Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing"&gt;
+&lt;br&gt;&lt;p&gt;Siempre he comentado que una nube como Nextcloud para solo acceder o sincronizar archivos es muy pesada. Existen otros proyectos, mucho más ligeros con lenguajes de programación mucho más modernos,... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html&gt;Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 03 Jan 2021  +0100</pubDate>
+    <category>nube</category>
+    <category>syncthing</category>
+    <category>filebrowser</category>
+    <category>webdav</category>
+    <guid>https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html</guid>
+   </item>
+   <item>
     <title>Crear una imagen docker desde un repositorio de GitHub</title>
     <link>https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 02 Jan 2021  +0100</pubDate>
+    <pubDate>Sat, 02 Jan 2021 15:10 +0100</pubDate>
     <category>docker</category>
     <category>imagen</category>
     <category></category>

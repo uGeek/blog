@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing',
+            'text': 'Siempre he comentado que una nube como Nextcloud para solo acceder o sincronizar archivos es muy pesada. Existen otros proyectos, mucho más ligeros con lenguajes de programación mucho más modernos,', 
+            'tags': 'nube,syncthing,filebrowser,webdav,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html' 
+},
+{
             'title': 'Crear una imagen docker desde un repositorio de GitHub',
             'text': 'Existe la posibilidad de crear imágenes para contenedores Docker, desde un repositorio de GitHub a partir de un Dockerfile.', 
             'tags': 'docker,imagen,,,,', 
