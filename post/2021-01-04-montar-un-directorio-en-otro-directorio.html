@@ -1,5 +1,5 @@
 <head>
-<title>rclone</title>
+<title>Montar un directorio en otro directorio. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,20 +47,79 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>rclone</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="montar-un-directorio-en-otro-directorio-1" title="Montar un directorio en otro directorio" data-export_file_name="montar-un-directorio-en-otro-directorio" data-description="Es posible que tengas un directorio en una ubicación que no te gusta, o que te sea más práctico tenerlo a mano en otro lugar y no puedas moverlo." data-export_date="2021-01-04 13:05" data-category="bash" data-tag="zsh,fish" data-image="./images-blog/bash.png">Montar un directorio en otro directorio</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 290 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Es posible que tengas un directorio en una ubicación que no te gusta, o que te sea más práctico tenerlo a mano en otro lugar y no puedas moverlo.</p>
+<p>A mi me sucede con mi servicio de webdav. Quiero añadir temporal mente el directorio de música para editar unos archivos, pero no quiero que este directorio cambie de ruta porque estoy corriendo en el directorio de música otro servicio.</p>
+<center>
+<p><img src="../images-blog/bash.png" /></p>
+</center>
+<p>En definitiva, vamos a tener 2 directorios en nuestro host exactamente iguales,  los archivos son los mismo, pero podremos acceder desde dos rutas.</p>
+<p>Vamos a ver como hacer esto. </p>
+<h2 id="con-un-enlace-simbólico">Con un enlace simbólico</h2>
+<p>Es el método que menos me gusta, a veces los dockers no pueden leer desde enlaces simbólicos. </p>
+<pre class="example"><code>ln -s /webdav/Música /home/angel/Música
+</code></pre>
+<h2 id="con-mount">Con mount</h2>
+<p>Este me gusta mucho más y tenemos que ejecutarlo como root</p>
+<pre class="example"><code>sudo mount --bind /webdav/Música /home/angel/Música
+</code></pre>
+<p>Para desmontarlo</p>
+<pre class="example"><code>sudo umount /home/angel/Música
+</code></pre>
+<p>Este último método, podríamos añadirlo en un script con cron, montando y desmontando cuando lo deseemos.</p>
+<br>
+<p>Publicado por Angel el lunes 04 enero del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html>Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html>Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-01-rclone-instalando-la-ultima-version.html>Rclone. Instalando la última versión</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html>Instalando, Compilando el última versión de Rclone-Browser</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-03-26-rclone-bidireccional-con-rclonesync.html>Rclone bidireccional con Rclonesync</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html>Sincronización con Rclone via SSH y SFTP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html>Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html">s-screen. Gestionando mis procesos en segundo plano de un modo sencillo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html">Buscar texto en un directorio, archivo,… con grep y find</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html">duf. Visualizando el almacenamiento</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html">Crear enlaces simbólicos a otros directorios o archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html">Saltando de un directorio a otro con Jump</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

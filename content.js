@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Montar un directorio en otro directorio',
+            'text': 'Es posible que tengas un directorio en una ubicación que no te gusta, o que te sea más práctico tenerlo a mano en otro lugar y no puedas moverlo.', 
+            'tags': 'bash,zsh,fish,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html' 
+},
+{
             'title': 'Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing',
             'text': 'Siempre he comentado que una nube como Nextcloud para solo acceder o sincronizar archivos es muy pesada. Existen otros proyectos, mucho más ligeros con lenguajes de programación mucho más modernos,', 
             'tags': 'nube,syncthing,filebrowser,webdav,,', 

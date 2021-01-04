@@ -107,28 +107,28 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="docker-para-arm">Docker para arm</h2>
 <p>Es docker-compose para arm o Raspberry y funciona a la perfeción:</p>
 <pre class="example"><code>trilium:
-image: hlince/trilium:latest-stable-arm
-restart: always
-ports:
-- 99:8080
-environment:
-- TRILIUM_DATA_DIR=/data
-volumes:
-- ./trilium/data:/data
+ image: hlince/trilium:latest-stable-arm
+ restart: always
+ ports:
+  - 99:8080
+ environment:
+  - TRILIUM_DATA_DIR=/data
+ volumes:
+  - ./trilium/data:/data
 </code></pre>
 <ul>
 <li><a href="https://hub.docker.com/r/hlince/trilium" class="uri">https://hub.docker.com/r/hlince/trilium</a></li>
 </ul>
 <p>Fork de ugeek</p>
 <pre class="example"><code>trilium:
-image: ugeek/trilium:arm
-restart: always
-ports:
-- 99:8080
-environment:
-- TRILIUM_DATA_DIR=/data
-volumes:
-- ./trilium/data:/data
+ image: ugeek/trilium:arm
+ restart: always
+ ports:
+  - 99:8080
+ environment:
+  - TRILIUM_DATA_DIR=/data
+ volumes:
+  - ./trilium/data:/data
 </code></pre>
 <h2 id="docker-con-proxy-inverso-con-traefik">Docker con Proxy Inverso con Traefik</h2>
 <pre><code>version: &#39;3.7&#39;

@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Montar un directorio en otro directorio</title>
+    <link>https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="Montar un directorio en otro directorio"&gt;
+&lt;br&gt;&lt;p&gt;Es posible que tengas un directorio en una ubicación que no te gusta, o que te sea más práctico tenerlo a mano en otro lugar y no puedas moverlo.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html&gt;Montar un directorio en otro directorio&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 04 Jan 2021  +0100</pubDate>
+    <category>bash</category>
+    <category>zsh</category>
+    <category>fish</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html</guid>
+   </item>
+   <item>
     <title>Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</title>
     <link>https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 03 Jan 2021  +0100</pubDate>
+    <pubDate>Sun, 03 Jan 2021 13:05 +0100</pubDate>
     <category>nube</category>
     <category>syncthing</category>
     <category>filebrowser</category>
