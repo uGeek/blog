@@ -4,7 +4,6 @@ PROGRAMS_ORG="$HOME/docker/git/blog/program/program.org"
 DRAFT_ORG="$HOME/docker/git/blog/program/draft.org"
 
 
-
 # BLOG FILE
 BLOG_ORG="$HOME/docker/git/blog/blog.org"
 
