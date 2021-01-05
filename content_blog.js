@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker: Ctop. El portanier de terminal',
+            'text': 'ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada...', 
+            'tags': 'docker,bash,zsh,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html' 
+},
+{
             'title': 'Montar un directorio en otro directorio',
             'text': 'Es posible que tengas un directorio en una ubicación que no te gusta, o que te sea más práctico tenerlo a mano en otro lugar y no puedas moverlo.', 
             'tags': 'bash,zsh,fish,,,', 

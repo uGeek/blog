@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker: Ctop. El portanier de terminal</title>
+    <link>https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ctop.gif" alt="Docker: Ctop. El portanier de terminal"&gt;
+&lt;br&gt;&lt;p&gt;ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada...... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html&gt;Docker: Ctop. El portanier de terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 05 Jan 2021  +0100</pubDate>
+    <category>docker</category>
+    <category>bash</category>
+    <category>zsh</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html</guid>
+   </item>
+   <item>
     <title>Montar un directorio en otro directorio</title>
     <link>https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 04 Jan 2021  +0100</pubDate>
+    <pubDate>Mon, 04 Jan 2021 05:15 +0100</pubDate>
     <category>bash</category>
     <category>zsh</category>
     <category>fish</category>

@@ -1,5 +1,5 @@
 <head>
-<title>Compartiendo tus Dockers. uGeek Blog </title>
+<title>Docker: Ctop. El portanier de terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
+<meta name="description" content="ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada..." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Compartiendo tus Dockers" />
-<meta property="og:description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dockerhub.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-06-12-compartiendo-tus-dockers.html" />
+<meta property="og:title" content="Docker: Ctop. El portanier de terminal" />
+<meta property="og:description" content="ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada..." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ctop.gif" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html" />
 
-<meta name="twitter:title" content="Compartiendo tus Dockers" />
-<meta name="twitter:description" content="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dockerhub.png" />
+<meta name="twitter:title" content="Docker: Ctop. El portanier de terminal" />
+<meta name="twitter:description" content="ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada..." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ctop.gif" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,38 +85,106 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="compartiendo-tus-dockers-1" title="Compartiendo tus Dockers" data-export_file_name="Compartiendo tus Dockers" data-description="Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad" data-export_date="2019-06-12 20:20" data-category="docker" data-tag="raspberry, servidor" data-image="./images-blog/dockerhub.png">Compartiendo tus Dockers</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 381 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad.</p>
+<h1 id="docker-ctop.-el-portanier-de-terminal-1" title="Docker: Ctop. El portanier de terminal" data-export_file_name="docker-ctop-el-portanier-de-terminal" data-description="ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada..." data-export_date="2021-01-05 05:15" data-category="docker" data-tag="bash,zsh" data-image="./images-blog/ctop.gif">Docker: Ctop. El portanier de terminal</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 441 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada…</p>
 <center>
-<p><img src="../images-blog/dockerhub.png" /></p>
+<p><img src="../images-blog/ctop.gif" /></p>
 </center>
-<p>Ya os expliqué un ejemplo de <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">como crear tu docker mediante los dockerfile</a>. La verdad es que es muy pesado tener que crear la imagen de cero, cuando en realidad una vez hemos creado la imagen, podemos subirla al DockerHub y una vez allí, instalarlo en todos los dispositivos que sean compatibles con su arquitectura.</p>
-<p>Voy a explicarte como renombrar y subir esta imagen al DockerHub</p>
-<h2 id="iniciando-en-la-terminal">Iniciando en la terminal</h2>
-<p>Dando por hecho que ya has creado tu cuenta en <a href="https://hub.docker.com">DockerHub</a>, vamos a logearnos en nuestra terminal:</p>
-<p><code>docker login</code></p>
-<p>La terminal nos preguntará por nuestro usuario y contraseña.</p>
-<h2 id="nombre-de-la-imagen">Nombre de la imagen</h2>
-<p>El nombre de la imagen tiene esta estructura:</p>
-<p><strong>&lt;USUARIO&gt;/&lt;REPOSITORIO&gt;:&lt;ETIQUETA&gt;</strong></p>
-<p>Ejemplo:</p>
-<p><code>ugeek/ejabberd:arm</code></p>
-<p>Una vez tengamos la imagen creada siguiendo el Post <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">como crear tu docker mediante los dockerfile</a>, vamos a renombrarla siguiendo la estructura.</p>
-<h2 id="cambiar-nombre-de-la-imagen">Cambiar nombre de la imagen</h2>
-<p>Vamos a ver las imágenes:</p>
-<p><code>docker image</code></p>
-<p>Imagina que he creado un docker de webdav, para arquitectura arm. En el comando anterior, he tomado buena nota del número de la imagen <strong>&lt;IMAGE&gt;</strong>, para añadirlo en el siguiente comando.</p>
-<p><code>docker tag &lt;IMAGE&gt; ugeek/webdav:arm</code></p>
-<p>Si lo deseamos, ahora podemos borrar la imagen antigua.</p>
-<p><code>docker rmi &lt;IMAGE&gt;</code></p>
-<h2 id="subir-imagen">Subir imagen</h2>
-<p>Igual que hariamos con <strong>git</strong>, vamos ha hacer un docker push para subir mi nueva imagen.</p>
-<p><code>docker push ugeek/webdav:arm</code></p>
-<h2 id="conclusión">Conclusión</h2>
-<p>Esto era una cosa que no había hecho por pereza y la verdad es que funciona super bien. Ahora gracias a la copia de mis dockers en DockerHub, tengo un backup disponible para montarlo en cualquier máquina y lo puedo compartir. Te animo a probar y crear tus dockers.</p>
+<p>También puedes detener, iniciar, ver logs o borrar un contenedor entre ostras  cosas.</p>
+<p>Viendo una imagen de como se ve en la terminal, da ganas de probarlos.</p>
+<p>Para ver el rendimiento de los Dockers, me parece una herramienta fantástica.</p>
+<figure>
+<img src="https://github.com/bcicen/ctop/raw/master/_docs/img/grid.gif" alt="ctop" /><figcaption>ctop</figcaption>
+</figure>
+<h2 id="docker-para-arm">Docker para ARM</h2>
+<pre class="example"><code>docker run --rm -it --name ctop --volume /var/run/docker.sock:/var/run/docker.sock:ro jinnlynn/ctop
+</code></pre>
+<p>En raspberry, crea un alias con el comando <strong>ctop</strong>.</p>
+<pre class="example"><code>alias ctop=&#39;docker run --rm -it --name ctop --volume /var/run/docker.sock:/var/run/docker.sock:ro jinnlynn/ctop&#39;
+</code></pre>
+<h2 id="docker-para-amd64">Docker para amd64</h2>
+<pre class="example"><code>docker run --rm -it --name ctop     --volume /var/run/docker.sock:/var/run/docker.sock:ro     quay.io/vektorlab/ctop:latest
+</code></pre>
+<h3 id="crea-un-alias-con-el-comando-ctop.">crea un alias con el comando <strong>ctop</strong>.</h3>
+<pre class="example"><code>alias ctop=&#39;docker run --rm -it --name ctop     --volume /var/run/docker.sock:/var/run/docker.sock:ro     quay.io/vektorlab/ctop:latest&#39;
+</code></pre>
+<h2 id="uso">Uso</h2>
+<p>ctop no requiere argumentos y utiliza variables de host de Docker de forma predeterminada. Consulta los <a href="https://github.com/bcicen/ctop/blob/master/_docs/connectors.md">conectores</a> para obtener más opciones de configuración.</p>
+<h3 id="archivo-de-configuración">Archivo de configuración</h3>
+<p>Mientras se ejecuta, use <code>S=para guardar los filtros actuales, el campo de clasificación y otras opciones en una ruta de configuración predeterminada ( =~/.config/ctop/config=en sistemas XDG, de lo contrario =~/.ctop</code>).</p>
+<p>Los valores del archivo de configuración se cargarán y aplicarán la próxima vez que =ctop=se inicie.</p>
+<h3 id="atajos-de-teclado">Atajos de teclado</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Llave</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>enter</td>
+<td>Abrir menú contenedor</td>
+</tr>
+<tr class="even">
+<td>a</td>
+<td>Alternar la visualización de todos los contenedores (en ejecución y no en ejecución)</td>
+</tr>
+<tr class="odd">
+<td>f</td>
+<td>Filtrar los contenedores mostrados ( =esc=para limpiarlos cuando estén abiertos)</td>
+</tr>
+<tr class="even">
+<td>H</td>
+<td>Alternar encabezado ctop</td>
+</tr>
+<tr class="odd">
+<td>h</td>
+<td>Abrir diálogo de ayuda</td>
+</tr>
+<tr class="even">
+<td>s</td>
+<td>Seleccionar campo de clasificación de contenedores</td>
+</tr>
+<tr class="odd">
+<td>r</td>
+<td>Orden de clasificación de contenedores inverso</td>
+</tr>
+<tr class="even">
+<td>o</td>
+<td>Abrir vista única</td>
+</tr>
+<tr class="odd">
+<td>l</td>
+<td>Ver registros de contenedores ( =t=para alternar la marca de tiempo cuando está abierto)</td>
+</tr>
+<tr class="even">
+<td>e</td>
+<td>Exec Shell</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>Configurar columnas</td>
+</tr>
+<tr class="even">
+<td>S</td>
+<td>Guardar la configuración actual en un archivo</td>
+</tr>
+<tr class="odd">
+<td>q</td>
+<td>Salir de ctop</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://geekland.eu/monitorizar-el-rendimiento-de-contenedores-docker/" class="uri">https://geekland.eu/monitorizar-el-rendimiento-de-contenedores-docker/</a></li>
+<li><a href="https://ctop.sh/" class="uri">https://ctop.sh/</a></li>
+<li><a href="https://github.com/bcicen/ctop" class="uri">https://github.com/bcicen/ctop</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el miércoles 12 junio del 2019</p>
+<p>Publicado por Angel el martes 05 enero del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
