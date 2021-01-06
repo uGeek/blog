@@ -1,5 +1,5 @@
 <head>
-<title> Descargar todos los episodios de un Podcast con wget. uGeek Blog </title>
+<title>Comando sudo y su. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Descargar todos los episodios de un Podcast con wget" />
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
+<meta property="og:title" content="Comando sudo y su" />
+<meta property="og:description" content="Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html" />
 
-<meta name="twitter:title" content=" Descargar todos los episodios de un Podcast con wget" />
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Comando sudo y su" />
+<meta name="twitter:description" content="Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,30 +85,70 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget-1" title="Descargar todos los episodios de un Podcast con wget" data-export_file_name="descargar-todos-los-episodios-de-un-podcast-con-bash" data-description="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." data-export_date="2018-12-28 10:00" data-category="terminal" data-tag="bash,podcast,unix,terminal" data-image="./images-blog/ugeek.png">Descargar todos los episodios de un Podcast con wget</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 250 palabras.    <a href="https://ugeek.github.io/blog/categories/terminal">terminal</a></h5>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>&quot;FEED&quot;</strong>, por el Feed del Podcast que desees descargar.</p>
-<pre><code>wget -q -O- &quot;FEED&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+<h1 id="comando-sudo-y-su-1" title="Comando sudo y su" data-export_file_name="comando-sudo-y-su" data-description="Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución." data-export_date="2021-01-06 18:20" data-category="bash" data-tag="zsh,fish,bash" data-image="./images-blog/bash.png">Comando sudo y su</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 438 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución.</p>
+<center>
+<p><img src="../images-blog/bash.png" /></p>
+</center>
+<p>Esto es debido a que distribuciones como Ubuntu, deshabilitan el usuario root por razones de seguridad.</p>
+<p>Vamos a ver cómo utilizar el comando su o sudo.</p>
+<h2 id="comando-su">Comando su</h2>
+<p>Es un comando que te permite convertirte temporalmente en otro usuario.</p>
+<p>La sintaxis del comando <code>su</code> es la siguiente:</p>
+<pre class="example"><code>su [OPTIONS] [USER [ARGUMENT...]
 </code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
-<pre><code>wget -q -O- &quot;http://feeds.feedburner.com/ugeek&quot; | grep -o &#39;&lt;enclosure url=&quot;[^&quot;]*&#39; | grep -o &#39;[^&quot;]*$&#39; | xargs wget -c
+<p>Para cambiar el usuario actual al usuario root, e iniciar la shell como root</p>
+<pre class="example"><code>su
 </code></pre>
-<p>A disfrutar con la magia de la terminal…</p>
+<p>Una vez introducida la contraseña, estaremos en una sesión de root.</p>
+<p>Para confirmar que realmente estamos en la sesión root y no en el usuario, introduciremos el comando <code>whoami</code></p>
+<pre class="example"><code>whoami
+</code></pre>
+<p>Si iniciamos la sesión con -, <code>-l</code> o <code>--login</code>, cambiar directorio de actual de la shell, inicia como si comentaremos una sesión totalmente de cero.</p>
+<pre class="example"><code>su -
+</code></pre>
+<p>Para iniciar la nueva sesión iniciando un comando, por ejemplo zsh</p>
+<pre class="example"><code>su -s /usr/bin/zsh
+</code></pre>
+<p>Para preservar el entorno actual de usuario ejecutando comandos de root, utilizaremos la opción <code>-p</code>, <code>--preserve-environment</code></p>
+<pre class="example"><code>su -p
+</code></pre>
+<p>Si utilizas la opción <code>-</code>, <code>-p</code> se ignora.</p>
+<h2 id="cambiar-de-usuario">Cambiar de usuario</h2>
+<p>Para cambiar a otra sesión de usuario</p>
+<pre class="example"><code>su angel
+</code></pre>
+<h2 id="su-o-sudo-ubuntu">su o sudo? Ubuntu</h2>
+<p>En distribuciones como Ubuntu, el comando su no funciona, debido que la cuenta root está deshabilitado por defecto.</p>
+<p>Para acceder como root en estas distribuciones tenemos que utilizar el comando</p>
+<p>sudo permite ejecutar comandos como otro usuario.</p>
+<p>Para entrar como root, sería escribir sudo seguido de su , e introducir la contraseña del usuario actual. Solo podremos entrar como usuario root si este usuario tiene permisos de administración.</p>
+<pre class="example"><code>sudo su -
+</code></pre>
+<p>Para entrar como usuario root y estar dentro del entorno de este usuario</p>
+<pre class="example"><code>sudo -i
+</code></pre>
+<p> sería equivalente a sudo -</p>
+<p>La ventaja del comando sudo, es ejecutar instrucciones como usuario root dentro de la sesión de un usuario.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://linuxize.com/post/su-command-in-linux/" class="uri">https://linuxize.com/post/su-command-in-linux/</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el viernes 28 diciembre del 2018</p>
+<p>Publicado por Angel el miércoles 06 enero del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html">Docker: Ctop. El portanier de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-12-26-conectarse-a-una-red-wifi-desde-la-terminal.html">Conectarse a una red Wifi desde la Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html">Montar un directorio en otro directorio</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html">Borrando líneas en blanco de un texto con Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html">Docker: Wireguard para Raspberry, Ubuntu, Debian,…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html">s-screen. Gestionando mis procesos en segundo plano de un modo sencillo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html">Buscar texto en un directorio, archivo,… con grep y find</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html">duf. Visualizando el almacenamiento</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html">Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto… a cualquier dispositivo esté donde esté de un modo fácil con la terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html">Crear enlaces simbólicos a otros directorios o archivos</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html">Saltando de un directorio a otro con Jump</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

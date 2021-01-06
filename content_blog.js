@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Comando sudo y su',
+            'text': 'Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución.', 
+            'tags': 'bash,zsh,fish,bash,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html' 
+},
+{
             'title': 'Docker: Ctop. El portanier de terminal',
             'text': 'ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada...', 
             'tags': 'docker,bash,zsh,,,', 
