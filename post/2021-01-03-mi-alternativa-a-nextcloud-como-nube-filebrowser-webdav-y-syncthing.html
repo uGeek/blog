@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="mi-alternativa-a-nextcloud-como-nube.-filebrowser-webdav-y-syncthing-1" title="Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing" data-export_file_name="mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing" data-description="Siempre he comentado que una nube como Nextcloud para solo acceder o sincronizar archivos es muy pesada. Existen otros proyectos, mucho más ligeros con lenguajes de programación mucho más modernos," data-export_date="2021-01-03 15:10" data-category="nube" data-tag="syncthing,filebrowser,webdav" data-image="./images-blog/nube.png">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</h1>
-<h5>Tiempo estimado de lectura: 12 minutos. 1323 palabras.    <a href="https://ugeek.github.io/blog/categories/nube">nube</a></h5>
+<h5>Tiempo estimado de lectura: 12 minutos. 1328 palabras.    <a href="https://ugeek.github.io/blog/categories/nube">nube</a></h5>
 <p>Siempre he comentado que una nube como Nextcloud para solo acceder o sincronizar archivos es muy pesada. Existen otros proyectos, mucho más ligeros con lenguajes de programación mucho más modernos, por ejemplo en GO como FileBrowser.</p>
 <p>El objetivo por mi parte, ha sido el sumar lo mejor de 2 servicios. </p>
 <ol>
@@ -183,87 +183,88 @@ $("#tipue_search_input").tipuesearch();
 <p>Ya está listo todo para levantar el docker.</p>
 <h2 id="docker-para-arm-y-raspberry-pi">Docker para arm y Raspberry Pi</h2>
 <pre class="example"><code>version: &#39;3&#39;
-services:
-filebrowser:
-image: filebrowser/filebrowser:pi
-container_name: filebrowser
-restart: unless-stopped
-volumes:
-- /webdav:/srv
-- $PWD/filebrowser.db:/database.db
-- $PWD/filebrowser.json:/.filebrowser.json
-webdav:
-container_name: webdav
-image: ugeek/webdav:arm
-restart: unless-stopped
-volumes:
-- /webdav:/media
-environment:
-- USERNAME=usuario
-- PASSWORD=contraseña
-- UID=1000
-- GID=1000
-- TZ=Europe/Madrid
+ services:
+  filebrowser:
+   image: filebrowser/filebrowser:pi
+   container_name: filebrowser
+   restart: unless-stopped
+   volumes:
+    - /webdav:/srv
+    - $PWD/filebrowser.db:/database.db
+    - $PWD/filebrowser.json:/.filebrowser.json
+  webdav:
+   container_name: webdav
+   image: ugeek/webdav:arm
+   restart: unless-stopped
+    volumes:
+    - /webdav:/media
+   environment:
+    - USERNAME=usuario
+    - PASSWORD=contraseña
+    - UID=1000
+    - GID=1000
+    - TZ=Europe/Madrid
 </code></pre>
 <h3 id="proxy-inverso-con-traefik">Proxy inverso con traefik</h3>
 <pre class="example"><code>version: &#39;3&#39;
-services:
+ services:
 
-filebrowser:
-image: filebrowser/filebrowser:pi
-container_name: filebrowser
-restart: unless-stopped
-volumes:
-- /webdav:/srv
-- $PWD/filebrowser.db:/database.db
-- $PWD/filebrowser.json:/.filebrowser.json
-networks:
-- web
-labels:
-- &quot;traefik.backend=filebrowser&quot;
-- &quot;traefik.docker.network=web&quot;
-- &quot;traefik.enable=true&quot;
-- &quot;traefik.port=80&quot;
-- &quot;traefik.default.protocol=http&quot;
-- &quot;traefik.frontend.rule=Host:filebrowser.dominio.duckdns.org&quot;
-- &quot;traefik.frontend.headers.SSLHost=filebrowser.dominio.duckdns.org&quot;
-- &quot;traefik.frontend.headers.SSLRedirect=true&quot;
-- &quot;traefik.frontend.headers.SSLForceHost=true&quot;
+  filebrowser:
+   image: filebrowser/filebrowser:pi
+   container_name: filebrowser
+   restart: unless-stopped
+   volumes:
+    - /webdav:/srv
+    - $PWD/filebrowser.db:/database.db
+    - $PWD/filebrowser.json:/.filebrowser.json
+   networks:
+    - web
+   labels:
+    - &quot;traefik.backend=filebrowser&quot;
+    - &quot;traefik.docker.network=web&quot;
+    - &quot;traefik.enable=true&quot;
+    - &quot;traefik.port=80&quot;
+    - &quot;traefik.default.protocol=http&quot;
+    - &quot;traefik.frontend.rule=Host:filebrowser.dominio.duckdns.org&quot;
+    - &quot;traefik.frontend.headers.SSLHost=filebrowser.dominio.duckdns.org&quot;
+    - &quot;traefik.frontend.headers.SSLRedirect=true&quot;
+    - &quot;traefik.frontend.headers.SSLForceHost=true&quot;
 
-webdav:
-container_name: webdav
-image: ugeek/webdav:arm
-restart: unless-stopped
-volumes:
-- /webdav:/media
-environment:
-- USERNAME=usuario
-- PASSWORD=contraseña
-- UID=1000
-- GID=1000
-- TZ=Europe/Madrid
-networks:
-- web
-labels:
-- traefik.backend=webdav
-- traefik.frontend.rule=Host:webdav.dominio.duckdns.org
-- traefik.docker.network=web
-- traefik.port=80
-- traefik.enable=true
-# Adding in secure headers
-- traefik.http.middlewares.securedheaders.headers.forcestsheader=true
-- traefik.http.middlewares.securedheaders.headers.sslRedirect=true
-- traefik.http.middlewares.securedheaders.headers.STSPreload=true
-- traefik.http.middlewares.securedheaders.headers.ContentTypeNosniff=true
-- traefik.http.middlewares.securedheaders.headers.BrowserXssFilter=true
-- traefik.http.middlewares.securedheaders.headers.STSIncludeSubdomains=true
-- traefik.http.middlewares.securedheaders.headers.stsSeconds=63072000
-- traefik.http.middlewares.securedheaders.headers.frameDeny=true
-- traefik.http.middlewares.securedheaders.headers.browserXssFilter=true
-- traefik.http.middlewares.securedheaders.headers.contentTypeNosniff=tru
-networks:
-web:
-external: true
+  webdav:
+   container_name: webdav
+   image: ugeek/webdav:arm
+   restart: unless-stopped
+   volumes:
+    - /webdav:/media
+   environment:
+    - USERNAME=usuario
+    - PASSWORD=contraseña
+    - UID=1000
+    - GID=1000
+    - TZ=Europe/Madrid
+   networks:
+    - web
+   labels:
+    - traefik.backend=webdav
+    - traefik.frontend.rule=Host:webdav.dominio.duckdns.org
+    - traefik.docker.network=web
+    - traefik.port=80
+    - traefik.enable=true
+    # Adding in secure headers
+    - traefik.http.middlewares.securedheaders.headers.forcestsheader=true
+    - traefik.http.middlewares.securedheaders.headers.sslRedirect=true
+    - traefik.http.middlewares.securedheaders.headers.STSPreload=true
+    - traefik.http.middlewares.securedheaders.headers.ContentTypeNosniff=true
+    - traefik.http.middlewares.securedheaders.headers.BrowserXssFilter=true
+    - traefik.http.middlewares.securedheaders.headers.STSIncludeSubdomains=true
+    - traefik.http.middlewares.securedheaders.headers.stsSeconds=63072000
+    - traefik.http.middlewares.securedheaders.headers.frameDeny=true
+    - traefik.http.middlewares.securedheaders.headers.browserXssFilter=true
+    - traefik.http.middlewares.securedheaders.headers.contentTypeNosniff=tru
+   networks:
+   web:
+   external: true
+
 </code></pre>
 <h3 id="docker-para-amd64">Docker para amd64</h3>
 <pre class="example"><code>version: &#39;3&#39;
