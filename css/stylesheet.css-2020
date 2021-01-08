@@ -21,8 +21,8 @@ img {
 
 
 body {
-    font-family: Menlo, Monaco, monospace;
-    font-size: 19px; , Menlo, Monaco, monospace; }
+    font-family: "Lato";
+    font-size: 19px; , Lato; }
 
 @media all and (min-width: 1000px){
     body {
