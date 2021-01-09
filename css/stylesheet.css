@@ -21,7 +21,7 @@ img {
 
 
 body {
-    font-family: Menlo, Monaco, monospace;
+    font-family: "Lato";
     font-size: 19px; , Lato; }
 
 @media all and (min-width: 1000px){
@@ -65,10 +65,8 @@ body {
     font-size: 1.200em;
     top: 7.525em; }
 
-
-/* Iconos Feed,... */
 @media all and (min-width: 1000px){
-    #menu { left: 20%; } }
+    #menu { left: 10%; } }
 
 @media all and (max-width: 1000px){
     #menu { left: 1em; } }
