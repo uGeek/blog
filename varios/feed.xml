@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Links</title>
+    <link></link>
+    <description>Links favoritos</description>
+    <image>
+       <url></url>
+       <title>Links</title>
+       <link></link>
+    </image>
+    <language></language>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
+   <item>
+    <title>Por qué los Astrónomos ODIAN a Elon Musk (y por qué tienen razón) - YouTube</title>
+    <link>https://www.youtube.com/watch?v=G6A_Zh7lpoM&ab_channel=QuantumFracture.html</link>
+    <description>
+&lt;img src="imagen.jpg" alt="Por qué los Astrónomos ODIAN a Elon Musk (y por qué tienen razón) - YouTube"&gt;
+&lt;br&gt;&lt;p&gt;Por qué los Astrónomos ODIAN a Elon Musk (y por qué tienen razón) - YouTube... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://www.youtube.com/watch?v=G6A_Zh7lpoM&ab_channel=QuantumFracture.html&gt;Por qué los Astrónomos ODIAN a Elon Musk (y por qué tienen razón) - YouTube&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=&gt;Visita Links&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 10 Jan 2021 20:55 +0100</pubDate>
+    <category>links</category>
+    <category>links</category>
+    <category>links</category>
+    <category>links</category>
+    <guid>https://www.youtube.com/watch?v=G6A_Zh7lpoM&ab_channel=QuantumFracture.html</guid>
+   </item>
+  </channel>
+</rss>
