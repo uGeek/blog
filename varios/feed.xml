@@ -13,32 +13,44 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Cómo crear túneles HTTP con ngrok – SeviLinux</title>
+    <link>https://sevilinux.es/2021/1/crear-tuneles-http-ngrok.html</link>
+    <description>
+&lt;img src="imagen.jpg" alt="Cómo crear túneles HTTP con ngrok – SeviLinux"&gt;
+&lt;br&gt;&lt;p&gt;Cómo crear túneles HTTP con ngrok – SeviLinux... 
+&lt;a href=https://sevilinux.es/2021/1/crear-tuneles-http-ngrok.html&gt;
+</description>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
+    <category>links</category>
+    <category>links</category>
+    <category>links</category>
+    <category>links</category>
+    <guid>https://sevilinux.es/2021/1/crear-tuneles-http-ngrok.html</guid>
+   </item>
+   <item>
+    <title>Cambiando los permisos de un archivo , PatoJAD</title>
+    <link>https://patojad.com.ar/linux/2021/01/cambiando-los-permisos-de-un-archivo/.html</link>
+    <description>
+&lt;img src="imagen.jpg" alt="Cambiando los permisos de un archivo , PatoJAD"&gt;
+&lt;br&gt;&lt;p&gt;Cambiando los permisos de un archivo , PatoJAD... 
+&lt;a href=https://patojad.com.ar/linux/2021/01/cambiando-los-permisos-de-un-archivo/.html&gt;
+</description>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
+    <category>links</category>
+    <category>links</category>
+    <category>links</category>
+    <category>links</category>
+    <guid>https://patojad.com.ar/linux/2021/01/cambiando-los-permisos-de-un-archivo/.html</guid>
+   </item>
+   <item>
     <title>Espejo Inteligente Casero Con Raspberry Pi - Tutorial Completo</title>
     <link>https://www.youtube.com/watch?v=Zo93Q_NZIKc.html</link>
     <description>
 &lt;img src="imagen.jpg" alt="Espejo Inteligente Casero Con Raspberry Pi - Tutorial Completo"&gt;
 &lt;br&gt;&lt;p&gt;Espejo Inteligente Casero Con Raspberry Pi - Tutorial Completo... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://www.youtube.com/watch?v=Zo93Q_NZIKc.html&gt;Espejo Inteligente Casero Con Raspberry Pi - Tutorial Completo&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=&gt;Visita Links&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
+&lt;a href=https://www.youtube.com/watch?v=Zo93Q_NZIKc.html&gt;
 </description>
-    <pubDate>Sun, 10 Jan 2021 23:33 +0100</pubDate>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
     <category>links</category>
     <category>links</category>
     <category>links</category>
@@ -51,27 +63,9 @@
     <description>
 &lt;img src="imagen.jpg" alt="Amazon pone a la venta Echo Frames sus gafas inteligentes con Alexa integrada"&gt;
 &lt;br&gt;&lt;p&gt;Amazon pone a la venta Echo Frames sus gafas inteligentes con Alexa integrada... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://amp.20minutos.es/noticia/4536537/0/amazon-pone-a-la-venta-echo-frames-sus-gafas-inteligentes-con-alexa-integrada/.html&gt;Amazon pone a la venta Echo Frames sus gafas inteligentes con Alexa integrada&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=&gt;Visita Links&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
+&lt;a href=https://amp.20minutos.es/noticia/4536537/0/amazon-pone-a-la-venta-echo-frames-sus-gafas-inteligentes-con-alexa-integrada/.html&gt;
 </description>
-    <pubDate>Sun, 10 Jan 2021 23:33 +0100</pubDate>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
     <category>links</category>
     <category>links</category>
     <category>links</category>
@@ -84,27 +78,9 @@
     <description>
 &lt;img src="imagen.jpg" alt="Cómo reducir el tiempo de respuesta de un servidor web"&gt;
 &lt;br&gt;&lt;p&gt;Cómo reducir el tiempo de respuesta de un servidor web... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://www.redeszone.net/tutoriales/servidores/reducir-tiempo-respuesta-servidor-web/.html&gt;Cómo reducir el tiempo de respuesta de un servidor web&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=&gt;Visita Links&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
+&lt;a href=https://www.redeszone.net/tutoriales/servidores/reducir-tiempo-respuesta-servidor-web/.html&gt;
 </description>
-    <pubDate>Sun, 10 Jan 2021 23:33 +0100</pubDate>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
     <category>links</category>
     <category>links</category>
     <category>links</category>
@@ -117,27 +93,9 @@
     <description>
 &lt;img src="imagen.jpg" alt="16 antivirus online gratis: para buscar amenazas sin descargar nada"&gt;
 &lt;br&gt;&lt;p&gt;16 antivirus online gratis: para buscar amenazas sin descargar nada... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://www.xataka.com/basics/16-antivirus-online-gratis-para-buscar-amenazas-descargar-nada.html&gt;16 antivirus online gratis: para buscar amenazas sin descargar nada&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=&gt;Visita Links&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
+&lt;a href=https://www.xataka.com/basics/16-antivirus-online-gratis-para-buscar-amenazas-descargar-nada.html&gt;
 </description>
-    <pubDate>Sun, 10 Jan 2021 23:33 +0100</pubDate>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
     <category>links</category>
     <category>links</category>
     <category>links</category>
@@ -150,27 +108,9 @@
     <description>
 &lt;img src="imagen.jpg" alt="Qué es y para qué sirve la huella digital de un dispositivo o navegador"&gt;
 &lt;br&gt;&lt;p&gt;Qué es y para qué sirve la huella digital de un dispositivo o navegador... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://www.redeszone.net/tutoriales/seguridad/huella-digital-dispositivo-navegador/.html&gt;Qué es y para qué sirve la huella digital de un dispositivo o navegador&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=&gt;Visita Links&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
+&lt;a href=https://www.redeszone.net/tutoriales/seguridad/huella-digital-dispositivo-navegador/.html&gt;
 </description>
-    <pubDate>Sun, 10 Jan 2021 23:33 +0100</pubDate>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
     <category>links</category>
     <category>links</category>
     <category>links</category>
@@ -183,27 +123,9 @@
     <description>
 &lt;img src="imagen.jpg" alt="Cómo Elon Musk Podría Destruir Todos los Satélites en Órbita - YouTube"&gt;
 &lt;br&gt;&lt;p&gt;Cómo Elon Musk Podría Destruir Todos los Satélites en Órbita - YouTube... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://www.youtube.com/watch?v=tYv4dk0vGJA&t=29s&ab_channel=QuantumFracture.html&gt;Cómo Elon Musk Podría Destruir Todos los Satélites en Órbita - YouTube&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=&gt;Visita Links&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
+&lt;a href=https://www.youtube.com/watch?v=tYv4dk0vGJA&t=29s&ab_channel=QuantumFracture.html&gt;
 </description>
-    <pubDate>Sun, 10 Jan 2021 23:33 +0100</pubDate>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
     <category>links</category>
     <category>links</category>
     <category>links</category>
@@ -216,27 +138,9 @@
     <description>
 &lt;img src="imagen.jpg" alt="Cómo Starlink Aumentará el Riesgo de Meteorito - YouTube"&gt;
 &lt;br&gt;&lt;p&gt;Cómo Starlink Aumentará el Riesgo de Meteorito - YouTube... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://www.youtube.com/watch?v=_daxN0OvTbs&ab_channel=QuantumFracture.html&gt;Cómo Starlink Aumentará el Riesgo de Meteorito - YouTube&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=&gt;Visita Links&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
+&lt;a href=https://www.youtube.com/watch?v=_daxN0OvTbs&ab_channel=QuantumFracture.html&gt;
 </description>
-    <pubDate>Sun, 10 Jan 2021 23:33 +0100</pubDate>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
     <category>links</category>
     <category>links</category>
     <category>links</category>
@@ -249,27 +153,9 @@
     <description>
 &lt;img src="imagen.jpg" alt="Por qué los Astrónomos ODIAN a Elon Musk (y por qué tienen razón) - YouTube"&gt;
 &lt;br&gt;&lt;p&gt;Por qué los Astrónomos ODIAN a Elon Musk (y por qué tienen razón) - YouTube... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://www.youtube.com/watch?v=G6A_Zh7lpoM&ab_channel=QuantumFracture.html&gt;Por qué los Astrónomos ODIAN a Elon Musk (y por qué tienen razón) - YouTube&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=&gt;Visita Links&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
+&lt;a href=https://www.youtube.com/watch?v=G6A_Zh7lpoM&ab_channel=QuantumFracture.html&gt;
 </description>
-    <pubDate>Sun, 10 Jan 2021 23:33 +0100</pubDate>
+    <pubDate>Mon, 11 Jan 2021 19:09 +0100</pubDate>
     <category>links</category>
     <category>links</category>
     <category>links</category>
