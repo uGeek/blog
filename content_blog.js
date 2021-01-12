@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker: topydo y todotxt-machine en un docker',
+            'text': 'Si te gusta el todo.txt, te gustará este docker', 
+            'tags': 'docker,todo.txt,tareas,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-12-docker-topydo-y-todotxt-machine-en-un-docker.html' 
+},
+{
             'title': 'Comando sudo y su',
             'text': 'Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución.', 
             'tags': 'bash,zsh,fish,bash,,', 

@@ -1,5 +1,5 @@
 <head>
-<title>Backup de tu Shaarli. uGeek Blog </title>
+<title>Docker: topydo y todotxt-machine en un docker. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Para hacer un backup de los enlaces que tenemos en shaarli, es muy sencillo." />
+<meta name="description" content="Si te gusta el todo.txt, te gustará este docker" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Backup de tu Shaarli" />
-<meta property="og:description" content="Para hacer un backup de los enlaces que tenemos en shaarli, es muy sencillo." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/shaarli.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html" />
+<meta property="og:title" content="Docker: topydo y todotxt-machine en un docker" />
+<meta property="og:description" content="Si te gusta el todo.txt, te gustará este docker" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/todotxt-machine.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-01-12-docker-topydo-y-todotxt-machine-en-un-docker.html" />
 
-<meta name="twitter:title" content="Backup de tu Shaarli" />
-<meta name="twitter:description" content="Para hacer un backup de los enlaces que tenemos en shaarli, es muy sencillo." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/shaarli.png" />
+<meta name="twitter:title" content="Docker: topydo y todotxt-machine en un docker" />
+<meta name="twitter:description" content="Si te gusta el todo.txt, te gustará este docker" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/todotxt-machine.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,24 +85,39 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="backup-de-tu-shaarli-1" title="Backup de tu Shaarli" data-export_file_name="backup-de-tu-shaarli" data-description="Para hacer un backup de los enlaces que tenemos en shaarli, es muy sencillo." data-export_date="2020-05-24 17:30" data-category="docker" data-tag="shaarli,rss,feed" data-image="./images-blog/shaarli.png">Backup de tu Shaarli</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 191 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Para hacer un backup de los enlaces que tenemos en shaarli, es muy sencillo.</p>
-<center>
-<p><img src="../images-blog/shaarli.png" /></p>
-</center>
-<h2 id="backup-de-tus-enlaces-en-shaarli">Backup de tus enlaces en Shaarli</h2>
-<p>Vamos ha hacer un <strong>cat</strong> del <strong>datastore.php</strong> y lo vamos a exportar fuera. En mi caso, voy a guardarlo en la carpeta de configuración del contenedor de shaarli</p>
-<pre><code>docker exec -t shaarli cat /var/www/shaarli/data/datastore.php &gt; ~/docker/shaarli/$(date +%Y-%m-%d_%H%M)-shaarli.php
+<h1 id="docker-topydo-y-todotxt-machine-en-un-docker-1" title="Docker: topydo y todotxt-machine en un docker" data-export_file_name="docker-topydo-y-todotxt-machine-en-un-docker" data-description="Si te gusta el todo.txt, te gustará este docker" data-export_date="2021-01-12 18:15" data-category="docker" data-tag="todo.txt,tareas" data-image="./images-blog/todotxt-machine.png">Docker: topydo y todotxt-machine en un docker</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 178 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Si te gusta el todo.txt, te gustará este docker</p>
+<h2 id="montar-el-docker-amd64">Montar el docker amd64</h2>
+<pre class="example"><code>docker run -it --name=todotxt -v $HOME/todo:/data ugeek/topydo-todotxt-machine:amd64 sh
 </code></pre>
-<p>Después, si montamos shaarli en otro lugar, solo tendremos que importar datastore.php, que además, vamos a añadir la fecha del backup.</p>
-<p>Recomiendo utilizar cron. Así nos despreocupamos y siempre tendremos nuestro backup.</p>
-<h2 id="fuente">Fuente</h2>
+<h2 id="montar-el-docker-para-arm-y-raspberry-pi">Montar el docker para ARM y Raspberry Pi</h2>
+<pre class="example"><code>docker run -it --name=todotxt -v $HOME/todo:/data ugeek/topydo-todotxt-machine:arm sh
+</code></pre>
+<h2 id="topydo">topydo</h2>
+<pre class="example"><code>docker exec -t todotxt topydo
+</code></pre>
+<h2 id="topydo.-prompt-mode">topydo. Prompt mode</h2>
+<pre class="example"><code>docker exec -t todotxt topydo prompt
+</code></pre>
+<h2 id="topydo.-columnas-o-método-kanban">topydo. Columnas o método Kanban</h2>
+<center>
+<p><img src="../images-blog/topydo.png" /></p>
+</center>
+<pre class="example"><code>docker exec -t todotxt topydo columns
+</code></pre>
+<h2 id="todotxt-machine">todotxt-machine</h2>
+<center>
+<p><img src="../images-blog/todotxt-machine.png" /></p>
+</center>
+<pre class="example"><code>docker exec -t todotxt todotxt-machine todo.txt done.txt
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://shaarli.readthedocs.io/en/latest/guides/backup-restore-import-export/" class="uri">https://shaarli.readthedocs.io/en/latest/guides/backup-restore-import-export/</a></li>
+<li><a href="https://github.com/bram85/topydo-" class="uri">https://github.com/bram85/topydo-</a> <a href="https://pypi.org/project/topydo/-" class="uri">https://pypi.org/project/topydo/-</a> <a href="https://github.com/AnthonyDiGirolamo/todotxt-machine-" class="uri">https://github.com/AnthonyDiGirolamo/todotxt-machine-</a> <a href="https://pypi.org/project/todotxt-machine/-" class="uri">https://pypi.org/project/todotxt-machine/-</a> <a href="https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html-" class="uri">https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html-</a> <a href="https://ugeek.github.io/blog/post/2020-01-31-a-python-tambien-le-gusta-el-todo-txt-todotxt-machine.html" class="uri">https://ugeek.github.io/blog/post/2020-01-31-a-python-tambien-le-gusta-el-todo-txt-todotxt-machine.html</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el domingo 24 mayo del 2020</p>
+<p>Publicado por Angel el martes 12 enero del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

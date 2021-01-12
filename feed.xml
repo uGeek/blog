@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker: topydo y todotxt-machine en un docker</title>
+    <link>https://ugeek.github.io/blog/post/2021-01-12-docker-topydo-y-todotxt-machine-en-un-docker.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/todotxt-machine.png" alt="Docker: topydo y todotxt-machine en un docker"&gt;
+&lt;br&gt;&lt;p&gt;Si te gusta el todo.txt, te gustará este docker... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-12-docker-topydo-y-todotxt-machine-en-un-docker.html&gt;Docker: topydo y todotxt-machine en un docker&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 12 Jan 2021  +0100</pubDate>
+    <category>docker</category>
+    <category>todo.txt</category>
+    <category>tareas</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-01-12-docker-topydo-y-todotxt-machine-en-un-docker.html</guid>
+   </item>
+   <item>
     <title>Comando sudo y su</title>
     <link>https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 06 Jan 2021  +0100</pubDate>
+    <pubDate>Wed, 06 Jan 2021 18:15 +0100</pubDate>
     <category>bash</category>
     <category>zsh</category>
     <category>fish</category>
