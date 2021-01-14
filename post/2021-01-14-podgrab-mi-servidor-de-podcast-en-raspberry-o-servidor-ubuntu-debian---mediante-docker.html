@@ -1,5 +1,5 @@
 <head>
-<title>Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic. uGeek Blog </title>
+<title>PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente." />
+<meta name="description" content="Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic" />
-<meta property="og:description" content="Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jamstash.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html" />
+<meta property="og:title" content="PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker" />
+<meta property="og:description" content="Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/podgrab.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html" />
 
-<meta name="twitter:title" content="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic" />
-<meta name="twitter:description" content="Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/jamstash.png" />
+<meta name="twitter:title" content="PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker" />
+<meta name="twitter:description" content="Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/podgrab.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,40 +85,69 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-jamstash.-cliente-de-subsonic-supysonic-airsonic-1" title="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic" data-export_file_name="Docker Jamstash Cliente de Subsonic" data-description="Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente." data-export_date="2019-10-08 18:00" data-category="docker" data-tag="raspberry,servidor,jamstash,subsonic" data-image="./images-blog/jamstash.png">Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 273 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Si tienes el servidor de música <strong>Supysonic</strong>, Subsonic, Airsonic,… Cualquiera de los servidores que utilizan la api de <strong>Subsonic</strong>, quizás quieras utilizar el navegador web como cliente.</p>
-<p>Jamstash es un proyecto que pretende el tener un cliente de Subsonic en tu navegador web, instalable en Google Chrome <a href="https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc">a través de su tienda de aplicaciones</a>.</p>
+<h1 id="podgrab.-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian-mediante-docker-1" title="PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker" data-export_file_name="podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker" data-description="Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito." data-export_date="2021-01-14 18:38" data-category="docker" data-tag="podcast" data-image="./images-blog/podgrab.png">PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,… mediante Docker</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 408 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito.</p>
 <center>
-<p><img src="../images-blog/jamstash.png" /></p>
+<p><img src="../images-blog/podgrab.png" /></p>
 </center>
-<p>Aprovechando el código de la aplicación disponible en GitHub, he montado un contenedor partiendo de un Alpine Linux y un servidor de Nginx.</p>
-<p>Este cliente permite el reproducir, crear listas, añadir a favoritos, descargar canciones, etc…</p>
+<p>Existe la posibilidad de buscar podcast a través de iTunes para su posterior susbcripción, así como importar mediante el archivo <em>OPML</em> que  tiene  la  mayor  parte  de  las  aplicaciones  de  podcast.</p>
 <center>
-<p><img src="../images-blog/jamstash2.png" /></p>
+<p><img src="../images-blog/podgrab1.png" /></p>
 </center>
-<p>Vamos a ver como montar el contenedor</p>
-<h2 id="docker-para-raspberry-o-arm">Docker para Raspberry o ARM</h2>
-<pre><code>docker run --name jamstash -d -p 80:80 ugeek/jamstash:arm
+<p>El desarrollador explica en su repositorio de GitHub, que la motivación de crear este servidor, fue que desde el inicio de pandemia comenzó a salir a correr y como no quería llevarse el móvil, decidió escuchar podcasts utilizando su reloj inteligente sincronizado con auriculares bluetooth y montó este método que podemos instalar a modo de servidor, para que se descarguen los podcast y tenerlos siempre disponibles.</p>
+<p>El desarrollador explica que está trabajando para implementar un reproductor integrado en el servidor y crear una API para que se puedan crear aplicaciones que sincronicen con este servidor.</p>
+<p>Docker oficial está genial, porque es compatible con  arquitecturas <strong>amd64, ARM / Raspberry Pi.</strong></p>
+<h2 id="docker-para-amd64-raspberry-pi-y-arm">Docker para amd64, Raspberry Pi y ARM</h2>
+<p>Yo he expuesto el servicio por el puerto 90</p>
+<pre class="example"><code>docker run -d -p 90:8080 --name=podgrab -v &quot;$HOME/docker/podgrab/assets:/assets&quot; -v &quot;$HOME/docker/podgrab/config:/config&quot; akhilrex/podgrab
 </code></pre>
-<h2 id="docker-para-amd64">Docker para amd64</h2>
-<pre><code>docker run --name jamstash -d -p 80:80 ugeek/jamstash:amd64
+<p>La base de datos que en el volumen <strong>/config</strong> y los podcasts se descargan en el directorio <strong>assets</strong>.</p>
+<h2 id="docker-compose">Docker-compose</h2>
+<p>Como siempre, para futuras modificaciones, recomiendo utilizar docker-compose</p>
+<pre class="example"><code>version: &quot;2.1&quot;
+services:
+podgrab:
+image: akhilrex/podgrab
+container_name: podgrab
+environment:
+- CHECK_FREQUENCY=240
+volumes:
+- $HOME/docker/podgrab:/config
+- /media/podcast:/assets
+ports:
+- 90:8080
+restart: unless-stopped
 </code></pre>
-<h2 id="uso-de-jamstash">Uso de Jamstash</h2>
-<p>Para utilizar el cliente Jamstash, según la línea del ejemplo anterior, corre por el puesto <strong>80</strong>. Podemos personalizar el puerto cambiando a un puerto libre disponible.</p>
-<p>Aquí utilizariamos el puerto 90.</p>
-<pre><code>-p 90:80
+<p>Después ejecutaremos:</p>
+<pre class="example"><code>docker-compose up -d
 </code></pre>
-<p>Siguiendo este nuevo ejemplo, nos conectaríamos desde nuestro navegador web a <a href="http://tu_ip:90" class="uri">http://tu_ip:90</a></p>
+<h3 id="variables-de-entorno">Variables de entorno</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Nombre</th>
+<th>Descripción</th>
+<th>Defecto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CHECK_FREQUENCY</td>
+<td>Con qué frecuencia comprobar si hay nuevos episodios y archivos faltantes (en minutos)</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusión">Conclusión</h2>
+<p>Hacía mucho tiempo que buscaba un servicio como este. Por fin tenemos la posibilidad de tener un servicio liviano, desarrollado en Go, para tener todos nuestros podcast favoritos accesibles y disponibles en un único lugar.</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="http://jamstash.com" class="uri">http://jamstash.com</a></li>
-<li><a href="https://github.com/tsquillario/Jamstash" class="uri">https://github.com/tsquillario/Jamstash</a></li>
-<li><a href="https://github.com/uGeek/docker-jamstash" class="uri">https://github.com/uGeek/docker-jamstash</a></li>
-<li><a href="https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc" class="uri">https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc</a></li>
+<li><a href="https://github.com/akhilrex/podgrab" class="uri">https://github.com/akhilrex/podgrab</a></li>
+<li><a href="https://hub.docker.com/r/akhilrex/podgrab/" class="uri">https://hub.docker.com/r/akhilrex/podgrab/</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el martes 08 octubre del 2019</p>
+<p>Publicado por Angel el jueves 14 enero del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

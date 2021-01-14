@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker',
+            'text': 'Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito.', 
+            'tags': 'docker,podcast,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html' 
+},
+{
             'title': 'Docker: topydo y todotxt-machine en un docker',
             'text': 'Si te gusta el todo.txt, te gustará este docker', 
             'tags': 'docker,todo.txt,tareas,,,', 

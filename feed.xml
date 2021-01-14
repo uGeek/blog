@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker</title>
+    <link>https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/podgrab.png" alt="PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker"&gt;
+&lt;br&gt;&lt;p&gt;Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html&gt;PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 14 Jan 2021  +0100</pubDate>
+    <category>docker</category>
+    <category>podcast</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html</guid>
+   </item>
+   <item>
     <title>Docker: topydo y todotxt-machine en un docker</title>
     <link>https://ugeek.github.io/blog/post/2021-01-12-docker-topydo-y-todotxt-machine-en-un-docker.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 12 Jan 2021  +0100</pubDate>
+    <pubDate>Tue, 12 Jan 2021 18:38 +0100</pubDate>
     <category>docker</category>
     <category>todo.txt</category>
     <category>tareas</category>
