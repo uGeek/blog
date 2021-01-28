@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker',
+            'text': 'Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. ', 
+            'tags': 'matrix,mensajería,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html' 
+},
+{
             'title': 'PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker',
             'text': 'Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito.', 
             'tags': 'docker,podcast,,,,', 

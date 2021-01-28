@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</title>
+    <link>https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/https://upcloud.com/wp-content/uploads/2017/03/matrix_logo-1.png" alt="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker"&gt;
+&lt;br&gt;&lt;p&gt;Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. ... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html&gt;Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 28 Jan 2021  +0100</pubDate>
+    <category>matrix</category>
+    <category>mensajería</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html</guid>
+   </item>
+   <item>
     <title>PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker</title>
     <link>https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 14 Jan 2021  +0100</pubDate>
+    <pubDate>Thu, 14 Jan 2021 18:55 +0100</pubDate>
     <category>docker</category>
     <category>podcast</category>
     <category></category>
