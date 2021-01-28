@@ -96,7 +96,7 @@ $("#tipue_search_input").tipuesearch();
 <p>Si vas a instalarlo en un Ubuntu, Debian,… con arquitectura amd64, puedes utilizar la imagen oficial <code>matrixdotorg/synapse</code>. Sustituye en cada comando <code>black0/synapse:v1.20.1</code> por <code>matrixdotorg/synapse</code>.</p>
 <h2 id="creando-archivos-de-configuración">Creando archivos de configuración</h2>
 <p>Vamos a utilizar la imagen con el comando <strong>generate</strong>, para generar el archivo de configuración de nuestro servidor matrix-synapse.</p>
-<p>Crearemos un volumen en la ruta  =$HOME/docker/synapse-data=, dónde están los archivos de configuración.</p>
+<p>Crearemos un volumen en la ruta <code>$HOME/docker/synapse-data</code>, dónde están los archivos de configuración.</p>
 <p>Recuerda añadir en la variable <strong>SYNAPSE_SERVERNAME</strong>,  la dirección de tu servidor.</p>
 <p>Voy a utilizar <code>matrix.ugeek.duckdns.org</code>, como dirección de ejemplo de mi servidor.</p>
 <pre class="example"><code>docker run -it --rm         -v $HOME/docker/synapse-data:/data         -e SYNAPSE_SERVER_NAME=matrix.ugeek.duckdns.org         -e SYNAPSE_REPORT_STATS=yes         black0/synapse:v1.20.1 generate
@@ -146,7 +146,7 @@ external: true
 <p>Para permitir el registro de usuarios, hay que editar el archivo <strong>homeserver.yaml</strong> y desmarcar la &quot;<strong>#</strong>&quot; habilitando <code>enable_registration: true</code>. </p>
 <pre class="example"><code>nano ~/docker/synapse-data/homeserver.yaml
 </code></pre>
-<p>Desmarcamos la opción <strong>enable_registration</strong> y ponemos *true.*\  </p>
+<p>Desmarcamos la opción <strong>enable_registration</strong> y ponemos <strong>true</strong>.  </p>
 <pre class="example"><code># Enable registration for new users.
 enable_registration: true
 </code></pre>
