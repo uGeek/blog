@@ -1,5 +1,5 @@
 <head>
-<title>Screen. Enviar scripts a segundo plano. uGeek Blog </title>
+<title>Saber si existen variables, directorios o archivos con bash. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano." />
+<meta name="description" content="#+HTML: <center>" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Screen. Enviar scripts a segundo plano" />
-<meta property="og:description" content="Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano." />
+<meta property="og:title" content="Saber si existen variables, directorios o archivos con bash" />
+<meta property="og:description" content="#+HTML: <center>" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-01-21-screen-enviar-scripts-a-segundo-plano.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-01-29-saber-si-existen-variables-directorios-o-archivos-con-bash.html" />
 
-<meta name="twitter:title" content="Screen. Enviar scripts a segundo plano" />
-<meta name="twitter:description" content="Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano." />
+<meta name="twitter:title" content="Saber si existen variables, directorios o archivos con bash" />
+<meta name="twitter:description" content="#+HTML: <center>" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
@@ -85,39 +85,149 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="screen.-enviar-scripts-a-segundo-plano-1" title="Screen. Enviar scripts a segundo plano" data-export_file_name="screen-enviar-scripts-a-segundo-plano" data-description="Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano." data-export_date="2020-01-21 20:50" data-category="bash" data-tag="screen,zsh" data-image="./images-blog/bash.png">Screen. Enviar scripts a segundo plano</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 316 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano.</p>
+<h1 id="saber-si-existen-variables-directorios-o-archivos-con-bash-1" title="Saber si existen variables, directorios o archivos con bash" data-export_file_name="saber-si-existen-variables-directorios-o-archivos-con-bash" data-description="#+HTML: &lt;center&gt;" data-export_date="2021-01-29 09:30" data-category="bash" data-tag="if,variables" data-image="./images-blog/bash.png">Saber si existen variables, directorios o archivos con bash</h1>
+<h5>Tiempo estimado de lectura: 5 minutos. 592 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Buscando en internet, he visto este artículo de <a href="https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash">Linux Center</a>super interesante, sobre si una variable tiene o no un valor.</p>
 <center>
 <p><img src="../images-blog/bash.png" /></p>
 </center>
-<p>Para ello vamos a utilizar <strong>screen</strong>. <strong>Screen</strong> mediante la opción <strong>-S</strong>, permite el crear un nombre de sesión. Ideal para recordar en que sesión se está ejecutando este script y así poder volver a esta.</p>
-<h2 id="enviar-script-a-segundo-plano">Enviar script a segundo plano</h2>
-<p>Vamos a enviar el <strong>script.sh</strong> a segundo plano. En este ejemplo el nombre de la sesión es <code>nombre_sesion</code>.</p>
-<pre><code>screen -dmS nombre_sesion script.sh
+<p>He copiado parte del artículo para tenerlo siempre accesible.</p>
+<p>Ya de pasada, para que el artículo sea más completo, he añadido también la comprobar si existe un directorio o archivo y si estos son ejecutables, tienen permisos…</p>
+<p>Para comprobarlo en estos ejemplos, utilizaremos siempre la sentencia <strong>if</strong>.</p>
+<h2 id="si-existe-un-directorio">Si existe un directorio</h2>
+<p>Con la opción <strong>-d</strong>, especificamos el directorio</p>
+<pre class="example"><code>#!/bin/bash
+
+DIRECTORIO=/root1
+
+if [ -d &quot;$DIRECTORIO&quot; ]
+then
+echo &quot;El directorio ${DIRECTORIO} existe&quot;
+else
+echo &quot;El directorio ${DIRECTORIO} no existe&quot;
+fi
+</code></pre>
+<h2 id="si-existe-un-archivo">Si existe un archivo</h2>
+<p>Con la opción <strong>-f</strong>, especificamos el archivo</p>
+<pre class="example"><code>#!/bin/bash
+
+ARCHIVO=/etc/passwd
+
+if [ -f $ARCHIVO ]
+then
+echo &quot;El fichero $ARCHIVO existe&quot;
+else
+echo &quot;El fichero $ARCHIVO no existe&quot;
+fi
 </code></pre>
 <ul>
-<li>-S -&gt; Establecer un nombre de sesión</li>
-<li>-d -m -&gt; Modo separado, crea una sesión aparte. Ideal para scripts de inicio del sistema.</li>
+<li>Con la opción <strong>-w</strong>, comprobamos si determinado archivo tiene permisos de escritura.</li>
+<li>Con la opción <strong>-x</strong>, comprobamos si determinado archivo tiene permisos de ejecución.</li>
 </ul>
-<h2 id="volver-a-la-sesión">Volver a la sesión</h2>
-<p>Para volver a la sesión donde se está ejecutando <strong>script.sh</strong>, escribiremos:</p>
-<pre><code>screen -r nombre_sesion
+<h2 id="saber-si-una-variable-existe">Saber si una variable existe</h2>
+<h3 id="si-existe-una-variable">Si existe una variable</h3>
+<p>Para saber si una variable existe y está inicializada en un script o tu máquina, que esté o no está vacía.</p>
+<p>Tomaremos <code>variable</code>&quot;&quot;= como ejemplo.</p>
+<pre class="example"><code>#!/bin/bash
+if [ &quot;$variable&quot; ]
+then
+echo &quot;La variable existe y no está vacía&quot;
+else
+echo &quot;La variable no existe o está vacía&quot;
+fi
 </code></pre>
-<h2 id="ver-todas-las-sesiones">Ver todas las sesiones</h2>
-<p>Si no recuerdas el nombre de sesión o simplemente, quieres ver cuantos procesos están corriendo en segundo plano con <strong>screen</strong>, escribiremos el siguiente comando</p>
-<pre><code>screen -ls 
+<p>El resultado sería: <code>La variable no existe o está vacía</code></p>
+<h2 id="variable-vacía">Variable vacía</h2>
+<pre class="example"><code>#!/bin/bash
+
+variable=&quot;&quot;
+
+if [ &quot;$variable&quot; ]
+then
+echo &quot;La variable existe y no está vacía&quot;
+else
+echo &quot;La variable no existe o está vacía&quot;
+fi
 </code></pre>
-<h2 id="cambiar-el-nombre-de-la-sesión">Cambiar el nombre de la sesión</h2>
-<p>Imaginemos que el número de sesión es 22180 y queremos ponerle el nombre backup-rclone una vez iniciado:</p>
-<pre><code>screen -S 22180 -X sessionname backup-rclone
+<p>Resultado: <code>La variable no existe o está vacía</code></p>
+<h2 id="variable-no-vacía">Variable no vacía</h2>
+<pre class="example"><code>#!/bin/bash
+
+variable=&quot;valor&quot;
+
+if [ &quot;$variable&quot; ]
+then
+echo &quot;La variable existe y no está vacía&quot;
+else
+echo &quot;La variable no existe o está vacía&quot;
+fi
 </code></pre>
-<p>En lugar de utilizar en número, también podemos canbiar el nombre sesión</p>
-<h2 id="matar-la-sesión">Matar la sesión</h2>
-<pre><code>screen -XS nombre_sesion quit
+<p>Resultado: <code>La variable existe y no está vacía</code></p>
+<h2 id="variable-con-valor-y-no-vacía">Variable con valor y no vacía</h2>
+<ul>
+<li>Lo primero que haremos es comprobar si existe.</li>
+<li>Si existe y no contiene nada, su valor es &quot;&quot;. Esto lo haremos con [ -n&quot;${variable-unset}&quot; ], que dará verdadero si no existe:</li>
+</ul>
+<pre><code>#!/bin/bash
+
+variable=&quot;valor&quot;
+
+if [ &quot;$variable&quot; ]
+then
+echo &quot;La variable existe y no está vacía&quot;
+else
+if [ -n &quot;${variable-unset}&quot; ] 
+then
+echo &quot;La variable no existe&quot;
+else
+echo &quot;La variable existe pero está vacía&quot;
+fi
+fi
 </code></pre>
+<p>Resultado: <code>La variable existe y no está vacía</code></p>
+<p>Y ahora probaremos si la cadena está vacía:</p>
+<pre class="example"><code>#!/bin/bash
+
+variable=&quot;&quot;
+
+if [ &quot;$variable&quot; ]
+then
+echo &quot;La variable existe y no está vacía&quot;
+else
+if [ -n &quot;${variable-unset}&quot; ]
+then
+echo &quot;La variable no existe&quot;
+else
+echo &quot;La variable existe pero está vacía&quot;
+fi
+fi
+</code></pre>
+<p>Resultado: <code>La variable existe pero está vacía</code></p>
+<p>Sin variable (la comento):</p>
+<pre class="example"><code>#!/bin/bash
+
+# variable=&quot;&quot;
+
+if [ &quot;$variable&quot; ]
+then
+echo &quot;La variable existe y no está vacía&quot;
+else
+if [ -n &quot;${variable-unset}&quot; ]
+then
+echo &quot;La variable no existe&quot;
+else
+echo &quot;La variable existe pero está vacía&quot;
+fi
+fi
+</code></pre>
+<p>Resultado: <code>La variable no existe</code></p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash" class="uri">https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash</a></li>
+<li><a href="https://www.sysadmit.com/2018/01/linux-saber-si-existe-directorio-fichero.html" class="uri">https://www.sysadmit.com/2018/01/linux-saber-si-existe-directorio-fichero.html</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el martes 21 enero del 2020</p>
+<p>Publicado por Angel el viernes 29 enero del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
