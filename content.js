@@ -1,7 +1,7 @@
 var tipuesearch = {pages: [
 {
             'title': 'Saber si existen variables, directorios o archivos con bash',
-            'text': '#+HTML: <center>', 
+            'text': 'Buscando en internet, he visto este artículo de Linux Center super interesante, sobre si una variable tiene o no un valor.', 
             'tags': 'bash,if,variables,,,', 
             'url': 'https://ugeek.github.io/blog/post/2021-01-29-saber-si-existen-variables-directorios-o-archivos-con-bash.html' 
 },
