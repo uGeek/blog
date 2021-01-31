@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Mi nueva nube es ownCloud',
+            'text': 'Después de probar Nextcloud, FileRun,... y otras tantas nubes, me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10, ha decidido reescribir el', 
+            'tags': 'owncloud,nube,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html' 
+},
+{
             'title': 'Saber si existen variables, directorios o archivos con bash',
             'text': 'Buscando en internet, he visto este artículo de Linux Center super interesante, sobre si una variable tiene o no un valor.', 
             'tags': 'bash,if,variables,,,', 
