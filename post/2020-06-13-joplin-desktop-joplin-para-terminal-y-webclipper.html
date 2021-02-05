@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="joplin-desktop-joplin-para-terminal-y-webclipper-1" title="Joplin Desktop, Joplin para Terminal y WebClipper" data-export_file_name="joplin-desktop-joplin-para-terminal-y-webclipper" data-description="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." data-export_date="2020-06-13 19:30" data-category="joplin" data-tag="notas,terminal" data-image="./images-blog/joplin.png">Joplin Desktop, Joplin para Terminal y WebClipper</h1>
-<h5>Tiempo estimado de lectura: 26 minutos. 2946 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
+<h1 id="joplin-desktop-joplin-para-terminal-y-webclipper-1" title="Joplin Desktop, Joplin para Terminal y WebClipper" data-export_file_name="joplin-desktop-joplin-para-terminal-y-webclipper" data-description="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." data-export_date="2020-06-13 19:30 2021-02-02" data-category="joplin" data-tag="notas,terminal" data-image="./images-blog/joplin.png">Joplin Desktop, Joplin para Terminal y WebClipper</h1>
+<h5>Tiempo estimado de lectura: 27 minutos. 3031 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
 <p>Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav.</p>
 <center height="250" width="250">
 <p><img src="../images-blog/joplin.png" /></p>
@@ -126,13 +126,12 @@ $("#tipue_search_input").tipuesearch();
 <p>También podemos crear sublibretas. Esta opción también a día de hoy, es exclusiva en la versión desktop. EL desarrollador ya ha comunicado que en breve estará en la versión mobile.</p>
 <h2 id="joplin-para-terminal">Joplin para Terminal</h2>
 <p>Vamos a instalar la versión para utilizar Joplin desde la terminal.</p>
-<h3 id="instalando-node">Instalando Node</h3>
-<p>Primero instalaremos Node 10 o superior</p>
-<pre><code>sudo apt update
-sudo apt install nodejs
+<h3 id="instalar-una-dependencia-necesaria">Instalar una dependencia necesaria</h3>
+<pre><code>sudo apt install libsecret-1-dev
 </code></pre>
-<p>Ahora npm</p>
-<pre><code>sudo apt install npm
+<h3 id="descarga-y-actualiza-node-npm">Descarga y actualiza Node / NPM</h3>
+<pre><code>curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash
+sudo apt install -y nodejs
 </code></pre>
 <h3 id="instalando-joplin-cli">Instalando Joplin-cli</h3>
 <p>Podemos instalar la versión de terminal en nuestro pc con arquitectura amd64 o en nuestra Raspberry Pi con arquitectura ARM.</p>
@@ -141,6 +140,11 @@ sudo apt install nodejs
 <p>Creamos un enlace, así en la terminal, con solo escribir joplin, nos abrirá joplin-cli.</p>
 <pre><code>sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin
 </code></pre>
+<p>Resumido en un solo comando, para que copies y pegues en la terminal:</p>
+<pre><code>NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplin
+sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin
+</code></pre>
+<p>Ahora escribiendo <strong><strong>joplin</strong></strong> en tu terminal, se debería abrir.</p>
 <h3 id="carpeta-de-configuración">Carpeta de configuración</h3>
 <p>Los archivos de configuración, pueden estar en la carpeta</p>
 <pre><code>~/.config/joplin
@@ -717,8 +721,16 @@ Muestra información de la versión
 <li><a href="https://appimage.github.io/Joplin/" class="uri">https://appimage.github.io/Joplin/</a></li>
 <li><a href="https://discourse.joplinapp.org/" class="uri">https://discourse.joplinapp.org/</a> (Foro)</li>
 </ul>
+<p>notas Instalando Node</p>
+<p>En la versión anterior de <strong><strong>joplin</strong></strong> para cli, teniamos suficiente instalando <strong><strong>nodejs</strong></strong> y <strong><strong>npm</strong></strong> desde repositorios, ahora es necesario actualizar para solucionar el problema.</p>
+<pre><code>sudo apt update
+sudo apt install nodejs
+</code></pre>
+<p>Ahora npm</p>
+<pre><code>sudo apt install npm
+</code></pre>
 <br>
-<p>Publicado por Angel el sábado 13 junio del 2020</p>
+<p>Publicado por Angel el sábado 13 junio del 2020 y <strong>actualizado</strong> el martes 02 febrero del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

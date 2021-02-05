@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="gonic.-el-mejor-y-más-ligero-servidor-de-música-con-api-subsonic-1" title="Gonic. El mejor y más ligero servidor de música con api Subsonic" data-export_file_name="gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic" data-description="El desarrollador [[https://github.com/sentriz][Senan Kelly]], ha creado Gonic, un servidor ultra rápido y ligero (En mi Raspberry Pi consume solo 17-19 Mb de ram) que mejora todavía más la experiencia en" data-export_date="2020-05-06 18:15" data-category="subsonic" data-tag="música,raspberry" data-image="./images-blog/gonic.png">Gonic. El mejor y más ligero servidor de música con api Subsonic</h1>
-<h5>Tiempo estimado de lectura: 7 minutos. 804 palabras.    <a href="https://ugeek.github.io/blog/categories/subsonic">subsonic</a></h5>
+<h1 id="gonic.-el-mejor-y-más-ligero-servidor-de-música-con-api-subsonic-1" title="Gonic. El mejor y más ligero servidor de música con api Subsonic" data-export_file_name="gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic" data-description="El desarrollador [[https://github.com/sentriz][Senan Kelly]], ha creado Gonic, un servidor ultra rápido y ligero (En mi Raspberry Pi consume solo 17-19 Mb de ram) que mejora todavía más la experiencia en" data-export_date="2020-05-06 18:15 2021-02-04" data-category="subsonic" data-tag="música,raspberry" data-image="./images-blog/gonic.png">Gonic. El mejor y más ligero servidor de música con api Subsonic</h1>
+<h5>Tiempo estimado de lectura: 7 minutos. 848 palabras.    <a href="https://ugeek.github.io/blog/categories/subsonic">subsonic</a></h5>
 <p>El desarrollador <a href="https://github.com/sentriz">Senan Kelly</a>, ha creado Gonic, un servidor ultra rápido y ligero (En mi Raspberry Pi consume solo 12-19 Mb de ram) que mejora todavía más la experiencia en dispositivos como una Raspberry Pi.</p>
 <center>
 <p><img src="../images-blog/gonic.png" /></p>
@@ -117,13 +117,29 @@ $("#tipue_search_input").tipuesearch();
   -v $HOME/media/musica:/music:ro \
   -v $HOME/docker/gonic/data:/data \
   -v $HOME/docker/gonic/cache:/cache \
-  ugeek/gonic:arm-0.8.8
+  -v $HOME/docker/gonic/podcasts:/podcasts \     
+  ugeek/gonic:arm
 </code></pre>
 <ul>
 <li>/data -&gt; base de datos de gonic, etc…</li>
 <li>/music -&gt; tu música</li>
+<li>/podcasts -&gt; tus podcasts</li>
 <li>/cache -&gt; trasncodificación</li>
 </ul>
+<h2 id="docker-compose-para-raspberry-pi-arm">Docker-compose para Raspberry Pi, ARM</h2>
+<pre><code>version: &quot;3&quot;
+services:
+  gonic_web:
+    image: ugeek/gonic:arm
+    container_name: gonic
+    ports:
+      - 88:80
+    volumes:
+      - $HOME/docker/gonic/musica:/music:ro
+      - $HOME/docker/gonic/podcasts:/podcasts
+      - $HOME/docker/gonic/data:/data
+      - $HOME/docker/gonic/cache:/cache
+</code></pre>
 <h2 id="docker-oficial-para-amd64">Docker oficial para amd64</h2>
 <pre><code>docker create \
   --name=gonic \
@@ -131,6 +147,7 @@ $("#tipue_search_input").tipuesearch();
   -v $HOME/media/musica:/music:ro \
   -v $HOME/docker/gonic/data:/data  \
   -v $HOME/docker/gonic/cache:/cache \
+  -v $HOME/docker/gonic/podcasts:/podcasts \
   sentriz/gonic:latest
 </code></pre>
 <h2 id="administración-de-gonic">Administración de Gonic</h2>
@@ -193,7 +210,7 @@ show gonic version
 <li><a href="https://github.com/sentriz/gonic" class="uri">https://github.com/sentriz/gonic</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el miércoles 06 mayo del 2020</p>
+<p>Publicado por Angel el miércoles 06 mayo del 2020 y <strong>actualizado</strong> el jueves 04 febrero del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
