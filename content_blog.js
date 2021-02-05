@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Instalando la última versión de Qutebrowser',
+            'text': 'He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona.', 
+            'tags': 'qutebrowser,navegador,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-02-05-instalando-la-ultima-version-de-qutebrowser.html' 
+},
+{
             'title': 'Mi nueva nube es ownCloud',
             'text': 'Después de probar Nextcloud, FileRun,... y otras tantas nubes, me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10, ha decidido reescribir el', 
             'tags': 'owncloud,nube,,,,', 

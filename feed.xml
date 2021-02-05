@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Instalando la última versión de Qutebrowser</title>
+    <link>https://ugeek.github.io/blog/post/2021-02-05-instalando-la-ultima-version-de-qutebrowser.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/qutebrowser.png" alt="Instalando la última versión de Qutebrowser"&gt;
+&lt;br&gt;&lt;p&gt;He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-02-05-instalando-la-ultima-version-de-qutebrowser.html&gt;Instalando la última versión de Qutebrowser&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 05 Feb 2021  +0100</pubDate>
+    <category>qutebrowser</category>
+    <category>navegador</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-02-05-instalando-la-ultima-version-de-qutebrowser.html</guid>
+   </item>
+   <item>
     <title>Mi nueva nube es ownCloud</title>
     <link>https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 31 Jan 2021  +0100</pubDate>
+    <pubDate>Sun, 31 Jan 2021 08:55 +0100</pubDate>
     <category>owncloud</category>
     <category>nube</category>
     <category></category>

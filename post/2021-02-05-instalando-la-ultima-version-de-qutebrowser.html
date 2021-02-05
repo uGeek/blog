@@ -1,5 +1,5 @@
 <head>
-<title>nube</title>
+<title> Instalando la última versión de Qutebrowser. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,27 +47,109 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>nube</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instalando-la-última-versión-de-qutebrowser-1" title="Instalando la última versión de Qutebrowser" data-export_file_name="instalando-la-ultima-version-de-qutebrowser" data-description="He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona." data-export_date="2021-02-05 08:55" data-category="qutebrowser" data-tag="navegador" data-image="./images-blog/qutebrowser.png">Instalando la última versión de Qutebrowser</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 247 palabras.    <a href="https://ugeek.github.io/blog/categories/qutebrowser">qutebrowser</a></h5>
+<p>He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona.</p>
+<center>
+<p><img src="../images-blog/qutebrowser.png" /></p>
+</center>
+<p>Se trataba de descargar el archivo <strong>.zip</strong> de la última release, descomprimirlo y ejecutar los siguientes comandos:</p>
+<pre><code>sudo apt install python3-pip
+pip3 install --user pyqt5 pypeg2 jinja2 pygments
+sudo apt-get install python3-venv
+sudo apt install python3-pyqt5.qtwebengine
+python3 scripts/mkvenv.py
+</code></pre>
+<p>Por último, ejecutar:</p>
+<pre><code>python3 qutebrowser.py
+</code></pre>
+<p>Pero esto da errores.</p>
+<p>La solución ha sido acudir a la <a href="https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc">documentación Oficial</a>.</p>
+<h3 id="instalación-de-qutebrowser-versión-2-en-ubuntu-20.04">Instalación de Qutebrowser versión 2 en Ubuntu 20.04</h3>
+<p>Primero instalaremos la versión de repositorios 1.10</p>
+<pre><code>sudo apt install qutebrowser
+</code></pre>
+<p>Ahora vamos a instalar la nueva versión. Nos situaremos en el directorio <strong>HOME</strong> y clonamos el repositorio.</p>
+<pre><code>cd
+
+git clone https://github.com/qutebrowser/qutebrowser.git
+
+cd qutebrowser
+</code></pre>
+<p>Como lo hacemos desde git, instalaremos:</p>
+<pre><code>sudo apt install --no-install-recommends asciidoc
+</code></pre>
+<pre><code>python3 scripts/asciidoc2html.py
+</code></pre>
+<p>El video o el sonido no funcionan con QtWebKit, instala los complementos de gstreamer:</p>
+<pre><code>sudo apt install gstreamer1.0-plugins-{bad,base,good,ugly}
+</code></pre>
+<p>Instalamos python3-venv</p>
+<pre><code>sudo apt-get install python3-venv
+</code></pre>
+<pre><code>python3 scripts/mkvenv.py
+</code></pre>
+<p>Ahora debería arrancar qutebrowser con:</p>
+<pre><code>.venv/bin/python3 -m qutebrowser
+</code></pre>
+<p>Si todo ha funcionado correctamente, vamos ha crear un script para correr la última versión de Qutebrowser por defecto, en lugar de la de repositorios.</p>
+<h3 id="crea-el-siguiente-script">Crea el siguiente script</h3>
+<pre><code>sudo nano /usr/local/bin/qutebrowser
+</code></pre>
+<p>Damos permisos de ejecución:</p>
+<pre><code>sudo chmod +x /usr/local/bin/qutebrowser
+</code></pre>
+<p>Copia el siguiente contenido</p>
+<pre><code>#!/bin/bash
+~/qutebrowser/.venv/bin/python3 -m qutebrowser &quot;$@&quot;
+</code></pre>
+<p>Ya tenemos la última versión!!!</p>
+<h3 id="fuentes">Fuentes</h3>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html>Montar un servidor webdav con dafs2</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html>GPG. Cifrado de archivos simétrico</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html>Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html>Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html>Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-01-backup-de-mis-notas-de-paper-dropbox.html>Backup de mis Notas de Paper Dropbox</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html>Docker: Servidor Webdav</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html>Sincronización con Rclone via SSH y SFTP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html>Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html>FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html>FileRun. Cambiando el idioma por defecto</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-07-07-filerun-utilizando-tu-hora-local.html>FileRun. Utilizando tu hora local</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html>Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html>Mi nueva nube es ownCloud</a></li>
+<li><a href="https://github.com/qutebrowser/qutebrowser/" class="uri">https://github.com/qutebrowser/qutebrowser/</a></li>
+<li><a href="https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#tox" class="uri">https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#tox</a></li>
+<li><a href="https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc" class="uri">https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc</a></li>
 </ul>
+<br>
+<p>Publicado por Angel el viernes 05 febrero del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
