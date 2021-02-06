@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker. Servidor SSH para conectarte por SFTP',
+            'text': 'Me he encontrado con un dilema cuando he montado ownCloud y es que antes tenía directorios en mi Raspberry con los que editaba mis orgmode, todo.txt, que ahora están dentro', 
+            'tags': 'ssh,bash,servidor,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html' 
+},
+{
             'title': 'Instalando la última versión de Qutebrowser',
             'text': 'He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona.', 
             'tags': 'qutebrowser,navegador,,,,', 
