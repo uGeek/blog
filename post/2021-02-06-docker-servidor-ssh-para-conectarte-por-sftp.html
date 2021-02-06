@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="docker.-servidor-ssh-para-conectarte-por-sftp-1" title="Docker. Servidor SSH para conectarte por SFTP" data-export_file_name="docker-servidor-ssh-para-conectarte-por-sftp" data-description="Me he encontrado con un dilema cuando he montado ownCloud y es que antes tenía directorios en mi Raspberry con los que editaba mis orgmode, todo.txt, que ahora están dentro" data-export_date="2021-02-06 18:30" data-category="ssh" data-tag="bash,servidor" data-image="./images-blog/sftp.png">Docker. Servidor SSH para conectarte por SFTP</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 505 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<h5>Tiempo estimado de lectura: 4 minutos. 531 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
 <p>Me he encontrado con un dilema cuando he montado ownCloud y es que antes tenía directorios en mi Raspberry con los que editaba mis orgmode, todo.txt, que ahora están dentro de la nube y no los puedo editar.</p>
 <p>Para solucionar este problema, he creado un docker con un servidor SSH para conectarme via SFTP. De esta manera también soluciono el problema que me comento un oyente, de como crear un servidor para conectarse a un directorio remoto cifrando el tráfico, todo ello dentro de una red local.</p>
 <center>
@@ -111,6 +111,11 @@ $("#tipue_search_input").tipuesearch();
 <li>usuario: root</li>
 <li>contraseña: EntraenlaMatrix</li>
 </ul>
+<h2 id="conectate-al-servidor">Conectate al servidor</h2>
+<p>Para conectarse al servidor con Linux:</p>
+<p>``` ssh root@localhost -p 7777 ```</p>
+<p>Si nuestra ip fuera 192.168.1.100:</p>
+<p>``` ssh root@192.168.1.100 -p 7777 ```</p>
 <h2 id="cambiar-contraseña">Cambiar Contraseña</h2>
 <p><code>EntraenlaMatrix</code> es la contraseña por defecto, pero quizás quieras cambiarla por una que decidas tu. </p>
 <p>Vamos a cambiar la contraseña.  Para hacer esto, tenemos que utilizar el comando <code>passwd.</code></p>
