@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Instalando Thunderbird y añadiendo el corrector ortográfico</title>
+    <link>https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/thunderbird.png" alt="Instalando Thunderbird y añadiendo el corrector ortográfico"&gt;
+&lt;br&gt;&lt;p&gt;Una de las aplicaciones que me encanta para gestionar el correo electrónico es Thunderbird.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html&gt;Instalando Thunderbird y añadiendo el corrector ortográfico&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 08 Feb 2021  +0100</pubDate>
+    <category>correo</category>
+    <category>ubuntu</category>
+    <category>debian</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html</guid>
+   </item>
+   <item>
     <title>Docker. Servidor SSH para conectarte por SFTP</title>
     <link>https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 06 Feb 2021  +0100</pubDate>
+    <pubDate>Sat, 06 Feb 2021 09:00 +0100</pubDate>
     <category>ssh</category>
     <category>bash</category>
     <category>servidor</category>

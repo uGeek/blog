@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Instalando Thunderbird y añadiendo el corrector ortográfico',
+            'text': 'Una de las aplicaciones que me encanta para gestionar el correo electrónico es Thunderbird.', 
+            'tags': 'correo,ubuntu,debian,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html' 
+},
+{
             'title': 'Docker. Servidor SSH para conectarte por SFTP',
             'text': 'Me he encontrado con un dilema cuando he montado ownCloud y es que antes tenía directorios en mi Raspberry con los que editaba mis orgmode, todo.txt, que ahora están dentro', 
             'tags': 'ssh,bash,servidor,,,', 
