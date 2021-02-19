@@ -96,16 +96,14 @@ $("#tipue_search_input").tipuesearch();
 <p>Mediante el almacenamiento externo de ownCloud, voy a conectarme a este docker por SFTP y con esto ganaré el tener los archivos fuera de la nube ownCloud y mantener todas las ventajas de mi nube como el control de versiones.</p>
 <p>He creado el docker para varias arquitecturas partiendo de un Alpine Linux, lo que significa que la imágen tan solo tiene 11mb de tamaño y no consume nada en reposo.</p>
 <h2 id="docker-para-raspberry-o-arm">Docker para Raspberry o ARM</h2>
-<pre class="example"><code>docker run -d --name=ssh -p 7777:22 -v /nube:/nube  ugeek/ssh:arm
-</code></pre>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> run -d --name=ssh -p 7777:22 -v /nube:/nube  ugeek/ssh:arm</a></code></pre></div>
 <p>Por defecto:</p>
 <ul>
 <li>usuario: root</li>
 <li>contraseña: EntraenlaMatrix</li>
 </ul>
 <h2 id="docker-para-amd64">Docker para AMD64</h2>
-<pre class="example"><code>docker run -d --name=ssh -p 7777:22 -v /nube:/nube  ugeek/ssh:amd64
-</code></pre>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> run -d --name=ssh -p 7777:22 -v /nube:/nube  ugeek/ssh:amd64</a></code></pre></div>
 <p>Por defecto:</p>
 <ul>
 <li>usuario: root</li>
@@ -122,19 +120,16 @@ $("#tipue_search_input").tipuesearch();
 <p><code>EntraenlaMatrix</code> es la contraseña por defecto, pero quizás quieras cambiarla por una que decidas tu. </p>
 <p>Vamos a cambiar la contraseña.  Para hacer esto, tenemos que utilizar el comando <code>passwd.</code></p>
 <p>Podemos hacerlo con un solo comando con:</p>
-<pre class="example"><code>docker exec -it ssh passwd
-</code></pre>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">docker</span> exec -it ssh passwd</a></code></pre></div>
 <p>Ahora pedirá que pongamos la nueva contraseña que queremos utilizar, la introducimos dos veces y ya está.</p>
 <h2 id="archivo-de-configuración-de-ssh">Archivo de configuración de ssh </h2>
 <p>El archivo de configuración del servidor ssh, lo podemos encontrar en <strong>/etc/ssh/ssh_config</strong>.</p>
 <h2 id="enviando-las-llaves-para-no-utilizar-contraseña">Enviando las  llaves para no utilizar contraseña</h2>
 <p>Para no tener que escribir la contraseña cada vez y para darle más seguridad a nuestro servidor, vamos añadir la llave pública en nuestro servidor.</p>
 <p>Creamos directorio de configuración ssh</p>
-<pre class="example"><code>docker exec -it ssh mkdir /root/.ssh
-</code></pre>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">docker</span> exec -it ssh mkdir /root/.ssh</a></code></pre></div>
 <p>Creamos el archivo <strong>authorized_keys</strong> y añadimos id_*rsa.pub* de nuestra máquina local</p>
-<pre class="example"><code>docker exec -it ssh vi /root/.ssh/authorized_keys
-</code></pre>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">docker</span> exec -it ssh vi /root/.ssh/authorized_keys</a></code></pre></div>
 <p>Ahora solo falta que envíes o añadas añadas la llave pública del servidor.</p>
 <h2 id="fuentes">Fuentes</h2>
 <p>El Dockerfile de este contenedor, lo he extraído de un repositorio del GitHub <a href="https://github.com/AzagraMac/alpine-ssh" class="uri">https://github.com/AzagraMac/alpine-ssh</a></p>

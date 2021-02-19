@@ -96,15 +96,12 @@ $("#tipue_search_input").tipuesearch();
 <p>Vamos a ver como hacer esto. </p>
 <h2 id="con-un-enlace-simbólico">Con un enlace simbólico</h2>
 <p>Es el método que menos me gusta, a veces los dockers no pueden leer desde enlaces simbólicos. </p>
-<pre class="example"><code>ln -s /webdav/Música /home/angel/Música
-</code></pre>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">ln</span> -s /webdav/Música /home/angel/Música</a></code></pre></div>
 <h2 id="con-mount">Con mount</h2>
 <p>Este me gusta mucho más y tenemos que ejecutarlo como root</p>
-<pre class="example"><code>sudo mount --bind /webdav/Música /home/angel/Música
-</code></pre>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> mount --bind /webdav/Música /home/angel/Música</a></code></pre></div>
 <p>Para desmontarlo</p>
-<pre class="example"><code>sudo umount /home/angel/Música
-</code></pre>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> umount /home/angel/Música</a></code></pre></div>
 <p>Este último método, podríamos añadirlo en un script con cron, montando y desmontando cuando lo deseemos.</p>
 <br>
 <p>Publicado por Angel el lunes 04 enero del 2021</p>

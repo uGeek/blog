@@ -96,39 +96,30 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="comando-su">Comando su</h2>
 <p>Es un comando que te permite convertirte temporalmente en otro usuario.</p>
 <p>La sintaxis del comando <code>su</code> es la siguiente:</p>
-<pre class="example"><code>su [OPTIONS] [USER [ARGUMENT...]
-</code></pre>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">su</span> [OPTIONS] [USER [ARGUMENT...]</a></code></pre></div>
 <p>Para cambiar el usuario actual al usuario root, e iniciar la shell como root</p>
-<pre class="example"><code>su
-</code></pre>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">su</span></a></code></pre></div>
 <p>Una vez introducida la contraseña, estaremos en una sesión de root.</p>
 <p>Para confirmar que realmente estamos en la sesión root y no en el usuario, introduciremos el comando <code>whoami</code></p>
-<pre class="example"><code>whoami
-</code></pre>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">whoami</span></a></code></pre></div>
 <p>Si iniciamos la sesión con -, <code>-l</code> o <code>--login</code>, cambiar directorio de actual de la shell, inicia como si comentaremos una sesión totalmente de cero.</p>
-<pre class="example"><code>su -
-</code></pre>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">su</span> -</a></code></pre></div>
 <p>Para iniciar la nueva sesión iniciando un comando, por ejemplo zsh</p>
-<pre class="example"><code>su -s /usr/bin/zsh
-</code></pre>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">su</span> -s /usr/bin/zsh</a></code></pre></div>
 <p>Para preservar el entorno actual de usuario ejecutando comandos de root, utilizaremos la opción <code>-p</code>, <code>--preserve-environment</code></p>
-<pre class="example"><code>su -p
-</code></pre>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">su</span> -p</a></code></pre></div>
 <p>Si utilizas la opción <code>-</code>, <code>-p</code> se ignora.</p>
 <h2 id="cambiar-de-usuario">Cambiar de usuario</h2>
 <p>Para cambiar a otra sesión de usuario</p>
-<pre class="example"><code>su angel
-</code></pre>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">su</span> angel</a></code></pre></div>
 <h2 id="su-o-sudo-ubuntu">su o sudo? Ubuntu</h2>
 <p>En distribuciones como Ubuntu, el comando su no funciona, debido que la cuenta root está deshabilitado por defecto.</p>
 <p>Para acceder como root en estas distribuciones tenemos que utilizar el comando</p>
 <p>sudo permite ejecutar comandos como otro usuario.</p>
 <p>Para entrar como root, sería escribir sudo seguido de su , e introducir la contraseña del usuario actual. Solo podremos entrar como usuario root si este usuario tiene permisos de administración.</p>
-<pre class="example"><code>sudo su -
-</code></pre>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">sudo</span> su -</a></code></pre></div>
 <p>Para entrar como usuario root y estar dentro del entorno de este usuario</p>
-<pre class="example"><code>sudo -i
-</code></pre>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">sudo</span> -i</a></code></pre></div>
 <p> sería equivalente a sudo -</p>
 <p>La ventaja del comando sudo, es ejecutar instrucciones como usuario root dentro de la sesión de un usuario.</p>
 <h2 id="fuentes">Fuentes</h2>

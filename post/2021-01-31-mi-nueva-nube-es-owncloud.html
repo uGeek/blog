@@ -158,7 +158,7 @@ $("#tipue_search_input").tipuesearch();
 </tr>
 </tbody>
 </table>
-<pre class="example"><code>owncloud:
+<pre><code>owncloud:
 container_name: owncloud
 image: owncloud/server
 ports:
@@ -171,7 +171,7 @@ volumes:
 - $HOME/docker/owncloud:/mnt/data
 </code></pre>
 <h2 id="docker-compose-con-proxy-inverso-en-traefik">Docker-compose con proxy inverso en traefik</h2>
-<pre class="example"><code>services:
+<pre><code>services:
 owncloud:
 container_name: owncloud
 image: owncloud/server
@@ -199,10 +199,10 @@ web:
 external: true
 </code></pre>
 <h2 id="docker-cli-para-raspberry-o-arm">Docker cli para Raspberry o ARM</h2>
-<pre class="example"><code>docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/owncloud:/mnt/data owncloud/server
+<pre><code>docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/owncloud:/mnt/data owncloud/server
 </code></pre>
 <h2 id="docker-compose">Docker Compose</h2>
-<pre class="example"><code>owncloud:
+<pre><code>owncloud:
 container_name: owncloud
 image: owncloud/qnap:10.6
 ports:
@@ -215,7 +215,7 @@ volumes:
 - $HOME/docker/owncloud:/mnt/data
 </code></pre>
 <h2 id="docker-compose-arm-proxy-inverso-con-traefik">Docker-compose ARM proxy inverso con Traefik</h2>
-<pre class="example"><code>services:
+<pre><code>services:
 owncloud:
 container_name: owncloud
 image: owncloud/qnap:10.6
