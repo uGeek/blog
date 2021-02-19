@@ -1,0 +1,188 @@
+<head>
+<title>Proxy Inverso con Caddy. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán ." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Proxy Inverso con Caddy" />
+<meta property="og:description" content="Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán ." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/caddy.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html" />
+
+<meta name="twitter:title" content="Proxy Inverso con Caddy" />
+<meta name="twitter:description" content="Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán ." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/caddy.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="proxy-inverso-con-caddy-1" title="Proxy Inverso con Caddy" data-export_file_name="proxy-inverso-con-caddy" data-description="Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán ." data-export_date="2021-02-19 15:35" data-category="proxy-inverso" data-tag="go,proxy,inverso" data-image="./images-blog/caddy.png">Proxy Inverso con Caddy</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 479 palabras.    <a href="https://ugeek.github.io/blog/categories/proxy-inverso">proxy-inverso</a></h5>
+<p>Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán .</p>
+<center>
+<p><img src="../images-blog/caddy.png" /></p>
+</center>
+<p>Ya había visto a diferentes artículos de cómo construir tu proxy inverso con Caddy, incluso algunos docker-compose, pero no me había llamado la atención del todo hasta el comentario de Germán.</p>
+<p>La verdad es que este servicio es alucinante. Es una fusión entre traefik, poder levantar todos tus servicios con su certificado desde un archivo de texto plano y sencillez como Nginx Proxy Manager.</p>
+<h3 id="qué-es-caddy">Qué es Caddy</h3>
+<p>Caddy 2 es un potente servidor web de código abierto desarrollado en go.</p>
+<p>Simplifica su infraestructura y se encarga de las renovaciones de certificados.</p>
+<p>Funciona muy bien en contenedores porque no tiene dependencias.</p>
+<p>Aunque la mayoría de la gente lo usa como servidor web o proxy, es una excelente opción tambien para:</p>
+<ul>
+<li>Servidor web</li>
+<li>proxy inverso</li>
+<li>proxy de sidecar</li>
+<li>equilibrador de carga</li>
+<li>Puerta de enlace API</li>
+<li>controlador de ingreso</li>
+<li>administrador de sistemas</li>
+<li>supervisor de proceso</li>
+<li>programador de tareas</li>
+<li>(cualquier proceso de larga duración)</li>
+</ul>
+<h2 id="creando-el-docker">Creando el docker</h2>
+<p>Caddy requiere acceso de escritura a dos ubicaciones: un directorio de datos y un directorio de configuración .</p>
+<p>Recuerda que para generar los certificados de <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&amp;url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a>, Caddy necesita tener abiertos los puertos 80 y 443.</p>
+<pre class="example"><code>version: &quot;3.7&quot;
+services:
+caddy:
+image: caddy
+ports:
+- &quot;80:80&quot;
+- &quot;443:443&quot;
+volumes:
+- ./Caddyfile:/etc/caddy/Caddyfile:ro
+- ./data/caddy/data:/data
+- ./data/caddy/config:/config
+restart: unless-stopped
+container_name: caddy
+</code></pre>
+<p>Cómo es multiarquitectura, podremos utilizarlo en ARM, amd64,…</p>
+<h2 id="caddyfile">Caddyfile</h2>
+<p>Creamos el archivo <strong>Caddyfile</strong>, donde irá la configuración de nuestro proxy inverso.</p>
+<p>Voy a exponer estos 3 servicios. En el puerto 8080, tengo un servidor nginx con una web estática, 8096 para jellyfin y 4533 para navidrome.</p>
+<p>Caddy se encargará de exponer estos servicios a la red generando el certificado con <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&amp;url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a>.</p>
+<pre class="example"><code>midominio.duckdns.org {
+reverse_proxy http://192.168.1.100:8080
+}
+
+
+jellyfin.midominio.duckdns.org {
+reverse_proxy http://192.168.1.100:8096
+}
+
+
+navidrome.midominio.duckdns.org {
+reverse_proxy http://192.168.1.100:4533
+}
+</code></pre>
+<h2 id="todo-de-una-vez">Todo de una vez</h2>
+<p>Voy a crear de ejemplo un docker-compose con shaarli y caddy, para que me genere el certirficado de shaarli.</p>
+<pre class="example"><code>version: &quot;3.7&quot;
+services:
+caddy:
+image: caddy
+ports:
+- &quot;80:80&quot;
+- &quot;443:443&quot;
+volumes:
+- ./Caddyfile:/etc/caddy/Caddyfile:ro
+- ./data/caddy/data:/data
+- ./data/caddy/config:/config
+restart: unless-stopped
+container_name: caddy
+
+shaarli:
+image: shaarli/shaarli
+container_name: shaarli
+restart: unless-stopped
+</code></pre>
+<p>Como veis, no he tenido que exponer los puertos de shaarli, ya que shaarli va ha  estar dentro de la misma red de Caddy y este mediante el archivo de configuración <strong>Caddyfile</strong>, Caddy se encargará de enlazar el servicio y crear el certificado.</p>
+<h3 id="caddyfile-1">Caddyfile</h3>
+<p>Mediante <code>reverse_proxy  shaarli:</code>, indicaremos a Caddy que este es el servicio que quiero utilizar como proxy inverso y que la url que quiero utilizar para acceder a este servicio, generandome también el certificado <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&amp;url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a> de esta dirección, sea <code>shaarli.midominio.duckdns.org</code>.</p>
+<pre class="example"><code>shaarli.midominio.duckdns.org {
+reverse_proxy  shaarli:
+}
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://hub.docker.com/_/caddy" class="uri">https://hub.docker.com/_/caddy</a></li>
+<li><a href="https://caddyserver.com/" class="uri">https://caddyserver.com/</a></li>
+<li><a href="https://crapts.org/2020/05/28/use-caddy-as-a-reverse-proxy-with-local-ca/" class="uri">https://crapts.org/2020/05/28/use-caddy-as-a-reverse-proxy-with-local-ca/</a></li>
+<li><a href="https://github.com/Johni0702/mumble-web" class="uri">https://github.com/Johni0702/mumble-web</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el viernes 19 febrero del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

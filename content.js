@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Proxy Inverso con Caddy',
+            'text': 'Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán .', 
+            'tags': 'proxy-inverso,go,proxy,inverso,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html' 
+},
+{
             'title': 'Instalando Thunderbird y añadiendo el corrector ortográfico',
             'text': 'Una de las aplicaciones que me encanta para gestionar el correo electrónico es Thunderbird.', 
             'tags': 'correo,ubuntu,debian,,,', 

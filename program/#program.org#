@@ -1,0 +1,261 @@
+* TODO Servidor de Samba fácil
+:PROPERTIES:
+:TITLE: Servidor de Samba fácil
+:EXPORT_FILE_NAME: servidor-de-samba-facil
+:DESCRIPTION: Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.
+:EXPORT_DATE: 2021-04-02 15:24
+:CATEGORY: servidor
+:TAG: samba
+:IMAGE: ./images-blog/samba.png
+:END:
+
+Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.
+#+HTML: <center>
+[[./images-blog/samba.png]]
+#+HTML: </center>
+
+Para acceder a los datos de esta carpeta, no va a ser necesario utilizar usuario y contraseña, pero para darle un mínimo de seguridad, vamos a permitir el acceso a esta carpeta a determinados dispositivos en función de us IP.
+
+El modo más correcto y seguro de compartir una carpeta por *Samba*, es crear un grupo donde ponemos un número de usuarios dentro de este y donde todos estos usuarios tienen usuario y contraseña.
+
+He optado por esta configuración, porque es mucho más sencilla y he visto algo parecido en *Recalbox*. Una capeta que todos los usuarios de la red local tienen acceso y pueden depositar ahí sus archivos para compartir.
+
+** Instalación
+
+Instalación de Samba
+#+BEGIN_SRC
+sudo apt install samba
+#+END_SRC
+
+** Compartiendo Carpeta
+
+Damos permisos para compartir la carpeta por *Samba* y que puede acceder cualquier usuario.
+#+BEGIN_SRC
+sudo chmod -R 777 /home/angel/samba/
+#+END_SRC
+
+** Archivo de configuración
+
+Editamos el archivo de configuración.
+#+BEGIN_SRC
+sudo nano /etc/samba/smb.conf
+#+END_SRC
+
+#+BEGIN_SRC
+[samba]                     # Nombre del servidor que veran los clientes
+
+path=/home/angel/samba      # Ruta de la carpeta compartida
+public=yes                  # Disponible para usuarios invitados u otros. Si ponemos no, solo los usuarios autorizados accederan
+writable=yes                # Puede escribir y editar el contenido
+guest ok = yes
+browseable = yes            # El directorio, puede ser visible
+read only = no
+
+create mask = 0777          # Permisos de escritura y lectura de cualquier cliente
+directory mask = 0777
+force create mode = 777
+force directory mode = 777
+force security mode = 777
+force directory security mode = 777
+#+END_SRC
+
+Desmarcamos el compartir impresoras
+#+BEGIN_SRC
+#[print$]
+#   comment = Printer Drivers
+#   path = /var/lib/samba/printers
+#   browseable = yes
+#   read only = yes
+#   guest ok = no
+#+END_SRC
+
+Verifica con *testparm* si hay un error en el archivo de configuración
+#+BEGIN_SRC
+testparm
+#+END_SRC
+
+** Permitir de unas ip's en concreto
+
+Para dar un poquito más de seguridad desde el servidor, solo vamos a permitir el acceso a determinadas ip's.
+#+BEGIN_SRC
+hosts allow = 192.168.1.100, 192.168.1.101
+* TODO Gelli y Jellyamp. Clientes de Jellyfin para Android y Escritorio Linux, Windows y Mac
+:PROPERTIES:
+:TITLE: Clientes de Jellyfin para Android y Escritorio Linux, Windows y Mac
+:EXPORT_FILE_NAME: clientes-de-jellyfin-para-android-y-escritorio-linux-windows-y-mac
+:DESCRIPTION: Crecen los clientes de Jellyfin.
+:EXPORT_DATE: 2021-07-11 21:40
+:CATEGORY: jellyfin
+:TAG: servidor
+:IMAGE: ./images-blog/jellyfin.png
+:END:
+
+Crecen los clientes de Jellyfin.
+#+HTML: <center>
+[[./images-blog/jellyfin.png]]
+#+HTML: </center>
+
+
+** Gelli
+
+
+
+
+#+HTML: <center>
+[[./images-blog/gelli.png]]
+#+HTML: </center>
+
+
+- [[https://github.com/dkanada/gelli][Fuente]]
+
+
+** Jellyamp
+El desarrollador de esta app, se resistia a cambiar del servidor Plex a Jellyfin, por la aplicación PlexAmp.
+
+Cuando se publicó Gelli, decidío desarrollar JellyAmp inspirada en PlexAmp.
+
+- [[https://github.com/m0ngr31/jellyamp][Fuente]]
+
+#+HTML: <center>
+[[./images-blog/jellyamp.png]]
+#+HTML: </center>
+#+HTML: <center>
+[[./images-blog/jellyamp1.png]]
+#+HTML: </center>
+#+HTML: <center>
+[[./images-blog/jellyamp2.png]]
+#+HTML: </center>
+
+* TODO Proxy Inverso con Caddy
+:PROPERTIES:
+:TITLE: Proxy Inverso con Caddy
+:EXPORT_FILE_NAME: proxy-inverso-con-caddy
+:DESCRIPTION: Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán .
+:EXPORT_DATE: 2021-02-19 15:35
+:CATEGORY: proxy-inverso
+:TAG: go,proxy,inverso
+:IMAGE: ./images-blog/caddy.png
+:END:
+
+
+Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán .
+#+HTML: <center>
+[[./images-blog/caddy.png]]
+#+HTML: </center>
+
+Ya había visto a diferentes artículos de cómo construir tu proxy inverso con Caddy, incluso algunos docker-compose, pero no me había llamado la atención del todo hasta el comentario de Germán.
+
+La verdad es que este servicio es alucinante. Es una fusión entre traefik, poder levantar todos tus servicios con su certificado desde un archivo de texto plano y sencillez como Nginx Proxy Manager.
+
+*** Qué es Caddy
+
+Caddy 2 es un potente servidor web de código abierto desarrollado en go.
+
+Simplifica su infraestructura y se encarga de las renovaciones de certificados.
+
+Funciona muy bien en contenedores porque no tiene dependencias.
+
+Aunque la mayoría de la gente lo usa como servidor web o proxy, es una excelente opción tambien para:
+
+- Servidor web
+- proxy inverso
+- proxy de sidecar
+- equilibrador de carga
+- Puerta de enlace API
+- controlador de ingreso
+- administrador de sistemas
+- supervisor de proceso
+- programador de tareas
+- (cualquier proceso de larga duración)
+
+** Creando el docker
+
+Caddy requiere acceso de escritura a dos ubicaciones: un directorio de datos y un directorio de configuración .
+
+Recuerda que para generar los certificados de [[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&usg=AOvVaw34k3QK_hY17BkhtCZGROEJ][Let's Encrypt]], Caddy necesita tener abiertos los puertos 80 y 443.
+
+#+BEGIN_SRC sh
+version: "3.7"
+services:
+caddy:
+image: caddy
+ports:
+- "80:80"
+- "443:443"
+volumes:
+- ./Caddyfile:/etc/caddy/Caddyfile:ro
+- ./data/caddy/data:/data
+- ./data/caddy/config:/config
+restart: unless-stopped
+container_name: caddy
+#+END_SRC
+
+Cómo es multiarquitectura, podremos utilizarlo en ARM, amd64,...
+
+** Caddyfile
+
+Creamos el archivo *Caddyfile*, donde irá la configuración de nuestro proxy inverso.
+
+Voy a exponer estos 3 servicios. En el puerto 8080, tengo un servidor nginx con una web estática, 8096 para jellyfin y 4533 para navidrome.
+
+Caddy se encargará de exponer estos servicios a la red generando el certificado con [[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&usg=AOvVaw34k3QK_hY17BkhtCZGROEJ][Let's Encrypt]].
+
+#+BEGIN_EXAMPLE sh
+midominio.duckdns.org {
+reverse_proxy http://192.168.1.100:8080
+}
+
+
+jellyfin.midominio.duckdns.org {
+reverse_proxy http://192.168.1.100:8096
+}
+
+
+navidrome.midominio.duckdns.org {
+reverse_proxy http://192.168.1.100:4533
+}
+#+END_EXAMPLE
+
+** Todo de una vez
+
+Voy a crear de ejemplo un docker-compose con shaarli y caddy, para que me genere el certirficado de shaarli.
+
+#+BEGIN_EXAMPLE sh
+version: "3.7"
+services:
+caddy:
+image: caddy
+ports:
+- "80:80"
+- "443:443"
+volumes:
+- ./Caddyfile:/etc/caddy/Caddyfile:ro
+- ./data/caddy/data:/data
+- ./data/caddy/config:/config
+restart: unless-stopped
+container_name: caddy
+
+shaarli:
+image: shaarli/shaarli
+container_name: shaarli
+restart: unless-stopped
+#+END_EXAMPLE
+
+Como veis, no he tenido que exponer los puertos de shaarli, ya que shaarli va ha  estar dentro de la misma red de Caddy y este mediante el archivo de configuración *Caddyfile*, Caddy se encargará de enlazar el servicio y crear el certificado.
+
+*** Caddyfile
+
+Mediante =reverse_proxy shaarli:=, indicaremos a Caddy que este es el servicio que quiero utilizar como proxy inverso y que la url que quiero utilizar para acceder a este servicio, generandome también el certificado [[https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&usg=AOvVaw34k3QK_hY17BkhtCZGROEJ][Let's Encrypt]] de esta dirección, sea =shaarli.midominio.duckdns.org=.
+
+#+BEGIN_EXAMPLE sh
+shaarli.midominio.duckdns.org {
+reverse_proxy  shaarli:
+}
+#+END_EXAMPLE
+
+** Fuentes
+
+- [[https://hub.docker.com/_/caddy]]
+- https://caddyserver.com/
+- [[https://crapts.org/2020/05/28/use-caddy-as-a-reverse-proxy-with-local-ca/]]
+- https://github.com/Johni0702/mumble-web
