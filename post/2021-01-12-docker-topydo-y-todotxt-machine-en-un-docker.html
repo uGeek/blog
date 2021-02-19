@@ -92,27 +92,33 @@ $("#tipue_search_input").tipuesearch();
 <p>Nuestro archivo <strong>todo.txt</strong>, en este caso estará en la ruta <code>~/todo/todo.txt</code></p>
 <h2 id="montar-el-docker-amd64">Montar el docker amd64</h2>
 <p>Tan sencillo como:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> run -it --name=todotxt -v <span class="va">$HOME</span>/todo:/data ugeek/topydo-todotxt-machine:amd64 sh</a></code></pre></div>
+<pre class="example"><code>docker run -it --name=todotxt -v $HOME/todo:/data ugeek/topydo-todotxt-machine:amd64 sh
+</code></pre>
 <h2 id="montar-el-docker-para-arm-y-raspberry-pi">Montar el docker para ARM y Raspberry Pi</h2>
 <p>En tu Raspberry</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> run -it --name=todotxt -v <span class="va">$HOME</span>/todo:/data ugeek/topydo-todotxt-machine:arm sh</a></code></pre></div>
+<pre class="example"><code>docker run -it --name=todotxt -v $HOME/todo:/data ugeek/topydo-todotxt-machine:arm sh
+</code></pre>
 <h2 id="topydo">topydo</h2>
 <p>Para iniciar topydo.</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">docker</span> exec -t todotxt topydo</a></code></pre></div>
+<pre class="example"><code>docker exec -t todotxt topydo
+</code></pre>
 <h2 id="topydo.-prompt-mode">topydo. Prompt mode</h2>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">docker</span> exec -t todotxt topydo prompt</a></code></pre></div>
+<pre class="example"><code>docker exec -t todotxt topydo prompt
+</code></pre>
 <h2 id="topydo.-columnas-o-método-kanban">topydo. Columnas o método Kanban</h2>
 <p>Me gusta mucho utilizar el todo.txt con el método Kanban</p>
 <center>
 <p><img src="../images-blog/topydo.png" /></p>
 </center>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">docker</span> exec -t todotxt topydo columns</a></code></pre></div>
+<pre class="example"><code>docker exec -t todotxt topydo columns
+</code></pre>
 <h2 id="todotxt-machine">todotxt-machine</h2>
 <p>Para utilizar todotxt-machine</p>
 <center>
 <p><img src="../images-blog/todotxt-machine.png" /></p>
 </center>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">docker</span> exec -t todotxt todotxt-machine todo.txt done.txt</a></code></pre></div>
+<pre class="example"><code>docker exec -t todotxt todotxt-machine todo.txt done.txt
+</code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/bram85/topydo" class="uri">https://github.com/bram85/topydo</a></li>

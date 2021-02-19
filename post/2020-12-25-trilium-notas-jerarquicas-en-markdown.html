@@ -96,38 +96,42 @@ $("#tipue_search_input").tipuesearch();
 <p>He probado diferentes dockers para la arquitectura amd64 y ARM así que finalmente me quedo con él dockers oficial para amd64 y otro que he encontrado de &quot;hlince&quot; para arm, que funciona muy bien en Raspberry.</p>
 <h2 id="docker-amd64">Docker amd64</h2>
 <p>El docker oficial y más actualizado para amd64 es:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium:/root/trilium-data zadam/trilium</a></code></pre></div>
+<pre class="example"><code>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium:/root/trilium-data zadam/trilium
+</code></pre>
 <p>Servicio disponible por el puerto en este ejemplo 99.</p>
 <ul>
 <li><a href="https://github.com/zadam/trilium/wiki/Docker-server-installation" class="uri">https://github.com/zadam/trilium/wiki/Docker-server-installation</a></li>
 </ul>
 <p>Fork ugeek</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data ugeek/trilium:amd64</a></code></pre></div>
+<pre class="example"><code>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data ugeek/trilium:amd64
+</code></pre>
 <p>Servicio disponible por el puerto en este ejemplo 99.</p>
 <h2 id="docker-para-arm">Docker para arm</h2>
 <p>Es docker-compose para arm o Raspberry y funciona a la perfeción:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">trilium</span>:</a>
-<a class="sourceLine" id="cb3-2" title="2"> <span class="ex">image</span>: hlince/trilium:latest-stable-arm</a>
-<a class="sourceLine" id="cb3-3" title="3"> <span class="ex">restart</span>: always</a>
-<a class="sourceLine" id="cb3-4" title="4"> <span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb3-5" title="5">  <span class="ex">-</span> 99:8080</a>
-<a class="sourceLine" id="cb3-6" title="6"> <span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb3-7" title="7">  <span class="ex">-</span> TRILIUM_DATA_DIR=/data</a>
-<a class="sourceLine" id="cb3-8" title="8"> <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb3-9" title="9">  <span class="ex">-</span> ./trilium/data:/data</a></code></pre></div>
+<pre class="example"><code>trilium:
+ image: hlince/trilium:latest-stable-arm
+ restart: always
+ ports:
+  - 99:8080
+ environment:
+  - TRILIUM_DATA_DIR=/data
+ volumes:
+  - ./trilium/data:/data
+</code></pre>
 <ul>
 <li><a href="https://hub.docker.com/r/hlince/trilium" class="uri">https://hub.docker.com/r/hlince/trilium</a></li>
 </ul>
 <p>Fork de ugeek</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">trilium</span>:</a>
-<a class="sourceLine" id="cb4-2" title="2"> <span class="ex">image</span>: ugeek/trilium:arm</a>
-<a class="sourceLine" id="cb4-3" title="3"> <span class="ex">restart</span>: always</a>
-<a class="sourceLine" id="cb4-4" title="4"> <span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb4-5" title="5">  <span class="ex">-</span> 99:8080</a>
-<a class="sourceLine" id="cb4-6" title="6"> <span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb4-7" title="7">  <span class="ex">-</span> TRILIUM_DATA_DIR=/data</a>
-<a class="sourceLine" id="cb4-8" title="8"> <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb4-9" title="9">  <span class="ex">-</span> ./trilium/data:/data</a></code></pre></div>
+<pre class="example"><code>trilium:
+ image: ugeek/trilium:arm
+ restart: always
+ ports:
+  - 99:8080
+ environment:
+  - TRILIUM_DATA_DIR=/data
+ volumes:
+  - ./trilium/data:/data
+</code></pre>
 <h2 id="docker-con-proxy-inverso-con-traefik">Docker con Proxy Inverso con Traefik</h2>
 <pre><code>version: &#39;3.7&#39;
 services:
