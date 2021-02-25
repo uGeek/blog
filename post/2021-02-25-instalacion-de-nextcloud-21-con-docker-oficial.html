@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="instalación-de-nextcloud-21-con-docker-oficial-1" title="Instalación de Nextcloud 21 con docker Oficial" data-export_file_name="instalacion-de-nextcloud-21-con-docker-oficial" data-description="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." data-export_date="2021-02-25 17:56" data-category="nextcloud" data-tag="nube,webdav,docker" data-image="./images-blog/nextcloud_hub.png">Instalación de Nextcloud 21 con docker Oficial</h1>
-<h5>Tiempo estimado de lectura: 5 minutos. 642 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
+<h5>Tiempo estimado de lectura: 6 minutos. 693 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
 <p>Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.</p>
 <center>
 <p><img src="../images-blog/nextcloud_hub.png" /></p>
@@ -105,67 +105,73 @@ $("#tipue_search_input").tipuesearch();
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
 <a class="sourceLine" id="cb1-2" title="2"></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="ex">nextcloud</span>:</a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="ex">db</span>:</a>
+<a class="sourceLine" id="cb1-4" title="4">  <span class="ex">nextcloud</span>:</a>
+<a class="sourceLine" id="cb1-5" title="5">  <span class="ex">db</span>:</a>
 <a class="sourceLine" id="cb1-6" title="6"></a>
 <a class="sourceLine" id="cb1-7" title="7"><span class="ex">services</span>:</a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="ex">db</span>:</a>
-<a class="sourceLine" id="cb1-9" title="9"><span class="ex">image</span>: mariadb</a>
-<a class="sourceLine" id="cb1-10" title="10"><span class="ex">container_name</span>: nextclouddb</a>
-<a class="sourceLine" id="cb1-11" title="11"><span class="ex">command</span>: --transaction-isolation=READ-COMMITTED --binlog-format=ROW</a>
-<a class="sourceLine" id="cb1-12" title="12"><span class="ex">restart</span>: always</a>
-<a class="sourceLine" id="cb1-13" title="13"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-14" title="14"><span class="ex">-</span> db:/var/lib/mysql</a>
-<a class="sourceLine" id="cb1-15" title="15"><span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb1-16" title="16"><span class="ex">-</span> MYSQL_ROOT_PASSWORD=vfgku8ufg56 <span class="co">#Cambiar esto</span></a>
-<a class="sourceLine" id="cb1-17" title="17"><span class="ex">-</span> MYSQL_PASSWORD=vbbyu76f6967 <span class="co">#Cambiar esto</span></a>
-<a class="sourceLine" id="cb1-18" title="18"><span class="ex">-</span> MYSQL_DATABASE=nextcloud</a>
-<a class="sourceLine" id="cb1-19" title="19"><span class="ex">-</span> MYSQL_USER=nextcloud</a>
+<a class="sourceLine" id="cb1-8" title="8">  <span class="ex">db</span>:</a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="ex">image</span>: mariadb</a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="ex">container_name</span>: nextclouddb</a>
+<a class="sourceLine" id="cb1-11" title="11">    <span class="ex">command</span>: --transaction-isolation=READ-COMMITTED --binlog-format=ROW</a>
+<a class="sourceLine" id="cb1-12" title="12">    <span class="ex">restart</span>: always</a>
+<a class="sourceLine" id="cb1-13" title="13">    <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-14" title="14">      <span class="ex">-</span> db:/var/lib/mysql</a>
+<a class="sourceLine" id="cb1-15" title="15">    <span class="ex">environment</span>:</a>
+<a class="sourceLine" id="cb1-16" title="16">      <span class="ex">-</span> MYSQL_ROOT_PASSWORD=vfgku8ufg56 <span class="co">#Cambiar esto</span></a>
+<a class="sourceLine" id="cb1-17" title="17">      <span class="ex">-</span> MYSQL_PASSWORD=vbbyu76f6967 <span class="co">#Cambiar esto</span></a>
+<a class="sourceLine" id="cb1-18" title="18">      <span class="ex">-</span> MYSQL_DATABASE=nextcloud</a>
+<a class="sourceLine" id="cb1-19" title="19">      <span class="ex">-</span> MYSQL_USER=nextcloud</a>
 <a class="sourceLine" id="cb1-20" title="20"></a>
-<a class="sourceLine" id="cb1-21" title="21"><span class="ex">app</span>:</a>
-<a class="sourceLine" id="cb1-22" title="22"><span class="ex">image</span>: nextcloud</a>
-<a class="sourceLine" id="cb1-23" title="23"><span class="ex">container_name</span>: nextcloud</a>
-<a class="sourceLine" id="cb1-24" title="24"><span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb1-25" title="25"><span class="ex">-</span> 8080:80</a>
-<a class="sourceLine" id="cb1-26" title="26"><span class="ex">links</span>:</a>
-<a class="sourceLine" id="cb1-27" title="27"><span class="ex">-</span> db</a>
-<a class="sourceLine" id="cb1-28" title="28"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-29" title="29"><span class="ex">-</span> <span class="va">$HOME</span>/docker/nextcloud:/var/www/html <span class="co">#Cambie &#39;nextcloud&#39; a su volumen de unidad externa si está disponible</span></a>
-<a class="sourceLine" id="cb1-30" title="30"><span class="ex">-</span> /almacenamiento_local:/almacenamiento_local</a>
-<a class="sourceLine" id="cb1-31" title="31"><span class="ex">restart</span>: always</a></code></pre></div>
+<a class="sourceLine" id="cb1-21" title="21">  <span class="ex">app</span>:</a>
+<a class="sourceLine" id="cb1-22" title="22">    <span class="ex">image</span>: nextcloud</a>
+<a class="sourceLine" id="cb1-23" title="23">        <span class="ex">container_name</span>: nextcloud</a>
+<a class="sourceLine" id="cb1-24" title="24">    <span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb1-25" title="25">      <span class="ex">-</span> 8080:80</a>
+<a class="sourceLine" id="cb1-26" title="26">    <span class="ex">links</span>:</a>
+<a class="sourceLine" id="cb1-27" title="27">      <span class="ex">-</span> db</a>
+<a class="sourceLine" id="cb1-28" title="28">    <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-29" title="29">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/nextcloud:/var/www/html <span class="co">#Cambie &#39;nextcloud&#39; a su volumen de unidad externa si está disponible</span></a>
+<a class="sourceLine" id="cb1-30" title="30">            <span class="ex">-</span> /almacenamiento_local:/almacenamiento_local</a>
+<a class="sourceLine" id="cb1-31" title="31">    <span class="ex">restart</span>: always</a></code></pre></div>
 <h3 id="raspberry-pi-y-arm-32bits">Raspberry Pi y ARM 32bits</h3>
 <p>Para montar el docker compose con su base de datos en mariadb para Raspberry Pi o ARM:</p>
 <div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
 <a class="sourceLine" id="cb2-2" title="2"></a>
 <a class="sourceLine" id="cb2-3" title="3"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb2-4" title="4"><span class="ex">nextcloud</span>:</a>
-<a class="sourceLine" id="cb2-5" title="5"><span class="ex">db</span>:</a>
+<a class="sourceLine" id="cb2-4" title="4">  <span class="ex">nextcloud</span>:</a>
+<a class="sourceLine" id="cb2-5" title="5">  <span class="ex">db</span>:</a>
 <a class="sourceLine" id="cb2-6" title="6"></a>
 <a class="sourceLine" id="cb2-7" title="7"><span class="ex">services</span>:</a>
-<a class="sourceLine" id="cb2-8" title="8"><span class="ex">db</span>:</a>
-<a class="sourceLine" id="cb2-9" title="9"><span class="ex">image</span>: yobasystems/alpine-mariadb:latest</a>
-<a class="sourceLine" id="cb2-10" title="10"><span class="ex">container_name</span>: nextclouddb</a>
-<a class="sourceLine" id="cb2-11" title="11"><span class="ex">command</span>: --transaction-isolation=READ-COMMITTED --binlog-format=ROW</a>
-<a class="sourceLine" id="cb2-12" title="12"><span class="ex">restart</span>: always</a>
-<a class="sourceLine" id="cb2-13" title="13"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb2-14" title="14"><span class="ex">-</span> db:/var/lib/mysql</a>
-<a class="sourceLine" id="cb2-15" title="15"><span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb2-16" title="16"><span class="ex">-</span> MYSQL_ROOT_PASSWORD=vfgku8ufg56 <span class="co">#Cambiar esto</span></a>
-<a class="sourceLine" id="cb2-17" title="17"><span class="ex">-</span> MYSQL_PASSWORD=vbbyu76f6967 <span class="co">#Cambiar esto</span></a>
-<a class="sourceLine" id="cb2-18" title="18"><span class="ex">-</span> MYSQL_DATABASE=nextcloud</a>
-<a class="sourceLine" id="cb2-19" title="19"><span class="ex">-</span> MYSQL_USER=nextcloud</a>
+<a class="sourceLine" id="cb2-8" title="8">  <span class="ex">db</span>:</a>
+<a class="sourceLine" id="cb2-9" title="9">    <span class="ex">image</span>: yobasystems/alpine-mariadb:latest</a>
+<a class="sourceLine" id="cb2-10" title="10">        <span class="ex">container_name</span>: nextclouddb</a>
+<a class="sourceLine" id="cb2-11" title="11">    <span class="ex">command</span>: --transaction-isolation=READ-COMMITTED --binlog-format=ROW</a>
+<a class="sourceLine" id="cb2-12" title="12">    <span class="ex">restart</span>: always</a>
+<a class="sourceLine" id="cb2-13" title="13">    <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb2-14" title="14">      <span class="ex">-</span> db:/var/lib/mysql</a>
+<a class="sourceLine" id="cb2-15" title="15">    <span class="ex">environment</span>:</a>
+<a class="sourceLine" id="cb2-16" title="16">      <span class="ex">-</span> MYSQL_ROOT_PASSWORD=vfgku8ufg56 <span class="co">#Cambiar esto</span></a>
+<a class="sourceLine" id="cb2-17" title="17">      <span class="ex">-</span> MYSQL_PASSWORD=vbbyu76f6967 <span class="co">#Cambiar esto</span></a>
+<a class="sourceLine" id="cb2-18" title="18">      <span class="ex">-</span> MYSQL_DATABASE=nextcloud</a>
+<a class="sourceLine" id="cb2-19" title="19">      <span class="ex">-</span> MYSQL_USER=nextcloud</a>
 <a class="sourceLine" id="cb2-20" title="20"></a>
-<a class="sourceLine" id="cb2-21" title="21"><span class="ex">app</span>:</a>
-<a class="sourceLine" id="cb2-22" title="22"><span class="ex">image</span>: nextcloud</a>
-<a class="sourceLine" id="cb2-23" title="23"><span class="ex">container_name</span>: nextcloud</a>
-<a class="sourceLine" id="cb2-24" title="24"><span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb2-25" title="25"><span class="ex">-</span> 8080:80</a>
-<a class="sourceLine" id="cb2-26" title="26"><span class="ex">links</span>:</a>
-<a class="sourceLine" id="cb2-27" title="27"><span class="ex">-</span> db</a>
-<a class="sourceLine" id="cb2-28" title="28"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb2-29" title="29"><span class="ex">-</span> <span class="va">$HOME</span>/docker/nextcloud:/var/www/html <span class="co">#Cambie &#39;nextcloud&#39; a su volumen de unidad externa si está disponible</span></a>
-<a class="sourceLine" id="cb2-30" title="30"><span class="ex">-</span> /almacenamiento_local:/almacenamiento_local</a>
-<a class="sourceLine" id="cb2-31" title="31"><span class="ex">restart</span>: always</a></code></pre></div>
+<a class="sourceLine" id="cb2-21" title="21">  <span class="ex">app</span>:</a>
+<a class="sourceLine" id="cb2-22" title="22">    <span class="ex">image</span>: nextcloud</a>
+<a class="sourceLine" id="cb2-23" title="23">        <span class="ex">container_name</span>: nextcloud</a>
+<a class="sourceLine" id="cb2-24" title="24">    <span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb2-25" title="25">      <span class="ex">-</span> 8080:80</a>
+<a class="sourceLine" id="cb2-26" title="26">    <span class="ex">links</span>:</a>
+<a class="sourceLine" id="cb2-27" title="27">      <span class="ex">-</span> db</a>
+<a class="sourceLine" id="cb2-28" title="28">    <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb2-29" title="29">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/nextcloud:/var/www/html <span class="co">#Cambie &#39;nextcloud&#39; a su volumen de unidad externa si está disponible</span></a>
+<a class="sourceLine" id="cb2-30" title="30">            <span class="ex">-</span> /almacenamiento_local:/almacenamiento_local</a>
+<a class="sourceLine" id="cb2-31" title="31">    <span class="ex">restart</span>: always</a></code></pre></div>
+<h2 id="instalación">Instalación</h2>
+<p>En el ejemplo que he utilizado, Nextcloud será accesible por el puerto <strong>8080</strong>.</p>
+<p>Pon el usuario y contraseña del que será el administrador, seleciona como base de datos <strong>mariadb*</strong>, escribe la contraseña del usuario de mariadb y resto de datos como aparece en la imágen e inicia la instalación.</p>
+<center>
+<p>./images-blog/nextcloud2.png</p>
+</center>
 <h2 id="forzar-conexión-https-y-dominios-de-confianza">Forzar conexión https y dominios de confianza</h2>
 <p>Para forzar a Nextcloud a utilizar <strong>https</strong> en su conexión y utilice esta como raíz de todas las páginas, editaremos el archivo <strong>config.php</strong>.</p>
 <p>En mi caso, utilizaré nano para editar el archivo.</p>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="ng-csp" data-placeholder-focus="false" lang="es" data-locale="es_ES" >
+<head data-requesttoken="KXCyh4PK/y+kEs4ORnSwly5es9cFALgRI3TGONqKNGg=:QRHhwvOnvkzHRoZWJwGF3Fga5bs1MI5QdEaKcLbFUiQ=">
+	<meta charset="utf-8">
+	<title>
+		Nextcloud	</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<meta name="apple-itunes-app" content="app-id=1125420102">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Nextcloud">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#0082c9">
+	<link rel="icon" href="/core/img/favicon.ico">
+	<link rel="apple-touch-icon" href="/core/img/favicon-touch.png">
+	<link rel="apple-touch-icon-precomposed" href="/core/img/favicon-touch.png">
+	<link rel="mask-icon" sizes="any" href="/core/img/favicon-mask.svg" color="#0082c9">
+	<link rel="manifest" href="/apps/theming/manifest?v=0">
+	<link rel="stylesheet" href="/css/core/470e-75ef-server.css?v=b92d206521717ac032f8aa58d3c7ff2f-2f0409aa-0">
+<link rel="stylesheet" href="/css/core/470e-75ef-css-variables.css?v=b92d206521717ac032f8aa58d3c7ff2f-2f0409aa-0">
+<link rel="stylesheet" href="/css/files_sharing/9eeb-75ef-publicView.css?v=b92d206521717ac032f8aa58d3c7ff2f-9eeb65bb-0">
+<link rel="stylesheet" href="/css/text/070a-75ef-icons.css?v=b92d206521717ac032f8aa58d3c7ff2f-070afde0-0">
+	<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/core/js/oc.js?v=2f0409aa"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/core/js/dist/main.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/core/js/dist/files_fileinfo.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/core/js/dist/files_client.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/js/core/merged-template-prepend.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/core/l10n/es.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/core/js/backgroundjobs.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files_sharing/l10n/es.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files_sharing/js/dist/main.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files_pdfviewer/js/files_pdfviewer-public.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files_videoplayer/js/main.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files/l10n/es.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files/js/semaphore.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files/js/file-upload.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files_sharing/js/public.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files_sharing/js/templates.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files/js/fileactions.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files/js/fileactionsmenu.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files/js/jquery.fileupload.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files_sharing/js/files_drop.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/text/l10n/es.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/text/js/public.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/core/js/public/publicpage.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/files_sharing/js/public_note.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/theming/l10n/es.js?v=2f0409aa-0"></script>
+<script nonce="S1hDeWg0UEsveStrRXM0T1JuU3dseTVlczljRkFMZ1JJM1RHT05xS05HZz06UVJIaHd2T252a3pIUm9aV0p3R0YzRmdhNWJzMU1JNVFkRWFLY0xiRlVpUT0=" defer src="/apps/theming/js/theming.js?v=2f0409aa-0"></script>
+	<link rel="stylesheet" href="/css/icons/icons-vars.css?v=1614232692"/><link rel="stylesheet" media="(prefers-color-scheme: dark)" href="/apps/accessibility/css/user-a82fd95db10ff25dfad39f07372ebe37"/><meta property="og:title" content="nextcloud-install.jpg"/><meta property="og:description" content="Nextcloud - un hogar seguro para todos tus datos"/><meta property="og:site_name" content="Nextcloud"/><meta property="og:url" content="https://nc.silmoon.duckdns.org/s/MrtLZRPtQZLWYxR"/><meta property="og:type" content="object"/><meta property="og:image" content="https://nc.silmoon.duckdns.org/s/MrtLZRPtQZLWYxR/preview"/><link rel="stylesheet" href="/apps/theming/styles?v=0"/><meta name="robots" content="noindex, nofollow"/></head>
+<body id="body-public">
+<noscript>
+	<div id="nojavascript">
+		<div>
+			Esta aplicación requiere JavaScript para operar correctamente. Por favor, <a href="https://www.enable-javascript.com/" target="_blank" rel="noreferrer noopener">habilite JavaScript</a> y recargue la página.		</div>
+	</div>
+</noscript>
+	<input type="hidden" id="initial-state-text-workspace_available" value="dHJ1ZQ==">
+	<input type="hidden" id="initial-state-core-config" value="eyJzZXNzaW9uX2xpZmV0aW1lIjoxNDQwLCJzZXNzaW9uX2tlZXBhbGl2ZSI6dHJ1ZSwiYXV0b19sb2dvdXQiOmZhbHNlLCJ2ZXJzaW9uIjoiMjEuMC4wLjE4IiwidmVyc2lvbnN0cmluZyI6IjIxLjAuMCIsImVuYWJsZV9hdmF0YXJzIjp0cnVlLCJsb3N0X3Bhc3N3b3JkX2xpbmsiOm51bGwsIm1vZFJld3JpdGVXb3JraW5nIjp0cnVlLCJzaGFyaW5nLm1heEF1dG9jb21wbGV0ZVJlc3VsdHMiOjI1LCJzaGFyaW5nLm1pblNlYXJjaFN0cmluZ0xlbmd0aCI6MCwiYmxhY2tsaXN0X2ZpbGVzX3JlZ2V4IjoiXFwuKHBhcnR8ZmlsZXBhcnQpJCJ9">
+	<input type="hidden" id="initial-state-core-capabilities" value="eyJjb3JlIjp7InBvbGxpbnRlcnZhbCI6NjAsIndlYmRhdi1yb290IjoicmVtb3RlLnBocFwvd2ViZGF2In0sImJydXRlZm9yY2UiOnsiZGVsYXkiOjB9LCJmaWxlcyI6eyJiaWdmaWxlY2h1bmtpbmciOnRydWUsImJsYWNrbGlzdGVkX2ZpbGVzIjpbIi5odGFjY2VzcyJdLCJkaXJlY3RFZGl0aW5nIjp7InVybCI6Imh0dHBzOlwvXC9uYy5zaWxtb29uLmR1Y2tkbnMub3JnXC9vY3NcL3YyLnBocFwvYXBwc1wvZmlsZXNcL2FwaVwvdjFcL2RpcmVjdEVkaXRpbmciLCJldGFnIjoiZGRlODkxNjVlZWU2ZWE2YTI2MDA2OTA3MjMzYjI3MzgifSwiY29tbWVudHMiOnRydWUsInVuZGVsZXRlIjp0cnVlLCJ2ZXJzaW9uaW5nIjp0cnVlfSwiYWN0aXZpdHkiOnsiYXBpdjIiOlsiZmlsdGVycyIsImZpbHRlcnMtYXBpIiwicHJldmlld3MiLCJyaWNoLXN0cmluZ3MiXX0sIm9jbSI6eyJlbmFibGVkIjp0cnVlLCJhcGlWZXJzaW9uIjoiMS4wLXByb3Bvc2FsMSIsImVuZFBvaW50IjoiaHR0cHM6XC9cL25jLnNpbG1vb24uZHVja2Rucy5vcmdcL29jbSIsInJlc291cmNlVHlwZXMiOlt7Im5hbWUiOiJmaWxlIiwic2hhcmVUeXBlcyI6WyJ1c2VyIiwiZ3JvdXAiXSwicHJvdG9jb2xzIjp7IndlYmRhdiI6IlwvcHVibGljLnBocFwvd2ViZGF2XC8ifX1dfSwiZGF2Ijp7ImNodW5raW5nIjoiMS4wIn0sImRlY2siOnsidmVyc2lvbiI6IjEuMy4wIiwiY2FuQ3JlYXRlQm9hcmRzIjp0cnVlLCJhcGlWZXJzaW9ucyI6WyIxLjAiLCIxLjEiXX0sImV4dGVybmFsIjp7InYxIjpbInNpdGVzIiwiZGV2aWNlIiwiZ3JvdXBzIiwicmVkaXJlY3QiXX0sIm5vdGVzIjp7ImFwaV92ZXJzaW9uIjpbIjAuMiIsIjEuMSJdLCJ2ZXJzaW9uIjoiNC4wLjIifSwibm90aWZpY2F0aW9ucyI6eyJvY3MtZW5kcG9pbnRzIjpbImxpc3QiLCJnZXQiLCJkZWxldGUiLCJkZWxldGUtYWxsIiwiaWNvbnMiLCJyaWNoLXN0cmluZ3MiLCJhY3Rpb24td2ViIiwidXNlci1zdGF0dXMiXSwicHVzaCI6WyJkZXZpY2VzIiwib2JqZWN0LWRhdGEiLCJkZWxldGUiXSwiYWRtaW4tbm90aWZpY2F0aW9ucyI6WyJvY3MiLCJjbGkiXX0sInBhc3N3b3JkX3BvbGljeSI6eyJtaW5MZW5ndGgiOjgsImVuZm9yY2VOb25Db21tb25QYXNzd29yZCI6dHJ1ZSwiZW5mb3JjZU51bWVyaWNDaGFyYWN0ZXJzIjpmYWxzZSwiZW5mb3JjZVNwZWNpYWxDaGFyYWN0ZXJzIjpmYWxzZSwiZW5mb3JjZVVwcGVyTG93ZXJDYXNlIjpmYWxzZSwiYXBpIjp7ImdlbmVyYXRlIjoiaHR0cHM6XC9cL25jLnNpbG1vb24uZHVja2Rucy5vcmdcL29jc1wvdjIucGhwXC9hcHBzXC9wYXNzd29yZF9wb2xpY3lcL2FwaVwvdjFcL2dlbmVyYXRlIiwidmFsaWRhdGUiOiJodHRwczpcL1wvbmMuc2lsbW9vbi5kdWNrZG5zLm9yZ1wvb2NzXC92Mi5waHBcL2FwcHNcL3Bhc3N3b3JkX3BvbGljeVwvYXBpXC92MVwvdmFsaWRhdGUifX0sImZpbGVzX3NoYXJpbmciOnsic2hhcmVieW1haWwiOnsiZW5hYmxlZCI6dHJ1ZSwidXBsb2FkX2ZpbGVzX2Ryb3AiOnsiZW5hYmxlZCI6dHJ1ZX0sInBhc3N3b3JkIjp7ImVuYWJsZWQiOnRydWUsImVuZm9yY2VkIjpmYWxzZX0sImV4cGlyZV9kYXRlIjp7ImVuYWJsZWQiOnRydWV9fSwiYXBpX2VuYWJsZWQiOnRydWUsInB1YmxpYyI6eyJlbmFibGVkIjp0cnVlLCJwYXNzd29yZCI6eyJlbmZvcmNlZCI6ZmFsc2UsImFza0Zvck9wdGlvbmFsUGFzc3dvcmQiOmZhbHNlfSwiZXhwaXJlX2RhdGUiOnsiZW5hYmxlZCI6ZmFsc2V9LCJtdWx0aXBsZV9saW5rcyI6dHJ1ZSwiZXhwaXJlX2RhdGVfaW50ZXJuYWwiOnsiZW5hYmxlZCI6ZmFsc2V9LCJzZW5kX21haWwiOmZhbHNlLCJ1cGxvYWQiOnRydWUsInVwbG9hZF9maWxlc19kcm9wIjp0cnVlfSwicmVzaGFyaW5nIjp0cnVlLCJ1c2VyIjp7InNlbmRfbWFpbCI6ZmFsc2UsImV4cGlyZV9kYXRlIjp7ImVuYWJsZWQiOnRydWV9fSwiZ3JvdXBfc2hhcmluZyI6dHJ1ZSwiZ3JvdXAiOnsiZW5hYmxlZCI6dHJ1ZSwiZXhwaXJlX2RhdGUiOnsiZW5hYmxlZCI6dHJ1ZX19LCJkZWZhdWx0X3Blcm1pc3Npb25zIjozMSwiZmVkZXJhdGlvbiI6eyJvdXRnb2luZyI6dHJ1ZSwiaW5jb21pbmciOnRydWUsImV4cGlyZV9kYXRlIjp7ImVuYWJsZWQiOnRydWV9fSwic2hhcmVlIjp7InF1ZXJ5X2xvb2t1cF9kZWZhdWx0IjpmYWxzZX19LCJ0aGVtaW5nIjp7Im5hbWUiOiJOZXh0Y2xvdWQiLCJ1cmwiOiJodHRwczpcL1wvbmV4dGNsb3VkLmNvbSIsInNsb2dhbiI6InVuIGhvZ2FyIHNlZ3VybyBwYXJhIHRvZG9zIHR1cyBkYXRvcyIsImNvbG9yIjoiIzAwODJjOSIsImNvbG9yLXRleHQiOiIjZmZmZmZmIiwiY29sb3ItZWxlbWVudCI6IiMwMDgyYzkiLCJjb2xvci1lbGVtZW50LWJyaWdodCI6IiMwMDgyYzkiLCJjb2xvci1lbGVtZW50LWRhcmsiOiIjMDA4MmM5IiwibG9nbyI6Imh0dHBzOlwvXC9uYy5zaWxtb29uLmR1Y2tkbnMub3JnXC9jb3JlXC9pbWdcL2xvZ29cL2xvZ28uc3ZnP3Y9MCIsImJhY2tncm91bmQiOiJodHRwczpcL1wvbmMuc2lsbW9vbi5kdWNrZG5zLm9yZ1wvY29yZVwvaW1nXC9iYWNrZ3JvdW5kLnBuZz92PTAiLCJiYWNrZ3JvdW5kLXBsYWluIjpmYWxzZSwiYmFja2dyb3VuZC1kZWZhdWx0Ijp0cnVlLCJsb2dvaGVhZGVyIjoiaHR0cHM6XC9cL25jLnNpbG1vb24uZHVja2Rucy5vcmdcL2NvcmVcL2ltZ1wvbG9nb1wvbG9nby5zdmc/dj0wIiwiZmF2aWNvbiI6Imh0dHBzOlwvXC9uYy5zaWxtb29uLmR1Y2tkbnMub3JnXC9jb3JlXC9pbWdcL2xvZ29cL2xvZ28uc3ZnP3Y9MCJ9LCJ1c2VyX3N0YXR1cyI6eyJlbmFibGVkIjp0cnVlLCJzdXBwb3J0c19lbW9qaSI6dHJ1ZX0sIndlYXRoZXJfc3RhdHVzIjp7ImVuYWJsZWQiOnRydWV9fQ==">
+	<input type="hidden" id="initial-state-theming-data" value="eyJuYW1lIjoiTmV4dGNsb3VkIiwidXJsIjoiaHR0cHM6XC9cL25leHRjbG91ZC5jb20iLCJzbG9nYW4iOiJ1biBob2dhciBzZWd1cm8gcGFyYSB0b2RvcyB0dXMgZGF0b3MiLCJjb2xvciI6IiMwMDgyYzkiLCJpbXByaW50VXJsIjoiIiwicHJpdmFjeVVybCI6IiIsImludmVydGVkIjpmYWxzZSwiY2FjaGVCdXN0ZXIiOiIwIn0=">
+	<input type="hidden" id="initial-state-accessibility-data" value="eyJ0aGVtZSI6ZmFsc2UsImhpZ2hjb250cmFzdCI6ZmFsc2V9">
+	<div id="notification-container">
+		<div id="notification"></div>
+	</div>
+	<header id="header">
+		<div class="header-left">
+			<span id="nextcloud">
+				<div class="logo logo-icon svg"></div>
+				<h1 class="header-appname">
+											nextcloud-install.jpg									</h1>
+							</span>
+		</div>
+
+				<div class="header-right">
+			<span id="header-primary-action" class="">
+				<a href="https://nc.silmoon.duckdns.org/s/MrtLZRPtQZLWYxR/download/nextcloud-install.jpg" class="primary button">
+					<span>Descargar</span>
+				</a>
+			</span>
+						<div id="header-secondary-action">
+				<button id="header-actions-toggle" class="menutoggle icon-more-white"></button>
+				<div id="header-actions-menu" class="popovermenu menu">
+					<ul>
+						<li id="download"><a href="https://nc.silmoon.duckdns.org/s/MrtLZRPtQZLWYxR/download/nextcloud-install.jpg"><span class="icon icon-download"></span>Descargar &nbsp;<span class="download-size">(16 KB)</span></a></li><li><a id="directLink-container"><span class="icon icon-public"></span><label for="directLink">Enlace directo</label></a></li><li><span class="menuitem"><input id="directLink" type="text" readonly="" value="https://nc.silmoon.duckdns.org/s/MrtLZRPtQZLWYxR/preview"></span></li><li>    <button id="save-external-share" class="icon icon-external" data-protected="false" data-owner-display-name="" data-owner="" data-name="nextcloud-install.jpg">Añadir a tu Nextcloud</button></li><li id="external-share-menu-item" class="hidden">    <span class="menuitem">        <form class="save-form" action="#">            <input type="text" id="remote_address" placeholder="user@yourNextcloud.org">            <input type="submit" value=" " id="save-button-confirm" class="icon-confirm" disabled="disabled"></button>        </form>    </span></li>					</ul>
+				</div>
+			</div>
+					</div>
+			</header>
+	<div id="content" class="app-files_sharing" role="main">
+		<div id="app-content">
+	<link rel="image_src" href="https://nc.silmoon.duckdns.org/apps/files_sharing/publicpreview/MrtLZRPtQZLWYxR?file=/nextcloud-install.jpg&amp;x=200&amp;y=200" />
+
+<input type="hidden" id="sharingUserId" value="">
+<input type="hidden" id="filesApp" name="filesApp" value="1">
+<input type="hidden" id="isPublic" name="isPublic" value="1">
+<input type="hidden" name="dir" value="" id="dir">
+	<input type="hidden" name="downloadURL" value="https://nc.silmoon.duckdns.org/s/MrtLZRPtQZLWYxR/download/nextcloud-install.jpg" id="downloadURL">
+<input type="hidden" name="previewURL" value="https://nc.silmoon.duckdns.org/s/MrtLZRPtQZLWYxR/preview" id="previewURL">
+<input type="hidden" name="sharingToken" value="MrtLZRPtQZLWYxR" id="sharingToken">
+<input type="hidden" name="filename" value="nextcloud-install.jpg" id="filename">
+<input type="hidden" name="mimetype" value="image/jpeg" id="mimetype">
+<input type="hidden" name="previewSupported" value="true" id="previewSupported">
+<input type="hidden" name="mimetypeIcon" value="/apps/theming/img/core/filetypes/image.svg?v=0" id="mimetypeIcon">
+<input type="hidden" name="hideDownload" value="false" id="hideDownload">
+<input type="hidden" id="disclaimerText" value="">
+<input type="hidden" name="maxFilesizeUpload" value="536870912" id="maxFilesizeUpload">
+
+	<input type="hidden" name="filesize" value="16743" id="filesize">
+<input type="hidden" name="maxSizeAnimateGif" value="10" id="maxSizeAnimateGif">
+
+	<!-- ONLY if this is a folder, we show the grid toggle button -->
+	
+	<!-- files listing -->
+	<div id="files-public-content">
+		<div id="preview">
+												<!-- Preview frame is filled via JS to support SVG images for modern browsers -->
+					<div id="imgframe"></div>
+													</div>
+	</div>
+
+	<input type="hidden" name="dir" id="dir" value="" />
+	<div class="hiddenuploadfield">
+		<input type="file" id="file_upload_start" class="hiddenuploadfield" name="files[]"
+			   data-url="/files/ajax/upload.php" />
+	</div>
+</div>
+	</div>
+		<footer>
+		<p><a href="https://nextcloud.com" target="_blank" rel="noreferrer noopener" class="entity-name">Nextcloud</a> – un hogar seguro para todos tus datos</p>
+					<p>
+				<a href="https://nextcloud.com/signup/" target="_blank" rel="noreferrer noopener">
+					Consigue tu propia cuenta gratuita				</a>
+			</p>
+				</footer>
+	
+</body>
+</html>
