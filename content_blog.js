@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Instalación de Nextcloud 21 con docker Oficial',
+            'text': 'Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.', 
+            'tags': 'nextcloud,nube,webdav,docker,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html' 
+},
+{
             'title': 'Proxy Inverso con Caddy',
             'text': 'Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán .', 
             'tags': 'proxy-inverso,go,proxy,inverso,,', 

@@ -113,66 +113,64 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="creando-el-docker">Creando el docker</h2>
 <p>Caddy requiere acceso de escritura a dos ubicaciones: un directorio de datos y un directorio de configuración .</p>
 <p>Recuerda que para generar los certificados de <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&amp;url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a>, Caddy necesita tener abiertos los puertos 80 y 443.</p>
-<pre class="example"><code>version: &quot;3.7&quot;
-services:
-caddy:
-image: caddy
-ports:
-- &quot;80:80&quot;
-- &quot;443:443&quot;
-volumes:
-- ./Caddyfile:/etc/caddy/Caddyfile:ro
-- ./data/caddy/data:/data
-- ./data/caddy/config:/config
-restart: unless-stopped
-container_name: caddy
-</code></pre>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&quot;3.7&quot;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">caddy</span>:</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="ex">image</span>: caddy</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="ex">-</span> <span class="st">&quot;80:80&quot;</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="ex">-</span> <span class="st">&quot;443:443&quot;</span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="ex">-</span> ./Caddyfile:/etc/caddy/Caddyfile:ro</a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="ex">-</span> ./data/caddy/data:/data</a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="ex">-</span> ./data/caddy/config:/config</a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="ex">restart</span>: unless-stopped</a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="ex">container_name</span>: caddy</a></code></pre></div>
 <p>Cómo es multiarquitectura, podremos utilizarlo en ARM, amd64,…</p>
 <h2 id="caddyfile">Caddyfile</h2>
 <p>Creamos el archivo <strong>Caddyfile</strong>, donde irá la configuración de nuestro proxy inverso.</p>
 <p>Voy a exponer estos 3 servicios. En el puerto 8080, tengo un servidor nginx con una web estática, 8096 para jellyfin y 4533 para navidrome.</p>
 <p>Caddy se encargará de exponer estos servicios a la red generando el certificado con <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&amp;url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a>.</p>
 <pre class="example"><code>midominio.duckdns.org {
-reverse_proxy http://192.168.1.100:8080
-}
+                        reverse_proxy http://192.168.1.100:8080
+                      }
 
 
 jellyfin.midominio.duckdns.org {
-reverse_proxy http://192.168.1.100:8096
-}
+                                 reverse_proxy http://192.168.1.100:8096
+                               } 
 
 
 navidrome.midominio.duckdns.org {
-reverse_proxy http://192.168.1.100:4533
-}
+                                  reverse_proxy http://192.168.1.100:4533
+                                }
 </code></pre>
 <h2 id="todo-de-una-vez">Todo de una vez</h2>
 <p>Voy a crear de ejemplo un docker-compose con shaarli y caddy, para que me genere el certirficado de shaarli.</p>
-<pre class="example"><code>version: &quot;3.7&quot;
-services:
-caddy:
-image: caddy
-ports:
-- &quot;80:80&quot;
-- &quot;443:443&quot;
-volumes:
-- ./Caddyfile:/etc/caddy/Caddyfile:ro
-- ./data/caddy/data:/data
-- ./data/caddy/config:/config
-restart: unless-stopped
-container_name: caddy
-
-shaarli:
-image: shaarli/shaarli
-container_name: shaarli
-restart: unless-stopped
-</code></pre>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">version</span>: <span class="st">&quot;3.7&quot;</span></a>
+<a class="sourceLine" id="cb3-2" title="2"> <span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb3-3" title="3">   <span class="ex">caddy</span>:</a>
+<a class="sourceLine" id="cb3-4" title="4">     <span class="ex">image</span>: caddy</a>
+<a class="sourceLine" id="cb3-5" title="5">     <span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb3-6" title="6">       <span class="ex">-</span> <span class="st">&quot;80:80&quot;</span></a>
+<a class="sourceLine" id="cb3-7" title="7">       <span class="ex">-</span> <span class="st">&quot;443:443&quot;</span></a>
+<a class="sourceLine" id="cb3-8" title="8">     <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb3-9" title="9">       <span class="ex">-</span> ./Caddyfile:/etc/caddy/Caddyfile:ro</a>
+<a class="sourceLine" id="cb3-10" title="10">       <span class="ex">-</span> ./data/caddy/data:/data</a>
+<a class="sourceLine" id="cb3-11" title="11">       <span class="ex">-</span> ./data/caddy/config:/config</a>
+<a class="sourceLine" id="cb3-12" title="12">     <span class="ex">restart</span>: unless-stopped</a>
+<a class="sourceLine" id="cb3-13" title="13">     <span class="ex">container_name</span>: caddy</a>
+<a class="sourceLine" id="cb3-14" title="14"></a>
+<a class="sourceLine" id="cb3-15" title="15">    <span class="ex">shaarli</span>:</a>
+<a class="sourceLine" id="cb3-16" title="16">      <span class="ex">image</span>: shaarli/shaarli</a>
+<a class="sourceLine" id="cb3-17" title="17">      <span class="ex">container_name</span>: shaarli</a>
+<a class="sourceLine" id="cb3-18" title="18">      <span class="ex">restart</span>: unless-stopped</a></code></pre></div>
 <p>Como veis, no he tenido que exponer los puertos de shaarli, ya que shaarli va ha  estar dentro de la misma red de Caddy y este mediante el archivo de configuración <strong>Caddyfile</strong>, Caddy se encargará de enlazar el servicio y crear el certificado.</p>
 <h3 id="caddyfile-1">Caddyfile</h3>
 <p>Mediante <code>reverse_proxy  shaarli:</code>, indicaremos a Caddy que este es el servicio que quiero utilizar como proxy inverso y que la url que quiero utilizar para acceder a este servicio, generandome también el certificado <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&amp;url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a> de esta dirección, sea <code>shaarli.midominio.duckdns.org</code>.</p>
 <pre class="example"><code>shaarli.midominio.duckdns.org {
-reverse_proxy  shaarli:
-}
+                                reverse_proxy  shaarli:
+                              }
 </code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
