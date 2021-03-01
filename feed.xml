@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose</title>
+    <link>https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/" alt="Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose"&gt;
+&lt;br&gt;&lt;p&gt;Después de la última instalación Nextcloud que he hecho mediante Docker, ha llegado la primera actualización de la imagen.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html&gt;Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 01 Mar 2021  +0100</pubDate>
+    <category>docker</category>
+    <category>nextcloud</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html</guid>
+   </item>
+   <item>
     <title>Instalación de Nextcloud 21 con docker Oficial</title>
     <link>https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 25 Feb 2021  +0100</pubDate>
+    <pubDate>Thu, 25 Feb 2021 20:30 +0100</pubDate>
     <category>nextcloud</category>
     <category>nube</category>
     <category>webdav</category>

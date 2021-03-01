@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose',
+            'text': 'Después de la última instalación Nextcloud que he hecho mediante Docker, ha llegado la primera actualización de la imagen.', 
+            'tags': 'docker,nextcloud,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html' 
+},
+{
             'title': 'Instalación de Nextcloud 21 con docker Oficial',
             'text': 'Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.', 
             'tags': 'nextcloud,nube,webdav,docker,,', 
