@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Trabajos en segundo plano de Nextcloud y ownCloud',
+            'text': 'Un sistema como Nextcloud a veces requiere que las tareas se realicen de forma regular sin la necesidad de interacción del usuario ni obstaculizar el rendimiento de Nextcloud. Para ese', 
+            'tags': 'nextcloud,owncloud,docker,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html' 
+},
+{
             'title': 'Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose',
             'text': 'Después de la última instalación Nextcloud que he hecho mediante Docker, ha llegado la primera actualización de la imagen.', 
             'tags': 'docker,nextcloud,,,,', 
