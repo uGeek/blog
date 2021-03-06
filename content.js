@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Paquetes instalados en tu sistema',
+            'text': 'He instalado tantas cosas para probar, que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas, para borrar todo aquello que sobra. *Importante borrar', 
+            'tags': 'bash,zsh,fish,snap,flatpak,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html' 
+},
+{
             'title': 'Trabajos en segundo plano de Nextcloud y ownCloud',
             'text': 'Un sistema como Nextcloud a veces requiere que las tareas se realicen de forma regular sin la necesidad de interacción del usuario ni obstaculizar el rendimiento de Nextcloud. Para ese', 
             'tags': 'nextcloud,owncloud,docker,,,', 

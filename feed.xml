@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Paquetes instalados en tu sistema</title>
+    <link>https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="Paquetes instalados en tu sistema"&gt;
+&lt;br&gt;&lt;p&gt;He instalado tantas cosas para probar, que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas, para borrar todo aquello que sobra. *Importante borrar... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html&gt;Paquetes instalados en tu sistema&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 06 Mar 2021  +0100</pubDate>
+    <category>bash</category>
+    <category>zsh</category>
+    <category>fish</category>
+    <category>snap</category>
+    <guid>https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html</guid>
+   </item>
+   <item>
     <title>Trabajos en segundo plano de Nextcloud y ownCloud</title>
     <link>https://ugeek.github.io/blog/post/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 02 Mar 2021  +0100</pubDate>
+    <pubDate>Tue, 02 Mar 2021 20:30 +0100</pubDate>
     <category>nextcloud</category>
     <category>owncloud</category>
     <category>docker</category>
