@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Cambiar el hostname Ubuntu, Debian, Raspberry OS...',
+            'text': 'Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*.', 
+            'tags': 'bash,ubuntu,debian,raspberry,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-07-cambiar-el-hostname-ubuntu-debian-raspberry-os--.html' 
+},
+{
             'title': 'Paquetes instalados en tu sistema',
             'text': 'He instalado tantas cosas para probar, que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas, para borrar todo aquello que sobra. *Importante borrar', 
             'tags': 'bash,zsh,fish,snap,flatpak,', 

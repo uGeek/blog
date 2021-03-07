@@ -1,5 +1,5 @@
 <head>
-<title>proxy-inverso</title>
+<title>Cambiar el hostname Ubuntu, Debian, Raspberry OS.... uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,14 +47,79 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>proxy-inverso</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="cambiar-el-hostname-ubuntu-debian-raspberry-os-1" title="Cambiar el hostname Ubuntu, Debian, Raspberry OS..." data-export_file_name="cambiar-el-hostname-ubuntu-debian-raspberry-os--" data-description="Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*." data-export_date="2021-03-07 20:48" data-category="bash" data-tag="ubuntu,debian,raspberry" data-image="./images-blog/bash.png">Cambiar el hostname Ubuntu, Debian, Raspberry OS…</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 221 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Si utilizas una Raspberry, por defecto el hostname es <strong>pi</strong>. Si tienes muchos dispositivos que administrar y por ejemplo utilizan <strong>Ubuntu</strong>, puede que el hostname sea <strong>ubuntu</strong>.</p>
+<center>
+<p><img src="../images-blog/bash.png" /></p>
+</center>
+<p>Esto puede ser un locura, así que es interesante poner un nombre a cada dispositivo para poder identificarlos.</p>
+<p>Vamos a ver como hacer esto en <strong>Ubuntu</strong>, <strong>Raspberry</strong>, <strong>Debian</strong> y derivadas…</p>
+<h2 id="hostname-actual">hostname actual</h2>
+<p>Para ver el hostname que estamos utilizando actualmente:</p>
+<p><code>hostname</code></p>
+<h2 id="cambiar-el-hostname">Cambiar el hostname</h2>
+<p>Tecleamos el siguiente comando:</p>
+<p><code>sudo hostname nuevo_hostname</code></p>
+<p>En Debian, además tenemos que editar los archivos /etc/hostname y /etc/hosts.</p>
+<p>Sustituye hostname antiguo por el nuevo :</p>
+<p><code>sudo nano /etc/hostname</code></p>
+<p><code>sudo nano /etc/hosts</code></p>
+<p>Ahora reiniciamos y comprobaremos si se ha modificado el hostname.</p>
+<p><code>sudo reboot now</code></p>
+<p><code>hostname</code></p>
+<br>
+<p>Publicado por Angel el domingo 07 marzo del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html>Proxy Inverso con Caddy</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html">Paquetes instalados en tu sistema</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-29-saber-si-existen-variables-directorios-o-archivos-con-bash.html">Saber si existen variables, directorios o archivos con bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html">Comando sudo y su</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html">Docker: Ctop. El portanier de terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html">Montar un directorio en otro directorio</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html">s-screen. Gestionando mis procesos en segundo plano de un modo sencillo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html">Buscar texto en un directorio, archivo,… con grep y find</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
