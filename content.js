@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'vim. Resaltado de sintaxis',
+            'text': 'Cuando creo un script en bash u otro lenguaje de programación, me gusta que el editor que utilizo resalte la sintaxis, ya que de este modo puedo encontrar errores. Ahora', 
+            'tags': 'vim,sintaxis,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html' 
+},
+{
             'title': 'Cambiar el hostname Ubuntu, Debian, Raspberry OS...',
             'text': 'Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*.', 
             'tags': 'bash,ubuntu,debian,raspberry,,', 
