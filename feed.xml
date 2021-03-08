@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 08 Mar 2021  +0100</pubDate>
+    <pubDate>Mon, 08 Mar 2021 17:42 +0100</pubDate>
     <category>vim</category>
     <category>sintaxis</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html</guid>
+   </item>
+   <item>
+    <title>Vim Cheat Sheet. Chuleta de atajos para Vim</title>
+    <link>https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/vim.png" alt="Vim Cheat Sheet. Chuleta de atajos para Vim"&gt;
+&lt;br&gt;&lt;p&gt;Chuleta de atajos para Vim... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html&gt;Vim Cheat Sheet. Chuleta de atajos para Vim&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 08 Mar 2021  +0100</pubDate>
+    <category>vim</category>
+    <category>bash</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html</guid>
    </item>
    <item>
     <title>Cambiar el hostname Ubuntu, Debian, Raspberry OS...</title>

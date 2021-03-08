@@ -1,0 +1,23 @@
+<head> <title>$TITLEPROGRAM</title> <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<h1 id="controlando-la-papelera-de-nextcloud" title="Controlando la papelera de Nextcloud" data-export_file_name="controlando-la-papelera-de-nextcloud" data-description="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." data-export_date="2021-03-09 17:30" data-category="nextcloud" data-tag="servidor,docker" data-image="./images-blog/nextcloud.png">Controlando la papelera de Nextcloud</h1>
+<p>Mediante el archivo de configuración <strong>config.php</strong>, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera.</p>
+<center>
+<p><img src="../images-blog/nextcloud.png" /></p>
+</center>
+<p>Para tener el control de la papelera, tenemos que utilizar esta variable en el archivo <strong>config.php</strong>.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="st">&#39;trashbin_retention_obligation&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;auto&#39;</span>,</a></code></pre></div>
+<h2 id="auto">Auto</h2>
+<p>Auto es la configuración predeterminada. El archivo permanecerá durante 30 días o si necesitas espacio.</p>
+<h2 id="d-auto">D, auto</h2>
+<p>Mantiene los archivos o directorios durante los <strong>D[dias]</strong> y eliminar archivos o directorios si necesita espacio.</p>
+<h2 id="auto-d">auto, D</h2>
+<p>Elimina archivos que tengas más <strong>D[días]</strong> y eliminar archivos o directorios si necesita espacio.</p>
+<h2 id="d1-d2">D1, D2</h2>
+<p>Mantenga archivos durante <strong>D1</strong> días y elimina archivos que superan <strong>D2</strong> día. <strong>No</strong> eliminar archivos o directorios si necesita espacio.</p>
+<h2 id="deshabilitar">Deshabilitar</h2>
+<p>Deshabilitar la papelera con <code>disabled</code>.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="st">&#39;trashbin_retention_obligation&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;disabled&#39;</span>,</a></code></pre></div>
+<h2 id="conclusión">Conclusión</h2>
+<p>Ahora ya sabes como utilizar la papelera de Nextcloud</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

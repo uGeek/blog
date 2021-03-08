@@ -73,7 +73,7 @@ ARTICULOS_WEB=$(echo "*** Últimos Podcasts
 
 
 # BROWSER
-#BROWSER="qutebrowser"         # Browser to open page
+BROWSER="firefox" # "qutebrowser"         # Browser to open page
 EMACS="emacs"             # txt editor
 TWITTER="@ugeekpodcast"   # nick twitter
 LANGUAGE="es_ES"          

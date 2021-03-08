@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html' 
 },
 {
+            'title': 'Vim Cheat Sheet. Chuleta de atajos para Vim',
+            'text': 'Chuleta de atajos para Vim', 
+            'tags': 'vim,bash,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html' 
+},
+{
             'title': 'Cambiar el hostname Ubuntu, Debian, Raspberry OS...',
             'text': 'Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*.', 
             'tags': 'bash,ubuntu,debian,raspberry,,', 
