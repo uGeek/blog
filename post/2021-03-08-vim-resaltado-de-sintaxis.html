@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="vim.-resaltado-de-sintaxis-1" title="vim. Resaltado de sintaxis" data-export_file_name="vim-resaltado-de-sintaxis" data-description="Cuando creo un script en bash u otro lenguaje de programación, me gusta que el editor que utilizo resalte la sintaxis, ya que de este modo puedo encontrar errores. Ahora" data-export_date="2021-03-08 10:50" data-category="vim" data-tag="sintaxis" data-image="./images-blog/vim.png">vim. Resaltado de sintaxis</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 290 palabras.    <a href="https://ugeek.github.io/blog/categories/vim">vim</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 302 palabras.    <a href="https://ugeek.github.io/blog/categories/vim">vim</a></h5>
 <p>Cuando creo un script en bash u otro lenguaje de programación, me gusta que el editor que utilizo resalte la sintaxis, ya que de este modo puedo encontrar errores. Ahora que estoy empezando a utilizar <strong>vim</strong>, vamos a ver como resaltar la sintaxis por defecto.</p>
 <center>
 <p><img src="../images-blog/vim.png" /></p>
@@ -98,25 +98,25 @@ $("#tipue_search_input").tipuesearch();
 <div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">syntax</span> on</a></code></pre></div>
 <p>de este modo, cada vez que abramos <strong>vim</strong>, de forma automática, <strong>vim</strong> resaltará la sintaxis.</p>
 <p>Si quieres habilitar este modo solo cuando tu lo desees, una vez abierto el script a editar, ejecutaremos:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1">:<span class="ex">syntax</span> on</a></code></pre></div>
 <p>Para deshabilitarlo, ejecutaremos:</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1">:<span class="ex">syntax</span> off</a></code></pre></div>
 <h2 id="plantillas-de-colores">Plantillas de colores</h2>
 <p>Es probable que la plantilla por defecto no te guste. Si deseas cambiarla, podemos encontrar varias de diferentes colores en la ruta <code>/usr/share/vim/vim*/colors/</code></p>
 <div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">ls</span> /usr/share/vim/vim*/colors/</a></code></pre></div>
 <p>Vamos a probar una de las plantilla. Por ejemplo, <strong>vim blue.vim</strong>.</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1">:<span class="ex">colorscheme</span> blue</a></code></pre></div>
 <p>Ahora voy a añadir esta plantilla al archivo de configuración, para utilizarla siempre por defecto:</p>
 <div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">colorscheme</span> blue</a></code></pre></div>
 <p>Podemos encontrar más plantillas <a href="https://www.vim.org/scripts/script_search_results.php?keywords=&amp;script_type=color+scheme&amp;order_by=creation_date&amp;direction=descending&amp;search=search">en la siguiente página de vim</a>.</p>
 <h2 id="lineas-numeradas">Lineas Numeradas</h2>
 <p>Para numerar las líneas, tan sencillo como ejecutar en <strong>vim</strong> una vez abierto el script:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1">:<span class="ex">set</span> number</a></code></pre></div>
 <p>También podemos utilizar</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1">:<span class="ex">set</span> nu</a></code></pre></div>
 <p>Si queremos que por defecto siempre aparezcan las líneas, añadiremos <code>set number</code> o =set nu=en el archivo de configuración <strong>.vimrc</strong>.</p>
 <p>Para deshabilitar la numeración, utilizaremos lo haremos con el comando:</p>
-<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"></code></pre></div>
+<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1">:<span class="ex">set</span> nu!</a></code></pre></div>
 <p>Si estamos editando y probando todo el rato un script en la misma línea y quiero acceder ella directamente, lo haríamos del siguiente modo:</p>
 <div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="ex">vim</span> +183 script.sh</a></code></pre></div>
 <h2 id="fuentes">Fuentes</h2>
