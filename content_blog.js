@@ -1,15 +1,21 @@
 var tipuesearch = {pages: [
 {
-            'title': 'vim. Resaltado de sintaxis',
-            'text': 'Cuando creo un script en bash u otro lenguaje de programación, me gusta que el editor que utilizo resalte la sintaxis, ya que de este modo puedo encontrar errores. Ahora', 
-            'tags': 'vim,sintaxis,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html' 
+            'title': 'Controlando la papelera de Nextcloud',
+            'text': 'Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera.', 
+            'tags': 'nextcloud,servidor,docker,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-09-controlando-la-papelera-de-nextcloud.html' 
 },
 {
             'title': 'Vim Cheat Sheet. Chuleta de atajos para Vim',
             'text': 'Chuleta de atajos para Vim', 
             'tags': 'vim,bash,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html' 
+},
+{
+            'title': 'vim. Resaltado de sintaxis',
+            'text': 'Cuando creo un script en bash u otro lenguaje de programación, me gusta que el editor que utilizo resalte la sintaxis, ya que de este modo puedo encontrar errores. Ahora', 
+            'tags': 'vim,sintaxis,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html' 
 },
 {
             'title': 'Cambiar el hostname Ubuntu, Debian, Raspberry OS...',

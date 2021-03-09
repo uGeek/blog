@@ -1,5 +1,5 @@
 <head>
-<title>Docker: Wallabag. uGeek Blog </title>
+<title>Controlando la papelera de Nextcloud. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,... pero" />
+<meta name="description" content="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: Wallabag" />
-<meta property="og:description" content="Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,... pero" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/wallabag.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-01-docker:-wallabag.html" />
+<meta property="og:title" content="Controlando la papelera de Nextcloud" />
+<meta property="og:description" content="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-03-09-controlando-la-papelera-de-nextcloud.html" />
 
-<meta name="twitter:title" content="Docker: Wallabag" />
-<meta name="twitter:description" content="Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,... pero" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/wallabag.png" />
+<meta name="twitter:title" content="Controlando la papelera de Nextcloud" />
+<meta name="twitter:description" content="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,51 +85,41 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-wallabag-1" title="Docker: Wallabag" data-export_file_name="Docker: Wallabag" data-description="Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,... pero" data-export_date="2019-10-01 5:15 2020-05-23" data-category="docker" data-tag="ubuntu, debian, nas, raspberry,wallabag" data-image="./images-blog/wallabag.png">Docker: Wallabag</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 298 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,… pero dejó de funcionar para Raspberry.</p>
+<h1 id="controlando-la-papelera-de-nextcloud-1" title="Controlando la papelera de Nextcloud" data-export_file_name="controlando-la-papelera-de-nextcloud" data-description="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." data-export_date="2021-03-09 21:30" data-category="nextcloud" data-tag="servidor,docker" data-image="./images-blog/nextcloud.png">Controlando la papelera de Nextcloud</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 245 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
+<p>Mediante el archivo de configuración <strong>config.php</strong>, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera.</p>
 <center>
-<p><img src="../images-blog/wallabag.png" /></p>
+<p><img src="../images-blog/nextcloud.png" /></p>
 </center>
-<p>Ha pasado el tiempo y ahora que estoy liado con la creación de Dockers, así que decidí el intentarlo una vez más y esta vez con éxito.</p>
-<h2 id="montando-el-docker">Montando el Docker</h2>
-<p>Al montar el Docker siguiendo la documentación, se monta pero, pero no aparece del modo correcto, es como que faltan las hojas de estílo. Es muy importante para solucionar esto el añadir la ruta ip de nuestro servidor al montar el docker:</p>
-<p>Ejemplo. Si fuera la ip 192.168.1.100:</p>
-<pre><code>SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100
-</code></pre>
-<h2 id="wallabag-para-arm-o-raspberry-pi">Wallabag para ARM o Raspberry Pi</h2>
-<pre><code>docker create --name wallabag  \
-  -p 80:80 \
-  -v $HOME/docker/wallabag/data:/var/www/wallabag/data \
-  -v $HOME/docker/wallabag/images:/var/www/wallabag/web/assets/images \
-  -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100:80 \
-  ugeek/wallabag:arm 
-</code></pre>
-<h2 id="wallabag-docker-oficial-amd64">Wallabag docker oficial amd64</h2>
-<pre><code>docker create --name wallabag  \
-  -p 80:80 \
-  -v $HOME/docker/wallabag/data:/var/www/wallabag/data \
-  -v $HOME/docker/wallabag/images:/var/www/wallabag/web/assets/images \
-  -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100:80 \
-wallabag/wallabag
-</code></pre>
-<h2 id="wallabar-para-i386">Wallabar para i386</h2>
-<pre><code>docker run --name wallabag  -p 80:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100 ugeek/wallabag:i386
-</code></pre>
+<p>Para tener el control de la papelera, tenemos que utilizar esta variable en el archivo <strong>config.php</strong>.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="st">&#39;trashbin_retention_obligation&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;auto&#39;</span>,</a></code></pre></div>
+<h2 id="auto">Auto</h2>
+<p>Auto es la configuración predeterminada. El archivo permanecerá durante 30 días o si necesitas espacio.</p>
+<h2 id="d-auto">D, auto</h2>
+<p>Mantiene los archivos o directorios durante los <strong>D[dias]</strong> y eliminar archivos o directorios si necesita espacio.</p>
+<h2 id="auto-d">auto, D</h2>
+<p>Elimina archivos que tengas más <strong>D[días]</strong> y eliminar archivos o directorios si necesita espacio.</p>
+<h2 id="d1-d2">D1, D2</h2>
+<p>Mantenga archivos durante <strong>D1</strong> días y elimina archivos que superan <strong>D2</strong> día. <strong>No</strong> eliminar archivos o directorios si necesita espacio.</p>
+<h2 id="deshabilitar">Deshabilitar</h2>
+<p>Deshabilitar la papelera con <code>disabled</code>.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="st">&#39;trashbin_retention_obligation&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;disabled&#39;</span>,</a></code></pre></div>
+<h2 id="conclusión">Conclusión</h2>
+<p>Ahora ya sabes como utilizar la papelera de Nextcloud</p>
 <br>
-<p>Publicado por Angel el martes 01 octubre del 2019 y <strong>actualizado</strong> el sábado 23 mayo del 2020</p>
+<p>Publicado por Angel el martes 09 marzo del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html">Trabajos en segundo plano de Nextcloud y ownCloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html">Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian… con Docker</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html">PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,… mediante Docker</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-12-docker-topydo-y-todotxt-machine-en-un-docker.html">Docker: topydo y todotxt-machine en un docker</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html">Docker: Ctop. El portanier de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html">Crear una imagen docker desde un repositorio de GitHub</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-07-filerun-utilizando-tu-hora-local.html">FileRun. Utilizando tu hora local</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html">Docker: Servidor Webdav</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,… con Rclone</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
