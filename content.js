@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Tu PornHub privado se llama Stash',
+            'text': 'Stash se describe así mismo como un servicio que te permite organizar y ver tu propia colección de archivos de imágenes y videos para adultos. Piense en ello como un sitio privado de PornHub para su colección de pornografía personal', 
+            'tags': 'docker,servidores,raspberry,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-10-tu-pornhub-privado-se-llama-stash.html' 
+},
+{
             'title': 'Controlando la papelera de Nextcloud',
             'text': 'Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera.', 
             'tags': 'nextcloud,servidor,docker,,,', 
