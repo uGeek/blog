@@ -1,6 +1,12 @@
 var tipuesearch = {pages: [
 
 {
+            'title': 'Actualización de Jellyfin, Jellyfin en FDroid, Nextcloud Radio,',
+            'text': 'Actualización de Jellyfin, Jellyfin en FDroid, Nextcloud Radio,', 
+            'tags': 'terminal,bash,,,,', 
+            'url': 'https://ugeek.github.io/post/2021-03-15-actualizacion-de-jellyfin-jellyfin-en-fdroid-nextcloud-radio.html' 
+},
+{
             'title': 'Tu PornHub autohospedado y privado,',
             'text': 'Tu PornHub autohospedado y privado,', 
             'tags': 'servicio,bash,,,,', 
