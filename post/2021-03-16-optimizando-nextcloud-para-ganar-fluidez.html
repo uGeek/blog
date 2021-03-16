@@ -1,0 +1,161 @@
+<head>
+<title>Optimizando Nextcloud para ganar fluidez. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="He estado visitando muchas páginas para optimizar *Nextcloud* y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Optimizando Nextcloud para ganar fluidez" />
+<meta property="og:description" content="He estado visitando muchas páginas para optimizar *Nextcloud* y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-03-16-optimizando-nextcloud-para-ganar-fluidez.html" />
+
+<meta name="twitter:title" content="Optimizando Nextcloud para ganar fluidez" />
+<meta name="twitter:description" content="He estado visitando muchas páginas para optimizar *Nextcloud* y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="optimizando-nextcloud-para-ganar-fluidez-1" title="Optimizando Nextcloud para ganar fluidez" data-export_file_name="optimizando-nextcloud-para-ganar-fluidez" data-description="He estado visitando muchas páginas para optimizar *Nextcloud* y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez." data-export_date="2021-03-16 19:03" data-category="nextcloud" data-tag="cloud" data-image="./images-blog/nextcloud.png">Optimizando Nextcloud para ganar fluidez</h1>
+<h5>Tiempo estimado de lectura: 5 minutos. 594 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
+<p>He estado visitando muchas páginas para optimizar <strong>Nextcloud</strong> y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez.</p>
+<center>
+<p><img src="../images-blog/nextcloud.png" /></p>
+</center>
+<p>Como he aconsejado muchas veces, es importante no instalar aplicaciones y opciones que no utilices. Sigue paso a paso estos consejos y si hay alguna opción que no deseas deshabilitar, déjala y disfruta de <strong>Nextcloud</strong>.</p>
+<h2 id="deshabilita-los-espacios-de-trabajo-enriquecidos">Deshabilita los espacios de trabajo enriquecidos</h2>
+<p>Vamos a deshabilitar la opción, que en cada directorio salga previsualizado un archivo <strong>Readme.md</strong>. Esto puede relentizar la instancia.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:app:set text workspace_available --value=0</a></code></pre></div>
+<h2 id="deshabilitar-los-flujos-de-usuarios">Deshabilitar los flujos de usuarios</h2>
+<p>Los flujos pueden tener un impacto considerable en el rendimiento de un sistema y es posible que no desees dar a los usuarios la capacidad de definir sus propios flujos.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:app:set workflowengine user_scope_disabled --value yes</a></code></pre></div>
+<h2 id="desactivar-la-aplicación-de-fotos">Desactivar la aplicación de fotos</h2>
+<p>Debido a que esta aplicación consume mucha memoria y CPU, es preferible deshabilitarla si no la utilizas.</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud php occ app:disable photos</a></code></pre></div>
+<h2 id="optimizar-las-vistas-previas">Optimizar las vistas previas</h2>
+<p>Primero, instalaremos la aplicación <strong>previewgenerator</strong>:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud php occ app:install previewgenerator</a></code></pre></div>
+<p>Ahora cambiaremos las miniaturas en la previsualización:</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:app:set previewgenerator squareSizes --value=<span class="st">&quot;32 256&quot;</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:app:set previewgenerator widthSizes  --value=<span class="st">&quot;256 384&quot;</span></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:app:set previewgenerator heightSizes --value=<span class="st">&quot;256&quot;</span></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:system:set preview_max_x --value 512</a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:system:set preview_max_y --value 512</a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:system:set jpeg_quality --value 60</a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="ex">docker</span> exec --user www-data nextcloud php occ config:app:set preview jpeg_quality --value=<span class="st">&quot;60&quot;</span></a></code></pre></div>
+<p>Con estos comandos, vamos a cambiar el tamaño de las imágenes previsualizadas a en el explorador de archivos de <strong>4096</strong> pixels por defecto a <strong>512</strong>.</p>
+<p>De este modo bajará el consumo de la <strong>CPU</strong> y además la previsualización será más fluida.</p>
+<p>Estos cambiós se verán reflejados en el archivos de configuración de <strong>Nextcloud</strong>, <strong>config.php</strong>.</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="st">&#39;preview_max_x&#39;</span> =<span class="op">&gt;</span> <span class="ex">4096</span>,</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="st">&#39;preview_max_y&#39;</span> =<span class="op">&gt;</span> <span class="ex">4096</span>,</a>
+<a class="sourceLine" id="cb6-3" title="3"></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="ex">Cambiar</span>á a:</a>
+<a class="sourceLine" id="cb6-5" title="5"></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="st">&#39;preview_max_x&#39;</span> =<span class="op">&gt;</span> <span class="ex">512</span>,</a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="st">&#39;preview_max_y&#39;</span> =<span class="op">&gt;</span> <span class="ex">512</span>,</a></code></pre></div>
+<p>Reescanearemos todos los archivos</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud php occ files:scan-app-data</a></code></pre></div>
+<p>Regeneramos todas las vistas previas. Este proceso puede llevar mucho tiempo dependiendo el número de imágenes tengas. Utiliza un proceso en segundo plano como <strong>screen</strong>.</p>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud php occ preview:generate-all -v</a></code></pre></div>
+<p>Programa una tarea diaria para generar previamente las vistas previas:</p>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud php occ preview:pre-generate</a></code></pre></div>
+<p>Yo he añadido en cron:</p>
+<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="ex">45</span> 3 * * * docker exec --user www-data nextcloud php occ preview:pre-generate</a></code></pre></div>
+<h2 id="cron">Cron</h2>
+<p>Generamos con crontab una tarea que se ejecute cada cierto tiempo:</p>
+<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud  php -f /var/www/html/cron.php</a></code></pre></div>
+<h3 id="programa-con-crontab">Programa con crontab</h3>
+<p>En la maquina host, añadiremos el siguiente cron:</p>
+<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">*/5</span>  * * * * docker exec --user www-data nextcloud  php -f /var/www/html/cron.php</a></code></pre></div>
+<p>Ahora cada 5 minutos, ejecutará <strong>cron.php</strong>.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><p><a href="https://sohka.eu/wiki:nc-optimizations" class="uri">https://sohka.eu/wiki:nc-optimizations</a></p></li>
+<li><p><a href="https://wiki.calculate-linux.org/working" class="uri">https://wiki.calculate-linux.org/working</a></p></li>
+</ul>
+<br>
+<p>Publicado por Angel el martes 16 marzo del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-09-controlando-la-papelera-de-nextcloud.html">Controlando la papelera de Nextcloud</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html">Trabajos en segundo plano de Nextcloud y ownCloud</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html">Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-07-filerun-utilizando-tu-hora-local.html">FileRun. Utilizando tu hora local</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html">Docker: Servidor Webdav</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

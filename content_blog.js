@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Optimizando Nextcloud para ganar fluidez',
+            'text': 'He estado visitando muchas páginas para optimizar *Nextcloud* y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez.', 
+            'tags': 'nextcloud,cloud,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-16-optimizando-nextcloud-para-ganar-fluidez.html' 
+},
+{
             'title': 'Tu PornHub privado se llama Stash',
             'text': 'Stash se describe así mismo como un servicio que te permite organizar y ver tu propia colección de archivos de imágenes y videos para adultos. Piense en ello como un sitio privado de PornHub para su colección de pornografía personal', 
             'tags': 'docker,servidores,raspberry,,,', 
