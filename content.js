@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Cómo cambiar la contraseña de usuario en Linux',
+            'text': 'Para cambiar la contraseña de un usuario, podemos hacerlo desde la terminal. Vamos a ver tres ejemplos de como cambiar la contraseña: Cambiar la contraseña de tu usuario, cambiar la', 
+            'tags': 'bash,bash,zsh,fish,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-17-como-cambiar-la-contrasena-de-usuario-en-linux.html' 
+},
+{
             'title': 'Optimizando Nextcloud para ganar fluidez',
             'text': 'He estado visitando muchas páginas para optimizar *Nextcloud* y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez.', 
             'tags': 'nextcloud,cloud,,,,', 
