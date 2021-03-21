@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'MPV. Chuleta con atajos de teclado',
+            'text': 'Hoy os traigo una chuleta de atajos de teclado del reproductor mpv', 
+            'tags': 'video,mpv,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-21-mpv-chuleta-con-atajos-de-teclado.html' 
+},
+{
             'title': 'Cómo cambiar la contraseña de usuario en Linux',
             'text': 'Para cambiar la contraseña de un usuario, podemos hacerlo desde la terminal. Vamos a ver tres ejemplos de como cambiar la contraseña: Cambiar la contraseña de tu usuario, cambiar la', 
             'tags': 'bash,bash,zsh,fish,,', 
