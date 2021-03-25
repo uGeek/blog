@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'nncli. Notas desde el terminal con Nextcloud Notes',
+            'text': 'nncli es un fork de la aplicación sncli, desarrollada en Python que da acceso a tu servidor de notas de Nextcloud a través de la línea de comando.', 
+            'tags': 'nextcloud,notas,terminal,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html' 
+},
+{
             'title': 'MPV. Chuleta con atajos de teclado',
             'text': 'Hoy os traigo una chuleta de atajos de teclado del reproductor mpv', 
             'tags': 'video,mpv,,,,', 

@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>nncli. Notas desde el terminal con Nextcloud Notes</title>
+    <link>https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/notes-nextcloud.png" alt="nncli. Notas desde el terminal con Nextcloud Notes"&gt;
+&lt;br&gt;&lt;p&gt;nncli es un fork de la aplicación sncli, desarrollada en Python que da acceso a tu servidor de notas de Nextcloud a través de la línea de comando.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html&gt;nncli. Notas desde el terminal con Nextcloud Notes&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 25 Mar 2021  +0100</pubDate>
+    <category>nextcloud</category>
+    <category>notas</category>
+    <category>terminal</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html</guid>
+   </item>
+   <item>
     <title>MPV. Chuleta con atajos de teclado</title>
     <link>https://ugeek.github.io/blog/post/2021-03-21-mpv-chuleta-con-atajos-de-teclado.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 21 Mar 2021  +0100</pubDate>
+    <pubDate>Sun, 21 Mar 2021 07:20 +0100</pubDate>
     <category>video</category>
     <category>mpv</category>
     <category></category>
