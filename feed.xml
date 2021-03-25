@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 25 Mar 2021  +0100</pubDate>
+    <pubDate>Thu, 25 Mar 2021 19:42 +0100</pubDate>
     <category>nextcloud</category>
     <category>notas</category>
     <category>terminal</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html</guid>
+   </item>
+   <item>
+    <title>Convierte archivos .crt y .key en archivos .pem</title>
+    <link>https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/caddy.png" alt="Convierte archivos .crt y .key en archivos .pem"&gt;
+&lt;br&gt;&lt;p&gt;Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*,... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html&gt;Convierte archivos .crt y .key en archivos .pem&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 25 Mar 2021  +0100</pubDate>
+    <category>caddy</category>
+    <category>ejabberd</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html</guid>
    </item>
    <item>
     <title>MPV. Chuleta con atajos de teclado</title>

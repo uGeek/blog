@@ -23,7 +23,7 @@ BLOG_ORG="$HOME/docker/git/blog/blog.org"
 PATH_BLOG="$HOME/docker/git/blog/"
 
 # ORG-BASH-BLOG 
-ORG_BASH_BLOG="$HOME/docker/git/blog/org-bash-blog"
+ORG_BASH_BLOG="$HOME/docker/git/blog/obb"
 
 # CONFIG FILES 
 PATH_SCRIPTS_PROGRAMS="$HOME/.config/org-bash-blog/"

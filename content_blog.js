@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html' 
 },
 {
+            'title': 'Convierte archivos .crt y .key en archivos .pem',
+            'text': 'Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*,', 
+            'tags': 'caddy,ejabberd,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html' 
+},
+{
             'title': 'MPV. Chuleta con atajos de teclado',
             'text': 'Hoy os traigo una chuleta de atajos de teclado del reproductor mpv', 
             'tags': 'video,mpv,,,,', 

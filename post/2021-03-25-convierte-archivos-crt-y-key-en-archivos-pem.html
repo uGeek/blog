@@ -1,0 +1,120 @@
+<head>
+<title>Convierte archivos .crt y .key en archivos .pem. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*," />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Convierte archivos .crt y .key en archivos .pem" />
+<meta property="og:description" content="Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*," />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/caddy.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html" />
+
+<meta name="twitter:title" content="Convierte archivos .crt y .key en archivos .pem" />
+<meta name="twitter:description" content="Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*," />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/caddy.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="convierte-archivos-.crt-y-.key-en-archivos-.pem-1" title="Convierte archivos .crt y .key en archivos .pem" data-export_file_name="convierte-archivos-crt-y-key-en-archivos-pem" data-description="Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*," data-export_date="2021-03-25 19:42" data-category="caddy" data-tag="ejabberd" data-image="./images-blog/caddy.png">Convierte archivos .crt y .key en archivos .pem</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 295 palabras.    <a href="https://ugeek.github.io/blog/categories/caddy">caddy</a></h5>
+<p>Estoy utilizando <strong>caddy</strong> para generar los certificados de mis servicios. El certificado <strong>TLS</strong> para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé <strong>traefik</strong>, pero como ahora utilizo <strong>caddy</strong>, aunque he leído algo para hecerlo automatizado, he querido salir del paso y crear el archivo ejabberd.pem a partir de los dos archivos <strong>.crt</strong> y <strong>.key</strong> que crea <strong>caddy</strong>.</p>
+<center>
+<p><img src="../images-blog/caddy.png" /></p>
+</center>
+<p>Hay dos formas de hacerlo, el primero funciona seguro, porque tanto yo como la fuente donde he extradido esta información, nos ha funcionado. El segundo método estaba publicado y yo también lo hago para dejarlo de referencia.</p>
+<h2 id="primer-método">Primer método</h2>
+<p>El primer método es el siguiente.</p>
+<p>Cambia hostname por la url de tu servidor, midominio.duckdns.org.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">openssl</span> pkcs12 -export -inkey hostname.key -in hostname.crt  -out hostname.p12</a></code></pre></div>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">openssl</span> pkcs12 -in hostname.p12 -nodes -out hostname.pem</a></code></pre></div>
+<p>Otro método</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">openssl</span> pkcs12 -export -in hostname.crt -inkey hsotname.key -certfile root.crt -out hostname.p12</a></code></pre></div>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">openssl</span> pkcs12 -in hostname.p12 -nocerts -nodes -out hostname.pem</a></code></pre></div>
+<p>En la fuente <strong>gist</strong>, primero ponía el archivo <strong>.crt</strong> y después el <strong>.key.</strong> Yo lo he puesto al revés porque he leído en algunos hilos debía ir así y la verdad es que de este modo, a mi me funciona perfectamente.</p>
+<h2 id="segundo-método">Segundo método</h2>
+<p>El segundo método yo no he probado y en la fuente comenta que nunca le ha funcionado en los servidores que configuró, pero aquí está como referencia:</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">openssl</span> x509 -in hostname.crt -inform DER -out hostname.crt.pem -outform PEM</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="ex">openssl</span> rsa -in hostname.key -out hostname.key.pem -outform PEM</a></code></pre></div>
+<p>Luego, para crear el .pem, generalmente usa solo con <strong>cat</strong> los dos junto con el certificado con formato PEM primero y la clave en segundo lugar.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://gist.github.com/stevenhaddox/1501893" class="uri">https://gist.github.com/stevenhaddox/1501893</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el jueves 25 marzo del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html">Proxy Inverso con Caddy</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
