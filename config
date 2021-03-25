@@ -29,7 +29,11 @@ ORG_BASH_BLOG="$HOME/docker/git/blog/org-bash-blog"
 PATH_SCRIPTS_PROGRAMS="$HOME/.config/org-bash-blog/"
 
 # PUBLISH METHOD (Put the method of publication you use. Here is a post using git. If you don't want to post, don't put anything) 
-PUBLISH="git -C ~/docker/git/blog/ add . ; git -C ~/docker/git/blog/ commit -m 'publish post' ; git -C ~/docker/git/blog/ push ; curl -X POST https://api.telegram.org/bot892152001:AAHHyQitgbO-D6AeScek0Ukf1TQJ_Pkwt1Y/sendMessage\?chat_id\=59385127\&text\='Publicado Nuevo Post'"
+PUBLISH="obb -g ; curl -X POST https://api.telegram.org/bot892152001:AAHHyQitgbO-D6AeScek0Ukf1TQJ_Pkwt1Y/sendMessage\?chat_id\=59385127\&text\='Publicado Nuevo Post'"
+
+
+
+#PUBLISH="git -C ~/docker/git/blog/ add . ; git -C ~/docker/git/blog/ commit -m 'publish post' ; git -C ~/docker/git/blog/ push ; curl -X POST https://api.telegram.org/bot892152001:AAHHyQitgbO-D6AeScek0Ukf1TQJ_Pkwt1Y/sendMessage\?chat_id\=59385127\&text\='Publicado Nuevo Post'"
 
 # + OTHER PUBLISH
 SECOND_PUBLISH="cd /home/marc/docker/git/ugeek.github.io ; bash /home/marc/docker/git/ugeek.github.io/index.sh ; /home/marc/docker/git/blog/org-bash-blog -p" # /home/marc/docker/git/blog/org-bash-blog -p" #cd /home/marc/docker/git/ugeek.github.io/ ; /home/marc/docker/git/ugeek.github.io/index.sh "
