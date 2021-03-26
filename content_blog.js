@@ -1,15 +1,21 @@
 var tipuesearch = {pages: [
 {
-            'title': 'nncli. Notas desde el terminal con Nextcloud Notes',
-            'text': 'nncli es un fork de la aplicación sncli, desarrollada en Python que da acceso a tu servidor de notas de Nextcloud a través de la línea de comando.', 
-            'tags': 'nextcloud,notas,terminal,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html' 
+            'title': 'YTFZF. Youtube desde la terminal',
+            'text': 'La aplicación *ytfzf* pasa a la primera versión estable, v1.0.0 y ahora permite ver la captura de la imagen de los vídeos, dentro de la terminal.', 
+            'tags': 'bash,terminal,youtube,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html' 
 },
 {
             'title': 'Convierte archivos .crt y .key en archivos .pem',
             'text': 'Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*,', 
             'tags': 'caddy,ejabberd,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html' 
+},
+{
+            'title': 'nncli. Notas desde el terminal con Nextcloud Notes',
+            'text': 'nncli es un fork de la aplicación sncli, desarrollada en Python que da acceso a tu servidor de notas de Nextcloud a través de la línea de comando.', 
+            'tags': 'nextcloud,notas,terminal,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html' 
 },
 {
             'title': 'MPV. Chuleta con atajos de teclado',

@@ -13,6 +13,72 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>YTFZF. Youtube desde la terminal</title>
+    <link>https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/youtube.png" alt="YTFZF. Youtube desde la terminal"&gt;
+&lt;br&gt;&lt;p&gt;La aplicación *ytfzf* pasa a la primera versión estable, v1.0.0 y ahora permite ver la captura de la imagen de los vídeos, dentro de la terminal.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html&gt;YTFZF. Youtube desde la terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 26 Mar 2021  +0100</pubDate>
+    <category>bash</category>
+    <category>terminal</category>
+    <category>youtube</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html</guid>
+   </item>
+   <item>
+    <title>Convierte archivos .crt y .key en archivos .pem</title>
+    <link>https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/caddy.png" alt="Convierte archivos .crt y .key en archivos .pem"&gt;
+&lt;br&gt;&lt;p&gt;Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*,... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html&gt;Convierte archivos .crt y .key en archivos .pem&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 25 Mar 2021 22:55 +0100</pubDate>
+    <category>caddy</category>
+    <category>ejabberd</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html</guid>
+   </item>
+   <item>
     <title>nncli. Notas desde el terminal con Nextcloud Notes</title>
     <link>https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html</link>
     <description>
@@ -44,39 +110,6 @@
     <category>terminal</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html</guid>
-   </item>
-   <item>
-    <title>Convierte archivos .crt y .key en archivos .pem</title>
-    <link>https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/caddy.png" alt="Convierte archivos .crt y .key en archivos .pem"&gt;
-&lt;br&gt;&lt;p&gt;Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado, así que me toca renovarlo. En su día utilicé *traefik*,... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html&gt;Convierte archivos .crt y .key en archivos .pem&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Thu, 25 Mar 2021  +0100</pubDate>
-    <category>caddy</category>
-    <category>ejabberd</category>
-    <category></category>
-    <category></category>
-    <guid>https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html</guid>
    </item>
    <item>
     <title>MPV. Chuleta con atajos de teclado</title>
@@ -3548,7 +3581,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
