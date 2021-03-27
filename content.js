@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'PieLauncher. Mi nuevo Lanzador de aplicaciones para Android',
+            'text': 'Voy a cambiar durante un tiempo de lanzador de aplicaciones en mis dispositivos Android. En este caso voy a utilizar *PieLauncher*, un lanzador que utiliza un dinámico en menú circular', 
+            'tags': 'android,laucher,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-27-pielauncher-mi-nuevo-lanzador-de-aplicaciones-para-android.html' 
+},
+{
             'title': 'YTFZF. Youtube desde la terminal',
             'text': 'La aplicación *ytfzf* pasa a la primera versión estable, v1.0.0 y ahora permite ver la captura de la imagen de los vídeos, dentro de la terminal.', 
             'tags': 'bash,terminal,youtube,,,', 

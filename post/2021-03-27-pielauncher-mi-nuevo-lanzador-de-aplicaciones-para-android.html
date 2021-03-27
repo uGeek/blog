@@ -1,0 +1,142 @@
+<head>
+<title>PieLauncher. Mi nuevo Lanzador de aplicaciones para Android. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Voy a cambiar durante un tiempo de lanzador de aplicaciones en mis dispositivos Android. En este caso voy a utilizar *PieLauncher*, un lanzador que utiliza un dinámico en menú circular" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="PieLauncher. Mi nuevo Lanzador de aplicaciones para Android" />
+<meta property="og:description" content="Voy a cambiar durante un tiempo de lanzador de aplicaciones en mis dispositivos Android. En este caso voy a utilizar *PieLauncher*, un lanzador que utiliza un dinámico en menú circular" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/pielauncher.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-03-27-pielauncher-mi-nuevo-lanzador-de-aplicaciones-para-android.html" />
+
+<meta name="twitter:title" content="PieLauncher. Mi nuevo Lanzador de aplicaciones para Android" />
+<meta name="twitter:description" content="Voy a cambiar durante un tiempo de lanzador de aplicaciones en mis dispositivos Android. En este caso voy a utilizar *PieLauncher*, un lanzador que utiliza un dinámico en menú circular" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/pielauncher.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="pielauncher.-mi-nuevo-lanzador-de-aplicaciones-para-android-1" title="PieLauncher. Mi nuevo Lanzador de aplicaciones para Android" data-export_file_name="pielauncher-mi-nuevo-lanzador-de-aplicaciones-para-android" data-description="Voy a cambiar durante un tiempo de lanzador de aplicaciones en mis dispositivos Android. En este caso voy a utilizar *PieLauncher*, un lanzador que utiliza un dinámico en menú circular" data-export_date="2021-03-27 19:25" data-category="android" data-tag="laucher" data-image="./images-blog/pielauncher.png">PieLauncher. Mi nuevo Lanzador de aplicaciones para Android</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 371 palabras.    <a href="https://ugeek.github.io/blog/categories/android">android</a></h5>
+<p>Voy a cambiar durante un tiempo de lanzador de aplicaciones en mis dispositivos Android. En este caso voy a utilizar <strong>PieLauncher</strong>, un lanzador que utiliza un dinámico en menú circular lugar de tablas de iconos, menú de texto, etc…</p>
+<p>Promete que una vez que te acostumbras, puedes iniciar las aplicaciones que usas con más frecuencia utilizando la memoria muscular sin siquiera mirar la pantalla.</p>
+<center>
+<p><img src="../images-blog/pielauncher.png" /></p>
+</center>
+<p>Pulsando en cualquier parte de la pantalla, se abre el circulo de aplicaciones para que las selecciones. De esta manera, dará igual que utilices la mano derecha, izquierda, etc…</p>
+<p>Las aplicaciones que no utilizas con regularidad, están también disponibles rápidamente con solo un toque en cualquier parte de la pantalla y escribiendo la primera o dos letras del nombre de la aplicación.</p>
+<p>Como una imágen vale más que mil palabras, te animo a ver el siguiente video.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JM70qf93UqY" title="YouTube video player" frameborder="0" allow="accelerometer; autopsia; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+<h2 id="cómo-utilizar-el-menú-circular">Cómo utilizar el menú circular</h2>
+<p>Mantén pulsado para abrir el menú circular. Luego, desliza para elegir una aplicación.</p>
+<center>
+<p><img src="../images-blog/pielauncher1.png" /></p>
+</center>
+<h2 id="cómo-abrir-la-lista-de-aplicaciones">Cómo abrir la lista de aplicaciones</h2>
+<p>Simplemente pulsa un toque para abrir la lista. Luego, escribe el nombre de la aplicación que deseas iniciar. Por lo general, una o dos letras son suficientes, incluso si escribes mal una letra. Si la aplicación en la parte superior izquierda es la que desea, también puede presionar para iniciarla.</p>
+<center>
+<p><img src="../images-blog/pielauncher2.png" /></p>
+</center>
+<h2 id="cómo-cerrar-la-lista-de-aplicaciones-rápidamente">Cómo cerrar la lista de aplicaciones rápidamente</h2>
+<p>Desliza hacia abajo para cerrar la lista de aplicaciones.</p>
+<center>
+<p><img src="../images-blog/pielauncher3.png" /></p>
+</center>
+<h2 id="cómo-editar-el-menú-circular">Cómo editar el menú circular</h2>
+<p>Manté presionada una aplicación en la lista de aplicaciones para ingresar al editor del menú circular. Utiliza 4, 6 u 8 iconos en el menú circular para aprovecharlo al máximo.</p>
+<center>
+<p><img src="../images-blog/pielauncher4.png" /></p>
+</center>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/markusfisch/PieLauncher" class="uri">https://github.com/markusfisch/PieLauncher</a></li>
+<li><a href="https://f-droid.org/es/packages/de.markusfisch.android.pielauncher/" class="uri">https://f-droid.org/es/packages/de.markusfisch.android.pielauncher/</a></li>
+<li><a href="https://www.youtube.com/watch?v=JM70qf93UqY" class="uri">https://www.youtube.com/watch?v=JM70qf93UqY</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el sábado 27 marzo del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-30-launchers-opensource-para-android.html">Launchers opensource para Android. Personalizando tu móvil</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html">FreshRSS. Mi servidor de RSS</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-22-orzly-tus-orgmode-syncronizados-por-webdav.html">Orzly. Tus OrgMode syncronizados por WebDav</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-08-anydesk-en-ubuntu-debian.html">AnyDesk en Ubuntu, Debian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-08-teamviewer-en-ubuntu-debian.html">Teamviewer en Ubuntu, Debian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-08-21-cada-vez-mas-clientes-de-jellyfin.html">Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html">Kde Connect en Emacs</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
