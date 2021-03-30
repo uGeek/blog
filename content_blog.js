@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Utilizando twitter desde la terminal con bti',
+            'text': '¿Te imaginas poder twittear desde la terminal?. Voy a explicaros como instalar y configurar el cliente bti, un cliente súper sencillo que cumple con este fin.', 
+            'tags': 'bash,terminal,twitter,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-30-utilizando-twitter-desde-la-terminal-con-bti.html' 
+},
+{
             'title': 'PieLauncher. Mi nuevo Lanzador de aplicaciones para Android',
             'text': 'Voy a cambiar durante un tiempo de lanzador de aplicaciones en mis dispositivos Android. En este caso voy a utilizar *PieLauncher*, un lanzador que utiliza un dinámico en menú circular', 
             'tags': 'android,laucher,,,,', 
