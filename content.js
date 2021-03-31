@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker oficial de Syncthing',
+            'text': 'En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura.', 
+            'tags': 'docker,syncthing,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-03-31-docker-oficial-de-syncthing.html' 
+},
+{
             'title': 'Utilizando twitter desde la terminal con bti',
             'text': '¿Te imaginas poder twittear desde la terminal?. Voy a explicaros como instalar y configurar el cliente bti, un cliente súper sencillo que cumple con este fin.', 
             'tags': 'bash,terminal,twitter,,,', 
