@@ -86,14 +86,14 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="docker-oficial-de-syncthing-1" title="Docker oficial de Syncthing" data-export_file_name="docker-oficial-de-syncthing" data-description="En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura." data-export_date="2021-03-31 15:05" data-category="docker" data-tag="syncthing" data-image="./images-blog/Docker_oficial_de_Syncthing.png">Docker oficial de Syncthing</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 234 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 238 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura.</p>
 <center>
 <p><img src="../images-blog/Docker_oficial_de_Syncthing.png" /></p>
 </center>
 <p>Ahora la imagen oficial de Syncthing ya es multiarquitectura y podemos utilizarla en amd64, ARM,…</p>
 <p>Vamos a ver como utilizarlo.</p>
-<p>## Directorio a sincronizar</p>
+<h2 id="directorio-a-sincronizar">Directorio a sincronizar</h2>
 <p>Utiliza el volumen <code>/var/syncthing</code>, para tener los archivos sincronizados disponibles en el host.</p>
 <p>Puedes agregar más directorios y asignarlos como prefieras.</p>
 <p>Ten en cuenta que Syncthing se ejecuta como UID 1000 y GID 1000 de forma predeterminada. Estos pueden modificarse con las variables de entorno PUID y PGID.</p>
@@ -110,7 +110,7 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb1-9" title="9">    <span class="ex">-</span> /syncthing/sync:/syncthing/sync</a></code></pre></div>
 <p>Iniciamos el docker:</p>
 <p>``` docker-compose up -d ```</p>
-<p>## Fuentes</p>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://hub.docker.com/r/syncthing/syncthing/tags?page=1&amp;ordering=last_updated" class="uri">https://hub.docker.com/r/syncthing/syncthing/tags?page=1&amp;ordering=last_updated</a></li>
 </ul>
