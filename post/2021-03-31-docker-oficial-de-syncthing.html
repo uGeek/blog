@@ -86,25 +86,31 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="docker-oficial-de-syncthing-1" title="Docker oficial de Syncthing" data-export_file_name="docker-oficial-de-syncthing" data-description="En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura." data-export_date="2021-03-31 15:05" data-category="docker" data-tag="syncthing" data-image="./images-blog/Docker_oficial_de_Syncthing.png">Docker oficial de Syncthing</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 221 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 234 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura.</p>
 <center>
 <p><img src="../images-blog/Docker_oficial_de_Syncthing.png" /></p>
 </center>
 <p>Ahora la imagen oficial de Syncthing ya es multiarquitectura y podemos utilizarla en amd64, ARM,…</p>
 <p>Vamos a ver como utilizarlo.</p>
+<p>## Directorio a sincronizar</p>
 <p>Utiliza el volumen <code>/var/syncthing</code>, para tener los archivos sincronizados disponibles en el host.</p>
 <p>Puedes agregar más directorios y asignarlos como prefieras.</p>
 <p>Ten en cuenta que Syncthing se ejecuta como UID 1000 y GID 1000 de forma predeterminada. Estos pueden modificarse con las variables de entorno PUID y PGID.</p>
+<h2 id="docker-compose">Docker-Compose</h2>
+<p>docker-compose oficial de Syncthing</p>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">syncthing</span>:</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="ex">container_name</span>: syncthing</a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">image</span>: syncthing/syncthing</a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="ex">-</span> 8384:8384</a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="ex">-</span> 22000:22000/tcp</a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="ex">-</span> 22000:22000/udp</a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-9" title="9"><span class="ex">-</span> /syncthing/sync:/syncthing/sync</a></code></pre></div>
+<a class="sourceLine" id="cb1-2" title="2">  <span class="ex">container_name</span>: syncthing</a>
+<a class="sourceLine" id="cb1-3" title="3">  <span class="ex">image</span>: syncthing/syncthing</a>
+<a class="sourceLine" id="cb1-4" title="4">  <span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb1-5" title="5">    <span class="ex">-</span> 8384:8384</a>
+<a class="sourceLine" id="cb1-6" title="6">    <span class="ex">-</span> 22000:22000/tcp </a>
+<a class="sourceLine" id="cb1-7" title="7">    <span class="ex">-</span> 22000:22000/udp</a>
+<a class="sourceLine" id="cb1-8" title="8">  <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="ex">-</span> /syncthing/sync:/syncthing/sync</a></code></pre></div>
+<p>Iniciamos el docker:</p>
+<p>``` docker-compose up -d ```</p>
+<p>## Fuentes</p>
 <ul>
 <li><a href="https://hub.docker.com/r/syncthing/syncthing/tags?page=1&amp;ordering=last_updated" class="uri">https://hub.docker.com/r/syncthing/syncthing/tags?page=1&amp;ordering=last_updated</a></li>
 </ul>
