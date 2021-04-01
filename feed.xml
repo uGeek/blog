@@ -46,39 +46,6 @@
     <guid>https://ugeek.github.io/blog/post/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html</guid>
    </item>
    <item>
-    <title>SCP. Copias por SSH</title>
-    <link>https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ssh.png" alt="SCP. Copias por SSH"&gt;
-&lt;br&gt;&lt;p&gt;#+HTML: <center>... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html&gt;SCP. Copias por SSH&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Thu, 01 Apr 2021  +0100</pubDate>
-    <category>ssh</category>
-    <category>bash</category>
-    <category></category>
-    <category></category>
-    <guid>https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html</guid>
-   </item>
-   <item>
     <title>Docker oficial de Syncthing</title>
     <link>https://ugeek.github.io/blog/post/2021-03-31-docker-oficial-de-syncthing.html</link>
     <description>
