@@ -679,9 +679,9 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
-            'tags': 'w3m,bash,zsh,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo Clientes-de-Jellyfin-para-Android-y-Escritorio-Linux', 
+            'tags': '2020-01-13,w3m,bash,zsh,,', 
+            'url': 'https://ugeek.github.io/blog/post/-Windows-y-Mac.html Docker:-Raneto.html Eink-Browser.html org-bash-blog.html Servidor-de-Samba-fácil.html unrar-en-Raspberry-Pi.html a texto plano.-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
 {
             'title': 'W3M. Navegador para Terminal y Emacs',
