@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html' 
 },
 {
+            'title': 'SCP. Copias por SSH',
+            'text': '#+HTML: <center>', 
+            'tags': 'ssh,bash,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html' 
+},
+{
             'title': 'Docker oficial de Syncthing',
             'text': 'En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura.', 
             'tags': 'docker,syncthing,,,,', 
@@ -673,7 +679,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo 2021-04-02-servidor-de-samba-facil.html 2021-07-11-clientes-de-jellyfin-para-android-y-escritorio-linux-windows-y-mac.html org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

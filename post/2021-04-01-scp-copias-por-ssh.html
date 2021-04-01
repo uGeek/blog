@@ -1,5 +1,5 @@
 <head>
-<title>Cambiando el Idioma en Debian, Ubuntu, Raspbian.... uGeek Blog </title>
+<title>SCP. Copias por SSH. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si tu sistema está configurado un idioma y deseas cambiarlo, sigue leyendo y verás que no es complicado" />
+<meta name="description" content="#+HTML: <center>" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Cambiando el Idioma en Debian, Ubuntu, Raspbian..." />
-<meta property="og:description" content="Si tu sistema está configurado un idioma y deseas cambiarlo, sigue leyendo y verás que no es complicado" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html" />
+<meta property="og:title" content="SCP. Copias por SSH" />
+<meta property="og:description" content="#+HTML: <center>" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ssh.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html" />
 
-<meta name="twitter:title" content="Cambiando el Idioma en Debian, Ubuntu, Raspbian..." />
-<meta name="twitter:description" content="Si tu sistema está configurado un idioma y deseas cambiarlo, sigue leyendo y verás que no es complicado" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="SCP. Copias por SSH" />
+<meta name="twitter:description" content="#+HTML: <center>" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ssh.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,56 +85,38 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="cambiando-el-idioma-en-debian-ubuntu-raspbian-1" title="Cambiando el Idioma en Debian, Ubuntu, Raspbian..." data-export_file_name="Cambiando el Idioma en Debian Ubuntu Raspbian" data-description="Si tu sistema está configurado un idioma y deseas cambiarlo, sigue leyendo y verás que no es complicado" data-export_date="2019-08-15 11:43" data-category="bash" data-tag="ubuntu,debian,raspbian" data-image="./images-blog/ugeek.png">Cambiando el Idioma en Debian, Ubuntu, Raspbian…</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 248 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Si tu sistema está configurado un idioma y deseas cambiarlo, sigue leyendo y verás que no es complicado</p>
-<h2 id="instalación">Instalación</h2>
-<p>Si no está instalada, instalaremos los paquetes locales:</p>
-<pre><code>sudo apt install locales
-</code></pre>
-<h2 id="configuración">Configuración</h2>
-<p>Utilizamos el asistente de configuración de locales:</p>
-<p><code>dpkg-reconfigure locales</code></p>
-<p>Nos lanzará un asistente con todos los idiomas disponibles, para que seleccionemos cual queremos instalar y utilizar.</p>
-<h2 id="localizaciones-disponibles">Localizaciones disponibles</h2>
-<p>Para saber las localizaciones instaladas y disponibles, utilizaremos:</p>
-<p><code>locale</code></p>
-<p>También podemos utilizar:</p>
-<p><code>localectl</code></p>
-<p>Para saber el formato de fecha y hora instaladas así:</p>
-<p><code>locale -k LC_TIME</code></p>
-<p>Todas las localizaciones disponibles <strong>-a</strong>:</p>
-<p><code>locale -a</code></p>
-<h2 id="localización-local-actual">Localización local actual</h2>
-<p>Podemos conocer la configuración locale mediante:</p>
-<p><code>sudo nano /etc/default/locale</code></p>
-<p>También podemos establecer la hora local mediante:</p>
-<p><code>sudo update-locale</code></p>
-<h2 id="usuario-con-otra-localización">Usuario con otra localización</h2>
-<p>Editamos o creamos el archivo .bash_profile:</p>
-<p><code>nano ~/.bash_profile</code></p>
-<p>y añadiremos:</p>
-<pre><code>LANG=&quot;es_ES.utf8&quot;
-export LANG
-</code></pre>
-<h2 id="raspbian">Raspbian</h2>
-<p>En Raspbian también puedes hacerlo desde:</p>
-<p><code>sudo raspi-config</code></p>
-<p>La terminal te devolverá un menú donde podrás acceder a todas estas configuraciones que hemos visto.</p>
+<h1 id="scp.-copias-por-ssh-1" title="SCP. Copias por SSH" data-export_file_name="scp-copias-por-ssh" data-description="#+HTML: &lt;center&gt;" data-export_date="2021-04-01 14:45" data-category="ssh" data-tag="bash" data-image="./images-blog/ssh.png">SCP. Copias por SSH</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 218 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<center>
+<p><img src="../images-blog/ssh.png" /></p>
+</center>
+<p>scp, comando que signigica secure copy, permiten copiar un archivo o directorio desde una máquina origen a una máquina destino y viceversa, utilizando el servidor SSH. <code>scp origen destino</code></p>
+<p>La estructura del comando sería algo así como:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">scp</span> usuario@ip:ruta_del_archivo destino</a></code></pre></div>
+<p>Este sería un ejemplo:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">scp</span> archivo.txt angel@192.168.1.100:/home/angel/Documentos/</a></code></pre></div>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">scp</span> angel@192.168.1.100:/home/angel/archivo.txt /home/angel/Documentos</a></code></pre></div>
+<p>A diferencia de ssh, scp usa el conmutador P mayúscula para configurar el puerto en lugar de la p minúscula. En este ejemplo utilizaremos el puerto 100</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">scp</span> -P 100</a></code></pre></div>
+<p>Para copiar un directorio, utilizaremos <strong>-r</strong> de modo recursiva</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">scp</span> -r</a></code></pre></div>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">scp</span> -r -P 2222 angel@192.168.1.100:/home/angel/Documentos /home/angel/Documentos</a></code></pre></div>
 <br>
-<p>Publicado por Angel el jueves 15 agosto del 2019</p>
+<p>Publicado por Angel el jueves 01 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-30-utilizando-twitter-desde-la-terminal-con-bti.html">Utilizando twitter desde la terminal con bti</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html">YTFZF. Youtube desde la terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-17-como-cambiar-la-contrasena-de-usuario-en-linux.html">Cómo cambiar la contraseña de usuario en Linux</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html">Vim Cheat Sheet. Chuleta de atajos para Vim</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html">vim. Resaltado de sintaxis</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-07-cambiar-el-hostname-ubuntu-debian-raspberry-os--.html">Cambiar el hostname Ubuntu, Debian, Raspberry OS…</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html">Paquetes instalados en tu sistema</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-29-saber-si-existen-variables-directorios-o-archivos-con-bash.html">Saber si existen variables, directorios o archivos con bash</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html">Comando sudo y su</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-11-instalando-ssh-en-fedora-centos-o-redhat.html">Instalando SSH en Fedora, Centos o RedHat</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html">Simplifica o abrevia tus conexiones SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-10-31-habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor.html">Habilitar SSH en la Raspberry sin conectar el Monitor</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html">Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html">Listado de Servicios con System V y Systemd</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
