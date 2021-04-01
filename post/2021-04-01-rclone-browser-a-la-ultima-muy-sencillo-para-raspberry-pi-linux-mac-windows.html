@@ -1,5 +1,5 @@
 <head>
-<title>Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone. uGeek Blog </title>
+<title>Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." />
+<meta name="description" content="En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo, para" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone" />
-<meta property="og:description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/rclone.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html" />
+<meta property="og:title" content="Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows" />
+<meta property="og:description" content="En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo, para" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Rclone_Browser_a_la_última_muy_sencillo,_para_Raspberry_Pi,_Linux,_Mac,_Windows.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html" />
 
-<meta name="twitter:title" content="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone" />
-<meta name="twitter:description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/rclone.png" />
+<meta name="twitter:title" content="Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows" />
+<meta name="twitter:description" content="En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo, para" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Rclone_Browser_a_la_última_muy_sencillo,_para_Raspberry_Pi,_Linux,_Mac,_Windows.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,55 +85,48 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-webdav-nextcloud-o-pública-drive-dropbox-onedrive-con-rclone-1" title="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone" data-export_file_name="cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone" data-description="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." data-export_date="2020-06-22 22:22" data-category="rclone" data-tag="webdav,nextcloud,dropbox,nube,ssh" data-image="./images-blog/rclone.png">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 529 palabras.    <a href="https://ugeek.github.io/blog/categories/rclone">rclone</a></h5>
-<p>Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt.</p>
-<p>Para ello, aunque existe otros clientes webdav, me ha parecido más simple y eficaz utilizar rclone.</p>
-<p>Esto podremos hacerlo con cualquier nube pública, privada, como Webdav, Nextcloud, Dropbox, Google Drive, OneDrive,… SSH, SFTP,… vamos, todas las opciones disponibles con Rclone.</p>
+<h1 id="rclone-browser-a-la-última-muy-sencillo-para-raspberry-pi-linux-mac-windows-1" title="Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows" data-export_file_name="rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows" data-description="En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo, para" data-export_date="2021-04-01 13:23" data-category="rclone" data-tag="nube" data-image="./images-blog/Rclone_Browser_a_la_última_muy_sencillo,_para_Raspberry_Pi,_Linux,_Mac,_Windows.png">Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 335 palabras.    <a href="https://ugeek.github.io/blog/categories/rclone">rclone</a></h5>
+<p>En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo, para arquitectura 32 y 64bits, así como ARM para Raspberry Pi.</p>
 <center>
-<p><img src="../images-blog/rclone.png" /></p>
+<p><img src="../images-blog/Rclone_Browser_a_la_última_muy_sencillo,_para_Raspberry_Pi,_Linux,_Mac,_Windows.png" /></p>
 </center>
-<p>Incluso, una opción interesante, cifrar el contenido de una carpeta local con rclone, sincronizar esta con Syncthing y montarla con rclone en otro pc o servidor.</p>
-<p>Voy a explicarlo paso a paso.</p>
-<p>Para entender más en profundidad como montar una nube con rclone, recomiendo <a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">este artículo que hice profundizando sobre el tema</a>.</p>
-<h2 id="crear-el-directorio-donde-montaremos-el-contenido">Crear el directorio donde montaremos el contenido</h2>
-<p>Voy a crear la carpeta donde montaré mis archivos <strong>orgmode</strong>. La llamaré <strong>org</strong>.</p>
-<pre class="example"><code>mkdir ~/org
-</code></pre>
-<h2 id="descomenta-allow-others">Descomenta –allow-others</h2>
-<p>Descomenta la línea –allow-others, para permitir a usuarios no root, montar unidades</p>
-<pre class="example"><code>sudo nano /etc/fuse.conf
-</code></pre>
-<p>Descomenta –allow-others</p>
-<pre class="example"><code># Allow non-root users to specify the allow_other or allow_root mount options.
---allow-others
-</code></pre>
-<p>Reinicia</p>
-<h2 id="montando-la-nube">Montando la nube</h2>
-<p>Tan sencillo como utilizar <code>rclone mount</code>.</p>
-<pre class="example"><code>rclone mount drive:org ~/org
-</code></pre>
-<p>Para enviar el comando a segundo plano y siempre corriendo, podemos añadir al final de esta línea <strong>&amp;</strong>.</p>
-<p>Esto puede dar una serie de lecturas en la terminal, que solucionaremos tal como explico en el automontado. El automontado es con cron, pero ese mismo comando, puedes ejecutarlo en la terminal.</p>
-<h2 id="automontando-al-inicio-de-sesión-del-sistema-operativo">Automontando al inicio de sesión del sistema operativo</h2>
-<p>Para automontar la nube al inicio de Debian, Ubuntu,… podemos hacerlo de varias maneras.</p>
-<p>Voy a utilizar el método más sencillo que he utilizado, con cron.</p>
-<p>Abrimos cron desde la sesión del usuario</p>
-<pre class="example"><code>crontab -e
-</code></pre>
-<p>Añadímos la siguiente línea</p>
-<pre class="example"><code>@reboot ( sleep 25 &amp;&amp; nohup rclone mount drive:org /home/angel/org --vfs-cache-mode full -v --allow-other  2&gt;/dev/null &amp; )
-</code></pre>
-<p>Este comando en crontab, indica que cada vez que iniciamos el sistema operativo, con <code>@reboot</code>, esperará 25 segundos y montará la nube que tengo en rclone con el nombre <code>drive:org</code>, en la carpeta <code>~/org</code>.</p>
-<p><strong>nohup</strong> y <strong>2&gt;/dev/null</strong>, envía a esta posición de memoria el resultado que muestra la terminal, una posición de memoria que tiene nuestro sistema operativo precisamente para no mostrar nada en terminal.</p>
-<p><strong>&amp;</strong>, dejará corriendo el comando indefinidamente, a no ser que lo detengamos nosotros.</p>
-<p><strong>–vfs-cache-mode full</strong>, activa la caché de lectura y escritura</p>
-<p><strong>–allow-other,</strong> permite a otros usuarios que se conecten a este directorio</p>
-<h2 id="conclusión">Conclusión</h2>
-<p>Así es como monto mi nube webdav en mi escritorio para editar mis archivos orgmode. Cada vez que inicio el sistema operativo, siempre está disponible ahí mi nube.</p>
-<p>También podemos hacer lo mismo, pero en lugar de utilizar cron, podemos crear un servicio, pero esto lo dejo para otro artículo.</p>
+<p>Voy a explicar como instalar el AppImage y recuerda que este método es válido para cualquier AppImage.</p>
+<p>En mi caso me gusta crear un directorio en la raíz del home llamada =appimage=y dentro de esta, voy dejando todas las aplicaciones AppImage.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Primero necesitas tener instalado <strong>rclone</strong>. Rclone Browser es una interfaz gráfica para <strong>rclone</strong>.</p>
+<h3 id="rclone">Rclone</h3>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> curl https://rclone.org/install.sh <span class="kw">|</span> <span class="fu">sudo</span> bash</a></code></pre></div>
+<p>Ya tenemos <strong>rclone</strong> a la última</p>
+<h3 id="rclone-browser">Rclone Browser</h3>
+<p>Descarga desde <a href="https://github.com/kapitainsky/RcloneBrowser/releases">la última release en GitHub</a> el archivo para el sistema que vayas a utilizar.</p>
+<p><strong>Descargas</strong></p>
+<ul>
+<li>para archivos exe de Windows de 32 o 64 bits</li>
+<li>para Raspberry Pi armhf AppImage</li>
+<li>para Linux, ya sea i386 AppImage (para sistemas de 32 bits) o x86_64 AppImage (para sistemas de 64 bits)</li>
+<li>para el archivo de imagen macOS dmg</li>
+</ul>
+<p>En linux, para instalar el AppImage es tan sencillo como:</p>
+<h3 id="dar-permisos-de-ejecución">Dar permisos de ejecución</h3>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">chmod</span> a+x archivo.AppImage</a></code></pre></div>
+<p>osea que sería, tomando de ejemplo la versión rclone browser 1.8.0</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">chmod</span> a+x rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage</a></code></pre></div>
+<h3 id="ejecutar-el-appimage">Ejecutar el AppImage</h3>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">./archivo.AppImage</span></a></code></pre></div>
+<p>En el ejemplo de la versión 1.8.0</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">./rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage</span></a></code></pre></div>
+<p>a mi personalmente me gusta renombrarlo como rclone-browser.AppImage</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">mv</span> rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage rclone-browser.AppImage</a></code></pre></div>
+<p>ahora ejecutaríamos de un modo más sencillo:</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">./rclone-browser.AppImage</span></a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/rclone/rclone" class="uri">https://github.com/rclone/rclone</a></li>
+<li><a href="https://github.com/kapitainsky/RcloneBrowser" class="uri">https://github.com/kapitainsky/RcloneBrowser</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el lunes 22 junio del 2020</p>
+<p>Publicado por Angel el jueves 01 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

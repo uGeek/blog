@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows',
+            'text': 'En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo, para', 
+            'tags': 'rclone,nube,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html' 
+},
+{
             'title': 'Docker oficial de Syncthing',
             'text': 'En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura.', 
             'tags': 'docker,syncthing,,,,', 
