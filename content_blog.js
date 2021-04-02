@@ -3,7 +3,7 @@ var tipuesearch = {pages: [
             'title': 'Servidor de Samba fácil',
             'text': 'Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.', 
             'tags': 'servidor,samba,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2022-04-02-servidor-de-samba-facil.html' 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-02-servidor-de-samba-facil.html' 
 },
 {
             'title': 'SCP. Copias por SSH',

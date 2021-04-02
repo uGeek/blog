@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Servidor de Samba fácil</title>
-    <link>https://ugeek.github.io/blog/post/2022-04-02-servidor-de-samba-facil.html</link>
+    <link>https://ugeek.github.io/blog/post/2021-04-02-servidor-de-samba-facil.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/samba.png" alt="Servidor de Samba fácil"&gt;
 &lt;br&gt;&lt;p&gt;Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-04-02-servidor-de-samba-facil.html&gt;Servidor de Samba fácil&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-04-02-servidor-de-samba-facil.html&gt;Servidor de Samba fácil&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,12 +38,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 02 Apr 2022  +0100</pubDate>
+    <pubDate>Fri, 02 Apr 2021  +0100</pubDate>
     <category>servidor</category>
     <category>samba</category>
     <category></category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2022-04-02-servidor-de-samba-facil.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2021-04-02-servidor-de-samba-facil.html</guid>
    </item>
    <item>
     <title>SCP. Copias por SSH</title>
