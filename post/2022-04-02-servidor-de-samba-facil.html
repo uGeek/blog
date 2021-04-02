@@ -1,5 +1,5 @@
 <head>
-<title> minidlna. uGeek Blog </title>
+<title>Servidor de Samba fácil. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="DLNA es un servidor multimedia" />
+<meta name="description" content="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" minidlna" />
-<meta property="og:description" content="DLNA es un servidor multimedia" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dlna.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html" />
+<meta property="og:title" content="Servidor de Samba fácil" />
+<meta property="og:description" content="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/samba.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-04-02-servidor-de-samba-facil.html" />
 
-<meta name="twitter:title" content=" minidlna" />
-<meta name="twitter:description" content="DLNA es un servidor multimedia" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dlna.png" />
+<meta name="twitter:title" content="Servidor de Samba fácil" />
+<meta name="twitter:description" content="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/samba.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,74 +85,59 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="minidlna-1" title="minidlna" data-export_file_name="minidlna" data-description="DLNA es un servidor multimedia" data-export_date="2018-12-27 21:00 2019-02-24 2019-03-24" data-category="servidor" data-tag="servidor,raspberry,minidlna,multimedia" data-image="./images-blog/dlna.png">minidlna</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 463 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
-<p>DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.</p>
+<h1 id="servidor-de-samba-fácil-1" title="Servidor de Samba fácil" data-export_file_name="servidor-de-samba-facil" data-description="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." data-export_date="2022-04-02 15:24" data-category="servidor" data-tag="samba" data-image="./images-blog/samba.png">Servidor de Samba fácil</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 416 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<p>Vamos a compartir una carpeta por <strong>Samba</strong> de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.</p>
 <center>
-<p><img src="../images-blog/dlna.png" /></p>
+<p><img src="../images-blog/samba.png" /></p>
 </center>
+<p>Para acceder a los datos de esta carpeta, no va a ser necesario utilizar usuario y contraseña, pero para darle un mínimo de seguridad, vamos a permitir el acceso a esta carpeta a determinados dispositivos en función de us IP.</p>
+<p>El modo más correcto y seguro de compartir una carpeta por <strong>Samba</strong>, es crear un grupo donde ponemos un número de usuarios dentro de este y donde todos estos usuarios tienen usuario y contraseña.</p>
+<p>He optado por esta configuración, porque es mucho más sencilla y he visto algo parecido en <strong>Recalbox</strong>. Una capeta que todos los usuarios de la red local tienen acceso y pueden depositar ahí sus archivos para compartir.</p>
 <h2 id="instalación">Instalación</h2>
-<p><code>sudo apt install minidlna</code></p>
-<h2 id="archivo-de-configuración-del-servicio">Archivo de configuración del servicio</h2>
-<p><code>sudo nano /etc/minidlna.conf</code></p>
-<p>Añadiremos al inicio del archivo de configuración, la ruta donde están nuestros archivos multimedia. Ejem:</p>
-<pre><code>media_dir=V,/media/Peliculas
-media_dir=P,/media/Fotos
-media_dir=A,/media/Musica
+<p>Instalación de Samba</p>
+<pre><code>sudo apt install samba
 </code></pre>
-<p>Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la siguiente manera:</p>
-<p><code>media_dir=PV,/media/Peliculas_y_ Fotos</code></p>
-<p>Si tenemos nuestros archivos multimedia en dos o más carpetas, podemos especificarlo así:</p>
-<pre><code>media_dir=A,~/Música
-media_dir=A,/media/Musica
+<h2 id="compartiendo-carpeta">Compartiendo Carpeta</h2>
+<p>Damos permisos para compartir la carpeta por <strong>Samba</strong> y que puede acceder cualquier usuario.</p>
+<pre><code>sudo chmod -R 777 /home/angel/samba/
 </code></pre>
-<h2 id="descubrir-el-servidor-en-nuestra-red">Descubrir el servidor en nuestra Red</h2>
-<p>Quitaremos la &quot;#&quot; delante de inotify y pondremos <strong>yes</strong>.</p>
-<pre><code># Automatic discovery of new files in the media_dir directory. 
-inotify=yes
+<h2 id="archivo-de-configuración">Archivo de configuración</h2>
+<p>Editamos el archivo de configuración.</p>
+<pre><code>sudo nano /etc/samba/smb.conf
 </code></pre>
-<h2 id="poner-nombre-a-nuestro-servidor">Poner nombre a nuestro servidor</h2>
-<p>Aquí podremos poner nombre a nuestro servidor:</p>
-<pre><code># Name that the DLNA server presents to clients.
-friendly_name=Mi Servidor DLNA
+<pre><code>[samba]                     # Nombre del servidor que veran los clientes
+
+path=/home/angel/samba      # Ruta de la carpeta compartida
+public=yes                  # Disponible para usuarios invitados u otros. Si ponemos no, solo los usuarios autorizados accederan
+writable=yes                # Puede escribir y editar el contenido
+guest ok = yes
+browseable = yes            # El directorio, puede ser visible
+read only = no
+
+create mask = 0777          # Permisos de escritura y lectura de cualquier cliente
+directory mask = 0777
+force create mode = 777
+force directory mode = 777
+force security mode = 777
+force directory security mode = 777
 </code></pre>
-<h2 id="añadir-nuevo-contenido-multimedia">Añadir nuevo contenido Multimedia</h2>
-<p>Para que todos los nuevos archivos multimedia que añadamos, sean añadidos de forma automática a nuestro servidor, deberemos tener habilitada esta opción en el archivo de configuración:</p>
-<pre><code># Automatic discovery of new files in the media_dir directory.
-inotify=yes
+<p>Desmarcamos el compartir impresoras</p>
+<pre><code>#[print$]
+#   comment = Printer Drivers
+#   path = /var/lib/samba/printers
+#   browseable = yes
+#   read only = yes
+#   guest ok = no
 </code></pre>
-<h2 id="crear-nueva-base-de-datos">Crear nueva base de datos</h2>
-<p>Para crear una nueva base de datos en nuestro servidor y eliminar la actual, por ejemplo, en el caso que cambiemos las carpetas donde esté nuestro contenido multimedia:</p>
-<p>Borraremos la base de datos:</p>
-<p><code>sudo rm -f /var/cache/minidlna/files.db</code></p>
-<p>Reiniciaremos el servidor</p>
-<p><code>sudo service minidlna restart</code></p>
-<p>Como has podido ver en este paso anterior, la base de datos así como las portadas de los archivos multimedia, están defecto en la carpeta <strong>/var/cache/minidlna</strong>. Pero en el archivo de configuración, podemos cambiar la ruta. Para ello desmarcaremos la almohadilla y especificaremos la ruta deseada.</p>
-<pre><code># Path to the directory that should hold the database and album art cache.                                                                  
-#db_dir=/var/cache/minidlna  
+<p>Verifica con <strong>testparm</strong> si hay un error en el archivo de configuración</p>
+<pre><code>testparm
 </code></pre>
-<h2 id="iniciar-detener-restaurar-servicio">Iniciar, Detener, Restaurar servicio</h2>
-<p><code>exec /usr/sbin/service minidlna start</code></p>
-<p>o</p>
-<p><code>sudo systemctl start minidlna.service</code></p>
-<p>o</p>
-<p><code>sudo service minidlna start</code></p>
-<p><code>sudo service minidlna stop</code></p>
-<p><code>sudo service minidlna restart</code></p>
-<h2 id="forzar-el-reescaneado">Forzar el reescaneado</h2>
-<p>Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:</p>
-<p><code>sudo minidlnad -R ; sudo service minidlna restart</code></p>
-<p>o sino, podemos hacer:</p>
-<p><code>sudo service minidlna force-reload</code></p>
-<p>Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través de nuestro servidor DLNA.</p>
-<h2 id="puertos">Puertos</h2>
-<p>En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:</p>
-<ul>
-<li>TCP = 8200</li>
-<li>UDP = 1900</li>
-</ul>
+<h2 id="permitir-de-unas-ips-en-concreto">Permitir de unas ip's en concreto</h2>
+<p>Para dar un poquito más de seguridad desde el servidor, solo vamos a permitir el acceso a determinadas ip's.</p>
+<p>#+BEGIN_SRC hosts allow = 192.168.1.100, 192.168.1.101</p>
 <br>
-<p>Publicado por Angel el jueves 27 diciembre del 2018 y <strong>actualizado</strong> el domingo 24 febrero del 2019</p>
+<p>Publicado por Angel el sábado 02 abril del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

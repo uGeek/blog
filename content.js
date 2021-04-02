@@ -1,15 +1,21 @@
 var tipuesearch = {pages: [
 {
-            'title': 'Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows',
-            'text': 'En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo, para', 
-            'tags': 'rclone,nube,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html' 
+            'title': 'Servidor de Samba fácil',
+            'text': 'Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.', 
+            'tags': 'servidor,samba,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-04-02-servidor-de-samba-facil.html' 
 },
 {
             'title': 'SCP. Copias por SSH',
             'text': 'scp, comando que signigica secure copy, permiten copiar un archivo o directorio desde una máquina origen a una máquina destino y viceversa, utilizando el servidor SSH.', 
             'tags': 'ssh,bash,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html' 
+},
+{
+            'title': 'Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows',
+            'text': 'En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo, para', 
+            'tags': 'rclone,nube,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html' 
 },
 {
             'title': 'Docker oficial de Syncthing',
@@ -679,7 +685,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
