@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="scp.-copias-por-ssh-1" title="SCP. Copias por SSH" data-export_file_name="scp-copias-por-ssh" data-description="scp, comando que signigica secure copy, permiten copiar un archivo o directorio desde una máquina origen a una máquina destino y viceversa, utilizando el servidor SSH." data-export_date="2021-04-01 14:45" data-category="ssh" data-tag="bash" data-image="./images-blog/ssh.png">SCP. Copias por SSH</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 218 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<h1 id="scp.-copias-por-ssh-1" title="SCP. Copias por SSH" data-export_file_name="scp-copias-por-ssh" data-description="scp, comando que signigica secure copy, permiten copiar un archivo o directorio desde una máquina origen a una máquina destino y viceversa, utilizando el servidor SSH." data-export_date="2021-04-01 14:45 2021-04-02" data-category="ssh" data-tag="bash" data-image="./images-blog/ssh.png">SCP. Copias por SSH</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 254 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
 <center>
 <p><img src="../images-blog/ssh.png" /></p>
 </center>
@@ -97,14 +97,17 @@ $("#tipue_search_input").tipuesearch();
 <div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">scp</span> archivo.txt angel@192.168.1.100:/home/angel/Documentos/</a></code></pre></div>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">scp</span> angel@192.168.1.100:/home/angel/archivo.txt /home/angel/Documentos</a></code></pre></div>
+<p>Copiaremos el archivo.txt del servidor dentro del directorio <strong>Documentos</strong>.</p>
 <p>A diferencia de ssh, scp usa el conmutador P mayúscula para configurar el puerto en lugar de la p minúscula. En este ejemplo utilizaremos el puerto 100</p>
 <div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">scp</span> -P 100</a></code></pre></div>
 <p>Para copiar un directorio, utilizaremos <strong>-r</strong> de modo recursiva</p>
 <div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">scp</span> -r</a></code></pre></div>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">scp</span> -r -P 2222 angel@192.168.1.100:/home/angel/Documentos /home/angel/Documentos</a></code></pre></div>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">scp</span> -r -P 2222 angel@192.168.1.100:/home/angel/Documentos/varios /home/angel/Documentos/</a></code></pre></div>
+<p>El parámetro -l permite limitar la velocidad en Kbps. Ejemplo: 8000Kbps</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">scp</span> -r -l <span class="st">&quot;8000&quot;</span> -P 2222 angel@192.168.1.100:/home/angel/Documentos/varios /home/angel/Documentos/</a></code></pre></div>
 <br>
-<p>Publicado por Angel el jueves 01 abril del 2021</p>
+<p>Publicado por Angel el jueves 01 abril del 2021 y <strong>actualizado</strong> el viernes 02 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
