@@ -1,5 +1,5 @@
 <head>
-<title>Docker en Ubuntu 18.04. uGeek Blog </title>
+<title>Docker en Ubuntu 20.04. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -26,12 +26,12 @@
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker en Ubuntu 18.04" />
+<meta property="og:title" content="Docker en Ubuntu 20.04" />
 <meta property="og:description" content="Vamos a instalar docker en Ubuntu 20.04" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html" />
 
-<meta name="twitter:title" content="Docker en Ubuntu 18.04" />
+<meta name="twitter:title" content="Docker en Ubuntu 20.04" />
 <meta name="twitter:description" content="Vamos a instalar docker en Ubuntu 20.04" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 
@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-en-ubuntu-20.04" title="Docker en Ubuntu 18.04" data-export_file_name="Docker en Ubuntu 1804" data-description="Vamos a instalar docker en Ubuntu 20.04" data-export_date="2021-04-05 12:15" data-category="docker" data-tag="terminal,ubuntu" data-image="./images-blog/docker.png">Docker en Ubuntu 20.04</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 265 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h1 id="docker-en-ubuntu-20.04-1" title="Docker en Ubuntu 20.04" data-export_file_name="Docker en Ubuntu 1804" data-description="Vamos a instalar docker en Ubuntu 20.04" data-export_date="2021-04-05 12:15" data-category="docker" data-tag="terminal,ubuntu" data-image="./images-blog/docker.png">Docker en Ubuntu 20.04</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 271 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Vamos a instalar docker en Ubuntu 20.04:</p>
 <center>
 <p><img src="../images-blog/docker.png" /></p>
@@ -103,22 +103,22 @@ $("#tipue_search_input").tipuesearch();
 <p>Actualizamos:</p>
 <p><code>sudo apt update</code></p>
 <p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
-<p><code>apt-cache policy docker-ce</code></p>
+<p><code>sudo apt-cache policy docker-ce</code></p>
 <h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
-<pre><code>apt -y install docker-ce docker-compose
+<pre><code>sudo apt -y install docker-ce docker-compose
 </code></pre>
 <h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
-<pre><code>systemctl enable docker
-systemctl start docker
+<pre><code>sudo systemctl enable docker
+sudo systemctl start docker
 </code></pre>
 <h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
 <p><code>docker -v</code></p>
 <h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
 <p>Creamos el grupo docker:</p>
-<pre><code>groupadd docker
+<pre><code>sudo groupadd docker
 </code></pre>
 <p>Añadimos al usuario:</p>
-<pre><code>usermod -aG docker $USER
+<pre><code>sudo usermod -aG docker $USER
 </code></pre>
 <h2 id="instalando-portainer">Instalando Portainer</h2>
 <p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>

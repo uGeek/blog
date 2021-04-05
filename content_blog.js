@@ -1,6 +1,6 @@
 var tipuesearch = {pages: [
 {
-            'title': 'Docker en Ubuntu 18.04',
+            'title': 'Docker en Ubuntu 20.04',
             'text': 'Vamos a instalar docker en Ubuntu 20.04', 
             'tags': 'docker,terminal,ubuntu,,,', 
             'url': 'https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html' 
