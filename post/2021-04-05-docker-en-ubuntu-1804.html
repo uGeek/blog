@@ -1,5 +1,5 @@
 <head>
-<title>Shaarli. El Delicious del Software Libre. uGeek Blog </title>
+<title>Docker en Ubuntu 18.04. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Shaarly es un servicio de marcadores personal, minimalista, súper rápido, sin bases de datos." />
+<meta name="description" content="Vamos a instalar docker en Ubuntu 20.04" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Shaarli. El Delicious del Software Libre" />
-<meta property="og:description" content="Shaarly es un servicio de marcadores personal, minimalista, súper rápido, sin bases de datos." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/shaarli.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html" />
+<meta property="og:title" content="Docker en Ubuntu 18.04" />
+<meta property="og:description" content="Vamos a instalar docker en Ubuntu 20.04" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html" />
 
-<meta name="twitter:title" content="Shaarli. El Delicious del Software Libre" />
-<meta name="twitter:description" content="Shaarly es un servicio de marcadores personal, minimalista, súper rápido, sin bases de datos." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/shaarli.png" />
+<meta name="twitter:title" content="Docker en Ubuntu 18.04" />
+<meta name="twitter:description" content="Vamos a instalar docker en Ubuntu 20.04" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,38 +85,47 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="shaarli.-el-delicious-del-software-libre-1" title="Shaarli. El Delicious del Software Libre" data-export_file_name="shaarli-el-delicious-del-software-libre" data-description="Shaarly es un servicio de marcadores personal, minimalista, súper rápido, sin bases de datos." data-export_date="2020-04-02 11:30 2020-05-23" data-category="docker" data-tag="servicio" data-image="./images-blog/shaarli.png">Shaarli. El Delicious del Software Libre</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 281 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Shaarly es un servicio de marcadores personal, minimalista, súper rápido, sin bases de datos.</p>
-<p>Es uno de los primeros servicios que instalé cuando me inicié en esto de la Raspberry.</p>
+<h1 id="docker-en-ubuntu-20.04" title="Docker en Ubuntu 18.04" data-export_file_name="Docker en Ubuntu 1804" data-description="Vamos a instalar docker en Ubuntu 20.04" data-export_date="2021-04-05 12:15" data-category="docker" data-tag="terminal,ubuntu" data-image="./images-blog/docker.png">Docker en Ubuntu 20.04</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 265 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Vamos a instalar docker en Ubuntu 20.04:</p>
 <center>
-<p><img src="../images-blog/shaarli.png" /></p>
+<p><img src="../images-blog/docker.png" /></p>
 </center>
-<p>Shaarli es un servicio minimalista para compartir enlaces que puedes instalar en tu propio servidor. Te permite el tener un Feed, donde tus seguidores pueden seguir tu actividad.</p>
-<p>Dispone de aplicación para android y extensiones para Firefox o Google Chrome, de manera que cuando ves algo interesante, puedes compartirlo con Shaarli.</p>
-<h2 id="conoce-shaarly">Conoce Shaarly</h2>
-<p>En esta <a href="https://demo.shaarli.org/">url hay una instancia de prueba donde puedes probarlo antes de montar el docker</a>.</p>
-<ul>
-<li>usuario: demo</li>
-<li>contraseña: demo</li>
-</ul>
-<h2 id="todo-sobre-shaarly">Todo sobre Shaarly</h2>
-<p>Puedes encontrar toda la información como cambiar temas, etc… <a href="https://sebsauvage.net/wiki/doku.php?id=php:shaarli">en la Wiki de Shaarli</a>.</p>
-<p>También puedes seguir la documentación en <a href="https://shaarli.readthedocs.io" class="uri">https://shaarli.readthedocs.io</a>.</p>
-<h2 id="docker-arm">Docker ARM</h2>
-<pre><code>docker create --name=shaarli -p 80:80 agurato/shaarli-armhf
+<h2 id="requisitos-previos">Requisitos Previos</h2>
+<p>Instalaremos primero unos requisitos que permitiran a apt usar paquetes mediante https:</p>
+<p><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
+<h2 id="clave-gpg">Clave GPG</h2>
+<p><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
+<h2 id="repositorio">Repositorio</h2>
+<p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
+<pre><code>sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable&quot;
 </code></pre>
-<p>Fork del docker de <a href="https://hub.docker.com/r/agurato/shaarli-armhf/tags">agurato/shaarli-armhf</a></p>
-<pre><code>docker create --name=shaarli -p 80:80 ugeek/shaarli:arm
+<p>Actualizamos:</p>
+<p><code>sudo apt update</code></p>
+<p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
+<p><code>apt-cache policy docker-ce</code></p>
+<h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
+<pre><code>apt -y install docker-ce docker-compose
 </code></pre>
-<h2 id="docker-amd64">Docker amd64</h2>
-<pre><code>docker run -it --name=shaarli -p 80:80 ugeek/shaarli:amd64
+<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
+<pre><code>systemctl enable docker
+systemctl start docker
 </code></pre>
-<h2 id="docker-oficial-shaarlyshaarly">Docker Oficial shaarly/shaarly</h2>
-<pre><code>docker create --name shaarly -p 80:80 shaarli/shaarli
+<h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
+<p><code>docker -v</code></p>
+<h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
+<p>Creamos el grupo docker:</p>
+<pre><code>groupadd docker
+</code></pre>
+<p>Añadimos al usuario:</p>
+<pre><code>usermod -aG docker $USER
+</code></pre>
+<h2 id="instalando-portainer">Instalando Portainer</h2>
+<p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>
+<pre><code>docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
 </code></pre>
 <br>
-<p>Publicado por Angel el jueves 02 abril del 2020 y <strong>actualizado</strong> el sábado 23 mayo del 2020</p>
+<p>Publicado por Angel el lunes 05 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
