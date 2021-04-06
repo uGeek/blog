@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'unrar en Raspberry Pi',
+            'text': 'No todo el software está disponible para ARM, como por ejemplo *unrar*. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry.', 
+            'tags': 'bash,bash.png,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-06-unrar-en-raspberry-pi.html' 
+},
+{
             'title': 'Docker en Ubuntu 20.04',
             'text': 'Vamos a instalar docker en Ubuntu 20.04', 
             'tags': 'docker,terminal,ubuntu,,,', 

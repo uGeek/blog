@@ -1,5 +1,5 @@
 <head>
-<title> Crear listas m3u para minidlna o vlc. uGeek Blog </title>
+<title>unrar en Raspberry Pi. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
+<meta name="description" content="No todo el software está disponible para ARM, como por ejemplo *unrar*. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Crear listas m3u para minidlna o vlc" />
-<meta property="og:description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html" />
+<meta property="og:title" content="unrar en Raspberry Pi" />
+<meta property="og:description" content="No todo el software está disponible para ARM, como por ejemplo *unrar*. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/unrar" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-06-unrar-en-raspberry-pi.html" />
 
-<meta name="twitter:title" content=" Crear listas m3u para minidlna o vlc" />
-<meta name="twitter:description" content="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="unrar en Raspberry Pi" />
+<meta name="twitter:description" content="No todo el software está disponible para ARM, como por ejemplo *unrar*. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/unrar" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,31 +85,28 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="crear-listas-m3u-para-minidlna-o-vlc-1" title="Crear listas m3u para minidlna o vlc" data-export_file_name="crear-listas-m3u-para-minidlna-o-vlc" data-description="Un archivo *.m3u*, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc..." data-export_date="2019-01-02 20:00" data-category="bash" data-tag="bash, grep ,ls ,unix ,servidor, minidlna, multimedia" data-image="./images-blog/ugeek.png">Crear listas m3u para minidlna o vlc</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 293 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Un archivo <strong>.m3u</strong>, es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc. Cuando viste el artículo de <a href="https://ugeek.gitlab.io/2018-12-27-minidlna.html">minidlna</a>, te preguntarías como hacer las playlist de este servidor. Pues ahora te explicaré como crear automáticamente listas desde tu terminal en segundos.</p>
-<h2 id="crear-lista-para-minidlna">Crear lista para minidlna</h2>
-<ul>
-<li>Para crear la lista, no hace falta que especifiquemos la ruta del archivo en nuestro servidor, solo poniendo el nombre del mismo, minidlna buscará en su base de datos donde está este para reproducirlo.</li>
-<li>No importa el lugar donde esté el archivo .m3u, nuestro servidor minidlna lo agregará a su base de datos y así al grupo de playlists.</li>
-</ul>
-<h2 id="lista-dentro-de-un-directorio">Lista dentro de un directorio</h2>
-<ol>
-<li>Nos situamos en el directorio:</li>
-</ol>
-<p>=ls -1 | grep .mp3 &gt; lista.m3u=</p>
-<h3 id="explicación-del-comando-de-listado">Explicación del comando de listado</h3>
-<ul>
-<li>ls -&gt; lista archivos dentro de la carpeta</li>
-<li>-1 -&gt; mostrar un archivo por línea</li>
-</ul>
-<p>Después, podríamos ordenar el listado de diferente maneras, por ejemplo con comandos como <strong>sort</strong>.</p>
-<h2 id="lista-recursiva-entrando-dentro-de-subcarpetas">Lista recursiva entrando dentro de subcarpetas</h2>
-<p><code>ls -1 -R | grep .mp3 &gt; lista.m3u</code></p>
-<h2 id="reproducir-la-lista-desde-nuestra-terminal-con-vlc">Reproducir la lista desde nuestra terminal con vlc</h2>
-<p><code>vlc lista.m3u</code></p>
+<h1 id="unrar-en-raspberry-pi-1" title="unrar en Raspberry Pi" data-export_file_name="unrar-en-raspberry-pi" data-description="No todo el software está disponible para ARM, como por ejemplo *unrar*. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry." data-export_date="2021-04-06 7:15" data-category="bash" data-tag="bash.png" data-image="./images-blog/unrar">unrar en Raspberry Pi</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 169 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>No todo el software está disponible para ARM, como por ejemplo <strong>unrar</strong>. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry.</p>
+<center>
+<p><a href="./images-blog/unrar" class="uri">./images-blog/unrar</a></p>
+</center>
+<h2 id="instalación">Instalación</h2>
+<p>Descargaremos <strong>unrar</strong> desde la web <a href="https://www.rarlab.com/rar_add.htm" class="uri">https://www.rarlab.com/rar_add.htm</a></p>
+<p>En este caso encontramos en el largo listado, <a href="https://www.rarlab.com/rar/unrar-5.5.0-arm.gz">UnRAR for ARM Linux</a> Command line freeware ARM Linux UnRAR.</p>
+<p>Vamos a descargarlo:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">wget</span> https://www.rarlab.com/rar/unrar-5.5.0-arm.gz</a></code></pre></div>
+<p>Descomprimimos:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">gunzip</span> unrar-5.5.0-arm.gz</a></code></pre></div>
+<p>Damos permisos de ejecución:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">chmod</span> +x  unrar-5.5.0-arm</a></code></pre></div>
+<p>Ahora podemos ejecutarlo con:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">./unrar-5.5.0-arm</span></a></code></pre></div>
+<h2 id="descomprimir">Descomprimir</h2>
+<p>Para descomprimir, utilizaremos la opción <strong>x</strong>.</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">./unrar-5.5.0-arm</span> x archivo.rar</a></code></pre></div>
 <br>
-<p>Publicado por Angel el miércoles 02 enero del 2019</p>
+<p>Publicado por Angel el martes 06 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

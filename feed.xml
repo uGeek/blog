@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>unrar en Raspberry Pi</title>
+    <link>https://ugeek.github.io/blog/post/2021-04-06-unrar-en-raspberry-pi.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/unrar" alt="unrar en Raspberry Pi"&gt;
+&lt;br&gt;&lt;p&gt;No todo el software está disponible para ARM, como por ejemplo *unrar*. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-04-06-unrar-en-raspberry-pi.html&gt;unrar en Raspberry Pi&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 06 Apr 2021  +0100</pubDate>
+    <category>bash</category>
+    <category>bash.png</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-04-06-unrar-en-raspberry-pi.html</guid>
+   </item>
+   <item>
     <title>Docker en Ubuntu 20.04</title>
     <link>https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html</link>
     <description>
@@ -71,7 +104,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 02 Apr 2021  +0100</pubDate>
+    <pubDate>Fri, 02 Apr 2021 7:15 +0100</pubDate>
     <category>servidor</category>
     <category>samba</category>
     <category></category>
