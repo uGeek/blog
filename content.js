@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Eink Browser',
+            'text': '/EinkBrowser/ es un navegador simple, liviano, rápido, especialmente diseñado para dispositivos de tienta electrónica. Es un navegador basado en webview que no necesita permisos innecesarios.', 
+            'tags': 'android,navegador,browser,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-10-eink-browser.html' 
+},
+{
             'title': 'unrar en Raspberry Pi',
             'text': 'No todo el software está disponible para ARM, como por ejemplo *unrar*. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry.', 
             'tags': 'bash,bash.png,,,,', 
@@ -697,7 +703,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
