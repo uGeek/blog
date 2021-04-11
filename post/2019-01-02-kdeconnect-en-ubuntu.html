@@ -94,7 +94,7 @@ $("#tipue_search_input").tipuesearch();
 <ol>
 <li>Instalamos en nuestro Ubuntu</li>
 </ol>
-<p>=sudo apt install kdeconnect=</p>
+<p><code>sudo apt install kdeconnect</code></p>
 <p>Si tienes una versión superior a Ubuntu 16.04, incator-kdeconnect posiblemente estará disponible, en caso contrario, el equipo de webupd8team nos lo pone fácil. Instala esto:</p>
 <pre><code>sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
 sudo apt update
@@ -106,7 +106,7 @@ sudo apt install kdeconnect indicator-kdeconnect
 <li><p>Vamos ha hacer el emparejamiento desde la Terminal. El comando <strong>kdeconnect-cli - -help</strong> nos mostrará todos los comandos disponibles.</p></li>
 <li><p>Vamos a listar dispositivos disponibles en nuestra red local desde la terminal</p></li>
 </ol>
-<p>=kdeconnect-cli -l=</p>
+<p><code>kdeconnect-cli -l</code></p>
 <p>La terminal nos mostrará todos los dispositivos disponibles, en mi caso, mi Xiaomi A1:</p>
 <pre><code>angel@angel /usr/lib/kde4 $ kdeconnect-cli -l
         - Xiami A1: 35826fca13f58Gsu (reachable)
@@ -115,7 +115,7 @@ sudo apt install kdeconnect indicator-kdeconnect
 <ol>
 <li>Vinculamos PC a mi Xiaomi A1 con nuestro:</li>
 </ol>
-<p>=kdeconnect-cli -d 35826fca13f58Gsu –pair=</p>
+<p><code>kdeconnect-cli -d 35826fca13f58Gsu --pair</code></p>
 <ol>
 <li><p>En tu movil, tablet Android, recibirás una solicitud para vincularlo.</p></li>
 <li><p>Ya está condectado Kde Connect!!!</p></li>
@@ -125,7 +125,7 @@ sudo apt install kdeconnect indicator-kdeconnect
 exec --no-startup-id /usr/bin/indicator-kdeconnect
 </code></pre>
 <br>
-<p>Publicado por Angel el miércoles 02 enero del 2019</p>
+<p>Publicado por Angel el Wednesday 02 January del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

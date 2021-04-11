@@ -140,7 +140,7 @@ ejabberd_imagen           dockerfile          983bc10a3e5b        47 seconds ago
 <li>$USUARIO : Escribe tu usuario</li>
 <li>$IMAGE_ID : Escribe el número de <strong>IMAGE ID</strong>, que te apareció en el paso anterior.</li>
 </ul>
-<p>=docker run -dti –name ejabberd –restart=unless-stopped -p 5280:5280 -p 5222:5222 -v <em>home/$USUARIO/docker/ejabberd_config:/etc/ejabberd</em> $IMAGE_ID=</p>
+<p><code>docker run -dti --name ejabberd --restart=unless-stopped -p 5280:5280 -p 5222:5222 -v /home/$USUARIO/docker/ejabberd_config:/etc/ejabberd/  $IMAGE_ID</code></p>
 <p>En la carpeta <code>/home/$USUARIO/docker/ejabberd_config</code>, encontraremos el archivo de configuración del servidor.</p>
 <h2 id="entrar-en-el-docker">Entrar en el Docker</h2>
 <p>Ahora vamos a entrar al interior del Docker. Una vez dentro de este, estaremos en una versión de debian, con todo lo justo para que funcione nuestro servidor y para que sea del mínimo tamaño.</p>
@@ -182,10 +182,10 @@ ejabberd_imagen           dockerfile          983bc10a3e5b        47 seconds ago
 <p>Podemos personalizar absolutamente nuestro servidor desde este archivo, pero es muy complejo. Visita la web de ejabberd para ver ejemplos y sobretodo, haz una copia del archivo antes de modificarlo.</p>
 <h2 id="web-ejabberd">Web ejabberd</h2>
 <ul>
-<li><a href="https://www.ejabberd.im/" class="uri">https://www.ejabberd.im/</a></li>
+<li><a href="https://www.ejabberd.im/">https://www.ejabberd.im/</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el domingo 10 febrero del 2019</p>
+<p>Publicado por Angel el Sunday 10 February del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

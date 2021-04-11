@@ -108,7 +108,7 @@ sudo usermod -aG docker $USER
 <p><code>docker run -t -i ubuntu:latest /bin/bash</code></p>
 <p>Para nuestra Raspberry, si queremos, también podemos especificar la arquitectura con la que queremos montar en nuestro contenedor:</p>
 <p><code>docker run -t -i arm32v7/ubuntu:latest /bin/bash</code></p>
-<p>La versión <strong>&quot;latest&quot;</strong>, es la 18.04, si queremos utilizar una en concreto, deberemos especificarlo.</p>
+<p>La versión <strong>"latest"</strong>, es la 18.04, si queremos utilizar una en concreto, deberemos especificarlo.</p>
 <p>Una vez creado el contenedor y dentro de él, podemos salir pulsando <code>exit</code> o <code>Ctrl-d</code>. Esto dentendrá nuestro contenedor, para que esto no suceda, pulsa <code>Ctrl+p+q</code></p>
 <h2 id="listar-todos-los-contenedores-de-nuestro-servidor">Listar todos los Contenedores de nuestro servidor</h2>
 <p>Vamos a listar todos los contenedores que tenemos en nuestro servidor, indistintamente si están corriendo ahora o no:</p>
@@ -132,7 +132,7 @@ sudo usermod -aG docker $USER
 <li>Tener 2 carpetas de intercambio de archivos, entre carpetas del servidor y carpetas internas del contenedor <code>-v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root</code></li>
 </ul>
 <p>Una vez estemos dentro del contenedor, igual que haríamos si nos hubiéramos conectado a un servidor por ssh, instalaremos e iniciaremos el servicio:</p>
-<p><strong>Recuerda sustituir &quot;usuario&quot;, por tu usuario, no hagas un copia y pega</strong> 😜</p>
+<p><strong>Recuerda sustituir "usuario", por tu usuario, no hagas un copia y pega</strong> 😜</p>
 <h2 id="borrar-un-contenedor">Borrar un contenedor</h2>
 <p>Si ya has acabado con tus pruebas, voy a explicarte algunos comando muy útiles, como borrar el contenedor, imagenes, etc… que ya no vamos a utilizar:</p>
 <p>Detenemos el contentedor:</p>
@@ -143,7 +143,7 @@ sudo usermod -aG docker $USER
 <p>Es posible que quieras eliminar la imagen con la que habíamos creado nuestro Docker, para ello, listaremos y borraremos así:</p>
 <p>Listar todas las imágenes:</p>
 <p><code>docker images</code></p>
-<p>Borrar la imagen (rm&quot;i&quot; de imágen, para recordar):</p>
+<p>Borrar la imagen (rm"i" de imágen, para recordar):</p>
 <p><code>docker rmi nombre_de_la_imagen</code></p>
 <h2 id="renombrar-contenedor">Renombrar Contenedor</h2>
 <p>En caso que quisieras cambiar el nombre del contenedor, haremos lo siguiente:</p>
@@ -151,7 +151,7 @@ sudo usermod -aG docker $USER
 <h2 id="conclusiones">Conclusiones</h2>
 <p>Con un poco de práctica, como ves, Docker puede ayudarte a probar, practicar y utilizar servicios o aplicaciones, dentro de estos de un modo muy limpio y sencillo. El punto fuerte es que no vas a romper nada del sistema operativo anfitrión, y además, en el caso de la Raspberry, utilizar aplicaciones a la última que no están disponibles en Raspbian.</p>
 <br>
-<p>Publicado por Angel el domingo 24 febrero del 2019</p>
+<p>Publicado por Angel el Sunday 24 February del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

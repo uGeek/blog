@@ -87,17 +87,17 @@ $("#tipue_search_input").tipuesearch();
 
 <h1 id="renombrando-archivos-masivamente-1" title="Renombrando archivos masivamente" data-export_file_name="Renombrando archivos masivamente" data-description="Quería eliminar masivamente el título de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas" data-export_date="2019-07-06 23:30" data-category="unix" data-tag="terminal,sed,bash" data-image="./images-blog/unix.png">Renombrando archivos masivamente</h1>
 <h5>Tiempo estimado de lectura: 2 minutos. 224 palabras.    <a href="https://ugeek.github.io/blog/categories/unix">unix</a></h5>
-<p>Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en <strong>sed</strong>, o <strong>tr</strong>, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog <a href="https://www.ochobitshacenunbyte.com/2015/09/14/renombrar-multiples-nombres-ficheros-linux/">ochobitshacenunbyte.com</a> donde explica, en este caso, sustituir los espacios en blanco por &quot;_&quot;.</p>
+<p>Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en <strong>sed</strong>, o <strong>tr</strong>, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog <a href="https://www.ochobitshacenunbyte.com/2015/09/14/renombrar-multiples-nombres-ficheros-linux/">ochobitshacenunbyte.com</a> donde explica, en este caso, sustituir los espacios en blanco por "_".</p>
 <center>
 <p><img src="../images-blog/unix.png" /></p>
 </center>
-<p>Yo siguiendo con mi ejemplo, vamos a renombrar unos archivos mp3 que todos contienen la palabra &quot;Supertramp&quot;:</p>
+<p>Yo siguiendo con mi ejemplo, vamos a renombrar unos archivos mp3 que todos contienen la palabra "Supertramp":</p>
 <pre><code>for FILE in *.mp3 ; do NUEVOFICHERO=`echo $FILE | sed &#39;s/Supertramp//g&#39;`; mv &quot;$FILE&quot; $NUEVOFICHERO; done
 </code></pre>
 <p>con <strong>for</strong> listamos todos los archivos <strong>.mp3</strong>, añadimos el nombre del archivo a la variable <strong>NUEVOFICHERO</strong>, con <strong>sed</strong> lo renombramos y finalmente con <strong>mv</strong> movemos el nombre antiguo al nombre renombrado.</p>
 <p>Resumiendo y si no te interesa el funcionamiento, sustituye la extensión <strong>.mp3</strong> y la palabra <strong>Supertramp</strong>, por la extensión o palabra que quieras renombrar.</p>
 <br>
-<p>Publicado por Angel el sábado 06 julio del 2019</p>
+<p>Publicado por Angel el Saturday 06 July del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

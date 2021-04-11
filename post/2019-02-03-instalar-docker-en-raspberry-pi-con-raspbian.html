@@ -91,7 +91,7 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="instala-primero-algunos-paquetes-que-necesitamos">Instala primero algunos paquetes que necesitamos</h2>
 <p><code>sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common</code></p>
 <h2 id="obtener-la-clave-de-firma-docker-para-paquetes">Obtener la clave de firma Docker para paquetes</h2>
-<p><code>sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo &quot;$ID&quot;)/gpg | sudo apt-key add -</code></p>
+<p><code>sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -</code></p>
 <h2 id="añadimos-los-repositorios-oficiales">Añadimos los repositorios oficiales</h2>
 <pre><code>sudo echo &quot;deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; echo &quot;$ID&quot;) \
      $(lsb_release -cs) stable&quot; | \
@@ -113,7 +113,7 @@ sudo usermod -aG docker $USER
 <h2 id="instalar-portainer">Instalar Portainer</h2>
 <p><code>docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></p>
 <br>
-<p>Publicado por Angel el domingo 03 febrero del 2019</p>
+<p>Publicado por Angel el Sunday 03 February del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

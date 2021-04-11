@@ -101,9 +101,9 @@ $("#tipue_search_input").tipuesearch();
 <p>Explicación:</p>
 <ul>
 <li><code>cat</code> <strong>–&gt;</strong> Visualiza el archivo de texto</li>
-<li><code>sed &quot;s/,/./g&quot;</code> <strong>–&gt;</strong> El archivo tenía números decimales que se podría confundir con las &quot;comas&quot; del csv, así que convierto las comas a puntos.</li>
-<li><code>sed &quot;s/\t/,/g&quot;</code> <strong>–&gt;</strong> La separación de columnas es superior a dos espacios, así que son un tabulado. Convierte los tabulados en comas</li>
-<li><code>sed &quot;/^ *$/d&quot;</code> <strong>–&gt;</strong> Cada fila, queda representada por una línea en blanco. Sed eliminará las líneas</li>
+<li><code>sed "s/,/./g"</code> <strong>–&gt;</strong> El archivo tenía números decimales que se podría confundir con las "comas" del csv, así que convierto las comas a puntos.</li>
+<li><code>sed "s/\t/,/g"</code> <strong>–&gt;</strong> La separación de columnas es superior a dos espacios, así que son un tabulado. Convierte los tabulados en comas</li>
+<li><code>sed "/^ *$/d"</code> <strong>–&gt;</strong> Cada fila, queda representada por una línea en blanco. Sed eliminará las líneas</li>
 </ul>
 <h3 id="exportar-a-cav">Exportar a cav</h3>
 <p>Exportamos a archivo.csv el resultado filtrado por el comando</p>
@@ -112,7 +112,7 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="conclusión">Conclusión</h2>
 <p>Como ves, una archivo que tenía que pasar por 2 programas y al final, tener que editarlo a mano para poder arreglar las comas del csv, bash me lo ha solucionado con una única línea de teminal.</p>
 <br>
-<p>Publicado por Angel el sábado 21 septiembre del 2019</p>
+<p>Publicado por Angel el Saturday 21 September del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

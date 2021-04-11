@@ -88,9 +88,9 @@ $("#tipue_search_input").tipuesearch();
 <h1 id="orgmode-buscar-solo-en-las-cabeceras-1" title="OrgMode: Buscar solo en las Cabeceras" data-export_file_name="orgmode Buscar solo en las Cabeceras" data-description="Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados" data-export_date="2019-02-01 21:45" data-category="emacs" data-tag="orgmode" data-image="./images-blog/ugeek.png">OrgMode: Buscar solo en las Cabeceras</h1>
 <h5>Tiempo estimado de lectura: 4 minutos. 494 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
 <p>Tomar muchas notas, es muy sencillo, lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada, empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado, pero mediante una búsqueda sencilla por palabras, aparecen cientos de resultados.</p>
-<p>Lo ideal sería poder buscar palabras solo en la cabeceras y no a lo largo del orgmode. En este <a href="https://mentat.za.net/blog/2016/12/15/org-mode-header-search/">Post de <a href="https://mentat.za.net" class="uri">https://mentat.za.net</a></a>, explica como hacer búsqueda solo en las cabecera de primer nivel. Yo, tal como tengo estructuradas mis notas, necesitaba que buscara en todas las cabeceras. Así que he hecho una pequeña modificación al código y aquí os explico el resultado.</p>
+<p>Lo ideal sería poder buscar palabras solo en la cabeceras y no a lo largo del orgmode. En este <a href="https://mentat.za.net/blog/2016/12/15/org-mode-header-search/">Post de <a href="https://mentat.za.net">https://mentat.za.net</a></a>, explica como hacer búsqueda solo en las cabecera de primer nivel. Yo, tal como tengo estructuradas mis notas, necesitaba que buscara en todas las cabeceras. Así que he hecho una pequeña modificación al código y aquí os explico el resultado.</p>
 <h2 id="búsqueda-en-cabeceras-de-mi-orgmode">Búsqueda en cabeceras de mi orgmode</h2>
-<p>Pensé en replicar tantas veces como fuera necesario, la línea '(setq unread-command-events (listify-key-sequence &quot;<sup>*</sup> &quot;))', e ir añadiendo Cabeceras, pero solo me ha bastado una, como aparece en esta cajetilla de código, para que entienda emacs que debe buscar en todas las Cabeceras. No me parece que sea una forma correcta, pero… Funciona!!!!</p>
+<p>Pensé en replicar tantas veces como fuera necesario, la línea '(setq unread-command-events (listify-key-sequence "<sup>*</sup> "))', e ir añadiendo Cabeceras, pero solo me ha bastado una, como aparece en esta cajetilla de código, para que entienda emacs que debe buscar en todas las Cabeceras. No me parece que sea una forma correcta, pero… Funciona!!!!</p>
 <p>Añade en <strong>init.es</strong> o <strong>.emacs</strong>, las siguientes líneas:</p>
 <pre><code>(defun stefan/isearch-heading ()
   (interactive)
@@ -108,7 +108,7 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="hacer-búsquedas">Hacer Búsquedas</h2>
 <p>Para buscar una palabra que estará en cualquiera de las cabeceras, pulsaremos las teclas <strong>C-c h</strong>. Recuerda que podrás personalizar el atajo que desees cambiando este en el código.</p>
 <p>Una vez hecha la primera búsqueda, si tienes mas cabeceras con la misma palabra que deseas buscar, debes de pulsar <strong>C-s</strong> todo el rato, ara ir avanzando a lo largo de las coincidencias</p>
-<p>Tengo que decir que el único punto negativo, es que encuentra la palabra, siempre que sea la primera que aparece en el título de la cabecera. Si está a lo largo del título, no la encuentra. De ahí, que en el código aparece &quot;<sup>*</sup>&quot;. Es una cosa que tenemos que tener en cuenta cuando creemos nuestras notas.</p>
+<p>Tengo que decir que el único punto negativo, es que encuentra la palabra, siempre que sea la primera que aparece en el título de la cabecera. Si está a lo largo del título, no la encuentra. De ahí, que en el código aparece "<sup>*</sup>". Es una cosa que tenemos que tener en cuenta cuando creemos nuestras notas.</p>
 <h2 id="buscar-en-cabeceras-de-primer-nivel">Buscar en Cabeceras de Primer Nivel</h2>
 <p>Código para solo Buscar en cabeceras de primer nivel:</p>
 <pre><code>(defun stefan/isearch-heading ()
@@ -124,7 +124,7 @@ $("#tipue_search_input").tipuesearch();
 (add-hook &#39;org-mode-hook &#39;org-mode-keys)
 </code></pre>
 <br>
-<p>Publicado por Angel el viernes 01 febrero del 2019</p>
+<p>Publicado por Angel el Friday 01 February del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

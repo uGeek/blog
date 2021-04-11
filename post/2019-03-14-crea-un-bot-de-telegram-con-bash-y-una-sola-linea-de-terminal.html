@@ -164,18 +164,18 @@ curl -s -X POST $URL -d chat_id=$ID -d text=&quot;$MENSAJE&quot;
 <pre><code>$(/opt/vc/bin/vcgencmd measure_temp)
 </code></pre>
 <h2 id="al-iniciar-mi-servidor">Al Iniciar mi servidor</h2>
-<p>He creado una carpeta llamada &quot;scripts&quot; en el &quot;Home&quot; del usuario. Allí he creado el script del Bot llamado <strong>inicio.sh</strong>, con un mesaje de texto tipo:</p>
+<p>He creado una carpeta llamada "scripts" en el "Home" del usuario. Allí he creado el script del Bot llamado <strong>inicio.sh</strong>, con un mesaje de texto tipo:</p>
 <p><strong>Se ha iniciado mi Raspberry</strong></p>
 <p>Para que esto funciones, vamos a escribir en cron, que cada vez que inicie nuestro servidor, PC, raspberry,… Nos envíe el mensaje:</p>
 <p>Escribe en la Terminal:</p>
 <p><code>crontab -e</code></p>
 <p>Y en la primera línea, escribiremos lo siguiente:</p>
 <p><code>@reboot ( sleep 100 ; sh $HOME/scripts/inicio.sh )</code></p>
-<p>Esto significa que tras 100 segundos después del inicio de nuestro servidor, pc, raspberry,… ejecutará el script <strong>inicio.sh</strong>, de manera que nos enviará el texto que pusimos en el script &quot;<strong>Se ha iniciado mi Raspberry</strong>&quot;.</p>
+<p>Esto significa que tras 100 segundos después del inicio de nuestro servidor, pc, raspberry,… ejecutará el script <strong>inicio.sh</strong>, de manera que nos enviará el texto que pusimos en el script "<strong>Se ha iniciado mi Raspberry</strong>".</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Espero que te haya gustado este Post y Podcast. Ahora te toca a ti experimentar y juguetear con tu Bot de Telegram. Comenta tu experiencia en el Grupo de uGeek en Telegram.</p>
 <br>
-<p>Publicado por Angel el jueves 14 marzo del 2019</p>
+<p>Publicado por Angel el Thursday 14 March del 2019</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
