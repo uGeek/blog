@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú',
+            'text': 'Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en', 
+            'tags': 'appimage,desktop,escritorio,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html' 
+},
+{
             'title': 'Eink Browser',
             'text': '/EinkBrowser/ es un navegador simple, liviano, rápido, especialmente diseñado para dispositivos de tienta electrónica. Es un navegador basado en webview que no necesita permisos innecesarios.', 
             'tags': 'android,navegador,browser,,,', 
