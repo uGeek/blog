@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html' 
 },
 {
+            'title': 'Ampliar memoria SWAP',
+            'text': 'Tener poca memoria *swap*, puede hacer que se detengan determinados servicios o comience a ir lento nuestro servidor o *PC*.', 
+            'tags': 'raspberry,swap,bash,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html' 
+},
+{
             'title': 'Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú',
             'text': 'Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en', 
             'tags': 'appimage,desktop,escritorio,,,', 

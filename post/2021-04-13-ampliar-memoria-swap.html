@@ -1,5 +1,5 @@
 <head>
-<title>Actualiza el Firmware de tu Raspberry. uGeek Blog </title>
+<title>Ampliar memoria SWAP. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Actualizar el firmware de tu Raspberry a la última, es muy sencillo" />
+<meta name="description" content="Tener poca memoria *swap*, puede hacer que se detengan determinados servicios o comience a ir lento nuestro servidor o *PC*." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Actualiza el Firmware de tu Raspberry" />
-<meta property="og:description" content="Actualizar el firmware de tu Raspberry a la última, es muy sencillo" />
+<meta property="og:title" content="Ampliar memoria SWAP" />
+<meta property="og:description" content="Tener poca memoria *swap*, puede hacer que se detengan determinados servicios o comience a ir lento nuestro servidor o *PC*." />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-17-actualiza-el-firmware-de-tu-raspberry.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html" />
 
-<meta name="twitter:title" content="Actualiza el Firmware de tu Raspberry" />
-<meta name="twitter:description" content="Actualizar el firmware de tu Raspberry a la última, es muy sencillo" />
+<meta name="twitter:title" content="Ampliar memoria SWAP" />
+<meta name="twitter:description" content="Tener poca memoria *swap*, puede hacer que se detengan determinados servicios o comience a ir lento nuestro servidor o *PC*." />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" />
 
 
@@ -85,25 +85,40 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="actualiza-el-firmware-de-tu-raspberry-1" title="Actualiza el Firmware de tu Raspberry" data-export_file_name="Actualiza el Firmware de tu Raspberry" data-description="Actualizar el firmware de tu Raspberry a la última, es muy sencillo" data-export_date="2019-08-17 15:50" data-category="raspberry" data-tag="raspberry,bash" data-image="./images-blog/raspberrypi.jpg">Actualiza el Firmware de tu Raspberry</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 166 palabras.    <a href="https://ugeek.github.io/blog/categories/raspberry">raspberry</a></h5>
-<p>Actualizar el firmware de tu Raspberry a la última, es muy sencillo.</p>
+<h1 id="ampliar-memoria-swap-1" title="Ampliar memoria SWAP" data-export_file_name="ampliar-memoria-swap" data-description="Tener poca memoria *swap*, puede hacer que se detengan determinados servicios o comience a ir lento nuestro servidor o *PC*." data-export_date="2021-04-13 17:35" data-category="raspberry" data-tag="swap,bash" data-image="./images-blog/raspberrypi.jpg">Ampliar memoria SWAP</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 349 palabras.    <a href="https://ugeek.github.io/blog/categories/raspberry">raspberry</a></h5>
+<p>Tener poca memoria <strong>swap</strong>, puede hacer que se detengan determinados servicios o comience a ir lento nuestro servidor o <strong>PC</strong>.</p>
 <center>
 <p><img src="../images-blog/raspberrypi.jpg" /></p>
 </center>
-<h2 id="actualización">Actualización</h2>
-<p>Para actualizar el firmware:</p>
-<pre><code>sudo rpi-update
-</code></pre>
-<p>A mi personalmente, me gusta poner todos estos comandos dentro de un script, así de un modo sencillo, lo pongo todo al día:</p>
-<pre><code>sudo apt-get update
-sudo apt-get -y upgrade
-sudo apt autoremove
-sudo apt clean
-sudo rpi-update
-</code></pre>
+<p>Vamos a ver como ampliar la memoria <strong>swap</strong> de los 100Mb que trae <strong>Raspbian OS</strong> por defecto en su versión <strong>Lite</strong> a 512Mb.</p>
+<h2 id="conocer-cuante-swap-tenemos">Conocer cuante SWAP tenemos</h2>
+<p>Para comprobar la memoria <strong>swap</strong> que tenemos y ver su estado, es tan sencillo como utilizar <strong>htop</strong>.</p>
+<p>También podemos utilizar el siguiente comando:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">cat</span> /proc/meminfo <span class="kw">|</span> <span class="fu">grep</span> Swap</a></code></pre></div>
+<p>Este comando nos mostrará tres valores:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">SwapCached</span>:  <span class="co"># swap ocupada</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="ex">SwapTotal</span>:   <span class="co"># swap disponible</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="ex">SwapFree</span>:    <span class="co"># swap libre</span></a></code></pre></div>
+<h2 id="aumentar-swap">Aumentar SWAP</h2>
+<p>Para aumenta la <strong>swap</strong>, editaremos el siguiente archivo:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> nano /etc/dphys-swapfile</a></code></pre></div>
+<p>En el caso de tener solo 100Mb, como es mi caso, veremos la siguiente variable con este valor:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="va">CONF_SWAPSIZE=</span>100</a></code></pre></div>
+<p>Ahora cambiaremos el valor por <strong>512Mb</strong>, que es nuestro objetivo:</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="va">CONF_SWAPSIZE=</span>512</a></code></pre></div>
+<h2 id="implementar-la-nueva-swap">Implementar la nueva SWAP</h2>
+<p>Para implementar esta nueva <strong>swap</strong> tenemos dos modos de hacerlo.</p>
+<ul>
+<li><p>La primera, que es la que más me gusta, es reiniciar nuestro servidor.</p></li>
+<li><p>La segunda, nos permite mediante dos comando por una parte eliminar la <strong>swap</strong> y después implementar el nuevo valor. Es un modo útil si no puedes detener el servidor y no puedes reiniciar.</p></li>
+</ul>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">sudo</span> dphys-swapfile setup</a></code></pre></div>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">sudo</span> dphys-swapfile swapon</a></code></pre></div>
+<h2 id="conclusión">Conclusión</h2>
+<p>Si tienes una Raspberry 4 con 4 o 8 Gb, no es necesario ampliar la <strong>swap</strong>, pero si es cierto que para la Raspberry 3 o si tienes muchos servicios corriendo, nunca está de más.</p>
 <br>
-<p>Publicado por Angel el sábado 17 agosto del 2019</p>
+<p>Publicado por Angel el martes 13 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
