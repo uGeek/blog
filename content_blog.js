@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker: Raneto',
+            'text': 'Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos.', 
+            'tags': 'docker,markdown,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html' 
+},
+{
             'title': 'Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú',
             'text': 'Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en', 
             'tags': 'appimage,desktop,escritorio,,,', 
@@ -709,7 +715,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

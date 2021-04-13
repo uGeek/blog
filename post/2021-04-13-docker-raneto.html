@@ -1,5 +1,5 @@
 <head>
-<title>Docker: Duck DNS. Facilitando la conexión a tus servicios. uGeek Blog </title>
+<title>Docker: Raneto. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
+<meta name="description" content="Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" />
-<meta property="og:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html" />
+<meta property="og:title" content="Docker: Raneto" />
+<meta property="og:description" content="Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Raneto.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html" />
 
-<meta name="twitter:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" />
-<meta name="twitter:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" />
+<meta name="twitter:title" content="Docker: Raneto" />
+<meta name="twitter:description" content="Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Raneto.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,49 +85,41 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-duck-dns.-facilitando-la-conexión-a-tus-servicios-1" title="Docker: Duck DNS. Facilitando la conexión a tus servicios" data-export_file_name="docker-duck-dns-facilitando-la-conexion-a-tus-servicios" data-description="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" data-export_date="2019-10-09 18:00" data-category="docker" data-tag="servidor,dns,duckdns" data-image="./images-blog/duckdns.png">Docker: Duck DNS. Facilitando la conexión a tus servicios</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 466 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>La mayor parte de la gente, tiene una conexión a internet con ip dinámica. Esto quiere decir, que la dirección ip va cambiando de tanto en tanto. No es fija.</p>
+<h1 id="docker-raneto-1" title="Docker: Raneto" data-export_file_name="docker-raneto" data-description="Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos." data-export_date="2021-04-13 15:55" data-category="docker" data-tag="markdown" data-image="./images-blog/Docker:_Raneto.png">Docker: Raneto</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 175 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos.</p>
 <center>
-<p><img src="../images-blog/duckdns.png" /></p>
+<p><img src="../images-blog/Docker:_Raneto.png" /></p>
 </center>
-<p>Esto puede ser un gran problema si queremos conectarnos desde fuera de nuestra red, a un servicio que tenemos en nuestro servidor. Si la compañía cambia la ip en ese momento, nunca encontraremos nuestro servidor. Para solucionar este problema podemos utilizar servicios DNS como Duck DNS.</p>
-<p>Tal como expliqué en el artículo del <a href="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html">Docker de Letsencript</a>, podemos crear una cuenta con un dominio o hasta 5 de forma gratuita y ejecutando un script en nuestro servidor, <strong>en nuestra red local</strong>, este script enviará cual es nuestra ip a Duck DNS, para que cada vez que introduzcamos el dominio que registramos en Duck DNS, redirija el tráfico hasta nuestra casa.</p>
-<p>Yo finalmente por comodidad, he montado un docker de la comunidad LinuxServer que incluye este script. De esta manera solo tengo que programar en que momento del día quiero que se inicie este docker y él se encargará de enviar esta información.</p>
-<h2 id="docker-duck-dns">Docker Duck DNS</h2>
-<p>Este es un ejemplo de como montar el docker. Tienes que sustituir <strong>SUBDOMAINS</strong>, en este ejemplo correspondería con la dirección ugeekpodcast.duckdns.org y angel.duckdns.org, el <strong>TOKEN</strong> aparece en la página de Duck DNS y <strong>TZ</strong> corresponde con la hora local del lugar donde vivas.</p>
-<pre><code>docker create \
-  --name=duckdns \
-  -e PGID=1000 -e PUID=1000  \
-  -e SUBDOMAINS=ugeekpodcast,angel \
-  -e TOKEN=adbqergh-av7654qwerg-qerg456-45qrg \
-  -e TZ=Europe/Madrid \
-  lsioarmhf/duckdns
-</code></pre>
-<p><strong>Es un Token de ejemplo falso</strong></p>
-<p>El script se ejecuta cada 5 minutos y envía nuesta IP a los servidores de Duck DNS.</p>
-<h2 id="cambiar-la-periocidad-de-ejecución">Cambiar la periocidad de ejecución</h2>
-<p>Para cambiar el tiempo de ejecución del script y que no sea cada 5 minutos, lo haremos de la siguiente manera:</p>
-<p>Entraremos dentro del contenedor</p>
-<pre><code>docker exec -it duckdns /bin/bash
-</code></pre>
-<p>Editamos cron</p>
-<pre><code>crontab -e -u abc
-</code></pre>
-<p>En mi caso, voy ha hacer que se ejecute cada 30 minutos</p>
-<pre><code>*/30 * * * * /app/duck.sh 2&gt;&amp;1
-</code></pre>
-<h2 id="ver-que-todo-va-ok">Ver que todo va ok</h2>
-<p>Para comprobar que todo funcion bien, haremos un log del contenedor y veremos cada cuanto se ejecuta el script</p>
-<pre><code>docker logs -f duckdns
-</code></pre>
+<h2 id="docker-compose">Docker Compose</h2>
+<p>El docker-compose para construir reneto:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&quot;2.1&quot;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">raneto</span>:</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="ex">image</span>: linuxserver/raneto</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ex">container_name</span>: raneto</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="ex">environment</span>:</a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="ex">-</span> PUID=1000</a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="ex">-</span> PGID=1000</a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="ex">-</span> TZ=Europe/Madrid</a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="ex">-</span> <span class="va">$HOME</span>/reneto/appdata:/config</a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="ex">-</span> 3000:3000</a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="ex">restart</span>: unless-stopped</a></code></pre></div>
+<h2 id="usuario-y-contraseña">Usuario y contraseña</h2>
+<ul>
+<li>usuario: admin</li>
+<li>contraseña: password</li>
+</ul>
+<p>Encontrarás más información siguiendo las fuentes</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://www.duckdns.org/">https://www.duckdns.org/</a></li>
-<li><a href="https://hub.docker.com/r/linuxserver/duckdns/">https://hub.docker.com/r/linuxserver/duckdns/</a></li>
+<li><a href="https://hub.docker.com/r/linuxserver/raneto">https://hub.docker.com/r/linuxserver/raneto</a></li>
+<li><a href="http://raneto.com/">http://raneto.com/</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el miércoles 09 octubre del 2019</p>
+<p>Publicado por Angel el martes 13 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
