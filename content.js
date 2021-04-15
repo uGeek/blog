@@ -1,15 +1,21 @@
 var tipuesearch = {pages: [
 {
-            'title': 'Docker: Raneto',
-            'text': 'Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos.', 
-            'tags': 'docker,markdown,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html' 
+            'title': 'Wallabag en Emacs',
+            'text': 'Hay publicado un nuevo paquete de wallabag para Emacs en GitHub. De momento no está disponible en Melpa u otros repositorios, así que si quieres hacer uso, tienes que clonar', 
+            'tags': 'emacs,wallabag,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-15-wallabag-en-emacs.html' 
 },
 {
             'title': 'Ampliar memoria SWAP',
             'text': 'Tener poca memoria *swap*, puede hacer que se detengan determinados servicios o comience a ir lento nuestro servidor o *PC*.', 
             'tags': 'raspberry,swap,bash,,,', 
             'url': 'https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html' 
+},
+{
+            'title': 'Docker: Raneto',
+            'text': 'Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos.', 
+            'tags': 'docker,markdown,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html' 
 },
 {
             'title': 'Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú',
@@ -721,7 +727,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

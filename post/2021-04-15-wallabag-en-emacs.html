@@ -1,5 +1,5 @@
 <head>
-<title>Corrector Ortográfico para Emacs en Raspbian. uGeek Blog </title>
+<title>Wallabag en Emacs. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Tras adquirir mi nueva Raspberry 4 y la aparición de la nueva debian Buster, estoy utilizando Emacs remotamente" />
+<meta name="description" content="Hay publicado un nuevo paquete de wallabag para Emacs en GitHub. De momento no está disponible en Melpa u otros repositorios, así que si quieres hacer uso, tienes que clonar" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Corrector Ortográfico para Emacs en Raspbian" />
-<meta property="og:description" content="Tras adquirir mi nueva Raspberry 4 y la aparición de la nueva debian Buster, estoy utilizando Emacs remotamente" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/emacs.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-16-corrector-ortagráfico-para-emacs-en-raspbian.html" />
+<meta property="og:title" content="Wallabag en Emacs" />
+<meta property="og:description" content="Hay publicado un nuevo paquete de wallabag para Emacs en GitHub. De momento no está disponible en Melpa u otros repositorios, así que si quieres hacer uso, tienes que clonar" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/wallabag.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-15-wallabag-en-emacs.html" />
 
-<meta name="twitter:title" content="Corrector Ortográfico para Emacs en Raspbian" />
-<meta name="twitter:description" content="Tras adquirir mi nueva Raspberry 4 y la aparición de la nueva debian Buster, estoy utilizando Emacs remotamente" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/emacs.png" />
+<meta name="twitter:title" content="Wallabag en Emacs" />
+<meta name="twitter:description" content="Hay publicado un nuevo paquete de wallabag para Emacs en GitHub. De momento no está disponible en Melpa u otros repositorios, así que si quieres hacer uso, tienes que clonar" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/wallabag.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,22 +85,57 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="corrector-ortográfico-para-emacs-en-raspbian-1" title="Corrector Ortográfico para Emacs en Raspbian" data-export_file_name="Corrector Ortagráfico para Emacs en Raspbian" data-description="Tras adquirir mi nueva Raspberry 4 y la aparición de la nueva debian Buster, estoy utilizando Emacs remotamente" data-export_date="2019-08-16 11:00" data-category="emacs" data-tag="orgmode,raspbian,org-bash-blog" data-image="./images-blog/emacs.png">Corrector Ortográfico para Emacs en Raspbian</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 265 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
-<p>Tras adquirir mi nueva Raspberry 4 y la aparición de la nueva debian Buster, estoy utilizando Emacs remotamente. La versión de Emacs disponible en Raspbian Buster, es la Emacs 26.1. Los que conocemos Emacs, sabemos que exportando tu archivo de configuración init.el, Emacs en el primer arranque, instalará todos los paquetes necesarios y dejará este, igual que en el anterior dispositivo que lo estabas utilizando.</p>
-<center height="250" width="250">
-<p><img src="../images-blog/emacs.png" /></p>
+<h1 id="wallabag-en-emacs-1" title="Wallabag en Emacs" data-export_file_name="wallabag-en-emacs" data-description="Hay publicado un nuevo paquete de wallabag para Emacs en GitHub. De momento no está disponible en Melpa u otros repositorios, así que si quieres hacer uso, tienes que clonar" data-export_date="2021-04-15 19:30" data-category="emacs" data-tag="wallabag" data-image="./images-blog/wallabag.png">Wallabag en Emacs</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 439 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<p>Hay publicado un nuevo paquete de wallabag para Emacs en GitHub. De momento no está disponible en Melpa u otros repositorios, así que si quieres hacer uso, tienes que clonar el repositorio e instalar algunas dependencias, nada complicado. Si tienes una instancia de Wallabag y quieres disfrutar de todos tus artículos guardados en Wallabag desde Emacs, sigue este artículo que te va a encantar.</p>
+<center>
+<p><img src="../images-blog/wallabag.png" /></p>
 </center>
-<p>No a sido del todo así. El corrector de castellano, al utilizar una arquitectura diferente, me ha fallado. Así que he tenido que buscar una solución. Gracias al de emacs.stackexchange.com, la he encontrado. Adjunto el código adaptado para Castellano.</p>
-<h2 id="añade-a-tu-init.el">Añade a tu init.el</h2>
-<p>En el caso de querer utilizar el Castellano como corrector, añadiremos <code>es_ES</code>. Sustituye por el idioma que desees.</p>
-<pre><code>(setq ispell-program-name &quot;hunspell&quot;)
-(setq ispell-local-dictionary &quot;es_ES&quot;)
-(setq ispell-local-dictionary-alist
-      &#39;((&quot;es_ES&quot; &quot;[[:alpha:]]&quot; &quot;[^[:alpha:]]&quot; &quot;[&#39;]&quot; nil nil nil utf-8)))
-</code></pre>
+<h2 id="instalación">Instalación</h2>
+<p>Vamos a clonar el repositorio:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">git</span> clone https://github.com/chenyanming/wallabag.el.git ~/.emacs.d/lisp/wallabag/</a></code></pre></div>
+<p>Instalamos los siguientes paquetes necesarios, disponibles en Melpa</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">M-x</span> package-refresh-contents RET</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="ex">M-x</span> package-install RET request RET</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="ex">M-x</span> package-install RET emacsql-sqlite RET</a></code></pre></div>
+<h2 id="añadiendo-a-tu-archivo-de-configuración">Añadiendo a tu archivo de configuración</h2>
+<p>Crea un nuevo clientes en tu instancia de Wallabag para conseguir el Identificador del cliente y Secreto del cliente.</p>
+<p>Añade en tu archivo de configuración de emacs las siguientes líneas, añadiendo la url, usuario,….</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">(</span><span class="ex">add-to-list</span> <span class="st">&#39;load-path &quot;~/.emacs.d/lisp/wallabag/&quot;)</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="st">(require &#39;</span>wallabag<span class="kw">)</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">(</span><span class="ex">setq</span> wallabag-host <span class="st">&quot;https://xx.xx.xx&quot;</span><span class="kw">)</span> ;; <span class="ex">wallabag</span> server host name</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="kw">(</span><span class="ex">setq</span> wallabag-username <span class="st">&quot;xx&quot;</span><span class="kw">)</span> ;; <span class="ex">username</span></a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="kw">(</span><span class="ex">setq</span> wallabag-password <span class="st">&quot;xx&quot;</span><span class="kw">)</span> ;; <span class="ex">password</span></a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="kw">(</span><span class="ex">setq</span> wallabag-clientid <span class="st">&quot;xx&quot;</span><span class="kw">)</span> ;; <span class="ex">created</span> with API clients management</a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="kw">(</span><span class="ex">setq</span> wallabag-secret <span class="st">&quot;xx&quot;</span><span class="kw">)</span> ;; <span class="ex">created</span> with API clients management</a></code></pre></div>
+<h2 id="descargar-artículos">Descargar artículos</h2>
+<p>Para iniciar Wallabag introduciremos en emacs:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">M-x</span> wallabag</a></code></pre></div>
+<p>La primera vez, tienes que presionar <code>u</code>, luego introduce el número de artículos que quieres descargar del servidor.</p>
+<h2 id="atajos">Atajos</h2>
+<ul>
+<li>v / RET : Ver entrada</li>
+<li>s : Filtrar, búsqueda</li>
+<li>q: Salir de la búsqueda o salir</li>
+<li>g ,r : Actualiza wallabag y borre la palabra clave del filtro.</li>
+<li>G : Borre la palabra clave del filtro</li>
+<li>u : Solicita entradas y borre la palabra clave del filtro</li>
+<li>m : Marca la entrada y reenvía</li>
+<li>a : Agrega una entrada</li>
+<li>D : Eliminar una entrada</li>
+<li>n : siguiente entrada</li>
+<li>p : pasar a entrada anterior</li>
+<li>t : agrega etiqueta</li>
+<li>T : Elimina etiqueta</li>
+</ul>
+<h2 id="más-opciones">Más opciones</h2>
+<p>Visita la el Repositorio en GitHub donde conocerás más opciones.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/chenyanming/wallabag.el">https://github.com/chenyanming/wallabag.el</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el viernes 16 agosto del 2019</p>
+<p>Publicado por Angel el jueves 15 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
