@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home',
+            'text': 'Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que', 
+            'tags': 'docker,AdGuard,Pi-Hole,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-16-docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home.html' 
+},
+{
             'title': 'Wallabag en Emacs',
             'text': 'Hay publicado un nuevo paquete de wallabag para Emacs en GitHub. De momento no está disponible en Melpa u otros repositorios, así que si quieres hacer uso, tienes que clonar', 
             'tags': 'emacs,wallabag,,,,', 
@@ -727,7 +733,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

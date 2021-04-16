@@ -1,5 +1,5 @@
 <head>
-<title>Docker en Ubuntu 20.04. uGeek Blog </title>
+<title>Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Vamos a instalar docker en Ubuntu 20.04" />
+<meta name="description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker en Ubuntu 20.04" />
-<meta property="og:description" content="Vamos a instalar docker en Ubuntu 20.04" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html" />
+<meta property="og:title" content="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" />
+<meta property="og:description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-16-docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home.html" />
 
-<meta name="twitter:title" content="Docker en Ubuntu 20.04" />
-<meta name="twitter:description" content="Vamos a instalar docker en Ubuntu 20.04" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta name="twitter:title" content="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" />
+<meta name="twitter:description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,47 +85,37 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-en-ubuntu-20.04-1" title="Docker en Ubuntu 20.04" data-export_file_name="Docker en Ubuntu 1804" data-description="Vamos a instalar docker en Ubuntu 20.04" data-export_date="2021-04-05 12:15" data-category="docker" data-tag="terminal,ubuntu" data-image="./images-blog/docker.png">Docker en Ubuntu 20.04</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 257 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Vamos a instalar docker en Ubuntu 20.04:</p>
+<h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home-1" title="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" data-export_file_name="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home" data-description="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" data-export_date="2021-04-16 18:50" data-category="docker" data-tag="AdGuard,Pi-Hole" data-image="./images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 288 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente.</p>
+<p>Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc…</p>
 <center>
-<p><img src="../images-blog/docker.png" /></p>
+<p><img src="../images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" /></p>
 </center>
-<h2 id="requisitos-previos">Requisitos Previos</h2>
-<p>Instalaremos primero unos requisitos que permitiran a apt usar paquetes mediante https:</p>
-<p><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
-<h2 id="clave-gpg">Clave GPG</h2>
-<p><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
-<h2 id="repositorio">Repositorio</h2>
-<p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
-<pre><code>sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable&quot;
-</code></pre>
-<p>Actualizamos:</p>
-<p><code>sudo apt update</code></p>
-<p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
-<p><code>sudo apt-cache policy docker-ce</code></p>
-<h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
-<pre><code>sudo apt -y install docker-ce docker-compose
-</code></pre>
-<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
-<pre><code>sudo systemctl enable docker
-sudo systemctl start docker
-</code></pre>
-<h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
-<p><code>docker -v</code></p>
-<h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
-<p>Creamos el grupo docker:</p>
-<pre><code>sudo groupadd docker
-</code></pre>
-<p>Añadimos al usuario:</p>
-<pre><code>sudo usermod -aG docker $USER
-</code></pre>
-<h2 id="instalando-portainer">Instalando Portainer</h2>
-<p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>
-<pre><code>docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
-</code></pre>
+<p>Como explicaba al principio, esto es ideal por si tienes hijos, en empresas,… si están muy enganchados a WhatsApp, Facebook y Twitter, por ejemplo, puedes caparle e acceso a estos servicios, permitiendo el resto.</p>
+<p>Eso si, como puedes filtrar por usuarios, tu como administrador puedes decidir quien tiene acceso a cada que.</p>
+<p>Vamos a crear un docker con AdGuard.</p>
+<h2 id="docker-compose">Docker-compose</h2>
+<p>Podemos instalar AdGuard Home en cualquiera de las arquitecturas, x86-64, arm, arm64, … del siguiente modo gracias a docker-compose.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">adguard</span>:</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="ex">container_name</span>: adguard</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">image</span>: adguard/adguardhome:latest</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ex">-</span> <span class="st">&#39;53:53/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="ex">-</span> <span class="st">&#39;53:53/udp&#39;</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="ex">-</span> <span class="st">&#39;67:67/udp&#39;</span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="ex">-</span> <span class="st">&#39;80:80/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="ex">-</span> <span class="st">&#39;3000:3000/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="ex">-</span> <span class="st">&#39;443:443/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="ex">-</span> <span class="st">&#39;853:853/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="ex">restart</span>: unless-stopped</a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/work:/opt/adguardhome/work</a>
+<a class="sourceLine" id="cb1-15" title="15"><span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/conf:/opt/adguardhome/conf</a></code></pre></div>
+<h2 id="conclusión">Conclusión</h2>
+<p>Un servicio sencillo y alucinante, del que podrás disfrutar.</p>
 <br>
-<p>Publicado por Angel el lunes 05 abril del 2021</p>
+<p>Publicado por Angel el viernes 16 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
