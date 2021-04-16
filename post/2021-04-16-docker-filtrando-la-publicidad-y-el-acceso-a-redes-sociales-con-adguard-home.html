@@ -98,20 +98,20 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="docker-compose">Docker-compose</h2>
 <p>Podemos instalar AdGuard Home en cualquiera de las arquitecturas, x86-64, arm, arm64, … del siguiente modo gracias a docker-compose.</p>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">adguard</span>:</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="ex">container_name</span>: adguard</a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">image</span>: adguard/adguardhome:latest</a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="ex">-</span> <span class="st">&#39;53:53/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="ex">-</span> <span class="st">&#39;53:53/udp&#39;</span></a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="ex">-</span> <span class="st">&#39;67:67/udp&#39;</span></a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="ex">-</span> <span class="st">&#39;80:80/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-9" title="9"><span class="ex">-</span> <span class="st">&#39;3000:3000/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-10" title="10"><span class="ex">-</span> <span class="st">&#39;443:443/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-11" title="11"><span class="ex">-</span> <span class="st">&#39;853:853/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-12" title="12"><span class="ex">restart</span>: unless-stopped</a>
-<a class="sourceLine" id="cb1-13" title="13"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-14" title="14"><span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/work:/opt/adguardhome/work</a>
-<a class="sourceLine" id="cb1-15" title="15"><span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/conf:/opt/adguardhome/conf</a></code></pre></div>
+<a class="sourceLine" id="cb1-2" title="2">    <span class="ex">container_name</span>: adguard </a>
+<a class="sourceLine" id="cb1-3" title="3">    <span class="ex">image</span>: adguard/adguardhome:latest</a>
+<a class="sourceLine" id="cb1-4" title="4">    <span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb1-5" title="5">      <span class="ex">-</span> <span class="st">&#39;53:53/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-6" title="6">      <span class="ex">-</span> <span class="st">&#39;53:53/udp&#39;</span></a>
+<a class="sourceLine" id="cb1-7" title="7">      <span class="ex">-</span> <span class="st">&#39;67:67/udp&#39;</span></a>
+<a class="sourceLine" id="cb1-8" title="8">      <span class="ex">-</span> <span class="st">&#39;80:80/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-9" title="9">      <span class="ex">-</span> <span class="st">&#39;3000:3000/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-10" title="10">      <span class="ex">-</span> <span class="st">&#39;443:443/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-11" title="11">      <span class="ex">-</span> <span class="st">&#39;853:853/tcp&#39;</span></a>
+<a class="sourceLine" id="cb1-12" title="12">    <span class="ex">restart</span>: unless-stopped</a>
+<a class="sourceLine" id="cb1-13" title="13">    <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-14" title="14">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/work:/opt/adguardhome/work</a>
+<a class="sourceLine" id="cb1-15" title="15">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/conf:/opt/adguardhome/conf</a></code></pre></div>
 <h2 id="conclusión">Conclusión</h2>
 <p>Un servicio sencillo y alucinante, del que podrás disfrutar.</p>
 <br>
