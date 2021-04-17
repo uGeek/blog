@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home-1" title="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" data-export_file_name="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home" data-description="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" data-export_date="2021-04-16 18:50" data-category="docker" data-tag="AdGuard,Pi-Hole" data-image="./images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 288 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h5>Tiempo estimado de lectura: 3 minutos. 363 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente.</p>
 <p>Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc…</p>
 <center>
@@ -112,6 +112,14 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb1-13" title="13">    <span class="ex">volumes</span>:</a>
 <a class="sourceLine" id="cb1-14" title="14">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/work:/opt/adguardhome/work</a>
 <a class="sourceLine" id="cb1-15" title="15">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/conf:/opt/adguardhome/conf</a></code></pre></div>
+<h2 id="utilizar-el-dns-de-adguard-home-en-linux-si-no-habilitas-el-servidor-dhcp">Utilizar el DNS de AdGuard Home en Linux, si no habilitas el servidor DHCP</h2>
+<p>Para utilizar AdGuardHome en Linux sin activar el servidor DHCP, tenemos que conectarnos a la ip del servidor donde está instalado AdGuard.</p>
+<p>Para configurar las DNS en tu máquina con Linux:</p>
+<pre><code>sudo nano  /etc/resolv.conf
+</code></pre>
+<p>añadimos la primera opción con <strong><strong>nameserver</strong></strong>, seguido de la DNS que vamos a utilizar. Ejem: Si la IP del servidor donde tenemos AdGuard es 192.168.1.100:</p>
+<pre><code>nameserver 192.168.1.100
+</code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Un servicio sencillo y alucinante, del que podrás disfrutar.</p>
 <br>
