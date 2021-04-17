@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Atajos de teleclado para Firefox y Vimium-FF',
+            'text': 'Os he hablado muchas veces que no utilizar el ratón en favor del teclado, es una buena práctica ya que nuestra productividad se dispara y permite que en este caso', 
+            'tags': 'firefox,navegador,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-17-atajos-de-firefox-vimium-ff.html' 
+},
+{
             'title': 'Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home',
             'text': 'Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que', 
             'tags': 'docker,AdGuard,Pi-Hole,,,', 
@@ -733,7 +739,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
