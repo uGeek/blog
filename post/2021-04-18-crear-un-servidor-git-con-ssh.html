@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="crear-un-servidor-git-con-ssh-1" title="Crear un Servidor git con SSH" data-export_file_name="crear-un-servidor-git-con-ssh" data-description="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" data-export_date="2021-04-18 13:30" data-category="git" data-tag="ssh,raspberry" data-image="./images-blog/git.png">Crear un Servidor git con SSH</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 480 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<h5>Tiempo estimado de lectura: 4 minutos. 495 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
 <p>No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,… para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de git utilizando SSH.</p>
 <center>
 <p><img src="../images-blog/git.png" /></p>
@@ -123,11 +123,19 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb7-2" title="2"><span class="fu">git</span> commit -m <span class="st">&quot;creo el archivo README.md&quot;</span></a>
 <a class="sourceLine" id="cb7-3" title="3"><span class="fu">git</span> push origin master</a></code></pre></div>
 <h2 id="interfaz-gráfica-para-git">Interfaz gráfica para git</h2>
+<h3 id="gitk">gitk</h3>
 <p>Si no te aclaras mucho con la terminal, siempre puedes utilzar <strong>gitk</strong> para ver el historial de commits, comparar commits, buscar texto y ver los cambios en el historial,…</p>
 <p>Instalaremos en nuestra máquina local:</p>
 <div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">sudo</span> apt install gitk</a></code></pre></div>
 <p>Ahora dentro del repositorio, escribiremos el siguiente comando:</p>
 <div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">gitk</span></a></code></pre></div>
+<h3 id="git-cola">Git Cola</h3>
+<p>Otra opción mejor, sería git-cola</p>
+<pre><code>sudo apt install git-cola
+</code></pre>
+<p>Lanza despues</p>
+<pre><code>git-dag
+</code></pre>
 <br>
 <p>Publicado por Angel el domingo 18 abril del 2021</p>
 <br><br> 
