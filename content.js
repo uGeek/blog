@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Crear un Servidor git con SSH',
+            'text': 'No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de', 
+            'tags': 'git,ssh,raspberry,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html' 
+},
+{
             'title': 'Atajos de teleclado para Firefox y Vimium-FF',
             'text': 'Os he hablado muchas veces que no utilizar el ratón en favor del teclado, es una buena práctica ya que nuestra productividad se dispara y permite que en este caso', 
             'tags': 'firefox,navegador,,,,', 
@@ -739,7 +745,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

@@ -1,5 +1,5 @@
 <head>
-<title>Descargando un directorio de git con gitdir. uGeek Blog </title>
+<title>Crear un Servidor git con SSH. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Hoy ojeando *Reddit*, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural," />
+<meta name="description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Descargando un directorio de git con gitdir" />
-<meta property="og:description" content="Hoy ojeando *Reddit*, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural," />
+<meta property="og:title" content="Crear un Servidor git con SSH" />
+<meta property="og:description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html" />
 
-<meta name="twitter:title" content="Descargando un directorio de git con gitdir" />
-<meta name="twitter:description" content="Hoy ojeando *Reddit*, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural," />
+<meta name="twitter:title" content="Crear un Servidor git con SSH" />
+<meta name="twitter:description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
 
 
@@ -85,69 +85,51 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="descargando-un-directorio-de-git-con-gitdir-1" title="Descargando un directorio de git con gitdir" data-export_file_name="descargando-un-directorio-de-git-con-gitdir" data-description="Hoy ojeando *Reddit*, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural," data-export_date="2020-01-06 17:50" data-category="git" data-tag="git,repositorio,github,gitlab" data-image="./images-blog/git.png">Descargando un directorio de git con gitdir</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 381 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
-<p>Hoy ojeando <strong>Reddit</strong>, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural, tenemos que tener instalado tanto <strong>Python 3</strong>, así como <strong>Pip3</strong>.</p>
+<h1 id="crear-un-servidor-git-con-ssh-1" title="Crear un Servidor git con SSH" data-export_file_name="crear-un-servidor-git-con-ssh" data-description="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" data-export_date="2021-04-18 13:30" data-category="git" data-tag="ssh,raspberry" data-image="./images-blog/git.png">Crear un Servidor git con SSH</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 480 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<p>No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,… para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de git utilizando SSH.</p>
 <center>
 <p><img src="../images-blog/git.png" /></p>
 </center>
-<h2 id="instalación">Instalación</h2>
-<h3 id="desde-pip3">Desde Pip3</h3>
-<pre><code>pip3 install --user gitdir
-</code></pre>
-<p>En Debian y Raspbian, he tenido que buscar donde se había guardado <strong>gitdir</strong>. <code>/home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py</code></p>
-<p>Cambia <strong>angel</strong>, por tu usuario.</p>
-<pre><code>python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py  -h
-</code></pre>
-<p>La opción <strong>-h</strong>, es para ofrecernos la ayuda.</p>
-<pre><code>usage: gitdir [-h] [--flatten] url
-
-Download directories/folders from GitHub
-
-positional arguments:
-  url
-
-optional arguments:
-  -h, --help     show this help message and exit
-  --flatten, -f  Flatten directory structures. Do not create extra directory
-                 and download found files to current directory.
-</code></pre>
-<h3 id="creando-un-alias">Creando un alias</h3>
-<p>He creado un alias para en cualquier lugar de mi máquina, cuando escriba <strong>gitdir</strong>, pueda utilizar esta aplicación.</p>
-<pre><code>alias gitdir=&quot;python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py&quot;
-</code></pre>
-<h3 id="clonando-el-repositorio">Clonando el Repositorio</h3>
-<p>Otro método de instalación, sería instalando <strong>gitdir</strong> clonando el repositorio de <strong>GitHub</strong>. Primero voy a situarme en raíz del home.</p>
-<pre><code>cd
-</code></pre>
-<p>Ahora clonamos el repositorio</p>
-<pre><code>git clone https://github.com/sdushantha/gitdir.git
-</code></pre>
-<p>Desde esta misma ruta, recién clonado el repositorio, ya podemos correr <strong>gitdir</strong>.</p>
-<pre><code>python3 gitdir/gitdir/gitdir.py
-</code></pre>
-<p>Como veis, está en el directorio <code>gitdir/gitdir.py</code> dentro del repositorio.</p>
-<h3 id="creando-alias">Creando alias</h3>
-<p>Si hemos clonado el respositorio en la raíz del Home, vamos a crear también el alias.</p>
-<pre><code>alias gitdir=&quot;python3 ~/gitdir/gitdir/gitdir.py&quot;
-</code></pre>
-<h2 id="funcionamiento">Funcionamiento</h2>
-<p>Ya tenemos <strong>gitdir</strong> en nuestro sistema, ahora vamos a utilizarlo.</p>
-<p>Navega por la web de <strong>GitHub</strong>, por ejemplo, y copia la <strong>url</strong> de una carpeta de un repositorio.</p>
-<pre><code>gitdir &lt;URL&gt;
-</code></pre>
-<p>Voy a utilizar esta: <a href="https://github.com/sdushantha/gitdir/tree/master/gitdir">https://github.com/sdushantha/gitdir/tree/master/gitdir</a></p>
-<pre><code>gitdir https://github.com/sdushantha/gitdir/tree/master/gitdir
-</code></pre>
-<p>Se descargará la carpeta con todos los archivos que contiene.</p>
-<h2 id="fuentes">Fuentes</h2>
-<ul>
-<li><a href="https://www.reddit.com/r/commandline/comments/avbai1/gitdir_download_a_single_directoryfolder_from_a/">https://www.reddit.com/r/commandline/comments/avbai1/gitdir_download_a_single_directoryfolder_from_a/</a></li>
-<li><a href="https://github.com/sdushantha/gitdir">https://github.com/sdushantha/gitdir</a></li>
-<li>He forqueado el Repositorio: <a href="https://github.com/Bash-Projects/gitdir">https://github.com/Bash-Projects/gitdir</a></li>
-</ul>
+<p>Este servidor va permitirme tener mis propios repositorios de un modo privado en mi Raspberry.</p>
+<p>Voy a explicarte paso a paso como crearlo y verás que es muy sencillo.</p>
+<h2 id="creando-un-nuevo-usuario">Creando un nuevo usuario</h2>
+<p>Vamos a crear un nuevo usuario en nuestro servidor. Lo llamaremos <strong>git</strong>.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> adduser git</a></code></pre></div>
+<p>Tendrás que poner la contraseña para acceder via SSH a este usuario.</p>
+<h2 id="copiamos-.ssh-en-el-nuevo-usuario">Copiamos .SSH en el nuevo usuario</h2>
+<p>Podrias crear una nueva configuración de SSH, pero yo en mi caso, como el servidor git solo voy a utilizarlo yo, voy a copiar todos los archivos de configuración de mi servidor SSH del usuario que utilizo, en el nuevo usuario <strong>git</strong>. Así podré acceder con las mismas llaves SSH a los dos usuarios.</p>
+<p>Situado en mi sesión de usuario normal, voy a enviar todos los archivos de SSH al usuario <strong>git</strong>.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> cp -r .ssh/ /home/git/</a></code></pre></div>
+<h2 id="creando-el-primer-repositorio-en-el-servidor">Creando el primer repositorio en el servidor</h2>
+<p>Voy a crear el primer repositorio llamado <strong>dotfile</strong>.</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">mkdir</span> dotfile</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="bu">cd</span> dotfile</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="fu">git</span> --bare init</a></code></pre></div>
+<p><code>git --bare init</code> Inicializa un repositorio de Git vacío.</p>
+<h2 id="clonando-el-repositorios">Clonando el repositorios</h2>
+<p>Si la IP del servidor fuera 192.168.1.100, para clonar el repositorio en el PC local utilizaríamos:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">git</span> clone git@192.168.1.100:dotfile</a></code></pre></div>
+<h2 id="creando-nombre">Creando nombre</h2>
+<p>La primera vez que utilicemos git con el nuevo servidor, git me pedirá que correo de usuario y nombre voy a utilizar, para que en cada commit, aparezca que usuario lo ha subido, modificado, etc…</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="fu">git</span> config --global user.email <span class="st">&quot;you@example.com&quot;</span></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="fu">git</span> config --global user.name <span class="st">&quot;Tu Nombre&quot;</span></a></code></pre></div>
+<h2 id="creando-el-readme">Creando el README</h2>
+<p>Recuerda que el repositorio está totalemente vacio y no hay ningún archivo ni directorio. Voy a crear el primero, el README.md.</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">nano</span> README.md</a></code></pre></div>
+<p>Subo a mi repositorio de git.</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">git</span> add .</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="fu">git</span> commit -m <span class="st">&quot;creo el archivo README.md&quot;</span></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="fu">git</span> push origin master</a></code></pre></div>
+<h2 id="interfaz-gráfica-para-git">Interfaz gráfica para git</h2>
+<p>Si no te aclaras mucho con la terminal, siempre puedes utilzar <strong>gitk</strong> para ver el historial de commits, comparar commits, buscar texto y ver los cambios en el historial,…</p>
+<p>Instalaremos en nuestra máquina local:</p>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">sudo</span> apt install gitk</a></code></pre></div>
+<p>Ahora dentro del repositorio, escribiremos el siguiente comando:</p>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">gitk</span></a></code></pre></div>
 <br>
-<p>Publicado por Angel el lunes 06 enero del 2020</p>
+<p>Publicado por Angel el domingo 18 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
