@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Sleek. Una aplicación de todo.txt moderna y elegante',
+            'text': 'Sleek es una aplicación de tareas basada en todo.txt, gratuita y de código abierto. Disponible para Linux, Windows y MacOS.', 
+            'tags': 'todo.txt,tareas,textoplano,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-19-sleek-una-aplicacion-de-todo-txt-moderna-y-elegante.html' 
+},
+{
             'title': 'Crear un Servidor git con SSH',
             'text': 'No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de', 
             'tags': 'git,ssh,raspberry,,,', 
@@ -745,7 +751,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
