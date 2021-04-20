@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Aplicaciones Telegram versión web, Android, IOS,...',
+            'text': 'Tenemos nuevas aplicaciones de Telegram. Si hace una semana apareció una nueva Telegram Oficial para Android, alternativa a la que encontramos en Google Play, ahora aparecen dos nuevas versiones de', 
+            'tags': 'telegram,telegram,aplicaciones,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html' 
+},
+{
             'title': 'Sleek. Una aplicación de todo.txt moderna y elegante',
             'text': 'Sleek es una aplicación de tareas basada en todo.txt, gratuita y de código abierto. Disponible para Linux, Windows y MacOS.', 
             'tags': 'todo.txt,tareas,textoplano,,,', 

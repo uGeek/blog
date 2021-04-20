@@ -1,5 +1,5 @@
 <head>
-<title>Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor. uGeek Blog </title>
+<title>Aplicaciones Telegram versión web, Android, IOS,.... uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
+<meta name="description" content="Tenemos nuevas aplicaciones de Telegram. Si hace una semana apareció una nueva Telegram Oficial para Android, alternativa a la que encontramos en Google Play, ahora aparecen dos nuevas versiones de" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" />
-<meta property="og:description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram-desktop.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html" />
+<meta property="og:title" content="Aplicaciones Telegram versión web, Android, IOS,..." />
+<meta property="og:description" content="Tenemos nuevas aplicaciones de Telegram. Si hace una semana apareció una nueva Telegram Oficial para Android, alternativa a la que encontramos en Google Play, ahora aparecen dos nuevas versiones de" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html" />
 
-<meta name="twitter:title" content="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" />
-<meta name="twitter:description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/telegram-desktop.png" />
+<meta name="twitter:title" content="Aplicaciones Telegram versión web, Android, IOS,..." />
+<meta name="twitter:description" content="Tenemos nuevas aplicaciones de Telegram. Si hace una semana apareció una nueva Telegram Oficial para Android, alternativa a la que encontramos en Google Play, ahora aparecen dos nuevas versiones de" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/telegram.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,39 +85,40 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="instala-telegram-desktop-y-rclone-browser-en-una-raspberry-pi-o-servidor" title="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" data-export_file_name="Instalar Telegram Desktop y Rclone Browser" data-description="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" data-export_date="2019-09-17 5:15" data-category="telegram" data-tag="ssh, raspberry" data-image="./images-blog/telegram-desktop.png">Instala Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 454 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
-<p>Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar Telegram Desktop o Rclone-Browser en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio, como si fuera una aplicación nativa de tu PC, pero descargando el contenido de Telegram o Rclone en tu Raspberry o Servidor.</p>
-<p>En el caso de Telegram, está genial para todo aquel que desea descargar intercambiar archivos entre dispositivos, o descargar archivos que tengas en Telegram, en un canal privado que utilices de nube, o subir archivos a este canal privado.</p>
-<p>Si utilizas Rclone, también podríamos utilizar Rclone-Browser para intercambiar el contenido de tu nube en Telegram con el resto de nubes.</p>
-<center height="50">
-<p><img src="../images-blog/telegram-desktop.png" /></p>
+<h1 id="aplicaciones-telegram-versión-web-android-ios-1" title="Aplicaciones Telegram versión web, Android, IOS,..." data-export_file_name="aplicaciones-telegram-version-web-android-ios--" data-description="Tenemos nuevas aplicaciones de Telegram. Si hace una semana apareció una nueva Telegram Oficial para Android, alternativa a la que encontramos en Google Play, ahora aparecen dos nuevas versiones de" data-export_date="2021-04-20 07:00" data-category="telegram" data-tag="telegram,aplicaciones" data-image="./images-blog/telegram.png">Aplicaciones Telegram versión web, Android, IOS,…</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 225 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
+<p>Tenemos nuevas aplicaciones de Telegram. Si hace una semana apareció una nueva Telegram Oficial para Android, alternativa a la que encontramos en Google Play, ahora aparecen dos nuevas versiones de Telegram Web, más similares a la aplicación para móvil y con más funcionalidades que la versión clásica.</p>
+<center>
+<p><img src="../images-blog/telegram.png" /></p>
 </center>
-<p>Todo esto lo vamos ha hacer posible gracias a x11. En Linux podemos utilizarlo en cualquier distro. Si utilizas Windows o Mac, tendrás que instalar un programa para poder utilizarlo.</p>
-<p>X11 es un servidor gráfico que nos permite el exportar el display de un servidor remoto a nuestro escritorio local. De manera que podremos visualizar aplicaciones gráficas del servidor en nuestro escritorio. Lo que se conoce como forwarding a través de SSH.</p>
-<h2 id="instalación-de-telegram-desktop">Instalación de Telegram Desktop</h2>
-<p>Telegram Desktop la instalaremos en nuestra Raspberry o Servidor, del mismo modo que en nuestro escritorio Linux. Abriremos la terminal de nuestra Raspberry y escribiremos:</p>
-<pre><code>sudo apt install telegram-desktop
-</code></pre>
-<h2 id="instalando-rclone-browser">Instalando Rclone-Browser</h2>
-<p>También podemos instalar Rclone Browser, para gestionar nuestras nubes de un modo gráfico</p>
-<pre><code>sudo apt install rclone-browser
-</code></pre>
-<h2 id="conexión-desde-tu-escritorio-linux-a-telegram-desktop">Conexión desde tu escritorio Linux a Telegram Desktop</h2>
-<p>Nos conectamos vía ssh añadiendo el flag <strong>-X</strong> y se nos abrirá la aplicación de Telegram con interfaz gráfica en nuestro PC.</p>
-<p>Sustituye tu nombre de usuario por <strong>angel</strong> y tu <strong>ip</strong> por la ip de tu Raspberry o servidor.</p>
-<pre><code>ssh -X angel@192.168.1.100 telegram-desktop
-</code></pre>
-<p>Yo, una vez más, os recomendaría crear un alias para arrancar desde tu PC, el Telegram remoto de tu Raspberry.</p>
-<p>Ejemplo:</p>
-<pre><code>alias telegram-pi=&#39;ssh -X angel@192.168.1.100 telegram-desktop&#39;
-</code></pre>
-<h2 id="conexión-a-rclone-browser">Conexión a Rclone Browser</h2>
-<p>Del mismo modo, haremos lo propio para abrir Rclone Browser y si lo deseamos, crear un alias.</p>
-<pre><code>ssh -X angel@192.168.1.100 rclone-browser
-</code></pre>
+<p>Recopilo en este artículo las aplicaciones más populares y las que más he utilizado de Telegram.</p>
+<h2 id="web">Web</h2>
+<ul>
+<li><a href="https://web.telegram.org/">Telegram Web (Clásico)</a></li>
+<li><a href="https://webk.telegram.org/">Telegram WebK</a></li>
+<li><a href="https://webz.telegram.org/">Telegram WebZ</a></li>
+</ul>
+<h2 id="android">Android</h2>
+<h3 id="telegram-oficial">Telegram Oficial</h3>
+<ul>
+<li><a href="https://telegram.org/dl/android/apk">Telegram Oficial desde web</a> (<a href="https://telegram.org/android">https://telegram.org/android</a>)</li>
+<li><a href="https://play.google.com/store/apps/details?id=org.telegram.messenger">Google Play</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.thunderdog.challegram">Telegram X</a></li>
+<li><a href="https://f-droid.org/es/packages/org.telegram.messenger/">Telegram FOSS</a></li>
+</ul>
+<h2 id="no-oficial">No Oficial</h2>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=org.telegram.plus&amp;gl=ES">Plus Messenger</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=nekox.messenger&amp;gl=ES">Nekogram X</a></li>
+<li><a href="https://f-droid.org/es/packages/nekox.messenger/">Nekogram X Fdroid</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.telegram.BifToGram&amp;gl=ES">BGram</a></li>
+</ul>
+<h2 id="ios">IOS</h2>
+<ul>
+<li><a href="https://apps.apple.com/es/app/telegram-messenger/id686449807">Telegram Oficial</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el martes 17 septiembre del 2019</p>
+<p>Publicado por Angel el martes 20 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
