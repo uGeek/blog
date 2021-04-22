@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Golink</title>
+    <link>https://ugeek.github.io/blog/post/2021-04-22-golink.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/Golink.png" alt="Golink"&gt;
+&lt;br&gt;&lt;p&gt;golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-04-22-golink.html&gt;Golink&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 22 Apr 2021  +0100</pubDate>
+    <category>go</category>
+    <category>bookmarks</category>
+    <category>marcadores</category>
+    <category>servidor</category>
+    <guid>https://ugeek.github.io/blog/post/2021-04-22-golink.html</guid>
+   </item>
+   <item>
     <title>Aplicaciones Telegram versión web, Android, IOS,...</title>
     <link>https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 20 Apr 2021  +0100</pubDate>
+    <pubDate>Tue, 20 Apr 2021 17:00 +0100</pubDate>
     <category>telegram</category>
     <category>telegram</category>
     <category>aplicaciones</category>
@@ -4175,7 +4208,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

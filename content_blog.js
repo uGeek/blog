@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Golink',
+            'text': 'golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar', 
+            'tags': 'go,bookmarks,marcadores,servidor,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-22-golink.html' 
+},
+{
             'title': 'Aplicaciones Telegram versión web, Android, IOS,...',
             'text': 'Tenemos nuevas aplicaciones de Telegram. Si hace una semana apareció una nueva Telegram Oficial para Android, alternativa a la que encontramos en Google Play, ahora aparecen dos nuevas versiones de', 
             'tags': 'telegram,telegram,aplicaciones,,,', 
@@ -757,7 +763,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
