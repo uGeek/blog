@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal',
+            'text': 'Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP,s y MAC, para después ejecutar scripts en función del resultado.', 
+            'tags': 'bash,ip,nmap,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html' 
+},
+{
             'title': 'Golink',
             'text': 'golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar', 
             'tags': 'go,bookmarks,marcadores,servidor,,', 

@@ -1,5 +1,5 @@
 <head>
-<title>Saber si existen variables, directorios o archivos con bash. uGeek Blog </title>
+<title>Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Buscando en internet, he visto este artículo de Linux Center super interesante, sobre si una variable tiene o no un valor." />
+<meta name="description" content="Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP's y MAC, para después ejecutar scripts en función del resultado." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Saber si existen variables, directorios o archivos con bash" />
-<meta property="og:description" content="Buscando en internet, he visto este artículo de Linux Center super interesante, sobre si una variable tiene o no un valor." />
+<meta property="og:title" content="Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal" />
+<meta property="og:description" content="Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP's y MAC, para después ejecutar scripts en función del resultado." />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-01-29-saber-si-existen-variables-directorios-o-archivos-con-bash.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html" />
 
-<meta name="twitter:title" content="Saber si existen variables, directorios o archivos con bash" />
-<meta name="twitter:description" content="Buscando en internet, he visto este artículo de Linux Center super interesante, sobre si una variable tiene o no un valor." />
+<meta name="twitter:title" content="Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal" />
+<meta name="twitter:description" content="Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP's y MAC, para después ejecutar scripts en función del resultado." />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
@@ -85,149 +85,22 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="saber-si-existen-variables-directorios-o-archivos-con-bash-1" title="Saber si existen variables, directorios o archivos con bash" data-export_file_name="saber-si-existen-variables-directorios-o-archivos-con-bash" data-description="Buscando en internet, he visto este artículo de Linux Center super interesante, sobre si una variable tiene o no un valor." data-export_date="2021-01-29 09:30" data-category="bash" data-tag="if,variables" data-image="./images-blog/bash.png">Saber si existen variables, directorios o archivos con bash</h1>
-<h5>Tiempo estimado de lectura: 5 minutos. 560 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Buscando en internet, he visto este artículo de <a href="https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash">Linux Center</a> super interesante, sobre si una variable tiene o no un valor.</p>
+<h1 id="conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal-1" title="Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal" data-export_file_name="conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal" data-description="Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP&#39;s y MAC, para después ejecutar scripts en función del resultado." data-export_date="2021-04-27 16:00" data-category="bash" data-tag="ip,nmap" data-image="./images-blog/bash.png">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 163 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP's y MAC, para después ejecutar scripts en función del resultado.</p>
 <center>
 <p><img src="../images-blog/bash.png" /></p>
 </center>
-<p>He copiado parte del artículo para tenerlo siempre accesible.</p>
-<p>Ya de pasada, para que el artículo sea más completo, he añadido también la opción de comprobar si existe un directorio o archivo y si estos son ejecutables, tienen permisos…</p>
-<p>Para comprobarlo en estos ejemplos, utilizaremos siempre la sentencia <strong>if</strong>.</p>
-<h2 id="si-existe-un-directorio">Si existe un directorio</h2>
-<p>Con la opción <strong>-d</strong>, especificamos el directorio</p>
-<pre class="example"><code>#!/bin/bash
-
-DIRECTORIO=/root1
-
-if [ -d &quot;$DIRECTORIO&quot; ]
-then
-echo &quot;El directorio ${DIRECTORIO} existe&quot;
-else
-echo &quot;El directorio ${DIRECTORIO} no existe&quot;
-fi
-</code></pre>
-<h2 id="si-existe-un-archivo">Si existe un archivo</h2>
-<p>Con la opción <strong>-f</strong>, especificamos el archivo</p>
-<pre class="example"><code>#!/bin/bash
-
-ARCHIVO=/etc/passwd
-
-if [ -f $ARCHIVO ]
-then
-echo &quot;El fichero $ARCHIVO existe&quot;
-else
-echo &quot;El fichero $ARCHIVO no existe&quot;
-fi
-</code></pre>
-<ul>
-<li>Con la opción <strong>-w</strong>, comprobamos si determinado archivo tiene permisos de escritura.</li>
-<li>Con la opción <strong>-x</strong>, comprobamos si determinado archivo tiene permisos de ejecución.</li>
-</ul>
-<h2 id="saber-si-una-variable-existe">Saber si una variable existe</h2>
-<h3 id="si-existe-una-variable">Si existe una variable</h3>
-<p>Para saber si una variable existe y está inicializada en un script o tu máquina, que esté o no está vacía.</p>
-<p>Tomaremos <code>variable</code>""= como ejemplo.</p>
-<pre class="example"><code>#!/bin/bash
-if [ &quot;$variable&quot; ]
-then
-echo &quot;La variable existe y no está vacía&quot;
-else
-echo &quot;La variable no existe o está vacía&quot;
-fi
-</code></pre>
-<p>El resultado sería: <code>La variable no existe o está vacía</code></p>
-<h2 id="variable-vacía">Variable vacía</h2>
-<pre class="example"><code>#!/bin/bash
-
-variable=&quot;&quot;
-
-if [ &quot;$variable&quot; ]
-then
-echo &quot;La variable existe y no está vacía&quot;
-else
-echo &quot;La variable no existe o está vacía&quot;
-fi
-</code></pre>
-<p>Resultado: <code>La variable no existe o está vacía</code></p>
-<h2 id="variable-no-vacía">Variable no vacía</h2>
-<pre class="example"><code>#!/bin/bash
-
-variable=&quot;valor&quot;
-
-if [ &quot;$variable&quot; ]
-then
-echo &quot;La variable existe y no está vacía&quot;
-else
-echo &quot;La variable no existe o está vacía&quot;
-fi
-</code></pre>
-<p>Resultado: <code>La variable existe y no está vacía</code></p>
-<h2 id="variable-con-valor-y-no-vacía">Variable con valor y no vacía</h2>
-<ul>
-<li>Lo primero que haremos es comprobar si existe.</li>
-<li>Si existe y no contiene nada, su valor es "". Esto lo haremos con [ -n"${variable-unset}" ], que dará verdadero si no existe:</li>
-</ul>
-<pre><code>#!/bin/bash
-
-variable=&quot;valor&quot;
-
-if [ &quot;$variable&quot; ]
-then
-echo &quot;La variable existe y no está vacía&quot;
-else
-if [ -n &quot;${variable-unset}&quot; ] 
-then
-echo &quot;La variable no existe&quot;
-else
-echo &quot;La variable existe pero está vacía&quot;
-fi
-fi
-</code></pre>
-<p>Resultado: <code>La variable existe y no está vacía</code></p>
-<p>Y ahora probaremos si la cadena está vacía:</p>
-<pre class="example"><code>#!/bin/bash
-
-variable=&quot;&quot;
-
-if [ &quot;$variable&quot; ]
-then
-echo &quot;La variable existe y no está vacía&quot;
-else
-if [ -n &quot;${variable-unset}&quot; ]
-then
-echo &quot;La variable no existe&quot;
-else
-echo &quot;La variable existe pero está vacía&quot;
-fi
-fi
-</code></pre>
-<p>Resultado: <code>La variable existe pero está vacía</code></p>
-<p>Sin variable (la comento):</p>
-<pre class="example"><code>#!/bin/bash
-
-# variable=&quot;&quot;
-
-if [ &quot;$variable&quot; ]
-then
-echo &quot;La variable existe y no está vacía&quot;
-else
-if [ -n &quot;${variable-unset}&quot; ]
-then
-echo &quot;La variable no existe&quot;
-else
-echo &quot;La variable existe pero está vacía&quot;
-fi
-fi
-</code></pre>
-<p>Resultado: <code>La variable no existe</code></p>
-<h2 id="fuentes">Fuentes</h2>
-<ul>
-<li><a href="https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash">https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash</a></li>
-<li><a href="https://www.sysadmit.com/2018/01/linux-saber-si-existe-directorio-fichero.html">https://www.sysadmit.com/2018/01/linux-saber-si-existe-directorio-fichero.html</a></li>
-</ul>
+<p>Vamos a ver como conseguir esto de un modo sencillo.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Instalaremos nmap y nast</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install nast nmap</a></code></pre></div>
+<h2 id="ver-dispositivos-conectados-de-tu-red-local">Ver dispositivos conectados de tu red local</h2>
+<p>Tan sencillo como ejecutar:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> nast -m</a></code></pre></div>
+<p>Ahora <strong>nast</strong> escaneará las red y la terminal nos devolverá todos los dispositivos con su IP y MAC.</p>
 <br>
-<p>Publicado por Angel el viernes 29 enero del 2021</p>
+<p>Publicado por Angel el martes 27 abril del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
