@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Styx. El mejor Navegador Open Source para Android',
+            'text': '#+HTML: <center>', 
+            'tags': 'android,navegadores,browser,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-05-05-styx.html' 
+},
+{
             'title': 'Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal',
             'text': 'Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP,s y MAC, para después ejecutar scripts en función del resultado.', 
             'tags': 'bash,ip,nmap,,,', 

@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Styx. El mejor Navegador Open Source para Android</title>
+    <link>https://ugeek.github.io/blog/post/2021-05-05-styx.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/styx.png" alt="Styx. El mejor Navegador Open Source para Android"&gt;
+&lt;br&gt;&lt;p&gt;#+HTML: <center>... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-05-05-styx.html&gt;Styx. El mejor Navegador Open Source para Android&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 05 May 2021  +0100</pubDate>
+    <category>android</category>
+    <category>navegadores</category>
+    <category>browser</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-05-05-styx.html</guid>
+   </item>
+   <item>
     <title>Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</title>
     <link>https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 27 Apr 2021  +0100</pubDate>
+    <pubDate>Tue, 27 Apr 2021 06:55 +0100</pubDate>
     <category>bash</category>
     <category>ip</category>
     <category>nmap</category>

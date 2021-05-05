@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home-1" title="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" data-export_file_name="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home" data-description="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" data-export_date="2021-04-16 18:50 2021-04-18" data-category="docker" data-tag="AdGuard,Pi-Hole" data-image="./images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 414 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home-1" title="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" data-export_file_name="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home" data-description="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" data-export_date="2021-04-16 18:50 2021-05-02" data-category="docker" data-tag="AdGuard,Pi-Hole" data-image="./images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 493 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente.</p>
 <p>Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc…</p>
 <center>
@@ -120,6 +120,18 @@ $("#tipue_search_input").tipuesearch();
 <p>añadimos la primera opción con <strong><strong>nameserver</strong></strong>, seguido de la DNS que vamos a utilizar. Ejem: Si la IP del servidor donde tenemos AdGuard es 192.168.1.100:</p>
 <pre><code>nameserver 192.168.1.100
 </code></pre>
+<h2 id="cada-reinicio-se-modifica-el-archivo-resolv.conf">Cada reinicio se modifica el archivo resolv.conf</h2>
+<p>Si cada vez que reinicias se modifica el archivo resolv.conf y no quieres que suceda, tienes dos soluciones:</p>
+<ul>
+<li>Hacer que el archivo sea inalterable ejecutando el siguiente comando <code>sudo chattr +i /etc/resolv.conf</code></li>
+<li>Crear el nuevo archivo al reiniciar la máquina con crontab:</li>
+</ul>
+<p>Como usuario root:</p>
+<pre><code>sudo crontab -e
+</code></pre>
+<p>Creamos el nuevo archivo, añadiendo esto: Supongamos que la ip del AdGuard es 192.168.1.100</p>
+<pre><code>@reboot ( echo &quot;nameserver 192.168.1.100&quot; &gt; /etc/resolv.conf )
+</code></pre>
 <h2 id="proveedores-dns">Proveedores DNS</h2>
 <p>Podemos <a href="https://kb.adguard.com/en/general/dns-providers">personalizar las DNS en la siguiente url</a>.</p>
 <p>Yo actualmente estoy utilizando la famosa DNS de Cloudflare por https:</p>
@@ -129,7 +141,7 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="conclusión">Conclusión</h2>
 <p>Un servicio sencillo y alucinante, del que podrás disfrutar.</p>
 <br>
-<p>Publicado por Angel el viernes 16 abril del 2021 y <strong>actualizado</strong> el domingo 18 abril del 2021</p>
+<p>Publicado por Angel el viernes 16 abril del 2021 y <strong>actualizado</strong> el domingo 02 mayo del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
