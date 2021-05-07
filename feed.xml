@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Joplin para terminal, llega a snap</title>
+    <link>https://ugeek.github.io/blog/post/2021-05-07-joplin-para-terminal-llega-a-snap.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/joplin.png" alt="Joplin para terminal, llega a snap"&gt;
+&lt;br&gt;&lt;p&gt;Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando *nodejs*, etc... Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-05-07-joplin-para-terminal-llega-a-snap.html&gt;Joplin para terminal, llega a snap&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 07 May 2021  +0100</pubDate>
+    <category>joplin</category>
+    <category>notas</category>
+    <category>snap</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-05-07-joplin-para-terminal-llega-a-snap.html</guid>
+   </item>
+   <item>
     <title>Styx. El mejor Navegador Open Source para Android</title>
     <link>https://ugeek.github.io/blog/post/2021-05-05-styx.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 05 May 2021  +0100</pubDate>
+    <pubDate>Wed, 05 May 2021 19:25 +0100</pubDate>
     <category>android</category>
     <category>navegadores</category>
     <category>browser</category>

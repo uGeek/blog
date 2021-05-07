@@ -1,5 +1,5 @@
 <head>
-<title>aplicación</title>
+<title>Joplin para terminal, llega a snap. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,39 +47,75 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>aplicación</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="joplin-para-terminal-llega-a-snap-1" title="Joplin para terminal, llega a snap" data-export_file_name="joplin-para-terminal-llega-a-snap" data-description="Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando *nodejs*, etc... Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae" data-export_date="2021-05-07 19:25" data-category="joplin" data-tag="notas,snap" data-image="./images-blog/joplin.png">Joplin para terminal, llega a snap</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 200 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
+<p>Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando <strong>nodejs</strong>, etc… Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae los editores de texto <strong>nvim</strong> y <strong>nano</strong>. Una de las desventajas, es no poder utilizar el editor de texto que desees.</p>
+<p>Yo personalmente, lo he instalado en la terminal tal como explicaba en el artículo <a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a> y últimamente utilizo de editor de texto <strong>typora</strong>.</p>
+<center>
+<p><img src="../images-blog/joplin.png" /></p>
+</center>
+<p>Aún así, vamos a ver como instalarlo y utilizarlo</p>
+<h2 id="instalación">Instalación</h2>
+<p>Tan sencillo como:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> snap install joplin</a></code></pre></div>
+<p>Ahora escribiendo =joplin=en la terminal, ya tendremos el cliente corriendo.</p>
+<h2 id="editores">Editores</h2>
+<p>El editor predeterminado se puede cambiar usando:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">joplin</span> config editor /snap/joplin/current/usr/bin/nvim <span class="co"># default</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="ex">joplin</span> config editor /snap/joplin/current/bin/nano <span class="co"># easier alternative</span></a></code></pre></div>
+<h2 id="habilitar-servidor-de-joplin">Habilitar servidor de joplin</h2>
+<p>El servidor no se está ejecutando de forma predeterminada, pero se puede habilitar con:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">snap</span> set joplin server.enabled=true</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-26-actualización-automática-de-tus-dockers.html>Actualización automática de tus dockers con Watchtower o Ouroboros</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-31-kde-connecte-en-emacs.html>Kde Connect en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-27-lee-super-rapido-en-emacs-con-spray.html>Lee Super rápido en Emacs con Spray</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html>Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html>Simplenote en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html>Descargando videos de Internet con youtube-dl</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html>Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-12-compilando-la-ultima-version-de-nano.html>Compilando La última versión de Nano</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html>Controlando mis Contenedores desde Android</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-04-bat-el-cat-enriquecido.html>Bat, el Cat enriquecido</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html>Descargando un directorio de git con gitdir</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-08-todoist-en-emacs.html>Todoist en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-31-a-python-tambien-le-gusta-el-todo-txt-todotxt-machine.html>A python también le gusta el todo.txt. todotxt-machine</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html>Simplenote para terminal. Sncli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html>Creando contenedores con dockerc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html>Gestionando mis tareas en la terminal con topydo</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html>FreshRSS. Mi servidor de RSS</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html>Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html>Informacion de tu sistema, pc, servidor,... con neofetch</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-15-suscribirte-al-rss-de-canales-de-youtube.html>Suscribirte al RSS de canales de YouTube</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html>Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html>nncli. Notas desde el terminal con Nextcloud Notes</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html>YTFZF. Youtube desde la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html>Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-19-sleek-una-aplicacion-de-todo-txt-moderna-y-elegante.html>Sleek. Una aplicación de todo.txt moderna y elegante</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-22-golink.html>Golink</a></li>
+<li><a href="https://snapcraft.io/joplin">https://snapcraft.io/joplin</a></li>
+<li><a href="https://github.com/3v1n0/joplin-cli-snap">https://github.com/3v1n0/joplin-cli-snap</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el viernes 07 mayo del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-07-instalar-node-js-12-version-estable.html">Instalar Node.js 12. Versión estable</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

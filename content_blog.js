@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Joplin para terminal, llega a snap',
+            'text': 'Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando *nodejs*, etc... Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae', 
+            'tags': 'joplin,notas,snap,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-05-07-joplin-para-terminal-llega-a-snap.html' 
+},
+{
             'title': 'Styx. El mejor Navegador Open Source para Android',
             'text': 'Estoy encantado con Styx, un Navegador Open Source que aporta muchas características para mi necesarias que no tienen el resto y que verdaderamente muy completo.', 
             'tags': 'android,navegadores,browser,,,', 
