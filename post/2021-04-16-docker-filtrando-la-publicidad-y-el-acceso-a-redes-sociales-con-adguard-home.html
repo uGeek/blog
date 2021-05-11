@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home-1" title="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" data-export_file_name="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home" data-description="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" data-export_date="2021-04-16 18:50 2021-05-02" data-category="docker" data-tag="AdGuard,Pi-Hole" data-image="./images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 493 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h5>Tiempo estimado de lectura: 4 minutos. 498 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente.</p>
 <p>Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc…</p>
 <center>
@@ -130,7 +130,7 @@ $("#tipue_search_input").tipuesearch();
 <pre><code>sudo crontab -e
 </code></pre>
 <p>Creamos el nuevo archivo, añadiendo esto: Supongamos que la ip del AdGuard es 192.168.1.100</p>
-<pre><code>@reboot ( echo &quot;nameserver 192.168.1.100&quot; &gt; /etc/resolv.conf )
+<pre><code>@reboot ( sleep 100 ; echo &quot;nameserver 192.168.1.100&quot; &gt; /etc/resolv.conf )
 </code></pre>
 <h2 id="proveedores-dns">Proveedores DNS</h2>
 <p>Podemos <a href="https://kb.adguard.com/en/general/dns-providers">personalizar las DNS en la siguiente url</a>.</p>
@@ -145,6 +145,7 @@ $("#tipue_search_input").tipuesearch();
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-16-docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home.html">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html">Docker: Raneto</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html">Docker en Ubuntu 20.04</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-31-docker-oficial-de-syncthing.html">Docker oficial de Syncthing</a></li>
@@ -154,6 +155,5 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html">Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian… con Docker</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

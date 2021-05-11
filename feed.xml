@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Servidor WebDAV con rclone, con nube público o privada</title>
+    <link>https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/rclone.png" alt="Servidor WebDAV con rclone, con nube público o privada"&gt;
+&lt;br&gt;&lt;p&gt;Os he explicado varias formas de montar un servidor WebDAV.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html&gt;Servidor WebDAV con rclone, con nube público o privada&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 11 May 2021  +0100</pubDate>
+    <category>docker</category>
+    <category>rclone</category>
+    <category>webdav</category>
+    <category>nube</category>
+    <guid>https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html</guid>
+   </item>
+   <item>
     <title>Joplin para terminal, llega a snap</title>
     <link>https://ugeek.github.io/blog/post/2021-05-07-joplin-para-terminal-llega-a-snap.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 07 May 2021  +0100</pubDate>
+    <pubDate>Fri, 07 May 2021 17:00 +0100</pubDate>
     <category>joplin</category>
     <category>notas</category>
     <category>snap</category>

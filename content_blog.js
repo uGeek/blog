@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Servidor WebDAV con rclone, con nube público o privada',
+            'text': 'Os he explicado varias formas de montar un servidor WebDAV.', 
+            'tags': 'docker,rclone,webdav,nube,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html' 
+},
+{
             'title': 'Joplin para terminal, llega a snap',
             'text': 'Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando *nodejs*, etc... Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae', 
             'tags': 'joplin,notas,snap,,,', 
