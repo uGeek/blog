@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Añadiendo más repositorios a F-Droid o Foxy Droid</title>
+    <link>https://ugeek.github.io/blog/post/2021-05-30-anadiendo-mas-repositorios-a-f-droid-o-foxy-droid.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/foxy.png" alt="Añadiendo más repositorios a F-Droid o Foxy Droid"&gt;
+&lt;br&gt;&lt;p&gt;Aurora Droid es una tienda de aplicaciones llena de muchos repositorios de Software Libre. Hay 3 repositorios que son los que siempre utilizo:... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-05-30-anadiendo-mas-repositorios-a-f-droid-o-foxy-droid.html&gt;Añadiendo más repositorios a F-Droid o Foxy Droid&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 30 May 2021  +0100</pubDate>
+    <category>android</category>
+    <category>aplicaciones</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-05-30-anadiendo-mas-repositorios-a-f-droid-o-foxy-droid.html</guid>
+   </item>
+   <item>
     <title>El modo más fácil de instalar y administrar Wireguard</title>
     <link>https://ugeek.github.io/blog/post/2021-05-28-el-modo-mas-facil-de-instalar-administrar-wireguard.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 28 May 2021  +0100</pubDate>
+    <pubDate>Fri, 28 May 2021 19:45 +0100</pubDate>
     <category>docker</category>
     <category>wireguard</category>
     <category></category>

@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Añadiendo más repositorios a F-Droid o Foxy Droid',
+            'text': 'Aurora Droid es una tienda de aplicaciones llena de muchos repositorios de Software Libre. Hay 3 repositorios que son los que siempre utilizo:', 
+            'tags': 'android,aplicaciones,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-05-30-anadiendo-mas-repositorios-a-f-droid-o-foxy-droid.html' 
+},
+{
             'title': 'El modo más fácil de instalar y administrar Wireguard',
             'text': 'Wireguard es mi VPN favorita. Rápida, ligera,... pero es cierto que no es fácil de instalar y administrarla. [[https://emilenijssen.nl][Emile Nijssen]] nos trae un servicio fantástico que soluciona este problema.', 
             'tags': 'docker,wireguard,,,,', 
