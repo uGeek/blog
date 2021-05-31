@@ -1,5 +1,5 @@
 <head>
-<title>Extraer audio de un vídeo con ffmpeg. uGeek Blog </title>
+<title>Sensors y psensor. Controlando la temperatura de mi PC. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Con ffmpeg, no solo podemos transcodificar vídeo, sino también extraer el audio." />
+<meta name="description" content="Sensors y psensor, son aplicaciones que nos permiten conocer la temperatura de nuestra CPU, velocidad de los Ventiladores,..." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Extraer audio de un vídeo con ffmpeg" />
-<meta property="og:description" content="Con ffmpeg, no solo podemos transcodificar vídeo, sino también extraer el audio." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ffmpeg.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-30-extraer-audio-de-un-vídeo-con-ffmpeg.html" />
+<meta property="og:title" content="Sensors y psensor. Controlando la temperatura de mi PC" />
+<meta property="og:description" content="Sensors y psensor, son aplicaciones que nos permiten conocer la temperatura de nuestra CPU, velocidad de los Ventiladores,..." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html" />
 
-<meta name="twitter:title" content="Extraer audio de un vídeo con ffmpeg" />
-<meta name="twitter:description" content="Con ffmpeg, no solo podemos transcodificar vídeo, sino también extraer el audio." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ffmpeg.png" />
+<meta name="twitter:title" content="Sensors y psensor. Controlando la temperatura de mi PC" />
+<meta name="twitter:description" content="Sensors y psensor, son aplicaciones que nos permiten conocer la temperatura de nuestra CPU, velocidad de los Ventiladores,..." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,39 +85,45 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="extraer-audio-de-un-vídeo-con-ffmpeg-1" title="Extraer audio de un vídeo con ffmpeg" data-export_file_name="Extraer audio de un vídeo con ffmpeg" data-description="Con ffmpeg, no solo podemos transcodificar vídeo, sino también extraer el audio." data-export_date="2019-09-30 18:15" data-category="bash" data-tag="video,terminal" data-image="./images-blog/ffmpeg.png">Extraer audio de un vídeo con ffmpeg</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 285 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Con ffmpeg, no solo podemos transcodificar vídeo, sino también extraer el audio.</p>
+<h1 id="sensors-y-psensor.-controlando-la-temperatura-de-mi-pc-1" title="Sensors y psensor. Controlando la temperatura de mi PC" data-export_file_name="sensors-y-psensor-controlando-la-temperatura-de-mi-pc" data-description="Sensors y psensor, son aplicaciones que nos permiten conocer la temperatura de nuestra CPU, velocidad de los Ventiladores,..." data-export_date="2021-05-31 10:50" data-category="bash" data-tag="aplicaciones" data-image="./images-blog/bash.png">Sensors y psensor. Controlando la temperatura de mi PC</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 274 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Sensors y psensor, son aplicaciones que nos permiten conocer la temperatura de nuestra CPU, velocidad de los Ventiladores,…</p>
 <center>
-<p><img src="../images-blog/ffmpeg.png" /></p>
+<p><a href="./images-blog/">./images-blog/</a>bash.png</p>
 </center>
-<p>La extracción con ffmpeg es muy sencilla.</p>
-<pre><code>ffmpeg -i [VIDEO ENTRADA] [AUDIO SALIDA]
-</code></pre>
-<h2 id="extracción-de-audio-básica">Extracción de audio básica</h2>
-<p>La opción <strong>-i</strong>, indica el archivo de entrada.</p>
-<p><strong>-vn</strong>, indica que no procese el archivo para una trasncodificación, que lo deje tal cual. <strong>–acodec copy</strong>, indica que no procese y solo copie el audio de entrada en la salida. El archivo con el que esta grabado el audio del vídeo, tiene que ser el que utilicemos en la salida, sino, tendríamos que transcodificarlo</p>
-<pre><code>ffmpeg -i video_entrada.mp4 -vn -acodec copy audio_salida.mp3
-</code></pre>
-<h2 id="extraer-audio-como-mp3-o-aac">Extraer audio como mp3 o aac</h2>
-<p><strong>-acodec mp3</strong>, especificamos que utilice el codec para transcodifique a mp3</p>
-<pre><code>ffmpeg -i video_entrada.mp4 -vn -acodec mp3 audio_salida.mp3
-</code></pre>
-<p><strong>–acodec aac</strong>, especificamos que utilice el codec para transcodifique a aac</p>
-<h2 id="extraer-como-vorbis.-ogg">Extraer como vorbis. ogg</h2>
-<pre><code>ffmpeg -i video_entrada.mp4 -vn -acodec libvorbis audio_salida.ogg
-</code></pre>
-<p><strong>-acodec libvorbis</strong>, especificamos que utilice el codec para transcodifique ogg.</p>
-<h2 id="extraer-audio-de-un-trozo-del-vídeo">Extraer audio de un trozo del vídeo</h2>
-<pre><code>ffmpeg -i video_entrada.avi -ss 30 -to 60 -vn -acodec mp3 audio_salida.mp3
-</code></pre>
-<p><strong>-ss 30 -to 60</strong>, especifiamos que extraermos el audio, solo del segundo <strong>30</strong> a <strong>60</strong>.</p>
-<h2 id="fuente">Fuente</h2>
-<ul>
-<li><a href="https://www.bugcodemaster.com/article/extract-audio-video-using-ffmpeg">BugCodeMaster</a></li>
-</ul>
+<p>Vamos a ver como funciona</p>
+<h2 id="instalación">Instalación</h2>
+<p>En otras distribuciones el nombre del paquete puede cambiar, en ubuntu es <strong>lm-sensors</strong>.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install lm-sensors</a></code></pre></div>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<p>Ahora con un simple:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">sensors</span></a>
+<a class="sourceLine" id="cb2-2" title="2"></a></code></pre></div>
+<p>Nos mostrará la temperatura de nuestra CPU, temperatura crítica,en mi caso velocidad de los ventiladores…</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">coretemp-isa-0000</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="ex">Adapter</span>: ISA adapter</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="ex">Core</span> 0:       +29.0°C  (high = +76.0°C, crit = +100.0°C)</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="ex">Core</span> 1:       +29.0°C  (high = +76.0°C, crit = +100.0°C)</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="ex">Core</span> 2:       +29.0°C  (high = +76.0°C, crit = +100.0°C)</a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="ex">Core</span> 3:       +29.0°C  (high = +76.0°C, crit = +100.0°C)</a>
+<a class="sourceLine" id="cb3-7" title="7"></a>
+<a class="sourceLine" id="cb3-8" title="8"><span class="ex">pc_smm-virtual-0</span></a>
+<a class="sourceLine" id="cb3-9" title="9"><span class="ex">Adapter</span>: Virtual device</a>
+<a class="sourceLine" id="cb3-10" title="10"><span class="ex">Processor</span> Fan:   1574 RPM</a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="ex">Motherboard</span> Fan: 1166 RPM</a></code></pre></div>
+<p>Si no detecta la temperatura, podemos utilizar el siguiente comando para configurar <strong>sensors</strong>.</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> sensors-detect</a></code></pre></div>
+<h2 id="psensor">psensor</h2>
+<p>Si quieres conocer la temperatura de la CPU, GPU, discos duros, velocidad de ventiladores, memoria disponible… de modo gráfico, podemos utilizar <strong>psensor</strong>.\  </p>
+<p>Para instalarlo utilizaremos:</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> apt install psensor</a></code></pre></div>
+<h3 id="lanzar-psensor">Lanzar psensor</h3>
+<p>Para lanzar <strong>psensor</strong>, lo harimos así:</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">psensor</span></a>
+<a class="sourceLine" id="cb6-2" title="2"></a></code></pre></div>
+<p>Ahora nos abrirá una ventana con toda la información antes citada.</p>
 <br>
-<p>Publicado por Angel el lunes 30 septiembre del 2019</p>
+<p>Publicado por Angel el lunes 31 mayo del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

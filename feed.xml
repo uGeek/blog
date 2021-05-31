@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Sensors y psensor. Controlando la temperatura de mi PC</title>
+    <link>https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="Sensors y psensor. Controlando la temperatura de mi PC"&gt;
+&lt;br&gt;&lt;p&gt;Sensors y psensor, son aplicaciones que nos permiten conocer la temperatura de nuestra CPU, velocidad de los Ventiladores,...... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html&gt;Sensors y psensor. Controlando la temperatura de mi PC&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 31 May 2021  +0100</pubDate>
+    <category>bash</category>
+    <category>aplicaciones</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html</guid>
+   </item>
+   <item>
     <title>Añadiendo más repositorios a F-Droid o Foxy Droid</title>
     <link>https://ugeek.github.io/blog/post/2021-05-30-anadiendo-mas-repositorios-a-f-droid-o-foxy-droid.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 30 May 2021  +0100</pubDate>
+    <pubDate>Sun, 30 May 2021 10:50 +0100</pubDate>
     <category>android</category>
     <category>aplicaciones</category>
     <category></category>

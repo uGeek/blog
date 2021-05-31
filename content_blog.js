@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Sensors y psensor. Controlando la temperatura de mi PC',
+            'text': 'Sensors y psensor, son aplicaciones que nos permiten conocer la temperatura de nuestra CPU, velocidad de los Ventiladores,...', 
+            'tags': 'bash,aplicaciones,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html' 
+},
+{
             'title': 'Añadiendo más repositorios a F-Droid o Foxy Droid',
             'text': 'Aurora Droid es una tienda de aplicaciones llena de muchos repositorios de Software Libre. Hay 3 repositorios que son los que siempre utilizo:', 
             'tags': 'android,aplicaciones,,,,', 
