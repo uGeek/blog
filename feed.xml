@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker. Tailscale</title>
+    <link>https://ugeek.github.io/blog/post/2021-06-17-docker-tailscale.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/tailscale.png" alt="Docker. Tailscale"&gt;
+&lt;br&gt;&lt;p&gt;Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-06-17-docker-tailscale.html&gt;Docker. Tailscale&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 17 Jun 2021  +0100</pubDate>
+    <category>docker</category>
+    <category>zerotier</category>
+    <category>red</category>
+    <category>virtual</category>
+    <guid>https://ugeek.github.io/blog/post/2021-06-17-docker-tailscale.html</guid>
+   </item>
+   <item>
     <title>Sensors y psensor. Controlando la temperatura de mi PC</title>
     <link>https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 31 May 2021  +0100</pubDate>
+    <pubDate>Mon, 31 May 2021 19:40 +0100</pubDate>
     <category>bash</category>
     <category>aplicaciones</category>
     <category></category>
@@ -4472,7 +4505,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

@@ -1,0 +1,162 @@
+<head>
+<title>Docker. Tailscale. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker. Tailscale" />
+<meta property="og:description" content="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/tailscale.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-06-17-docker-tailscale.html" />
+
+<meta name="twitter:title" content="Docker. Tailscale" />
+<meta name="twitter:description" content="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/tailscale.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="docker.-tailscale-1" title="Docker. Tailscale" data-export_file_name="docker-tailscale" data-description="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en" data-export_date="2021-06-17 19:40" data-category="docker" data-tag="zerotier,red,virtual" data-image="./images-blog/tailscale.png">Docker. Tailscale</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 467 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,… amd64, ARM,…), en minutos, creando una red segura entre tus servidores, PC's de escritorio e instancias en la nube. Incluso cuando está detrás de firewalls o subredes como un CG-NAT o un NAT, Tailscale simplemente funciona.</p>
+<center>
+<p><img src="../images-blog/tailscale.png" /></p>
+</center>
+<p>La VPN que utiliza para crear esta red es Wireguard, así que ya te puedes hacer una idea del potencial que tiene Tailscale.</p>
+<h2 id="registrarse">Registrarse</h2>
+<p>Nos registramos en la web <a href="https://tailscale.com/">https://tailscale.com/</a> o nos logeamos con nuestra cuenta de Google, Microsoft o GitHub.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Puedes encontrar los métodos de instalación para cualquier distro en <a href="https://tailscale.com/download">https://tailscale.com/download</a>.</p>
+<h2 id="ubuntu-20.04">Ubuntu 20.04</h2>
+<p>Los paquetes esta disponibles para CPU x86 y ARM, tanto en 32 bits como en 64 bits variantes.</p>
+<ol>
+<li>Agrega la clave y el repositorio de firma de paquetes de Tailscale</li>
+</ol>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">curl</span> -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg <span class="kw">|</span> <span class="fu">sudo</span> apt-key add -</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="ex">curl</span> -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/tailscale.list</a></code></pre></div>
+<ol>
+<li>Instalar Tailscale</li>
+</ol>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> apt-get update</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="fu">sudo</span> apt-get install tailscale</a></code></pre></div>
+<ol>
+<li>Conecta tu máquina a tu red Tailscale</li>
+</ol>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> tailscale up</a></code></pre></div>
+<ol>
+<li><p>Visite la <a href="https://login.tailscale.com/admin">consola de administración</a>y autoriza tu nuevo terminal. Si iniciaste tu sesión con una cuenta Gmail, se autoriza automáticamente. (Nota: deberás volver a autenticarse ocasionalmente a menos que <a href="https://tailscale.com/kb/1028/key-expiry">desactive la caducidad de la clave</a>).</p></li>
+<li><p>Obtén tu dirección IP de Tailscale</p></li>
+</ol>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">ip</span> addr show tailscale0</a></code></pre></div>
+<ol>
+<li>Consulte <a href="https://tailscale.com/kb/1030/next-steps">Pasos siguientes</a>para conocer los pasos para verificar que un único punto final está funcionando. Con múltiples puntos finales, pings simples son una buena forma de empezar.</li>
+</ol>
+<h3 id="docker">Docker</h3>
+<p>Yo he creado desde el repositorio de GitHub esta imagen (ugeek/tailscale:amd64), pero tu puedes utilizar también la tuya propia.</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">docker</span> run -d --name=tailscaled   --restart unless-stopped -v /var/lib:/var/lib -v /dev/net/tun:/dev/net/tun --network=host --privileged ugeek/tailscale:amd64 tailscaled</a></code></pre></div>
+<ol>
+<li><p>Logearnos</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">docker</span> exec tailscaled tailscale up</a></code></pre></div></li>
+<li><p>Status</p>
+<p>Para ver todos los dispositivos de tu red y sus IP's:</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">docker</span> exec tailscaled tailscale status</a></code></pre></div></li>
+<li><p>Tu IP en Tailscale</p>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">docker</span> exec -t tailscaled ip addr show tailscale0</a></code></pre></div></li>
+</ol>
+<h3 id="otros-sistemas-operativos">Otros Sistemas Operativos</h3>
+<p>Puedes acceder a la web de <a href="https://tailscale.com">https://tailscale.com</a> y descargar la aplicación para el sistema Operativo que utilices.</p>
+<p>También encontrarás otros paquetes estables o inestables en las siguientes urls.</p>
+<ul>
+<li><a href="https://pkgs.tailscale.com/stable/#static">https://pkgs.tailscale.com/stable/#static</a> (Estable)</li>
+<li><a href="https://pkgs.tailscale.com/unstable/#static">https://pkgs.tailscale.com/unstable/#static</a> (Inestable)</li>
+</ul>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/tailscale/tailscale/blob/main/Dockerfile">https://github.com/tailscale/tailscale/blob/main/Dockerfile</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el jueves 17 junio del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-28-el-modo-mas-facil-de-instalar-administrar-wireguard.html">El modo más fácil de instalar y administrar Wireguard</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html">Servidor WebDAV con rclone, con nube público o privada</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-16-docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home.html">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html">Docker: Raneto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html">Docker en Ubuntu 20.04</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-31-docker-oficial-de-syncthing.html">Docker oficial de Syncthing</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-10-tu-pornhub-privado-se-llama-stash.html">Tu PornHub privado se llama Stash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-09-controlando-la-papelera-de-nextcloud.html">Controlando la papelera de Nextcloud</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html">Trabajos en segundo plano de Nextcloud y ownCloud</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html">Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
