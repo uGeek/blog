@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Brave tiene un nuevo buscador',
+            'text': 'Brave presenta en beta abierta su nuevo buscador que promete no rastrear ni recopilar información de sus usuarios.', 
+            'tags': 'navegador,brave,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-06-23-brave-tiene-un-nuevo-buscador.html' 
+},
+{
             'title': 'Docker. Tailscale',
             'text': 'Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en', 
             'tags': 'docker,zerotier,red,virtual,,', 
