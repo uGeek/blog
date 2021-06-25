@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker: DLNA no esta muerto. Me gusta Gerbera</title>
+    <link>https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/Docker:_DLNA_no_esta_muerto._Me_gusta_Gerbera.png" alt="Docker: DLNA no esta muerto. Me gusta Gerbera"&gt;
+&lt;br&gt;&lt;p&gt;Si quieres montar un servidor súper liviano, aprovechando tus clientes DLNA, pero algo más completo que miniDLNA, puedes instalar Gerbera.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html&gt;Docker: DLNA no esta muerto. Me gusta Gerbera&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 25 Jun 2021  +0100</pubDate>
+    <category>docker</category>
+    <category>gerbera</category>
+    <category>dlna</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html</guid>
+   </item>
+   <item>
     <title>Brave tiene un nuevo buscador</title>
     <link>https://ugeek.github.io/blog/post/2021-06-23-brave-tiene-un-nuevo-buscador.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 23 Jun 2021  +0100</pubDate>
+    <pubDate>Wed, 23 Jun 2021 18:59 +0100</pubDate>
     <category>navegador</category>
     <category>brave</category>
     <category></category>

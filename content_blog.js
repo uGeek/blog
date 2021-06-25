@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker: DLNA no esta muerto. Me gusta Gerbera',
+            'text': 'Si quieres montar un servidor súper liviano, aprovechando tus clientes DLNA, pero algo más completo que miniDLNA, puedes instalar Gerbera.', 
+            'tags': 'docker,gerbera,dlna,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html' 
+},
+{
             'title': 'Brave tiene un nuevo buscador',
             'text': 'Brave presenta en beta abierta su nuevo buscador que promete no rastrear ni recopilar información de sus usuarios.', 
             'tags': 'navegador,brave,,,,', 
