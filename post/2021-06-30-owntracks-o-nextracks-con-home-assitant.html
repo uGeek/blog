@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="owntracks-o-nextracks-con-home-assitant-1" title="Owntracks o Nextracks con Home Assitant" data-export_file_name="owntracks-o-nextracks-con-home-assitant" data-description="Hay un servidor con el que podemos tener autohospedado un sistema para geolocalizar a todos los usuario que quieran compartir su ubicación." data-export_date="2021-06-30 07:20" data-category="homeassitant" data-tag="owntracks" data-image="./images-blog/Owntracks_o_Nextracks_con_Home_Assitan.png">Owntracks o Nextracks con Home Assitant</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 167 palabras.    <a href="https://ugeek.github.io/blog/categories/homeassitant">homeassitant</a></h5>
+<h5>Tiempo estimado de lectura: 1 minutos. 168 palabras.    <a href="https://ugeek.github.io/blog/categories/homeassitant">homeassitant</a></h5>
 <p>Hay un servidor con el que podemos tener autohospedado un sistema para geolocalizar a todos los usuario que quieran compartir su ubicación.</p>
 <center>
 <p><img src="../images-blog/Owntracks_o_Nextracks_con_Home_Assitan.png" /></p>
@@ -95,9 +95,6 @@ $("#tipue_search_input").tipuesearch();
 <p>Instalaremos en Home Assitant el plugin de Owntracks y a continuación nos conectaremos a este mediante la siguiente configuración.</p>
 <h2 id="configuración">Configuración</h2>
 <p>Iremos al archivo de configuración de nuestro <strong>Home Assitant</strong> <code>config/.storage/core.config_entries</code> y buscaremos el <code>webhook_id</code>.</p>
-<p>Ahora pondremos en nuestro navegador la siguiente <strong>url</strong>: <code>https://YOUR_USER.duckdns.org:8123/api/webhook/API_KEY</code></p>
-<p>Añadimos en la aplicación Owntracks la url y pulsaremos <strong>a la flecha que apunta hacia arriba</strong> para que inicie a compartir el nuevo dispositivo.</p>
-<p>Ahora nuestro dispositivo ya saldrá en HomeAssitant y en las aplicaciones que estén conectadas a nuestro servidor</p>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">{</span></a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="st">&quot;entry_id&quot;</span>: <span class="st">&quot;9cf6cf9bc4dfgwerg2d49uyyv9843h1v13425cb1d&quot;</span>,</a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="st">&quot;version&quot;</span>: <span class="ex">1</span>,</a>
@@ -108,6 +105,8 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb1-8" title="8"><span class="st">&quot;secret&quot;</span>: <span class="st">&quot;4ad5j356j356ja49a8dj35qerhqerh6j235672b&quot;</span>,</a>
 <a class="sourceLine" id="cb1-9" title="9"><span class="st">&quot;cloudhook&quot;</span>: <span class="fu">false</span></a>
 <a class="sourceLine" id="cb1-10" title="10"><span class="kw">}</span>,</a></code></pre></div>
+<p>Añadimos en la aplicación Owntracks como url <code>https://midominio.duckdns.org:8123/api/webhook/API_KEY</code> y pulsaremos <strong>a la flecha que apunta hacia arriba</strong> para empiece a compartir la ubicación del dispositivo.</p>
+<p>Ahora nuestra ubicación y la del resto de usuarios que la comparten, saldrá en Home Assitant y en las aplicaciones que estén conectadas a nuestro servidor</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://www.home-assistant.io/integrations/owntracks">https://www.home-assistant.io/integrations/owntracks</a></li>
