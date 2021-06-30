@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="joplin-desktop-joplin-para-terminal-y-webclipper-1" title="Joplin Desktop, Joplin para Terminal y WebClipper" data-export_file_name="joplin-desktop-joplin-para-terminal-y-webclipper" data-description="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." data-export_date="2020-06-13 19:30 2021-02-02" data-category="joplin" data-tag="notas,terminal" data-image="./images-blog/joplin.png">Joplin Desktop, Joplin para Terminal y WebClipper</h1>
-<h5>Tiempo estimado de lectura: 27 minutos. 3044 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
+<h1 id="joplin-desktop-joplin-para-terminal-y-webclipper-1" title="Joplin Desktop, Joplin para Terminal y WebClipper" data-export_file_name="joplin-desktop-joplin-para-terminal-y-webclipper" data-description="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." data-export_date="2020-06-13 19:30 2021-06-30" data-category="joplin" data-tag="notas,terminal" data-image="./images-blog/joplin.png">Joplin Desktop, Joplin para Terminal y WebClipper</h1>
+<h5>Tiempo estimado de lectura: 28 minutos. 3103 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
 <p>Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav.</p>
 <center height="250" width="250">
 <p><img src="../images-blog/joplin.png" /></p>
@@ -234,6 +234,15 @@ Ctrl+d    # Salir
 <h3 id="cambiar-el-editor">Cambiar el editor</h3>
 <p>Cambiar el editor a emacs por defecto a:</p>
 <pre><code>:config editor &quot;emacs -nw&quot;
+</code></pre>
+<h2 id="alias">Alias</h2>
+<p>Como a veces se me olvida el sincronizar cada vez que he modificado una nota, he creado el siguiente alias con 2 comandos:</p>
+<ul>
+<li>Abre Joplin de terminal</li>
+<li>Cuando cerramos joplin, sincroniza las notas en local con el servidor. <code>joplin sync</code>.</li>
+</ul>
+<p>Voy a utilizar la letra <strong>j</strong> para lanzar Joplin de terminal.</p>
+<pre><code>alias j=&#39;/usr/bin/joplin ; /usr/bin/joplin sync&#39;
 </code></pre>
 <h2 id="joplin-modo-shell">Joplin modo shell</h2>
 <p>Los comandos son los mismos que la versión terminal, solo que el comando se ejecuta y nos devuelve el resultado. Voy a resumir algunos de los comandos:</p>
@@ -730,7 +739,7 @@ sudo apt install nodejs
 <pre><code>sudo apt install npm
 </code></pre>
 <br>
-<p>Publicado por Angel el sábado 13 junio del 2020 y <strong>actualizado</strong> el martes 02 febrero del 2021</p>
+<p>Publicado por Angel el sábado 13 junio del 2020 y <strong>actualizado</strong> el miércoles 30 junio del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
