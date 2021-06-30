@@ -1,5 +1,5 @@
 <head>
-<title>caddy</title>
+<title>Owntracks o Nextracks con Home Assitant. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,15 +47,74 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>caddy</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="owntracks-o-nextracks-con-home-assitant-1" title="Owntracks o Nextracks con Home Assitant" data-export_file_name="owntracks-o-nextracks-con-home-assitant" data-description="Hay un servidor con el que podemos tener autohospedado un sistema para geolocalizar a todos los usuario que quieran compartir su ubicación." data-export_date="2021-06-30 07:20" data-category="homeassitant" data-tag="owntracks" data-image="./images-blog/Owntracks_o_Nextracks_con_Home_Assitan.png">Owntracks o Nextracks con Home Assitant</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 167 palabras.    <a href="https://ugeek.github.io/blog/categories/homeassitant">homeassitant</a></h5>
+<p>Hay un servidor con el que podemos tener autohospedado un sistema para geolocalizar a todos los usuario que quieran compartir su ubicación.</p>
+<center>
+<p><img src="../images-blog/Owntracks_o_Nextracks_con_Home_Assitan.png" /></p>
+</center>
+<p>Teniendo Home Assistant instalado en nuestro servidor y la aplicación Owntracks (Android y IOS), podremos hacerlo de un modo sencillo.</p>
+<p>Instalaremos en Home Assitant el plugin de Owntracks y a continuación nos conectaremos a este mediante la siguiente configuración.</p>
+<h2 id="configuración">Configuración</h2>
+<p>Iremos al archivo de configuración de nuestro <strong>Home Assitant</strong> <code>config/.storage/core.config_entries</code> y buscaremos el <code>webhook_id</code>.</p>
+<p>Ahora pondremos en nuestro navegador la siguiente <strong>url</strong>: <code>https://YOUR_USER.duckdns.org:8123/api/webhook/API_KEY</code></p>
+<p>Añadimos en la aplicación Owntracks la url y pulsaremos <strong>a la flecha que apunta hacia arriba</strong> para que inicie a compartir el nuevo dispositivo.</p>
+<p>Ahora nuestro dispositivo ya saldrá en HomeAssitant y en las aplicaciones que estén conectadas a nuestro servidor</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">{</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="st">&quot;entry_id&quot;</span>: <span class="st">&quot;9cf6cf9bc4dfgwerg2d49uyyv9843h1v13425cb1d&quot;</span>,</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="st">&quot;version&quot;</span>: <span class="ex">1</span>,</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="st">&quot;domain&quot;</span>: <span class="st">&quot;owntracks&quot;</span>,</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="st">&quot;title&quot;</span>: <span class="st">&quot;OwnTracks&quot;</span>,</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="st">&quot;data&quot;</span>: <span class="kw">{</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="st">&quot;webhook_id&quot;</span>: <span class="st">&quot;4cd0a26qerg134ebq4erg363jfa00a61fa356j356u471abcd33100d9bb8&quot;</span>,</a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="st">&quot;secret&quot;</span>: <span class="st">&quot;4ad5j356j356ja49a8dj35qerhqerh6j235672b&quot;</span>,</a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="st">&quot;cloudhook&quot;</span>: <span class="fu">false</span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="kw">}</span>,</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html>Proxy Inverso con Caddy</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html>Convierte archivos .crt y .key en archivos .pem</a></li>
+<li><a href="https://www.home-assistant.io/integrations/owntracks">https://www.home-assistant.io/integrations/owntracks</a></li>
+<li><a href="https://owntracks.org/">https://owntracks.org/</a></li>
 </ul>
+<br>
+<p>Publicado por Angel el miércoles 30 junio del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

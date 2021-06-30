@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="cambiar-el-hostname-ubuntu-debian-raspberry-os-1" title="Cambiar el hostname Ubuntu, Debian, Raspberry OS..." data-export_file_name="cambiar-el-hostname-ubuntu-debian-raspberry-os--" data-description="Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*." data-export_date="2021-03-07 20:48" data-category="bash" data-tag="ubuntu,debian,raspberry" data-image="./images-blog/bash.png">Cambiar el hostname Ubuntu, Debian, Raspberry OS…</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 208 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<h1 id="cambiar-el-hostname-ubuntu-debian-raspberry-os-1" title="Cambiar el hostname Ubuntu, Debian, Raspberry OS..." data-export_file_name="cambiar-el-hostname-ubuntu-debian-raspberry-os--" data-description="Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*." data-export_date="2021-03-07 20:48 2021-06-28" data-category="bash" data-tag="ubuntu,debian,raspberry" data-image="./images-blog/bash.png">Cambiar el hostname Ubuntu, Debian, Raspberry OS…</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 236 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
 <p>Si utilizas una Raspberry, por defecto el hostname es <strong>pi</strong>. Si tienes muchos dispositivos que administrar y por ejemplo utilizan <strong>Ubuntu</strong>, puede que el hostname sea <strong>ubuntu</strong>.</p>
 <center>
 <p><img src="../images-blog/bash.png" /></p>
@@ -99,6 +99,8 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="cambiar-el-hostname">Cambiar el hostname</h2>
 <p>Tecleamos el siguiente comando:</p>
 <p><code>sudo hostname nuevo_hostname</code></p>
+<p>En distribuciones actuales como Ubuntu, Raspbian, basadas en systemd, podemos cambia el hostname con:</p>
+<p><code>hostnamectl set-hostname &lt;nuevo nombre de hostname&gt;</code></p>
 <p>En Debian, además tenemos que editar los archivos /etc/hostname y /etc/hosts.</p>
 <p>Sustituye hostname antiguo por el nuevo :</p>
 <p><code>sudo nano /etc/hostname</code></p>
@@ -107,7 +109,7 @@ $("#tipue_search_input").tipuesearch();
 <p><code>sudo reboot now</code></p>
 <p><code>hostname</code></p>
 <br>
-<p>Publicado por Angel el domingo 07 marzo del 2021</p>
+<p>Publicado por Angel el domingo 07 marzo del 2021 y <strong>actualizado</strong> el lunes 28 junio del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

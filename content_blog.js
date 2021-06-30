@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Owntracks o Nextracks con Home Assitant',
+            'text': 'Hay un servidor con el que podemos tener autohospedado un sistema para geolocalizar a todos los usuario que quieran compartir su ubicación.', 
+            'tags': 'homeassitant,owntracks,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-06-30-owntracks-o-nextracks-con-home-assitant.html' 
+},
+{
             'title': 'Docker: DLNA no esta muerto. Me gusta Gerbera',
             'text': 'Si quieres montar un servidor súper liviano, aprovechando tus clientes DLNA, pero algo más completo que miniDLNA, puedes instalar Gerbera.', 
             'tags': 'docker,gerbera,dlna,,,', 

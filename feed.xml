@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Owntracks o Nextracks con Home Assitant</title>
+    <link>https://ugeek.github.io/blog/post/2021-06-30-owntracks-o-nextracks-con-home-assitant.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/Owntracks_o_Nextracks_con_Home_Assitan.png" alt="Owntracks o Nextracks con Home Assitant"&gt;
+&lt;br&gt;&lt;p&gt;Hay un servidor con el que podemos tener autohospedado un sistema para geolocalizar a todos los usuario que quieran compartir su ubicación.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-06-30-owntracks-o-nextracks-con-home-assitant.html&gt;Owntracks o Nextracks con Home Assitant&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 30 Jun 2021  +0100</pubDate>
+    <category>homeassitant</category>
+    <category>owntracks</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-06-30-owntracks-o-nextracks-con-home-assitant.html</guid>
+   </item>
+   <item>
     <title>Docker: DLNA no esta muerto. Me gusta Gerbera</title>
     <link>https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 25 Jun 2021  +0100</pubDate>
+    <pubDate>Fri, 25 Jun 2021 07:20 +0100</pubDate>
     <category>docker</category>
     <category>gerbera</category>
     <category>dlna</category>
