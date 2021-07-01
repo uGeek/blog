@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="joplin-para-terminal-llega-a-snap-1" title="Joplin para terminal, llega a snap" data-export_file_name="joplin-para-terminal-llega-a-snap" data-description="Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando *nodejs*, etc... Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae" data-export_date="2021-05-07 19:25" data-category="joplin" data-tag="notas,snap" data-image="./images-blog/joplin.png">Joplin para terminal, llega a snap</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 201 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
+<h1 id="joplin-para-terminal-llega-a-snap-1" title="Joplin para terminal, llega a snap" data-export_file_name="joplin-para-terminal-llega-a-snap" data-description="Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando *nodejs*, etc... Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae" data-export_date="2021-05-07 19:25 2021-06-30" data-category="joplin" data-tag="notas,snap" data-image="./images-blog/joplin.png">Joplin para terminal, llega a snap</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 249 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
 <p>Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando <strong>nodejs</strong>, etc… Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae los editores de texto <strong>nvim</strong> y <strong>nano</strong>. Una de las desventajas, es no poder utilizar el editor de texto que desees.</p>
 <p>Yo personalmente, lo he instalado en la terminal tal como explicaba en el artículo <a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a> y últimamente utilizo de editor de texto <strong>typora</strong>.</p>
 <center>
@@ -101,16 +101,21 @@ $("#tipue_search_input").tipuesearch();
 <p>El editor predeterminado se puede cambiar usando:</p>
 <div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">joplin</span> config editor /snap/joplin/current/usr/bin/nvim <span class="co"># default</span></a>
 <a class="sourceLine" id="cb2-2" title="2"><span class="ex">joplin</span> config editor /snap/joplin/current/bin/nano <span class="co"># easier alternative</span></a></code></pre></div>
+<h2 id="editores-fuera-de-snap">Editores fuera de snap</h2>
+<p>También podemos utilizar editores de texto plano fuera de los paquetes snap.</p>
+<p>En este ejemplo utilizaré <strong>Emacs</strong> con un archivo de configuración personalizado para la versión de terminal.</p>
+<pre><code>joplin config editor &quot;/usr/bin/emacs -nw  -q -l ~/.emacs.d/init-terminal.el&quot;
+</code></pre>
 <h2 id="habilitar-servidor-de-joplin">Habilitar servidor de joplin</h2>
 <p>El servidor no se está ejecutando de forma predeterminada, pero se puede habilitar con:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">snap</span> set joplin server.enabled=true</a></code></pre></div>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">snap</span> set joplin server.enabled=true</a></code></pre></div>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://snapcraft.io/joplin">https://snapcraft.io/joplin</a></li>
 <li><a href="https://github.com/3v1n0/joplin-cli-snap">https://github.com/3v1n0/joplin-cli-snap</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el viernes 07 mayo del 2021</p>
+<p>Publicado por Angel el viernes 07 mayo del 2021 y <strong>actualizado</strong> el miércoles 30 junio del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

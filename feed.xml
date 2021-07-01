@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</title>
+    <link>https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal"&gt;
+&lt;br&gt;&lt;p&gt;** amixersin... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html&gt;Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 01 Jul 2021  +0100</pubDate>
+    <category>bash</category>
+    <category>sonido</category>
+    <category>volumen</category>
+    <category>mutear</category>
+    <guid>https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html</guid>
+   </item>
+   <item>
     <title>Owntracks o Nextracks con Home Assitant</title>
     <link>https://ugeek.github.io/blog/post/2021-06-30-owntracks-o-nextracks-con-home-assitant.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 30 Jun 2021  +0100</pubDate>
+    <pubDate>Wed, 30 Jun 2021 18:15 +0100</pubDate>
     <category>homeassitant</category>
     <category>owntracks</category>
     <category></category>
@@ -4604,7 +4637,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

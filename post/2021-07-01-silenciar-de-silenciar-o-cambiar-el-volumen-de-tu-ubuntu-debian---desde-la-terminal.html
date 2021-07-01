@@ -1,5 +1,5 @@
 <head>
-<title>Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal. uGeek Blog </title>
+<title>Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Para grabar una imagen de Raspbian, Ubuntu, Debian,... o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd." />
+<meta name="description" content="** amixersin" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal" />
-<meta property="og:description" content="Para grabar una imagen de Raspbian, Ubuntu, Debian,... o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/sd.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-29-grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd.html" />
+<meta property="og:title" content="Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal" />
+<meta property="og:description" content="** amixersin" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html" />
 
-<meta name="twitter:title" content="Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal" />
-<meta name="twitter:description" content="Para grabar una imagen de Raspbian, Ubuntu, Debian,... o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/sd.png" />
+<meta name="twitter:title" content="Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal" />
+<meta name="twitter:description" content="** amixersin" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,39 +85,42 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd-desde-la-terminal-1" title="Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal" data-export_file_name="grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd" data-description="Para grabar una imagen de Raspbian, Ubuntu, Debian,... o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd." data-export_date="2019-10-29 18:00" data-category="bash" data-tag="raspberry,raspbian" data-image="./images-blog/sd.png">Grabar Raspbian, Ubuntu, Debian,… en un Pendrive o SD desde la Terminal</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 309 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Para grabar una imagen de Raspbian, Ubuntu, Debian,… o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd.</p>
-<center>
-<p><img src="../images-blog/sd.png" /></p>
-</center>
-<p>Como ejemplo en este artículo, voy a grabar una imagen de Raspbian.</p>
-<h2 id="descomprimir-raspbian">Descomprimir Raspbian</h2>
-<p>Descargo la imagen de raspbian desde su página oficial. Esta imagen está en <strong>zip</strong>, así que voy a descomprimirla</p>
-<pre><code>unzip 2019-09-26-raspbian-buster-lite.zip 
+<h1 id="silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian-desde-la-terminal-1" title="Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal" data-export_file_name="silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal" data-description="** amixersin" data-export_date="2021-07-01 18:15" data-category="bash" data-tag="sonido,volumen,mutear,unmutear" data-image="./images-blog/bash.png">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,… desde la terminal</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 292 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<h2 id="amixersin">amixersin</h2>
+<p>Amixersin, disponible en el paquete <code>alsa-utils</code> de Ubuntu y Debian, mos mostrará los parámetros y obtendremos una descripción general de los controles del dispositivo predeterminado.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">amixersin</span></a></code></pre></div>
+<h2 id="alsamixer">alsamixer</h2>
+<p>En el mismo paquete, está disponible <code>alsamixer</code> para obtener una interfaz más visual siempre, desde la terminal.</p>
+<ul>
+<li>Con <code>F6</code> cambiaremos entre dispositivos.</li>
+<li>Con <code>Esc</code>, saldremos de <strong>alsamixer</strong></li>
+</ul>
+<h2 id="volumen-al-50">Volumen al 50%</h2>
+<p>Con el comando <code>amixer</code> + <code>set</code>, podremos configurar el volumen.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">amixer</span> set Master 50%</a></code></pre></div>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">amixer</span> sset Master 50%</a></code></pre></div>
+<ul>
+<li>Master, es el nombre del control y debe coincidir con el que ve cuando se ejecuta sin parámetros.</li>
+<li>%, corresponde con el valor</li>
+</ul>
+<p>Si PulseAudio no es su dispositivo predeterminado, puede utilizar <code>-D</code>:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">amixer</span> -D pulse set Master 50%</a></code></pre></div>
+<h2 id="graduar-volumen-por-porcentaje">Graduar Volumen por porcentaje</h2>
+<p>Para aumentar o disminuir el volumen, utiliza <code>+/-</code> después del número:</p>
+<pre><code>amixer set Master 10%+
+amixer set Master 10%-
 </code></pre>
-<h2 id="localizar-nuestro-pendrive-o-sd">Localizar nuestro Pendrive o SD</h2>
-<p>Introducimos nuestro Pendrive o SD a nuestro PC y mediante esta línea, localizamos que unidad es</p>
-<pre><code>df -h
-</code></pre>
-<p>Por tamaño, la unidad de mi Pendrive es <strong>sdb</strong>.</p>
-<h2 id="desmontar-la-unidad">Desmontar la unidad</h2>
-<p>Primero necesitamos desmonta la unidad, en mi caso la unidad es <strong>sdb</strong>.</p>
-<p>Ya tenía un raspian antiguo de pruebas. Hay 2 particiones, <strong>sdb1 y sdb2</strong>. Desmonto las dos.</p>
-<pre><code>umount /dev/sdb1
-umount /dev/sdb2
-</code></pre>
-<h2 id="grabar-pendrive-o-sd">Grabar Pendrive o SD</h2>
-<p>Vamos a utilizar <strong>dd</strong> para grabar la imágen.</p>
-<p><strong>dd [if=&lt;ORIGEN&gt;] [of=&lt;DESTINO&gt;]</strong></p>
-<pre><code>sudo dd bs=1M if=2019-09-26-raspbian-buster-lite.img of=/dev/sdb status=progress
-</code></pre>
-<p><strong>if</strong> es la ruta origen, en este caso la imágen de raspbian y <strong>off</strong> es el destino, el Pendrive. <strong>bs=1M</strong>, significa que la escritura se hará en bloques de 1M. <strong>status=progress</strong>, muestra el proceso de grabado, para que no nos desesperemos</p>
-<p>Si el archivo es extensión <strong>.img.xz</strong>, podemos grabarlo directamente con este comando:</p>
-<pre><code>sudo xzcat ~/recalbox-rpi3.img.xz | dd bs=1M  of=/dev/mmcblk3p status=progress 
-</code></pre>
+<h2 id="mutear-y-unmutear">Mutear y unmutear</h2>
+<p>Para silenciar, reactivar el sonido o alternar entre el estado silenciado/no silenciado, utiliza:</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">amixer</span> set Master mute</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="ex">amixer</span> set Master unmute</a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="ex">amixer</span> set Master toggle</a></code></pre></div>
+<p>Esto también debería garantizar que todas las salidas estén controladas.</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">amixer</span> -c 0 set Master playback 0% mute</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="ex">amixer</span> -c 0 set Master playback 100% unmute</a></code></pre></div>
 <br>
-<p>Publicado por Angel el martes 29 octubre del 2019</p>
+<p>Publicado por Angel el jueves 01 julio del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

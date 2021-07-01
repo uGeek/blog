@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal',
+            'text': '** amixersin', 
+            'tags': 'bash,sonido,volumen,mutear,unmutear,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html' 
+},
+{
             'title': 'Owntracks o Nextracks con Home Assitant',
             'text': 'Hay un servidor con el que podemos tener autohospedado un sistema para geolocalizar a todos los usuario que quieran compartir su ubicación.', 
             'tags': 'homeassitant,owntracks,,,,', 
@@ -835,7 +841,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
