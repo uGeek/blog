@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Comandos docker para guardar imagen',
+            'text': 'Comandos docker para guardar imagen', 
+            'tags': 'docker,docker,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-07-2-comandos-docker-para-guardar-imagen.html' 
+},
+{
             'title': 'Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal',
             'text': '** amixersin', 
             'tags': 'bash,sonido,volumen,mutear,unmutear,', 

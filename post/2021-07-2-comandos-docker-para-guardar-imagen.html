@@ -1,5 +1,5 @@
 <head>
-<title>Docker: Mariadb. uGeek Blog </title>
+<title>Comandos docker para guardar imagen. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" />
+<meta name="description" content="Comandos docker para guardar imagen" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: Mariadb" />
-<meta property="og:description" content="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/mariadb.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-11-11-docker:-mariadb.html" />
+<meta property="og:title" content="Comandos docker para guardar imagen" />
+<meta property="og:description" content="Comandos docker para guardar imagen" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-07-2-comandos-docker-para-guardar-imagen.html" />
 
-<meta name="twitter:title" content="Docker: Mariadb" />
-<meta name="twitter:description" content="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/mariadb.png" />
+<meta name="twitter:title" content="Comandos docker para guardar imagen" />
+<meta name="twitter:description" content="Comandos docker para guardar imagen" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,66 +85,20 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-mariadb-1" title="Docker: Mariadb" data-export_file_name="Docker: Mariadb" data-description="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" data-export_date="2019-11-11 17:55" data-category="docker" data-tag="mariadb" data-image="./images-blog/mariadb.png">Docker: Mariadb</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 348 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,… Pero yo he optado por crear uno yo mismo.</p>
-<p>El Docker que creé lo subí al DockerHub, y dos meses después ya supera mucho más de 10.000 descargas.</p>
+<h1 id="comandos-docker-para-guardar-imagen-1" title="Comandos docker para guardar imagen" data-export_file_name="comandos-docker-para-guardar-imagen" data-description="Comandos docker para guardar imagen" data-export_date="2021-07-2 17:00" data-category="docker" data-tag="docker" data-image="./images-blog/docker.png">Comandos docker para guardar imagen</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 149 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Comandos docker para guardar imagen</p>
+<p>Hay imágenes de docker que pueden desaparecer del DockerHub, o simplemete, necesitar cargar una imagen en un lugar donde no tengas conexión a internet o compartir con un amigo.</p>
 <center>
-<p><img src="../images-blog/mariadb.png" /></p>
+<p><img src="../images-blog/docker.png" /></p>
 </center>
-<p>El objetivo erá utilizar un mariadb muy ligero que partiera de un Alpine Linux.</p>
-<h2 id="montar-el-docker">Montar el Docker</h2>
-<p>El puerto por defecto de mariadb, que es el 3306, yo en le ejemplo lo estoy desviando al 3307. Puedes utilizar el que tu desees.</p>
-<p>Recuerda poner la contraseña de la base de datos, poniéndola en lugar de <code>my-secret-pw</code>.</p>
-<p>Si creas el contenedor como está aquí:</p>
-<ul>
-<li>usuario -&gt; root</li>
-<li>ip -&gt; La del servidor</li>
-<li>Puerto -&gt; 3307</li>
-<li>Contraseña -&gt; my-secret-pw</li>
-</ul>
-<p>Las carpetas que están en <strong>-v</strong>, son las carpetas de configuración de mariadb.</p>
-<h3 id="para-arm">Para ARM</h3>
-<pre><code>docker run --name mariadb \
--p  3307:3306 \
--v $HOME/docker/mariadb/config:/var/lib/mysql \
--v $HOME/docker/mariadb/conf.d:/etc/mysql/conf.d \
--e MYSQL_ROOT_PASSWORD=my-secret-pw -d \
-ugeek/mariadb:arm
-</code></pre>
-<h3 id="para-amd64">Para amd64</h3>
-<p>Arquitectura 64bits</p>
-<pre><code>docker run --name mariadb \
--p  3307:3306 \
--v $HOME/docker/mariadb/config:/var/lib/mysql \
--v $HOME/docker/mariadb/conf.d:/etc/mysql/conf.d \
--e MYSQL_ROOT_PASSWORD=my-secret-pw -d \
-ugeek/mariadb:amd64
-</code></pre>
-<h2 id="crea-la-base-de-datos">Crea la base de datos</h2>
-<p>Entramos dentro del contenedor:</p>
-<pre><code>docker exec -i -t mariadb sh
-</code></pre>
-<p>Una vez dentro, ejecutaremos los siguiente comandos.</p>
-<h3 id="ejecutamos-mariadb">Ejecutamos mariadb</h3>
-<pre><code>mysql -u root -p
-</code></pre>
-<h3 id="creamos-la-base-de-datos">Creamos la base de datos</h3>
-<pre><code>CREATE DATABASE IF NOT EXISTS &lt;name&gt;; 
-</code></pre>
-<p>Damos privilegios para que acceda el servicio:</p>
-<pre><code>GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;localhost&#39;;
-</code></pre>
-<pre><code>flush privileges;
-</code></pre>
-<p>Salimos de mariadb:</p>
-<pre><code>\q
-</code></pre>
-<p>Salimos del contenedor:</p>
-<pre><code>exit
-</code></pre>
+<p>Si quieres conservar tus imágenes en archivo <strong>.tar</strong> es tan simple como:</p>
+<h2 id="guardar-imagen">Guardar imagen</h2>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> save nombre_imagen <span class="op">&gt;</span> nombre_imagen.tar</a></code></pre></div>
+<h2 id="cargar-imagen">Cargar imagen</h2>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> load <span class="op">&lt;</span> nombre_imagen.tar</a></code></pre></div>
 <br>
-<p>Publicado por Angel el lunes 11 noviembre del 2019</p>
+<p>Publicado por Angel el viernes 02 julio del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
