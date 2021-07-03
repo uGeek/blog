@@ -1,15 +1,15 @@
 var tipuesearch = {pages: [
 {
-            'title': 'Comandos docker para guardar imagen',
-            'text': 'Comandos docker para guardar imagen', 
-            'tags': 'docker,docker,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2021-07-2-comandos-docker-para-guardar-imagen.html' 
-},
-{
             'title': 'Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica',
             'text': 'Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu', 
             'tags': 'todo.txt,python,tareas,,,', 
             'url': 'https://ugeek.github.io/blog/post/2021-07-04-pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica.html' 
+},
+{
+            'title': 'Comandos docker para guardar imagen',
+            'text': 'Comandos docker para guardar imagen', 
+            'tags': 'docker,docker,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-07-02-comandos-docker-para-guardar-imagen.html' 
 },
 {
             'title': 'Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal',
@@ -853,7 +853,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
