@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2021-07-2-comandos-docker-para-guardar-imagen.html' 
 },
 {
+            'title': 'Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica',
+            'text': 'Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu', 
+            'tags': 'todo.txt,python,tareas,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-07-04-pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica.html' 
+},
+{
             'title': 'Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal',
             'text': '** amixersin', 
             'tags': 'bash,sonido,volumen,mutear,unmutear,', 

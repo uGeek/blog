@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 02 Jul 2021  +0100</pubDate>
+    <pubDate>Fri, 02 Jul 2021 01:23 +0100</pubDate>
     <category>docker</category>
     <category>docker</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2021-07-2-comandos-docker-para-guardar-imagen.html</guid>
+   </item>
+   <item>
+    <title>Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</title>
+    <link>https://ugeek.github.io/blog/post/2021-07-04-pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/Pter._Otra_aplicación_de_todo.txt_escrita_en_python_para_terminal_el_Interfaz_gráfica.png" alt="Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica"&gt;
+&lt;br&gt;&lt;p&gt;Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-07-04-pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica.html&gt;Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 04 Jul 2021  +0100</pubDate>
+    <category>todo.txt</category>
+    <category>python</category>
+    <category>tareas</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-07-04-pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica.html</guid>
    </item>
    <item>
     <title>Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</title>
