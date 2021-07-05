@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="pter.-otra-aplicación-de-todo.txt-escrita-en-python-para-terminal-interfaz-gráfica-1" title="Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica" data-export_file_name="pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica" data-description="Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu" data-export_date="2021-07-04 01:23" data-category="todo.txt" data-tag="python,tareas" data-image="./images-blog/Pter._Otra_aplicación_de_todo.txt_escrita_en_python_para_terminal_el_Interfaz_gráfica.png">Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</h1>
-<h5>Tiempo estimado de lectura: 14 minutos. 1630 palabras.    <a href="https://ugeek.github.io/blog/categories/todo.txt">todo.txt</a></h5>
+<h5>Tiempo estimado de lectura: 14 minutos. 1635 palabras.    <a href="https://ugeek.github.io/blog/categories/todo.txt">todo.txt</a></h5>
 <p>Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu escritorio o accediendo a tu servidor vía SSH desde la terminal.</p>
 <p>Además, su punto fuerte es la cantidad de opciones mediante extensiones no standarizadas en el todo.txt tiene.</p>
 <center>
@@ -161,13 +161,16 @@ $("#tipue_search_input").tipuesearch();
 <p>Busca por palabra, contexto,… Una vez realizada la búsqueda, pulsa la tecla <code>s</code> y escribe el nombre que quieres utilizar para la búsqueda.</p>
 <p>Para cargar una búsqueda, utiliza la letra <code>l</code></p>
 <p>Esto creará un archivo llamado <code>searches.txt</code> en el directorio <code>~/.config/pter</code>.</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">trabajo</span> = @trabajo</a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="ex">personal</span> = @personal</a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="ex">podcast</span> = @podcast</a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="ex">blog</span> = @blog</a></code></pre></div>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">Realizar</span> esta semana = done:no duebefore:mon</a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="ex">Realizar</span> Hoy = done:yes completed:0</a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="ex">Tareas</span> abiertas = done:no</a></code></pre></div>
+<pre><code>nano ~/.config/pter/searches.txt 
+</code></pre>
+<p>Copiamos el ejemplo:</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">trabajo</span> = @trabajo</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="ex">personal</span> = @personal</a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="ex">podcast</span> = @podcast</a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="ex">blog</span> = @blog</a></code></pre></div>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">Realizar</span> esta semana = done:no duebefore:mon</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="ex">Realizar</span> Hoy = done:yes completed:0</a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="ex">Tareas</span> abiertas = done:no</a></code></pre></div>
 <h2 id="seguimiento-del-tiempo-de-las-tareas">Seguimiento del tiempo de las tareas</h2>
 <p>Nos situamos sobre la tarea y pulsamos la tecla <code>t</code>. Esto agregará un tracking: atributo con el local actual fecha-hora de la tarea y cambiara la tarea a color verde.</p>
 <p>Es fantástico, porque podemos salir del todo.txt y <strong>pter</strong> deja guardado el inicio del tiempo de tarea, de manera que <strong>sigue contando el tiempo</strong>.</p>
@@ -180,11 +183,11 @@ $("#tipue_search_input").tipuesearch();
 <p>Con la letra <code>L</code>, podemos cargar la tarea plantilla. Si seleccionamos <strong>none</strong>, no se cargará ninguna plantilla.</p>
 <p>Si quieres enviar una tarea a platillas, sitúate sobre la tarea y pulsa <code>S</code>.</p>
 <p>Edita</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">nano</span> ~/.config/pter/templates.txt</a></code></pre></div>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">nano</span> ~/.config/pter/templates.txt</a></code></pre></div>
 <p>Copia</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">Paper</span> revision = @paper +revision due:+7d estimate:</a>
-<a class="sourceLine" id="cb9-2" title="2"><span class="ex">Bug</span> fix = (A) <span class="ex">@programming</span> due:+2d estimate: git:</a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="ex">Project</span> X = @work +projectx due:2021-04-11 estimate:</a></code></pre></div>
+<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="ex">Paper</span> revision = @paper +revision due:+7d estimate:</a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="ex">Bug</span> fix = (A) <span class="ex">@programming</span> due:+2d estimate: git:</a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="ex">Project</span> X = @work +projectx due:2021-04-11 estimate:</a></code></pre></div>
 <h2 id="marcar-tarea-como-delegada">Marcar tarea como delegada</h2>
 <p>Nos situamos sobre la tarea y pulsamos <code>&gt;</code> o <code>Ctrl+G</code> en la versión con interfaz gráfica</p>
 <h2 id="identificador-único-de-tarea-y-subtareas">Identificador único de tarea y subtareas</h2>
@@ -194,23 +197,23 @@ $("#tipue_search_input").tipuesearch();
 <p>A su subtarea le pondremos la etiqueta <code>after:1</code>. Esto quiere decir que la subtarea solo será visible en el momento que completemos la tarea con <code>id:1</code>.</p>
 <p>Podemos utilizar varias subtareas enlazadas a varios identificadores.</p>
 <p>Ejemplo: Cuando completemos la primer tarea, se mostrará la segunda y tras esta, la tercera.</p>
-<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="ex">Comprar</span> patatas @tienda id:1</a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="ex">Hacer</span> papas fritas @cocina id:2 after:1</a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="ex">Come</span> papas fritas para cenar after:2</a></code></pre></div>
+<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="ex">Comprar</span> patatas @tienda id:1</a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="ex">Hacer</span> papas fritas @cocina id:2 after:1</a>
+<a class="sourceLine" id="cb11-3" title="3"><span class="ex">Come</span> papas fritas para cenar after:2</a></code></pre></div>
 <p>Resumen:</p>
 <p>after:4, significa que esta entrada solo se puede iniciar una vez que la entrada con id:4se ha completado. id:3, le permite asignar un identificador único a las entradas en todo.txt, como 3. pter aceptará cuando haya ID no únicos, pero por supuesto, identificar entradas de forma única será complicado.</p>
 <h3 id="crear-id-automáticos-o-por-grupos">Crear id automáticos o por grupos</h3>
 <p>Podemos crear los identificadores de forma automática, si no recuerdas el último identificador con <code>id:#auto</code></p>
 <p>También podemos agregar identificadores por grupo, por ejemplo, <code>id:supermercado#auto</code> y esto creará:</p>
-<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="ex">id</span>:supermercado1</a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="ex">id</span>:supermercado2</a>
-<a class="sourceLine" id="cb11-3" title="3"><span class="ex">id</span>:supermercado3...</a></code></pre></div>
+<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">id</span>:supermercado1</a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="ex">id</span>:supermercado2</a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="ex">id</span>:supermercado3...</a></code></pre></div>
 <h2 id="referencias-de-tareas">Referencias de tareas</h2>
 <p>Tareas que se refieren a otras tareas por cualquiera de los medios existentes (p. Ej. ref: o after:) se puede encontrar buscando ref:.</p>
 <p>Si busca utilizando varias referencias (p. Ej. ref:4,5o ref:4 ref:5) los ID de la tarea se consideran lógicos or.</p>
 <h2 id="añadir-nueva-tarea-desde-la-terminal">Añadir nueva tarea desde la terminal</h2>
 <p>Añadir directamente una nueva tarea</p>
-<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">pter</span> -n <span class="st">&quot;nueva tarea&quot;</span> ~/todo/todo.txt</a></code></pre></div>
+<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="ex">pter</span> -n <span class="st">&quot;nueva tarea&quot;</span> ~/todo/todo.txt</a></code></pre></div>
 <h2 id="extensiones-a-en-la-aplicación-pter-todo.txt">Extensiones a en la aplicación pter todo.txt</h2>
 <p>Para ampliar las posibilidades limitadas del <strong>todo.txt</strong>, pter también admite las siguiente etiquetas:</p>
 <ul>
@@ -262,26 +265,26 @@ $("#tipue_search_input").tipuesearch();
 <p>También podemos encontrarla en la <a href="https://github.com/vonshednob/pter/blob/master/doc/pter.rst">siguiente url del proyecto</a></p>
 <h2 id="ejemplo-configuración">Ejemplo configuración</h2>
 <p>En mi Ubuntu 20.04, la fuente en la aplicación gráfica es muy pequeña, así que he aumentado la fuente a <strong>14</strong> siguiendo el ejemplo del archivo de configuración:</p>
-<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1">;; <span class="ex">General</span> options for the GUI version</a>
-<a class="sourceLine" id="cb13-2" title="2">[<span class="ex">GUI</span>]</a>
-<a class="sourceLine" id="cb13-3" title="3"></a>
-<a class="sourceLine" id="cb13-4" title="4">;; <span class="ex">Font</span> size for the task list</a>
-<a class="sourceLine" id="cb13-5" title="5"><span class="ex">font-size</span> = 14</a></code></pre></div>
+<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1">;; <span class="ex">General</span> options for the GUI version</a>
+<a class="sourceLine" id="cb14-2" title="2">[<span class="ex">GUI</span>]</a>
+<a class="sourceLine" id="cb14-3" title="3"></a>
+<a class="sourceLine" id="cb14-4" title="4">;; <span class="ex">Font</span> size for the task list</a>
+<a class="sourceLine" id="cb14-5" title="5"><span class="ex">font-size</span> = 14</a></code></pre></div>
 <h2 id="ayuda">Ayuda</h2>
-<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="ex">usage</span>: pter [-h] [-c CONFIG] [-v] [-u] [-n NEW_TASK] [filename [filename ...]]</a>
-<a class="sourceLine" id="cb14-2" title="2"></a>
-<a class="sourceLine" id="cb14-3" title="3"><span class="ex">positional</span> arguments:</a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="ex">filename</span>              todo.txt file(s) <span class="ex">to</span> open</a>
-<a class="sourceLine" id="cb14-5" title="5"></a>
-<a class="sourceLine" id="cb14-6" title="6"><span class="ex">optional</span> arguments:</a>
-<a class="sourceLine" id="cb14-7" title="7"><span class="ex">-h</span>, --help            Mostrar ayuda</a>
-<a class="sourceLine" id="cb14-8" title="8"><span class="ex">-c</span> CONFIG, --config CONFIG</a>
-<a class="sourceLine" id="cb14-9" title="9"><span class="ex">Location</span> del archivo de configuration . Por defecto /home/angel/.config/pter/pter.conf.</a>
-<a class="sourceLine" id="cb14-10" title="10"><span class="ex">-v</span>, --version         version del programa</a>
-<a class="sourceLine" id="cb14-11" title="11"><span class="ex">-u</span>, --check-for-updates</a>
-<a class="sourceLine" id="cb14-12" title="12"><span class="ex">Checkear</span> online si hay una nueva version disponible.</a>
-<a class="sourceLine" id="cb14-13" title="13"><span class="ex">-n</span> NEW_TASK, --new-task NEW_TASK</a>
-<a class="sourceLine" id="cb14-14" title="14"><span class="ex">A</span>ñadir una nueva tarea.</a></code></pre></div>
+<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="ex">usage</span>: pter [-h] [-c CONFIG] [-v] [-u] [-n NEW_TASK] [filename [filename ...]]</a>
+<a class="sourceLine" id="cb15-2" title="2"></a>
+<a class="sourceLine" id="cb15-3" title="3"><span class="ex">positional</span> arguments:</a>
+<a class="sourceLine" id="cb15-4" title="4"><span class="ex">filename</span>              todo.txt file(s) <span class="ex">to</span> open</a>
+<a class="sourceLine" id="cb15-5" title="5"></a>
+<a class="sourceLine" id="cb15-6" title="6"><span class="ex">optional</span> arguments:</a>
+<a class="sourceLine" id="cb15-7" title="7"><span class="ex">-h</span>, --help            Mostrar ayuda</a>
+<a class="sourceLine" id="cb15-8" title="8"><span class="ex">-c</span> CONFIG, --config CONFIG</a>
+<a class="sourceLine" id="cb15-9" title="9"><span class="ex">Location</span> del archivo de configuration . Por defecto /home/angel/.config/pter/pter.conf.</a>
+<a class="sourceLine" id="cb15-10" title="10"><span class="ex">-v</span>, --version         version del programa</a>
+<a class="sourceLine" id="cb15-11" title="11"><span class="ex">-u</span>, --check-for-updates</a>
+<a class="sourceLine" id="cb15-12" title="12"><span class="ex">Checkear</span> online si hay una nueva version disponible.</a>
+<a class="sourceLine" id="cb15-13" title="13"><span class="ex">-n</span> NEW_TASK, --new-task NEW_TASK</a>
+<a class="sourceLine" id="cb15-14" title="14"><span class="ex">A</span>ñadir una nueva tarea.</a></code></pre></div>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/vonshednob/pter">https://github.com/vonshednob/pter</a></li>
