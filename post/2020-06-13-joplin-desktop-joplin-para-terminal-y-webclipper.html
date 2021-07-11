@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="joplin-desktop-joplin-para-terminal-y-webclipper-1" title="Joplin Desktop, Joplin para Terminal y WebClipper" data-export_file_name="joplin-desktop-joplin-para-terminal-y-webclipper" data-description="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." data-export_date="2020-06-13 19:30 2021-06-30" data-category="joplin" data-tag="notas,terminal" data-image="./images-blog/joplin.png">Joplin Desktop, Joplin para Terminal y WebClipper</h1>
-<h5>Tiempo estimado de lectura: 28 minutos. 3103 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
+<h5>Tiempo estimado de lectura: 28 minutos. 3133 palabras.    <a href="https://ugeek.github.io/blog/categories/joplin">joplin</a></h5>
 <p>Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav.</p>
 <center height="250" width="250">
 <p><img src="../images-blog/joplin.png" /></p>
@@ -120,6 +120,12 @@ $("#tipue_search_input").tipuesearch();
 <p>Por si solo, el plugin no funciona. Necesita tener abierta la versión desktop de joplin, ya que esta utiliza el puerto <strong>41184</strong> para enviar el contenido del navegador.</p>
 <p>Para habilitar que WebClipper y envíe el contenido de una web a joplin desktop, tenemos que ir <strong>Herramientas/Opciones/Web Clipper</strong> y habilitar el servicio.</p>
 <p>Después, como no, tenemos que instalar la extensión para Firefox o Google Chrome.</p>
+<p>Si hay algún problema, siempre puedes comprobar si el servidor de joplin está corriendo por el puerto por defecto con:</p>
+<pre><code>curl http://127.0.0.1:41184/ping
+</code></pre>
+<p>El resultado si todo es correcto sería:</p>
+<pre><code>JoplinClipperServer
+</code></pre>
 <h2 id="control-de-versiones">Control de versiones</h2>
 <p>Joplin ya permite el control de versiones de una nota. Esto quiere decir que podemos volver atrás en el tiempo, a una edición anterior. Esta opción actualmente solo está disponible en la versión desktop pulsando sobre la "i" de información de la nota o tarea.</p>
 <h2 id="sublibretas">SubLibretas</h2>

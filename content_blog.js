@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Shaarli cli',
+            'text': 'Gracias a esta aplicación desarrollada en Python, puedo acceder a mi instancia de *Shaarli*.', 
+            'tags': 'shaarli,terminal,cli,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-07-11-shaarli-cli.html' 
+},
+{
             'title': 'Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica',
             'text': 'Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu', 
             'tags': 'todo.txt,python,tareas,,,', 
@@ -853,7 +859,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
