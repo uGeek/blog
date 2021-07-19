@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal-1" title="Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal" data-export_file_name="conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal" data-description="Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP&#39;s y MAC, para después ejecutar scripts en función del resultado." data-export_date="2021-04-27 16:00" data-category="bash" data-tag="ip,nmap" data-image="./images-blog/bash.png">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 176 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<h1 id="conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal-1" title="Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal" data-export_file_name="conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal" data-description="Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP&#39;s y MAC, para después ejecutar scripts en función del resultado." data-export_date="2021-04-27 16:00 2021-07-17" data-category="bash" data-tag="ip,nmap" data-image="./images-blog/bash.png">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 197 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
 <p>Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP's y MAC, para después ejecutar scripts en función del resultado.</p>
 <center>
 <p><img src="../images-blog/bash.png" /></p>
@@ -99,8 +99,11 @@ $("#tipue_search_input").tipuesearch();
 <p>Tan sencillo como ejecutar:</p>
 <div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> nast -m</a></code></pre></div>
 <p>Ahora <strong>nast</strong> escaneará las red y la terminal nos devolverá todos los dispositivos con su IP y MAC.</p>
+<p>Otro método quizás más sencillo, también sería:</p>
+<pre><code>nmap -sP 192.168.1.0/24 | grep &quot;scan&quot;
+</code></pre>
 <br>
-<p>Publicado por Angel el martes 27 abril del 2021</p>
+<p>Publicado por Angel el martes 27 abril del 2021 y <strong>actualizado</strong> el sábado 17 julio del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
