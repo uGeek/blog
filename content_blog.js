@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Vizex. Ver almacenamiento disponible y ocupado de tus discos',
+            'text': 'Soy amante de las aplicaciones que te muestran todo el espacio que tienes en tu disco duro. Ya he escrito en varios artículos diferentes aplicaciones, hoy toca el turno a', 
+            'tags': 'discoduro,python,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-07-24-vizex.html' 
+},
+{
             'title': 'Conexión segura por TLS al DNS de CloudFlare',
             'text': 'Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu', 
             'tags': 'dns,cloudflare,,,,', 

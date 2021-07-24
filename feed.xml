@@ -13,10 +13,43 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Vizex. Ver almacenamiento disponible y ocupado de tus discos</title>
+    <link>https://ugeek.github.io/blog/post/2021-07-24-vizex.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="Vizex. Ver almacenamiento disponible y ocupado de tus discos"&gt;
+&lt;br&gt;&lt;p&gt;Soy amante de las aplicaciones que te muestran todo el espacio que tienes en tu disco duro. Ya he escrito en varios artículos diferentes aplicaciones, hoy toca el turno a... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-07-24-vizex.html&gt;Vizex. Ver almacenamiento disponible y ocupado de tus discos&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 24 Jul 2021  +0100</pubDate>
+    <category>discoduro</category>
+    <category>python</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-07-24-vizex.html</guid>
+   </item>
+   <item>
     <title>Conexión segura por TLS al DNS de CloudFlare</title>
     <link>https://ugeek.github.io/blog/post/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/Conexión_segura_por_TLS_al_DNS_de_CloudFlare.png" alt="Conexión segura por TLS al DNS de CloudFlare"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/cloudflare.png" alt="Conexión segura por TLS al DNS de CloudFlare"&gt;
 &lt;br&gt;&lt;p&gt;Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html&gt;Conexión segura por TLS al DNS de CloudFlare&lt;/a&gt;
 
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 19 Jul 2021  +0100</pubDate>
+    <pubDate>Mon, 19 Jul 2021 20:15 +0100</pubDate>
     <category>dns</category>
     <category>cloudflare</category>
     <category></category>

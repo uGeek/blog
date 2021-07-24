@@ -1,5 +1,5 @@
 <head>
-<title>aplicaciones</title>
+<title>Vizex. Ver almacenamiento disponible y ocupado de tus discos. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,35 +47,70 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>aplicaciones</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="vizex.-ver-almacenamiento-disponible-y-ocupado-de-tus-discos-1" title="Vizex. Ver almacenamiento disponible y ocupado de tus discos" data-export_file_name="vizex" data-description="Soy amante de las aplicaciones que te muestran todo el espacio que tienes en tu disco duro. Ya he escrito en varios artículos diferentes aplicaciones, hoy toca el turno a" data-export_date="2021-07-24 20:15" data-category="discoduro" data-tag="python" data-image="./images-blog/bash.png">Vizex. Ver almacenamiento disponible y ocupado de tus discos</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 191 palabras.    <a href="https://ugeek.github.io/blog/categories/discoduro">discoduro</a></h5>
+<p>Soy amante de las aplicaciones que te muestran todo el espacio que tienes en tu disco duro. Ya he escrito en varios artículos diferentes aplicaciones, hoy toca el turno a <strong>vizex</strong>.</p>
+<center>
+<p><img src="../images-blog/bash.png" /></p>
+</center>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pip3 install vizex</a></code></pre></div>
+<p>En ubuntu 20.04 me ha funcionado sin problemas, en cambio, en Raspberry OS me daba el siguiente error <code>Original error was: libf77blas.so.3: cannot open shared object file: No such file or directory</code> , así que he tenido que instalar:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> apt-get install libatlas-base-dev</a></code></pre></div>
+<p>Para actualizar la aplicación, lo haremos mediante:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> pip3 install vizex --upgrade</a></code></pre></div>
+<h2 id="uso">Uso</h2>
+<p>Con el comando <code>vizex</code>, nos muestra el almacenamiento ocupado y libre de todas las unidades que tenemos</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">vizex</span></a></code></pre></div>
+<p>Si ejecutamos <code>vizexdf</code>, nos mostrará todos los archivos o directorios de la ubicación actual, con el tamaño</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">vizexdf</span></a></code></pre></div>
+<p>-a, muestra los archivos y directorios ocultos -d, ordenar columnas en orden descendente -s, ordena la tabla por tipo, tamaño, nombre o fecha -tree, imprime un árbol</p>
+<h2 id="ayuda">Ayuda</h2>
+<p>Como siempre, podemos acudir al comando de ayuda para ver todas las opciones:</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">vizex</span> --help</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html>Paquetes Snap</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html>Castero. Podcatcher ligero para Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html>Cliente dlna para tu escritorio</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html>Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html>Simplenote en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html>Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-21-qtodotxt.html>QTodoTxt. todo.txt en tu escritorio</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-16-instalando-la-ultima-version-de-firefox.html>Instalando la última versión de Firefox</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-27-aprendiendo-todo-txt-todotxt-cli.html>Aprendiendo todo.txt. todotxt-cli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-31-a-python-tambien-le-gusta-el-todo-txt-todotxt-machine.html>A python también le gusta el todo.txt. todotxt-machine</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html>Simplenote para terminal. Sncli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-02-28-telegram-desktop-atajos-de-teclado.html>Telegram Desktop. Atajos de teclado</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-03-10-escuchando-musica-de-mi-servidor-jellyfin-con-jellycli.html>Escuchando música de mi servidor Jellyfin con jellycli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-01-etesync-tareas-contactos-y-agendas-sincronizadas-de-extremo-a-extremo.html>EteSync. Tareas, Contactos y Calendarios, sincronizadas de extremo a extremo</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-17-instalar-ultima-version-de-go-en-raspberry-arm-o-amd64.html>Instalar última versión de Go en Raspberry, ARM o amd64</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html>Instalando Thunderbird y añadiendo el corrector ortográfico</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-27-pielauncher-mi-nuevo-lanzador-de-aplicaciones-para-android.html>PieLauncher. Mi nuevo Lanzador de aplicaciones para Android</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html>Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html>Aplicaciones Telegram versión web, Android, IOS,...</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-05-30-anadiendo-mas-repositorios-a-f-droid-o-foxy-droid.html>Añadiendo más repositorios a F-Droid o Foxy Droid</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html>Sensors y psensor. Controlando la temperatura de mi PC</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-07-24-vizex.html>Vizex. Ver almacenamiento disponible y ocupado de tus discos</a></li>
+<li><a href="https://github.com/bexxmodd/vizex">https://github.com/bexxmodd/vizex</a></li>
 </ul>
+<br>
+<p>Publicado por Angel el sábado 24 julio del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
