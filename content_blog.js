@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Bash en Docker',
+            'text': 'Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script =script.sh=.', 
+            'tags': 'docker,bash,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html' 
+},
+{
             'title': 'Vizex. Ver almacenamiento disponible y ocupado de tus discos',
             'text': 'Soy amante de las aplicaciones que te muestran todo el espacio que tienes en tu disco duro. Ya he escrito en varios artículos diferentes aplicaciones, hoy toca el turno a', 
             'tags': 'discoduro,python,,,,', 

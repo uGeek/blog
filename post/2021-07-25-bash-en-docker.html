@@ -1,5 +1,5 @@
 <head>
-<title>Cambiar el hostname Ubuntu, Debian, Raspberry OS.... uGeek Blog </title>
+<title>Bash en Docker. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*." />
+<meta name="description" content="Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script =script.sh=." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Cambiar el hostname Ubuntu, Debian, Raspberry OS..." />
-<meta property="og:description" content="Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*." />
+<meta property="og:title" content="Bash en Docker" />
+<meta property="og:description" content="Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script =script.sh=." />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-03-07-cambiar-el-hostname-ubuntu-debian-raspberry-os--.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html" />
 
-<meta name="twitter:title" content="Cambiar el hostname Ubuntu, Debian, Raspberry OS..." />
-<meta name="twitter:description" content="Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*." />
+<meta name="twitter:title" content="Bash en Docker" />
+<meta name="twitter:description" content="Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script =script.sh=." />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
@@ -85,43 +85,36 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="cambiar-el-hostname-ubuntu-debian-raspberry-os-1" title="Cambiar el hostname Ubuntu, Debian, Raspberry OS..." data-export_file_name="cambiar-el-hostname-ubuntu-debian-raspberry-os--" data-description="Si utilizas una Raspberry, por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*, puede que el hostname sea *ubuntu*." data-export_date="2021-03-07 20:48 2021-06-28" data-category="bash" data-tag="ubuntu,debian,raspberry" data-image="./images-blog/bash.png">Cambiar el hostname Ubuntu, Debian, Raspberry OS…</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 248 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Si utilizas una Raspberry, por defecto el hostname es <strong>pi</strong>. Si tienes muchos dispositivos que administrar y por ejemplo utilizan <strong>Ubuntu</strong>, puede que el hostname sea <strong>ubuntu</strong>.</p>
+<h1 id="bash-en-docker-1" title="Bash en Docker" data-export_file_name="bash-en-docker" data-description="Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script =script.sh=." data-export_date="2021-07-25 15:05" data-category="docker" data-tag="bash" data-image="./images-blog/bash.png">Bash en Docker</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 164 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script <code>script.sh</code>.</p>
 <center>
 <p><img src="../images-blog/bash.png" /></p>
 </center>
-<p>Esto puede ser un locura, así que es interesante poner un nombre a cada dispositivo para poder identificarlos.</p>
-<p>Vamos a ver como hacer esto en <strong>Ubuntu</strong>, <strong>Raspberry</strong>, <strong>Debian</strong> y derivadas…</p>
-<h2 id="hostname-actual">hostname actual</h2>
-<p>Para ver el hostname que estamos utilizando actualmente:</p>
-<p><code>hostname</code></p>
-<h2 id="cambiar-el-hostname">Cambiar el hostname</h2>
-<p>Tecleamos el siguiente comando:</p>
-<p><code>sudo hostname nuevo_hostname</code></p>
-<p>En distribuciones actuales como Ubuntu, Raspbian, basadas en systemd, podemos cambia el hostname con:</p>
-<p><code>hostnamectl set-hostname &lt;nuevo nombre de hostname&gt;</code></p>
-<p>En Debian, además tenemos que editar los archivos /etc/hostname y /etc/hosts.</p>
-<p>Sustituye hostname antiguo por el nuevo :</p>
-<p><code>sudo nano /etc/hostname</code></p>
-<p><code>sudo nano /etc/hosts</code></p>
-<p>Ahora reiniciamos y comprobaremos si se ha modificado el hostname.</p>
-<p><code>sudo reboot now</code></p>
-<p><code>hostname</code></p>
+<h2 id="corriendo-bash-desde-un-docker">Corriendo bash desde un docker</h2>
+<p>Vamos a correr la versión <code>5.0</code>. Mira <a href="https://hub.docker.com/_/bash?tab=tags&amp;page=1&amp;ordering=last_updated">las etiquetas</a> para personalizar la versión.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> run -it --rm -v <span class="va">$HOME</span>/docker/bash/script.sh:/script.sh:ro bash:5.0 bash /script.sh</a></code></pre></div>
+<p>También podemos utilizar la última versión:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> run -it --rm -v /root:/script.sh:ro bash bash</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://hub.docker.com/_/bash?tab=description">bash</a></li>
+<li><a href="https://hub.docker.com/_/bash?tab=tags&amp;page=1&amp;ordering=last_updated">bash Tags | Docker Hub</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el domingo 07 marzo del 2021 y <strong>actualizado</strong> el lunes 28 junio del 2021</p>
+<p>Publicado por Angel el domingo 25 julio del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2021-07-24-vizex.html">Vizex. Ver almacenamiento disponible y ocupado de tus discos</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,… desde la terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html">Ampliar memoria SWAP</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-04-06-unrar-en-raspberry-pi.html">unrar en Raspberry Pi</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-30-utilizando-twitter-desde-la-terminal-con-bti.html">Utilizando twitter desde la terminal con bti</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html">YTFZF. Youtube desde la terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-17-como-cambiar-la-contrasena-de-usuario-en-linux.html">Cómo cambiar la contraseña de usuario en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-28-el-modo-mas-facil-de-instalar-administrar-wireguard.html">El modo más fácil de instalar y administrar Wireguard</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html">Servidor WebDAV con rclone, con nube público o privada</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-16-docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home.html">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html">Docker: Raneto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html">Docker en Ubuntu 20.04</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-31-docker-oficial-de-syncthing.html">Docker oficial de Syncthing</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-10-tu-pornhub-privado-se-llama-stash.html">Tu PornHub privado se llama Stash</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
