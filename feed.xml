@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Editando CSV usando Emacs</title>
+    <link>https://ugeek.github.io/blog/post/2021-07-28-editando-csv-usando-emacs.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/emacs.png" alt="Editando CSV usando Emacs"&gt;
+&lt;br&gt;&lt;p&gt;Edito muchos archivos CSV (valores separados por comas) y aunque puedo hacerlo con un programa de hoja de cálculo, me resulta más rápido hacerlo con Emacs.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-07-28-editando-csv-usando-emacs.html&gt;Editando CSV usando Emacs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 28 Jul 2021  +0100</pubDate>
+    <category>emacs</category>
+    <category>csv</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-07-28-editando-csv-usando-emacs.html</guid>
+   </item>
+   <item>
     <title>Bash en Docker</title>
     <link>https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 25 Jul 2021  +0100</pubDate>
+    <pubDate>Sun, 25 Jul 2021 10:25 +0100</pubDate>
     <category>docker</category>
     <category>bash</category>
     <category></category>

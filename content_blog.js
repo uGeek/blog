@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Editando CSV usando Emacs',
+            'text': 'Edito muchos archivos CSV (valores separados por comas) y aunque puedo hacerlo con un programa de hoja de cálculo, me resulta más rápido hacerlo con Emacs.', 
+            'tags': 'emacs,csv,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-07-28-editando-csv-usando-emacs.html' 
+},
+{
             'title': 'Bash en Docker',
             'text': 'Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script =script.sh=.', 
             'tags': 'docker,bash,,,,', 
