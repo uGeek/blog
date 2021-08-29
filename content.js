@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Zettel Notes. La mejor aplicación Zettelkasten para Android',
+            'text': 'En mi búsqueda por la aplicación de Notas perfecta, Zettel Notes ha dado un golpe muy fuerte sobre la mesa. Con una perfecta sincronización *WebDAV* y *Dropbox*, personalización de temas,', 
+            'tags': 'markdown,Zettelkasten,webdav,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-08-29-zettel-notes-la-mejor-aplicacion-zettelkasten-para-android.html' 
+},
+{
             'title': 'Lista de repositorios de Jellyfin.',
             'text': 'En las últimas versiones de Jellyfin, se incorporó la posibilidad de añadir plugins mediante repositorios.', 
             'tags': 'jellyfin,multimedia,,,,', 
@@ -889,7 +895,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
