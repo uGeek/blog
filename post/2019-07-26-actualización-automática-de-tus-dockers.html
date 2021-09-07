@@ -85,13 +85,14 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="actualización-automática-de-tus-dockers-con-watchtower-o-ouroboros-1" title="Actualización automática de tus dockers con Watchtower o Ouroboros" data-export_file_name="Actualización automática de tus dockers" data-description="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" data-export_date="2019-07-26 20:30 2020-6-2" data-category="docker" data-tag="terminal,ubuntu,raspberry" data-image="./images-blog/docker.png">Actualización automática de tus dockers con Watchtower o Ouroboros</h1>
+<h1 id="actualización-automática-de-tus-dockers-con-watchtower-o-ouroboros-1" title="Actualización automática de tus dockers con Watchtower o Ouroboros" data-export_file_name="Actualización automática de tus dockers" data-description="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" data-export_date="2019-07-26 20:30 2021-09-06" data-category="docker" data-tag="terminal,ubuntu,raspberry" data-image="./images-blog/docker.png">Actualización automática de tus dockers con Watchtower o Ouroboros</h1>
 <h5>Tiempo estimado de lectura: 3 minutos. 383 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <h2 id="watchtower">Watchtower</h2>
 <p>Watchtower es una aplicación desarrollada en Go, que controlará tus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores. Si la Watchtower detecta que una imagen ha cambiado, se reiniciará automáticamente el contenedor utilizando la nueva imagen.</p>
 <p>Watchtower desplegará su nueva imagen, parará su contenedor y lo reiniciará con las mismas opciones que se usaron cuando se implementó inicialmente.</p>
 <h3 id="en-tu-servidor-con-amd64">En tu servidor con amd64</h3>
-<pre><code>docker run -d --name watchtower --cleanup -v /var/run/docker.sock:/var/run/docker.sock v2tec/watchtower
+<pre><code>
+docker run -d --name watchtower --cleanup -v /var/run/docker.sock:/var/run/docker.sock v2tec/watchtower
 </code></pre>
 <p>La opción –cleanup, permite borrar las imagenes antiguas.</p>
 <h3 id="tu-raspberry-pi-o-placa-con-arquitectura-arm">Tu Raspberry Pi o placa con arquitectura ARM</h3>
@@ -121,11 +122,11 @@ $("#tipue_search_input").tipuesearch();
 </ul>
 <h2 id="fuente">Fuente</h2>
 <ul>
-<li><a href="https://github.com/containrrr/watchtowre">https://github.com/containrrr/watchtowre</a></li>
+<li><a href="https://github.com/containrrr/watchtower">https://github.com/containrrr/watchtower</a></li>
 <li><a href="https://hub.docker.com/r/v2tec/watchtower/">https://hub.docker.com/r/v2tec/watchtower/</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el viernes 26 julio del 2019 y <strong>actualizado</strong> el martes 02 junio del 2020</p>
+<p>Publicado por Angel el viernes 26 julio del 2019 y <strong>actualizado</strong> el lunes 06 septiembre del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
