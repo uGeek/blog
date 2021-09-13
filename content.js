@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Omega Launcher. Otro interesante Lanzador FLOSS',
+            'text': 'Me encantan los launchers de software libre con el aspecto Android puro.', 
+            'tags': 'launcher,android,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-09-13-omega-launcher-otro-interesante-lanzador-floss.html' 
+},
+{
             'title': 'Gadgetbridge. Emparejando mi Xiaomi Mi Smart Band 4, 5, 6',
             'text': 'Tengo buenos recuerdos de [[https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge][Gadgetbridge]], una aplicación que con mi Xiaomi Mi Smart Band 3, me permitió utilizar la pulsera de un modo libre e independiente, sin tener que verme', 
             'tags': 'miband,xiaomi,android,,,', 
