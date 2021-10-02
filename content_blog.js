@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html' 
 },
 {
+            'title': 'Mi servidor de música con WebDAV',
+            'text': 'Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos.', 
+            'tags': 'webdav,musica,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-10-02-mi-servidor-de-musica-con-webdav.html' 
+},
+{
             'title': 'Omega Launcher. Otro interesante Lanzador FLOSS',
             'text': 'Me encantan los launchers de software libre con el aspecto Android puro.', 
             'tags': 'launcher,android,,,,', 
@@ -913,7 +919,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
