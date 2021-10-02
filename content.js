@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Winamp vuelve a mi escritorio. Cambiando el tema de audacious',
+            'text': 'Recuerdo hace muchísimos años, cuando utilizaba Windows que la primera aplicación que instalaba cada vez que me tocaba reiniciar el Sistema Operativo era Winamp. Hoy en 2021, puedo tener Winamp', 
+            'tags': 'player,musica,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html' 
+},
+{
             'title': 'Omega Launcher. Otro interesante Lanzador FLOSS',
             'text': 'Me encantan los launchers de software libre con el aspecto Android puro.', 
             'tags': 'launcher,android,,,,', 
@@ -907,7 +913,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

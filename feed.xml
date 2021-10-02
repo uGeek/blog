@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Winamp vuelve a mi escritorio. Cambiando el tema de audacious</title>
+    <link>https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/Winamp_vuelve_a_mi_escritorio._Cambiando_el_tema_de_audacious.png" alt="Winamp vuelve a mi escritorio. Cambiando el tema de audacious"&gt;
+&lt;br&gt;&lt;p&gt;Recuerdo hace muchísimos años, cuando utilizaba Windows que la primera aplicación que instalaba cada vez que me tocaba reiniciar el Sistema Operativo era Winamp. Hoy en 2021, puedo tener Winamp... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html&gt;Winamp vuelve a mi escritorio. Cambiando el tema de audacious&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 02 Oct 2021  +0100</pubDate>
+    <category>player</category>
+    <category>musica</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html</guid>
+   </item>
+   <item>
     <title>Omega Launcher. Otro interesante Lanzador FLOSS</title>
     <link>https://ugeek.github.io/blog/post/2021-09-13-omega-launcher-otro-interesante-lanzador-floss.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 13 Sep 2021  +0100</pubDate>
+    <pubDate>Mon, 13 Sep 2021 21:22 +0100</pubDate>
     <category>launcher</category>
     <category>android</category>
     <category></category>
@@ -5000,7 +5033,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
