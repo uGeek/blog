@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="mi-servidor-de-música-con-webdav-1" title="Mi servidor de música con WebDAV" data-export_file_name="mi-servidor-de-musica-con-webdav" data-description="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos." data-export_date="2021-10-02 22:00" data-category="webdav" data-tag="musica" data-image="./images-blog/dav.png">Mi servidor de música con WebDAV</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 422 palabras.    <a href="https://ugeek.github.io/blog/categories/webdav">webdav</a></h5>
+<h5>Tiempo estimado de lectura: 4 minutos. 493 palabras.    <a href="https://ugeek.github.io/blog/categories/webdav">webdav</a></h5>
 <p>Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos.</p>
 <center>
 <p><img src="../images-blog/dav.png" /></p>
@@ -144,7 +144,12 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb2-21" title="21">    <span class="ex">command</span>: <span class="st">&quot;mount webdav-musica:  /data   --allow-other&quot;</span></a></code></pre></div>
 <h2 id="crear-listas-de-reproducción">Crear listas de reproducción</h2>
 <h3 id="dentro-del-directorio">Dentro del directorio</h3>
+<p>Para crear listas en <strong><strong>m3u8</strong></strong>, tan sencillo como situarte dentro del directorio donde estén las canciones que queremos crear la playlist y ejecutar el siguiente comando:</p>
 <div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">find</span> . <span class="kw">|</span> <span class="fu">grep</span> mp3 <span class="op">&gt;</span> list.m3u8</a></code></pre></div>
+<p>De modo recursivo irá creando una playlist con todas las canciones.</p>
+<p>Con tu editor favorito elimina aquellas que no quieras en la playlist.</p>
+<p>Si ejecutas el comando desde la raíz del servidor, hará una playlist de todo el servidor, con todas tus canciones.</p>
+<h2 id="aplicaciones-móviles">Aplicaciones móviles</h2>
 <h3 id="android">Android</h3>
 <ul>
 <li><a href="https://play.google.com/store/apps/details?id=com.devmaru.audio&amp;hl=es&amp;gl=US">MARU Audio - Cloud &amp; Offline Folder Music Player - Aplicaciones en Google Play</a></li>
