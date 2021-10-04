@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Gestionar Wireguard sin ser sudo',
+            'text': 'Uno de los problemas de utilizar Wireguard es tener que utilizar derechos de administrador. Con *nmcli* podremos hacerlo sin necesitarlos, ahora cualquier usuario podrá utilizar Wireguard.', 
+            'tags': 'wireguard,nmcli,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-10-04-gestionar-wireguard-sin-ser-sudo.html' 
+},
+{
             'title': 'Winamp vuelve a mi escritorio. Cambiando el tema de audacious',
             'text': 'Recuerdo hace muchísimos años, cuando utilizaba Windows que la primera aplicación que instalaba cada vez que me tocaba reiniciar el Sistema Operativo era Winamp. Hoy en 2021, puedo tener Winamp', 
             'tags': 'player,musica,,,,', 
@@ -919,7 +925,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
