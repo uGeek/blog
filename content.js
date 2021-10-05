@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Crear una licencia en GitHub',
+            'text': 'He creado una licencia para uno de mis proyectos en GitHub. Voy a redactar paso a paso como lo he hecho:', 
+            'tags': 'github,licencia,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-10-05-crear-una-licencia-en-github.html' 
+},
+{
             'title': 'Gestionar Wireguard sin ser sudo',
             'text': 'Uno de los problemas de utilizar Wireguard es tener que utilizar derechos de administrador. Con *nmcli* podremos hacerlo sin necesitarlos, ahora cualquier usuario podrá utilizar Wireguard.', 
             'tags': 'wireguard,nmcli,,,,', 
@@ -925,7 +931,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
