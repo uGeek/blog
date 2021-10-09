@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Montar nubes WebDAV con davfs2</title>
+    <link>https://ugeek.github.io/blog/post/2021-10-09-montar-nubes-webdav-con-davfs2.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/dav.png" alt="Montar nubes WebDAV con davfs2"&gt;
+&lt;br&gt;&lt;p&gt;No solo podemos montar nubes WebDAV con rclone. Davfs2 de un modo muy sencillo nos permite montar esta nube en local.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-10-09-montar-nubes-webdav-con-davfs2.html&gt;Montar nubes WebDAV con davfs2&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 09 Oct 2021  +0100</pubDate>
+    <category>webdav</category>
+    <category>webdav</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-10-09-montar-nubes-webdav-con-davfs2.html</guid>
+   </item>
+   <item>
     <title>Crear una licencia en GitHub</title>
     <link>https://ugeek.github.io/blog/post/2021-10-05-crear-una-licencia-en-github.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 05 Oct 2021  +0100</pubDate>
+    <pubDate>Tue, 05 Oct 2021 19:10 +0100</pubDate>
     <category>github</category>
     <category>licencia</category>
     <category></category>

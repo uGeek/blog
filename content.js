@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Montar nubes WebDAV con davfs2',
+            'text': 'No solo podemos montar nubes WebDAV con rclone. Davfs2 de un modo muy sencillo nos permite montar esta nube en local.', 
+            'tags': 'webdav,webdav,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-10-09-montar-nubes-webdav-con-davfs2.html' 
+},
+{
             'title': 'Crear una licencia en GitHub',
             'text': 'He creado una licencia para uno de mis proyectos en GitHub. Voy a redactar paso a paso como lo he hecho:', 
             'tags': 'github,licencia,,,,', 
