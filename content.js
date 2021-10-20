@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras',
+            'text': 'Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y', 
+            'tags': 'todo.txt,tareas,rclone,sincronización,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-10-20-rctodosync-comparte-tareas-del-todo-txt-por-contextos-proyectos-o-palabras.html' 
+},
+{
             'title': 'Montar nubes WebDAV con davfs2',
             'text': 'No solo podemos montar nubes WebDAV con rclone. Davfs2 de un modo muy sencillo nos permite montar esta nube en local.', 
             'tags': 'webdav,webdav,,,,', 
@@ -937,7 +943,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

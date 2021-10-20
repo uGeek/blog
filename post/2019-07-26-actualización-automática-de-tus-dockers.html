@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="actualización-automática-de-tus-dockers-con-watchtower-o-ouroboros-1" title="Actualización automática de tus dockers con Watchtower o Ouroboros" data-export_file_name="Actualización automática de tus dockers" data-description="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" data-export_date="2019-07-26 20:30 2021-09-06" data-category="docker" data-tag="terminal,ubuntu,raspberry" data-image="./images-blog/docker.png">Actualización automática de tus dockers con Watchtower o Ouroboros</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 415 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h1 id="actualización-automática-de-tus-dockers-con-watchtower-o-ouroboros-1" title="Actualización automática de tus dockers con Watchtower o Ouroboros" data-export_file_name="Actualización automática de tus dockers" data-description="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" data-export_date="2019-07-26 20:30 2021-10-11" data-category="docker" data-tag="terminal,ubuntu,raspberry" data-image="./images-blog/docker.png">Actualización automática de tus dockers con Watchtower o Ouroboros</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 502 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <h2 id="watchtower">Watchtower</h2>
 <p>Watchtower es una aplicación desarrollada en Go, que controlará tus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores. Si la Watchtower detecta que una imagen ha cambiado, se reiniciará automáticamente el contenedor utilizando la nueva imagen.</p>
 <p>Watchtower desplegará su nueva imagen, parará su contenedor y lo reiniciará con las mismas opciones que se usaron cuando se implementó inicialmente.</p>
@@ -120,6 +120,7 @@ services:
       - SELF_UPDATE=true
       - IGNORE=mariadb nextcloud
       - TZ=Europe/Madrid
+      - NOTIFIERS=&quot;tgram://1124343468:AAGEqergUoBECxytKKWIqVvzTdrqwegqerg/588554/&quot; \
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -139,13 +140,26 @@ services:
 <li>Puede desencadenar múltiples webhooks cuando se actualizan los contenedores. Admite discord, slack, pushover y webhooks genéricos</li>
 <li>Puede enviar correos electrónicos cuando se actualizan los contenedores</li>
 </ul>
+<ol>
+<li><p>Notificaciones de Telegram</p>
+<p>Para que ouroboros te notifique por Telegram de los contenedores que se actualizan, añadiremos la siguiente variable añadiendo el TOKEN del bot y el ID del chat que recibirá la notificación.</p>
+<pre><code>NOTIFIERS=&quot;tgram://TU_API_TOKEN/TU_CHAT_ID/&quot;
+</code></pre>
+<p>Para ello Ouroboros ha añadido el código de servicio de notificaciones Apprise.</p></li>
+<li><p>Ignorar actulizaciones de docker</p>
+<p>Si no queremos que ouroboros actualice alguno de los contendores que tenemos corriendo, añadiremos la variable <code>IGNORE</code>.</p>
+<p>En este ejemplo no quiero que se actualice <strong>nextcloud mariadb mumble</strong>.</p>
+<pre><code>IGNORE=&quot;nextcloud mariadb mumble&quot;
+</code></pre></li>
+</ol>
 <h2 id="fuente">Fuente</h2>
 <ul>
 <li><a href="https://github.com/containrrr/watchtower">https://github.com/containrrr/watchtower</a></li>
 <li><a href="https://hub.docker.com/r/v2tec/watchtower/">https://hub.docker.com/r/v2tec/watchtower/</a></li>
+<li><a href="https://github.com/caronc/apprise">https://github.com/caronc/apprise</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el viernes 26 julio del 2019 y <strong>actualizado</strong> el lunes 06 septiembre del 2021</p>
+<p>Publicado por Angel el viernes 26 julio del 2019 y <strong>actualizado</strong> el lunes 11 octubre del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

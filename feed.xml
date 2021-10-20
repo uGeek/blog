@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</title>
+    <link>https://ugeek.github.io/blog/post/2021-10-20-rctodosync-comparte-tareas-del-todo-txt-por-contextos-proyectos-o-palabras.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/rclone.png" alt="rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras"&gt;
+&lt;br&gt;&lt;p&gt;Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-10-20-rctodosync-comparte-tareas-del-todo-txt-por-contextos-proyectos-o-palabras.html&gt;rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 20 Oct 2021  +0100</pubDate>
+    <category>todo.txt</category>
+    <category>tareas</category>
+    <category>rclone</category>
+    <category>sincronización</category>
+    <guid>https://ugeek.github.io/blog/post/2021-10-20-rctodosync-comparte-tareas-del-todo-txt-por-contextos-proyectos-o-palabras.html</guid>
+   </item>
+   <item>
     <title>Montar nubes WebDAV con davfs2</title>
     <link>https://ugeek.github.io/blog/post/2021-10-09-montar-nubes-webdav-con-davfs2.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 09 Oct 2021  +0100</pubDate>
+    <pubDate>Sat, 09 Oct 2021 17:42 +0100</pubDate>
     <category>webdav</category>
     <category>webdav</category>
     <category></category>
@@ -5165,7 +5198,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
