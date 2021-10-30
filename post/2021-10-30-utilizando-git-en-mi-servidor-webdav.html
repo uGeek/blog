@@ -1,5 +1,5 @@
 <head>
-<title>Crear archivos .gitkeep de forma recursiva mediante un script . uGeek Blog </title>
+<title>Utilizando git en mi servidor WebDAV. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." />
+<meta name="description" content="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Crear archivos .gitkeep de forma recursiva mediante un script " />
-<meta property="og:description" content="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." />
+<meta property="og:title" content="Utilizando git en mi servidor WebDAV" />
+<meta property="og:description" content="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html" />
 
-<meta name="twitter:title" content="Crear archivos .gitkeep de forma recursiva mediante un script " />
-<meta name="twitter:description" content="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." />
+<meta name="twitter:title" content="Utilizando git en mi servidor WebDAV" />
+<meta name="twitter:description" content="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
 
 
@@ -85,22 +85,42 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="crear-archivos-.gitkeep-de-forma-recursiva-mediante-un-script-1" title="Crear archivos .gitkeep de forma recursiva mediante un script" data-export_file_name="Crear archivos gitkeep de forma recursiva mediante un script" data-description="Los archivos *.gitkeep*, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git." data-export_date="2019-04-17 08:00" data-category="git" data-tag="github, gitlab" data-image="./images-blog/git.png">Crear archivos .gitkeep de forma recursiva mediante un script</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 280 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
-<p>Es muy probable que si has llegado has aquí, sea porque no sabes que es un archivo <strong>.gitkeep</strong>, o has comenzado tu proyecto en git, lleno de carpetas vacías y ahora no sabes como subirlas a git.</p>
+<h1 id="utilizando-git-en-mi-servidor-webdav-1" title="Utilizando git en mi servidor WebDAV" data-export_file_name="utilizando-git-en-mi-servidor-webdav" data-description="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" data-export_date="2021-10-30 21:00" data-category="git" data-tag="webdav" data-image="./images-blog/git.png">Utilizando git en mi servidor WebDAV</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 363 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<p>Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de <strong>git</strong>. He creado dentro de mi nube un directorio llamado <strong>git</strong>, donde voy a guardar todos mis proyectos y tener un control de versiones allí donde esté.</p>
 <center>
 <p><img src="../images-blog/git.png" /></p>
 </center>
-<p>Los archivos <strong>.gitkeep</strong>, son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías, sean gestionadas por git.</p>
-<p>Git no es capaz de gestionar carpetas vacías, así que una solución es crear un archivo vacío dentro de estas, sin contenido para que no ocupe espacio.</p>
-<p>Aunque no consta en la documentación de git, muchos desarrolladores han adoptado este nombre como norma.</p>
-<p>Pero… ¿Si has comenzado tu proyecto y no has creado ningún archivo dentro?, ¿Como recordar todas las carpetas vacías?.</p>
-<p>No te preocupes.</p>
-<p>Con esta línea de terminal, <strong>situándonos en la raíz de nuestro repositorio</strong> y gracias al comando <strong>find</strong>, todas aquellas carpetas que estén vacías, incluirá un archivo llamado .gitkeep</p>
-<pre><code>find . -type d -empty -not -path &quot;./.git/*&quot; -exec touch {}/.gitkeep \;
-</code></pre>
+<h2 id="creando-el-repositorio">Creando el repositorio</h2>
+<p>Voy a crear el nuevo proyecto llamado <code>repositorio</code>.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">mkdir</span> repositorio</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="bu">cd</span> repositorio</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="fu">git</span> init --bare</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="fu">git</span> update-server-info</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="bu">cd</span> ..</a></code></pre></div>
+<p>Con <code>git update-server-info</code> actualizamos el archivo de información auxiliar para ayudar al servidor.</p>
+<h2 id="subiendo-el-repositorio-al-servidor-webdav">Subiendo el repositorio al servidor WebDAV</h2>
+<p>Ahora voy a utilizar <strong>rclone</strong> para subir el repositorio al servidor:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">rclone</span> copy repositorio webdav:git/repositorio</a></code></pre></div>
+<p>Puedes utilizar el método que más te guste para guardar el repositorio, incluso montar la nube con tu explorador de archivos favorito y hacer un copia y pega.</p>
+<h2 id="utilizando-tu-servidor-git-con-webdav">Utilizando tu servidor git con WebDAV</h2>
+<p>Llegados a este punto, ya puedes utilizar tus proyectos con git y mantener tu control de versiones en tu servidor WebDAV.</p>
+<ul>
+<li>Vamos a clonar el repositorio del servidor a local especificando el usuario y URL del directorio donde hemos guardado el proyecto</li>
+<li>Creamos un archivo, por ejemplo <strong>README.md</strong></li>
+<li>Hacemos un git add, commit y push para subirlo al server y… voila!!! Ya tenemos nuestro repositorio git en el servidor funcionando.</li>
+</ul>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">git</span> clone https://<span class="op">&lt;</span>usuario<span class="op">&gt;</span>@<span class="op">&lt;</span>dominio_del_servidor<span class="op">&gt;</span>/git/repositorio -v</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="bu">cd</span> repositorio</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="fu">touch</span> README.md</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="fu">git</span> add README.md</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="fu">git</span> commit -m <span class="st">&quot;agregando el archivo README.md&quot;</span></a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="fu">git</span> push</a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="fu">git</span> push origin master (solo la primera vez)</a></code></pre></div>
+<p>Si quieres utilizarlo en tu red local o vía VPN, también puedes utilizar la conexión sin cifrar <strong>http</strong>.</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">git</span> clone http://angel@192.168.1.100:100/git/repositorio</a></code></pre></div>
 <br>
-<p>Publicado por Angel el miércoles 17 abril del 2019</p>
+<p>Publicado por Angel el sábado 30 octubre del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

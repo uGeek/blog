@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Utilizando git en mi servidor WebDAV',
+            'text': 'Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado', 
+            'tags': 'git,webdav,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html' 
+},
+{
             'title': 'rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras',
             'text': 'Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y', 
             'tags': 'todo.txt,tareas,rclone,sincronización,,', 

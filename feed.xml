@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Utilizando git en mi servidor WebDAV</title>
+    <link>https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/git.png" alt="Utilizando git en mi servidor WebDAV"&gt;
+&lt;br&gt;&lt;p&gt;Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html&gt;Utilizando git en mi servidor WebDAV&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 30 Oct 2021  +0100</pubDate>
+    <category>git</category>
+    <category>webdav</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html</guid>
+   </item>
+   <item>
     <title>rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</title>
     <link>https://ugeek.github.io/blog/post/2021-10-20-rctodosync-comparte-tareas-del-todo-txt-por-contextos-proyectos-o-palabras.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 20 Oct 2021  +0100</pubDate>
+    <pubDate>Wed, 20 Oct 2021 21:00 +0100</pubDate>
     <category>todo.txt</category>
     <category>tareas</category>
     <category>rclone</category>
