@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Instalar RealVNC en Ubuntu con AppImage',
+            'text': '¿Quien dijo que no podemos utilizar RealVNC en Linux? Con este AppImage *No oficial*, si eres de los que te gusta el genuino RealVNC, vas a poder tenerlo instalado en', 
+            'tags': 'vnc,desktop,vnc,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html' 
+},
+{
             'title': 'Utilizando git en mi servidor WebDAV',
             'text': 'Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado', 
             'tags': 'git,webdav,,,,', 

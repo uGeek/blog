@@ -1,5 +1,5 @@
 <head>
-<title>unix</title>
+<title>Instalar RealVNC en Ubuntu con AppImage. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,21 +47,69 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>unix</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instalar-realvnc-en-ubuntu-con-appimage-1" title="Instalar RealVNC en Ubuntu con AppImage" data-export_file_name="instalar-realvnc-en-ubuntu-con-appimage" data-description="¿Quien dijo que no podemos utilizar RealVNC en Linux? Con este AppImage *No oficial*, si eres de los que te gusta el genuino RealVNC, vas a poder tenerlo instalado en" data-export_date="2021-11-01 13:45" data-category="vnc" data-tag="desktop,vnc" data-image="./images-blog/RealVNC.png">Instalar RealVNC en Ubuntu con AppImage</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 123 palabras.    <a href="https://ugeek.github.io/blog/categories/vnc">vnc</a></h5>
+<p>¿Quien dijo que no podemos utilizar RealVNC en Linux? Con este AppImage <strong>No oficial</strong>, si eres de los que te gusta el genuino RealVNC, vas a poder tenerlo instalado en segundos.</p>
+<p><strong>Recuerda que este paquete no es oficial</strong>, pero funciona a la perfección.</p>
+<center>
+<p>./images-blog/RealVNC.png</p>
+</center>
+<h2 id="instalación">Instalación</h2>
+<p>Vamos a descargar el AppImage de la siguiente <em>UR</em>][<a href="https://apprepo.de/appimage/realvnc">https://apprepo.de/appimage/realvnc</a>]</p>
+<p>Una vez descargado, con estos simples comandos, tendrás corriendo <strong>RealVNC</strong> en tu PC.</p>
+<pre><code>chmod a+x ./RealVNC.AppImage
+./RealVNC.AppImage
+</code></pre>
+<p>También con paquetes <strong>deb</strong>, podremos instalarlo desde su página oficial: <a href="https://www.realvnc.com/es/connect/download/viewer/linux/">https://www.realvnc.com/es/connect/download/viewer/linux/</a></p>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html>Eliminar líneas en Blanco con sed</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html>Crear listas m3u para minidlna o vlc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html>Eliminar comentarios de nuestros script</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html>Descargar todos los episodios de un Podcast con wget</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html>El poder de la terminal y el scripting</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html>Elimina archivos duplicados con fduples</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html>Calculando con mi terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html>Renombrando archivos masivamente</a></li>
+<li><a href="https://apprepo.de/appimage/realvnc">https://apprepo.de/appimage/realvnc</a></li>
+<li><a href="https://www.realvnc.com/es/connect/download/viewer/linux/">https://www.realvnc.com/es/connect/download/viewer/linux/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el lunes 01 noviembre del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-18-remmina-de-los-mejores-clientes-vnc.html">Remmina. De los mejores Clientes VNC</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

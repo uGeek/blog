@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Instalar RealVNC en Ubuntu con AppImage</title>
+    <link>https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/RealVNC.png" alt="Instalar RealVNC en Ubuntu con AppImage"&gt;
+&lt;br&gt;&lt;p&gt;¿Quien dijo que no podemos utilizar RealVNC en Linux? Con este AppImage *No oficial*, si eres de los que te gusta el genuino RealVNC, vas a poder tenerlo instalado en... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html&gt;Instalar RealVNC en Ubuntu con AppImage&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 01 Nov 2021  +0100</pubDate>
+    <category>vnc</category>
+    <category>desktop</category>
+    <category>vnc</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html</guid>
+   </item>
+   <item>
     <title>Utilizando git en mi servidor WebDAV</title>
     <link>https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 30 Oct 2021  +0100</pubDate>
+    <pubDate>Sat, 30 Oct 2021 13:45 +0100</pubDate>
     <category>git</category>
     <category>webdav</category>
     <category></category>
