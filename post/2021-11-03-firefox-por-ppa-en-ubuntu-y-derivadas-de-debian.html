@@ -1,5 +1,5 @@
 <head>
-<title>nano</title>
+<title>Firefox por PPA en Ubuntu y derivadas de Debian. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,15 +47,67 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>nano</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="firefox-por-ppa-en-ubuntu-y-derivadas-de-debian-1" title="Firefox por PPA en Ubuntu y derivadas de Debian" data-export_file_name="firefox-por-ppa-en-ubuntu-y-derivadas-de-debian" data-description="Con la nueva versión 94 de Firefox, ya no necesitamos de plugins para gestionar la memoria que ocupa tener pestañas abiertas. " data-export_date="2021-11-03 23:30" data-category="firefox" data-tag="ppa" data-image="./images-blog/firefox.png">Firefox por PPA en Ubuntu y derivadas de Debian</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 137 palabras.    <a href="https://ugeek.github.io/blog/categories/firefox">firefox</a></h5>
+<p>Con la nueva versión 94 de Firefox, ya no necesitamos de plugins para gestionar la memoria que ocupa tener pestañas abiertas. </p>
+<center>
+<p><img src="../images-blog/firefox.png" /></p>
+</center>
+<p>Firefox, pasado un tiempo determinado sin uso de una pestaña, liberará la memoria para gestionar mejor así la memoria de tu PC.</p>
+<p>Si quieres gestionar manualmente, porque así lo deseas, tienes que acceder escribiendo en la barra donde introducimos las urls, =**<a href="about:unloads">about:unloads</a>**=*.*</p>
+<h2 id="instalación">Instalación</h2>
+<p>Pero para probar esta nueva característica, pasa por instalar la última versión. </p>
+<p>Para instalar Firefox via PPA Oficial en Ubuntu, Debian y derivadas, escribiremos en la terminal:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> add-apt-repository ppa:ubuntu-mozilla-security/ppa</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="fu">sudo</span> apt-get update</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="fu">sudo</span> apt-get upgrade</a></code></pre></div>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-12-compilando-la-ultima-version-de-nano.html>Compilando La última versión de Nano</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html>Editor de Texto Nano</a></li>
+<li>[Repositorio de Firefox](<a href="http://ftp.mozilla.org/pub/firefox/releases/">http://ftp.mozilla.org/pub/firefox/releases/</a>)</li>
+</ul>
+<br>
+<p>Publicado por Angel el miércoles 03 noviembre del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-17-atajos-de-firefox-vimium-ff.html">Atajos de teleclado para Firefox y Vimium-FF</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-instalando-la-ultima-version-de-firefox.html">Instalando la última versión de Firefox</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

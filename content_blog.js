@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Firefox por PPA en Ubuntu y derivadas de Debian',
+            'text': 'Con la nueva versión 94 de Firefox, ya no necesitamos de plugins para gestionar la memoria que ocupa tener pestañas abiertas. ', 
+            'tags': 'firefox,ppa,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-11-03-firefox-por-ppa-en-ubuntu-y-derivadas-de-debian.html' 
+},
+{
             'title': 'Instalar RealVNC en Ubuntu con AppImage',
             'text': '¿Quien dijo que no podemos utilizar RealVNC en Linux? Con este AppImage *No oficial*, si eres de los que te gusta el genuino RealVNC, vas a poder tenerlo instalado en', 
             'tags': 'vnc,desktop,vnc,,,', 
@@ -955,7 +961,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
