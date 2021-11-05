@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP',
+            'text': '*ntfy * es un servicio de notificaciones HTTP [[https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern][pub-sub]] . Te permite enviar notificaciones [[https://play.google.com/store/apps/details?id=io.heckel.ntfy][a tu teléfono]] o escritorio a través de scripts desde cualquier PC o servidor, completamente *sin registro', 
+            'tags': 'notificaciones,go,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html' 
+},
+{
             'title': 'Firefox por PPA en Ubuntu y derivadas de Debian',
             'text': 'Con la nueva versión 94 de Firefox, ya no necesitamos de plugins para gestionar la memoria que ocupa tener pestañas abiertas. ', 
             'tags': 'firefox,ppa,,,,', 
@@ -961,7 +967,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
