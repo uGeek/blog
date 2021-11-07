@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker. Monta tu propio servidor de mensajería ejabberd - xmpp',
+            'text': 'De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP.', 
+            'tags': 'ejabberd,xmpp,docker,caddy,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html' 
+},
+{
             'title': 'ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP',
             'text': '*ntfy * es un servicio de notificaciones HTTP [[https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern][pub-sub]] . Te permite enviar notificaciones [[https://play.google.com/store/apps/details?id=io.heckel.ntfy][a tu teléfono]] o escritorio a través de scripts desde cualquier PC o servidor, completamente *sin registro', 
             'tags': 'notificaciones,go,,,,', 

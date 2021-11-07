@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</title>
+    <link>https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ejabberd.png" alt="Docker. Monta tu propio servidor de mensajería ejabberd - xmpp"&gt;
+&lt;br&gt;&lt;p&gt;De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html&gt;Docker. Monta tu propio servidor de mensajería ejabberd - xmpp&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 07 Nov 2021  +0100</pubDate>
+    <category>ejabberd</category>
+    <category>xmpp</category>
+    <category>docker</category>
+    <category>caddy</category>
+    <guid>https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html</guid>
+   </item>
+   <item>
     <title>ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP</title>
     <link>https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 05 Nov 2021  +0100</pubDate>
+    <pubDate>Fri, 05 Nov 2021 14:50 +0100</pubDate>
     <category>notificaciones</category>
     <category>go</category>
     <category></category>
