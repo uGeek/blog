@@ -86,16 +86,16 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="docker.-monta-tu-propio-servidor-de-mensajería-ejabberd---xmpp-1" title="Docker. Monta tu propio servidor de mensajería ejabberd - xmpp" data-export_file_name="docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp" data-description="De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP." data-export_date="2021-11-07 14:50" data-category="ejabberd" data-tag="xmpp,docker,caddy" data-image="./images-blog/ejabberd.png">Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</h1>
-<h5>Tiempo estimado de lectura: 7 minutos. 845 palabras.    <a href="https://ugeek.github.io/blog/categories/ejabberd">ejabberd</a></h5>
+<h5>Tiempo estimado de lectura: 7 minutos. 846 palabras.    <a href="https://ugeek.github.io/blog/categories/ejabberd">ejabberd</a></h5>
 <p>De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP.</p>
-<p>Voy a explicaros como instalar el docker del servidor ejabberd que cree y habilitar los certificados para podernos conectar fuera de nuestra red local.</p>
+<p>Voy a explicaros como instalar el docker del servidor ejabberd que creé y habilitar los certificados para podernos conectar fuera de nuestra red local.</p>
 <center>
 <p><img src="../images-blog/ejabberd.png" /></p>
 </center>
 <p>En este artículo explico como crearlo para Raspberry, pero este método también sirve para arquitectura AMD64 y utilizando del docker official.</p>
 <h2 id="crea-docker-para-raspberri-pi">Crea docker para Raspberri Pi</h2>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> run -ti -h xmpp --name xmpp -p 5222:5222 -p 5280:5280 -d ugeek/ejabberd:pi</a></code></pre></div>
-<p>El puerto 5222, es el encargado de mantener la comunicación de los clientes con el servidor. Es necesario tener mínimo ese puerto en tu router.</p>
+<p>El puerto 5222, es el encargado de mantener la comunicación de los clientes con el servidor. Es necesario tener abierto mínimo ese puerto en tu router.</p>
 <h3 id="docker-compose">Docker Compose</h3>
 <p>A mi me gusta más utilizar docker-compose</p>
 <div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">version</span>: <span class="st">&#39;3&#39;</span></a>
@@ -137,7 +137,7 @@ $("#tipue_search_input").tipuesearch();
 <h3 id="lista-todos-los-usuarios-de-un-host">Lista todos los usuarios de un host</h3>
 <p>Hay que especificar al final el nombre del servidor. Existe la posibilidad que el servidor tenga dos nombres</p>
 <div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">docker</span> exec -it xmpp ejabberdctl registered_users midominio.duckdns.org</a></code></pre></div>
-<h2 id="borrar-usuarios">Borrar Usuarios</h2>
+<h3 id="borrar-usuarios">Borrar Usuarios</h3>
 <div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="ex">docker</span> exec -it xmpp ejabberdctl unregister angel midominio.duckdns.org</a></code></pre></div>
 <h3 id="administrador">Administrador</h3>
 <p>Editamos el archivo ejabberd.yml y escribimos el nombre de administrador o administradores. En este caso <strong>angel</strong>.</p>
@@ -155,66 +155,63 @@ $("#tipue_search_input").tipuesearch();
 <li>usuario: angel@midominio.duckdns.org</li>
 <li>password: contraseña</li>
 </ul>
-<h2 id="iniciar-servidor">Iniciar servidor</h2>
+<h3 id="iniciar-servidor">Iniciar servidor</h3>
 <div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">docker</span> exec -it xmpp service ejabberd start</a></code></pre></div>
-<h2 id="reiniciar-con-cron">Reiniciar con cron</h2>
-<p>Es interesante hacer un reinicio del servidor de tanto en tanto, por si se produce algún cuelgue en algún archivo sin entregar</p>
-<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="ex">00</span> 4 * * * docker exec -it xmpp service ejabberd restart</a></code></pre></div>
-<h2 id="logs">logs</h2>
+<h3 id="usuarios-conectados-al-servidor">Usuarios conectados al servidor</h3>
+<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="ex">docker</span> exec -it xmpp ejabberdctl connected_users</a></code></pre></div>
+<h3 id="logs">logs</h3>
 <p>Para ver los logs, ejecutariamos el siguiente comando</p>
 <div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="ex">docker</span> exec -it xmpp tail -f /var/log/ejabberd/ejabberd.log</a></code></pre></div>
-<h2 id="usuarios-conectados-al-servidor">Usuarios conectados al servidor</h2>
-<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="ex">docker</span> exec -it xmpp ejabberdctl connected_users</a></code></pre></div>
 <h2 id="certificados">Certificados</h2>
 <p>Para poder abrir tu servidor ejabberd a la red de un modo seguro, necesitamos que generar el certificado TLS para que nuestro usuario, contraseña y mensajes viajen cifrados.</p>
 <p>Para generarlo voy a utilizar <strong>caddy</strong> o <strong>traefik</strong>. Voy a montar un servidor <strong>nginx</strong> con el dominio <code>midominio.duckdns.org</code> y como ambos servicios crean el certificado automáticamente, ya tendremos el primer paso hecho, conseguir el certificado SSL para el servidor web.</p>
-<p>Ahora vermos combertirlo en ejabberd.pem para utilizarlo con ejabberd con TLS.</p>
+<p>Ahora vamos combertirlo en ejabberd.pem para utilizarlo con ejabberd con TLS.</p>
 <h3 id="certificado-con-caddy">Certificado con caddy</h3>
 <p>Con Caddy, en el directorio de configuración (caddy/data/caddy/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/midominio.duckdns.org), encontraremos dos archivos. El .key y .crt.</p>
 <p>El archivo crt es el certificado que contiene la llave pública de la url y key contiene la llave privada.</p>
 <p>Para fusionarlos y crear el archivo .pem, utilizaremos el comando <strong>cat</strong>.</p>
 <p><strong>Primero irá el archivo .key y despues el .crt</strong></p>
-<div class="sourceCode" id="cb16" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="fu">cat</span> midominio.duckdns.org.key  midominio.duckdns.org.crt <span class="op">&gt;</span> ejabberd.pem</a></code></pre></div>
+<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="fu">cat</span> midominio.duckdns.org.key  midominio.duckdns.org.crt <span class="op">&gt;</span> ejabberd.pem</a></code></pre></div>
 <p>Para que ejabberd reconozca el certificado, edita el archivo ejabberd.pem y elmina el último bloque desde <code>-----BEGIN CERTIFICATE-----</code> a <code>-----END CERTIFICATE-----</code>.</p>
-<ol>
-<li><p>Copiamos el certificado en el servidor con docker</p>
-<div class="sourceCode" id="cb17" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="ex">docker</span> cp ejabberd.org.pem  xmpp:/etc/ejabberd</a></code></pre></div>
+<p><span class="underline">Copiamos el certificado en el servidor con docker</span></p>
+<div class="sourceCode" id="cb16" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="ex">docker</span> cp ejabberd.pem  xmpp:/etc/ejabberd</a></code></pre></div>
 <p>Reiniciamos el servidor</p>
-<div class="sourceCode" id="cb18" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" title="1"><span class="ex">docker</span> exec -it xmpp service ejabberd restart</a></code></pre></div></li>
-</ol>
+<div class="sourceCode" id="cb17" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="ex">docker</span> exec -it xmpp service ejabberd restart</a></code></pre></div>
 <h3 id="certificado-con-traefik">Certificado con traefik</h3>
 <p>Si utilizas traefik, lo haremos del siguiente modo:</p>
-<div class="sourceCode" id="cb19" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb19-1" title="1"><span class="ex">version</span>: <span class="st">&#39;3&#39;</span></a>
-<a class="sourceLine" id="cb19-2" title="2"><span class="ex">services</span>:</a>
-<a class="sourceLine" id="cb19-3" title="3"><span class="ex">web</span>:</a>
-<a class="sourceLine" id="cb19-4" title="4"><span class="ex">image</span>: nginx:alpine</a>
-<a class="sourceLine" id="cb19-5" title="5"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb19-6" title="6"><span class="ex">-</span> ./templates:/etc/nginx/templates</a>
-<a class="sourceLine" id="cb19-7" title="7"><span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb19-8" title="8"><span class="ex">-</span> <span class="st">&quot;8081:80&quot;</span></a>
-<a class="sourceLine" id="cb19-9" title="9"><span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb19-10" title="10"><span class="ex">-</span> NGINX_HOST=foobar.com</a>
-<a class="sourceLine" id="cb19-11" title="11"><span class="ex">-</span> NGINX_PORT=80</a>
-<a class="sourceLine" id="cb19-12" title="12"><span class="ex">networks</span>:</a>
-<a class="sourceLine" id="cb19-13" title="13"><span class="ex">-</span> web</a>
-<a class="sourceLine" id="cb19-14" title="14"><span class="ex">labels</span>:</a>
-<a class="sourceLine" id="cb19-15" title="15"><span class="ex">-</span> traefik.backend=web</a>
-<a class="sourceLine" id="cb19-16" title="16"><span class="ex">-</span> traefik.frontend.rule=Host:midominio.duckdns.org</a>
-<a class="sourceLine" id="cb19-17" title="17"><span class="ex">-</span> traefik.docker.network=web</a>
-<a class="sourceLine" id="cb19-18" title="18"><span class="ex">-</span> traefik.port=8081</a>
-<a class="sourceLine" id="cb19-19" title="19"><span class="ex">-</span> traefik.enable=true</a></code></pre></div>
+<div class="sourceCode" id="cb18" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" title="1"><span class="ex">version</span>: <span class="st">&#39;3&#39;</span></a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="ex">web</span>:</a>
+<a class="sourceLine" id="cb18-4" title="4"><span class="ex">image</span>: nginx:alpine</a>
+<a class="sourceLine" id="cb18-5" title="5"><span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb18-6" title="6"><span class="ex">-</span> ./templates:/etc/nginx/templates</a>
+<a class="sourceLine" id="cb18-7" title="7"><span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb18-8" title="8"><span class="ex">-</span> <span class="st">&quot;8081:80&quot;</span></a>
+<a class="sourceLine" id="cb18-9" title="9"><span class="ex">environment</span>:</a>
+<a class="sourceLine" id="cb18-10" title="10"><span class="ex">-</span> NGINX_HOST=foobar.com</a>
+<a class="sourceLine" id="cb18-11" title="11"><span class="ex">-</span> NGINX_PORT=80</a>
+<a class="sourceLine" id="cb18-12" title="12"><span class="ex">networks</span>:</a>
+<a class="sourceLine" id="cb18-13" title="13"><span class="ex">-</span> web</a>
+<a class="sourceLine" id="cb18-14" title="14"><span class="ex">labels</span>:</a>
+<a class="sourceLine" id="cb18-15" title="15"><span class="ex">-</span> traefik.backend=web</a>
+<a class="sourceLine" id="cb18-16" title="16"><span class="ex">-</span> traefik.frontend.rule=Host:midominio.duckdns.org</a>
+<a class="sourceLine" id="cb18-17" title="17"><span class="ex">-</span> traefik.docker.network=web</a>
+<a class="sourceLine" id="cb18-18" title="18"><span class="ex">-</span> traefik.port=8081</a>
+<a class="sourceLine" id="cb18-19" title="19"><span class="ex">-</span> traefik.enable=true</a></code></pre></div>
 <p>El docker-compose es un servidor nginx basado en un Alpine Linux. Cuando levantemos el contenedor, traefik se encargará de crear los certificados Let's Encrypt para la url: <code>midominio.duckdns.org</code></p>
 <p>Necesitamos las claves públicas y privadas, pero Traefik solo crea un archivo <strong>acme.json.</strong> Necesitariamos exporta las llaves y para ello utilizaremos un docker:</p>
-<div class="sourceCode" id="cb20" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb20-1" title="1"><span class="ex">docker</span> run --name extractor -d -v ~/docker/traefik/:/app/data ~/docker/traefik/extractor/certs:/app/certs ugeek/traefik-certificate-extractor:arm</a></code></pre></div>
+<div class="sourceCode" id="cb19" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb19-1" title="1"><span class="ex">docker</span> run --name extractor -d -v ~/docker/traefik/:/app/data ~/docker/traefik/extractor/certs:/app/certs ugeek/traefik-certificate-extractor:arm</a></code></pre></div>
 <p>Para exportar todo los certificados del archivo acme.json de traefik a archivos .pem y ejecuta en la ruta del certificado el comando anterior.</p>
 <p>El docker para exportar los certificados, está en: <a href="https://github.com/docker-projects/docker-traefik-certificate-extractor">https://github.com/docker-projects/docker-traefik-certificate-extractor</a></p>
 <p>Una vez que tenga el certificado, puede fusionar las claves públicas y privadas en el archivo que espera ejabberd:</p>
-<div class="sourceCode" id="cb21" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" title="1"><span class="fu">cat</span> privkey.pem fullchain.pem <span class="op">&gt;</span> ejabberd.pem</a></code></pre></div>
-<ol>
-<li><p>Copiamos el certificado en el servidor con docker</p>
-<div class="sourceCode" id="cb22" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb22-1" title="1"><span class="ex">docker</span> cp ejabberd.pem  xmpp:/etc/ejabberd</a></code></pre></div>
+<div class="sourceCode" id="cb20" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb20-1" title="1"><span class="fu">cat</span> privkey.pem fullchain.pem <span class="op">&gt;</span> ejabberd.pem</a></code></pre></div>
+<p><span class="underline">Copiamos el certificado en el servidor con docker</span></p>
+<div class="sourceCode" id="cb21" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" title="1"><span class="ex">docker</span> cp ejabberd.pem  xmpp:/etc/ejabberd</a></code></pre></div>
 <p>Reiniciamos el servidor</p>
-<div class="sourceCode" id="cb23" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb23-1" title="1"><span class="ex">docker</span> exec -it xmpp service ejabberd restart</a></code></pre></div>
+<div class="sourceCode" id="cb22" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb22-1" title="1"><span class="ex">docker</span> exec -it xmpp service ejabberd restart</a></code></pre></div>
+<h2 id="reiniciar-con-cron">Reiniciar con cron</h2>
+<p>Es interesante hacer un reinicio del servidor de tanto en tanto, por si se produce algún cuelgue en algún archivo sin entregar</p>
+<div class="sourceCode" id="cb23" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb23-1" title="1"><span class="ex">00</span> 4 * * * docker exec -it xmpp service ejabberd restart</a></code></pre></div>
 <br>
 <p>Publicado por Angel el domingo 07 noviembre del 2021</p>
 <br><br> 
@@ -222,6 +219,5 @@ $("#tipue_search_input").tipuesearch();
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html">Convierte archivos .crt y .key en archivos .pem</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
-</ul></li>
-</ol>
+</ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
