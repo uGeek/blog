@@ -1,5 +1,5 @@
 <head>
-<title>El htop 2.0 desarrollado en bash. bashtop. uGeek Blog </title>
+<title>¿#!/usr/bin/env bash o #!/bin/bash?. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Bashtop es un proyecto con licencia Apache 2.0 desarrollado por [[https://github.com/aristocratos][aristocratos]], que nos permite acceder a toda la información de nuestra cpu, memoria, almacenamiento, red, procesos... de nuestro pc, servidor,..." />
+<meta name="description" content="Al iniciar un script, tenemos que poner el [[https://bash.cyberciti.biz/guide/Shebang][shebang]], representado por =#!=. Al ejecutar el script, nuestro sistema operativo leerá [[https://bash.cyberciti.biz/guide/Shebang][shebang]] y ejecutará el lenguaje de programación que se especifica" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="El htop 2.0 desarrollado en bash. bashtop" />
-<meta property="og:description" content="Bashtop es un proyecto con licencia Apache 2.0 desarrollado por [[https://github.com/aristocratos][aristocratos]], que nos permite acceder a toda la información de nuestra cpu, memoria, almacenamiento, red, procesos... de nuestro pc, servidor,..." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bashtop.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html" />
+<meta property="og:title" content="¿#!/usr/bin/env bash o #!/bin/bash?" />
+<meta property="og:description" content="Al iniciar un script, tenemos que poner el [[https://bash.cyberciti.biz/guide/Shebang][shebang]], representado por =#!=. Al ejecutar el script, nuestro sistema operativo leerá [[https://bash.cyberciti.biz/guide/Shebang][shebang]] y ejecutará el lenguaje de programación que se especifica" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html" />
 
-<meta name="twitter:title" content="El htop 2.0 desarrollado en bash. bashtop" />
-<meta name="twitter:description" content="Bashtop es un proyecto con licencia Apache 2.0 desarrollado por [[https://github.com/aristocratos][aristocratos]], que nos permite acceder a toda la información de nuestra cpu, memoria, almacenamiento, red, procesos... de nuestro pc, servidor,..." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bashtop.png" />
+<meta name="twitter:title" content="¿#!/usr/bin/env bash o #!/bin/bash?" />
+<meta name="twitter:description" content="Al iniciar un script, tenemos que poner el [[https://bash.cyberciti.biz/guide/Shebang][shebang]], representado por =#!=. Al ejecutar el script, nuestro sistema operativo leerá [[https://bash.cyberciti.biz/guide/Shebang][shebang]] y ejecutará el lenguaje de programación que se especifica" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,50 +85,71 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="el-htop-2.0-desarrollado-en-bash.-bashtop-1" title="El htop 2.0 desarrollado en bash. bashtop" data-export_file_name="el-htop-2-0-desarrollado-en-bash-bashtop" data-description="Bashtop es un proyecto con licencia Apache 2.0 desarrollado por [[https://github.com/aristocratos][aristocratos]], que nos permite acceder a toda la información de nuestra cpu, memoria, almacenamiento, red, procesos... de nuestro pc, servidor,..." data-export_date="2020-04-07 14:37" data-category="bash" data-tag="zsh" data-image="./images-blog/bashtop.png">El htop 2.0 desarrollado en bash. bashtop</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 433 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Bashtop es un proyecto con licencia Apache 2.0 desarrollado por <a href="https://github.com/aristocratos">aristocratos</a>, que nos permite acceder a toda la información de nuestra cpu, memoria, almacenamiento, red, procesos… de nuestro pc, servidor,… de un modo claro, desde mi punto de vista, de lo que lo haríamos con top o htop.</p>
+<h1 id="usrbinenv-bash-o-binbash-1" title="¿#!/usr/bin/env bash o #!/bin/bash?" data-export_file_name="shebang-en-bash" data-description="Al iniciar un script, tenemos que poner el [[https://bash.cyberciti.biz/guide/Shebang][shebang]], representado por =#!=. Al ejecutar el script, nuestro sistema operativo leerá [[https://bash.cyberciti.biz/guide/Shebang][shebang]] y ejecutará el lenguaje de programación que se especifica" data-export_date="2021-11-20 09:30" data-category="bash" data-tag="scripts" data-image="./images-blog/bash.png">¿#!/usr/bin/env bash o #!/bin/bash?</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 325 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Al iniciar un script, tenemos que poner el <a href="https://bash.cyberciti.biz/guide/Shebang">shebang</a>, representado por <code>#!</code>. Al ejecutar el script, nuestro sistema operativo leerá <a href="https://bash.cyberciti.biz/guide/Shebang">shebang</a> y ejecutará el lenguaje de programación que se especifica allí y la ruta en que está.</p>
+<p><code>Bash=no siempre está en =/bin</code>, sobretodo en sistemas que no son Linux como por ejemplo OpenBSD, que en este caso está situado en <code>/usr/local/bin</code>, ya que está instalado como paquete opcional.</p>
 <center>
-<p><img src="../images-blog/bashtop.png" /></p>
+<p><img src="../images-blog/bash.png" /></p>
 </center>
-<p>Me ha gustado mucho porque puedo ver el consumo en ram, cpu,… en tiempo real y de un modo gráfico y claro de mis dockers.</p>
-<p>También el uso es mucho más intuitivo, seleccionando los procesos mediante las <strong>teclas arriba, abajo</strong>. Para seleccionar el proceso deseado, pulsaremos <strong>Enter</strong> y se abrirá una pequeña sección donde muestra estadísticas detalladas para el proceso seleccionado.</p>
-<p>Permite la posibilidad de filtrar procesos, pulsando la tecla <strong>f</strong> y escribiendo el nombre del proceso, entre otras muchas más cosas.</p>
-<center>
-<p><img src="../images-blog/bashtop1.png" /></p>
-</center>
-<p>También, igual que sucede con htop, podemos matar procesos. Nos pondremos sobre el proceso que queremos matar y pulsaremos la <strong>k</strong>. Antes de detener ese proceso, <strong>bashtop</strong> nos preguntará si así queremos hacerlo.</p>
-<p>Para su uso se recomienda bash v4.4 o posterior.</p>
-<p>Vamos a ver como instalarlo y utilizarlo</p>
-<h2 id="instalación">Instalación</h2>
-<p>Clonamos el repositorio desde la raíz del HOME.</p>
-<pre><code>cd ; git clone https://github.com/aristocratos/bashtop.git
-</code></pre>
-<p>Crear alias. Recuerda sustituir el usuario <strong>angel</strong> por el tuyo.</p>
-<pre><code>alias bashtop=&#39;/home/angel/bashtop/bashtop&#39;
-</code></pre>
-<p>Ahora, cada vez que escriba en la terminal <code>bashtop</code>, será lanzado.</p>
-<h2 id="configuración">Configuración</h2>
-<p>La primera vez que ejecutemos <strong>bashtop</strong>, nos creará un archivo de configuración en la siguiente ruta: <code>$HOME/.config/bashtop/bashtop.cfg</code>.</p>
-<p>En este archivo podremos configurar el tiempo de refresco en milisegundos, el orden de los procesos, habilitar la temperatura de la cpu,… y más cosas que podremos encontrar en la documentación del repositorio del desarrollador.</p>
-<h3 id="configuración-gráfica">Configuración gráfica</h3>
-<p>Podremos ver y editar de un modo gráfico está configuración, pulsando dentro de <strong>bashtop</strong> la tecla <strong>ESC</strong> y seleccionando <strong>OPTIONS</strong>.</p>
-<h2 id="ayuda">Ayuda</h2>
-<p>Para conocer un poco más las opciones de esta aplicación, pulsaremos la tecla <strong>h</strong> para acceder a la ayuda.</p>
-<center>
-<p><img src="../images-blog/bashtop2.png" /></p>
-</center>
-<h2 id="fuentes">Fuentes</h2>
-<p>Las imágenes son del repositorio del desarrollador</p>
-<ul>
-<li><a href="https://github.com/aristocratos/bashtop">https://github.com/aristocratos/bashtop</a></li>
-</ul>
-<p>Yo no se vosotros, pero yo <a href="https://github.com/Bash-Projects/bashtop">he forkeado este magnífico proyecto</a>.</p>
-<center>
-<p><img src="../images-blog/bashhtop1.png" /></p>
-</center>
+<p>Si estas totalmente seguro que <strong>bash</strong> está en la ruta que especificas, no hay ningún problema, pero si quieres que tu script sea más universal, te permita ejecutar distintas versiones de bash o simplemente, evitar problemas, =env=es mejor opción.</p>
+<p><code>#!/usr/bin/env bash</code> buscará la ruta donde esté <strong>bash</strong> para ejecutar el script. Del mismo modo, en otros leguajes de programación como <strong>python</strong>, sucede igual ** <code>#!/usr/bin/env python</code> o <strong>perl</strong> = #!/usr/bin/env perl =</p>
+<p>Si escribes en tu shell <code>env</code>, mostrará todas las variables de entorno.</p>
+<p><code>#!/usr/bin/env</code> siempre está situado en la misma ruta en todos los sistemas operativos.</p>
+<p> </p>
+<table>
+<thead>
+<tr class="header">
+<th>OS</th>
+<th>env path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OpenBSD</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="even">
+<td>FreeBSD</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="odd">
+<td>Debian</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="even">
+<td>Ubuntu</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="odd">
+<td>CentOS</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="even">
+<td>macOS</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="odd">
+<td>SUSE</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="even">
+<td>RHEL</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="odd">
+<td>NetBSD</td>
+<td>/usr/bin/env</td>
+</tr>
+<tr class="even">
+<td>Solaris</td>
+<td>/usr/bin/env</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
 <br>
-<p>Publicado por Angel el martes 07 abril del 2020</p>
+<p>Publicado por Angel el sábado 20 noviembre del 2021</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

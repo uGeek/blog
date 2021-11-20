@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': '¿#!/usr/bin/env bash o #!/bin/bash?',
+            'text': 'Al iniciar un script, tenemos que poner el [[https://bash.cyberciti.biz/guide/Shebang][shebang]], representado por =#!=. Al ejecutar el script, nuestro sistema operativo leerá [[https://bash.cyberciti.biz/guide/Shebang][shebang]] y ejecutará el lenguaje de programación que se especifica', 
+            'tags': 'bash,scripts,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html' 
+},
+{
             'title': 'Docker. Monta tu propio servidor de mensajería ejabberd - xmpp',
             'text': 'De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP.', 
             'tags': 'ejabberd,xmpp,docker,caddy,,', 
@@ -973,7 +979,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
