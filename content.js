@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Abrir aplicaciones de Ubuntu desde una web html',
+            'text': 'No es necesario utilizar [[https://github.com/linuxserver/Heimdall][Heimdall]] o [[https://github.com/bastienwirtz/homer][Homer]] para crear una página web de inicio. En [[https://www.reddit.com/r/startpages/][este hilo de Reddit llamado startpages]] encontrarás montoner de webs html donde montando un Servidor', 
+            'tags': 'ubuntu,escritorio,appimage,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html' 
+},
+{
             'title': '¿#!/usr/bin/env bash o #!/bin/bash?',
             'text': 'Al iniciar un script, tenemos que poner el [[https://bash.cyberciti.biz/guide/Shebang][shebang]], representado por =#!=. Al ejecutar el script, nuestro sistema operativo leerá [[https://bash.cyberciti.biz/guide/Shebang][shebang]] y ejecutará el lenguaje de programación que se especifica', 
             'tags': 'bash,scripts,,,,', 

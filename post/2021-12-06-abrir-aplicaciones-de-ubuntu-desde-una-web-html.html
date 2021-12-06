@@ -1,0 +1,167 @@
+<head>
+<title>Abrir aplicaciones de Ubuntu desde una web html. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="No es necesario utilizar [[https://github.com/linuxserver/Heimdall][Heimdall]] o [[https://github.com/bastienwirtz/homer][Homer]] para crear una página web de inicio. En [[https://www.reddit.com/r/startpages/][este hilo de Reddit llamado startpages]] encontrarás montoner de webs html donde montando un Servidor" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Abrir aplicaciones de Ubuntu desde una web html" />
+<meta property="og:description" content="No es necesario utilizar [[https://github.com/linuxserver/Heimdall][Heimdall]] o [[https://github.com/bastienwirtz/homer][Homer]] para crear una página web de inicio. En [[https://www.reddit.com/r/startpages/][este hilo de Reddit llamado startpages]] encontrarás montoner de webs html donde montando un Servidor" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html" />
+
+<meta name="twitter:title" content="Abrir aplicaciones de Ubuntu desde una web html" />
+<meta name="twitter:description" content="No es necesario utilizar [[https://github.com/linuxserver/Heimdall][Heimdall]] o [[https://github.com/bastienwirtz/homer][Homer]] para crear una página web de inicio. En [[https://www.reddit.com/r/startpages/][este hilo de Reddit llamado startpages]] encontrarás montoner de webs html donde montando un Servidor" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="abrir-aplicaciones-de-ubuntu-desde-una-web-html-1" title="Abrir aplicaciones de Ubuntu desde una web html" data-export_file_name="abrir-aplicaciones-de-ubuntu-desde-una-web-html" data-description="No es necesario utilizar [[https://github.com/linuxserver/Heimdall][Heimdall]] o [[https://github.com/bastienwirtz/homer][Homer]] para crear una página web de inicio. En [[https://www.reddit.com/r/startpages/][este hilo de Reddit llamado startpages]] encontrarás montoner de webs html donde montando un Servidor" data-export_date="2021-12-06 19:55" data-category="ubuntu" data-tag="escritorio,appimage" data-image="./images-blog/ugeek.png">Abrir aplicaciones de Ubuntu desde una web html</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 462 palabras.    <a href="https://ugeek.github.io/blog/categories/ubuntu">ubuntu</a></h5>
+<p>No es necesario utilizar <a href="https://github.com/linuxserver/Heimdall">Heimdall</a> o <a href="https://github.com/bastienwirtz/homer">Homer</a> para crear una página web de inicio. En <a href="https://www.reddit.com/r/startpages/">este hilo de Reddit llamado startpages</a> encontrarás montoner de webs html donde montando un Servidor Web o como es mi caso, utilizando el propio servidor WebDAV, podrás tener un punto de partida a todos tus servicios favoritos.</p>
+<p>Pero… ¿Que hay de <strong>Typora</strong>, <strong>Sleek</strong>,….? Me gustaría poder lanzar estas aplicaciones desde la Web. ¿Es posible hacerlo?</p>
+<p>La respuesta es <strong>Si</strong>.</p>
+<p>Para hacerlo tenemos que hacer un script para que Ubuntu reconoca cuando queremos lanzar una aplicación desde la terminal.</p>
+<p>Vamos a ello:</p>
+<h2 id="creando-el-script">Creando el Script</h2>
+<p>Vamos a crear el script para que la terminal lance las aplicaciones que añadamos en un archivo html.</p>
+<p>Crearemos el directorio <strong>launch</strong> dentro del directorio <strong>.config</strong>.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">mkdir</span> -p ~/.config/open_app/</a></code></pre></div>
+<p>Voy a utilizar nano para crear el archivo <strong>open_app.sh</strong></p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">nano</span> ~/.config/open_app/open_app.sh</a></code></pre></div>
+<p>Pegamos el siguiente script:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="co">#!/bin/bash</span></a>
+<a class="sourceLine" id="cb3-2" title="2"></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">!=</span> <span class="st">&quot;app://&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span></a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="va">app=${1#</span>app://<span class="va">}</span></a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="fu">nohup</span> <span class="st">&quot;</span><span class="va">$app</span><span class="st">&quot;</span> <span class="op">&amp;&gt;</span>/dev/null <span class="kw">&amp;</span></a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="kw">else</span></a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="fu">nohup</span> gnome-terminal <span class="op">&amp;&gt;</span>/dev/null <span class="kw">&amp;</span></a>
+<a class="sourceLine" id="cb3-8" title="8"><span class="kw">fi</span></a></code></pre></div>
+<p><strong>gnome-terminal</strong> es la terminal desde donde lanzaremos la aplicación. Si tu sistema opertivo no tiene <strong>gnome-terminal</strong>, especifica el nombre de la terminal que utilices.</p>
+<p>Ahora le daremos permisos de ejecución:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">chmod</span> +x ~/.config/open_app/open_app.sh</a></code></pre></div>
+<h2 id="crear-archivo-.desktop-para-el-iniciador-de-aplicaciones">Crear archivo .desktop para el iniciador de aplicaciones</h2>
+<p>Ahora crearemos el lanzador <strong>.desktop</strong> para el script y así decirle a Ubuntu que utilice este script cuando utilicemos <code>app://</code></p>
+<p>Crearemos el archivo <code>/usr/share/applications/appurl.desktop</code>:</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> -H nano /usr/share/applications/appurl.desktop</a></code></pre></div>
+<p>Vamos a agregar el siguiente contenido:</p>
+<p>Sustituye <strong>angel</strong> por tu usuario</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1">[<span class="ex">Desktop</span> Entry]</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="va">Name=</span>TerminalURL</a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="va">Exec=</span>/home/angel/.config/open_app/open_app.sh <span class="ex">%u</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="va">Type=</span>Application</a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="va">NoDisplay=</span>true</a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="va">Categories=</span>System;</a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="va">MimeType=</span>x-scheme-handler/app;</a></code></pre></div>
+<p>Ahora actualizaremos la base de datos del escritorio:</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">sudo</span> update-desktop-database</a></code></pre></div>
+<h2 id="probando-que-todo-funciona">Probando que todo funciona</h2>
+<p>Ahora todo debería funcionar bién. Vamos probar abrir <strong>nautilus</strong>:</p>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">xdg-open</span> <span class="st">&#39;app://nautilus&#39;</span></a></code></pre></div>
+<h2 id="creando-web-html">Creando web html</h2>
+<p>Crearemos un archivo index.html:</p>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">nano</span> index.htmls</a></code></pre></div>
+<p>Añade el siguiente contenido:</p>
+<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="op">&lt;</span><span class="ex">html</span> xmlns=<span class="st">&quot;http://www.w3.org/1999/xhtml&quot;</span> xml:lang=<span class="st">&quot;es&quot;</span> lang=<span class="st">&quot;es&quot;</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="op">&lt;</span><span class="fu">head</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="op">&lt;</span><span class="ex">title</span><span class="op">&gt;</span>Abre aplicaciones en Ubuntu desde HTML<span class="op">&lt;</span>/title<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="op">&lt;</span><span class="ex">meta</span> http-equiv=<span class="st">&quot;content-type&quot;</span> content=<span class="st">&quot;text/html;charset=utf-8&quot;</span> /<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-5" title="5"><span class="op">&lt;</span>/<span class="ex">head</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-6" title="6"></a>
+<a class="sourceLine" id="cb10-7" title="7"><span class="op">&lt;</span><span class="ex">body</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-8" title="8"><span class="op">&lt;</span><span class="ex">h3</span><span class="op">&gt;</span>Abre aplicaciones en Ubuntu desde HTML<span class="op">&lt;</span>/h3<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="op">&lt;</span><span class="ex">p</span><span class="op">&gt;</span>Abrir terminal: <span class="op">&lt;</span>a title=<span class="st">&quot;Open&quot;</span> href=<span class="st">&quot;app://&quot;</span><span class="op">&gt;</span>app://<span class="op">&lt;</span>/a<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-10" title="10"><span class="kw">(</span><span class="ex">equivalente</span> con: <span class="op">&lt;</span>a title=<span class="st">&quot;Open&quot;</span> href=<span class="st">&quot;app://gnome-terminal&quot;</span><span class="op">&gt;</span>app://gnome-terminal<span class="op">&lt;</span>/a<span class="op">&gt;</span><span class="kw">)</span><span class="op">&lt;</span>/<span class="ex">p</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-11" title="11"><span class="op">&lt;</span><span class="ex">p</span><span class="op">&gt;</span>Abrir Nautilus: <span class="op">&lt;</span>a title=<span class="st">&quot;Open&quot;</span> href=<span class="st">&quot;app://nautilus&quot;</span><span class="op">&gt;</span>app://nautilus<span class="op">&lt;</span>/a<span class="op">&gt;&lt;</span>/p<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-12" title="12"><span class="op">&lt;</span>/<span class="ex">body</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-13" title="13"><span class="op">&lt;</span>/<span class="ex">html</span><span class="op">&gt;</span></a></code></pre></div>
+<h2 id="appimage">AppImage</h2>
+<p>Me encanta abrir mis aplicaciones <strong>AppImage</strong>. Todos los <strong>AppImage</strong> los tengo en un directorio. Especifica la ruta completa para abrirlos:</p>
+<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="op">&lt;</span><span class="ex">a</span> title=<span class="st">&quot;Open&quot;</span> href=<span class="st">&quot;app:///home/angel/appimage/sleek.AppImage&quot;</span><span class="op">&gt;</span>Sleek<span class="op">&lt;</span>/a<span class="op">&gt;&lt;</span>/p<span class="op">&gt;</span></a></code></pre></div>
+<br>
+<p>Publicado por Angel el lunes 06 diciembre del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-03-firefox-por-ppa-en-ubuntu-y-derivadas-de-debian.html">Firefox por PPA en Ubuntu y derivadas de Debian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html">Conexión segura por TLS al DNS de CloudFlare</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,… desde la terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html">Docker en Ubuntu 20.04</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-07-cambiar-el-hostname-ubuntu-debian-raspberry-os--.html">Cambiar el hostname Ubuntu, Debian, Raspberry OS…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html">Instalando Thunderbird y añadiendo el corrector ortográfico</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-05-instalando-la-ultima-version-de-qutebrowser.html">Instalando la última versión de Qutebrowser</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian… con Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html">PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,… mediante Docker</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
