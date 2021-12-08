@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo',
+            'text': 'Typora sale de la beta y llega a la primera versión estable. El mejor editor *Markdown* multiplataforma que he probado hasta la fecha.', 
+            'tags': 'markdown,typora,editor,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html' 
+},
+{
             'title': 'Abrir aplicaciones de Ubuntu desde una web html',
             'text': 'No es necesario utilizar [[https://github.com/linuxserver/Heimdall][Heimdall]] o [[https://github.com/bastienwirtz/homer][Homer]] para crear una página web de inicio. En [[https://www.reddit.com/r/startpages/][este hilo de Reddit llamado startpages]] encontrarás montoner de webs html donde montando un Servidor', 
             'tags': 'ubuntu,escritorio,appimage,,,', 

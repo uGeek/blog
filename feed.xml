@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo</title>
+    <link>https://ugeek.github.io/blog/post/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/typora.png" alt="Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo"&gt;
+&lt;br&gt;&lt;p&gt;Typora sale de la beta y llega a la primera versión estable. El mejor editor *Markdown* multiplataforma que he probado hasta la fecha.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html&gt;Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 08 Dec 2021  +0100</pubDate>
+    <category>markdown</category>
+    <category>typora</category>
+    <category>editor</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html</guid>
+   </item>
+   <item>
     <title>Abrir aplicaciones de Ubuntu desde una web html</title>
     <link>https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 06 Dec 2021  +0100</pubDate>
+    <pubDate>Mon, 06 Dec 2021 14:38 +0100</pubDate>
     <category>ubuntu</category>
     <category>escritorio</category>
     <category>appimage</category>
