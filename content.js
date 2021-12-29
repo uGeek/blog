@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Sonixd. Player para Jellyfin y Subsonic',
+            'text': 'Sonixd es un cliente de escritorio multiplataforma creado para servidores de música compatibles con Subsonic-API (y Jellyfin en 0.8.0+).', 
+            'tags': 'jellyfin,subsonic,ubuntu,jellyfin,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html' 
+},
+{
             'title': 'Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo',
             'text': 'Typora sale de la beta y llega a la primera versión estable. El mejor editor *Markdown* multiplataforma que he probado hasta la fecha.', 
             'tags': 'markdown,typora,editor,,,', 
@@ -991,7 +997,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
