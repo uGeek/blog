@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Nautilus con Tema Oscuro en I3wm',
+            'text': 'Continuo utilizando I3wm cómo escritorio, o mejor dicho que estos de ventanas, y Nautilus aparece con el tema claro.', 
+            'tags': 'ubuntu,nautilus,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html' 
+},
+{
             'title': 'Sonixd. Player para Jellyfin y Subsonic',
             'text': 'Sonixd es un cliente de escritorio multiplataforma creado para servidores de música compatibles con Subsonic-API (y Jellyfin en 0.8.0+).', 
             'tags': 'jellyfin,subsonic,ubuntu,jellyfin,,', 

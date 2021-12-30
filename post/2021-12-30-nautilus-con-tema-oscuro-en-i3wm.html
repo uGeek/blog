@@ -1,5 +1,5 @@
 <head>
-<title>jellyfin</title>
+<title>Nautilus con Tema Oscuro en I3wm. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,22 +47,72 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>jellyfin</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="nautilus-con-tema-oscuro-en-i3wm-1" title="Nautilus con Tema Oscuro en I3wm" data-export_file_name="nautilus-con-tema-oscuro-en-i3wm" data-description="Continuo utilizando I3wm cómo escritorio, o mejor dicho que estos de ventanas, y Nautilus aparece con el tema claro." data-export_date="2021-12-30 11:15" data-category="ubuntu" data-tag="nautilus" data-image="./images-blog/i3wm.png">Nautilus con Tema Oscuro en I3wm</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 168 palabras.    <a href="https://ugeek.github.io/blog/categories/ubuntu">ubuntu</a></h5>
+<p>Continuo utilizando I3wm cómo escritorio, o mejor dicho que estos de ventanas, y Nautilus aparece con el tema claro.</p>
+<p>He abierto la configuración de Ubuntu para intentar poner el tema oscuro y no me aparece la opción.</p>
+<center>
+<p><img src="../images-blog/i3wm.png" /></p>
+</center>
+<p>Para conseguir el tema oscuro en I3wm, sigue los siguientes pasos.</p>
+<h2 id="creando-archivo-de-configuración">Creando archivo de Configuración</h2>
+<p>Crearemos el archivo en <code>~/.config/gtk-3.0/settings.ini</code></p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">nano</span> ~/.config/gtk-3.0/settings.ini</a></code></pre></div>
+<p>Y añadiremos lo siguiente:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1">[<span class="ex">Settings</span>]</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="ex">gtk-application-prefer-dark-theme</span> = true</a></code></pre></div>
+<br>
+<p>Publicado por Angel el jueves 30 diciembre del 2021</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html>El Adiós a Plex y Emby. Llega Jellyfin</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-21-cada-vez-mas-clientes-de-jellyfin.html>Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-27-ordena-renombra-y-actualiza-tus-metadatos-con-tiny-media-manager.html>Ordena, renombra y actualiza tus metadatos con Tiny Media Manager</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-03-09-el-mejor-y-mas-ligero-cliente-para-tu-escritorio-de-jellyfin-jellyfin-cli.html>El mejor y más ligero cliente para tu Escritorio de Jellyfin. Jellyfin-cli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-03-10-escuchando-musica-de-mi-servidor-jellyfin-con-jellycli.html>Escuchando música de mi servidor Jellyfin con jellycli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html>Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html>Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-08-09-lista-de-repositorios-de-jellyfin-.html>Lista de repositorios de Jellyfin.</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html>Sonixd. Player para Jellyfin y Subsonic</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html">Sonixd. Player para Jellyfin y Subsonic</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html">Abrir aplicaciones de Ubuntu desde una web html</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-03-firefox-por-ppa-en-ubuntu-y-derivadas-de-debian.html">Firefox por PPA en Ubuntu y derivadas de Debian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html">Conexión segura por TLS al DNS de CloudFlare</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,… desde la terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-05-docker-en-ubuntu-1804.html">Docker en Ubuntu 20.04</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-07-cambiar-el-hostname-ubuntu-debian-raspberry-os--.html">Cambiar el hostname Ubuntu, Debian, Raspberry OS…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html">Instalando Thunderbird y añadiendo el corrector ortográfico</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-05-instalando-la-ultima-version-de-qutebrowser.html">Instalando la última versión de Qutebrowser</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

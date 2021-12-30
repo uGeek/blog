@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Nautilus con Tema Oscuro en I3wm</title>
+    <link>https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/i3wm.png" alt="Nautilus con Tema Oscuro en I3wm"&gt;
+&lt;br&gt;&lt;p&gt;Continuo utilizando I3wm cómo escritorio, o mejor dicho que estos de ventanas, y Nautilus aparece con el tema claro.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html&gt;Nautilus con Tema Oscuro en I3wm&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 30 Dec 2021  +0100</pubDate>
+    <category>ubuntu</category>
+    <category>nautilus</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html</guid>
+   </item>
+   <item>
     <title>Sonixd. Player para Jellyfin y Subsonic</title>
     <link>https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 29 Dec 2021  +0100</pubDate>
+    <pubDate>Wed, 29 Dec 2021 11:15 +0100</pubDate>
     <category>jellyfin</category>
     <category>subsonic</category>
     <category>ubuntu</category>
