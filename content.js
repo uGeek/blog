@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'TelegramTUI. Cliente de Terminal en Python',
+            'text': 'Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. *Telegramtui* es otro cliente para terminal que es más parecido a otros clientes de mensajería', 
+            'tags': 'telegram,cli,terminal,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html' 
+},
+{
             'title': 'Nautilus con Tema Oscuro en I3wm',
             'text': 'Continuo utilizando I3wm cómo escritorio, o mejor dicho que estos de ventanas, y Nautilus aparece con el tema claro.', 
             'tags': 'ubuntu,nautilus,,,,', 

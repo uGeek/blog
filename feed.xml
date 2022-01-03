@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>TelegramTUI. Cliente de Terminal en Python</title>
+    <link>https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/telegram.jpg" alt="TelegramTUI. Cliente de Terminal en Python"&gt;
+&lt;br&gt;&lt;p&gt;Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. *Telegramtui* es otro cliente para terminal que es más parecido a otros clientes de mensajería... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html&gt;TelegramTUI. Cliente de Terminal en Python&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 03 Jan 2022  +0100</pubDate>
+    <category>telegram</category>
+    <category>cli</category>
+    <category>terminal</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html</guid>
+   </item>
+   <item>
     <title>Nautilus con Tema Oscuro en I3wm</title>
     <link>https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 30 Dec 2021  +0100</pubDate>
+    <pubDate>Thu, 30 Dec 2021 12:19 +0100</pubDate>
     <category>ubuntu</category>
     <category>nautilus</category>
     <category></category>

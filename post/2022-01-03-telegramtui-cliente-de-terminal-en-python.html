@@ -1,0 +1,174 @@
+<head>
+<title>TelegramTUI. Cliente de Terminal en Python. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. *Telegramtui* es otro cliente para terminal que es más parecido a otros clientes de mensajería" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="TelegramTUI. Cliente de Terminal en Python" />
+<meta property="og:description" content="Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. *Telegramtui* es otro cliente para terminal que es más parecido a otros clientes de mensajería" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html" />
+
+<meta name="twitter:title" content="TelegramTUI. Cliente de Terminal en Python" />
+<meta name="twitter:description" content="Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. *Telegramtui* es otro cliente para terminal que es más parecido a otros clientes de mensajería" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="telegramtui.-cliente-de-terminal-en-python-1" title="TelegramTUI. Cliente de Terminal en Python" data-export_file_name="telegramtui-cliente-de-terminal-en-python" data-description="Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. *Telegramtui* es otro cliente para terminal que es más parecido a otros clientes de mensajería" data-export_date="2022-01-03 12:19" data-category="telegram" data-tag="cli,terminal" data-image="./images-blog/telegram.jpg">TelegramTUI. Cliente de Terminal en Python</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 514 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
+<p>Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. <strong>Telegramtui</strong> es otro cliente para terminal que es más parecido a otros clientes de mensajería para terminal, dividido principalmente en 3 partes. A la Izquierda los chats, a la derecha superior la conversación y justo en la parte inferior, la cajetilla donde introduciremos el texto.</p>
+<p>Esta versión puedes utilizarla tanto en tu PC como Raspberry Pi ya que es compatible con arquitectura <strong>amd64</strong> así como <strong>ARM</strong>.</p>
+<center>
+<p><img src="../images-blog/telegram.jpg" /></p>
+</center>
+<p>Vamos a ver como instalarla</p>
+<h3 id="instalación">Instalación</h3>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pip3 install telegramtui</a></code></pre></div>
+<p><strong>Telegramtui</strong> tiene las siguientes dependencias, que serán instaladas con el comando anterior:</p>
+<ul>
+<li><a href="https://github.com/LonamiWebs/Telethon">Teletón</a></li>
+<li><a href="https://github.com/bad-day/npyscreen">NpyScreen</a></li>
+<li><a href="http://jwilk.net/software/python-aalib">python-aalib</a></li>
+</ul>
+<h3 id="archivo-de-configuración">Archivo de Configuración</h3>
+<p>Ahora tendremos que ir al archivo de configuración y editarlo.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">nano</span> ~/.config/telegramtui/telegramtui.ini</a></code></pre></div>
+<p>Y encontraremos esto:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1">[<span class="ex">telegram_api</span>]</a>
+<a class="sourceLine" id="cb3-2" title="2">; <span class="ex">obtain</span> api keys here: https://core.telegram.org/api/obtaining_api_id</a>
+<a class="sourceLine" id="cb3-3" title="3">; <span class="ex">only</span> api_id and api_hash are needed for the application to work</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="ex">api_id</span> = *api_id here*</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="ex">api_hash</span> = *api_hash here*</a>
+<a class="sourceLine" id="cb3-6" title="6">; <span class="ex">number</span> of thread to receive data from tg api</a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="ex">workers</span> = 3</a>
+<a class="sourceLine" id="cb3-8" title="8">; <span class="ex">you</span> can use few accounts, change session name</a>
+<a class="sourceLine" id="cb3-9" title="9"><span class="ex">session_name</span> = user</a>
+<a class="sourceLine" id="cb3-10" title="10"></a>
+<a class="sourceLine" id="cb3-11" title="11">[<span class="ex">app</span>]</a>
+<a class="sourceLine" id="cb3-12" title="12"><span class="ex">name</span> = TelegramTUI v0.1.2</a>
+<a class="sourceLine" id="cb3-13" title="13"><span class="ex">message_dialog_len</span> = 50</a>
+<a class="sourceLine" id="cb3-14" title="14"></a>
+<a class="sourceLine" id="cb3-15" title="15">[<span class="ex">proxy</span>]</a>
+<a class="sourceLine" id="cb3-16" title="16"><span class="bu">type</span> = *[SOCKS4<span class="kw">|</span><span class="ex">SOCKS5</span><span class="kw">|</span><span class="ex">HTTP</span>]*</a>
+<a class="sourceLine" id="cb3-17" title="17"><span class="ex">addr</span> = *ip add here*</a>
+<a class="sourceLine" id="cb3-18" title="18"><span class="ex">port</span> = *port here*</a>
+<a class="sourceLine" id="cb3-19" title="19">; <span class="kw">set</span> <span class="ex">username</span> and password (only for socks)</a>
+<a class="sourceLine" id="cb3-20" title="20"><span class="ex">username</span> = None</a>
+<a class="sourceLine" id="cb3-21" title="21"><span class="ex">password</span> = None</a>
+<a class="sourceLine" id="cb3-22" title="22"></a>
+<a class="sourceLine" id="cb3-23" title="23">[<span class="ex">other</span>]</a>
+<a class="sourceLine" id="cb3-24" title="24"><span class="ex">timezone</span> = +0</a></code></pre></div>
+<p>Tenemos que rellenar el <code>api_id = *api_id here*</code> y <code>api_hash = *api_hash</code> here*, que podremos conseguirlo desde la siguiente página de Telegram.</p>
+<p><strong>Generar claves API de Telegram:</strong> <strong>1.</strong> Iremos a la url <a href="https://my.telegram.org">https://my.telegram.org</a> iniciamos sesión con nuestro número de teléfono, nos enviará un mensaje a otro cliente de Telegram con un código. <strong>2.</strong> Vamos a API Development tools. <strong>3.</strong> Nos dará la opción de crear una nueva aplicación. Ponemos el título y nombre. <strong>4.</strong> Le daremos a crear y guardaremos <strong>api_id</strong> y <strong>api_hash</strong>.</p>
+<p>Este <strong>api_id</strong> y <strong>api_hash</strong> lo pondremos en el archivo de configuración. Recuerda que hemos creado una aplicación estos datos pueden utilizarse con diferentes aplicaciones y números de telefono, pero no lo compartas.</p>
+<p>## Iniciando</p>
+<p>Ahora cuando lancemos el comando, nos pedirá el número de Teléfono y reciviremos el código en otra sesión de Telemgram para introducir</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">telegramtui</span></a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="ex">Please</span> enter your phone: +34655555555</a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="ex">Please</span> enter the code you received: 91016</a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="ex">Please</span> enter your password:</a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="ex">Signed</span> in successfully as 𝘼𝙣𝙜𝙚𝙡</a></code></pre></div>
+<p>### Atajos</p>
+<ul>
+<li>Navegación: <code>Tab</code>, <code>Shift+Tab</code>, <code>Mouse</code></li>
+<li>Enviar mensaje: <code>Ctrl+S</code>, <code>Alt+Enter</code></li>
+<li>Borrar mensaje: <code>Ctrl+R</code></li>
+<li>Enviar archivo: <code>Ctrl+O</code></li>
+<li>Salida: <code>Ctrl+Q</code>, <code>ESC</code></li>
+<li>Dupdo: <code>Shift+Mouse</code></li>
+<li>Pegar: <code>Shift+Ins</code>, <code>Shift+Middle mouse button</code></li>
+</ul>
+<p>## Fuentes</p>
+<ul>
+<li><p><a href="https://github.com/vtr0n/TelegramTUI">https://github.com/vtr0n/TelegramTUI</a></p></li>
+<li><p><a href="https://core.telegram.org/api/obtaining_api_id">https://core.telegram.org/api/obtaining_api_id</a></p></li>
+</ul>
+<br>
+<p>Publicado por Angel el lunes 03 enero del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html">Aplicaciones Telegram versión web, Android, IOS,…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html">Grabar lo que suena en tu ordenador</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-08-varias-cuentas-de-telegram-en-un-mismo-pc.html">Varias cuentas de telegram en un mismo PC</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-28-telegram-desktop-atajos-de-teclado.html">Telegram Desktop. Atajos de teclado</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html">Docker: Gotify. Tu servidor de Notificaciones</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html">Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html">Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
