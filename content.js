@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Telethon Downloader. Bot de descargas para Telegram',
+            'text': 'Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry.', 
+            'tags': 'telegram,bot,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html' 
+},
+{
             'title': 'TelegramTUI. Cliente de Terminal en Python',
             'text': 'Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. *Telegramtui* es otro cliente para terminal que es más parecido a otros clientes de mensajería', 
             'tags': 'telegram,cli,terminal,,,', 

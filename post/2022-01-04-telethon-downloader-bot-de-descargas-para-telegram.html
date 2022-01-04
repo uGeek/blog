@@ -1,5 +1,5 @@
 <head>
-<title>Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor. uGeek Blog </title>
+<title>Telethon Downloader. Bot de descargas para Telegram. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
+<meta name="description" content="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" />
-<meta property="og:description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram-desktop.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html" />
+<meta property="og:title" content="Telethon Downloader. Bot de descargas para Telegram" />
+<meta property="og:description" content="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html" />
 
-<meta name="twitter:title" content="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" />
-<meta name="twitter:description" content="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/telegram-desktop.png" />
+<meta name="twitter:title" content="Telethon Downloader. Bot de descargas para Telegram" />
+<meta name="twitter:description" content="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,39 +85,48 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="instala-telegram-desktop-y-rclone-browser-en-una-raspberry-pi-o-servidor" title="Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor" data-export_file_name="Instalar Telegram Desktop y Rclone Browser" data-description="Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio" data-export_date="2019-09-17 5:15" data-category="telegram" data-tag="ssh, raspberry" data-image="./images-blog/telegram-desktop.png">Instala Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 443 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
-<p>Gracias a al nueva actualización de debian buster, podemos hacer cosas maravillosas, como instalar Telegram Desktop o Rclone-Browser en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio, como si fuera una aplicación nativa de tu PC, pero descargando el contenido de Telegram o Rclone en tu Raspberry o Servidor.</p>
-<p>En el caso de Telegram, está genial para todo aquel que desea descargar intercambiar archivos entre dispositivos, o descargar archivos que tengas en Telegram, en un canal privado que utilices de nube, o subir archivos a este canal privado.</p>
-<p>Si utilizas Rclone, también podríamos utilizar Rclone-Browser para intercambiar el contenido de tu nube en Telegram con el resto de nubes.</p>
-<center height="50">
-<p><img src="../images-blog/telegram-desktop.png" /></p>
+<h1 id="telethon-downloader.-bot-de-descargas-para-telegram-1" title="Telethon Downloader. Bot de descargas para Telegram" data-export_file_name="telethon-downloader-bot-de-descargas-para-telegram" data-description="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." data-export_date="2022-01-04 20:20" data-category="telegram" data-tag="bot" data-image="./images-blog/telegram.jpg">Telethon Downloader. Bot de descargas para Telegram</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 327 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
+<p>Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry.</p>
+<center>
+<p><img src="../images-blog/telegram.jpg" /></p>
 </center>
-<p>Todo esto lo vamos ha hacer posible gracias a x11. En Linux podemos utilizarlo en cualquier distro. Si utilizas Windows o Mac, tendrás que instalar un programa para poder utilizarlo.</p>
-<p>X11 es un servidor gráfico que nos permite el exportar el display de un servidor remoto a nuestro escritorio local. De manera que podremos visualizar aplicaciones gráficas del servidor en nuestro escritorio. Lo que se conoce como forwarding a través de SSH.</p>
-<h2 id="instalación-de-telegram-desktop">Instalación de Telegram Desktop</h2>
-<p>Telegram Desktop la instalaremos en nuestra Raspberry o Servidor, del mismo modo que en nuestro escritorio Linux. Abriremos la terminal de nuestra Raspberry y escribiremos:</p>
-<pre><code>sudo apt install telegram-desktop
-</code></pre>
-<h2 id="instalando-rclone-browser">Instalando Rclone-Browser</h2>
-<p>También podemos instalar Rclone Browser, para gestionar nuestras nubes de un modo gráfico</p>
-<pre><code>sudo apt install rclone-browser
-</code></pre>
-<h2 id="conexión-desde-tu-escritorio-linux-a-telegram-desktop">Conexión desde tu escritorio Linux a Telegram Desktop</h2>
-<p>Nos conectamos vía ssh añadiendo el flag <strong>-X</strong> y se nos abrirá la aplicación de Telegram con interfaz gráfica en nuestro PC.</p>
-<p>Sustituye tu nombre de usuario por <strong>angel</strong> y tu <strong>ip</strong> por la ip de tu Raspberry o servidor.</p>
-<pre><code>ssh -X angel@192.168.1.100 telegram-desktop
-</code></pre>
-<p>Yo, una vez más, os recomendaría crear un alias para arrancar desde tu PC, el Telegram remoto de tu Raspberry.</p>
-<p>Ejemplo:</p>
-<pre><code>alias telegram-pi=&#39;ssh -X angel@192.168.1.100 telegram-desktop&#39;
-</code></pre>
-<h2 id="conexión-a-rclone-browser">Conexión a Rclone Browser</h2>
-<p>Del mismo modo, haremos lo propio para abrir Rclone Browser y si lo deseamos, crear un alias.</p>
-<pre><code>ssh -X angel@192.168.1.100 rclone-browser
-</code></pre>
+<p>El otro objetivo era tenerlo todo en un Docker. No me gusta tener que estar pensando en instalar librerías de Python,… lo ideal es que esté todo en un paquete, en este caso un contenedor Docker. Que sea montar y funcionar.</p>
+<p>Telethon Downloader hace precisamente esto.</p>
+<p>Para que funcione este bot, es necesario generar a través de tu cuenta de Telegram, el API ID y API HASH. Siguiendo este proceso, conseguimos que los archivos que vayamos a descargar en nuestra raspberry, pueden ser superiores a 50 MB. Podremos descargar lo máximo que ofrece Telegram, en este caso 2 Gb.</p>
+<p>También como es lógico, es necesario conseguir el token del bot que has creado a través del BotFather de Telegram.</p>
+<p>No lo he comentado antes, pero este contenedor es compatible para arquitectura AMD64 y ARM.</p>
+<p>Visto esto, vamos a rellenar nuestro docker-compose y ponerlo en marcha.</p>
+<h2 id="docker-compose">Docker-Compose</h2>
+<p>Rellena las variables en el Docker Compose:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&#39;3&#39;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ex">telethon_downloader</span>:</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="ex">image</span>: jsavargas/telethon_downloader</a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="ex">container_name</span>: telethon_downloader</a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="ex">restart</span>: unless-stopped</a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="ex">network_mode</span>: host</a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="ex">environment</span>:</a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="ex">-</span> <span class="st">&#39;PUID=1000&#39;</span></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="ex">-</span> <span class="st">&#39;PGID=1000&#39;</span></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="ex">-</span> <span class="st">&#39;TG_AUTHORIZED_USER_ID=&#39;</span>  <span class="co">#&lt;telegram chat_id authorized&gt;</span></a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="ex">-</span> <span class="st">&#39;TG_API_ID=&#39;</span></a>
+<a class="sourceLine" id="cb1-15" title="15"><span class="ex">-</span> <span class="st">&#39;TG_API_HASH=&#39;</span></a>
+<a class="sourceLine" id="cb1-16" title="16"><span class="ex">-</span> <span class="st">&#39;TG_BOT_TOKEN=&#39;</span></a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="ex">-</span> <span class="st">&#39;TG_PROGRESS_DOWNLOAD=True&#39;</span> <span class="co">#OPTIONAL</span></a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="ex">-</span> <span class="st">&#39;TZ=America/Santiago&#39;</span></a>
+<a class="sourceLine" id="cb1-19" title="19"><span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-20" title="20"><span class="ex">-</span> /path/to/config:/config</a>
+<a class="sourceLine" id="cb1-21" title="21"><span class="ex">-</span> /path/to/download:/download</a>
+<a class="sourceLine" id="cb1-22" title="22"><span class="ex">-</span> /path/to/download/torrent/watch:/watch</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/rodriguezst/telethon_downloader">https://github.com/rodriguezst/telethon_downloader</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el martes 17 septiembre del 2019</p>
+<p>Publicado por Angel el martes 04 enero del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

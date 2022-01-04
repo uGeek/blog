@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Telethon Downloader. Bot de descargas para Telegram</title>
+    <link>https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/telegram.jpg" alt="Telethon Downloader. Bot de descargas para Telegram"&gt;
+&lt;br&gt;&lt;p&gt;Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html&gt;Telethon Downloader. Bot de descargas para Telegram&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 04 Jan 2022  +0100</pubDate>
+    <category>telegram</category>
+    <category>bot</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html</guid>
+   </item>
+   <item>
     <title>TelegramTUI. Cliente de Terminal en Python</title>
     <link>https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 03 Jan 2022  +0100</pubDate>
+    <pubDate>Mon, 03 Jan 2022 20:20 +0100</pubDate>
     <category>telegram</category>
     <category>cli</category>
     <category>terminal</category>
