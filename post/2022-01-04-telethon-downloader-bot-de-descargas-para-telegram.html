@@ -103,24 +103,24 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb1-2" title="2"></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="ex">services</span>:</a>
 <a class="sourceLine" id="cb1-4" title="4"></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="ex">telethon_downloader</span>:</a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="ex">image</span>: jsavargas/telethon_downloader</a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="ex">container_name</span>: telethon_downloader</a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="ex">restart</span>: unless-stopped</a>
-<a class="sourceLine" id="cb1-9" title="9"><span class="ex">network_mode</span>: host</a>
-<a class="sourceLine" id="cb1-10" title="10"><span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb1-11" title="11"><span class="ex">-</span> <span class="st">&#39;PUID=1000&#39;</span></a>
-<a class="sourceLine" id="cb1-12" title="12"><span class="ex">-</span> <span class="st">&#39;PGID=1000&#39;</span></a>
-<a class="sourceLine" id="cb1-13" title="13"><span class="ex">-</span> <span class="st">&#39;TG_AUTHORIZED_USER_ID=&#39;</span>  <span class="co">#&lt;telegram chat_id authorized&gt;</span></a>
-<a class="sourceLine" id="cb1-14" title="14"><span class="ex">-</span> <span class="st">&#39;TG_API_ID=&#39;</span></a>
-<a class="sourceLine" id="cb1-15" title="15"><span class="ex">-</span> <span class="st">&#39;TG_API_HASH=&#39;</span></a>
-<a class="sourceLine" id="cb1-16" title="16"><span class="ex">-</span> <span class="st">&#39;TG_BOT_TOKEN=&#39;</span></a>
-<a class="sourceLine" id="cb1-17" title="17"><span class="ex">-</span> <span class="st">&#39;TG_PROGRESS_DOWNLOAD=True&#39;</span> <span class="co">#OPTIONAL</span></a>
-<a class="sourceLine" id="cb1-18" title="18"><span class="ex">-</span> <span class="st">&#39;TZ=America/Santiago&#39;</span></a>
-<a class="sourceLine" id="cb1-19" title="19"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-20" title="20"><span class="ex">-</span> /path/to/config:/config</a>
-<a class="sourceLine" id="cb1-21" title="21"><span class="ex">-</span> /path/to/download:/download</a>
-<a class="sourceLine" id="cb1-22" title="22"><span class="ex">-</span> /path/to/download/torrent/watch:/watch</a></code></pre></div>
+<a class="sourceLine" id="cb1-5" title="5">  <span class="ex">telethon_downloader</span>:</a>
+<a class="sourceLine" id="cb1-6" title="6">    <span class="ex">image</span>: jsavargas/telethon_downloader</a>
+<a class="sourceLine" id="cb1-7" title="7">    <span class="ex">container_name</span>: telethon_downloader</a>
+<a class="sourceLine" id="cb1-8" title="8">    <span class="ex">restart</span>: unless-stopped</a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="ex">network_mode</span>: host</a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="ex">environment</span>:</a>
+<a class="sourceLine" id="cb1-11" title="11">      <span class="ex">-</span> <span class="st">&#39;PUID=1000&#39;</span></a>
+<a class="sourceLine" id="cb1-12" title="12">      <span class="ex">-</span> <span class="st">&#39;PGID=1000&#39;</span></a>
+<a class="sourceLine" id="cb1-13" title="13">      <span class="ex">-</span> <span class="st">&#39;TG_AUTHORIZED_USER_ID=&#39;</span>  <span class="co">#&lt;telegram chat_id authorized&gt;</span></a>
+<a class="sourceLine" id="cb1-14" title="14">      <span class="ex">-</span> <span class="st">&#39;TG_API_ID=&#39;</span></a>
+<a class="sourceLine" id="cb1-15" title="15">      <span class="ex">-</span> <span class="st">&#39;TG_API_HASH=&#39;</span> </a>
+<a class="sourceLine" id="cb1-16" title="16">      <span class="ex">-</span> <span class="st">&#39;TG_BOT_TOKEN=&#39;</span></a>
+<a class="sourceLine" id="cb1-17" title="17">      <span class="ex">-</span> <span class="st">&#39;TG_PROGRESS_DOWNLOAD=True&#39;</span> <span class="co">#OPTIONAL</span></a>
+<a class="sourceLine" id="cb1-18" title="18">      <span class="ex">-</span> <span class="st">&#39;TZ=America/Santiago&#39;</span></a>
+<a class="sourceLine" id="cb1-19" title="19">    <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-20" title="20">      <span class="ex">-</span> /path/to/config:/config</a>
+<a class="sourceLine" id="cb1-21" title="21">      <span class="ex">-</span> /path/to/download:/download</a>
+<a class="sourceLine" id="cb1-22" title="22">      <span class="ex">-</span> /path/to/download/torrent/watch:/watch</a></code></pre></div>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/rodriguezst/telethon_downloader">https://github.com/rodriguezst/telethon_downloader</a></li>
