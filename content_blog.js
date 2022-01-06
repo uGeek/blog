@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Cambiar editor por defecto en Crontab',
+            'text': 'La primera vez que utilizas el comando =crontab -e=, te pedirá que elijas un editor por defecto y las siguientes veces que utilices este comando, siempre abrirá el editor que', 
+            'tags': 'bash,crontab,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-06-cambiar-editor-por-defecto-en-crontab.html' 
+},
+{
             'title': 'Telethon Downloader. Bot de descargas para Telegram',
             'text': 'Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry.', 
             'tags': 'telegram,bot,,,,', 
@@ -1015,7 +1021,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
