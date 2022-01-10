@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Zettel Notes. La mejor aplicación de Notas para Android con atajos de Teclado',
+            'text': 'Zettel Notes no para de actualizarse e implementar nuevas mejoras. Tras la sincronizacion WebDAV, añadir los accesos directos Markdown agrupados en un único icono,... Llegan los atajos de teclado.', 
+            'tags': 'zettel,markdown,zettelkasten,notas,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-10-zettel-notes-la-mejor-aplicacion-de-notas-para-android-con-atajos-de-teclado.html' 
+},
+{
             'title': 'Cambiar editor por defecto en Crontab',
             'text': 'La primera vez que utilizas el comando =crontab -e=, te pedirá que elijas un editor por defecto y las siguientes veces que utilices este comando, siempre abrirá el editor que', 
             'tags': 'bash,crontab,,,,', 
@@ -1021,7 +1027,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
