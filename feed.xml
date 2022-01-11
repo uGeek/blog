@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Cifrar Notas en Zettel Notes con OpenKeychain</title>
+    <link>https://ugeek.github.io/blog/post/2022-01-11-cifrar-notas-en-zettel-notes-con-openkeychain.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/OpenKeychain.png" alt="Cifrar Notas en Zettel Notes con OpenKeychain"&gt;
+&lt;br&gt;&lt;p&gt;Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-01-11-cifrar-notas-en-zettel-notes-con-openkeychain.html&gt;Cifrar Notas en Zettel Notes con OpenKeychain&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 11 Jan 2022  +0100</pubDate>
+    <category>zettel</category>
+    <category>notes</category>
+    <category>markdown</category>
+    <category>pgp</category>
+    <guid>https://ugeek.github.io/blog/post/2022-01-11-cifrar-notas-en-zettel-notes-con-openkeychain.html</guid>
+   </item>
+   <item>
     <title>Zettel Notes. La mejor aplicación de Notas para Android con atajos de Teclado</title>
     <link>https://ugeek.github.io/blog/post/2022-01-10-zettel-notes-la-mejor-aplicacion-de-notas-para-android-con-atajos-de-teclado.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 10 Jan 2022  +0100</pubDate>
+    <pubDate>Mon, 10 Jan 2022 20:50 +0100</pubDate>
     <category>zettel</category>
     <category>markdown</category>
     <category>zettelkasten</category>

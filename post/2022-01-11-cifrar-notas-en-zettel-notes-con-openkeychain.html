@@ -1,5 +1,5 @@
 <head>
-<title>Backup de mis Notas de Paper Dropbox. uGeek Blog </title>
+<title>Cifrar Notas en Zettel Notes con OpenKeychain. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Sabéis que unos de los lugares donde habitualmente tomo notas en la nube de tutoriales interesantes que encuentro en la red" />
+<meta name="description" content="Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Backup de mis Notas de Paper Dropbox" />
-<meta property="og:description" content="Sabéis que unos de los lugares donde habitualmente tomo notas en la nube de tutoriales interesantes que encuentro en la red" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/paper.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-01-backup-de-mis-notas-de-paper-dropbox.html" />
+<meta property="og:title" content="Cifrar Notas en Zettel Notes con OpenKeychain" />
+<meta property="og:description" content="Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/OpenKeychain.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-01-11-cifrar-notas-en-zettel-notes-con-openkeychain.html" />
 
-<meta name="twitter:title" content="Backup de mis Notas de Paper Dropbox" />
-<meta name="twitter:description" content="Sabéis que unos de los lugares donde habitualmente tomo notas en la nube de tutoriales interesantes que encuentro en la red" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/paper.png" />
+<meta name="twitter:title" content="Cifrar Notas en Zettel Notes con OpenKeychain" />
+<meta name="twitter:description" content="Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/OpenKeychain.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,52 +85,47 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="backup-de-mis-notas-de-paper-dropbox-1" title="Backup de mis Notas de Paper Dropbox" data-export_file_name="Backup de mis Notas de Paper Dropbox" data-description="Sabéis que unos de los lugares donde habitualmente tomo notas en la nube de tutoriales interesantes que encuentro en la red" data-export_date="2019-09-01 21:25" data-category="notas" data-tag="raspberry" data-image="./images-blog/paper.png">Backup de mis Notas de Paper Dropbox</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 358 palabras.    <a href="https://ugeek.github.io/blog/categories/notas">notas</a></h5>
-<p>Sabéis que unos de los lugares donde habitualmente tomo notas en la nube, de tutoriales interesantes que encuentro en la red, es <a href="https://paper.dropbox.com/">Paper Dropbox</a>. Soy un amante del Software Libre, pero no hago ascos a soluciones geniales como esta, sean privativas o no.</p>
+<h1 id="cifrar-notas-en-zettel-notes-con-openkeychain-1" title="Cifrar Notas en Zettel Notes con OpenKeychain" data-export_file_name="cifrar-notas-en-zettel-notes-con-openkeychain" data-description="Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por" data-export_date="2022-01-11 20:50" data-category="zettel" data-tag="notes,markdown,pgp,gpg" data-image="./images-blog/OpenKeychain.png">Cifrar Notas en Zettel Notes con OpenKeychain</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 461 palabras.    <a href="https://ugeek.github.io/blog/categories/zettel">zettel</a></h5>
+<p>Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por terceras personas.</p>
 <center>
-<p><img src="../images-blog/paper.png" /></p>
+<p><img src="../images-blog/OpenKeychain.png" /></p>
 </center>
-<p>Lo que suelo hacer es copiar el contenido de un Post y después lo pego en Paper. Además, Paper es una solución genial para tener todas esas notas sincronizadas en todos mis dispositivos.</p>
-<p>Pero los que me seguís frecuentemente, sabéis que no me gusta depender de servicios de terceros, donde pasado un tiempo puede dar el cierre y perder todo ese contenido que tengo almacenado en ese servicio. Así que hoy os traigo un complemento genial para descargar todas las notas que tengas en Paper Dropbox y exportarlas a markdown o html.</p>
-<p><a href="https://github.com/efenka">Efenka</a> publica en uno de sus repositorios una herramienta genial.</p>
-<h2 id="instalación">Instalación</h2>
-<h3 id="clonar-repositorio">Clonar Repositorio</h3>
-<p>Vamos a clonar el repositorio y después daremos permisos de ejecución al script en python</p>
-<pre><code>git clone https://github.com/uGeek/dropbox-paper-backup.git
-cd dropbox-paper-backup
-chmod u+x dropbox-paper-backup.py
-</code></pre>
-<h3 id="instalando-dependencias">Instalando dependencias</h3>
-<pre><code>pip3 install -r requirements.txt
-</code></pre>
-<h2 id="crea-un-destino-para-la-copia-de-seguridad-y-solicita-un-token-de-autorización">Crea un destino para la copia de seguridad y solicita un token de autorización</h2>
-<p>Ejecuta el script</p>
-<pre><code>./dropbox-paper-backup.py ~/carpeta_backup
-</code></pre>
-<p>Nos devolverá una url, donde podremos adquirir un token de Dropbox para poder utilizar la api.</p>
-<p>Si guardas este token, en un futuro podrás saltarte este paso.</p>
-<h2 id="funcionamiento">Funcionamiento</h2>
-<p>Comenzará la descarga de todos los documentos que tengamos en Paper Dropbox, en formato <strong>.html</strong> y <strong>.md</strong> a nuestra carpeta destino.</p>
-<pre><code>./dropbox-paper-backup.py --token=&lt;TOKEN&gt; ~/carpeta_bakup
-</code></pre>
-<p>A mi personalmente me gusta más descargarlo solo en markdown, así que utilizo el siguiente comando:</p>
-<pre><code>./dropbox-paper-backup.py --token=&lt;TOKEN&gt; -v  markdown ~/carpeta_bakup
-</code></pre>
+<p>Si utilizas un servidor que no gestionas tu, este punto es todavía más importante, ya que el administrador del servidor podría acceder al repositorio de tus notas y ver el contenido de estas.</p>
+<p>Una de las opciones muy interesantes de Zettel Notes, es la posibilidad de poder cifrar notas dentro de un repositorio. Esto permite que las notas estén cifradas tanto en el directorio de nuestro dispositivo móvil, así como la copia sincronizada en el servidor. Las notas tendrán extensión GPG. Lo bueno de la gestión de Zettel Notes, es que una vez creadas las llaves público-privada y vinculadas al repositorio, es tan sencillo como pulsar que quieres cifrar una nota y Zettel Notes la cifra. Si deseas volver a descifrar está nota, es tan sencillo como marcar que la quieres descifrar y Zettel Notes lo hará.</p>
+<p>En este artículo os explico cómo crear las claves con la aplicación <strong>OpenKeychain</strong> y posteriormente, os explico cómo vincular esa clave a un repositorio y cifrar las notas.</p>
+<h2 id="crear-claves">Crear claves</h2>
+<p>Para cifrar las notas en Zetel Notes, vamos a utilizar la aplicación <strong>OpenKeychain</strong>. Con <strong>OpenKeychain</strong> vamos a crear 2 claves mediante GnuPG.</p>
+<ol>
+<li>En la pantalla principal, iremos al menú situado en la parte superior derecha y seleccionaremos <code>Administrar mis claves</code>.</li>
+<li>Ahora pulsaremos <code>CREAR MI CLAVE</code></li>
+<li>Introducimos un <code>Nombre</code></li>
+<li>Ahora introduciremos el correo electrónico</li>
+<li>Aparece todo lo introducido previamente y aparece un checklist para <code>Publicar en Servidores de Claves</code>. Yo en mi caso, desmarco esta opción.</li>
+<li>Para finalizar, pulsaremos <code>CREAR CLAVE</code></li>
+</ol>
+<p>Comienza a crear las claves. Una vez creadas, aparecerá en la pantalla de la aplicación.</p>
+<h2 id="cifrando-notas-en-zettel-notes">Cifrando Notas en Zettel Notes</h2>
+<ol>
+<li>Accedemos al menú de la Izquierda y pulsamos en la Opción <strong>Repositories</strong></li>
+<li>En el repositorio que queremos cifrar las Notas, pulsaremos el menú de los 3 puntos y seleccionaremos <code>Setup Encription</code> &gt; <code>OpenPGP</code></li>
+<li>Se abrirá la aplicación OpenKeychain y la Claves previamentes creadas. Seleccionamos la que queremos utilizar.</li>
+<li>Aparecerá un mensaje de <strong>Exito</strong></li>
+</ol>
+<h2 id="cifrar-notas">Cifrar Notas</h2>
+<p>Abriremos el repositorio y vamos a buscar la nota que deseamos cifrar, seleccionamos la nota mediante los 3 puntos y selecciona la opción <code>Encrypt</code></p>
+<p>Tan sencillo como esto, La nota ya está cifrada!!! Ahora la nota aparecerá con un triangulo Amarillo en la esquina, especificando que esta nota está cifrada.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://www.openkeychain.org/">OpenKeychain</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes&amp;hl=es&amp;gl=US">Zettel Notes</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el domingo 01 septiembre del 2019</p>
+<p>Publicado por Angel el martes 11 enero del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-10-zettel-notes-la-mejor-aplicacion-de-notas-para-android-con-atajos-de-teclado.html">Zettel Notes. La mejor aplicación de Notas para Android con atajos de Teclado</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-08-29-zettel-notes-la-mejor-aplicacion-zettelkasten-para-android.html">Zettel Notes. La mejor aplicación Zettelkasten para Android</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-05-07-joplin-para-terminal-llega-a-snap.html">Joplin para terminal, llega a snap</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html">nncli. Notas desde el terminal con Nextcloud Notes</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html">Trilium. Notas jerárquicas en Markdown</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html">Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html">Simplenote para terminal. Sncli</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html">Bullet Journal Digital en OrgMode</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-10-22-orzly-tus-orgmode-syncronizados-por-webdav.html">Orzly. Tus OrgMode syncronizados por WebDav</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

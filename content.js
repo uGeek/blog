@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Cifrar Notas en Zettel Notes con OpenKeychain',
+            'text': 'Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por', 
+            'tags': 'zettel,notes,markdown,pgp,gpg,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-11-cifrar-notas-en-zettel-notes-con-openkeychain.html' 
+},
+{
             'title': 'Zettel Notes. La mejor aplicación de Notas para Android con atajos de Teclado',
             'text': 'Zettel Notes no para de actualizarse e implementar nuevas mejoras. Tras la sincronizacion WebDAV, añadir los accesos directos Markdown agrupados en un único icono,... Llegan los atajos de teclado.', 
             'tags': 'zettel,markdown,zettelkasten,notas,,', 
