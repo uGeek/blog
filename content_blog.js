@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Sincronización de nuestros bookmarks con floccus',
+            'text': 'Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive.', 
+            'tags': 'bookmarks,webdav,nextcloud,bookmarks,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html' 
+},
+{
             'title': 'Cifrar Notas en Zettel Notes con OpenKeychain',
             'text': 'Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por', 
             'tags': 'zettel,notes,markdown,pgp,gpg,', 

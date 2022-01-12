@@ -1,0 +1,139 @@
+<head>
+<title>Sincronización de nuestros bookmarks con floccus. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Sincronización de nuestros bookmarks con floccus" />
+<meta property="og:description" content="Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/floccus.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html" />
+
+<meta name="twitter:title" content="Sincronización de nuestros bookmarks con floccus" />
+<meta name="twitter:description" content="Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/floccus.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="sincronización-de-nuestros-bookmarks-con-floccus-1" title="Sincronización de nuestros bookmarks con floccus" data-export_file_name="sincronizacion-de-nuestros-bookmarks-con-floccus" data-description="Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive." data-export_date="2022-01-12 11:45" data-category="bookmarks" data-tag="webdav,nextcloud,bookmarks" data-image="./images-blog/floccus.png">Sincronización de nuestros bookmarks con floccus</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 404 palabras.    <a href="https://ugeek.github.io/blog/categories/bookmarks">bookmarks</a></h5>
+<p>Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive.</p>
+<p>Floccus no te rastrea. El único tráfico de red iniciado por floccus es sincronizar sus marcadores con el servidor de su elección.</p>
+<center>
+<p><img src="../images-blog/floccus.png" /></p>
+</center>
+<p>Floccus es compatible con Chromium, Google Chrome, Mozilla Firefox, Opera, Brave, Vivaldi y Microsoft Edge. &gt; Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive</p>
+<p>El único navegador móvil que admite extensiones que interactúan con los marcadores es actualmente el navegador gratuito Kiwi.</p>
+<p>Ahora también hay una aplicación para Android.</p>
+<p>Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor</p>
+<ul>
+<li>Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor</li>
+<li>Utilice cualquier navegador que sea compatible con la API de extensión web</li>
+<li>Crea tantos perfiles de sincronización como quieras</li>
+<li>Control de la estrategia de sincronización, es decir, sincronización unidireccional o bidireccional</li>
+<li>Intervalo de sincronización de control</li>
+<li>Exporta fácilmente tu configuración</li>
+<li>Manten sus credenciales seguras con una frase de contraseña de cifrado</li>
+<li>Crea tantos perfiles de sincronización como quieras</li>
+<li>Control de la sincronización, unidireccional o bidireccional</li>
+<li>Manten sus credenciales seguras con una frase de contraseña de cifrado</li>
+</ul>
+<h2 id="servidor-webdav">Servidor WebDAV</h2>
+<p>Primero deberás ingresar la URL WebDAV de tu servidor. La URL debe terminar con una barra. Luego ingresa tu nombre de usuario y contraseña.</p>
+<p>Por defecto, floccus colocará un archivo llamado bookmarks.xbel</p>
+<p>Presionar 'Guardar' y vuelve al panel de descripción general.</p>
+<p>Floccus se sincronizará automáticamente cada 15 minutos y 1 minuto, pero puedes activar una sincronización manualmente haciendo clic en "SINCRONIZAR AHORA".</p>
+<p>A veces, deseas tener un dispositivo como dispositivo principal y otros dispositivos solo como receptor. Para este escenario, es necesario configurar la sincronización como unidireccional.</p>
+<p>Ocasionalmente, deseas anular los cambios de otros dispositivos. Para esto, puede usar un empujón de una sola vez.</p>
+<h2 id="sincronización-de-pestañas">Sincronización de pestañas</h2>
+<p>En lugar de sincronizar una carpeta de marcadores local, floccus puede sincronizar opcionalmente las pestañas abiertas del navegador.</p>
+<p>Habilita la sincronización automática para configurar la sincronización para empujar. Esto enviará automáticamente las pestañas abiertas al servidor. Siempre que necesite las pestañas en un navegador diferente o después de un bloqueo, puede tirar una vez para recuperar las pestañas.</p>
+<h2 id="navegador">Navegador</h2>
+<p>Instala la <a href="https://addons.mozilla.org/es/firefox/addon/floccus/">extensión para Firefox</a> o para <a href="https://chrome.google.com/webstore/detail/floccus-bookmarks-sync/fnaicdffflnofjppbagibeoednhnbjhg">Google Chrome</a>.</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://floccus.org/">https://floccus.org/</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/floccus/">https://addons.mozilla.org/en-US/firefox/addon/floccus/</a></li>
+<li><a href="https://github.com/floccusaddon/floccus">https://github.com/floccusaddon/floccus</a></li>
+</ul>
+<center>
+<p><img src="../images-blog/floccus.png" /></p>
+</center>
+<br>
+<p>Publicado por Angel el miércoles 12 enero del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-22-golink.html">Golink</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Sincronización de nuestros bookmarks con floccus</title>
+    <link>https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/floccus.png" alt="Sincronización de nuestros bookmarks con floccus"&gt;
+&lt;br&gt;&lt;p&gt;Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html&gt;Sincronización de nuestros bookmarks con floccus&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 12 Jan 2022  +0100</pubDate>
+    <category>bookmarks</category>
+    <category>webdav</category>
+    <category>nextcloud</category>
+    <category>bookmarks</category>
+    <guid>https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html</guid>
+   </item>
+   <item>
     <title>Cifrar Notas en Zettel Notes con OpenKeychain</title>
     <link>https://ugeek.github.io/blog/post/2022-01-11-cifrar-notas-en-zettel-notes-con-openkeychain.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 11 Jan 2022  +0100</pubDate>
+    <pubDate>Tue, 11 Jan 2022 11:45 +0100</pubDate>
     <category>zettel</category>
     <category>notes</category>
     <category>markdown</category>
