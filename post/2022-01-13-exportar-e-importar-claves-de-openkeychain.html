@@ -1,5 +1,5 @@
 <head>
-<title>CryFS. Cifrando el contenido de tu carpeta. uGeek Blog </title>
+<title>Exportar e importar claves de OpenKeychain. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar" />
+<meta name="description" content="Si vas a utilizar Zettel Notes en diferentes dispositivos, para poder ver las notas cifradas, es necesario exportar las claves." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="CryFS. Cifrando el contenido de tu carpeta" />
-<meta property="og:description" content="CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html" />
+<meta property="og:title" content="Exportar e importar claves de OpenKeychain" />
+<meta property="og:description" content="Si vas a utilizar Zettel Notes en diferentes dispositivos, para poder ver las notas cifradas, es necesario exportar las claves." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/OpenKeychain.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-01-13-exportar-e-importar-claves-de-openkeychain.html" />
 
-<meta name="twitter:title" content="CryFS. Cifrando el contenido de tu carpeta" />
-<meta name="twitter:description" content="CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta name="twitter:title" content="Exportar e importar claves de OpenKeychain" />
+<meta name="twitter:description" content="Si vas a utilizar Zettel Notes en diferentes dispositivos, para poder ver las notas cifradas, es necesario exportar las claves." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/OpenKeychain.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,28 +85,37 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="cryfs.-cifrando-el-contenido-de-tu-carpeta-1" title="CryFS. Cifrando el contenido de tu carpeta" data-export_file_name="CryFS. Cifrando el contenido de tu carpeta" data-description="CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar" data-export_date="2019-08-15 13:10" data-category="cifrado" data-tag="bash" data-image="./images-blog/ugeek.png">CryFS. Cifrando el contenido de tu carpeta</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 130 palabras.    <a href="https://ugeek.github.io/blog/categories/cifrado">cifrado</a></h5>
-<p>CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar.</p>
-<h3 id="instalación">Instalación</h3>
-<p><code>sudo apt install cryfs</code></p>
-<h3 id="creando-las-carpetas">Creando las carpetas</h3>
-<p>Creámos las carpetas donde pondremos nuestro datos tanto cifrados y la unidad de montaje.</p>
-<p><code>mkdir ~/directorio_cifrado</code> <code>mkdir ~/directorio_montaje</code></p>
-<h3 id="cifrado">Cifrado</h3>
-<p>Vamos a montar la carpeta cifrada:</p>
-<p><code>cryfs ~/directorio_cifrado ~/directorio_montaje</code></p>
-<h3 id="desmontando">Desmontando</h3>
-<p><code>fursermount -u ~/directorio_montaje</code></p>
-<h3 id="documentación">Documentación</h3>
-<p><a href="https://www.cryfs.org/tutorial">https://www.cryfs.org/tutorial</a></p>
-<h3 id="fuentes">Fuentes</h3>
+<h1 id="exportar-e-importar-claves-de-openkeychain-1" title="Exportar e importar claves de OpenKeychain" data-export_file_name="exportar-e-importar-claves-de-openkeychain" data-description="Si vas a utilizar Zettel Notes en diferentes dispositivos, para poder ver las notas cifradas, es necesario exportar las claves." data-export_date="2022-01-13 06:35" data-category="cifrado" data-tag="notas" data-image="./images-blog/OpenKeychain.png">Exportar e importar claves de OpenKeychain</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 401 palabras.    <a href="https://ugeek.github.io/blog/categories/cifrado">cifrado</a></h5>
+<p>Si vas a utilizar Zettel Notes en diferentes dispositivos, para poder ver las notas cifradas, es necesario exportar las claves.</p>
+<p>Otro motivo, como sabes que tu móvil no va a durar para siempre, por seguridad es importante tener una copia de estas claves.</p>
+<center>
+<p><img src="../images-blog/OpenKeychain.png" /></p>
+</center>
+<p>En este artículo voy a explicarte cómo exportar las claves e importarlos con la aplicación de Android <strong>OpenKeychain</strong>.</p>
+<p>Estás claves que exportaremos, serán las que utilizaremos para importarlas también en nuestra versión de escritorio.</p>
+<h2 id="exportar">Exportar</h2>
+<ol>
+<li>Seleccionamos en la página principal las claves que queremos exportar</li>
+<li>En la parte superior derecha, pulsamos sobre los 3 puntos y seleccionamos la opción <code>Respaldar Clave</code></li>
+<li>Nos aparecerá un código de respaldo,*que tenemos que apuntar*. Tenemos que marcar el checklist, donde nos explican que <strong>si no hemos copiado el código, no podremos restaurar las copias de seguridad</strong>.</li>
+<li>Pulsando sobre el icono guardar, guardaremos el archivo generado llamado <code>backup_2022-01-11.sec.pgp</code>.</li>
+</ol>
+<h2 id="importar">Importar</h2>
+<p>La importación la haremos del siguiente modo:</p>
+<ol>
+<li>Pulsamos las tres superior izquierda, para acceder al menú lateral y seleccionamos la opción <strong>respaldar / restaurar</strong></li>
+<li>En la parte inferior, aparece la opción Restaurar. Pulsaremos en la carpeta que viene acompañada de texto <strong>Seleccionar fichero de entrada</strong> y buscaremos el archivo que creamos en la exportación de claves, del apartado anterior. Es un archivo con extensión sec.PGP</li>
+<li>Ahora nos pedirá introducir el código de transferencia, qué es el código de respaldo (aquella combinación larga de números) que teníamos que apuntar y no perder para la restauración. En mi caso, aparece un candado verde cerrado, acompañado de <strong>No firmado</strong>, y en la parte inferior aparece una llave con el símbolo de <strong>+</strong>. Pulsamos sobre la llave con el símbolo de <strong>+</strong> y nos dirá que se encontraron dos claves.</li>
+</ol>
+<p>Tenemos la opción de ver la lista o importar todas las claves. si simplemente queremos ver todas las claves que hay dentro del archivo, seleccionaremos la opción Ver lista pero si queremos importar las claves, seleccionaremos <strong>Importar todas las claves</strong>.</p>
+<p>Una vez pulsado sobre <strong>Importar todas las claves</strong>, se importarán y ya la veremos en la pantalla principal.</p>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://www.atareao.es/software/seguridad/como-cifrar-la-nube/">https://www.atareao.es/software/seguridad/como-cifrar-la-nube/</a></li>
-<li><a href="https://code.castanedo.es/guzman/cryfs-automount">https://code.castanedo.es/guzman/cryfs-automount</a></li>
+<li><a href="https://www.openkeychain.org/">OpenKeychain</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el jueves 15 agosto del 2019</p>
+<p>Publicado por Angel el jueves 13 enero del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

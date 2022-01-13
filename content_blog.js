@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Exportar e importar claves de OpenKeychain',
+            'text': 'Si vas a utilizar Zettel Notes en diferentes dispositivos, para poder ver las notas cifradas, es necesario exportar las claves.', 
+            'tags': 'cifrado,notas,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-13-exportar-e-importar-claves-de-openkeychain.html' 
+},
+{
             'title': 'Sincronización de nuestros bookmarks con floccus',
             'text': 'Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive.', 
             'tags': 'bookmarks,webdav,nextcloud,bookmarks,,', 

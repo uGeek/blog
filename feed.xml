@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Exportar e importar claves de OpenKeychain</title>
+    <link>https://ugeek.github.io/blog/post/2022-01-13-exportar-e-importar-claves-de-openkeychain.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/OpenKeychain.png" alt="Exportar e importar claves de OpenKeychain"&gt;
+&lt;br&gt;&lt;p&gt;Si vas a utilizar Zettel Notes en diferentes dispositivos, para poder ver las notas cifradas, es necesario exportar las claves.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-01-13-exportar-e-importar-claves-de-openkeychain.html&gt;Exportar e importar claves de OpenKeychain&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 13 Jan 2022  +0100</pubDate>
+    <category>cifrado</category>
+    <category>notas</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-01-13-exportar-e-importar-claves-de-openkeychain.html</guid>
+   </item>
+   <item>
     <title>Sincronización de nuestros bookmarks con floccus</title>
     <link>https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 12 Jan 2022  +0100</pubDate>
+    <pubDate>Wed, 12 Jan 2022 06:35 +0100</pubDate>
     <category>bookmarks</category>
     <category>webdav</category>
     <category>nextcloud</category>
