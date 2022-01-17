@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Script para crear acceso a aplicaciones AppImage</title>
+    <link>https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/appimage..png" alt="Script para crear acceso a aplicaciones AppImage"&gt;
+&lt;br&gt;&lt;p&gt;Hoy vamos a automatizar la creación de acceso a las aplicaciones AppImage, tal como lo explicaba en el artículo: [[https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html][Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html&gt;Script para crear acceso a aplicaciones AppImage&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 17 Jan 2022  +0100</pubDate>
+    <category>appimage</category>
+    <category>ubuntu</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html</guid>
+   </item>
+   <item>
     <title>Exportar e importar claves de OpenKeychain</title>
     <link>https://ugeek.github.io/blog/post/2022-01-13-exportar-e-importar-claves-de-openkeychain.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 13 Jan 2022  +0100</pubDate>
+    <pubDate>Thu, 13 Jan 2022 07:15 +0100</pubDate>
     <category>cifrado</category>
     <category>notas</category>
     <category></category>

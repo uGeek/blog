@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Script para crear acceso a aplicaciones AppImage',
+            'text': 'Hoy vamos a automatizar la creación de acceso a las aplicaciones AppImage, tal como lo explicaba en el artículo: [[https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html][Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y', 
+            'tags': 'appimage,ubuntu,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html' 
+},
+{
             'title': 'Exportar e importar claves de OpenKeychain',
             'text': 'Si vas a utilizar Zettel Notes en diferentes dispositivos, para poder ver las notas cifradas, es necesario exportar las claves.', 
             'tags': 'cifrado,notas,,,,', 
