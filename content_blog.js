@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Bot Matrix en Bash',
+            'text': 'Si has montado tu servidor Matrix, probablemente quieras tener publicaciones automatizadas de algunos de tus scripts, proyectos, etcétera...', 
+            'tags': 'matrix,synapse,bot,bash,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html' 
+},
+{
             'title': 'Script para crear acceso a aplicaciones AppImage',
             'text': 'Hoy vamos a automatizar la creación de acceso a las aplicaciones AppImage, tal como lo explicaba en el artículo: [[https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html][Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y', 
             'tags': 'appimage,ubuntu,,,,', 
@@ -1051,7 +1057,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

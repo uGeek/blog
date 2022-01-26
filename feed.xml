@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Bot Matrix en Bash</title>
+    <link>https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/matrix.png" alt="Bot Matrix en Bash"&gt;
+&lt;br&gt;&lt;p&gt;Si has montado tu servidor Matrix, probablemente quieras tener publicaciones automatizadas de algunos de tus scripts, proyectos, etcétera...... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html&gt;Bot Matrix en Bash&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 26 Jan 2022  +0100</pubDate>
+    <category>matrix</category>
+    <category>synapse</category>
+    <category>bot</category>
+    <category>bash</category>
+    <guid>https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html</guid>
+   </item>
+   <item>
     <title>Script para crear acceso a aplicaciones AppImage</title>
     <link>https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 17 Jan 2022  +0100</pubDate>
+    <pubDate>Mon, 17 Jan 2022 10:00 +0100</pubDate>
     <category>appimage</category>
     <category>ubuntu</category>
     <category></category>
@@ -5792,7 +5825,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
