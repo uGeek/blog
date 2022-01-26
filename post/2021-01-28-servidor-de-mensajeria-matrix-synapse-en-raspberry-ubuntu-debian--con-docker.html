@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="servidor-de-mensajería-matrix-synapse-en-raspberry-ubuntu-debian-con-docker-1" title="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker" data-export_file_name="servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker" data-description="Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. " data-export_date="2021-01-28 18:55" data-category="matrix" data-tag="mensajería" data-image="./images-blog/matrix.png">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian… con Docker</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 469 palabras.    <a href="https://ugeek.github.io/blog/categories/matrix">matrix</a></h5>
+<h5>Tiempo estimado de lectura: 4 minutos. 484 palabras.    <a href="https://ugeek.github.io/blog/categories/matrix">matrix</a></h5>
 <p>Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero <strong>black0</strong> ha creado una para todo tipo de arquitecturas, entre ellas ARM. </p>
 <center>
 <p><img src="../images-blog/matrix.png" /></p>
@@ -103,7 +103,7 @@ $("#tipue_search_input").tipuesearch();
 </code></pre>
 <h2 id="crear-el-contenedor">Crear el Contenedor</h2>
 <p> Ahora que tenemos los archivos de configuración, vamos a crear el contenedor con el servidor.</p>
-<pre class="example"><code>docker run -d --name synapse         -v $HOME/docker/synapse-data:/data         -p 8008:8008         black0/synapse:v1.20.1
+<pre class="example"><code>docker run -d --name matrix         -v $HOME/docker/synapse-data:/data         -p 8008:8008         black0/synapse:v1.20.1
 </code></pre>
 <p>Si todo ha salido correctamente, conectándonos a la dirección de nuestro servidor por el puerto 8008,  veremos una página de Matrix, conforme el servidor está disponible.</p>
 <h2 id="crear-contenedor-con-traefik">Crear contenedor con traefik</h2>
@@ -114,7 +114,7 @@ $("#tipue_search_input").tipuesearch();
 services:
 matrix:
 image: &quot;black0/synapse:v1.20.1&quot;
-container_name: synapse
+container_name: matrix
 #   ports:
 #     - &quot;8008:8008&quot;
 networks:
@@ -142,6 +142,9 @@ external: true
 <pre class="example"><code>docker-compose up -d
 </code></pre>
 <h2 id="creando-usuarios">Creando usuarios</h2>
+<p>Para c</p>
+<pre><code>docker exec -it matrix register_new_matrix_user -u USUARIO&quot; -p &quot;CONTRASEÑA&quot; -a -c /data/homeserver.yaml https://midominio.duckdns.org 
+</code></pre>
 <p>Los usuarios hay que crearlos desde un cliente de Matrix (fluffy Chat, Element,…), en esta web hay un amplio listado para todos los sistemas operativos <a href="https://matrix.org/clients/">https://matrix.org/clients/</a>. Pero antes tenemos que habilitar la opción en el servidor.</p>
 <p>Para permitir el registro de usuarios, hay que editar el archivo <strong>homeserver.yaml</strong> y desmarcar la "<strong>#</strong>" habilitando <code>enable_registration: true</code>. </p>
 <pre class="example"><code>nano ~/docker/synapse-data/homeserver.yaml
