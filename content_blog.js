@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Enviar clave SSH al servidor, para no utilizar la contraseña',
+            'text': 'Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña.', 
+            'tags': 'ssh,terminal,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html' 
+},
+{
             'title': 'Bot Matrix en Bash',
             'text': 'Si has montado tu servidor Matrix, probablemente quieras tener publicaciones automatizadas de algunos de tus scripts, proyectos, etcétera...', 
             'tags': 'matrix,synapse,bot,bash,,', 
@@ -1057,7 +1063,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
