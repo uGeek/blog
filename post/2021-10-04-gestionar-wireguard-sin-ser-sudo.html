@@ -85,34 +85,43 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="gestionar-wireguard-sin-ser-sudo-1" title="Gestionar Wireguard sin ser sudo" data-export_file_name="gestionar-wireguard-sin-ser-sudo" data-description="Uno de los problemas de utilizar Wireguard es tener que utilizar derechos de administrador. Con *nmcli* podremos hacerlo sin necesitarlos, ahora cualquier usuario podrá utilizar Wireguard." data-export_date="2021-10-04 07:02" data-category="wireguard" data-tag="nmcli" data-image="./images-blog/wireguard.png">Gestionar Wireguard sin ser sudo</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 238 palabras.    <a href="https://ugeek.github.io/blog/categories/wireguard">wireguard</a></h5>
+<h1 id="gestionar-wireguard-sin-ser-sudo-1" title="Gestionar Wireguard sin ser sudo" data-export_file_name="gestionar-wireguard-sin-ser-sudo" data-description="Uno de los problemas de utilizar Wireguard es tener que utilizar derechos de administrador. Con *nmcli* podremos hacerlo sin necesitarlos, ahora cualquier usuario podrá utilizar Wireguard." data-export_date="2021-10-04 07:02 2022-02-23" data-category="wireguard" data-tag="nmcli" data-image="./images-blog/wireguard.png">Gestionar Wireguard sin ser sudo</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 270 palabras.    <a href="https://ugeek.github.io/blog/categories/wireguard">wireguard</a></h5>
 <p>Uno de los problemas de utilizar Wireguard es tener que utilizar derechos de administrador. Con <strong>nmcli</strong> podremos hacerlo sin necesitarlos. Ahora cualquier usuario podrá utilizar Wireguard.</p>
 <center>
 <p><img src="../images-blog/wireguard.png" /></p>
 </center>
+<p>Para iniciar Wireguard lo hariamos así:</p>
+<pre><code>sudo wg-quick up wg0
+</code></pre>
+<p>Para comprobar si esta corriendo:</p>
+<pre><code>sudo wg
+</code></pre>
+<p>Para deterner Wireguard:</p>
+<pre><code>sudo wg-quick down wg0
+</code></pre>
 <p>nmcli es un comando que nos permite mostrar y gestionar nuestro dispositivo de red contralando el NetworkManager.</p>
 <p>Vamos a ver como utilizarlo</p>
 <h2 id="instalación">Instalación</h2>
 <p>En la mayor parte de distros linux viene instalado nmcli, si en tu maquina no lo estuviera , lo instalaremos del siguiente modo:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install network-manager</a></code></pre></div>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> apt install network-manager</a></code></pre></div>
 <h2 id="importar-el-archivo-de-configuración-de-wireguard">Importar el archivo de configuración de Wireguard</h2>
 <p>Lo primero que haremos es importar el archivo de configuración:</p>
 <p>Yo en mi caso lo he dejado dentro del directorio de Descargas:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">nmcli</span> c import type wireguard file /home/angel/Descargas/wg0.conf</a></code></pre></div>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">nmcli</span> c import type wireguard file /home/angel/Descargas/wg0.conf</a></code></pre></div>
 <h2 id="levantar-wireguard">Levantar Wireguard</h2>
 <p>Con este simple comando, <strong>nmcli</strong> levantara nuestro Wireguard y como ves, sin derechos de adminstrador, sin utilizar sudo.</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">nmcli</span> c up id wg0</a></code></pre></div>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">nmcli</span> c up id wg0</a></code></pre></div>
 <h2 id="detener-wireguard">Detener Wireguard</h2>
 <p>Tan sencillo como hacer un <strong>down</strong>.</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">nmcli</span> c down id wg0</a></code></pre></div>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">nmcli</span> c down id wg0</a></code></pre></div>
 <h2 id="mostrar-si-wireguard-esta-activo">Mostrar si Wireguard esta activo</h2>
 <p>Para mostrar la información de red para todas las interfaces, entre ellas ver si esta corriendo Wireguard.</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">nmcli</span> connection show</a></code></pre></div>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">nmcli</span> connection show</a></code></pre></div>
 <p>Con la opción -p de pretty, nos mostrara mas bonita o de un modo diferente esta información:</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">nmcli</span> -p device show</a></code></pre></div>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">nmcli</span> -p device show</a></code></pre></div>
 <br>
-<p>Publicado por Angel el lunes 04 octubre del 2021</p>
+<p>Publicado por Angel el lunes 04 octubre del 2021 y <strong>actualizado</strong> el miércoles 23 febrero del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

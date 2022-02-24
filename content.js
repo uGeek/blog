@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'YouTube y YouTube Music. Aplicaciones Open Source',
+            'text': 'YouTube tiene una política de privacidad extremadamente invasiva que se basa en el uso de datos de usuarios de manera poco ética.', 
+            'tags': 'youtube,apps,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-02-24-youtube-y-youtube-music-aplicaciones-open-source.html' 
+},
+{
             'title': 'Enviar clave SSH al servidor, para no utilizar la contraseña',
             'text': 'Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña.', 
             'tags': 'ssh,terminal,,,,', 
