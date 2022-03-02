@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Corrector ortográfico en nano',
+            'text': 'Como cualquier otro editor de texto, nano tiene la posibilidad de habilitar el corrector ortográfico. A diferencia de otros editores, nano no tiene la posibilidad de ir marcando aquellas palabras', 
+            'tags': 'nano,bash,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html' 
+},
+{
             'title': 'YouTube y YouTube Music. Aplicaciones Open Source',
             'text': 'YouTube tiene una política de privacidad extremadamente invasiva que se basa en el uso de datos de usuarios de manera poco ética.', 
             'tags': 'youtube,apps,,,,', 

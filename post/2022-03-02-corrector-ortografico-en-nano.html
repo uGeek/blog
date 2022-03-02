@@ -1,5 +1,5 @@
 <head>
-<title>correo</title>
+<title>Corrector ortográfico en nano. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,14 +47,71 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>correo</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="corrector-ortográfico-en-nano-1" title="Corrector ortográfico en nano" data-export_file_name="corrector-ortografico-en-nano" data-description="Como cualquier otro editor de texto, nano tiene la posibilidad de habilitar el corrector ortográfico. A diferencia de otros editores, nano no tiene la posibilidad de ir marcando aquellas palabras" data-export_date="2022-03-02 11:50" data-category="nano" data-tag="bash" data-image="./images-blog/nano.png">Corrector ortográfico en nano</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 205 palabras.    <a href="https://ugeek.github.io/blog/categories/nano">nano</a></h5>
+<p>Como cualquier otro editor de texto, nano tiene la posibilidad de habilitar el corrector ortográfico. A diferencia de otros editores, nano no tiene la posibilidad de ir marcando aquellas palabras que no incluye el diccionario del corrector ortográfico y es necesario que una vez acabado el documento, toca hacer la revisión mediante atajos de teclado.</p>
+<center>
+<p><img src="../images-blog/nano.png" /></p>
+</center>
+<h2 id="instalación">Instalación</h2>
+<p>La instalación la haremos desde los repositorios.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install nano aspell-es</a></code></pre></div>
+<h2 id="archivo-configuración">Archivo configuración</h2>
+<p>El archivo de configuración de nano para el usuario, se encuentra en <code>~/.nanorc</code>. Hay un archivo de configuración tipo en la ruta <code>/etc/nanorc</code>, que podemos copiarlo y partir de este ejemplo:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">cp</span> /etc/nanorc ~/.nanorc</a></code></pre></div>
+<h2 id="habilitando-el-corrector-ortográfico">Habilitando el corrector ortográfico</h2>
+<p>Tenemos que descomentar la linea que pone <code>set speller "aspell -x -c"</code></p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="co">## Use this spelling checker instead of the internal one.  This option</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="co">## does not have a default value.</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">set</span> <span class="ex">speller</span> <span class="st">&quot;aspell -x -c&quot;</span></a></code></pre></div>
+<h2 id="revisión-ortográfica">Revisión ortográfica</h2>
+<p>Para hacer la revisión ortográfica, presiona <code>Ctrl + t</code> y seguidamente <code>Ctrl + s</code>. Te dará la opción de reemplazar las palabras incorrectas. Selecciona la palabra a reemplazar y pulsa Enter.</p>
+<br>
+<p>Publicado por Angel el miércoles 02 marzo del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html>Instalando Thunderbird y añadiendo el corrector ortográfico</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-13-compilando-la-ultima-version-de-emacs.html">Compilando la última versión de Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-11-12-compilando-la-ultima-version-de-nano.html">Compilando La última versión de Nano</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
