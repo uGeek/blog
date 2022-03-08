@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Reemplazar texto de uno o varios archivos con dired en Emacs</title>
+    <link>https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/emacs.png" alt="Reemplazar texto de uno o varios archivos con dired en Emacs"&gt;
+&lt;br&gt;&lt;p&gt;Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html&gt;Reemplazar texto de uno o varios archivos con dired en Emacs&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 08 Mar 2022  +0100</pubDate>
+    <category>emacs</category>
+    <category>dired</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html</guid>
+   </item>
+   <item>
     <title>Editando CSV usando Emacs</title>
     <link>https://ugeek.github.io/blog/post/2021-07-28-editando-csv-usando-emacs.html</link>
     <description>

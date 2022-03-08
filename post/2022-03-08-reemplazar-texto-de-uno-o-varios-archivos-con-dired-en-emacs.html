@@ -1,5 +1,5 @@
 <head>
-<title>Todoist en Emacs. uGeek Blog </title>
+<title>Reemplazar texto de uno o varios archivos con dired en Emacs. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas." />
+<meta name="description" content="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Todoist en Emacs" />
-<meta property="og:description" content="Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/todoist.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-01-08-todoist-en-emacs.html" />
+<meta property="og:title" content="Reemplazar texto de uno o varios archivos con dired en Emacs" />
+<meta property="og:description" content="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/emacs.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html" />
 
-<meta name="twitter:title" content="Todoist en Emacs" />
-<meta name="twitter:description" content="Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/todoist.png" />
+<meta name="twitter:title" content="Reemplazar texto de uno o varios archivos con dired en Emacs" />
+<meta name="twitter:description" content="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/emacs.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,45 +85,43 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="todoist-en-emacs-1" title="Todoist en Emacs" data-export_file_name="todoist-en-emacs" data-description="Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas." data-export_date="2020-01-08 17:50" data-category="emacs" data-tag="orgmode,tareas" data-image="./images-blog/todoist.png">Todoist en Emacs</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 336 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
-<p>Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa, podremos acceder mediante la api de todoist a todas nuestras listas.</p>
+<h1 id="reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs-1" title="Reemplazar texto de uno o varios archivos con dired en Emacs" data-export_file_name="reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs" data-description="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." data-export_date="2022-03-08 19:25" data-category="emacs" data-tag="dired" data-image="./images-blog/emacs.png">Reemplazar texto de uno o varios archivos con dired en Emacs</h1>
+<h5>Tiempo estimado de lectura: 5 minutos. 560 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<p>Cuando hay un error de sincronización con las notas en <a href="https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes&amp;hl=es&amp;gl=US">Zettel Notes</a>, aparece en la línea con error el siguiente símbolo <code>~~</code>.</p>
 <center>
-<p><img src="../images-blog/todoist.png" /></p>
+<p><img src="../images-blog/emacs.png" /></p>
 </center>
-<h2 id="instalación">Instalación</h2>
-<p>Podemos instalarlo desde los <a href="https://melpa.org/#/todoist">repositorios de Melpa</a></p>
-<pre><code>M-x package-install todoist
-</code></pre>
-<p>También podemos añadir el archivo todoist.el, que encontraremos en el <a href="https://github.com/abrochard/emacs-todoist">repositorio del proyecto</a>.</p>
-<h2 id="copia-tu-token">Copia tu Token</h2>
-<p>Todoist nos proporciona un Token para utilizar su api, vamos a <a href="https://todoist.com/Users/viewPrefs?page=integrations">acceder aquí para copiar nuestro Token</a></p>
-<h2 id="archivo-de-configuración">Archivo de configuración</h2>
-<p>Copia en tu <strong>.emacs</strong> o <strong>init.el</strong>, la siguiente línea sustituyendo las "XXX…", por nuestro token</p>
-<pre><code>(setq todoist-token &quot;XXXXXXXXXXXXXXXXXXXX&quot;)
-</code></pre>
-<p>Ejemplo. Este token es inventado.</p>
-<pre><code>(setq todoist-token &quot;13fc4b42rtrte370a7gqerg0880bae6f4909a71qerg7d&quot;)
-</code></pre>
-<h2 id="ejecuta-todoist">Ejecuta todoist</h2>
-<p>Vamos a acceder a todosit. Para ello tenemos que introducir en emacs</p>
-<pre><code>M-x todoist
-</code></pre>
-<h2 id="uso-todoist">Uso todoist</h2>
+<p>Hay un modo de ir renombrando todas las palabras que aparecen en una nota a la vez con un solo comando. Pero si esto te sucede en todas las notas de un directorio, también podemos hacerlo utilizando el explorador de archivos <strong>dired</strong> que incluye <strong>Emacs</strong>.</p>
+<p>Vamos a ver como hacerlo de los 2 modos.</p>
+<h2 id="cambiar-palabras-en-un-archivo-de-texto">Cambiar palabras en un archivo de texto</h2>
+<p>Para ir reemplazando palabra a palabra en un archivo de texto que hayamos abierto con <strong>Emacs</strong> y te vaya preguntando cada palabra que coincida, pulsamos el atajo <code>M-%</code>.</p>
+<p>Para reemplazar todas las palabras en el archivo de texto abierto con <strong>Emacs</strong> de una vez y que no te pregunte introduciremos el comando:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">M-x</span> replace-regexp</a></code></pre></div>
+<h2 id="utilizar-dired-para-reemplazar-texto-en-multimples-archivos">Utilizar dired para reemplazar texto en multimples archivos</h2>
+<h3 id="marcando-archivos-con-dired-de-emacs">Marcando archivos con dired de Emacs</h3>
+<p>Utiliza dired con Emacs y visualiza los archivos de un directorio. Para abrir dired podemos hacerlo con el atajo <code>C-x d</code>.</p>
 <ul>
-<li><strong>C-x t</strong> =&gt; Abrir el menú de tareas. Crear, actualizar, borrar, cerrar.</li>
-<li><strong>C-x p</strong> =&gt; Abrir el menú de proyectos Nuevo proyecto, actualizar y borrar proyecto</li>
+<li>Marca los archivos que quieres reemplazar el texto con la letra <code>m</code> y desmarca con la letra <code>u</code>. Puedes ir marcando <code>m</code> todo el rato e irá marcando un archivo tras otro.</li>
+<li>También puedes seleccionar todos los archivos de un directorio con el atajo <code>C-u t</code>.</li>
 </ul>
-<h3 id="utilizar-como-orgmode">Utilizar como Orgmode</h3>
-<p>También podemos utilizarlo como el OrgMode. Simplemente añadimos una nueva tarea y para que suba a todoist, teclearemos el siguiente atajo <code>C-x t u</code>.</p>
-<h2 id="conclusión">Conclusión</h2>
-<p>Es una muy buena opción para quien comparte tareas con otros usuarios o está muy habituado a utilizar <strong>Todoist</strong>. Aún así, el orgmode como gestión de tareas, aporta muchísimas más opciones. Pero esta es una demostración más que Emacs es un pequeño sistema operativo.</p>
+<ol>
+<li><p>Cambiar según patrón de nombre de archivo o extensión</p>
+<p>Puedes seleccionar seleccionar varios archivos que cumplan un patrón e común. Por ejemplo los archivos <strong>.md</strong>, utilizaremos % m.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">m</span> .md$</a></code></pre></div></li>
+</ol>
+<h3 id="reemplazando-el-texto-de-los-archivos">Reemplazando el texto de los archivos</h3>
+<p>Una vez <strong>marcados</strong> los archivos dentro de dired, introduciremos el siguiente comando.</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">M-x</span> dired-do-query-replace-regexp</a></code></pre></div>
+<p>Emacs te pedirá que escribas el texto fuente que quieres reemplazar y cuando pulses Enter, pedirá introducir el nuevo texto a reemplazar.</p>
+<p>A partir de ese momento, Emacs comenzará a abrir los archivos que contengan el texto fuente y te pregunatará si deseas reemplazarlo. Para reemplazarlo tenemos varias opciones: - <strong>!</strong> para reemplazar todas las coincidencias restantes en este búfer sin más preguntas - <strong>Y</strong> para reemplazar todas las palabras de los buffers restantes sin más preguntas - <strong>N</strong> para saltar al siguiente búfer sin reemplazar las coincidencias restantes - E para editar la cadena de reemplazo - Escribe Espacio o 'y' para reemplazar una coincidencia, Eliminar o 'n' para pasar al siguiente - RET o 'q' para salir, Período para reemplazar una coincidencia y salir - ^ para mover el punto de regreso al partido anterior - u para deshacer el reemplazo anterior - U para deshacer todos los reemplazos</p>
+<p>Para guardar todos los nuevos cambios, sin salir de <strong>Emacs</strong>.</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">M-x</span> save-some-buffers</a></code></pre></div>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://github.com/abrochard/emacs-todoist">https://github.com/abrochard/emacs-todoist</a></li>
+<li><a href="https://elblogdelazaro.org/posts/2021-07-19-emacs-reemplazar-texto-en-multiples-ficheros/">Emacs: Reemplazar texto en múltiples ficheros | el blog de lázaro</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el miércoles 08 enero del 2020</p>
+<p>Publicado por Angel el martes 08 marzo del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

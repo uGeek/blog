@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Reemplazar texto de uno o varios archivos con dired en Emacs',
+            'text': 'Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=.', 
+            'tags': 'emacs,dired,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html' 
+},
+{
             'title': 'Corrector ortográfico en nano',
             'text': 'Como cualquier otro editor de texto, nano tiene la posibilidad de habilitar el corrector ortográfico. A diferencia de otros editores, nano no tiene la posibilidad de ir marcando aquellas palabras', 
             'tags': 'nano,bash,,,,', 
