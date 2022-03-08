@@ -113,7 +113,17 @@ $("#tipue_search_input").tipuesearch();
 <p>Una vez <strong>marcados</strong> los archivos dentro de dired, introduciremos el siguiente comando.</p>
 <div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">M-x</span> dired-do-query-replace-regexp</a></code></pre></div>
 <p>Emacs te pedirá que escribas el texto fuente que quieres reemplazar y cuando pulses Enter, pedirá introducir el nuevo texto a reemplazar.</p>
-<p>A partir de ese momento, Emacs comenzará a abrir los archivos que contengan el texto fuente y te pregunatará si deseas reemplazarlo. Para reemplazarlo tenemos varias opciones: - <strong>!</strong> para reemplazar todas las coincidencias restantes en este búfer sin más preguntas - <strong>Y</strong> para reemplazar todas las palabras de los buffers restantes sin más preguntas - <strong>N</strong> para saltar al siguiente búfer sin reemplazar las coincidencias restantes - E para editar la cadena de reemplazo - Escribe Espacio o 'y' para reemplazar una coincidencia, Eliminar o 'n' para pasar al siguiente - RET o 'q' para salir, Período para reemplazar una coincidencia y salir - ^ para mover el punto de regreso al partido anterior - u para deshacer el reemplazo anterior - U para deshacer todos los reemplazos</p>
+<p>A partir de ese momento, Emacs comenzará a abrir los archivos que contengan el texto fuente y te pregunatará si deseas reemplazarlo. Para reemplazarlo tenemos varias opciones:</p>
+<ul>
+<li><strong>!</strong> para reemplazar todas las coincidencias restantes en este búfer sin más preguntas</li>
+<li><strong>Y</strong> para reemplazar todas las palabras de los buffers restantes sin más preguntas</li>
+<li><strong>N</strong> para saltar al siguiente búfer sin reemplazar las coincidencias restantes</li>
+<li>E para editar la cadena de reemplazo - Escribe Espacio o 'y' para reemplazar una coincidencia, Eliminar o 'n' para pasar al siguiente</li>
+<li>RET o 'q' para salir, Período para reemplazar una coincidencia y salir</li>
+<li>^ para mover el punto de regreso al partido anterior</li>
+<li>u para deshacer el reemplazo anterior</li>
+<li>U para deshacer todos los reemplazos</li>
+</ul>
 <p>Para guardar todos los nuevos cambios, sin salir de <strong>Emacs</strong>.</p>
 <div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">M-x</span> save-some-buffers</a></code></pre></div>
 <h2 id="fuentes">Fuentes</h2>
