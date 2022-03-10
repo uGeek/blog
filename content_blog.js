@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Audiobookshelf. Servidor de Audiolibros',
+            'text': 'Audiobookshelf es un servidor de audiolibros autohospedado para administrar y reproducir tus audiolibros tanto en tu móvil como en una página web.', 
+            'tags': 'audiolibros,raspberry,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-10-audiobookshelf-servidor-de-audiolibros.html' 
+},
+{
             'title': 'Reemplazar texto de uno o varios archivos con dired en Emacs',
             'text': 'Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=.', 
             'tags': 'emacs,dired,,,,', 
@@ -1081,7 +1087,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
