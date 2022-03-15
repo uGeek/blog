@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>twitch-dl. Aplicación CLI para descargar videos de twitch.tv</title>
+    <link>https://ugeek.github.io/blog/post/2022-03-15-twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png" alt="twitch-dl. Aplicación CLI para descargar videos de twitch.tv"&gt;
+&lt;br&gt;&lt;p&gt;Herramienta de línea de comandos para descargar videos de twitch.tv... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-03-15-twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv.html&gt;twitch-dl. Aplicación CLI para descargar videos de twitch.tv&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 15 Mar 2022  +0100</pubDate>
+    <category>twitch</category>
+    <category>terminal</category>
+    <category>cli</category>
+    <category>app</category>
+    <guid>https://ugeek.github.io/blog/post/2022-03-15-twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv.html</guid>
+   </item>
+   <item>
     <title>Audiobookshelf. Servidor de Audiolibros</title>
     <link>https://ugeek.github.io/blog/post/2022-03-10-audiobookshelf-servidor-de-audiolibros.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 10 Mar 2022  +0100</pubDate>
+    <pubDate>Thu, 10 Mar 2022 12:52 +0100</pubDate>
     <category>audiolibros</category>
     <category>raspberry</category>
     <category></category>

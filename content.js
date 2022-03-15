@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'twitch-dl. Aplicación CLI para descargar videos de twitch.tv',
+            'text': 'Herramienta de línea de comandos para descargar videos de twitch.tv', 
+            'tags': 'twitch,terminal,cli,app,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-15-twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv.html' 
+},
+{
             'title': 'Audiobookshelf. Servidor de Audiolibros',
             'text': 'Audiobookshelf es un servidor de audiolibros autohospedado para administrar y reproducir tus audiolibros tanto en tu móvil como en una página web.', 
             'tags': 'audiolibros,raspberry,,,,', 
