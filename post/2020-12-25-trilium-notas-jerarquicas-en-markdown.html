@@ -85,7 +85,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="trilium.-notas-jerárquicas-en-markdown-1" title="Trilium. Notas jerárquicas en Markdown" data-export_file_name="trilium-notas-jerarquicas-en-markdown" data-description="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" data-export_date="2020-12-25 20:41" data-category="markdown" data-tag="servidor" data-image="./images-blog/trilium.png">Trilium. Notas jerárquicas en Markdown</h1>
+<h1 id="trilium.-notas-jerárquicas-en-markdown-1" title="Trilium. Notas jerárquicas en Markdown" data-export_file_name="trilium-notas-jerarquicas-en-markdown" data-description="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" data-export_date="2020-12-25 20:41 2022-03-18" data-category="markdown" data-tag="servidor" data-image="./images-blog/trilium.png">Trilium. Notas jerárquicas en Markdown</h1>
 <h5>Tiempo estimado de lectura: 3 minutos. 364 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
 <p>Quizás ha llegado el momento de tomar notas para seres humanos, voy a hablar de Trilum.</p>
 <p>Trilium es un método jerárquico para tomar notas, tareas,… donde estás se gestionan con un método jerarquico como el orgmode y las podemos exportar a posterior a HTML, Markdown o incluso imprimirlas en pdf. </p>
@@ -96,66 +96,47 @@ $("#tipue_search_input").tipuesearch();
 <p>He probado diferentes dockers para la arquitectura amd64 y ARM así que finalmente me quedo con él dockers oficial para amd64 y otro que he encontrado de "hlince" para arm, que funciona muy bien en Raspberry.</p>
 <h2 id="docker-amd64">Docker amd64</h2>
 <p>El docker oficial y más actualizado para amd64 es:</p>
-<pre class="example"><code>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium:/root/trilium-data zadam/trilium
+<pre class="example"><code>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data zadam/trilium
 </code></pre>
 <p>Servicio disponible por el puerto en este ejemplo 99.</p>
 <ul>
 <li><a href="https://github.com/zadam/trilium/wiki/Docker-server-installation">https://github.com/zadam/trilium/wiki/Docker-server-installation</a></li>
 </ul>
 <p>Fork ugeek</p>
-<pre class="example"><code>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data ugeek/trilium:amd64
-</code></pre>
 <p>Servicio disponible por el puerto en este ejemplo 99.</p>
-<h2 id="docker-para-arm">Docker para arm</h2>
-<p>Es docker-compose para arm o Raspberry y funciona a la perfeción:</p>
-<pre class="example"><code>trilium:
- image: hlince/trilium:latest-stable-arm
- restart: always
- ports:
-  - 99:8080
- environment:
-  - TRILIUM_DATA_DIR=/data
- volumes:
-  - ./trilium/data:/data
+<h2 id="docker-con-proxy-inverso-con-caddy">Docker con Proxy Inverso con Caddy</h2>
+<p>1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen</p>
+<pre><code>#volumes:
+#  - ./trilium-data:/home/node/trilium-data
 </code></pre>
-<ul>
-<li><a href="https://hub.docker.com/r/hlince/trilium">https://hub.docker.com/r/hlince/trilium</a></li>
-</ul>
-<p>Fork de ugeek</p>
-<pre class="example"><code>trilium:
- image: ugeek/trilium:arm
- restart: always
- ports:
-  - 99:8080
- environment:
-  - TRILIUM_DATA_DIR=/data
- volumes:
-  - ./trilium/data:/data
-</code></pre>
-<h2 id="docker-con-proxy-inverso-con-traefik">Docker con Proxy Inverso con Traefik</h2>
-<pre><code>version: &#39;3.7&#39;
+<p>2.- Una vez iniciado del docker, copia el volumen trilium-data en el host</p>
+<p>docker cp trilium:/home/node/trilium-data ./trilium-data</p>
+<p>3.- Descomenta quitando las almohadillas y vuelve a crear el docker con el directorio de trilium-data</p>
+<pre><code>version: &#39;2.1&#39;
 services:
-  web:
-    image: hlince/trilium:latest-stable-arm
+  trilium:
+    image: zadam/trilium
+    restart: always
     container_name: trilium
-    environment:
-      - TRILIUM_DATA_DIR=/data
+    ports:
+      - &quot;8080:8080&quot;
     volumes:
-      - ./trilium/data:/data  
+      - ./trilium-data:/home/node/trilium-data
     networks:
-      - web
-    labels:
-      - traefik.port=8080
-      - traefik.enable=true
-      - traefik.frontend.rule=Host:trilium.midominio.duckdns.org
-      - &quot;traefik.entrypoints=https&quot;
-      - &quot;traefik.docker.network=web&quot;
-      - &quot;traefik.backend.loadbalancer.stickiness=true&quot;
-      - &quot;traefik.backend.loadbalancer.swarm=true&quot;
-      - &quot;traefik.backend=trilium&quot;      
-networks:                                                                                                                   
-  web:
-   external: true 
+      - DockerLAN
+
+
+###########
+## REDES ##
+###########
+networks:
+  DockerLAN:  ## Red bridge propia ##
+    name: DockerLAN
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/24
 </code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
@@ -163,7 +144,7 @@ networks:
 <li><a href="https://www.electronjs.org/apps/trilium-notes">https://www.electronjs.org/apps/trilium-notes</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el viernes 25 diciembre del 2020</p>
+<p>Publicado por Angel el viernes 25 diciembre del 2020 y <strong>actualizado</strong> el viernes 18 marzo del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

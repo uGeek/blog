@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'NewPipe. La aplicación predeterminada en Android',
+            'text': 'NewPipe es mi aplicación favorita de YouTube y me da mucha rabia que cuando hago click en un enlace, no abra NewPipe por defecto.', 
+            'tags': 'youtube,newpipe,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-21-newpipe-la-aplicacion-predeterminada-en-android.html' 
+},
+{
             'title': 'twitch-dl. Aplicación CLI para descargar videos de twitch.tv',
             'text': 'Herramienta de línea de comandos para descargar videos de twitch.tv', 
             'tags': 'twitch,terminal,cli,app,,', 
