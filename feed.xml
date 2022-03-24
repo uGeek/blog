@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Micro. Un editor normal para terminal</title>
+    <link>https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/Micro._Un_editor_normal_para_terminal.png" alt="Micro. Un editor normal para terminal"&gt;
+&lt;br&gt;&lt;p&gt;No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html&gt;Micro. Un editor normal para terminal&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 24 Mar 2022  +0100</pubDate>
+    <category>editor</category>
+    <category>micro</category>
+    <category>terminal</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html</guid>
+   </item>
+   <item>
     <title>NewPipe. La aplicación predeterminada en Android</title>
     <link>https://ugeek.github.io/blog/post/2022-03-21-newpipe-la-aplicacion-predeterminada-en-android.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 21 Mar 2022  +0100</pubDate>
+    <pubDate>Mon, 21 Mar 2022 18:07 +0100</pubDate>
     <category>youtube</category>
     <category>newpipe</category>
     <category></category>

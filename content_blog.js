@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Micro. Un editor normal para terminal',
+            'text': 'No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano.', 
+            'tags': 'editor,micro,terminal,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html' 
+},
+{
             'title': 'NewPipe. La aplicación predeterminada en Android',
             'text': 'NewPipe es mi aplicación favorita de YouTube y me da mucha rabia que cuando hago click en un enlace, no abra NewPipe por defecto.', 
             'tags': 'youtube,newpipe,,,,', 
