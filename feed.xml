@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Termux. Una distro Linux en Android con la que crear tus aplicaciones</title>
+    <link>https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/Termux._Una_distro_Linux_en_Android_con_la_que_crear_tus_aplicaciones.png" alt="Termux. Una distro Linux en Android con la que crear tus aplicaciones"&gt;
+&lt;br&gt;&lt;p&gt;Termux es una aplicación que podemos instalar desde [[https://f-droid.org/repository/browse/?fdid=com.termux][F-Droid]] con la que podemos correr una distro Linux dentro de Android.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html&gt;Termux. Una distro Linux en Android con la que crear tus aplicaciones&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 25 Mar 2022  +0100</pubDate>
+    <category>termux</category>
+    <category>android</category>
+    <category>linux</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html</guid>
+   </item>
+   <item>
     <title>Micro. Un editor normal para terminal</title>
     <link>https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 24 Mar 2022  +0100</pubDate>
+    <pubDate>Thu, 24 Mar 2022 22:50 +0100</pubDate>
     <category>editor</category>
     <category>micro</category>
     <category>terminal</category>

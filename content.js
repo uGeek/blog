@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Termux. Una distro Linux en Android con la que crear tus aplicaciones',
+            'text': 'Termux es una aplicación que podemos instalar desde [[https://f-droid.org/repository/browse/?fdid=com.termux][F-Droid]] con la que podemos correr una distro Linux dentro de Android.', 
+            'tags': 'termux,android,linux,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html' 
+},
+{
             'title': 'Micro. Un editor normal para terminal',
             'text': 'No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano.', 
             'tags': 'editor,micro,terminal,,,', 
