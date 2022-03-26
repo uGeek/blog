@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Micro. Todas las Opciones</title>
+    <link>https://ugeek.github.io/blog/post/2022-03-26-micro-todas-las-opciones.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/Micro._Un_editor_normal_para_terminal.png" alt="Micro. Todas las Opciones"&gt;
+&lt;br&gt;&lt;p&gt;Me está gustando muchísimo *Micro* y he buscado la opción para que me guarde la posición del cursor, la ultima vez que edité una nota.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-03-26-micro-todas-las-opciones.html&gt;Micro. Todas las Opciones&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 26 Mar 2022  +0100</pubDate>
+    <category>micro</category>
+    <category>terminal</category>
+    <category>linux</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-03-26-micro-todas-las-opciones.html</guid>
+   </item>
+   <item>
     <title>Termux. Una distro Linux en Android con la que crear tus aplicaciones</title>
     <link>https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 25 Mar 2022  +0100</pubDate>
+    <pubDate>Fri, 25 Mar 2022 11:30 +0100</pubDate>
     <category>termux</category>
     <category>android</category>
     <category>linux</category>

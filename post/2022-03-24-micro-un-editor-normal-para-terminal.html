@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="micro.-un-editor-normal-para-terminal-1" title="Micro. Un editor normal para terminal" data-export_file_name="micro-un-editor-normal-para-terminal" data-description="No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano." data-export_date="2022-03-24 18:07" data-category="editor" data-tag="micro,terminal" data-image="./images-blog/Micro._Un_editor_normal_para_terminal.png">Micro. Un editor normal para terminal</h1>
-<h5>Tiempo estimado de lectura: 9 minutos. 1042 palabras.    <a href="https://ugeek.github.io/blog/categories/editor">editor</a></h5>
+<h5>Tiempo estimado de lectura: 9 minutos. 1076 palabras.    <a href="https://ugeek.github.io/blog/categories/editor">editor</a></h5>
 <p>No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano.</p>
 <center>
 <p><img src="../images-blog/Micro._Un_editor_normal_para_terminal.png" /></p>
@@ -160,23 +160,27 @@ $("#tipue_search_input").tipuesearch();
 <p><a href="https://github.com/micro-editor/plugin-channel">Estos son los plugins oficiales</a> de <strong>micro</strong>.</p>
 <p><a href="https://micro-editor.github.io/plugins.html">Los Plugins</a> podemos instalarlos desde la web de Micro.</p>
 <h3 id="corrector-ortográfico">Corrector ortográfico</h3>
+<p>Antes de instalar el plugin, es necesario instalar los paquetes de aspell.</p>
+<p>Para instalar por ejemplo, los diccionarios Castellano y Catalán:</p>
+<pre><code>sudo apt install aspell aspell-es aspell-ca
+</code></pre>
 <p>Instalación del Plugin:</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">micro</span> -plugin install aspell</a></code></pre></div>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">micro</span> -plugin install aspell</a></code></pre></div>
 <p>Resaltado de palabras con introduciendo en comando (<code>Ctrl+e</code>) set</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">{</span></a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="st">&quot;aspell.check&quot;</span>: <span class="st">&quot;on&quot;</span>,</a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="kw">}</span></a></code></pre></div>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">{</span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="st">&quot;aspell.check&quot;</span>: <span class="st">&quot;on&quot;</span>,</a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="kw">}</span></a></code></pre></div>
 <p>Es genial porque si y hay una falta de ortografía en una línea, en la <strong>parte iaquierda</strong> aparece <code>&gt;&gt;</code></p>
 <h3 id="resaltar-palabras-mal-escritas">Resaltar palabras mal escritas</h3>
 <p>complemento que corrige palabras comúnmente mal escritas</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">micro</span> -plugin install misspell</a></code></pre></div>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">micro</span> -plugin install misspell</a></code></pre></div>
 <h3 id="plugin-snippets">Plugin snippets</h3>
 <p>Instalación:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">micro</span> plugin install snippets</a></code></pre></div>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">micro</span> plugin install snippets</a></code></pre></div>
 <p>O introducimos el comando dentro de micro con: <code>Ctrl+e</code> y después <code>plugin install snippets</code></p>
 <h3 id="filemanager.-explorador-de-archivos">filemanager. Explorador de archivos</h3>
 <p>Ejecutando el comando <code>Ctrl+e</code></p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">plugin</span> install filemanager</a></code></pre></div>
+<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="ex">plugin</span> install filemanager</a></code></pre></div>
 <p>Reinicia</p>
 <ol>
 <li><p>Iniciando</p>
@@ -267,32 +271,32 @@ $("#tipue_search_input").tipuesearch();
 <h3 id="salto-de-línea">Salto de línea</h3>
 <p>Para que las líneas no salgan de la pantalla y haga un salto de línea automático, activaremos el <strong>softwrap</strong></p>
 <p>Utilizaremos nano para editar el archivo de configuración:</p>
-<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="fu">nano</span> ~/.config/micro/settings.json</a></code></pre></div>
-<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">{</span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="st">&quot;softwrap&quot;</span>: <span class="fu">true</span></a>
-<a class="sourceLine" id="cb11-3" title="3"><span class="kw">}</span></a></code></pre></div>
+<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="fu">nano</span> ~/.config/micro/settings.json</a></code></pre></div>
+<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">{</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="st">&quot;softwrap&quot;</span>: <span class="fu">true</span></a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="kw">}</span></a></code></pre></div>
 <h3 id="autoguardado">Autoguardado</h3>
 <p>Lanzando el comando, podemos agregar la opción autosave con:</p>
-<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">micro</span> -autosave 5 archivo.md</a></code></pre></div>
+<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="ex">micro</span> -autosave 5 archivo.md</a></code></pre></div>
 <p>Podemos establecer cada cuanto tiempo queremos que se guarde en una sesión con el comando <code>set</code>. Pulsamos <code>Ctrl+e</code></p>
 <ul>
 <li>set autosave [número de segundos]</li>
 </ul>
 <p>Una vez introducido el comando, quedará guardado en el archivo de configuración <code>nano ~/.config/micro/settings.json</code>.</p>
-<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">{</span></a>
-<a class="sourceLine" id="cb13-2" title="2"><span class="st">&quot;autosave&quot;</span>: <span class="ex">3</span>,</a>
-<a class="sourceLine" id="cb13-3" title="3"><span class="st">&quot;softwrap&quot;</span>: <span class="fu">true</span></a>
-<a class="sourceLine" id="cb13-4" title="4"><span class="kw">}</span></a></code></pre></div>
+<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">{</span></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="st">&quot;autosave&quot;</span>: <span class="ex">3</span>,</a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="st">&quot;softwrap&quot;</span>: <span class="fu">true</span></a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="kw">}</span></a></code></pre></div>
 <h2 id="configurar-atajos">Configurar Atajos</h2>
-<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="ex">~/.config/micro/bindings.json</span></a></code></pre></div>
+<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="ex">~/.config/micro/bindings.json</span></a></code></pre></div>
 <h2 id="ir-a-la-línea-nº">Ir a la línea nº</h2>
 <p>Para ir por ejemplo a la línea 33, lo haríamos así:</p>
-<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="ex">micro</span> +33 archivo.md</a></code></pre></div>
+<div class="sourceCode" id="cb16" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="ex">micro</span> +33 archivo.md</a></code></pre></div>
 <h2 id="tema.-cambio-de-color">Tema. Cambio de color</h2>
 <p>Podemos cambiar el tema de <strong>micro</strong> y acceder a la ayuda, lo haremos con el comando:</p>
-<div class="sourceCode" id="cb16" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="bu">help</span> colors</a></code></pre></div>
+<div class="sourceCode" id="cb17" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="bu">help</span> colors</a></code></pre></div>
 <p>Ejemplo: Introducimos el siguiente comando</p>
-<div class="sourceCode" id="cb17" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="kw">set</span> <span class="ex">colorscheme</span> twilight</a></code></pre></div>
+<div class="sourceCode" id="cb18" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">set</span> <span class="ex">colorscheme</span> twilight</a></code></pre></div>
 <p>Hay varios temas disponibles como: monokai, darcula,</p>
 <ul>
 <li><code>monokai</code> (also the <code>default</code> colorscheme)</li>
@@ -304,12 +308,12 @@ $("#tipue_search_input").tipuesearch();
 <li><code>bubblegum</code> (light theme)</li>
 </ul>
 <p>Yo he optado de momento por:</p>
-<div class="sourceCode" id="cb18" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">set</span> <span class="ex">colorscheme</span> simple</a></code></pre></div>
+<div class="sourceCode" id="cb19" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb19-1" title="1"><span class="kw">set</span> <span class="ex">colorscheme</span> simple</a></code></pre></div>
 <p>O instalando el plugin <code>monokai-dark</code> introduciendo también desde el propio micro con <code>Ctrl+e</code></p>
-<div class="sourceCode" id="cb19" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb19-1" title="1"><span class="ex">plugin</span> install monokai-dark</a></code></pre></div>
+<div class="sourceCode" id="cb20" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb20-1" title="1"><span class="ex">plugin</span> install monokai-dark</a></code></pre></div>
 <h2 id="ayuda">Ayuda</h2>
-<div class="sourceCode" id="cb20" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb20-1" title="1"><span class="ex">micro</span> --help</a></code></pre></div>
-<div class="sourceCode" id="cb21" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" title="1"><span class="ex">micro</span> -options</a></code></pre></div>
+<div class="sourceCode" id="cb21" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" title="1"><span class="ex">micro</span> --help</a></code></pre></div>
+<div class="sourceCode" id="cb22" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb22-1" title="1"><span class="ex">micro</span> -options</a></code></pre></div>
 <h2 id="ayuda-1">Ayuda</h2>
 <ul>
 <li>help</li>
@@ -324,6 +328,7 @@ $("#tipue_search_input").tipuesearch();
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html">Micro. Un editor normal para terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html">Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo</a></li>

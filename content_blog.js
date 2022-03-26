@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Micro. Todas las Opciones',
+            'text': 'Me está gustando muchísimo *Micro* y he buscado la opción para que me guarde la posición del cursor, la ultima vez que edité una nota.', 
+            'tags': 'micro,terminal,linux,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-26-micro-todas-las-opciones.html' 
+},
+{
             'title': 'Termux. Una distro Linux en Android con la que crear tus aplicaciones',
             'text': 'Termux es una aplicación que podemos instalar desde [[https://f-droid.org/repository/browse/?fdid=com.termux][F-Droid]] con la que podemos correr una distro Linux dentro de Android.', 
             'tags': 'termux,android,linux,,,', 
