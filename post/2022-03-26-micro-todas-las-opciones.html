@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="micro.-todas-las-opciones-1" title="Micro. Todas las Opciones" data-export_file_name="micro-todas-las-opciones" data-description="Me está gustando muchísimo *Micro* y he buscado la opción para que me guarde la posición del cursor, la ultima vez que edité una nota." data-export_date="2022-03-26 11:30" data-category="micro" data-tag="terminal,linux" data-image="./images-blog/Micro._Un_editor_normal_para_terminal.png">Micro. Todas las Opciones</h1>
-<h5>Tiempo estimado de lectura: 26 minutos. 2938 palabras.    <a href="https://ugeek.github.io/blog/categories/micro">micro</a></h5>
+<h5>Tiempo estimado de lectura: 27 minutos. 3060 palabras.    <a href="https://ugeek.github.io/blog/categories/micro">micro</a></h5>
 <p>Me está gustando muchísimo <strong>Micro</strong> y he buscado la opción para que me guarde la posición del cursor, la ultima vez que edité una nota.</p>
 <center>
 <p><img src="../images-blog/Micro._Un_editor_normal_para_terminal.png" /></p>
@@ -97,6 +97,12 @@ $("#tipue_search_input").tipuesearch();
 <p>Podríamos hacerlo editando el archivo de configuración o simplemente, introduciendo a micro el comando con: <code>Ctrl+e</code> seguido de <strong>set</strong> y la opción que deseemos + valor.</p>
 <p>Por ejemplo. Para que guarde la posición como explicaba al principio, sería: <code>Ctrl+e</code> y…</p>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">set</span> <span class="ex">savecursor</span> true</a></code></pre></div>
+<h3 id="otras-opciones-interesantes">Otras opciones Interesantes</h3>
+<ul>
+<li><strong>mkparents</strong>: si se abre un archivo en una ruta que no existe, el archivo no se puede guardar porque los directorios principales no existen. Esta opción permite micro crea automáticamente los directorios principales en tal situación. valor por defecto: <strong>false</strong></li>
+<li><strong>mouse</strong>: soporte para ratón. Cuando la compatibilidad con el mouse está deshabilitada, por lo general, la terminal podrá acceder a los eventos del mouse que pueden ser útiles si desea copiar desde la terminal en lugar de desde micro (si sobre ssh para ejemplo, porque el terminal tiene acceso al portapapeles local y micro no). valor por defecto: <strong>true</strong></li>
+<li><strong>softwrap</strong>: ajusta las líneas que son demasiado largas para caber en la pantalla. valor por defecto: <strong>false</strong></li>
+</ul>
 <h2 id="opciones">Opciones</h2>
 <p>Micro almacena toda la configuración del usuario en su directorio de configuración.</p>
 <p>Microusos =$MICRO_CONFIGHOME=como directorio de configuración. Si esto la variable de entorno no está configurada, utiliza =$XDG_CONFIGHOME<em>micro=en lugar de. Si esa variable de entorno no está configurada, utiliza =~</em>.config/micro=como el directorio de configuración. En la documentación, usamos =~/.config/micro=para consulte el directorio de configuración (incluso si de hecho puede estar en otro lugar si ha configurado alguna de las variables de entorno anteriores).</p>
