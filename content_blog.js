@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux',
+            'text': 'En Ubuntu, cualquier script ejecutable que dejemos en el directorio =~/.local/bin=, será ejecutable desde cualquier directorio de nuestra máquina.', 
+            'tags': 'bash,raspberry,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html' 
+},
+{
             'title': 'Micro. Todas las Opciones',
             'text': 'Me está gustando muchísimo *Micro* y he buscado la opción para que me guarde la posición del cursor, la ultima vez que edité una nota.', 
             'tags': 'micro,terminal,linux,,,', 
@@ -1117,7 +1123,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

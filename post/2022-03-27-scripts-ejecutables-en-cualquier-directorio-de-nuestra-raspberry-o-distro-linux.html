@@ -1,5 +1,5 @@
 <head>
-<title>tts</title>
+<title>Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,14 +47,70 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>tts</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux-1" title="Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux" data-export_file_name="scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux" data-description="En Ubuntu, cualquier script ejecutable que dejemos en el directorio =~/.local/bin=, será ejecutable desde cualquier directorio de nuestra máquina." data-export_date="2022-03-27 13:30" data-category="bash" data-tag="raspberry" data-image="./images-blog/Scripts_ejecutables_en_cualquier_directorio_de_nuestra_Raspberry_o_Distro_Linux.png">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 210 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>En Ubuntu, cualquier script ejecutable que dejemos en el directorio <code>~/.local/bin</code>, será ejecutable desde cualquier directorio de nuestra máquina.</p>
+<p>Esto está genial, ya que podemos ejecutar scripts sin necesidad de otorgarle privilegios root. En la Raspberry esto no sucede.</p>
+<center>
+<p><img src="../images-blog/bash.png" /></p>
+</center>
+<p>Para standarizar todo un poco y que tanto en mi escritorio Ubuntu como en la Raspberry todos los scripts estén en el mismo lugar, vamos ha habilitar esta opción del siguiente modo.</p>
+<h2 id="habilitando-el-directorio-.localbin">Habilitando el directorio ~/.local/bin</h2>
+<p>Añadiremos al archivo ~/.bashrc o ~/.zshrc :</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">export</span> <span class="va">PATH=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.local/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></a></code></pre></div>
+<p>De esta manera, cualquier script que dejemos ahora en el directorio <code>~/.local/bin</code>, será ejecutable desde cualquier directorio de nuestra Raspberry.</p>
+<br>
+<p>Publicado por Angel el domingo 27 marzo del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-23-convertir-texto-a-voz-con-espeak.html>Convertir texto a voz con espeak</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html">Bash en Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-24-vizex.html">Vizex. Ver almacenamiento disponible y ocupado de tus discos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,… desde la terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
