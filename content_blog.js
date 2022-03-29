@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Gotty. Terminal en tu Navegador Web',
+            'text': 'Desde que escuché el podcast de atareao con esta aplicación servicio, me volví loco. Poder utilizar la terminal en mi navegador web.... Ya he probado algunos proyectos, pero ninguno que', 
+            'tags': 'docker,terminal,go,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html' 
+},
+{
             'title': 'Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux',
             'text': 'En Ubuntu, cualquier script ejecutable que dejemos en el directorio =~/.local/bin=, será ejecutable desde cualquier directorio de nuestra máquina.', 
             'tags': 'bash,raspberry,,,,', 

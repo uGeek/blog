@@ -1,5 +1,5 @@
 <head>
-<title>Docker: Duck DNS. Facilitando la conexión a tus servicios. uGeek Blog </title>
+<title>Gotty. Terminal en tu Navegador Web. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
+<meta name="description" content="Desde que escuché el podcast de atareao con esta aplicación servicio, me volví loco. Poder utilizar la terminal en mi navegador web.... Ya he probado algunos proyectos, pero ninguno que" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" />
-<meta property="og:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html" />
+<meta property="og:title" content="Gotty. Terminal en tu Navegador Web" />
+<meta property="og:description" content="Desde que escuché el podcast de atareao con esta aplicación servicio, me volví loco. Poder utilizar la terminal en mi navegador web.... Ya he probado algunos proyectos, pero ninguno que" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html" />
 
-<meta name="twitter:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" />
-<meta name="twitter:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" />
+<meta name="twitter:title" content="Gotty. Terminal en tu Navegador Web" />
+<meta name="twitter:description" content="Desde que escuché el podcast de atareao con esta aplicación servicio, me volví loco. Poder utilizar la terminal en mi navegador web.... Ya he probado algunos proyectos, pero ninguno que" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,49 +85,46 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-duck-dns.-facilitando-la-conexión-a-tus-servicios-1" title="Docker: Duck DNS. Facilitando la conexión a tus servicios" data-export_file_name="docker-duck-dns-facilitando-la-conexion-a-tus-servicios" data-description="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" data-export_date="2019-10-09 18:00" data-category="docker" data-tag="servidor,dns,duckdns" data-image="./images-blog/duckdns.png">Docker: Duck DNS. Facilitando la conexión a tus servicios</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 456 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>La mayor parte de la gente, tiene una conexión a internet con ip dinámica. Esto quiere decir, que la dirección ip va cambiando de tanto en tanto. No es fija.</p>
+<h1 id="gotty.-terminal-en-tu-navegador-web-1" title="Gotty. Terminal en tu Navegador Web" data-export_file_name="gotty-terminal-en-tu-navegador-web" data-description="Desde que escuché el podcast de atareao con esta aplicación servicio, me volví loco. Poder utilizar la terminal en mi navegador web.... Ya he probado algunos proyectos, pero ninguno que" data-export_date="2022-03-29 05:45" data-category="docker" data-tag="terminal,go" data-image="./images-blog/docker.png">Gotty. Terminal en tu Navegador Web</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 392 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Desde que escuché el podcast de atareao con esta aplicación servicio, me volví loco. Poder utilizar la terminal en mi navegador web…. Ya he probado algunos proyectos, pero ninguno que funcionara tan bién como <strong>Gotty</strong>. Sin dudas es el mejor.</p>
+<p>Pero no la estaba utilizando porque al utilizar Emacs desde el Navegador, es un poco confuso porque se mezclan los atajos. Pero ahora que estoy utilizando <strong>Micro</strong>, la cosa cambia.</p>
 <center>
-<p><img src="../images-blog/duckdns.png" /></p>
+<p><img src="../images-blog/docker.png" /></p>
 </center>
-<p>Esto puede ser un gran problema si queremos conectarnos desde fuera de nuestra red, a un servicio que tenemos en nuestro servidor. Si la compañía cambia la ip en ese momento, nunca encontraremos nuestro servidor. Para solucionar este problema podemos utilizar servicios DNS como Duck DNS.</p>
-<p>Tal como expliqué en el artículo del <a href="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html">Docker de Letsencript</a>, podemos crear una cuenta con un dominio o hasta 5 de forma gratuita y ejecutando un script en nuestro servidor, <strong>en nuestra red local</strong>, este script enviará cual es nuestra ip a Duck DNS, para que cada vez que introduzcamos el dominio que registramos en Duck DNS, redirija el tráfico hasta nuestra casa.</p>
-<p>Yo finalmente por comodidad, he montado un docker de la comunidad LinuxServer que incluye este script. De esta manera solo tengo que programar en que momento del día quiero que se inicie este docker y él se encargará de enviar esta información.</p>
-<h2 id="docker-duck-dns">Docker Duck DNS</h2>
-<p>Este es un ejemplo de como montar el docker. Tienes que sustituir <strong>SUBDOMAINS</strong>, en este ejemplo correspondería con la dirección ugeekpodcast.duckdns.org y angel.duckdns.org, el <strong>TOKEN</strong> aparece en la página de Duck DNS y <strong>TZ</strong> corresponde con la hora local del lugar donde vivas.</p>
-<pre><code>docker create \
-  --name=duckdns \
-  -e PGID=1000 -e PUID=1000  \
-  -e SUBDOMAINS=ugeekpodcast,angel \
-  -e TOKEN=adbqergh-av7654qwerg-qerg456-45qrg \
-  -e TZ=Europe/Madrid \
-  lsioarmhf/duckdns
-</code></pre>
-<p><strong>Es un Token de ejemplo falso</strong></p>
-<p>El script se ejecuta cada 5 minutos y envía nuesta IP a los servidores de Duck DNS.</p>
-<h2 id="cambiar-la-periocidad-de-ejecución">Cambiar la periocidad de ejecución</h2>
-<p>Para cambiar el tiempo de ejecución del script y que no sea cada 5 minutos, lo haremos de la siguiente manera:</p>
-<p>Entraremos dentro del contenedor</p>
-<pre><code>docker exec -it duckdns /bin/bash
-</code></pre>
-<p>Editamos cron</p>
-<pre><code>crontab -e -u abc
-</code></pre>
-<p>En mi caso, voy ha hacer que se ejecute cada 30 minutos</p>
-<pre><code>*/30 * * * * /app/duck.sh 2&gt;&amp;1
-</code></pre>
-<h2 id="ver-que-todo-va-ok">Ver que todo va ok</h2>
-<p>Para comprobar que todo funcion bien, haremos un log del contenedor y veremos cada cuanto se ejecuta el script</p>
-<pre><code>docker logs -f duckdns
-</code></pre>
+<p>Aunque me conecto remotamente por <strong>SSH</strong>, utilizar el navegador web remotamente con Wireguard es más rápido y cómodo. Tiene sentido, <strong>Gotty</strong> se está ejecutando en mi servidor y es desde allí de donde me sirve <strong>Gotty</strong>.</p>
+<p>Ahora grácias a <strong>Gotty</strong>, puedo ejecutar todos mis scripts remotamente.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Podemos instalarlo descargando directamente el archivo binario desde la <a href="https://github.com/yudai/gotty/releases/tag/v1.0.1">Release en GitHub</a>, descargando el compatible con tu arquitectura.</p>
+<p>Yo preferiblemente lo descargo en el directorio <code>~/.local/bin</code></p>
+<h2 id="funcionamiento">Funcionamiento</h2>
+<p>Si ejecutas el comando <code>gotty</code> no funcionará, ya que es necesario acompañarlo del comando que vayamos a utilizar en la terminal.</p>
+<p>Para correr htop sería:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">gotty</span> htop</a></code></pre></div>
+<p>Esta opción te permite ver tu terminal en el navegador y ver corriendo <strong>htop</strong>, pero no te permite interactuar con la terminal.</p>
+<p>Para interactuar es necesario utilizar la opción <code>-w</code> o <code>--permit-write</code>.</p>
+<p>De todas maneras, si pretendes utilizar mucho la terminal, esta opción solo te permite ver esa aplicación y interactuar con ella. Si quieres más, por ejemplo, utilizar la terminal como si te hubieras conectado vía SSH, puedes lanzar bash.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">gotty</span> -w /bin/bash</a></code></pre></div>
+<h2 id="docker">Docker</h2>
+<p>Siguiendo los consejos de Atareao, he utilizado su <a href="https://github.com/atareao/gotty-docker">Repositorio en GitHub</a> para construir mi propia imagen para arquitectura arm64.</p>
+<p>Esta terminal será expuesta por el puerto 82</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">version</span>: <span class="st">&#39;3&#39;</span></a>
+<a class="sourceLine" id="cb3-2" title="2"></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="ex">gotty</span>:</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="ex">build</span>: ./</a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="ex">image</span>: ugeek/gotty:arm64</a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="ex">container_name</span>: gotty</a>
+<a class="sourceLine" id="cb3-8" title="8"><span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb3-9" title="9"><span class="ex">-</span> <span class="st">&quot;82:3000&quot;</span></a>
+<a class="sourceLine" id="cb3-10" title="10"><span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="ex">-</span> <span class="va">$HOME</span>:/home</a></code></pre></div>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://www.duckdns.org/">https://www.duckdns.org/</a></li>
-<li><a href="https://hub.docker.com/r/linuxserver/duckdns/">https://hub.docker.com/r/linuxserver/duckdns/</a></li>
+<li><a href="https://github.com/yudai/gotty#options">yudai/gotty: Share your terminal as a web application</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el miércoles 09 octubre del 2019</p>
+<p>Publicado por Angel el martes 29 marzo del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
