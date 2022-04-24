@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="gestionar-wireguard-sin-ser-sudo-1" title="Gestionar Wireguard sin ser sudo" data-export_file_name="gestionar-wireguard-sin-ser-sudo" data-description="Uno de los problemas de utilizar Wireguard es tener que utilizar derechos de administrador. Con *nmcli* podremos hacerlo sin necesitarlos, ahora cualquier usuario podrá utilizar Wireguard." data-export_date="2021-10-04 07:02 2022-02-23" data-category="wireguard" data-tag="nmcli" data-image="./images-blog/wireguard.png">Gestionar Wireguard sin ser sudo</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 270 palabras.    <a href="https://ugeek.github.io/blog/categories/wireguard">wireguard</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 288 palabras.    <a href="https://ugeek.github.io/blog/categories/wireguard">wireguard</a></h5>
 <p>Uno de los problemas de utilizar Wireguard es tener que utilizar derechos de administrador. Con <strong>nmcli</strong> podremos hacerlo sin necesitarlos. Ahora cualquier usuario podrá utilizar Wireguard.</p>
 <center>
 <p><img src="../images-blog/wireguard.png" /></p>
@@ -120,6 +120,12 @@ $("#tipue_search_input").tipuesearch();
 <div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">nmcli</span> connection show</a></code></pre></div>
 <p>Con la opción -p de pretty, nos mostrara mas bonita o de un modo diferente esta información:</p>
 <div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">nmcli</span> -p device show</a></code></pre></div>
+<p>Mostrar todas las conecxiones</p>
+<pre><code>nmcli connection show
+</code></pre>
+<p>Borrar una conexión antigua de wireguard:</p>
+<pre><code>nmcli c delete id wg0
+</code></pre>
 <br>
 <p>Publicado por Angel el lunes 04 octubre del 2021 y <strong>actualizado</strong> el miércoles 23 febrero del 2022</p>
 <br><br> 
