@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Instalación de Nextcloud 24 con docker Oficial',
+            'text': 'Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.', 
+            'tags': 'nextcloud,nube,webdav,docker,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html' 
+},
+{
             'title': 'Gotty. Terminal en tu Navegador Web',
             'text': 'Desde que escuché el podcast de atareao con esta aplicación servicio, me volví loco. Poder utilizar la terminal en mi navegador web.... Ya he probado algunos proyectos, pero ninguno que', 
             'tags': 'docker,terminal,go,,,', 

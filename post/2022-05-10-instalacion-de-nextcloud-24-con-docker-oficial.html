@@ -1,5 +1,5 @@
 <head>
-<title>Instalación de Nextcloud 21 con docker Oficial. uGeek Blog </title>
+<title>Instalación de Nextcloud 24 con docker Oficial. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -26,12 +26,12 @@
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Instalación de Nextcloud 21 con docker Oficial" />
+<meta property="og:title" content="Instalación de Nextcloud 24 con docker Oficial" />
 <meta property="og:description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html" />
 
-<meta name="twitter:title" content="Instalación de Nextcloud 21 con docker Oficial" />
+<meta name="twitter:title" content="Instalación de Nextcloud 24 con docker Oficial" />
 <meta name="twitter:description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" />
 
@@ -85,9 +85,9 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="instalación-de-nextcloud-21-con-docker-oficial-1" title="Instalación de Nextcloud 21 con docker Oficial" data-export_file_name="instalacion-de-nextcloud-21-con-docker-oficial" data-description="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." data-export_date="2021-02-25 17:56" data-category="nextcloud" data-tag="nube,webdav,docker" data-image="./images-blog/nextcloud_hub.png">Instalación de Nextcloud 21 con docker Oficial</h1>
-<h5>Tiempo estimado de lectura: 6 minutos. 688 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
-<p>Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.</p>
+<h1 id="instalación-de-nextcloud-24-con-docker-oficial-1" title="Instalación de Nextcloud 24 con docker Oficial" data-export_file_name="instalacion-de-nextcloud-24-con-docker-oficial" data-description="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." data-export_date="2022-05-10 09:56" data-category="nextcloud" data-tag="nube,webdav,docker" data-image="./images-blog/nextcloud_hub.png">Instalación de Nextcloud 24 con docker Oficial</h1>
+<h5>Tiempo estimado de lectura: 7 minutos. 803 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
+<p>Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo.</p>
 <center>
 <p><img src="../images-blog/nextcloud_hub.png" /></p>
 </center>
@@ -98,7 +98,6 @@ $("#tipue_search_input").tipuesearch();
 <li>Multiusuario y trabajo colaborativo</li>
 <li>100% Open Source y gratuito</li>
 </ul>
-<p>El contra, como ya es bien conocido y siempre he comentado, es no sobrecargar la nube de aplicaciones innecesarias ya que esto va a producir una ralentización del servicio.</p>
 <p>Voy a explicaros cómo montar el Docker, con docker-compose para arquitectura amd64, ARM64 y Raspberry Pi.</p>
 <h2 id="docker-compose">Docker-compose</h2>
 <h3 id="amd64-y-arm64">amd64 y arm64</h3>
@@ -218,10 +217,22 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb6-11" title="11">}</a>
 <a class="sourceLine" id="cb6-12" title="12">}</a></code></pre></div>
 <p>Con esta configuración, Nextcloud me ha dicho que todo está perfecto</p>
+<h2 id="acceso-pasado-30-segundos">Acceso pasado 30 segundos</h2>
+<p>Para evitar ataques de fuerza bruta, Nextcloud si detecta que hay muchos accesos desde la misma IP, puede forzar a que cada vez que te conectes al servidor tengas que esperar 30 segundos. Para deshabilitar esta opción, tienes que añadir en el archivo de configuración:</p>
+<pre><code>&#39;auth.bruteforce.protection.enabled&#39; =&gt; false,
+</code></pre>
+<h2 id="compatibilidad-con-archivos-svg">Compatibilidad con archivos svg</h2>
+<p>Cuando miramos si Nextcloud está bien instalado, nos mostrará un mensaje que falta la compatibilidad con archivos svg.</p>
+<p>Esta compatibilidad está deshabilitada de manera predeterminada por razones de seguridad. Para agregar esta compatibilidad cuando instalamos un nueva imágen docker, tenemos que instalar el paquete <strong>php-imagick</strong>.</p>
+<pre><code>docker exec -it nextcloud apt update ; apt-get install libmagickcore-6.q16-6-extra 
+</code></pre>
+<p>Otra opción de instalación, sería:</p>
+<pre><code>docker exec nextcloud bash -c &#39;apt-get install -y --no-install-recommends $(apt-cache search libmagickcore-6.q[0-9][0-9]-[0-9]-extra | cut -d &quot; &quot; -f1)&#39;
+</code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Ahora solo que disfrutar de Nextcloud.</p>
 <br>
-<p>Publicado por Angel el jueves 25 febrero del 2021</p>
+<p>Publicado por Angel el martes 10 mayo del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
