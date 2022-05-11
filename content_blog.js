@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Nextcloud services. Notificaciones desde Nextcloud',
+            'text': 'Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud.', 
+            'tags': 'nextcloud,nube,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-05-11-nextcloud-services-notificaciones-desde-nextcloud.html' 
+},
+{
             'title': 'Instalación de Nextcloud 24 con docker Oficial',
             'text': 'Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.', 
             'tags': 'nextcloud,nube,webdav,docker,,', 
@@ -1135,7 +1141,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

@@ -1,5 +1,5 @@
 <head>
-<title>Controlando la papelera de Nextcloud. uGeek Blog </title>
+<title>Nextcloud services. Notificaciones desde Nextcloud. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." />
+<meta name="description" content="Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Controlando la papelera de Nextcloud" />
-<meta property="og:description" content="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-03-09-controlando-la-papelera-de-nextcloud.html" />
+<meta property="og:title" content="Nextcloud services. Notificaciones desde Nextcloud" />
+<meta property="og:description" content="Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-05-11-nextcloud-services-notificaciones-desde-nextcloud.html" />
 
-<meta name="twitter:title" content="Controlando la papelera de Nextcloud" />
-<meta name="twitter:description" content="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud.png" />
+<meta name="twitter:title" content="Nextcloud services. Notificaciones desde Nextcloud" />
+<meta name="twitter:description" content="Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,29 +85,35 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="controlando-la-papelera-de-nextcloud-1" title="Controlando la papelera de Nextcloud" data-export_file_name="controlando-la-papelera-de-nextcloud" data-description="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." data-export_date="2021-03-09 21:30" data-category="nextcloud" data-tag="servidor,docker" data-image="./images-blog/nextcloud.png">Controlando la papelera de Nextcloud</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 229 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
-<p>Mediante el archivo de configuración <strong>config.php</strong>, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera.</p>
+<h1 id="nextcloud-services.-notificaciones-desde-nextcloud-1" title="Nextcloud services. Notificaciones desde Nextcloud" data-export_file_name="nextcloud-services-notificaciones-desde-nextcloud" data-description="Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud." data-export_date="2022-05-11 06:30" data-category="nextcloud" data-tag="nube" data-image="./images-blog/nextcloud_hub.png">Nextcloud services. Notificaciones desde Nextcloud</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 274 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
+<p>Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud.</p>
+<p>Para no depender de los servicios de Google para recibir notificaciones de Nextcloud, como sucedía en versiones anteriores, desde noviembre del 2021 han creado esta aplicación llamada <strong>Nextcloud services</strong>.</p>
 <center>
-<p><img src="../images-blog/nextcloud.png" /></p>
+<p><img src="../images-blog/nextcloud_hub.png" /></p>
 </center>
-<p>Para tener el control de la papelera, tenemos que utilizar esta variable en el archivo <strong>config.php</strong>.</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="st">&#39;trashbin_retention_obligation&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;auto&#39;</span>,</a></code></pre></div>
-<h2 id="auto">Auto</h2>
-<p>Auto es la configuración predeterminada. El archivo permanecerá durante 30 días o si necesitas espacio.</p>
-<h2 id="d-auto">D, auto</h2>
-<p>Mantiene los archivos o directorios durante los <strong>D[dias]</strong> y eliminar archivos o directorios si necesita espacio.</p>
-<h2 id="auto-d">auto, D</h2>
-<p>Elimina archivos que tengas más <strong>D[días]</strong> y eliminar archivos o directorios si necesita espacio.</p>
-<h2 id="d1-d2">D1, D2</h2>
-<p>Mantenga archivos durante <strong>D1</strong> días y elimina archivos que superan <strong>D2</strong> día. <strong>No</strong> eliminar archivos o directorios si necesita espacio.</p>
-<h2 id="deshabilitar">Deshabilitar</h2>
-<p>Deshabilitar la papelera con <code>disabled</code>.</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="st">&#39;trashbin_retention_obligation&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;disabled&#39;</span>,</a></code></pre></div>
-<h2 id="conclusión">Conclusión</h2>
-<p>Ahora ya sabes como utilizar la papelera de Nextcloud</p>
+<p>Si tienes Nextcloud, es un servicio fantástico como alternativa a <strong>Gotify</strong> o <strong>ntfy</strong>.</p>
+<h2 id="enviar-un-mensajes-desde-el-docker-de-nextcloud">Enviar un mensajes desde el docker de Nextcloud</h2>
+<p>Vamos a enviar un mensaje al usuario <strong>angel</strong> desde la terminal.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud  php occ notification:generate   angel <span class="st">&quot;Mensaje desde la terminal&quot;</span>  -l <span class="st">&quot;Texto del mensaje&quot;</span></a></code></pre></div>
+<h3 id="ayuda">Ayuda</h3>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud  php occ notification:generate   --help</a></code></pre></div>
+<h2 id="enviar-mensajes-desde-máquina-en-remoto-mediante-curl">Enviar mensajes desde máquina en remoto mediante curl</h2>
+<p>Si instalas curl en una Raspberry, Pc,… podemos remotamente enviar a Nextcloud para que publique un mensaje.</p>
+<p>Sustituye:</p>
+<ul>
+<li>Usuario = angel</li>
+<li>Token = UD6N-b7Tyo-LIKS9-FHD7-Rtre6 (Generado desde la sección <strong>Ajustes &gt; seguridad</strong>.</li>
+<li>Url del servidor = <a href="http://midominio.duckdns.org">midominio.duckdns.org</a></li>
+</ul>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">curl</span> -H <span class="st">&quot;OCS-APIREQUEST: true&quot;</span> -X POST             https://angel:UD6N-b7Tyo-LIKS9-FHD7-Rtre6@midominio.duckdns.org/ocs/v2.php/apps/notifications/api/v2/admin_notifications/angel             -d shortMessage=<span class="st">&quot;Título del Mensaje&quot;</span>             -d longMessage=<span class="st">&quot;Este es el mensaje&quot;</span></a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/Andrewerr/NextcloudServices">https://github.com/Andrewerr/NextcloudServices</a></li>
+<li><a href="https://f-droid.org/en/packages/com.polar.nextcloudservices/">https://f-droid.org/en/packages/com.polar.nextcloudservices/</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el martes 09 marzo del 2021</p>
+<p>Publicado por Angel el miércoles 11 mayo del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
