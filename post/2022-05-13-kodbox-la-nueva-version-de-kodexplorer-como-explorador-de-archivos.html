@@ -1,0 +1,150 @@
+<head>
+<title>Kodbox. La nueva versión de KodExplorer como explorador de archivos. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="En el artículo [[https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html][Docker kodexplorer]], os expliqué como montar este magnífico explorador de archivos." />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Kodbox. La nueva versión de KodExplorer como explorador de archivos" />
+<meta property="og:description" content="En el artículo [[https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html][Docker kodexplorer]], os expliqué como montar este magnífico explorador de archivos." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html" />
+
+<meta name="twitter:title" content="Kodbox. La nueva versión de KodExplorer como explorador de archivos" />
+<meta name="twitter:description" content="En el artículo [[https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html][Docker kodexplorer]], os expliqué como montar este magnífico explorador de archivos." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131560140-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "UA-131560140-1");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="kodbox.-la-nueva-versión-de-kodexplorer-como-explorador-de-archivos-1" title="Kodbox. La nueva versión de KodExplorer como explorador de archivos" data-export_file_name="kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos" data-description="En el artículo [[https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html][Docker kodexplorer]], os expliqué como montar este magnífico explorador de archivos." data-export_date="2022-05-13 07:30" data-category="kodbox" data-tag="servidores,nextcloud" data-image="./images-blog/kodexplorer.png">Kodbox. La nueva versión de KodExplorer como explorador de archivos</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 370 palabras.    <a href="https://ugeek.github.io/blog/categories/kodbox">kodbox</a></h5>
+<p>En el artículo <a href="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html">Docker kodexplorer</a>, os expliqué como montar este magnífico explorador de archivos.</p>
+<p>Con el tiempo, este explorador ha pasado a llamarse Kodbox. Vamos a ver como montar el docker más simple con una base de datos sqlite y ahora sí, con el docker oficial para Raspberry (arm64).</p>
+<p><a href="http://demo.kodcloud.com/#user/login">Tienes aquí una demo para probar el servicio</a></p>
+<center>
+<p><img src="../images-blog/kodexplorer.png" /></p>
+</center>
+<p>La versión 1.30 está desarrollada bajo el entorno <strong>nginx 1.20 + php-fpm 8.0</strong>.</p>
+<p>Esta versión te permite crear 10 usuarios + el administrador.</p>
+<p>El administrador es el único que puede montar unidades externas y puede compartir directorios de estos directorios al resto de usuarios.</p>
+<h2 id="porque-me-gusta-kodbox">Porque me gusta kodbox</h2>
+<ul>
+<li>Muy liviano</li>
+<li>Buen editor de texto (Con autoguardado)</li>
+<li>Control de versiones de los Archivos</li>
+<li>Montar servidores WebDAV, FTP,…</li>
+<li>Tener acceso directos a otros servicios</li>
+<li>Control de versiones de los Archivos</li>
+<li>Enviar notificaciones al resto de usuarios</li>
+</ul>
+<h2 id="docker-con-inicio-rápido">docker con inicio rápido</h2>
+<p>Si quieres dar un vistazo rápido a <strong>Kodbox</strong>, puedes montar el docker con:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> run -d -p 80:80 kodcloud/kodbox</a></code></pre></div>
+<h2 id="implementando-la-persistencia-de-datos.">Implementando la persistencia de datos.</h2>
+<p>crea un directorio de datos y móntalo al inicio</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> run -d -p 80:80 -v /data:/var/www/html kodcloud/kodbox</a></code></pre></div>
+<h2 id="comienza-con-https">Comienza con https</h2>
+<ul>
+<li>Usar un certificado SSL existente</li>
+<li>El formato del certificado debe ser fullchain.pem privkey.pem</li>
+</ul>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">docker</span> run -d --name kodbox -p 443:443  -v <span class="va">$HOME</span>/docker/kodbox/config:/etc/nginx/ssl  kodcloud/kodbox</a></code></pre></div>
+<h2 id="docker-compose">docker compose</h2>
+<p>Para montar el docker compose de <strong>kodbox</strong>, es tan sencillo como:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">kodbox</span>:</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="ex">container_name</span>: kodbox</a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="ex">image</span>: kodcloud/kodbox</a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="ex">-</span> 83:80</a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="ex">-</span> <span class="st">&quot;./data:/var/www/html&quot;</span></a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="ex">-</span> <span class="st">&quot;/media/Disco1:/Disco1&quot;</span>   <span class="co"># Crear un nuevo directorio para compartir almacenamiento local</span></a>
+<a class="sourceLine" id="cb4-9" title="9"><span class="ex">restart</span>: unless-stopped</a></code></pre></div>
+<h3 id="archivos">Archivos</h3>
+<p>Los archivos locales quedan en el directorio <code>/var/www/html/data/files/</code>, pero puedes crear un nuevo directorio dentro del docker como en este ejemplo <strong>Disco1</strong>.</p>
+<h2 id="montar-servidores">Montar Servidores</h2>
+<p>Puedes montar desde almacenamiento local y servidores remotos WebDAV, FTP,…</p>
+<h2 id="editor-de-texto">Editor de texto</h2>
+<p>Con la tecla <strong>Control</strong> podemos habilitar atajos a la sintaxis de markdown, guardar documento, etc… - Ctrl+b = Negrita - Ctrl+k = Cajetilla de código - Ctrl+s = Guardar - Ctrl+l = Enlace - Ctrl+z = Rehacer último cambio - Ctrl+a = Seleccionar todo el texto - Seleccionar bloques de texto = Shift+arriba/abajo/izquierda/derecha</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://kodcloud.com">https://kodcloud.com</a></li>
+<li><a href="https://github.com/kalcaddle/kodbox">https://github.com/kalcaddle/kodbox</a></li>
+<li><a href="https://hub.docker.com/r/kodcloud/kodbox">https://hub.docker.com/r/kodcloud/kodbox</a></li>
+<li><a href="https://github.com/KodCloud-dev/docker">https://github.com/KodCloud-dev/docker</a></li>
+<li><a href="https://docs.kodcloud.com/user/4.3/">https://docs.kodcloud.com/user/4.3/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el viernes 13 mayo del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

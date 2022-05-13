@@ -1,0 +1,335 @@
+Si en tu PC como yo| tienes una versión antigua como Ubuntu 18.04| te darás cuenta que la versión de Pandoc esta muy desactualizada
+Hay quien no se acostumbra a utilizar Orgzly ni Emacs cuando toma notas con su movil| en cambio le gustaría el tener el backup de todas las notas de su cuenta Google Keep en un único archivo Org Mode. También hay quien le gustaría tenerlas en Markdown
+Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores
+Vamos a instalar docker en Ubuntu 18.04
+Vamos a instalar docker en Ubuntu 20.04
+Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones
+Zsh es una shell que junto a Oh My Zsh| un framework desarrollado por la comunidad| nos proporciona sugerencias cuando estamos en nuestra terminal
+Después de haber dedicado un tiempo a crear tus dockers| que mejor manera que compartirlos con la comunidad
+vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud| Owncloud| Box.com| Yandex... en una carpeta local. Para ello vamos a utilizar dafs2
+Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc
+Como podemos eliminar líneas en Blanco
+He hablado de como crear tus archivos Org Mode mediante Emacs| pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?
+He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso
+Un archivo *.m3u*| es un archivo de texto que contiene un listado de archivos multimedia que es muy utilizado por muchos reproductores como vlc...
+Hay veces que queremos redirigir el tráfico de una página a otra...
+Es muy probable que al crear un script para entender mejor lo que estas haciendo tomes un exceso de notas...
+DLNA es un servidor multimedia
+Por culpa del [[https://www.atareao.es/podcast/integrando-android-con-ubuntu/][Podcast de atareao.es]]| he estado probando Kde Connect y la verdad es que ha pasado a ser una aplicación imprescindible en mi día a día. Tal como explica en su Podcast| existe la posibilidad de utilizarla con Emacs y como podéis imaginar| no me he podido resistir a probarla. Os explico como utilizarla
+Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget.
+Voy a explicaros como instalar MkDocs| levantar un servidor y poder ver todas vuestras nota en una interfaz web.
+Hace más de medio año que los chicos de Slimbook crearon lo que llaman un Centro de divulgación y aprendizaje de GNU/Linux y tecnologías abiertas| Linux Center
+Crear un blog en GitLab no es una mala decisión| teniendo en cuenta que nos proporciona un hosting totalmente gratuito| a través de las GitLabPages y sin límite de espacio ni tráfico.
+fduples es una herramienta que está disponible en los repositorios y nos permite eliminar ficheros duplicados
+Tal como os prometí en el podcast| entro más al detalle con la instalación del Docker oficial de Nextcloud para Raspberry. NextcloudPi
+Vamos a utilizar GitHub para publicar un blog| una web estática| incluso podríamos ver archivos formato en markdown
+Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub| GitLab| etc... Esto tiene un a fácil solución:
+En este post vamos a ver como cifrar simetricamente| con una contraseña| archivos mediante gpg
+Hace algo mas de un mes| estoy utilizando Matrix Synapse| juntamente con el cliente Riot| a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento| no he federado mi servidor| de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.
+Voy a explicar en este post| como generar el Feed del podcast de forma automática.
+Como siempre os he comentado| utilizar la terminal al principio impresiona| pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados| para utilizar más Git y vía terminal
+Los que venimos de Ubuntu| tenemos problemas al pasar a una dervada de Arch| porque no conocemos bien las instrucciones para actualizar el Sistema Operativo| instalar y demás
+Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados| para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. 
+Hay muchas aplicaciones para escuchar podcast| pero ninguna tan ligera como esta. Desarrollada en python| [[https://github.com/xgi/castero][Castero]] nos permite suscribirnos a nuestro podcast favoritos y tanto descargarlos como escucharlos desde la terminal.
+No se si recordáis la aplicación Spritz| aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode| voy a explicarte como instalarlo en el propio emacs de un modo sencillo.
+Todos los repositorios de git| tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción| crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master
+Hace unas semanas| en el blog de Linuxito| vi este truquillo para navegar por el historial de comandos de nuestra terminal| utilizando las flechas de arriba y abajo. La verdad es que me he vuelto dependiente de este truco y quería compartirlo con vosotros. Igualmente| os recomiendo visitar el blog de Linuxito
+Una vez te familiarizas con git| comienzas a crear ramas y llega un momento en el que vas un poco perdido| sin saber bien donde estás.Es cierto que con un git status| te dice en que tema estas trabajando| pero mucho mejor que te lo informe directamente el prompt. Para hacer esto| sigue estos simples pasos
+Telegram nos proporciona una nube ilimitada... pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema| podemos comprimir los archivos en rar y trocearlos
+Para facilitar la introducción de comandos largos y complejos| que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos| utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando
+Tomar muchas notas| es muy sencillo| lo complicado es después encontrarlas. Cuando decides el crear un único archivo orgmode para tomar tus notas y este crece de forma desmesurada| empiezas a tener problemas cuando quieres localizar notas que sabes que has tomado| pero mediante una búsqueda sencilla por palabras| aparecen cientos de resultados
+En este artículo| vamos a ver como cambiar el usuario y contraseña así como la ruta del usuario| en nuestra raspberry
+En los repositorios de Raspbian| esta disponible el paquete Docker. Aún así| el método de instalación que no te dará errores y funcionará sin ningún problema| es este
+Dokuwiki puede servirnos tanto para tomar nuestras notas| como previsualizar y editar contenido generado por nuestros scripts. En este post os explico como instalar Dokuwiki en tan solo 4 pasos. En este post| doy por hecho que tienes instalado apache2.
+Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo| como sabéis| este archivo en realidad no ha sido borrado| sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal| lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre| nos va a llevar este archivo a la papelera. Así mismo| mediante una serie de comandos| nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.
+Cuando hacemos scritps en bash| habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple| en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles| simples| comillas dentro de una variable| etc... para poder previsualizar sin errores| necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema| podemos utilizar printf.
+Como sabéis| podemos utilizar Emacs tanto con interfaz gráfica como vía terminal. La verdad es que utilizo las dos versiones| pero cuando utilizo la versión vía terminal| quiero que sea ligera y muy rápida| pero sin perder cierta personalización como el acceso a los archivos .org| resaltar la sintaxis| corrector ortográfico... Para la interfaz gráfica| dejo la totalidad de paquetes instalados y eso hace que el arranque sea un poquito mas lento| pero con la totalidad de servicios disponibles como elfeed| temas| etc... En este post voy a explicaros como utilizo mis dos archivos de configuración init.el de Emacs| para las dos versiones
+En el Podcast| os he hablado muchas veces de las virtudes de docker: sencillez| seguridad| etc... En el artículo de hoy| voy a instalar un servidor ejabberd para raspberry| que no he encontrado en el Docker Hub y porque no decirlo| para los mas paranoicos| porque no instalarlo paso a paso
+Ya os expliqué como crear tu servidor dlna en raspberry o servidor Linux y como crear listas en m3u para el servidor| ahora tocaría el poder utilizar un cliente dlna en tu escritorio. Tenemos muchas aplicaciones para movil| smart TV|... pero| ¿Para escritorio?| no tendría sentido el montar un servidor multimedia solo para movil| tabletas y Tv. La verdad| es que escasean para escritorio| pero gracias a aplicaciones como Rhythmbox y sus plugins| podemos utilizar dlna de un modo muy sencillo. Aquí os explico como hacerlo
+El objetivo del post de hoy| va a ser crear un contenedor con una sola línea de comandos| entrar dentro de este| instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo| es que vamos a utilizar una distro diferente para nuestro contenedor| creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian
+Simplenote| es una aplicación de notas muy conocida de Software Libre| totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web| aplicaciones de escritorio (incluso con paquete snap)| Android| iOS... Y lo mejor de todo| podemos utilizarla en Emacs con el paquete simplenote2| disponible en los repositorios de Melpa.
+Como ya sabéis| Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes| almacenar archivos| etc... si no que gracias a la sencilla api de Telegram| puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry| servidor| pc
+Muchos de vosotros me comentáis si os puedo recomendar un sitio donde iniciaros con Emacs y OrgMode
+Si quieres montar un servidor web en un pispás y no complicarte la vida| el Docker oficial de nginx es una buenísima solución
+En el Post anterior vimos como enviar archivos de texto plano a través del Bot| estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes| archivos|... La respuesta es Sí!
+Es muy probable que desees tener parte de tus datos cifrados para poder almacenarlo en una nube pública o simplemente quieras cifrar parte del contenido almacenado en tu Raspberry
+Después de cambiar la página de uGeek de Jekyll a Org-Bash-Blog| muchos de los artículos antiguos han cambiado ruta de la dirección web en el servidor y si llegas a ellas| quedas en una página de error de GitHub que no tiene relación con la web. Decidí crear una página personalizada de error 404
+En artículos anteriores| así como en el Podcast| os he explicado como enviar notificaciones de texto| imágenes y archivos| a través de un Bot en Telegram que podemos crear
+Hoy toca el turno de Tomb. Un script para cifrar archivos muy pero que muy interesante
+Cuando comienzas a crear tus propios scripts| a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos
+Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad 
+SSHFS nos va a permitir montar una carpeta de un servidor| PC o Raspberry| en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil 
+Vamos a montar en una carpeta de nuestro PC| todos los servidores dlna que haya en nuestra red local y acceder a todo el contenido a través de nuestro explorador de archivos o terminal igual que lo haríamos con cualquier otra carpeta de nuestro PC 
+Aunque no lo parezca de salida y de muchísima pereza el aprenderse los atajos de teclado de la terminal| es algo verdaderamente muy útil
+Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry| Servidor o PC| remotamente desde Telegram
+Los archivos *.gitkeep*| son archivos vacíos que es probable hayas visto en algún proyecto de git y se crean para que en caso que este proyecto tenga carpetas vacías| sean gestionadas por git.
+Si tu blog comienza a ser muy grande y tienes centenares de tareas en tu Org Mode en estado *TODO*| es muy probable que quieras desmarcar este estado
+muestro un pequeño ejemplo de como montar un Docker con Debian Testing| una versión de Debian donde encontraremos paquetes más actualizados que la versión actual de Raspbian| que es una versión muchisímo más estable
+Estaba escribiendo en un repositorio de GitHub en el archivo README.org| el resumen de un vídeo de un curso en Python buenísimo que he visto en YouTube. La intención era el poner la imagen del vídeo y debajo escribir un poco el resumen de este| para cuando quisiera acceder a un determinado tema| asociarlo al vídeo y clicar sobre esta imagen para que me lleve a YouTube
+Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas| series| música| Libros... Organizados y centralizados en un único lugar
+Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast| desde cualquier lugar| dispositivo| sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios
+En el Post de hoy| te voy a explicar cómo descargar no solo vídeos de YouTube| sino que también de muchos de los sitios web actuales con el comando youtube-dl
+Rclone es una aplicación de Software Libre| que nos permite conectar nuestra Raspberry| Servidor con Linux o PC|  a las más conocidas nubes públicas (Dropbox| Google Drive| OneDrive| Mega| Hubic| PCloud| Box| Nextcloud| Owncloud| Amazon
+Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian| ubuntu| raspbian
+Quería eliminar masivamente el título de unos archivos .mp3| donde había añadido el nombre del grupo. UNIX es ideal para estas tareas
+Debian es un poco diferente a Ubuntu. Para habilitar el poder acceder como usuario root| tienes que configurar un archivo.
+Vamos a instalar docker en debian Buster
+Hay sistemas operativos que instalo una interfaz gráfica en el servidor y accedo remotamente vía VNC
+Hace un tiempo os hablé de .gitignore| un archivo oculto para que no suban determinados archivos a nuestro repositorio de git
+A partir de la versión Org 9.2| ya no es posible utilizar el atajo que utilizábamos en versiones anteriores
+A partir de la versión Org 9.2| ya no es posible utilizar el atajo que utilizábamos en versiones anteriores
+Si tu sistema está configurado un idioma y deseas cambiarlo| sigue leyendo y verás que no es complicado
+CryFS es un sistema de cifrado parecido a EncFS| pero mas robusto. Utiliza dos carpetas| una donde están los archivos cifrados y otra que tenemos que crear| para montar los archivos si cifrar
+:DESCRIPTION:
+Tras adquirir mi nueva Raspberry 4 y la aparición de la nueva debian Buster| estoy utilizando Emacs remotamente
+Actualizar el firmware de tu Raspberry a la última| es muy sencillo
+Navegando por las web encontré este interesante Post donde se explica la diferencia entre los archivos de configuración
+Solo llevamos unos 9 meses desde el nacimiento de Jellyfin y los clientes ya están llegando al nivel de madurez deseado
+Después de mucho probar distintas aplicaciones de todo.txt para Escritorio| mi favorita es QTodoTxt
+Si trasteas mucho con docker| siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores
+Tras mucho darle vueltas| he pensado que la previsualización de los post
+Sabéis que unos de los lugares donde habitualmente tomo notas en la nube de tutoriales interesantes que encuentro en la red
+Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC
+Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC
+KodExplorer es un servicio web| que nos permite navegar por carpetas| descargar o subir archivos| editar archivos de texto| visualizar videos o audios en streaming
+Hay dispositivos| como la primera versión del Fire TV Stick de Amazon|  que no reproducen videos en H.265
+Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado
+Gracias a al nueva actualización de debian buster| podemos hacer cosas maravillosas| como instalar telegram-desktop en nuestra Raspberry o Servidor remoto y ejecutarlas en tu escritorio
+:DESCRIPTION:
+Exportando a CSV desde Microsoft Excel Online| Hojas de cálculo de Google| etc
+Tengo tantos contenedores corriendo| que muchas veces no recuerdo los contenedores que están corriendo ni los puertos que asigne en su día a cada contenedor.
+El comando ifconfig ha quedado en desuso y ya no está disponible en los repositorios de las versiones de Debian| Raspbian|...
+Con ffmpeg| no solo podemos transcodificar vídeo| sino también extraer el audio.
+Os hable de Wallabag en el Podcast| cuando estaba en la primera versión. Al pasar a la segunda versión| todo cambió. La interfaz mejoró muchísimo| más moderna| más opciones|... pero
+Vamos a acceder a un contenedor como usuario root
+Algo que he estado buscando desde que empecé a instalar mis propios servicios| es un servidor de música tipo [[https://www.spotify.com][Spotify]].
+Si tienes el servidor de música *Supysonic*| Subsonic| Airsonic|... Cualquiera de los servidores que utilizan la api de *Subsonic*| quizás quieras utilizar el navegador web como cliente.
+La mayor parte de la gente| tiene una conexión a internet con ip dinámica
+Desde la terminal| podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información| así como poder exportar o modificar el resultado para el
+Cron es muy sencillo y a la vez complejo. Cuando quieres utilizar una programación en el tiempo muy concreta| entre días| meses| días de la semana| cada ciertos minutos... Puede
+Después de las publicaciones sobre la alta temperatura de la Raspberry| te puede entrar la paranoia de que se queme| salga ardiendo| etc ...
+Montar un servidor webdav puede ser muy útil| ya que nos va a permitir sincronizar o compartir archivos. Nextcloud| Box.com| Yandex|... utilizan esta tecnología para conectarnos a sus nubes| pero
+Ahora tienes un motivo mas para utilizar Orgzly y tus notas en OrgMode. Y es que Orgzly| hoy ha añadido en su versión 1.8-Beta.1  de Android| la posibilidad de
+Si queremos automatizar un script| utilizamos cron. Pero hay que reconocer que hasta que no le pillas el tranquillo| los parametros que tenemos que introducir para esta programación son muy
+Tal como expliqué en algún que otro Podcast-Artículo| GitHub nos ofrece muchos proyectos súper interesantes y útiles. Es el caso de Bsync| un una herramienta de sincronización de archivos bidireccional|
+Para descargar archivos desde un servidor| puedes utilizar *wget* o *curl*.
+Estoy sincronizando constantemente| haciendo pruebas| mis archivos orgmode. Cuando tienes un archivo abierto| si se produce la sincronización en segundo plano| el archivo que estás visualizando no cambia| sigues viendo
+Después de un largo periodo| he decidido volver a Mastodon. Una red social muy parecida a Twitter de Software Libre y descentralizada.
+Para grabar una imagen de Raspbian| Ubuntu| Debian|... o cualquier otro Sistema Operativo en GNU/Linux| podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd.
+Hemos visto como publicar en Mastodon mediante un Bot en Bash| Ahora vamos a ver como hacerlo con Python.
+Una vez grabado Raspbian en una SD o USB| casi seguro que querrás conectarte vía SSH. Para habilitar el servidor SSH| siempre te recomiendan el conectar tu Raspberry Pi a
+Mi archivo orgmode| actualmente supera de largo las 40.000 líneas. Hay momentos que estoy accediendo a una parte del documento| por ejemplo la línea /1345|/ donde estoy leyendo parte de
+Rclone está disponible en los repositorios oficiales| pero como siempre os he comentado| es interesante tener instalada la última versión.
+Después de montar un bot con Telegram y Mastodon| ha llegado el momento de crear tu propio servicio de notificaciones. No vamos a depender de servicios de terceros para saber
+Cuando tienes muchas Raspberry| Servidores| Pc's|... y te conectas a ellos vía SSH| llega un momento que no recuerdas las IP's| puertos| etc... También es mucho más rápido en el
+Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial| de la comunidad LinuxServer|... Pero
+Me he puesto manos a la obra a como sacar el máximo de partido a nano| un editor de texto a veces desprestigiado frente a otros| pero uno de los
+En el Artículo anterior compilamos Nano y ahora toca el turno de Emacs. Los que utilizamos Debian| Ubuntu| Raspbian... tenemos el problema que en los repositorios oficiales| no encontramos nunca
+Una de las cosas que más rabia me da cuando estoy editando mis archivos de configuración| orgmode|... en Emacs| es que cuando dejo a medias la edición un archivo y
+Comprobar la velocidad de tu conexión a internet desde tu terminal es muy sencillo. Como puedes ver| para hacerlo| no necesitas necesariamente utilizar el navegador web.
+Si tienes un servidor multimedia como Jellyfin o Plex| en muchas ocasiones| es probable que la información de tus películas o series| no aparezcan correctamente
+Ya sabéis que últimamente ando utilizando debian como distro principal tanto en mi PC como servidor. Aunque snap funciona perfectamente en Debian| es posible que no quede plenamente del todo
+Por defecto Fedora no tiene habilitado SSH. Para hacerlo| primero tenemos que instalar OpenSSH.
+Utilizo VNC para conectarme a mis servidores o PC's remotos con interfaz gráfica. Hay muchos clientes de VNC| pero *remmina* es uno de mis favoritos| porque puedo acceder a mis
+Es probable que tengas una tarjeta gráfica especifica que te gustaría sacarle todo el potencial| o simplemente descomprimir un archivo *.rar* que te han dejado y no sabes como descomprimirlo.
+Hace un tiempo utilizaba como gestor de contraseñas Keepass| pero desde que descubrí Bitwarden| no dudé en dar el cambio.
+Este medio día| he visto nuevamente un clásico| Juegos de Guerra (War Games) y la voz del Súper ordenador me ha recordado a mi Raspberry con espeak.
+Quizás te estas planteando el montarte un servidor con debian| pero no sabes muy bien por donde empezar. Si has instalado alguna vez debian| la imagen contiene varias versiones de
+Si eres un amante del Bullet Journal y OrgMode| estas de suerte. Hace algo más de un año| hice un script en bash para crear la plantilla de lo que
+Como os comenté en el podcast y artículo sobre Supysonic| una de las limitaciones que tenía| es la limitación de su *api* que hacia que no fuera 100% compatible con
+Buscando una aplicación practica para controlar mis contenedores desde el móvil| me topé con  [[https://play.google.com/store/apps/details?id=com.nevishs.drawerdockerapp:DESCRIPTION:hl=es_419][Docker Management]]| una aplicación de acceso anticipado que no se conecta a ningún servidor extraño|
+Bat es un cat enriquecido. Lo veo un poco como una mezcla de cat + less.
+Hoy ojeando *Reddit*| he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural|
+Todoist es una aplicación muy conocida para crear y gestionar tus tareas. Con un paquete de Melpa| podremos acceder mediante la api de todoist a todas nuestras listas.
+w3m es un navegador para terminal muy liviano| con el que no solo podremos ver cualquier web en modo texto| sino que además podremos ver también las imágenes.
+Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo *.html* a texto plano.
+Vamos a utilizar un script para descargar el último archivo de lanzamiento (latest releases) de un repositorio git.
+En anteriores artículos| hemos visto como compilar nano| ahora veremos un poco como utilizarlo y conocer sus atajos.
+Podemos utilizar Emacs en Android gracias a Termux a través de la Terminal. La novedad es que desde hace mas o menos un mes| hay un nuevo paquete x11 para
+Voy a instalar la ultimísima versión de Firefox y no depender de la versión disponible en los repositorios de mi distro. Para ello| descargaremos la versión disponible en los repositorios
+Vamos a utilizar un paquete que nos va a permitir copiar el contenido de una página web o parte de él| con enlaces| etc... a orgmode
+Aprovechando que Linux permite la multitarea| vamos a enviar un script corriendo a segundo plano.
+Hasta que ha llegado la nueva versión de firmware *000137ab*| hemos visto como a nuestra Raspberry 4 se disparaba la temperatura. Desde prácticamente el día después de su lanzamiento| ya
+También puedes encontrar muchas aplicaciones para todos los sistemas operativos| navegadores| etc... Te adjunto [[http://todotxt.org/][la web de todo.txt]] donde encontrarás más información.
+Utilizar org-mode con Emacs| no quiere decir que sea incompatible con el todo.txt.
+Posiblemente una de mis aplicaciones favoritas de todo.txt es todotxt-machine. Una aplicación desarrollada en Python que su funcionamiento es más similar a SimpleTask con su potente filtrado de Contextos| Proyectos.
+Edito con Emacs en diferentes dispositivos. Eso implica entre otras cosas| sincronizar estos archivos tanto con Rclone como Syncthing.
+Uno de los defectos que he encontrado a Wireguard|  es que aunque no es complicada su configuración de servidor y clientes| la verdad es que no es nada amigable
+Si utilizas el orgmode para crear tus tareas| o como es mi caso|  para crear los artículos que voy a publicar en el blog|  una vez finalizados y
+En los repositorios oficiales de Ubuntu| Debian|... Ya encontramos *Rclone-Browser*| de manera que con un simple =sudo apt install rclone-browser=| lo tendremos instalados. Pero la versión que hay en los
+sncli es una aplicación desarrollada en Python que da acceso a tu cuenta Simplenote a través de la línea de comando.
+Siguiendo con mi objetivo de utilizar todas las aplicaciones de mi pc| únicamente con teclado| sin necesidad de utilizar el ratón| hoy toca el turno de Telegram Desktop.
+Para que Jellyfin sea del todo perfecto| sería necesario el poder reproducir el contenido multimedia desde mi Escritorio de un modo instantáneo y súper ligero.
+Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar.
+:DESCRIPTION:
+El motivo de crear esta aplicación es bash que he desarrollado| es tener en una carpeta archivos de texto plano con la extensión .docker y en su contenido las líneas
+EteSync es un servicio/aplicaciones similar a CalDAV| pero que permite una sincronización segura| de extremo a extremo para tus contactos| calendarios y tareas.
+Shaarly es un servicio de marcadores personal| minimalista| súper rápido| sin bases de datos.
+Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV.
+Brave es el navegador de moda| un navegador web de código abierto basado en Chromium| creado por por el cofundador del Proyecto Mozilla y creador de JavaScript| Brendan Eich.
+Bashtop es un proyecto con licencia Apache 2.0 desarrollado por [[https://github.com/aristocratos][aristocratos]]| que nos permite acceder a toda la información de nuestra cpu| memoria| almacenamiento| red| procesos... de nuestro pc| servidor|...
+Telegram ha añadido la clasificación por carpetas en Telegram Desktop| para poder clasificar todos aquellos canales y grupos que tenemos por categorías| pero de momento| no tenemos disponible la multicuenta|
+Me gusta tener todos mis servicios instalados en mi máquina| pero hay cosas que de momento no pueden ser. Este es el ejemplo de *ZeroTier*| un servicio que he escuchado
+Si tienes un repositorio en GitHub y quieres crear una web relacionada con este proyecto para mostrar toda la información| gracias a las GitHub Pages lo tienes super fácil.
+Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04| sino que también con la versión ARM y para Raspberry.
+El desarrollador [[https://github.com/sentriz][Senan Kelly]]| ha creado Gonic| un servidor ultra rápido y ligero (En mi Raspberry Pi consume solo 17-19 Mb de ram) que mejora todavía más la experiencia en
+Tener un servidor de ebooks en nuestro servidor| Raspberry|... es súper fácil. Además| teniendo en cuenta que calibre consume muchos recursos| esta versión la verdad es que está bastante bien
+Este método no solo sirve para la Raspberry| pero es ideal para ella| ya que en el caso de mi Raspberry 3| solo tiene 1Gb de RAM y para la
+Si te gusta el todo.txt y utilizas la terminal| topydo es tu aplicación. Topydo| como su nombre indica| es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt| que mejora la experiencia respecto al script original todotxt-cli de Gina Trapani
+Screen nos permite tener múltiples terminales abiertas en una sesión o llevar a segundo plano un proceso inacabado| que cerrando la terminal| se detendría.
+Para hacer un backup de los enlaces que tenemos en shaarli| es muy sencillo.
+Hace algo más de tres años| [[Bon dia Nuria][os hablé en el podcast de mi experiencia con Freshrss]]. Entonces| no había una buena aplicación para Android. Hoy eso ha cambiado.
+:DESCRIPTION:
+No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para
+Docker-compose está en los repositorios oficiales de muchas distros| pero casi con toda seguridad| la versión que encontraremos en esta no será última y esto| dependiendo de la versión de
+Necesitaba actualizar Node.js a partir de la versión 10 para poder utilizar joplin-cli.
+Estamos acostumbrados a conectarnos nubes públicas y privadas con rclone. Hoy vamos a conectarnos a un VPS o servidor remoto via SSH con SFTP.
+Joplin junto al orgmode| se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos| gracias a mi servidor webdav.
+Es posible que te interese el habilitar el modo org cuando abras un archivos .txt o markdown.
+Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav| así como mi archivo todo.txt.
+Neofetch es una aplicación para terminal desarrollada en bash| que muestra información del sistema| pc| servidor| etc...
+Ha llegado el momento de hacer limpieza. Vamos a listar todos los paquetes que hay instalados en nuestra distro y desinstalar aquellos que ya no utilizamos.
+Lo que apareció como un enlace más| casi sin importancia en el grupo de uGeek en Telegram| enlace publicado por José Jiménez| se va a convertir en uno de mis
+Por defecto| el docker de FileRun viene en inglés| pero si deseas cambiarlo a castellano o cualquier otro idioma| puedes hacerlo gracias a las traducciones disponibles en [[https://github.com/filerun/translations][uno de los
+Por defecto| FileRun no lleva la hora local del lugar donde estás situado. Vamos a crear un archivo *config.php*| para que coincida la hora de sincronización o modificación de archivos
+En el Artículo anterior compilamos Nano y ahora toca el turno de Emacs. Los que utilizamos Debian| Ubuntu| Raspbian... tenemos el problema que en los repositorios oficiales| no encontramos nunca
+Hoy el script que tengo ejecutando en mi Raspberry| para comprobar la temperatura| me ha enviado un mensaje de alta temperatura
+No acostumbro a utilizar la aplicación de YouTube| en cambio| FreshRSS la utilizo a diario. Para seguir los Canales de YouTube que más me interesan| me gustaría suscribirme al RSS|
+Si utilizas Debian o versiones antiguas de Ubuntu| en los repositorios no está disponible la última versión i3wm.
+Cada vez utilizo más aplicaciones en Go y aunque en las últimas versiones de Debian| Ubuntu| Raspbian|... viene en los repositorios oficiales| no disponemos de la última versión.
+JellyCon es un complemento ligero de Kodi que te permite navegar y reproducir archivos multimedia desde su servidor Jellyfin directamente dentro de la interfaz de Kodi.
+Un nuevo servicio en Go. Gossa es un servidor web rápido y simple para ver archivos| sin dependencia y con menos de 200 líneas de código| de modo que es
+Después de escuchar el Podcast de Lorenzo| atareao.es| he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía.
+Kanboard es un servicio que nos permite gestionar nuestras tareas siguiendo el método Kanban.
+Hay momentos| al menos a mi me pasa| de todas las notas que voy registrando en mi orgmode| quiero exporta una ya sea en formato txt| pdf| markdown|...
+Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo
+Croc una herramienta que permite transferir archivos|directorios y texto| de forma sencilla y segura| entre dos PC's| servidores| etc....
+Un enlace simbólico| sería algo similar a crear un acceso directo de un directorio o archivo| a otro dentro en un mismo dispositivo.
+Vamos a ver los comandos para montar un usb| SD| disco duro o SSD| en un directorio desde la terminal.
+Normalmente para ver el tamaño de mis unidades de almacenamiento| utilizo =du -h.= Si quiero conocer el tamaño de un directorio| me situo dentro del mismo y hago un =du
+Grep y find vienen instaladas por defecto en todas las distros y tienen un potencial increíble.
+Ya hemos visto como instalar  Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del
+Como podéis imaginar| yo creo y edito mis scripts con Emacs. Hay momentos en los que quiero añadir "#" en un bloque de código para que no se ejecute| o
+A veces cuando copio un documento en la terminal| lo hace dejando líneas en blanco entre líneas. Para eliminar esto con Emacs es muy sencillo:
+Este artículo es una recopilación de los dos anteriores| dónde íntegro todo lo aprendido dentro de un script.
+Ahora se añade nuevos filtros a la familia de DNS CloudFlare.
+Dado que la comunidad está creando muchos temas para jellyfin| cambiando el aspecto de nuestro servidor multimedia| un desarrollador ha decidido crear un repositorio dentro de las extensiones de jellyfin|
+He creado un docker para poder utilizar Telegram desde tu terminal| ya estes en tu PC o Raspberry Pi.
+El mejor método para conectarse a un servidor por SSH| es enviando las llaves al servidor y no tener que estar introduciendo la contraseña.
+Quizás ha llegado el momento de tomar notas para seres humanos| voy a
+Trilium Web Clipper es una extensión del navegador web que permite al
+Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi.  Ha
+En Debian| Ubuntu| Raspbian|... por defecto no hay una distro con el
+La intención es grabar los chats de voz de Telegram en mi PC| pero... ¿Cómo podría hacerlo?
+Si compras dispositivos de diferentes marcas| como pueden ser Samsung| Xiaomi| Huawei| etcétera|... es posible que vayas un poco perdido a la hora de utilizar tu dispositivo móvil| ya que
+Existe la posibilidad de crear imágenes para contenedores Docker| desde un repositorio de GitHub  a partir de un Dockerfile.
+Siempre he comentado que una nube como Nextcloud para solo acceder o sincronizar archivos es muy pesada. Existen otros proyectos| mucho más ligeros con lenguajes de programación mucho más modernos|
+Es posible que tengas un directorio en una ubicación que no te gusta| o que te sea más práctico tenerlo a mano en otro lugar y no puedas moverlo.
+ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu| ram| datos de subida y bajada...
+Cuando utilizas Ubuntu| Debían y Raspberry OS| te das cuenta que entrar en la terminal como usuario root| es totalmente diferente dependiendo de la distribución.
+Si te gusta el todo.txt| te gustará este docker
+Podgrab es un administrador de podcasts desarrollado en Go| que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito.
+Cómo expliqué en el Podcast| no existe una  imagen oficial del contenedor Synapse|  pero *black0* ha creado una para todo tipo de arquitecturas| entre ellas ARM. 
+Buscando en internet| he visto este artículo de Linux Center super interesante| sobre si una variable tiene o no un valor.
+Después de probar Nextcloud| FileRun|... y otras tantas nubes| me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10| ha decidido reescribir el
+He encontrado varios métodos de instalación en Blogs| que con versiones anteriores funcionaba| pero con la actual versión 2 y Ubuntu 20.04| no funciona.
+Me he encontrado con un dilema cuando he montado ownCloud y es que antes tenía directorios en mi Raspberry con los que editaba mis orgmode| todo.txt| que ahora están dentro
+Una de las aplicaciones que me encanta para gestionar el correo electrónico es Thunderbird.
+Cómo cuarta opción| he estado probando Caddy tras la recomendación de Germán .
+Después de estar dando vueltas por diferentes nubes| al final vuelvo a Nextcloud y te explico porque.
+Después de la última instalación Nextcloud que he hecho mediante Docker| ha llegado la primera actualización de la imagen.
+Un sistema como Nextcloud a veces requiere que las tareas se realicen de forma regular sin la necesidad de interacción del usuario ni obstaculizar el rendimiento de Nextcloud. Para ese
+He instalado tantas cosas para probar| que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas| para borrar todo aquello que sobra. *Importante borrar
+Si utilizas una Raspberry| por defecto el hostname es *pi*. Si tienes muchos dispositivos que administrar y por ejemplo utilizan *Ubuntu*| puede que el hostname sea *ubuntu*.
+Cuando creo un script en bash u otro lenguaje de programación| me gusta que el editor que utilizo resalte la sintaxis| ya que de este modo puedo encontrar errores. Ahora
+Chuleta de atajos para Vim
+Mediante el archivo de configuración *config.php*| podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera.
+Stash se describe así mismo como un servicio que te permite organizar y ver tu propia colección de archivos de imágenes y videos para adultos. Piense en ello como un sitio privado de PornHub para su colección de pornografía personal
+He estado visitando muchas páginas para optimizar *Nextcloud* y la verdad es que con estos pequeños truquillos| vas a aumentar muchísimo la velocidad y ganar mucha fluidez.
+Para cambiar la contraseña de un usuario| podemos hacerlo desde la terminal. Vamos a ver tres ejemplos de como cambiar la contraseña: Cambiar la contraseña de tu usuario| cambiar la
+Hoy os traigo una chuleta de atajos de teclado del reproductor mpv
+nncli es un fork de la aplicación sncli| desarrollada en Python que da acceso a tu servidor de notas de Nextcloud a través de la línea de comando.
+Estoy utilizando *caddy* para generar los certificados de mis servicios. El certificado *TLS* para mi servidor de ejabberd ha caducado| así que me toca renovarlo. En su día utilicé *traefik*|
+La aplicación *ytfzf* pasa a la primera versión estable| v1.0.0 y ahora permite ver la captura de la imagen de los vídeos| dentro de la terminal.
+Voy a cambiar durante un tiempo de lanzador de aplicaciones en mis dispositivos Android. En este caso voy a utilizar *PieLauncher*| un lanzador que utiliza un dinámico en menú circular
+¿Te imaginas poder twittear desde la terminal?. Voy a explicaros como instalar y configurar el cliente bti| un cliente súper sencillo que cumple con este fin.
+En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así| era porque no teníamos imagen oficial multiarquitectura.
+En su día expliqué en el blog como compilar Rclone Browser. Ahora es mucho más sencillo ya que disponemos de archivos AppImage para instalarlo y lo mejor de todo| para
+scp| comando que signigica secure copy| permiten copiar un archivo o directorio desde una máquina origen a una máquina destino y viceversa| utilizando el servidor SSH.
+Vamos a compartir una carpeta por *Samba* de un modo muy sencillo| para que sea accesible desde cualquier máquina dentro de una misma red local.
+No todo el software está disponible para ARM| como por ejemplo *unrar*. Vamos a ver como poder descomprimir archivos desde nuestra Raspberry.
+/EinkBrowser/ es un navegador simple| liviano| rápido| especialmente diseñado para dispositivos de tienta electrónica. Es un navegador basado en webview que no necesita permisos innecesarios.
+Cuando ejecutas un paquete AppImage| puedes caer en la frustración de que aunque funcione perfectamente| no acaba de integrarse en tu escritorio ya sea por los menús| así como en
+Raneto es una plataforma de base de conocimientos de código abierto que utiliza archivos Markdown estáticos para potenciar su base de conocimientos.
+Tener poca memoria *swap*| puede hacer que se detengan determinados servicios o comience a ir lento nuestro servidor o *PC*.
+Hay publicado un nuevo paquete de wallabag para Emacs en GitHub. De momento no está disponible en Melpa u otros repositorios| así que si quieres hacer uso| tienes que clonar
+Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home| ya que me permite no solo filtrar toda la publicidad en todos los dispositivos| sino que
+Os he hablado muchas veces que no utilizar el ratón en favor del teclado| es una buena práctica ya que nuestra productividad se dispara y permite que en este caso
+No es necesario instalar un servidor tipo GitLab| Gogs| GitTea|... para crear tus repositorios y tener tu control de versiones. En mi raspberry| me he creado mi propio servidor de
+Sleek es una aplicación de tareas basada en todo.txt| gratuita y de código abierto. Disponible para Linux| Windows y MacOS.
+Tenemos nuevas aplicaciones de Telegram. Si hace una semana apareció una nueva Telegram Oficial para Android| alternativa a la que encontramos en Google Play| ahora aparecen dos nuevas versiones de
+golinks es una aplicación web que le permite crear marcadores| comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar
+Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP's y MAC| para después ejecutar scripts en función del resultado.
+Estoy encantado con Styx| un Navegador Open Source que aporta muchas características para mi necesarias que no tienen el resto y que verdaderamente muy completo.
+Si te gusta tener Joplin en tu terminal y no te gusta complicarte la vida instalando *nodejs*| etc... Ahora puedes hacerlo desde snap de un modo sencillo. Este paquete trae
+Os he explicado varias formas de montar un servidor WebDAV.
+Homer es el lugar desde donde parten todos los servicios que tengo instalados en mi Raspberry y VPS.
+Wireguard es mi VPN favorita. Rápida| ligera|... pero es cierto que no es fácil de instalar y administrarla. [[https://emilenijssen.nl][Emile Nijssen]] nos trae un servicio fantástico que soluciona este problema.
+Aurora Droid es una tienda de aplicaciones llena de muchos repositorios de Software Libre. Hay 3 repositorios que son los que siempre utilizo:
+Sensors y psensor| son aplicaciones que nos permiten conocer la temperatura de nuestra CPU| velocidad de los Ventiladores|...
+Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo| ya que es multiplataforma y arquitectura (Windows| Linux| Mac| Android| Raspberry|... amd64| ARM|...)| en
+Brave presenta en beta abierta su nuevo buscador que promete no rastrear ni recopilar información de sus usuarios.
+Si quieres montar un servidor súper liviano| aprovechando tus clientes DLNA| pero algo más completo que miniDLNA| puedes instalar Gerbera.
+Hay un servidor con el que podemos tener autohospedado un sistema para geolocalizar a todos los usuario que quieran compartir su ubicación.
+** amixersin
+Comandos docker para guardar imagen
+Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu
+Gracias a esta aplicación desarrollada en Python| puedo acceder a mi instancia de *Shaarli*.
+Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS"| he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu
+Soy amante de las aplicaciones que te muestran todo el espacio que tienes en tu disco duro. Ya he escrito en varios artículos diferentes aplicaciones| hoy toca el turno a
+Bash viene en cualquier distro linux. De todas maneras| podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script =script.sh=.
+Edito muchos archivos CSV (valores separados por comas) y aunque puedo hacerlo con un programa de hoja de cálculo| me resulta más rápido hacerlo con Emacs.
+En las últimas versiones de Jellyfin| se incorporó la posibilidad de añadir plugins mediante repositorios.
+En mi búsqueda por la aplicación de Notas perfecta| Zettel Notes ha dado un golpe muy fuerte sobre la mesa. Con una perfecta sincronización *WebDAV* y *Dropbox*| personalización de temas|
+Tengo buenos recuerdos de [[https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge][Gadgetbridge]]| una aplicación que con mi Xiaomi Mi Smart Band 3| me permitió utilizar la pulsera de un modo libre e independiente| sin tener que verme
+Me encantan los launchers de software libre con el aspecto Android puro.
+Recuerdo hace muchísimos años| cuando utilizaba Windows que la primera aplicación que instalaba cada vez que me tocaba reiniciar el Sistema Operativo era Winamp. Hoy en 2021| puedo tener Winamp
+Como he comentado en el podcast| estoy utilizando un servidor WebDAV como servidor de música| ya que me permite acceder más rápido a mis canciones y no consume recursos.
+Uno de los problemas de utilizar Wireguard es tener que utilizar derechos de administrador. Con *nmcli* podremos hacerlo sin necesitarlos| ahora cualquier usuario podrá utilizar Wireguard.
+He creado una licencia para uno de mis proyectos en GitHub. Voy a redactar paso a paso como lo he hecho:
+No solo podemos montar nubes WebDAV con rclone. Davfs2 de un modo muy sencillo nos permite montar esta nube en local.
+Uno de los problemas que me encuentro al utilizar el todo.txt| es no poder compartir tareas por contextos| proyectos o palabras. Con este sencillo script he solucionado el problema y
+Pensando nuevamente en unificar todos los servicios en uno vía WebDAV| vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado
+¿Quien dijo que no podemos utilizar RealVNC en Linux? Con este AppImage *No oficial*| si eres de los que te gusta el genuino RealVNC| vas a poder tenerlo instalado en
+Con la nueva versión 94 de Firefox| ya no necesitamos de plugins para gestionar la memoria que ocupa tener pestañas abiertas. 
+*ntfy * es un servicio de notificaciones HTTP [[https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern][pub-sub]] . Te permite enviar notificaciones [[https://play.google.com/store/apps/details?id=io.heckel.ntfy][a tu teléfono]] o escritorio a través de scripts desde cualquier PC o servidor| completamente *sin registro
+De todas las aplicaciones de mensajería| ya sabéis que mi favorita es XMPP.
+Al iniciar un script| tenemos que poner el [[https://bash.cyberciti.biz/guide/Shebang][shebang]]| representado por =#!=. Al ejecutar el script| nuestro sistema operativo leerá [[https://bash.cyberciti.biz/guide/Shebang][shebang]] y ejecutará el lenguaje de programación que se especifica
+No es necesario utilizar [[https://github.com/linuxserver/Heimdall][Heimdall]] o [[https://github.com/bastienwirtz/homer][Homer]] para crear una página web de inicio. En [[https://www.reddit.com/r/startpages/][este hilo de Reddit llamado startpages]] encontrarás montoner de webs html donde montando un Servidor
+Typora sale de la beta y llega a la primera versión estable. El mejor editor *Markdown* multiplataforma que he probado hasta la fecha.
+Sonixd es un cliente de escritorio multiplataforma creado para servidores de música compatibles con Subsonic-API (y Jellyfin en 0.8.0+).
+Continuo utilizando I3wm cómo escritorio| o mejor dicho que estos de ventanas| y Nautilus aparece con el tema claro.
+Telegram-cli es una versión de Telegram que quizás te sea compleja de utilizar en terminal. *Telegramtui* es otro cliente para terminal que es más parecido a otros clientes de mensajería
+Uno de los proyectos que me quedaban pendientes| era crear un bot en el que cuando envíe un archivo a este bot| se descargue en mi Raspberry.
+La primera vez que utilizas el comando =crontab -e=| te pedirá que elijas un editor por defecto y las siguientes veces que utilices este comando| siempre abrirá el editor que
+Zettel Notes no para de actualizarse e implementar nuevas mejoras. Tras la sincronizacion WebDAV| añadir los accesos directos Markdown agrupados en un único icono|... Llegan los atajos de teclado.
+Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas| es que probablemente tengas notas con información sensible y y no quieres que sean accesible por
+Sincronice sus marcadores en todos los navegadores a través de Nextcloud| WebDAV o Google Drive.
+Si vas a utilizar Zettel Notes en diferentes dispositivos| para poder ver las notas cifradas| es necesario exportar las claves.
+Hoy vamos a automatizar la creación de acceso a las aplicaciones AppImage| tal como lo explicaba en el artículo: [[https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html][Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y
+Si has montado tu servidor Matrix| probablemente quieras tener publicaciones automatizadas de algunos de tus scripts| proyectos| etcétera...
+Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad| no tener que introducir cada vez que me conecto la contraseña.
+YouTube tiene una política de privacidad extremadamente invasiva que se basa en el uso de datos de usuarios de manera poco ética.
+Como cualquier otro editor de texto| nano tiene la posibilidad de habilitar el corrector ortográfico. A diferencia de otros editores| nano no tiene la posibilidad de ir marcando aquellas palabras
+Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]]| aparece en la línea con error el siguiente símbolo =~~=.
+Audiobookshelf es un servidor de audiolibros autohospedado para administrar y reproducir tus audiolibros tanto en tu móvil como en una página web.
+Herramienta de línea de comandos para descargar videos de twitch.tv
+NewPipe es mi aplicación favorita de YouTube y me da mucha rabia que cuando hago click en un enlace| no abra NewPipe por defecto.
+No puede ser tan dificil utilizar la terminal y menos| un editor de texto con tantos atajos raros como en Emacs| Vim o Nano.
+Termux es una aplicación que podemos instalar desde [[https://f-droid.org/repository/browse/?fdid=com.termux][F-Droid]] con la que podemos correr una distro Linux dentro de Android.
+Me está gustando muchísimo *Micro* y he buscado la opción para que me guarde la posición del cursor| la ultima vez que edité una nota.
+En Ubuntu| cualquier script ejecutable que dejemos en el directorio =~/.local/bin=| será ejecutable desde cualquier directorio de nuestra máquina.
+Desde que escuché el podcast de atareao con esta aplicación servicio| me volví loco. Poder utilizar la terminal en mi navegador web.... Ya he probado algunos proyectos| pero ninguno que
+Después de estar dando vueltas por diferentes nubes| al final vuelvo a Nextcloud y te explico porque.
+Nextcloud services| es un servicio que puedes instalar en tu movil| que permite recibir notificaciones desde tu nube Nextcloud.
+En el artículo [[https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html][Docker kodexplorer]]| os expliqué como montar este magnífico explorador de archivos.
