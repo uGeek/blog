@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Kodbox con mariadb',
+            'text': 'Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,... así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una', 
+            'tags': 'kodbox,nube,nextcloud,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html' 
+},
+{
             'title': 'Kodbox. La nueva versión de KodExplorer como explorador de archivos',
             'text': 'En el artículo [[https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html][Docker kodexplorer]], os expliqué como montar este magnífico explorador de archivos.', 
             'tags': 'kodbox,servidores,nextcloud,,,', 
@@ -1147,7 +1153,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
