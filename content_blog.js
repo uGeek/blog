@@ -1,14 +1,20 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Convertir página web a orgmode con pandoc',
+            'text': 'Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc: ', 
+            'tags': 'orgmode,orgmode,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-12-convertir-pagina-web-a-orgmode-con-pandoc.html' 
+},
+{
             'title': 'Kodbox con mariadb',
-            'text': 'Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,... así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una', 
-            'tags': 'kodbox,nube,nextcloud,,,', 
+            'text': 'Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,… así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una base de datos más robusta que *sqlite*', 
+            'tags': 'kodbox,nube,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html' 
 },
 {
             'title': 'Kodbox. La nueva versión de KodExplorer como explorador de archivos',
-            'text': 'En el artículo [[https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html][Docker kodexplorer]], os expliqué como montar este magnífico explorador de archivos.', 
-            'tags': 'kodbox,servidores,nextcloud,,,', 
+            'text': 'Con el tiempo, este explorador ha pasado a llamarse Kodbox. Vamos a ver como montar el docker más simple con una base de datos sqlite y ahora sí, con el docker oficial para Raspberry (arm64).', 
+            'tags': 'kodbox,nube,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html' 
 },
 {
@@ -19,8 +25,8 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'Instalación de Nextcloud 24 con docker Oficial',
-            'text': 'Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.', 
-            'tags': 'nextcloud,nube,webdav,docker,,', 
+            'text': 'Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo.', 
+            'tags': 'nextcloud,nube,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html' 
 },
 {
@@ -1153,7 +1159,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

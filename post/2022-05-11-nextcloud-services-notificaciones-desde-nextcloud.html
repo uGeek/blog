@@ -85,40 +85,38 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="nextcloud-services.-notificaciones-desde-nextcloud-1" title="Nextcloud services. Notificaciones desde Nextcloud" data-export_file_name="nextcloud-services-notificaciones-desde-nextcloud" data-description="Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud." data-export_date="2022-05-11 06:30" data-category="nextcloud" data-tag="nube" data-image="./images-blog/nextcloud_hub.png">Nextcloud services. Notificaciones desde Nextcloud</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 274 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
+<h1 id="nextcloud-services.-notificaciones-desde-nextcloud-1" title="Nextcloud services. Notificaciones desde Nextcloud" data-export_file_name="nextcloud-services-notificaciones-desde-nextcloud" data-description="Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud." data-export_date="2022-05-11 18:04" data-category="nextcloud" data-tag="nube" data-image="./images-blog/nextcloud_hub.png">Nextcloud services. Notificaciones desde Nextcloud</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 277 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
 <p>Nextcloud services, es un servicio que puedes instalar en tu movil, que permite recibir notificaciones desde tu nube Nextcloud.</p>
-<p>Para no depender de los servicios de Google para recibir notificaciones de Nextcloud, como sucedía en versiones anteriores, desde noviembre del 2021 han creado esta aplicación llamada <strong>Nextcloud services</strong>.</p>
+<p>Para no depender de los servicios de Google para recibir notificaciones de Nextcloud, como sucedía en versiones anteriores, desde noviembre del 2021 han creado esta aplicación llamada <strong>Nextcloud services</strong> .</p>
 <center>
 <p><img src="../images-blog/nextcloud_hub.png" /></p>
 </center>
-<p>Si tienes Nextcloud, es un servicio fantástico como alternativa a <strong>Gotify</strong> o <strong>ntfy</strong>.</p>
+<p>Si tienes Nextcloud, es un servicio fantástico como alternativa a <strong>Gotify</strong> o <strong>ntfy</strong> .</p>
 <h2 id="enviar-un-mensajes-desde-el-docker-de-nextcloud">Enviar un mensajes desde el docker de Nextcloud</h2>
 <p>Vamos a enviar un mensaje al usuario <strong>angel</strong> desde la terminal.</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud  php occ notification:generate   angel <span class="st">&quot;Mensaje desde la terminal&quot;</span>  -l <span class="st">&quot;Texto del mensaje&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud  php occ notification:generate   angel <span class="st">&quot;Mensaje desde la terminal&quot;</span>  -l <span class="st">&quot;Texto del mensaje&quot;</span></a></code></pre></div>
 <h3 id="ayuda">Ayuda</h3>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud  php occ notification:generate   --help</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">docker</span> exec --user www-data nextcloud  php occ notification:generate   --help</a></code></pre></div>
 <h2 id="enviar-mensajes-desde-máquina-en-remoto-mediante-curl">Enviar mensajes desde máquina en remoto mediante curl</h2>
 <p>Si instalas curl en una Raspberry, Pc,… podemos remotamente enviar a Nextcloud para que publique un mensaje.</p>
 <p>Sustituye:</p>
 <ul>
 <li>Usuario = angel</li>
-<li>Token = UD6N-b7Tyo-LIKS9-FHD7-Rtre6 (Generado desde la sección <strong>Ajustes &gt; seguridad</strong>.</li>
+<li>Token = UD6N-b7Tyo-LIKS9-FHD7-Rtre6 (Generado desde la sección <strong>Ajustes &gt; seguridad</strong> .</li>
 <li>Url del servidor = <a href="http://midominio.duckdns.org">midominio.duckdns.org</a></li>
 </ul>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">curl</span> -H <span class="st">&quot;OCS-APIREQUEST: true&quot;</span> -X POST             https://angel:UD6N-b7Tyo-LIKS9-FHD7-Rtre6@midominio.duckdns.org/ocs/v2.php/apps/notifications/api/v2/admin_notifications/angel             -d shortMessage=<span class="st">&quot;Título del Mensaje&quot;</span>             -d longMessage=<span class="st">&quot;Este es el mensaje&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">curl</span> -H <span class="st">&quot;OCS-APIREQUEST: true&quot;</span> -X POST             https://angel:UD6N-b7Tyo-LIKS9-FHD7-Rtre6@midominio.duckdns.org/ocs/v2.php/apps/notifications/api/v2/admin_notifications/angel             -d shortMessage=<span class="st">&quot;Título del Mensaje&quot;</span>             -d longMessage=<span class="st">&quot;Este es el mensaje&quot;</span></a></code></pre></div>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://github.com/Andrewerr/NextcloudServices">https://github.com/Andrewerr/NextcloudServices</a></li>
-<li><a href="https://f-droid.org/en/packages/com.polar.nextcloudservices/">https://f-droid.org/en/packages/com.polar.nextcloudservices/</a></li>
+<li><a href="https://github.com/Andrewerr/NextcloudServices"><a href="https://github.com/Andrewerr/NextcloudServices">https://github.com/Andrewerr/NextcloudServices</a></a></li>
+<li><a href="https://f-droid.org/en/packages/com.polar.nextcloudservices/"><a href="https://f-droid.org/en/packages/com.polar.nextcloudservices/">https://f-droid.org/en/packages/com.polar.nextcloudservices/</a></a></li>
 </ul>
 <br>
-<p>Publicado por Angel el miércoles 11 mayo del 2022</p>
+<p>Publicado por Angel el Wednesday 11 May del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html">Kodbox. La nueva versión de KodExplorer como explorador de archivos</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-05-11-nextcloud-services-notificaciones-desde-nextcloud.html">Nextcloud services. Notificaciones desde Nextcloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html">Instalación de Nextcloud 24 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html">Sincronización de nuestros bookmarks con floccus</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html">nncli. Notas desde el terminal con Nextcloud Notes</a></li>
@@ -127,5 +125,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html">Trabajos en segundo plano de Nextcloud y ownCloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html">Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

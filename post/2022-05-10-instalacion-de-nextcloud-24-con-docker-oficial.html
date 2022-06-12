@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." />
+<meta name="description" content="Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
 <meta property="og:title" content="Instalación de Nextcloud 24 con docker Oficial" />
-<meta property="og:description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." />
+<meta property="og:description" content="Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo." />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" />
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html" />
 
 <meta name="twitter:title" content="Instalación de Nextcloud 24 con docker Oficial" />
-<meta name="twitter:description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." />
+<meta name="twitter:description" content="Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo." />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" />
 
 
@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="instalación-de-nextcloud-24-con-docker-oficial-1" title="Instalación de Nextcloud 24 con docker Oficial" data-export_file_name="instalacion-de-nextcloud-24-con-docker-oficial" data-description="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." data-export_date="2022-05-10 09:56" data-category="nextcloud" data-tag="nube,webdav,docker" data-image="./images-blog/nextcloud_hub.png">Instalación de Nextcloud 24 con docker Oficial</h1>
-<h5>Tiempo estimado de lectura: 7 minutos. 805 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
+<h1 id="instalación-de-nextcloud-24-con-docker-oficial-1" title="Instalación de Nextcloud 24 con docker Oficial" data-export_file_name="instalacion-de-nextcloud-24-con-docker-oficial" data-description="Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo." data-export_date="2022-05-10 17:59" data-category="nextcloud" data-tag="nube" data-image="./images-blog/nextcloud_hub.png">Instalación de Nextcloud 24 con docker Oficial</h1>
+<h5>Tiempo estimado de lectura: 7 minutos. 812 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
 <p>Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo.</p>
 <center>
 <p><img src="../images-blog/nextcloud_hub.png" /></p>
@@ -101,7 +101,7 @@ $("#tipue_search_input").tipuesearch();
 <p>Voy a explicaros cómo montar el Docker, con docker-compose para arquitectura amd64, ARM64 y Raspberry Pi.</p>
 <h2 id="docker-compose">Docker-compose</h2>
 <h3 id="amd64-y-arm64">amd64 y arm64</h3>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
 <a class="sourceLine" id="cb1-2" title="2"></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="ex">volumes</span>:</a>
 <a class="sourceLine" id="cb1-4" title="4">  <span class="ex">nextcloud</span>:</a>
@@ -134,7 +134,7 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb1-31" title="31">    <span class="ex">restart</span>: always</a></code></pre></div>
 <h3 id="raspberry-pi-y-arm-32bits">Raspberry Pi y ARM 32bits</h3>
 <p>Para montar el docker compose con su base de datos en mariadb para Raspberry Pi o ARM:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
 <a class="sourceLine" id="cb2-2" title="2"></a>
 <a class="sourceLine" id="cb2-3" title="3"><span class="ex">volumes</span>:</a>
 <a class="sourceLine" id="cb2-4" title="4">  <span class="ex">nextcloud</span>:</a>
@@ -166,45 +166,45 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb2-30" title="30">            <span class="ex">-</span> /almacenamiento_local:/almacenamiento_local</a>
 <a class="sourceLine" id="cb2-31" title="31">    <span class="ex">restart</span>: always</a></code></pre></div>
 <h2 id="instalación">Instalación</h2>
-<p>En el ejemplo que he utilizado, Nextcloud será accesible por el puerto <strong>8080</strong>.</p>
-<p>Pon el usuario y contraseña del que será el administrador, seleciona como base de datos <strong>mariadb*</strong>, escribe la contraseña del usuario de mariadb y resto de datos como aparece en la imágen e inicia la instalación.</p>
+<p>En el ejemplo que he utilizado, Nextcloud será accesible por el puerto <strong>8080</strong> .</p>
+<p>Pon el usuario y contraseña del que será el administrador, seleciona como base de datos <strong>mariadb\*</strong> , escribe la contraseña del usuario de mariadb y resto de datos como aparece en la imágen e inicia la instalación.</p>
 <center>
 <p><img src="../images-blog/nextcloud2.png" /></p>
 </center>
 <h2 id="forzar-conexión-https-y-dominios-de-confianza">Forzar conexión https y dominios de confianza</h2>
-<p>Para forzar a Nextcloud a utilizar <strong>https</strong> en su conexión y utilice esta como raíz de todas las páginas, editaremos el archivo <strong>config.php</strong>.</p>
+<p>Para forzar a Nextcloud a utilizar <strong>https</strong> en su conexión y utilice esta como raíz de todas las páginas, editaremos el archivo <strong>config.php</strong> .</p>
 <p>En mi caso, utilizaré nano para editar el archivo.</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">nano</span> ~/docker/nextcloud/config/config.php</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">nano</span> ~/docker/nextcloud/config/config.php</a></code></pre></div>
 <p>Hay que modificar:</p>
 <ul>
-<li>overwriteprotocol = Forzar a utilizar <strong>https</strong>.</li>
-<li>trusted_domains = Dominios de confianza</li>
+<li>overwriteprotocol = Forzar a utilizar <strong>https</strong> .</li>
+<li>trusted\_domains = Dominios de confianza</li>
 </ul>
 <p>Vamos añadir 3 dominios de confianza, para poder acceder a Nextcloud</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="st">&#39;overwriteprotocol&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;https&#39;</span>,</a>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="st">&#39;overwriteprotocol&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;https&#39;</span>,</a>
 <a class="sourceLine" id="cb4-2" title="2"><span class="st">&#39;trusted_domains&#39;</span> =<span class="op">&gt;</span></a>
 <a class="sourceLine" id="cb4-3" title="3"><span class="ex">array</span> (</a>
 <a class="sourceLine" id="cb4-4" title="4"><span class="ex">0</span> =<span class="op">&gt;</span> <span class="st">&#39;192.168.1.100:90&#39;</span>,<span class="st">&#39;nextcloud.midominio.duckdns.org&#39;</span>,<span class="st">&#39;next.midominio.duckdns.org&#39;</span></a></code></pre></div>
 <h2 id="idioma-por-defecto-región-telefónica">Idioma por defecto, región telefónica,…</h2>
-<p>Nextcloud nos pedirá que añadamos nuestra región telefónica para el registro de usuarios mediante teléfono. Vamos a a añadir también, igual que en el paso anterior, estos valores al archivo <strong>config.php</strong>.</p>
+<p>Nextcloud nos pedirá que añadamos nuestra región telefónica para el registro de usuarios mediante teléfono. Vamos a a añadir también, igual que en el paso anterior, estos valores al archivo <strong>config.php</strong> .</p>
 <ul>
-<li>force_language = Idioma por defecto. Si quieres que sean los usuarios los que determinen su propia lengua, pon el valo</li>
-<li>default_locale = Determinar región</li>
-<li>forcd_locale = forzar una configuración regional para todos los usuarios</li>
-<li>default_phoneregion = Esto establece la región predeterminada para los números de teléfono en su servidor Nextcloud</li>
+<li>force\_language = Idioma por defecto. Si quieres que sean los usuarios los que determinen su propia lengua, pon el valo</li>
+<li>default\_locale = Determinar región</li>
+<li>forcd\_locale = forzar una configuración regional para todos los usuarios</li>
+<li>default\_phoneregion = Esto establece la región predeterminada para los números de teléfono en su servidor Nextcloud</li>
 </ul>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="st">&#39;force_language&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;es&#39;</span>,</a>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="st">&#39;force_language&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;es&#39;</span>,</a>
 <a class="sourceLine" id="cb5-2" title="2"><span class="st">&#39;default_locale&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;es_ES&#39;</span>,</a>
 <a class="sourceLine" id="cb5-3" title="3"><span class="st">&#39;force_locale&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;es_ES&#39;</span>,</a>
 <a class="sourceLine" id="cb5-4" title="4"><span class="st">&#39;default_phone_region&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;ES&#39;</span>,</a></code></pre></div>
 <ul>
-<li><a href="https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html">https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html</a></li>
+<li><a href="https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html"><a href="https://docs.nextcloud.com/server/latest/admin\_manual/configuration\_server/config\_sample\_php\_parameters.html">https://docs.nextcloud.com/server/latest/admin\_manual/configuration\_server/config\_sample\_php\_parameters.html</a></a></li>
 </ul>
 <h2 id="corrigiendo-errores-que-nos-muestra-nexcloud-con-caddy">Corrigiendo errores que nos muestra Nexcloud con Caddy</h2>
-<p>Una vez iniciado Nextcloud, accederemos en el menú de la parte superior derecha, accederemos a la opción <strong>Configuración -&gt; Vista generas</strong>.</p>
+<p>Una vez iniciado Nextcloud, accederemos en el menú de la parte superior derecha, accederemos a la opción <strong>Configuración -&gt; Vista generas</strong> .</p>
 <p>Ahora Nextcloud analizará nuestra configuración y nos propondrá que tenemos que arreglar para que todo esté correctamente configurado, si no lo está.</p>
 <p>Yo estoy utilizando <strong>Caddy</strong> como proxy inverso. En mi caso, para solucionar todos los problemas he añadido al archivo <strong>Caddyfile</strong> la siguiente configuración:</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">nextcloud.midominio.duckdns.org</span> {</a>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">nextcloud.midominio.duckdns.org</span> {</a>
 <a class="sourceLine" id="cb6-2" title="2"></a>
 <a class="sourceLine" id="cb6-3" title="3"><span class="ex">redir</span> /.well-known/carddav /remote.php/carddav 301</a>
 <a class="sourceLine" id="cb6-4" title="4"><span class="ex">redir</span> /.well-known/caldav /remote.php/caldav 301</a>
@@ -220,24 +220,25 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="acceso-pasado-30-segundos">Acceso pasado 30 segundos</h2>
 <p>Para evitar ataques de fuerza bruta, Nextcloud si detecta que hay muchos accesos desde la misma IP, puede forzar a que cada vez que te conectes al servidor tengas que esperar 30 segundos. Para deshabilitar esta opción, tienes que añadir en el archivo de configuración:</p>
 <pre><code>&#39;auth.bruteforce.protection.enabled&#39; =&gt; false,
+
 </code></pre>
 <h2 id="compatibilidad-con-archivos-svg">Compatibilidad con archivos svg</h2>
 <p>Cuando miramos si Nextcloud está bien instalado, nos mostrará un mensaje que falta la compatibilidad con archivos svg.</p>
-<p>Esta compatibilidad está deshabilitada de manera predeterminada por razones de seguridad. Para agregar esta compatibilidad cuando instalamos un nueva imágen docker, tenemos que instalar el paquete <strong>php-imagick</strong>.</p>
+<p>Esta compatibilidad está deshabilitada de manera predeterminada por razones de seguridad. Para agregar esta compatibilidad cuando instalamos un nueva imágen docker, tenemos que instalar el paquete <strong>php-imagick</strong> .</p>
 <pre><code>docker exec -it nextcloud apt update ; apt-get install libmagickcore-6.q16-6-extra 
+
 </code></pre>
 <p>Otra opción de instalación, sería:</p>
 <pre><code>docker exec nextcloud bash -c &#39;apt-get install -y --no-install-recommends $(apt-cache search libmagickcore-6.q[0-9][0-9]-[0-9]-extra | cut -d &quot; &quot; -f1)&#39;
+
 </code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Ahora solo que disfrutar de Nextcloud.</p>
 <br>
-<p>Publicado por Angel el martes 10 mayo del 2022</p>
+<p>Publicado por Angel el Tuesday 10 May del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html">Kodbox. La nueva versión de KodExplorer como explorador de archivos</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-05-11-nextcloud-services-notificaciones-desde-nextcloud.html">Nextcloud services. Notificaciones desde Nextcloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html">Instalación de Nextcloud 24 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html">Sincronización de nuestros bookmarks con floccus</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html">nncli. Notas desde el terminal con Nextcloud Notes</a></li>
@@ -246,5 +247,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html">Trabajos en segundo plano de Nextcloud y ownCloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-01-actualizando-imagen-de-nextcloud-y-solucionando-posibles-problemas-con-docker-compose.html">Actualizando imagen de Nextcloud y solucionando posibles problemas con docker-compose</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

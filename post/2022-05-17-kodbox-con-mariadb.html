@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,... así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una" />
+<meta name="description" content="Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,… así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una base de datos más robusta que *sqlite*" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
 <meta property="og:title" content="Kodbox con mariadb" />
-<meta property="og:description" content="Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,... así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una" />
+<meta property="og:description" content="Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,… así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una base de datos más robusta que *sqlite*" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Kodbox_con_mariadb.png" />
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html" />
 
 <meta name="twitter:title" content="Kodbox con mariadb" />
-<meta name="twitter:description" content="Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,... así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una" />
+<meta name="twitter:description" content="Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,… así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una base de datos más robusta que *sqlite*" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Kodbox_con_mariadb.png" />
 
 
@@ -85,15 +85,15 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="kodbox-con-mariadb-1" title="Kodbox con mariadb" data-export_file_name="kodbox-con-mariadb" data-description="Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,... así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una" data-export_date="2022-05-17 12:45" data-category="kodbox" data-tag="nube,nextcloud" data-image="./images-blog/Kodbox_con_mariadb.png">Kodbox con mariadb</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 177 palabras.    <a href="https://ugeek.github.io/blog/categories/kodbox">kodbox</a></h5>
-<p>Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,… así que voy a montar el servicio pero está vez con <strong>mariadb</strong>, que me va a permiter tener una base de datos más robusta que <strong>sqlite</strong>.</p>
+<h1 id="kodbox-con-mariadb-1" title="Kodbox con mariadb" data-export_file_name="kodbox-con-mariadb" data-description="Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,… así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una base de datos más robusta que *sqlite*" data-export_date="2022-05-17 18:10" data-category="kodbox" data-tag="nube" data-image="./images-blog/Kodbox_con_mariadb.png">Kodbox con mariadb</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 179 palabras.    <a href="https://ugeek.github.io/blog/categories/kodbox">kodbox</a></h5>
+<p>Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,… así que voy a montar el servicio pero está vez con <strong>mariadb</strong>, que me va a permiter tener una base de datos más robusta que <strong>sqlite</strong> .</p>
 <center>
 <p><img src="../images-blog/Kodbox_con_mariadb.png" /></p>
 </center>
 <h2 id="docker-compose">docker compose</h2>
 <p>Este es el docker-compose.yml</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&quot;3.5&quot;</span></a>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&quot;3.5&quot;</span></a>
 <a class="sourceLine" id="cb1-2" title="2"></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="ex">services</span>:</a>
 <a class="sourceLine" id="cb1-4" title="4"><span class="ex">db</span>:</a>
@@ -124,23 +124,23 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb1-29" title="29"><span class="ex">restart</span>: always</a></code></pre></div>
 <p>Es posible añadir las variables del usuario y contraseña del administrador.</p>
 <ul>
-<li>KODBOX_ADMINUSER = Nombre del aministrador</li>
-<li>KODBOX_ADMINPASSWORD = Contraseña del administrador</li>
+<li>KODBOX\_ADMINUSER = Nombre del aministrador</li>
+<li>KODBOX\_ADMINPASSWORD = Contraseña del administrador</li>
 </ul>
 <h2 id="instalación">Instalación</h2>
-<p>La primera vez que iniciemos el servicio, tenemos que añadir el usuario, nombre de base de datos,… que hemos añadido en las variables del <strong>docker-compose.yml</strong>, tal como aparece en la imagen.</p>
+<p>La primera vez que iniciemos el servicio, tenemos que añadir el usuario, nombre de base de datos,… que hemos añadido en las variables del <strong>docker-compose.yml</strong> , tal como aparece en la imagen.</p>
 <center>
 <p><img src="../images-blog/kodbox2.png" /></p>
 </center>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://hub.docker.com/r/kodcloud/kodbox=">https://hub.docker.com/r/kodcloud/kodbox=</a></li>
+<li><a href="https://hub.docker.com/r/kodcloud/kodbox="><a href="https://hub.docker.com/r/kodcloud/kodbox=">https://hub.docker.com/r/kodcloud/kodbox=</a></a></li>
 </ul>
 <br>
-<p>Publicado por Angel el martes 17 mayo del 2022</p>
+<p>Publicado por Angel el Tuesday 17 May del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html">Kodbox. La nueva versión de KodExplorer como explorador de archivos</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Writing in orgmode whith emacs</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

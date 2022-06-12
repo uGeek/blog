@@ -13,11 +13,44 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Convertir página web a orgmode con pandoc</title>
+    <link>https://ugeek.github.io/blog/post/2022-06-12-convertir-pagina-web-a-orgmode-con-pandoc.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Convertir página web a orgmode con pandoc"&gt;
+&lt;br&gt;&lt;p&gt;Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc: ... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-12-convertir-pagina-web-a-orgmode-con-pandoc.html&gt;Convertir página web a orgmode con pandoc&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 12 Jun 2022  +0100</pubDate>
+    <category>orgmode</category>
+    <category>orgmode</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-06-12-convertir-pagina-web-a-orgmode-con-pandoc.html</guid>
+   </item>
+   <item>
     <title>Kodbox con mariadb</title>
     <link>https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/Kodbox_con_mariadb.png" alt="Kodbox con mariadb"&gt;
-&lt;br&gt;&lt;p&gt;Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,... así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una... 
+&lt;br&gt;&lt;p&gt;Kodbox me está convenciendo mucho, su editor de texto, servidor WebDAV,… así que voy a montar el servicio pero está vez con *mariadb*, que me va a permiter tener una base de datos más robusta que *sqlite*... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html&gt;Kodbox con mariadb&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
@@ -38,10 +71,10 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 17 May 2022  +0100</pubDate>
+    <pubDate>Tue, 17 May 2022 18:25 +0100</pubDate>
     <category>kodbox</category>
     <category>nube</category>
-    <category>nextcloud</category>
+    <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html</guid>
    </item>
@@ -50,7 +83,7 @@
     <link>https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/kodexplorer.png" alt="Kodbox. La nueva versión de KodExplorer como explorador de archivos"&gt;
-&lt;br&gt;&lt;p&gt;En el artículo [[https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html][Docker kodexplorer]], os expliqué como montar este magnífico explorador de archivos.... 
+&lt;br&gt;&lt;p&gt;Con el tiempo, este explorador ha pasado a llamarse Kodbox. Vamos a ver como montar el docker más simple con una base de datos sqlite y ahora sí, con el docker oficial para Raspberry (arm64).... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html&gt;Kodbox. La nueva versión de KodExplorer como explorador de archivos&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
@@ -71,10 +104,10 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 13 May 2022 12:45 +0100</pubDate>
+    <pubDate>Fri, 13 May 2022 18:10 +0100</pubDate>
     <category>kodbox</category>
-    <category>servidores</category>
-    <category>nextcloud</category>
+    <category>nube</category>
+    <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html</guid>
    </item>
@@ -104,7 +137,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 11 May 2022 07:30 +0100</pubDate>
+    <pubDate>Wed, 11 May 2022 18:07 +0100</pubDate>
     <category>nextcloud</category>
     <category>nube</category>
     <category></category>
@@ -116,7 +149,7 @@
     <link>https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" alt="Instalación de Nextcloud 24 con docker Oficial"&gt;
-&lt;br&gt;&lt;p&gt;Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.... 
+&lt;br&gt;&lt;p&gt;Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html&gt;Instalación de Nextcloud 24 con docker Oficial&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
@@ -137,11 +170,11 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 10 May 2022 06:30 +0100</pubDate>
+    <pubDate>Tue, 10 May 2022 18:04 +0100</pubDate>
     <category>nextcloud</category>
     <category>nube</category>
-    <category>webdav</category>
-    <category>docker</category>
+    <category></category>
+    <category></category>
     <guid>https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html</guid>
    </item>
    <item>
@@ -170,7 +203,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 29 Mar 2022 09:56 +0100</pubDate>
+    <pubDate>Tue, 29 Mar 2022 17:59 +0100</pubDate>
     <category>docker</category>
     <category>terminal</category>
     <category>go</category>
@@ -6353,7 +6386,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

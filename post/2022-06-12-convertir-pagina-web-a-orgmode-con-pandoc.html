@@ -1,5 +1,5 @@
 <head>
-<title>Recupera archivos borrados con Test Disk. uGeek Blog </title>
+<title>Convertir página web a orgmode con pandoc . uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content=":DESCRIPTION:" />
+<meta name="description" content="Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc: " />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Recupera archivos borrados con Test Disk" />
-<meta property="og:description" content=":DESCRIPTION:" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/testdisk.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-15-recupera-archivos-borrados-con-test-disk.html" />
+<meta property="og:title" content="Convertir página web a orgmode con pandoc " />
+<meta property="og:description" content="Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc: " />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-06-12-convertir-pagina-web-a-orgmode-con-pandoc.html" />
 
-<meta name="twitter:title" content="Recupera archivos borrados con Test Disk" />
-<meta name="twitter:description" content=":DESCRIPTION:" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/testdisk.png" />
+<meta name="twitter:title" content="Convertir página web a orgmode con pandoc " />
+<meta name="twitter:description" content="Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc: " />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,41 +85,24 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="recupera-archivos-borrados-con-test-disk-1" title="Recupera archivos borrados con Test Disk" data-export_file_name="Recupera archivos borrados con Test Disk" data-description="" data-export_date="2019-08-15 22:00" data-category="bash" data-tag="bash" data-image="./images-blog/testdisk.png">Recupera archivos borrados con Test Disk</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 261 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Si has borrado por error un archivo en tu terminal, no temas, quizás estas a tiempo de recuperarlo. Voy a explicarte un método muy sencillo de hacerlo con TestDisk</p>
-<center height="250" width="250"> 
-<p><img src="../images-blog/testdisk.png" /></p>
-</center>
-<h2 id="instalación">Instalación</h2>
-<p><code>sudo apt install testdisk</code></p>
-<h2 id="funcionamiento">Funcionamiento</h2>
-<p>Le daremos a: <code>&gt;[ Create ] Create a new log file</code></p>
-<p>Ahora nos mostrará todas las unidades que tenemos en nuestro sistema. Seleccionaremos la unidad desde la que queremos recuperar los datos.</p>
-<p>Pulsaremos esta opción: <code>&gt;[None   ] Non partitioned media</code></p>
-<p>Ahora le daremos a la opción avanzada: <code>&gt;[ Advanced ] Filesystem Utils</code></p>
-<p><strong>En la parte inferior</strong>, seleccionaremos <code>[  List  ]</code></p>
-<p>Ahora navegaremos por nuestro disco. En color rojo saldrán los archivos borrados.</p>
-<h2 id="recuperar-archivo">Recuperar archivo</h2>
-<p>Para recuperar un archivo, nos situaremos encima del archivo rojo y seleccionaremos la letra <strong>C</strong>.</p>
-<p>Ahora TestDisk nos preguntará donde queremos guardar el archivo, volvemos a pulsar la tecla <strong>C</strong> y…</p>
-<p>YA ESTÁ RECUPERADO!!!</p>
-<h2 id="salir-o-ir-hacia-atras">Salir o ir hacia atras</h2>
-<p>Tan sencillo como pulsar la tecla <strong>q</strong>.</p>
+<h1 id="convertir-página-web-a-orgmode-con-pandoc-1" title="Convertir página web a orgmode con pandoc" data-export_file_name="convertir-pagina-web-a-orgmode-con-pandoc" data-description="Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc:" data-export_date="2022-06-12 18:25" data-category="orgmode" data-tag="orgmode" data-image="./images-blog/ugeek.png">Convertir página web a orgmode con pandoc</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 134 palabras.    <a href="https://ugeek.github.io/blog/categories/orgmode">orgmode</a></h5>
+<p>Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">pandoc</span> -s -r html <span class="st">&quot;https://URL&quot;</span> -o archivo.org                                                                                                                                                                      </a></code></pre></div>
 <br>
-<p>Publicado por Angel el Thursday 15 August del 2019</p>
+<p>Publicado por Angel el Sunday 12 June del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html">Bash en Docker</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-07-24-vizex.html">Vizex. Ver almacenamiento disponible y ocupado de tus discos</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,… desde la terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html">Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-17-copiando-una-pagina-web-o-parte-de-ella-a-orgmode.html">Copiando una página web o parte de ella a OrgMode</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html">W3M. Navegador para Terminal y Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-08-todoist-en-emacs.html">Todoist en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html">Bullet Journal Digital en OrgMode</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
