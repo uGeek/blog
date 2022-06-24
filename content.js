@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Configurar una ip estática en tu Raspberry Pi',
+            'text': 'Si vas a utilizar tu raspberry como servidor, es muy importante configurar una ip estática (Fija) para que podamos acceder siempre a ella sin que nuestro router modifique su IP.', 
+            'tags': 'raspberry,ip,servidor,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html' 
+},
+{
             'title': 'Convertir página web a orgmode con pandoc',
             'text': 'Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc: ', 
             'tags': 'orgmode,orgmode,,,,', 

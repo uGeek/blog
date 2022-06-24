@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Configurar una ip estática en tu Raspberry Pi</title>
+    <link>https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" alt="Configurar una ip estática en tu Raspberry Pi"&gt;
+&lt;br&gt;&lt;p&gt;Si vas a utilizar tu raspberry como servidor, es muy importante configurar una ip estática (Fija) para que podamos acceder siempre a ella sin que nuestro router modifique su IP.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html&gt;Configurar una ip estática en tu Raspberry Pi&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 24 Jun 2022  +0100</pubDate>
+    <category>raspberry</category>
+    <category>ip</category>
+    <category>servidor</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html</guid>
+   </item>
+   <item>
     <title>Convertir página web a orgmode con pandoc</title>
     <link>https://ugeek.github.io/blog/post/2022-06-12-convertir-pagina-web-a-orgmode-con-pandoc.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 12 Jun 2022  +0100</pubDate>
+    <pubDate>Sun, 12 Jun 2022 10:05 +0100</pubDate>
     <category>orgmode</category>
     <category>orgmode</category>
     <category></category>
