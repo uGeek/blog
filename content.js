@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html' 
 },
 {
+            'title': 'Docker: Trilium Oficial',
+            'text': 'Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium.', 
+            'tags': 'trilium,docker,notas,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html' 
+},
+{
             'title': 'Convertir página web a orgmode con pandoc',
             'text': 'Si quieres tener una especie de Wallabag simple en texto plano e importar tus artículos favoritos en orgmode, puedes utilizar pandoc: ', 
             'tags': 'orgmode,orgmode,,,,', 
@@ -1165,7 +1171,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

@@ -1,5 +1,5 @@
 <head>
-<title>paquetes</title>
+<title>Docker: Trilium Oficial. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,20 +47,87 @@ gtag("js", new Date())
 gtag("config", "UA-131560140-1");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>paquetes</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="docker-trilium-oficial-1" title="Docker: Trilium Oficial" data-export_file_name="docker-trilium-oficial" data-description="Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium." data-export_date="2022-06-24 12:20" data-category="trilium" data-tag="docker,notas" data-image="./images-blog/">Docker: Trilium Oficial</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 195 palabras.    <a href="https://ugeek.github.io/blog/categories/trilium">trilium</a></h5>
+<p>Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium.</p>
+<p>Ya os expliqué como utilizarlo a modo de servidor para arquitectura arm cuando no era oficial, pero ahora que ya tenemos disponible la imagen oficial multiarquitectura, voy a explicaros un modo de montar tu servidor de Trilium, pudiendo tener un volumen persistente con tus notas.</p>
+<center>
+<p><img src="../images-blog/trilium.png" /></p>
+</center>
+<p> </p>
+<h2 id="docker-compose">Docker Compose</h2>
+<p>El docker compose sería el siguiente:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1">  <span class="ex">version</span>: <span class="st">&#39;2.1&#39;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb1-3" title="3"> <span class="ex">trilium</span>:</a>
+<a class="sourceLine" id="cb1-4" title="4">   <span class="ex">image</span>: zadam/trilium</a>
+<a class="sourceLine" id="cb1-5" title="5">   <span class="ex">restart</span>: always</a>
+<a class="sourceLine" id="cb1-6" title="6">   <span class="ex">container_name</span>: trilium</a>
+<a class="sourceLine" id="cb1-7" title="7">   <span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb1-8" title="8">     <span class="ex">-</span> <span class="st">&quot;8080:8080&quot;</span></a></code></pre></div>
+<p> </p>
+<h2 id="habilitar-volumen">Habilitar volumen</h2>
+<p>Ahora vamos a habilitar el volumen persistente<br />
+1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen   <br />
+ </p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1">  <span class="co">#volumes:</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co">#  - ./trilium-data:/home/node/trilium-data</span></a></code></pre></div>
+<p><br />
+   <br />
+2.- Una vez iniciado del docker, copia a ruta que decidas el volumen trilium-data en el host<br />
+        </p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">docker</span> cp trilium:/home/node/trilium-data ./trilium-data</a></code></pre></div>
+<p><br />
+3.- Des-comenta quitando las almohadillas y vuelve a levantar el docker con el directorio de trilium-data<br />
+<br />
+<br />
+<br />
+ </p>
+<p> </p>
+<br>
+<p>Publicado por Angel el Friday 24 June del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html>Paquetes Snap</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-08-2-archivos-de-configuracion-un-emacs.html>2 Archivos de configuración, un Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-21-estando-a-la-ultima-en-tu-raspberry-con-debian-testing.html>Estando a la Última en tu Raspberry con Debian Testing</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-04-los-paquetes-snap-no-aparecen-una-vez-instalados.html>Los paquetes snap no aparecen una vez instalados</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-07-02-listar-paquetes-instalados-y-hacer-un-poco-de-limpieza.html>Listar paquetes instalados y hacer un poco de limpieza</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html>Docker: Wireguard para Raspberry, Ubuntu, Debian,...</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html>Paquetes instalados en tu sistema</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html">Trilium. Notas jerárquicas en Markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-25-trilium-web-clipper-importando-el-contenido-de-una-web-a-trilium.html">Trilium Web Clipper. Importando el contenido de una web a Trilium</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
