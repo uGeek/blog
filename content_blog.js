@@ -1,15 +1,21 @@
 var tipuesearch = {pages: [
 {
-            'title': 'Configurar una ip estática en tu Raspberry Pi',
-            'text': 'Si vas a utilizar tu raspberry como servidor, es muy importante configurar una ip estática (Fija) para que podamos acceder siempre a ella sin que nuestro router modifique su IP.', 
-            'tags': 'raspberry,ip,servidor,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html' 
+            'title': 'Sincronizaciones remotas y locales con rsync',
+            'text': 'rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado.', 
+            'tags': 'rsync,sincronización,rclone,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-28-sincronizaciones-remotas-y-locales-con-rsync.html' 
 },
 {
             'title': 'Docker: Trilium Oficial',
             'text': 'Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium.', 
             'tags': 'trilium,docker,notas,,,', 
             'url': 'https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html' 
+},
+{
+            'title': 'Configurar una ip estática en tu Raspberry Pi',
+            'text': 'Si vas a utilizar tu raspberry como servidor, es muy importante configurar una ip estática (Fija) para que podamos acceder siempre a ella sin que nuestro router modifique su IP.', 
+            'tags': 'raspberry,ip,servidor,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html' 
 },
 {
             'title': 'Convertir página web a orgmode con pandoc',
@@ -1171,7 +1177,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

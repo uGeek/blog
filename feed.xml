@@ -13,6 +13,72 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Sincronizaciones remotas y locales con rsync</title>
+    <link>https://ugeek.github.io/blog/post/2022-06-28-sincronizaciones-remotas-y-locales-con-rsync.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Sincronizaciones remotas y locales con rsync"&gt;
+&lt;br&gt;&lt;p&gt;rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-28-sincronizaciones-remotas-y-locales-con-rsync.html&gt;Sincronizaciones remotas y locales con rsync&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 28 Jun 2022  +0100</pubDate>
+    <category>rsync</category>
+    <category>sincronización</category>
+    <category>rclone</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-06-28-sincronizaciones-remotas-y-locales-con-rsync.html</guid>
+   </item>
+   <item>
+    <title>Docker: Trilium Oficial</title>
+    <link>https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/trilium.png" alt="Docker: Trilium Oficial"&gt;
+&lt;br&gt;&lt;p&gt;Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html&gt;Docker: Trilium Oficial&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 24 Jun 2022 20:00 +0100</pubDate>
+    <category>trilium</category>
+    <category>docker</category>
+    <category>notas</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html</guid>
+   </item>
+   <item>
     <title>Configurar una ip estática en tu Raspberry Pi</title>
     <link>https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html</link>
     <description>
@@ -44,39 +110,6 @@
     <category>servidor</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html</guid>
-   </item>
-   <item>
-    <title>Docker: Trilium Oficial</title>
-    <link>https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/trilium.png" alt="Docker: Trilium Oficial"&gt;
-&lt;br&gt;&lt;p&gt;Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html&gt;Docker: Trilium Oficial&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Fri, 24 Jun 2022  +0100</pubDate>
-    <category>trilium</category>
-    <category>docker</category>
-    <category>notas</category>
-    <category></category>
-    <guid>https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html</guid>
    </item>
    <item>
     <title>Convertir página web a orgmode con pandoc</title>
@@ -6452,7 +6485,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
