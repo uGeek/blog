@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Comandos sudo sin contraseña</title>
+    <link>https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/bash.png" alt="Comandos sudo sin contraseña"&gt;
+&lt;br&gt;&lt;p&gt;** sudoers... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html&gt;Comandos sudo sin contraseña&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 29 Jun 2022  +0100</pubDate>
+    <category>sudo</category>
+    <category>visudo</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html</guid>
+   </item>
+   <item>
     <title>Sincronizaciones remotas y locales con rsync</title>
     <link>https://ugeek.github.io/blog/post/2022-06-28-sincronizaciones-remotas-y-locales-con-rsync.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 28 Jun 2022  +0100</pubDate>
+    <pubDate>Tue, 28 Jun 2022 06:29 +0100</pubDate>
     <category>rsync</category>
     <category>sincronización</category>
     <category>rclone</category>

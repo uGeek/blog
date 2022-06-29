@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Comandos sudo sin contraseña',
+            'text': '** sudoers', 
+            'tags': 'sudo,visudo,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html' 
+},
+{
             'title': 'Sincronizaciones remotas y locales con rsync',
             'text': 'rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado.', 
             'tags': 'rsync,sincronización,rclone,,,', 
