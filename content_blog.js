@@ -12,10 +12,10 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html' 
 },
 {
-            'title': 'SocksDroid. Enrutando todo el tráfico de tu Android por servidores &nbsp;SOCKS5',
+            'title': 'SocksDroid. Enrutando todo el tráfico de tu Android por servidores SOCKS5',
             'text': 'Hay una versión para Android que es una versión actualizada de SocksDroid de PeterCxy. ', 
             'tags': 'SOCKS5,android,proxy,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-&nbsp-socks5.html' 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-socks5.html' 
 },
 {
             'title': 'Comandos sudo sin contraseña',
@@ -1201,7 +1201,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
