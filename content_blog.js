@@ -1,9 +1,9 @@
 var tipuesearch = {pages: [
 {
-            'title': 'Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc...&nbsp;',
+            'title': 'Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc...',
             'text': 'Un servidor proxy puede ser muy útil para saltarte las restricciones a determinados servicios, canales de Telegram,... que estén bloqueados geográficamente o simplemente porque quieres mantener un cierto  anonimato y', 
             'tags': 'proxy,SOCKS5,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram-etc--&nbsp-.html' 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html' 
 },
 {
             'title': 'Comandos sudo sin contraseña',
@@ -1189,7 +1189,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
