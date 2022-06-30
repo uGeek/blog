@@ -1,15 +1,21 @@
 var tipuesearch = {pages: [
 {
+            'title': 'FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5',
+            'text': 'Ya hemos creado el servidor para navegar mediante Proxy. Podemos acceder a la configuración de nuestro navegador y configurarlo para que navegue por Proxy, pero FoxyProxy es una extensión muy', 
+            'tags': 'SOCKS5,proxy,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html' 
+},
+{
             'title': 'Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc...',
             'text': 'Un servidor proxy puede ser muy útil para saltarte las restricciones a determinados servicios, canales de Telegram,... que estén bloqueados geográficamente o simplemente porque quieres mantener un cierto  anonimato y', 
             'tags': 'proxy,SOCKS5,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html' 
 },
 {
-            'title': 'FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5',
-            'text': 'Ya hemos creado el servidor para navegar mediante Proxy. Podemos acceder a la configuración de nuestro navegador y configurarlo para que navegue por Proxy, pero FoxyProxy es una extensión muy', 
-            'tags': 'SOCKS5,proxy,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html' 
+            'title': 'SocksDroid. Enrutando todo el tráfico de tu Android por servidores &nbsp;SOCKS5',
+            'text': 'Hay una versión para Android que es una versión actualizada de SocksDroid de PeterCxy. ', 
+            'tags': 'SOCKS5,android,proxy,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-&nbsp-socks5.html' 
 },
 {
             'title': 'Comandos sudo sin contraseña',

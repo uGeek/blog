@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5</title>
+    <link>https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5"&gt;
+&lt;br&gt;&lt;p&gt;Ya hemos creado el servidor para navegar mediante Proxy. Podemos acceder a la configuración de nuestro navegador y configurarlo para que navegue por Proxy, pero FoxyProxy es una extensión muy... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html&gt;FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 30 Jun 2022 08:00 +0100</pubDate>
+    <category>SOCKS5</category>
+    <category>proxy</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html</guid>
+   </item>
+   <item>
     <title>Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc...</title>
     <link>https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html</link>
     <description>
@@ -46,12 +79,12 @@
     <guid>https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html</guid>
    </item>
    <item>
-    <title>FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5</title>
-    <link>https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html</link>
+    <title>SocksDroid. Enrutando todo el tráfico de tu Android por servidores &nbsp;SOCKS5</title>
+    <link>https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-&nbsp-socks5.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos creado el servidor para navegar mediante Proxy. Podemos acceder a la configuración de nuestro navegador y configurarlo para que navegue por Proxy, pero FoxyProxy es una extensión muy... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html&gt;FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5&lt;/a&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="SocksDroid. Enrutando todo el tráfico de tu Android por servidores &nbsp;SOCKS5"&gt;
+&lt;br&gt;&lt;p&gt;Hay una versión para Android que es una versión actualizada de SocksDroid de PeterCxy. ... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-&nbsp-socks5.html&gt;SocksDroid. Enrutando todo el tráfico de tu Android por servidores &nbsp;SOCKS5&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -73,10 +106,10 @@
 </description>
     <pubDate>Thu, 30 Jun 2022  +0100</pubDate>
     <category>SOCKS5</category>
+    <category>android</category>
     <category>proxy</category>
     <category></category>
-    <category></category>
-    <guid>https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-&nbsp-socks5.html</guid>
    </item>
    <item>
     <title>Comandos sudo sin contraseña</title>
