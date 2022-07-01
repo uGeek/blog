@@ -1,5 +1,17 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Matar procesos con ps, sar, kill, killall, pkill',
+            'text': '** Qué procesos consumen más y como detenerlos', 
+            'tags': 'cpu,cpu,ram,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-01-matar-procesos-con-ps-sar-kill-killall-pkill.html' 
+},
+{
+            'title': 'SocksDroid. Enrutando todo el tráfico de tu Android por servidores SOCKS5',
+            'text': 'Hay una versión para Android que es una versión actualizada de SocksDroid de PeterCxy. ', 
+            'tags': 'SOCKS5,android,proxy,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-socks5.html' 
+},
+{
             'title': 'FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5',
             'text': 'Ya hemos creado el servidor para navegar mediante Proxy. Podemos acceder a la configuración de nuestro navegador y configurarlo para que navegue por Proxy, pero FoxyProxy es una extensión muy', 
             'tags': 'SOCKS5,proxy,,,,', 
@@ -10,12 +22,6 @@ var tipuesearch = {pages: [
             'text': 'Un servidor proxy puede ser muy útil para saltarte las restricciones a determinados servicios, canales de Telegram,... que estén bloqueados geográficamente o simplemente porque quieres mantener un cierto  anonimato y', 
             'tags': 'proxy,SOCKS5,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html' 
-},
-{
-            'title': 'SocksDroid. Enrutando todo el tráfico de tu Android por servidores SOCKS5',
-            'text': 'Hay una versión para Android que es una versión actualizada de SocksDroid de PeterCxy. ', 
-            'tags': 'SOCKS5,android,proxy,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-socks5.html' 
 },
 {
             'title': 'Comandos sudo sin contraseña',
@@ -1201,7 +1207,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
