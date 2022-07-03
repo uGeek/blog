@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="montar-un-usb-tarjeta-sd-disco-duro-o-ssd-formateado-en-ext4-fat32-o-ntfs-en-un-directorio-con-linux-1" title="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" data-export_file_name="" data-description="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." data-export_date="2020-10-07 07:30 2021-01-30" data-category="bash" data-tag="sd,ssd,usb" data-image="./images-blog/sd.png">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</h1>
-<h5>Tiempo estimado de lectura: 6 minutos. 684 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<h1 id="montar-un-usb-tarjeta-sd-disco-duro-o-ssd-formateado-en-ext4-fat32-o-ntfs-en-un-directorio-con-linux-1" title="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" data-export_file_name="" data-description="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." data-export_date="2020-10-07 07:30 2022-07-04" data-category="bash" data-tag="sd,ssd,usb" data-image="./images-blog/sd.png">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</h1>
+<h5>Tiempo estimado de lectura: 6 minutos. 718 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
 <p>He conectado 5 relés y 4 Discos Duros a mi Raspberry para hacer backups.</p>
 <center>
 <p><img src="../images-blog/sd.png" /></p>
@@ -178,8 +178,14 @@ $("#tipue_search_input").tipuesearch();
 <h3 id="montar-todos-los-discos-1">Montar todos los discos</h3>
 <p>Para montar todos los disco que hay en el archivo <code>/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
 <div class="sourceCode" id="cb29" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb29-1" title="1"><span class="fu">sudo</span> mount -a</a></code></pre></div>
+<h2 id="visudo">Visudo</h2>
+<p>Utilizando el comando visudo, podemos evitar el utilizar sudo cada vez que montamos o desmontamos un disco.</p>
+<pre><code>sudo visudo
+</code></pre>
+<p>Si el usuario es <strong>angel</strong>, agrega al final la siguiente línea:</p>
+<div class="sourceCode" id="cb31" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb31-1" title="1"><span class="ex">angel</span> ALL=(ALL) <span class="ex">NOPASSWD</span>:/usr/bin/mount,/usr/bin/umount</a></code></pre></div>
 <br>
-<p>Publicado por Angel el Wednesday 07 October del 2020 y <strong>actualizado</strong> el Saturday 30 January del 2021</p>
+<p>Publicado por Angel el Wednesday 07 October del 2020 y <strong>actualizado</strong> el Monday 04 July del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
