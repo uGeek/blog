@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Copiando en la terminal con barra de proceso',
+            'text': 'Voy a copiar un directorio de un disco duro a otro on más de 30Gb y al ver que la terminal no muestra ningún proceso, me pone nervioso porque no', 
+            'tags': 'bash,cp,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html' 
+},
+{
             'title': 'Matar procesos con ps, sar, kill, killall, pkill',
             'text': '** Qué procesos consumen más y como detenerlos', 
             'tags': 'cpu,cpu,ram,,,', 
@@ -1207,7 +1213,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

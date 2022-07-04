@@ -1,5 +1,5 @@
 <head>
-<title>notas</title>
+<title>Copiando en la terminal con barra de proceso. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,35 +47,71 @@ gtag("js", new Date())
 gtag("config", "");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>notas</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="copiando-en-la-terminal-con-barra-de-proceso-1" title="Copiando en la terminal con barra de proceso" data-export_file_name="copiando-en-la-terminal-con-barra-de-proceso" data-description="Voy a copiar un directorio de un disco duro a otro on más de 30Gb y al ver que la terminal no muestra ningún proceso, me pone nervioso porque no" data-export_date="2022-07-04 06:22" data-category="bash" data-tag="cp" data-image="./images-blog/ugeek.png">Copiando en la terminal con barra de proceso</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 211 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Voy a copiar un directorio de un disco duro a otro on más de 30Gb y al ver que la terminal no muestra ningún proceso, me pone nervioso porque no se cuando acabará de copiar. Así que vamos ha hacer uso de <strong>gcp</strong>, un paquete que nos va a permitir copiar desde la terminal con barra de proceso.</p>
+<p> </p>
+<h2 id="instalación">Instalación</h2>
+<p>El paquete está disponible desde los repositorios</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install gcp</a></code></pre></div>
+<p> </p>
+<h2 id="uso">Uso</h2>
+<p>Es exactamente igual que el comando <strong>cp</strong>, solo que <strong>gcp nos motrará el porcentaje de archivos copiados y tiempo restante.</strong></p>
+<p> </p>
+<p>Las opciones son las mismas que con el comando <strong>cp</strong>. Para copiar recursivamente utilizaremos la opción <code>-r</code></p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">gcp</span> -r directorio_origen directorio_destino</a></code></pre></div>
+<br>
+<p>Publicado por Angel el Monday 04 July del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html>Instala la última versión de Pandoc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html>Exportando tu Notas de Google Keep a Org Mode o Markdown</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html>Eliminar comentarios de nuestros script</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html>Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-01-orgmode-buscar-solo-en-las-cabeceras.html>OrgMode: Buscar solo en las Cabeceras</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html>Instalando una Dokuwiki en 4 pasos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html>Simplenote en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-21-qtodotxt.html>QTodoTxt. todo.txt en tu escritorio</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-01-backup-de-mis-notas-de-paper-dropbox.html>Backup de mis Notas de Paper Dropbox</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-22-orzly-tus-orgmode-syncronizados-por-webdav.html>Orzly. Tus OrgMode syncronizados por WebDav</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html>Bullet Journal Digital en OrgMode</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-02-26-simplenote-para-terminal-sncli.html>Simplenote para terminal. Sncli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html>Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html>Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html>Trilium. Notas jerárquicas en Markdown</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html>nncli. Notas desde el terminal con Nextcloud Notes</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-05-07-joplin-para-terminal-llega-a-snap.html>Joplin para terminal, llega a snap</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-01-10-zettel-notes-la-mejor-aplicacion-de-notas-para-android-con-atajos-de-teclado.html>Zettel Notes. La mejor aplicación de Notas para Android con atajos de Teclado</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-01-11-cifrar-notas-en-zettel-notes-con-openkeychain.html>Cifrar Notas en Zettel Notes con OpenKeychain</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-01-13-exportar-e-importar-claves-de-openkeychain.html>Exportar e importar claves de OpenKeychain</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html>Reemplazar texto de uno o varios archivos con dired en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html>Docker: Trilium Oficial</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html">Comandos sudo sin contraseña</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html">Bash en Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-24-vizex.html">Vizex. Ver almacenamiento disponible y ocupado de tus discos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,… desde la terminal</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
