@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html' 
 },
 {
+            'title': 'Navegando sin publicidad con Blocky, SOCKS5 y Wireguard&nbsp;',
+            'text': ' ', 
+            'tags': 'blocky,wireguard,SOCKS5,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard&nbsp-.html' 
+},
+{
             'title': 'Matar procesos con ps, sar, kill, killall, pkill',
             'text': '** Qué procesos consumen más y como detenerlos', 
             'tags': 'cpu,cpu,ram,,,', 

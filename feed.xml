@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 04 Jul 2022  +0100</pubDate>
+    <pubDate>Mon, 04 Jul 2022 06:55 +0100</pubDate>
     <category>bash</category>
     <category>cp</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html</guid>
+   </item>
+   <item>
+    <title>Navegando sin publicidad con Blocky, SOCKS5 y Wireguard&nbsp;</title>
+    <link>https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard&nbsp-.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Navegando sin publicidad con Blocky, SOCKS5 y Wireguard&nbsp;"&gt;
+&lt;br&gt;&lt;p&gt; ... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard&nbsp-.html&gt;Navegando sin publicidad con Blocky, SOCKS5 y Wireguard&nbsp;&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 04 Jul 2022  +0100</pubDate>
+    <category>blocky</category>
+    <category>wireguard</category>
+    <category>SOCKS5</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard&nbsp-.html</guid>
    </item>
    <item>
     <title>Matar procesos con ps, sar, kill, killall, pkill</title>
