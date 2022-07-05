@@ -13,6 +13,72 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Tunel SSH para conectar puertos remotos como si fuera local</title>
+    <link>https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Tunel SSH para conectar puertos remotos como si fuera local"&gt;
+&lt;br&gt;&lt;p&gt;En este proceso lo más importante, es tener en el directorio *.ssh* de tu usuario *root*, los archivos de configuración para acceder al servidor remoto. Piensa que para desviar los... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html&gt;Tunel SSH para conectar puertos remotos como si fuera local&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 05 Jul 2022  +0100</pubDate>
+    <category>ssh</category>
+    <category>puertos</category>
+    <category>tunel</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html</guid>
+   </item>
+   <item>
+    <title>Navegando sin publicidad con Blocky, SOCKS5 y Wireguard</title>
+    <link>https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Navegando sin publicidad con Blocky, SOCKS5 y Wireguard"&gt;
+&lt;br&gt;&lt;p&gt; ... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard.html&gt;Navegando sin publicidad con Blocky, SOCKS5 y Wireguard&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 04 Jul 2022 07:32 +0100</pubDate>
+    <category>blocky</category>
+    <category>wireguard</category>
+    <category>SOCKS5</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard.html</guid>
+   </item>
+   <item>
     <title>Copiando en la terminal con barra de proceso</title>
     <link>https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html</link>
     <description>
@@ -44,39 +110,6 @@
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html</guid>
-   </item>
-   <item>
-    <title>Navegando sin publicidad con Blocky, SOCKS5 y Wireguard</title>
-    <link>https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Navegando sin publicidad con Blocky, SOCKS5 y Wireguard"&gt;
-&lt;br&gt;&lt;p&gt; ... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard.html&gt;Navegando sin publicidad con Blocky, SOCKS5 y Wireguard&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Mon, 04 Jul 2022  +0100</pubDate>
-    <category>blocky</category>
-    <category>wireguard</category>
-    <category>SOCKS5</category>
-    <category></category>
-    <guid>https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard.html</guid>
    </item>
    <item>
     <title>Matar procesos con ps, sar, kill, killall, pkill</title>
@@ -6716,7 +6749,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

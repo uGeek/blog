@@ -1,5 +1,5 @@
 <head>
-<title>Enviar clave SSH al servidor, para no utilizar la contraseña. uGeek Blog </title>
+<title>Tunel SSH para conectar puertos remotos como si fuera local. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña." />
+<meta name="description" content="En este proceso lo más importante, es tener en el directorio *.ssh* de tu usuario *root*, los archivos de configuración para acceder al servidor remoto. Piensa que para desviar los" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Enviar clave SSH al servidor, para no utilizar la contraseña" />
-<meta property="og:description" content="Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html" />
+<meta property="og:title" content="Tunel SSH para conectar puertos remotos como si fuera local" />
+<meta property="og:description" content="En este proceso lo más importante, es tener en el directorio *.ssh* de tu usuario *root*, los archivos de configuración para acceder al servidor remoto. Piensa que para desviar los" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html" />
 
-<meta name="twitter:title" content="Enviar clave SSH al servidor, para no utilizar la contraseña" />
-<meta name="twitter:description" content="Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta name="twitter:title" content="Tunel SSH para conectar puertos remotos como si fuera local" />
+<meta name="twitter:description" content="En este proceso lo más importante, es tener en el directorio *.ssh* de tu usuario *root*, los archivos de configuración para acceder al servidor remoto. Piensa que para desviar los" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,25 +85,39 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="enviar-clave-ssh-al-servidor-para-no-utilizar-la-contraseña-1" title="Enviar clave SSH al servidor, para no utilizar la contraseña" data-export_file_name="enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena" data-description="Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña." data-export_date="2022-02-15 07:40" data-category="ssh" data-tag="terminal" data-image="./images-blog/bash.png">Enviar clave SSH al servidor, para no utilizar la contraseña</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 287 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
-<p>Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña.</p>
-<p>Esto lo hacemos intercambiando las claves entre cliente y servidor. Cada vez que un cliente quiere conectarse, el servidor verirfica que este cliente está en el listado de clientes permitidos y si es así, permite el acceso.</p>
-<p>Vamos a ver como generar la clave pública del cliente para enviar la servidor y como enviarla.</p>
-<center>
-<p><img src="../images-blog/bash.png" /></p>
-</center>
-<h2 id="generar-claves-público-privada">Generar claves público privada</h2>
-<p>Primero generaremos las claves de nuestra máquina local:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">ssh-keygen</span></a></code></pre></div>
-<p>Ahora ya tenemos una clave única que identificará nuestro cliente. Vamos a enviarla al servidor</p>
-<h2 id="enviar-clave-pública-al-servidor">Enviar clave pública al servidor</h2>
-<p>Enviar la llave publica al servidor es tan sencillo como:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">ssh-copy-id</span> -i ~/.ssh/id_rsa angel@192.168.1.100</a></code></pre></div>
-<p>Recuerda que en este ejemplo <strong>angel@192.168.1.100</strong> es el usuario e IP de mi servidor.</p>
-<p>El servidor nos pedirá la contraseña para conectarnos. Una vez introducida, el servidor guardará la llave pública en su listado de clientes permitidos y ya no nos volverá a pedir la contraseña nunca más.</p>
+<h1 id="tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local-1" title="Tunel SSH para conectar puertos remotos como si fuera local" data-export_file_name="tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local" data-description="En este proceso lo más importante, es tener en el directorio *.ssh* de tu usuario *root*, los archivos de configuración para acceder al servidor remoto. Piensa que para desviar los" data-export_date="2022-07-05 07:32" data-category="ssh" data-tag="puertos,tunel" data-image="./images-blog/ugeek.png">Tunel SSH para conectar puertos remotos como si fuera local</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 353 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<p>En este proceso lo más importante, es tener en el directorio <strong>.ssh</strong> de tu usuario <strong>root</strong>, los archivos de configuración para acceder al servidor remoto. Piensa que para desviar los puertos remotos del servidor a nuestro PC, es necesario tener permisos de super usuario y la conexión se hará mediante el usuario <strong>root</strong>.</p>
+<p> </p>
+<p>Un truquillo si el PC es tuyo y no quieres complicarte configurando nuevamente el servidor SSH, sería copiar el directorio .ssh de tu usuario al del usuario root.</p>
+<p> </p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">cp</span> -r ~/.ssh /root/.ssh</a></code></pre></div>
+<p> </p>
+<p> </p>
+<p>Si utilizas <strong>Ubuntu</strong>, para cambiar al usuario <strong>root</strong> con:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> su</a></code></pre></div>
+<p> </p>
+<p>\ En el archivo de configuración <strong>config</strong> dentro del directorio <strong>.ssh</strong>, he añadido la conexión a mi <strong>vps</strong> con el nombre <strong>vps</strong>.  </p>
+<p> </p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">Host</span> vps</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="ex">Hostname</span> 111.222.33.444</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="ex">IdentityFile</span> ~/.ssh/id_rsa</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="ex">IdentitiesOnly</span> yes</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="ex">User</span> ubuntu</a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="ex">Port</span> 22</a></code></pre></div>
+<p> </p>
+<h2 id="creando-el-tunel">Creando el tunel</h2>
+<p>Ahora vamos a enlazar un puerto remoto del vps con el puerto local.</p>
+<p> </p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> ssh vps -fNL 89:localhost:85</a></code></pre></div>
+<p>  \ El puerto local <strong>89</strong> lo conecto con mi <strong>vps</strong> al puerto <strong>85</strong>.                                                                                               </p>
+<ul>
+<li><strong>f</strong> para ejecutar el comando <strong>ssh</strong> en segundo plano</li>
+<li><strong>N</strong> no ejecuta ningún comando en remoto</li>
+<li><strong>L</strong> especifica la conexión</li>
+</ul>
 <br>
-<p>Publicado por Angel el Tuesday 15 February del 2022</p>
+<p>Publicado por Angel el Tuesday 05 July del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
