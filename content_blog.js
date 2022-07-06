@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Vinagre. Cliente VNC para Linux',
+            'text': 'Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía', 
+            'tags': 'vnc,escritorio,aplicaciones,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-06-vinagre-cliente-vnc-para-linux.html' 
+},
+{
             'title': 'Tunel SSH para conectar puertos remotos como si fuera local',
             'text': 'En este proceso lo más importante, es tener en el directorio *.ssh* de tu usuario *root*, los archivos de configuración para acceder al servidor remoto. Piensa que para desviar los', 
             'tags': 'ssh,puertos,tunel,,,', 
@@ -1225,7 +1231,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

@@ -1,5 +1,5 @@
 <head>
-<title>termux</title>
+<title>Vinagre. Cliente VNC para Linux. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,15 +47,80 @@ gtag("js", new Date())
 gtag("config", "");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>termux</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="vinagre.-cliente-vnc-para-linux-1" title="Vinagre. Cliente VNC para Linux" data-export_file_name="vinagre-cliente-vnc-para-linux" data-description="Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía" data-export_date="2022-07-06 05:18" data-category="vnc" data-tag="escritorio,aplicaciones" data-image="./images-blog/ugeek.png">Vinagre. Cliente VNC para Linux</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 203 palabras.    <a href="https://ugeek.github.io/blog/categories/vnc">vnc</a></h5>
+<p>Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía antiguamente por defecto en Ubuntu.</p>
+<h2 id="conexiones">Conexiones</h2>
+<ol>
+<li>VNC: Virtual Network Computing</li>
+<li>RDP: protocolo de escritorio remoto. Remote Desktop Protocol</li>
+<li>SPICE: Simple Protocol for Independent Computing Environments</li>
+<li>SSH: Secure Shell</li>
+</ol>
+<p> </p>
+<h2 id="características">Características</h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html>Emacs en Android</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html>Termux. Una distro Linux en Android con la que crear tus aplicaciones</a></li>
+<li>Se pueden realizar múltiples conexiones, cada una tiene su propia pestaña.</li>
+<li>Las contraseñas para las conexiones se pueden recordar.</li>
+<li>Las conexiones se pueden marcar.</li>
+<li>La pantalla completa se activa o desactiva presionando F11.</li>
+<li>Puede guardar capturas de pantalla de la conexión actual.</li>
+</ul>
+<p> </p>
+<p> </p>
+<h2 id="instalación">Instalación</h2>
+<p> </p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install vinagre</a></code></pre></div>
+<p> </p>
+<h2 id="uso">Uso</h2>
+<p>Desde la terminal podemos arrancar <strong>vinagre</strong> en pantalla completa con:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">vinagre</span> -f 192.168.1.102:5901</a></code></pre></div>
+<p>Si no quieres lanzarlo desde la terminal, búscalo en el menú de tu distro como <strong>Visor de escritorio remoto</strong> en un lanzador de aplicaciones escribe <strong>vinagre</strong>.</p>
+<br>
+<p>Publicado por Angel el Wednesday 06 July del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-18-remmina-de-los-mejores-clientes-vnc.html">Remmina. De los mejores Clientes VNC</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
