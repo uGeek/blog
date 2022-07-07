@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Detener los discos duros mecánicos en Linux</title>
+    <link>https://ugeek.github.io/blog/post/2022-07-07-detener-los-discos-duros-mecanicos-en-linux.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Detener los discos duros mecánicos en Linux"&gt;
+&lt;br&gt;&lt;p&gt;Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-07-07-detener-los-discos-duros-mecanicos-en-linux.html&gt;Detener los discos duros mecánicos en Linux&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 07 Jul 2022  +0100</pubDate>
+    <category>hdd</category>
+    <category>discos_duros</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-07-07-detener-los-discos-duros-mecanicos-en-linux.html</guid>
+   </item>
+   <item>
     <title>Vinagre. Cliente VNC para Linux</title>
     <link>https://ugeek.github.io/blog/post/2022-07-06-vinagre-cliente-vnc-para-linux.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 06 Jul 2022  +0100</pubDate>
+    <pubDate>Wed, 06 Jul 2022 05:15 +0100</pubDate>
     <category>vnc</category>
     <category>escritorio</category>
     <category>aplicaciones</category>

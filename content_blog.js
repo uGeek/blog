@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Detener los discos duros mecánicos en Linux',
+            'text': 'Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene', 
+            'tags': 'hdd,discos_duros,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-07-detener-los-discos-duros-mecanicos-en-linux.html' 
+},
+{
             'title': 'Vinagre. Cliente VNC para Linux',
             'text': 'Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía', 
             'tags': 'vnc,escritorio,aplicaciones,,,', 
