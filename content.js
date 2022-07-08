@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'ioping. Midiendo la latencia de nuestro disco duro',
+            'text': ' ', 
+            'tags': 'hdd,disco_duro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-08-ioping-midiendo-la-latencia-de-nuestro-disco-duro.html' 
+},
+{
             'title': 'Detener los discos duros mecánicos en Linux',
             'text': 'Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene', 
             'tags': 'hdd,discos_duros,,,,', 
