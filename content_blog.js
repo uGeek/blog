@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'uBlock Origin. . Bloqueando publicidad en tu navegador',
+            'text': 'uBlock Origin es una extensión de navegador gratuita y de código abierto para el filtrado de contenido, incluido el bloqueo de anuncios. La extensión está disponible para Chrome, Chromium, Edge,', 
+            'tags': 'ads,blocky,publicidad,addons,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-09-ublock-origin--bloqueando-publicidad-en-tu-navegador.html' 
+},
+{
             'title': 'ioping. Midiendo la latencia de nuestro disco duro',
             'text': ' ', 
             'tags': 'hdd,disco_duro,,,,', 
