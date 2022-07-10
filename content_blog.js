@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'TigerVNC. El cliente vnc más liviano',
+            'text': 'En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC.', 
+            'tags': 'vnc,cliente,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-10-tigervnc-el-cliente-vnc-mas-liviano.html' 
+},
+{
             'title': 'uBlock Origin. . Bloqueando publicidad en tu navegador',
             'text': 'uBlock Origin es una extensión de navegador gratuita y de código abierto para el filtrado de contenido, incluido el bloqueo de anuncios. La extensión está disponible para Chrome, Chromium, Edge,', 
             'tags': 'ads,blocky,publicidad,addons,,', 

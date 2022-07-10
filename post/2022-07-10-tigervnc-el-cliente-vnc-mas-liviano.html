@@ -1,5 +1,5 @@
 <head>
-<title>Vinagre. Cliente VNC para Linux. uGeek Blog </title>
+<title>TigerVNC. El cliente vnc más liviano. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía" />
+<meta name="description" content="En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Vinagre. Cliente VNC para Linux" />
-<meta property="og:description" content="Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía" />
+<meta property="og:title" content="TigerVNC. El cliente vnc más liviano" />
+<meta property="og:description" content="En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC." />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-07-06-vinagre-cliente-vnc-para-linux.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-07-10-tigervnc-el-cliente-vnc-mas-liviano.html" />
 
-<meta name="twitter:title" content="Vinagre. Cliente VNC para Linux" />
-<meta name="twitter:description" content="Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía" />
+<meta name="twitter:title" content="TigerVNC. El cliente vnc más liviano" />
+<meta name="twitter:description" content="En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC." />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
@@ -85,37 +85,42 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="vinagre.-cliente-vnc-para-linux-1" title="Vinagre. Cliente VNC para Linux" data-export_file_name="vinagre-cliente-vnc-para-linux" data-description="Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía" data-export_date="2022-07-06 05:18" data-category="vnc" data-tag="escritorio,aplicaciones" data-image="./images-blog/ugeek.png">Vinagre. Cliente VNC para Linux</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 209 palabras.    <a href="https://ugeek.github.io/blog/categories/vnc">vnc</a></h5>
-<p>Un cliente VNC creado por el proyecto GNOME que te permite conectarte a un escritorio que se ha compartido en otro PC. Vinagre es uno de los clientes que venía antiguamente por defecto en Ubuntu.</p>
-<h2 id="conexiones">Conexiones</h2>
-<ol>
-<li>VNC: Virtual Network Computing</li>
-<li>RDP: protocolo de escritorio remoto. Remote Desktop Protocol</li>
-<li>SPICE: Simple Protocol for Independent Computing Environments</li>
-<li>SSH: Secure Shell</li>
-</ol>
-<p> </p>
-<h2 id="características">Características</h2>
-<ul>
-<li>Se pueden realizar múltiples conexiones, cada una tiene su propia pestaña.</li>
-<li>Las contraseñas para las conexiones se pueden recordar.</li>
-<li>Las conexiones se pueden marcar.</li>
-<li>La pantalla completa se activa o desactiva presionando F11.</li>
-<li>Puede guardar capturas de pantalla de la conexión actual.</li>
-</ul>
-<p> </p>
-<p> </p>
+<h1 id="tigervnc.-el-cliente-vnc-más-liviano-1" title="TigerVNC. El cliente vnc más liviano" data-export_file_name="tigervnc-el-cliente-vnc-mas-liviano" data-description="En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC." data-export_date="2022-07-10 05:15" data-category="vnc" data-tag="cliente" data-image="./images-blog/ugeek.png">TigerVNC. El cliente vnc más liviano</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 316 palabras.    <a href="https://ugeek.github.io/blog/categories/vnc">vnc</a></h5>
+<p>En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC.</p>
+<p>Lo más interesante de este cliente, es que el cliente funciona a pantalla completa mostrando el escritorio remoto, maximizando la pantalla sin ningún tipo de pestaña, teniendo la sensación de trabajar directamente en el PC remoto  saliendo solo  pulsando la tecla <strong>F8</strong>.</p>
 <h2 id="instalación">Instalación</h2>
-<p> </p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install vinagre</a></code></pre></div>
-<p> </p>
+<p>Podemos encontrar TigerVNC en los repositorios de ubunutu</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt-get install -y tigervnc-viewer</a></code></pre></div>
+<p>Para introducir la contraseña en formato texto con un único comando, es necesario instalar el paquete <code>tigervnc-common</code></p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> apt install tigervnc-common</a></code></pre></div>
+<h2 id="abrir-tigervnc">Abrir TigerVNC</h2>
+<p>Tan sencillo como lanzar el comando desde nuestro escritorio.</p>
+<p>Si queremos hacerlo desde la terminal, podemos entrar directamente a nuestro servidor vnc del siguiente modo:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">vncviewer</span> 192.168.1.102:5901 -passwd <span class="op">&lt;(</span><span class="bu">echo</span> <span class="st">&quot;contraseña&quot;</span> <span class="kw">|</span> <span class="ex">vncpasswd</span> -f<span class="op">)</span></a></code></pre></div>
+<p>En este ejemplo, el servidor está corriendo por el puerto <code>5901</code> y la ip del servidor es <code>192.168.1.102</code></p>
+<p>Haciendo de este modo, creando por ejemplo un alias, entraremos directetamente a nuestro escritorio remoto con <strong>VNC</strong></p>
+<p>Si deseas lanzar en pantalla completa, es necesario utilizar la opción <code>-FullScreenMode</code></p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">vncviewer</span> 192.168.1.102:5901 -passwd <span class="op">&lt;(</span><span class="bu">echo</span> <span class="st">&quot;contraseña&quot;</span> <span class="kw">|</span> <span class="ex">vncpasswd</span> -f<span class="op">)</span> -FullScreen</a></code></pre></div>
 <h2 id="uso">Uso</h2>
-<p>Desde la terminal podemos arrancar <strong>vinagre</strong> en pantalla completa con:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">vinagre</span> -f 192.168.1.102:5901</a></code></pre></div>
-<p>Si no quieres lanzarlo desde la terminal, búscalo en el menú de tu distro como <strong>Visor de escritorio remoto</strong> en un lanzador de aplicaciones escribe <strong>vinagre</strong>.</p>
+<p><strong>F8</strong> es la tecla que te permitirá acceder al menú de TigerVNC. <strong>F8</strong> también es la tecla <strong>para salir del escritorio remoto</strong>.</p>
+<p>Atajos:</p>
+<ul>
+<li>*F8*+ <strong>f</strong> = Pantalla completa</li>
+</ul>
+<h2 id="el-cursor-desaparece">El cursor desaparece</h2>
+<p>Si desaparece el cursor dependiendo del escritorio que utilices, puedes habilitar el cursor de <strong>TigerVNC</strong> que es un punto. Para ello, pulsando <strong>F8</strong>, seleccionaremos la pestaña <strong>Misc.</strong> de Miscelánea y marcaremos la opción <code>Show dot when no cursor</code>. </p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://tigervnc.org/">https://tigervnc.org/</a></li>
+<li><a href="https://tigervnc.org/doc/vncviewer.html">https://tigervnc.org/doc/vncviewer.html</a></li>
+<li><a href="https://github.com/TigerVNC/tigervnc/wiki">https://github.com/TigerVNC/tigervnc/wiki</a></li>
+<li><a href="https://tigervnc.org/doc/vncpasswd.html">https://tigervnc.org/doc/vncpasswd.html</a></li>
+<li><a href="https://wiki.archlinux.org/title/TigerVNC">https://wiki.archlinux.org/title/TigerVNC</a></li>
+<li><a href="https://github.com/TigerVNC/tigervnc">https://github.com/TigerVNC/tigervnc</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el Wednesday 06 July del 2022</p>
+<p>Publicado por Angel el Sunday 10 July del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
