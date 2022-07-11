@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Conduit. El matrix escrito en rust',
+            'text': 'Conduit es un servidor de Matrix rápido y fácil de configurar, que simplemente funciona. ', 
+            'tags': 'matrix,rust,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-11-conduit-el-matrix-escrito-en-rust.html' 
+},
+{
             'title': 'TigerVNC. El cliente vnc más liviano',
             'text': 'En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC.', 
             'tags': 'vnc,cliente,,,,', 
