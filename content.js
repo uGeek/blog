@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Opciones de tiempo en el comando sleep en bash',
+            'text': 'Cuando haces un script y quieres que se detenga durante un tiempo, utilizamos el comando =sleep=. ', 
+            'tags': 'bash,sleep,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html' 
+},
+{
             'title': 'Conduit. El matrix escrito en rust',
             'text': 'Conduit es un servidor de Matrix rápido y fácil de configurar, que simplemente funciona. ', 
             'tags': 'matrix,rust,,,,', 
