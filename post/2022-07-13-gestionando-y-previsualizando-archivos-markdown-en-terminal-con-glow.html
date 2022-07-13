@@ -1,5 +1,5 @@
 <head>
-<title>Trilium. Notas jerárquicas en Markdown. uGeek Blog </title>
+<title>Gestionando y previsualizando archivos markdown en terminal con glow. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
+<meta name="description" content="Glow es un lector para la gestión y previsualización de un modo bonito de archivos markdown. " />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Trilium. Notas jerárquicas en Markdown" />
-<meta property="og:description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/trilium.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html" />
+<meta property="og:title" content="Gestionando y previsualizando archivos markdown en terminal con glow" />
+<meta property="og:description" content="Glow es un lector para la gestión y previsualización de un modo bonito de archivos markdown. " />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-07-13-gestionando-y-previsualizando-archivos-markdown-en-terminal-con-glow.html" />
 
-<meta name="twitter:title" content="Trilium. Notas jerárquicas en Markdown" />
-<meta name="twitter:description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/trilium.png" />
+<meta name="twitter:title" content="Gestionando y previsualizando archivos markdown en terminal con glow" />
+<meta name="twitter:description" content="Glow es un lector para la gestión y previsualización de un modo bonito de archivos markdown. " />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,66 +85,67 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="trilium.-notas-jerárquicas-en-markdown-1" title="Trilium. Notas jerárquicas en Markdown" data-export_file_name="trilium-notas-jerarquicas-en-markdown" data-description="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" data-export_date="2020-12-25 20:41 2022-03-18" data-category="markdown" data-tag="servidor" data-image="./images-blog/trilium.png">Trilium. Notas jerárquicas en Markdown</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 360 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
-<p>Quizás ha llegado el momento de tomar notas para seres humanos, voy a hablar de Trilum.</p>
-<p>Trilium es un método jerárquico para tomar notas, tareas,… donde estás se gestionan con un método jerarquico como el orgmode y las podemos exportar a posterior a HTML, Markdown o incluso imprimirlas en pdf. </p>
-<center>
-<p><img src="../images-blog/trilium.png" /></p>
-</center>
-<p>El método para introducir el texto es mediante la sintaxis markdown.</p>
-<p>He probado diferentes dockers para la arquitectura amd64 y ARM así que finalmente me quedo con él dockers oficial para amd64 y otro que he encontrado de "hlince" para arm, que funciona muy bien en Raspberry.</p>
-<h2 id="docker-amd64">Docker amd64</h2>
-<p>El docker oficial y más actualizado para amd64 es:</p>
-<pre class="example"><code>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data zadam/trilium
-</code></pre>
-<p>Servicio disponible por el puerto en este ejemplo 99.</p>
+<h1 id="gestionando-y-previsualizando-archivos-markdown-en-terminal-con-glow-1" title="Gestionando y previsualizando archivos markdown en terminal con glow" data-export_file_name="gestionando-y-previsualizando-archivos-markdown-en-terminal-con-glow" data-description="Glow es un lector para la gestión y previsualización de un modo bonito de archivos markdown. " data-export_date="2022-07-13 05:45" data-category="markdown" data-tag="editor" data-image="./images-blog/ugeek.png">Gestionando y previsualizando archivos markdown en terminal con glow</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 332 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
+<p>Glow es un lector para la gestión y previsualización de un modo bonito de archivos markdown. </p>
+<p>Escrito desde cero en Go, Glow destaca por su velocidad en la indexación de notas. Te enamoraras de esta aplicación en segundos.</p>
+<p>Sitúate en el directorio donde están tus notas y abre Glow. Ahora disfruta de tus archivos markdown desde la terminal.</p>
+<p> </p>
+<h2 id="instalación">Instalación</h2>
+<p>Instalación en Ubuntu, debian, Raspberry OS,…</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">echo</span> <span class="st">&#39;deb [trusted=yes] https://repo.charm.sh/apt/ /&#39;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/charm.list</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt install glow</a></code></pre></div>
+<p>Más sistemas operativos en: <a href="https://github.com/charmbracelet/glow">https://github.com/charmbracelet/glow</a></p>
+<p>también podemos instalarlo en Android con Termux:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">pkg</span> install glow</a></code></pre></div>
+<p> </p>
+<h2 id="uso">Uso</h2>
+<h3 id="previsualización-de-un-archivo">Previsualización de un archivo</h3>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">glow</span> README.md</a></code></pre></div>
+<p> </p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">cat</span> README.md <span class="kw">|</span> <span class="ex">glow</span> -</a></code></pre></div>
+<p> </p>
+<h3 id="previsualización-de-un-directorio">Previsualización de un directorio</h3>
+<p>Sitúate en el directorio donde están tus notas y abre Glow.</p>
 <ul>
-<li><a href="https://github.com/zadam/trilium/wiki/Docker-server-installation">https://github.com/zadam/trilium/wiki/Docker-server-installation</a></li>
+<li>Con la tecla <code>?</code> podrás ver los atajos.</li>
+<li>Con <code>/</code> , podrás buscar recursivamente en tus markdown</li>
+<li>Con <code>q</code> , salir</li>
 </ul>
-<p>Fork ugeek</p>
-<p>Servicio disponible por el puerto en este ejemplo 99.</p>
-<h2 id="docker-con-proxy-inverso-con-caddy">Docker con Proxy Inverso con Caddy</h2>
-<p>1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen</p>
-<pre><code>#volumes:
-#  - ./trilium-data:/home/node/trilium-data
-</code></pre>
-<p>2.- Una vez iniciado del docker, copia el volumen trilium-data en el host</p>
-<p>docker cp trilium:/home/node/trilium-data ./trilium-data</p>
-<p>3.- Descomenta quitando las almohadillas y vuelve a crear el docker con el directorio de trilium-data</p>
-<pre><code>version: &#39;2.1&#39;
-services:
-  trilium:
-    image: zadam/trilium
-    restart: always
-    container_name: trilium
-    ports:
-      - &quot;8080:8080&quot;
-    volumes:
-      - ./trilium-data:/home/node/trilium-data
-    networks:
-      - DockerLAN
-
-
-###########
-## REDES ##
-###########
-networks:
-  DockerLAN:  ## Red bridge propia ##
-    name: DockerLAN
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.20.0.0/24
-</code></pre>
-<h2 id="fuentes">Fuentes</h2>
+<p> </p>
+<h2 id="leyendo-los-markdown-de-repositorios-git">Leyendo los markdown de repositorios git</h2>
+<p> </p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="co"># Fetch README from GitHub / GitLab</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="ex">glow</span> github.com/charmbracelet/glow</a>
+<a class="sourceLine" id="cb5-3" title="3"></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="co"># Fetch markdown from HTTP</span></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="ex">glow</span> https://host.tld/file.md</a></code></pre></div>
+<p> </p>
+<h2 id="limitar-el-ancho">Limitar el ancho</h2>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">glow</span> -w 80</a></code></pre></div>
+<h2 id="archivo-de-configuración">Archivo de configuración</h2>
+<p>Por defecto el archivo de configuración está en <code>~/.config/glow/glow.yml</code>. </p>
+<p>No es necesario crearlo, a no ser que quieras tenerlo personalizado.</p>
+<p>Este es un ejemplo de archivo de configuración:</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="co"># style name or JSON path (default &quot;auto&quot;)</span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="ex">style</span>: <span class="st">&quot;light&quot;</span></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="co"># show local files only; no network (TUI-mode only)</span></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="ex">local</span>: true</a>
+<a class="sourceLine" id="cb7-5" title="5"><span class="co"># mouse support (TUI-mode only)</span></a>
+<a class="sourceLine" id="cb7-6" title="6"><span class="ex">mouse</span>: true</a>
+<a class="sourceLine" id="cb7-7" title="7"><span class="co"># use pager to display markdown</span></a>
+<a class="sourceLine" id="cb7-8" title="8"><span class="ex">pager</span>: true</a>
+<a class="sourceLine" id="cb7-9" title="9"><span class="co"># word-wrap at width</span></a>
+<a class="sourceLine" id="cb7-10" title="10"><span class="ex">width</span>: 80</a></code></pre></div>
+<p> </p>
+<h2 id="fuente">Fuente</h2>
 <ul>
-<li><a href="https://github.com/zadam/trilium">https://github.com/zadam/trilium</a></li>
-<li><a href="https://www.electronjs.org/apps/trilium-notes">https://www.electronjs.org/apps/trilium-notes</a></li>
+<li><a href="https://github.com/charmbracelet/glow">https://github.com/charmbracelet/glow</a></li>
 </ul>
+<p> </p>
+<p> </p>
 <br>
-<p>Publicado por Angel el Friday 25 December del 2020 y <strong>actualizado</strong> el Friday 18 March del 2022</p>
+<p>Publicado por Angel el Wednesday 13 July del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

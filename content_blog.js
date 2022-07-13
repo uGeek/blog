@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Gestionando y previsualizando archivos markdown en terminal con glow',
+            'text': 'Glow es un lector para la gestión y previsualización de un modo bonito de archivos markdown. ', 
+            'tags': 'markdown,editor,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-07-13-gestionando-y-previsualizando-archivos-markdown-en-terminal-con-glow.html' 
+},
+{
             'title': 'Opciones de tiempo en el comando sleep en bash',
             'text': 'Cuando haces un script y quieres que se detenga durante un tiempo, utilizamos el comando =sleep=. ', 
             'tags': 'bash,sleep,,,,', 
