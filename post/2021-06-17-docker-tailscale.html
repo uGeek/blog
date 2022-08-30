@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker.-tailscale-1" title="Docker. Tailscale" data-export_file_name="docker-tailscale" data-description="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en" data-export_date="2021-06-17 19:40" data-category="docker" data-tag="zerotier,red,virtual" data-image="./images-blog/tailscale.png">Docker. Tailscale</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 466 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h1 id="docker.-tailscale-1" title="Docker. Tailscale" data-export_file_name="docker-tailscale" data-description="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en" data-export_date="2021-06-17 19:40 2022-08-30" data-category="docker" data-tag="zerotier,red,virtual" data-image="./images-blog/tailscale.png">Docker. Tailscale</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 531 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,… amd64, ARM,…), en minutos, creando una red segura entre tus servidores, PC's de escritorio e instancias en la nube. Incluso cuando está detrás de firewalls o subredes como un CG-NAT o un NAT, Tailscale simplemente funciona.</p>
 <center>
 <p><img src="../images-blog/tailscale.png" /></p>
@@ -122,15 +122,34 @@ $("#tipue_search_input").tipuesearch();
 </ol>
 <h3 id="docker">Docker</h3>
 <p>Yo he creado desde el repositorio de GitHub esta imagen (ugeek/tailscale:amd64), pero tu puedes utilizar también la tuya propia.</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">docker</span> run -d --name=tailscaled   --restart unless-stopped -v /var/lib:/var/lib -v /dev/net/tun:/dev/net/tun --network=host --privileged ugeek/tailscale:amd64 tailscaled</a></code></pre></div>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">docker</span> run -d --name=tailscale   --restart unless-stopped -v /var/lib:/var/lib -v /dev/net/tun:/dev/net/tun --network=host --privileged ugeek/tailscale:amd64 tailscaled</a></code></pre></div>
+<h3 id="docker-compose">Docker Compose</h3>
+<pre><code>version: &quot;2.4&quot;
+services:
+  tailscale:
+      privileged: true
+      hostname: rp4                                          # Nombre de tu dispositivo
+      network_mode: &quot;host&quot;
+      container_name: tailscale
+      image: tailscale/tailscale:latest
+      volumes:
+          - &quot;/opt/appdata/tailscale/var_lib:/var/lib&quot;        # Los datos de estado se almacenaran en el directorio
+          - &quot;/dev/net/tun:/dev/net/tun&quot;                      # necesario para que tailscale funcione
+      cap_add:                                               # necesario para que tailscale funcione
+        - net_admin
+        - sys_module
+      command: tailscaled
+      restart: unless-stopped
+
+</code></pre>
 <ol>
 <li><p>Logearnos</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">docker</span> exec tailscaled tailscale up</a></code></pre></div></li>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">docker</span> exec tailscale tailscale up</a></code></pre></div></li>
 <li><p>Status</p>
 <p>Para ver todos los dispositivos de tu red y sus IP's:</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">docker</span> exec tailscaled tailscale status</a></code></pre></div></li>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">docker</span> exec tailscale tailscale status</a></code></pre></div></li>
 <li><p>Tu IP en Tailscale</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">docker</span> exec -t tailscaled ip addr show tailscale0</a></code></pre></div></li>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">docker</span> exec -t tailscale ip addr show tailscale0</a></code></pre></div></li>
 </ol>
 <h3 id="otros-sistemas-operativos">Otros Sistemas Operativos</h3>
 <p>Puedes acceder a la web de <a href="https://tailscale.com">https://tailscale.com</a> y descargar la aplicación para el sistema Operativo que utilices.</p>
@@ -144,7 +163,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://github.com/tailscale/tailscale/blob/main/Dockerfile">https://github.com/tailscale/tailscale/blob/main/Dockerfile</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el Thursday 17 June del 2021</p>
+<p>Publicado por Angel el Thursday 17 June del 2021 y <strong>actualizado</strong> el Tuesday 30 August del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
