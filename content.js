@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Comprimiendo archivos pdf desde la terminal',
+            'text': 'Es probable que más de una vez te hayas visto con la necesidad de enviar un archivo pdf por internet y el formulario te limita el tamaño, o simplemente, quieras', 
+            'tags': 'terminal,pdf,bash,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html' 
+},
+{
             'title': 'Gestionando y previsualizando archivos markdown en terminal con glow',
             'text': 'Glow es un lector para la gestión y previsualización de un modo bonito de archivos markdown. ', 
             'tags': 'markdown,editor,,,,', 
@@ -1273,7 +1279,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

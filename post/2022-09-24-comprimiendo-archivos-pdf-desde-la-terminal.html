@@ -1,5 +1,5 @@
 <head>
-<title>Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal. uGeek Blog </title>
+<title>Comprimiendo archivos pdf desde la terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Para grabar una imagen de Raspbian, Ubuntu, Debian,... o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd." />
+<meta name="description" content="Es probable que más de una vez te hayas visto con la necesidad de enviar un archivo pdf por internet y el formulario te limita el tamaño, o simplemente, quieras" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal" />
-<meta property="og:description" content="Para grabar una imagen de Raspbian, Ubuntu, Debian,... o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/sd.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-29-grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd.html" />
+<meta property="og:title" content="Comprimiendo archivos pdf desde la terminal" />
+<meta property="og:description" content="Es probable que más de una vez te hayas visto con la necesidad de enviar un archivo pdf por internet y el formulario te limita el tamaño, o simplemente, quieras" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.pdf" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html" />
 
-<meta name="twitter:title" content="Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal" />
-<meta name="twitter:description" content="Para grabar una imagen de Raspbian, Ubuntu, Debian,... o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/sd.png" />
+<meta name="twitter:title" content="Comprimiendo archivos pdf desde la terminal" />
+<meta name="twitter:description" content="Es probable que más de una vez te hayas visto con la necesidad de enviar un archivo pdf por internet y el formulario te limita el tamaño, o simplemente, quieras" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.pdf" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,51 +85,43 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd-desde-la-terminal-1" title="Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal" data-export_file_name="grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd" data-description="Para grabar una imagen de Raspbian, Ubuntu, Debian,... o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd." data-export_date="2019-10-29 18:00" data-category="bash" data-tag="raspberry,raspbian" data-image="./images-blog/sd.png">Grabar Raspbian, Ubuntu, Debian,… en un Pendrive o SD desde la Terminal</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 304 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>Para grabar una imagen de Raspbian, Ubuntu, Debian,… o cualquier otro Sistema Operativo en GNU/Linux, podemos hacerlo de una forma muy liviana y sencilla desde la terminal con dd.</p>
-<center>
-<p><img src="../images-blog/sd.png" /></p>
-</center>
-<p>Como ejemplo en este artículo, voy a grabar una imagen de Raspbian.</p>
-<h2 id="descomprimir-raspbian">Descomprimir Raspbian</h2>
-<p>Descargo la imagen de raspbian desde su página oficial. Esta imagen está en <strong>zip</strong>, así que voy a descomprimirla</p>
-<pre><code>unzip 2019-09-26-raspbian-buster-lite.zip 
+<h1 id="comprimiendo-archivos-pdf-desde-la-terminal-1" title="Comprimiendo archivos pdf desde la terminal" data-export_file_name="comprimiendo-archivos-pdf-desde-la-terminal" data-description="Es probable que más de una vez te hayas visto con la necesidad de enviar un archivo pdf por internet y el formulario te limita el tamaño, o simplemente, quieras" data-export_date="2022-09-24 13:15" data-category="terminal" data-tag="pdf,bash" data-image="./images-blog/ugeek.pdf">Comprimiendo archivos pdf desde la terminal</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 332 palabras.    <a href="https://ugeek.github.io/blog/categories/terminal">terminal</a></h5>
+<p>Es probable que más de una vez te hayas visto con la necesidad de enviar un archivo pdf por internet y el formulario te limita el tamaño, o simplemente, quieras reducir el tamaño de archivos de tu biblioteca digital.</p>
+<p>Las aplicaciones de scanear en el móvil, no suele venir con la opción para comprimir pdf, pero esto no va a ser un problema para nosotros.</p>
+<p>Gracias al paquete ghostscript, vamos a comprimir archivos pdf desde la terminal.</p>
+<p>Es muy probable que este paquete ya esté instalado en tu máquina, pero si no es así, lo instalaremos de un modo sencillo desde los propios repositorios.</p>
+<h2 id="instalación">Instalación</h2>
+<pre><code>sudo apt install ghostscript
 </code></pre>
-<h2 id="localizar-nuestro-pendrive-o-sd">Localizar nuestro Pendrive o SD</h2>
-<p>Introducimos nuestro Pendrive o SD a nuestro PC y mediante esta línea, localizamos que unidad es</p>
-<pre><code>df -h
+<h2 id="comado-de-ejemplo">Comado de ejemplo</h2>
+<p>Este comando va a comprimir muchísimo y de un modo legible, el archivo pdf.</p>
+<p><strong>entrada.pdf</strong>, es el archivo origen que queremos comprimir y lo convertirá en el archivo <strong>salida.pdf</strong>.</p>
+<pre><code>gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=salida.pdf entrada.pdf
 </code></pre>
-<p>Por tamaño, la unidad de mi Pendrive es <strong>sdb</strong>.</p>
-<h2 id="desmontar-la-unidad">Desmontar la unidad</h2>
-<p>Primero necesitamos desmonta la unidad, en mi caso la unidad es <strong>sdb</strong>.</p>
-<p>Ya tenía un raspian antiguo de pruebas. Hay 2 particiones, <strong>sdb1 y sdb2</strong>. Desmonto las dos.</p>
-<pre><code>umount /dev/sdb1
-umount /dev/sdb2
-</code></pre>
-<h2 id="grabar-pendrive-o-sd">Grabar Pendrive o SD</h2>
-<p>Vamos a utilizar <strong>dd</strong> para grabar la imágen.</p>
-<p><strong>dd [if=&lt;ORIGEN&gt;] [of=&lt;DESTINO&gt;]</strong></p>
-<pre><code>sudo dd bs=1M if=2019-09-26-raspbian-buster-lite.img of=/dev/sdb status=progress
-</code></pre>
-<p><strong>if</strong> es la ruta origen, en este caso la imágen de raspbian y <strong>off</strong> es el destino, el Pendrive. <strong>bs=1M</strong>, significa que la escritura se hará en bloques de 1M. <strong>status=progress</strong>, muestra el proceso de grabado, para que no nos desesperemos</p>
-<p>Si el archivo es extensión <strong>.img.xz</strong>, podemos grabarlo directamente con este comando:</p>
-<pre><code>sudo xzcat ~/recalbox-rpi3.img.xz | dd bs=1M  of=/dev/mmcblk3p status=progress 
-</code></pre>
+<h2 id="opciones">Opciones</h2>
+<ul>
+<li>-dPDFSETTINGS Opción Descripción</li>
+<li>-dPDFSETTINGS=/screen Tiene una calidad inferior y un tamaño más pequeño. ( 72 ppp )</li>
+<li>-dPDFSETTINGS=/ebook Tiene mejor calidad, pero tiene un tamaño un poco más grande ( 150 dpi )</li>
+<li>-dPDFSETTINGS=/prepress La salida es de mayor tamaño y calidad ( 300 ppp )</li>
+<li>-dPDFSETTINGS=/printer La salida es de una calidad de tipo de impresora ( 300 ppp )</li>
+<li>-dPDFSETTINGS=/default Selecciona la salida que es útil para múltiples propósitos. Puede causar PDFS grandes.</li>
+</ul>
 <br>
-<p>Publicado por Angel el Tuesday 29 October del 2019</p>
+<p>Publicado por Angel el Saturday 24 September del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-07-13-gestionando-y-previsualizando-archivos-markdown-en-terminal-con-glow.html">Gestionando y previsualizando archivos markdown en terminal con glow</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html">Copiando en la terminal con barra de proceso</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html">Comandos sudo sin contraseña</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-26-micro-todas-las-opciones.html">Micro. Todas las Opciones</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html">Micro. Un editor normal para terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-15-twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv.html">twitch-dl. Aplicación CLI para descargar videos de twitch.tv</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html">Bash en Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html">TelegramTUI. Cliente de Terminal en Python</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-11-shaarli-cli.html">Shaarli cli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-04-pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica.html">Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
