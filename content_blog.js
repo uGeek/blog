@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Notificaciones de Jellyfin en Telegram',
+            'text': 'Si tienes un servidor de Jellyfin, estoy seguro que te encantaría recibir notificaciones vía Telegram de las nuevas novedades añadidas, reproducciones de tus usuarios, etc...', 
+            'tags': 'jellyfin,telegram,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html' 
+},
+{
             'title': 'Comprimiendo archivos pdf desde la terminal',
             'text': 'Es probable que más de una vez te hayas visto con la necesidad de enviar un archivo pdf por internet y el formulario te limita el tamaño, o simplemente, quieras', 
             'tags': 'terminal,pdf,bash,,,', 

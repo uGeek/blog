@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Notificaciones de Jellyfin en Telegram</title>
+    <link>https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Notificaciones de Jellyfin en Telegram"&gt;
+&lt;br&gt;&lt;p&gt;Si tienes un servidor de Jellyfin, estoy seguro que te encantaría recibir notificaciones vía Telegram de las nuevas novedades añadidas, reproducciones de tus usuarios, etc...... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html&gt;Notificaciones de Jellyfin en Telegram&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 28 Sep 2022  +0100</pubDate>
+    <category>jellyfin</category>
+    <category>telegram</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html</guid>
+   </item>
+   <item>
     <title>Comprimiendo archivos pdf desde la terminal</title>
     <link>https://ugeek.github.io/blog/post/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 24 Sep 2022  +0100</pubDate>
+    <pubDate>Sat, 24 Sep 2022 20:20 +0100</pubDate>
     <category>terminal</category>
     <category>pdf</category>
     <category>bash</category>
