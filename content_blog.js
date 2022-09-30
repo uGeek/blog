@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Firefox. Navegador móvil',
+            'text': '#+HTML: <center>', 
+            'tags': 'firefox,navegador,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-09-30-firefox-navegador-movil.html' 
+},
+{
             'title': 'Notificaciones de Jellyfin en Telegram',
             'text': 'Si tienes un servidor de Jellyfin, estoy seguro que te encantaría recibir notificaciones vía Telegram de las nuevas novedades añadidas, reproducciones de tus usuarios, etc...', 
             'tags': 'jellyfin,telegram,,,,', 
@@ -1285,7 +1291,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
