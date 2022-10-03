@@ -1,7 +1,7 @@
 var tipuesearch = {pages: [
 {
             'title': 'Firefox. Navegador móvil',
-            'text': '#+HTML: <center>', 
+            'text': 'Vamos algunas de las opciones disponibles para tener Firefox y Forks en tu movil.', 
             'tags': 'firefox,navegador,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2022-09-30-firefox-navegador-movil.html' 
 },
@@ -523,7 +523,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal',
-            'text': 'Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP,s y MAC, para después ejecutar scripts en función del resultado.', 
+            'text': 'Necesito conocer todos los dispositivos que hay conectados en mi red local. El objetivo es conocer sus IP s y MAC, para después ejecutar scripts en función del resultado.', 
             'tags': 'bash,ip,nmap,,,', 
             'url': 'https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html' 
 },
@@ -925,7 +925,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal',
-            'text': 'Croc una herramienta que permite transferir archivos,directorios y texto, de forma sencilla y segura, entre dos PC,s, servidores, etc....', 
+            'text': 'Croc una herramienta que permite transferir archivos,directorios y texto, de forma sencilla y segura, entre dos PC s, servidores, etc....', 
             'tags': 'sincronización,sync,go,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html' 
 },
@@ -1291,7 +1291,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
@@ -1363,7 +1363,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'Remmina. De los mejores Clientes VNC',
-            'text': 'Utilizo VNC para conectarme a mis servidores o PC,s remotos con interfaz gráfica. Hay muchos clientes de VNC, pero *remmina* es uno de mis favoritos, porque puedo acceder a mis', 
+            'text': 'Utilizo VNC para conectarme a mis servidores o PC s remotos con interfaz gráfica. Hay muchos clientes de VNC, pero *remmina* es uno de mis favoritos, porque puedo acceder a mis', 
             'tags': 'vnc,servidor,escritorio,,,', 
             'url': 'https://ugeek.github.io/blog/post/2019-12-18-remmina-de-los-mejores-clientes-vnc.html' 
 },
@@ -1417,7 +1417,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'Simplifica o abrevia tus conexiones SSH',
-            'text': 'Cuando tienes muchas Raspberry, Servidores, Pc,s,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP,s, puertos, etc... También es mucho más rápido en el', 
+            'text': 'Cuando tienes muchas Raspberry, Servidores, Pc s,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP s, puertos, etc... También es mucho más rápido en el', 
             'tags': 'ssh,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html' 
 },
