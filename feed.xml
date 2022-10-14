@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>WebDAV. Acceso al servidor WebDAV desde escritorio Windows</title>
+    <link>https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/dav.png" alt="WebDAV. Acceso al servidor WebDAV desde escritorio Windows"&gt;
+&lt;br&gt;&lt;p&gt;El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html&gt;WebDAV. Acceso al servidor WebDAV desde escritorio Windows&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 14 Oct 2022  +0100</pubDate>
+    <category>webdav</category>
+    <category>servidor</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html</guid>
+   </item>
+   <item>
     <title>Firefox. Navegador móvil</title>
     <link>https://ugeek.github.io/blog/post/2022-09-30-firefox-navegador-movil.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 30 Sep 2022  +0100</pubDate>
+    <pubDate>Fri, 30 Sep 2022 10:05 +0100</pubDate>
     <category>firefox</category>
     <category>navegador</category>
     <category></category>
@@ -7112,7 +7145,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

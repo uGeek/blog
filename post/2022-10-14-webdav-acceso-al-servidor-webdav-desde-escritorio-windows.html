@@ -1,5 +1,5 @@
 <head>
-<title>Montar nubes WebDAV con davfs2. uGeek Blog </title>
+<title>WebDAV. Acceso al servidor WebDAV desde escritorio Windows. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="No solo podemos montar nubes WebDAV con rclone. Davfs2 de un modo muy sencillo nos permite montar esta nube en local." />
+<meta name="description" content="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Montar nubes WebDAV con davfs2" />
-<meta property="og:description" content="No solo podemos montar nubes WebDAV con rclone. Davfs2 de un modo muy sencillo nos permite montar esta nube en local." />
+<meta property="og:title" content="WebDAV. Acceso al servidor WebDAV desde escritorio Windows" />
+<meta property="og:description" content="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-10-09-montar-nubes-webdav-con-davfs2.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html" />
 
-<meta name="twitter:title" content="Montar nubes WebDAV con davfs2" />
-<meta name="twitter:description" content="No solo podemos montar nubes WebDAV con rclone. Davfs2 de un modo muy sencillo nos permite montar esta nube en local." />
+<meta name="twitter:title" content="WebDAV. Acceso al servidor WebDAV desde escritorio Windows" />
+<meta name="twitter:description" content="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
 
 
@@ -85,48 +85,27 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="montar-nubes-webdav-con-davfs2-1" title="Montar nubes WebDAV con davfs2" data-export_file_name="montar-nubes-webdav-con-davfs2" data-description="No solo podemos montar nubes WebDAV con rclone. Davfs2 de un modo muy sencillo nos permite montar esta nube en local." data-export_date="2021-10-09 19:10" data-category="webdav" data-tag="webdav" data-image="./images-blog/dav.png">Montar nubes WebDAV con davfs2</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 309 palabras.    <a href="https://ugeek.github.io/blog/categories/webdav">webdav</a></h5>
-<p>No solo podemos montar nubes WebDAV con rclone. Con davfs2, de un modo muy sencillo montaremos mi nube en local.</p>
+<h1 id="webdav.-acceso-al-servidor-webdav-desde-escritorio-windows-1" title="WebDAV. Acceso al servidor WebDAV desde escritorio Windows" data-export_file_name="webdav-acceso-al-servidor-webdav-desde-escritorio-windows" data-description="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." data-export_date="2022-10-14 10:05" data-category="webdav" data-tag="servidor" data-image="./images-blog/dav.png">WebDAV. Acceso al servidor WebDAV desde escritorio Windows</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 394 palabras.    <a href="https://ugeek.github.io/blog/categories/webdav">webdav</a></h5>
+<p>El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows.</p>
+<p>La primera opción que se me ha pasado por la cabeza es habilitar SAMBA o instalar Synching. Pero al final he pensado que quizás acaba siendo más liviano y sencillo montar un servidor WebDAV en mi máquina Linux y acceder desde el PC Windows.</p>
+<p>Os he hablado infinidad de veces de WebDAV (Web-based Distributed Authoring and Versioning), un protocolo totalmente multiplataforma (Windows, Linux, MAC, Android, IOS) que nos permite un modo sencillo guardar, editar, copiar, mover y compartir archivos.</p>
 <center>
 <p><img src="../images-blog/dav.png" /></p>
 </center>
-<h2 id="instalación">Instalación</h2>
-<p>Instalaremos el paquete <a href="https://wiki.archlinux.org/index.php/Davfs2">davfs2</a></p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install davfs2</a></code></pre></div>
-<p>Cuando instalemos el paquete, aparecerá un mensaje donde nos preguntará si únicamente podrán montar la nube WebDAV los usuarios que puedan utilizar <strong>sudo</strong>.</p>
-<p>Yo voy a marcar que cualquier usuario pueda montar la nube.</p>
-<p>Si deseamos cambiar esta opinión más adelante, podemos hacer con este comando:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> dpkg-reconfigure davfs2</a></code></pre></div>
-<h2 id="montar-directorio">Montar directorio</h2>
-<p>Para montar la nube WebDAV, lo haremos con el siguiente comando:</p>
-<ul>
-<li>Primero he creado el directorio webdav en la raíz de mi usuario (angel).</li>
-</ul>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> mount -t davfs -o noexec https://webdav.midominio.duckdns.org /home/angel/webdav</a></code></pre></div>
-<p>Ahora la terminal nos pedirá el usuario y contraseña.</p>
-<h2 id="desmontar-directorio">Desmontar directorio</h2>
-<p>Para desmontar:</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> umount /home/angel/webdav</a></code></pre></div>
-<h2 id="montar-al-inicio-del-sistema">Montar al inicio del sistema</h2>
-<p>Editaremos el archivo de configuración fstab</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> nano /etc/fstab</a></code></pre></div>
-<p>Ahora añadiremos al final del archivo, siguiendo con la configuración que he puesto de ejemplo:</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">https</span>://webdav.midominio.duckdns.org /home/angel/webdav davfs rw,noauto,user 0 0</a></code></pre></div>
-<h2 id="autenticación-automática">Autenticación automática</h2>
-<p>Creamos el siguiente archivo:</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">nano</span> ~/.davfs2/secrets</a></code></pre></div>
-<p>Ahora, introduciremos la url, usuario y contraseña:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">https</span>://webdav.midominio.duckdns.org angel mi_contraseña</a></code></pre></div>
-<p>Cambiamos los permisos del archivo <strong>secrets</strong>.</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">chmod</span> 600 ~/.davfs2/secrets</a></code></pre></div>
-<p>Y listo!!! ya tenemos nuestro directorio WebDAV con auto montaje cuando reiniciemos nuestra máquina</p>
-<h2 id="fuentes">Fuentes</h2>
-<ul>
-<li><a href="https://github.com/volga629/davfs2">https://github.com/volga629/davfs2</a></li>
-</ul>
+<p>Recuerda que combine utilizar conexión <strong>https</strong> ya soporta cifrado AES SSL de 256 bits y es mucho más seguro. Aún así, es posible que de problemas en Windows. Si fuera el caso y las dos máquinas están fuera de tu red local, sería necesario utilizar una VPN para que todo el tráfico sea cifrado.</p>
+<p>Así que sin más, vamos a montar el directorio del servidor WebDAV en la máquina con Windows.</p>
+<h2 id="configurar-cliente">Configurar cliente</h2>
+<p>Gracias a un asistente de Windows, en un par de minutos tendremos configurado el acceso al servidor WebDAV.</p>
+<ol>
+<li>Abrimos el explorador de archivos de Windows y pulsamos el botón derecho del ratón sobre el icono <strong>Este equipo</strong></li>
+<li>Seleccionamos la opción <strong>Agregar una ubicación de red</strong>.</li>
+<li>Le damos a siguiente, Seleccionamos <strong>Desea una ubicación de red personalizada</strong>, aparecerá una ventana donde nos pregunta <strong>Especifique la ubicación de su sitio web</strong>. Aquí pondremos la url de nuestro servidor WebDAV. Pulsamos siguiente.</li>
+<li>Ahora nos saldrá una pantalla para introducir nuestro usuario y contraseña así como poner un nombre a la unidad que estamos creando. Una vez rellenado, pulsaremos finalizar.</li>
+<li>Ahora ya encontraremos nuestro servidor WebDAV en nuestro explorador de archivos.</li>
+</ol>
 <br>
-<p>Publicado por Angel el Saturday 09 October del 2021</p>
+<p>Publicado por Angel el Friday 14 October del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

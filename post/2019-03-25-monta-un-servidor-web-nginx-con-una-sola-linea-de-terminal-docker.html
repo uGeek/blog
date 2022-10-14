@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="monta-un-servidor-web-nginx-con-una-sola-línea-de-terminal-docker-1" title="Monta un servidor web Nginx, con una sola línea de Terminal (Docker)" data-export_file_name="Monta un servidor web Nginx con una sola linea de Terminal Docker" data-description="Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución" data-export_date="2019-03-25 21:10" data-category="docker" data-tag="servidor,web" data-image="./images-blog/nginx.png">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 418 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h1 id="monta-un-servidor-web-nginx-con-una-sola-línea-de-terminal-docker-1" title="Monta un servidor web Nginx, con una sola línea de Terminal (Docker)" data-export_file_name="Monta un servidor web Nginx con una sola linea de Terminal Docker" data-description="Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución" data-export_date="2019-03-25 21:10 2022-09-12" data-category="docker" data-tag="servidor,web" data-image="./images-blog/nginx.png">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 449 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Si quieres montar un servidor web en un pispás y no complicarte la vida, el <a href="https://hub.docker.com/_/nginx">Docker oficial de Nginx</a> es una buenísima solución. Hay tres motivos por los cuales instalar este Docker:</p>
 <ul>
 <li>Versión oficial a la última</li>
@@ -108,10 +108,25 @@ $("#tipue_search_input").tipuesearch();
 <p>Me he emocionado tanto instalando Nginx desde un Alpine Linux, que ahora quiero hacer lo propio en mi Raspberry. Tamaño de la Imagen de 13,4 Mb en mi Raspberry.</p>
 <p>Como veis, he utilizado el mismo comando que el apartado anterior. La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
 <p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx:alpine</code></p>
+<h2 id="docker-compose">Docker Compose</h2>
+<pre><code>version: &#39;2.1&#39;
+services:
+ web:
+  image: nginx:alpine
+  container_name: nginx
+  volumes:
+    - /data:/usr/share/nginx/html:ro
+  ports:
+   - &quot;80:80&quot;
+  environment:
+   - NGINX_HOST=url.com
+   - NGINX_PORT=80
+  restart: unless-stopped
+</code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Estoy comenzando a tener Dockerdependencia y es que es inevitable. Poder montar tantos servidores web como quiera con un puerto diferente y con la última versión… Como dice el anuncio, no tiene precio, jejeje</p>
 <br>
-<p>Publicado por Angel el Monday 25 March del 2019</p>
+<p>Publicado por Angel el Monday 25 March del 2019 y <strong>actualizado</strong> el Monday 12 September del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

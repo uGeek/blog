@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'WebDAV. Acceso al servidor WebDAV desde escritorio Windows',
+            'text': 'El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows.', 
+            'tags': 'webdav,servidor,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html' 
+},
+{
             'title': 'Firefox. Navegador móvil',
             'text': 'Vamos algunas de las opciones disponibles para tener Firefox y Forks en tu movil.', 
             'tags': 'firefox,navegador,,,,', 
@@ -1291,7 +1297,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
