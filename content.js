@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Shaarli. Cambiando el tema',
+            'text': 'El tema por defecto que trae Shaarli, quizás no se de tu agrado. Vamos a ver como cambiarlo.', 
+            'tags': 'shaarli,links,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-10-19-shaarli-cambiando-el-tema.html' 
+},
+{
             'title': 'WebDAV. Acceso al servidor WebDAV desde escritorio Windows',
             'text': 'El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows.', 
             'tags': 'webdav,servidor,,,,', 

@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Shaarli. Cambiando el tema</title>
+    <link>https://ugeek.github.io/blog/post/2022-10-19-shaarli-cambiando-el-tema.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/shaarli.png" alt="Shaarli. Cambiando el tema"&gt;
+&lt;br&gt;&lt;p&gt;El tema por defecto que trae Shaarli, quizás no se de tu agrado. Vamos a ver como cambiarlo.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-10-19-shaarli-cambiando-el-tema.html&gt;Shaarli. Cambiando el tema&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 19 Oct 2022  +0100</pubDate>
+    <category>shaarli</category>
+    <category>links</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-10-19-shaarli-cambiando-el-tema.html</guid>
+   </item>
+   <item>
     <title>WebDAV. Acceso al servidor WebDAV desde escritorio Windows</title>
     <link>https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 14 Oct 2022  +0100</pubDate>
+    <pubDate>Fri, 14 Oct 2022 19:30 +0100</pubDate>
     <category>webdav</category>
     <category>servidor</category>
     <category></category>

@@ -1,5 +1,5 @@
 <head>
-<title>trilium</title>
+<title>Shaarli. Cambiando el tema. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,16 +47,92 @@ gtag("js", new Date())
 gtag("config", "");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>trilium</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="shaarli.-cambiando-el-tema-1" title="Shaarli. Cambiando el tema" data-export_file_name="shaarli-cambiando-el-tema" data-description="El tema por defecto que trae Shaarli, quizás no se de tu agrado. Vamos a ver como cambiarlo." data-export_date="2022-10-19 19:30" data-category="shaarli" data-tag="links" data-image="./images-blog/shaarli.png">Shaarli. Cambiando el tema</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 226 palabras.    <a href="https://ugeek.github.io/blog/categories/shaarli">shaarli</a></h5>
+<p>El tema por defecto que trae Shaarli, quizás no se de tu agrado. Vamos a ver como cambiarlo.</p>
+<p>Aquí están los <a href="https://github.com/search?o=desc&amp;q=shaarli+theme&amp;s=updated&amp;type=Repositories">últimos temas publicados en GitHub</a> que puedes descargar.</p>
+<center>
+<p><img src="../images-blog/shaarli.png" /></p>
+</center>
+<p>Descomprime el directorio y añádelo en el directorio <strong>tlp</strong> de Shaarli.</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html>Trilium. Notas jerárquicas en Markdown</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-12-25-trilium-web-clipper-importando-el-contenido-de-una-web-a-trilium.html>Trilium Web Clipper. Importando el contenido de una web a Trilium</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html>Docker: Trilium Oficial</a></li>
+<li><a href="https://github.com/kalvn/Shaarli-Material">kalvn/Shaarli-Material: Shaarli Material is a theme for Shaarli, the famous personal, minimalist, super-fast, database free, bookmarking service.</a></li>
+<li><a href="https://github.com/RolandTi/shaarli-chaaplin">RolandTi/shaarli-chaaplin: A silent theme for shaarli, a personal, minimalist, bookmarking service</a></li>
+<li><a href="https://github.com/kcaran/shirley-template">kcaran/shirley-template: Shirley is a template theme for Shaarli bookmarking application</a></li>
+</ul>
+<h2 id="material-theme">Material theme</h2>
+<p>Nos situamos en el directorio <strong>tlp</strong>. Yo lo tengo montado en un volumen que he compartido con mi directorio local.</p>
+<pre><code>cd /var/www/shaarli/tpl
+</code></pre>
+<p>Descarga el archivo zip:</p>
+<pre><code>wget https://github.com/kalvn/Shaarli-Material/releases/download/v0.12.1/shaarli-material.v0.12.1.zip
+</code></pre>
+<p>Descomprimimos con:</p>
+<pre><code>unzip shaarli-material.v0.12.1.zip
+</code></pre>
+<p>Fuente: <a href="https://github.com/kalvn/Shaarli-Material/releases/tag/v0.12.1">https://github.com/kalvn/Shaarli-Material/releases/tag/v0.12.1</a></p>
+<h2 id="tema-por-css">Tema por css</h2>
+<p>Copia user.css en <code>/data/user.css</code>. Aquí solo modificamos css de shaarli.</p>
+<p>Algunos proyectos:</p>
+<ul>
+<li><a href="https://github.com/simon-mettler/shaarli-theme">simon-mettler/shaarli-theme: Tema moderno de Shaarli</a></li>
+<li><a href="https://github.com/MickGe/shaarli-theme-round">MickGe/shaarli-theme-round: Just a rounded theme and pretty dark</a></li>
+</ul>
+<h2 id="solucionando-posibles-problemas">Solucionando posibles problemas</h2>
+<p>Es posible que al cambiar el tema, nada funcione. Para solucionar posibles problemas, accede al archivo de configuración con vi:</p>
+<pre><code>vi /var/www/shaarli/data/config.json.php
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/shaarli/Shaarli">shaarli/Shaarli: The personal, minimalist, super-fast, database free, bookmarking service - community repo</a></li>
+<li><a href="https://favs.rolandtisserand.fr/doc/html/index.html">Shaarli Documentation</a></li>
+<li><a href="https://sebsauvage.net/wiki/doku.php?id=accueil">Wiki de sebsauvage.net</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el Wednesday 19 October del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-11-shaarli-cli.html">Shaarli cli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
