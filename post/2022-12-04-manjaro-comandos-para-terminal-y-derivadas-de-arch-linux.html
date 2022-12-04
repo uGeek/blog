@@ -1,0 +1,175 @@
+<head>
+<title> Manjaro. Comandos para terminal y derivadas de Arch Linux. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Manjaro. Comandos para terminal y derivadas de Arch Linux" />
+<meta property="og:description" content="Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-12-04-manjaro-comandos-para-terminal-y-derivadas-de-arch-linux.html" />
+
+<meta name="twitter:title" content=" Manjaro. Comandos para terminal y derivadas de Arch Linux" />
+<meta name="twitter:description" content="Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="http://feeds.feedburner.com/uGeek" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="http://feeds.feedburner.com/uGeekBlog" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="manjaro.-comandos-para-terminal-y-derivadas-de-arch-linux-1" title="Manjaro. Comandos para terminal y derivadas de Arch Linux" data-export_file_name="Manjaro Comandos para terminal y derivadas de Arch Linux" data-description="Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás" data-export_date="2022-12-04 18:30" data-category="arch" data-tag="manjaro,comandos,terminal" data-image="./images-blog/ugeek.png">Manjaro. Comandos para terminal y derivadas de Arch Linux</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 472 palabras.    <a href="https://ugeek.github.io/blog/categories/arch">arch</a></h5>
+<p>Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás…</p>
+<p>Aquí iré añadiendo periodicamente comandos para ir conociendolos.</p>
+<h2 id="pacman">pacman</h2>
+<p>Pacman es el sistema de paquetes de Arch oficial, supervisado por ellos.</p>
+<h3 id="actualizar-el-sistema-operativo-y-repositorios">Actualizar el Sistema Operativo y repositorios</h3>
+<p><code>sudo pacman -Syyuu</code></p>
+<h3 id="buscar-en-los-repositorios-usaremos-de-ejem-gimp">Buscar en los repositorios (usaremos de ejem: gimp)</h3>
+<p><code>sudo pacman -Ss gimp</code></p>
+<h3 id="instalar-aplicaciones">Instalar aplicaciones</h3>
+<p><code>sudo pacman -S gimp</code></p>
+<h2 id="yaourt">yaourt</h2>
+<p>Las aplicaciones que no esten en los repositorios oficiales de Arch, estan en AUR. AUR (Arch User Repository) es el lugar donde la comunidad de Arch Linux puede subir los PKGBUILD de las aplicaciones, bibliotecas, etc.,</p>
+<p>Para instalar desde Aur utilizaremos yaourt.</p>
+<h3 id="actualizar-los-repositorios">Actualizar los repositorios</h3>
+<p><code>yaourt -Syu</code></p>
+<h3 id="buscar-en-yaourt-usaremos-de-ejem-utext">Buscar en yaourt (usaremos de ejem: utext)</h3>
+<p><code>yaourt -Ss utext</code></p>
+<h3 id="instalar-aplicaciones-que-no-encontremos-en-pacman-como-utext">Instalar aplicaciones que no encontremos en Pacman (como utext)</h3>
+<p><code>yaourt -S utext</code></p>
+<h2 id="guía-de-comandos-básicos-de-pacman">Guía de comandos básicos de Pacman</h2>
+<h3 id="instalar-paquetes">Instalar paquetes</h3>
+<ul>
+<li><code>pacman -S “paquete”</code> Instala un paquete.</li>
+<li><code>pacman -Sy “paquete”</code> Sincroniza repositorios e instala el paquete.</li>
+</ul>
+<h3 id="actualizar-paquetes">Actualizar paquetes</h3>
+<ul>
+<li><code>pacman -Sy</code> Sincroniza repositorios.</li>
+<li><code>pacman -Syy</code> Fuerza la sincronización de repositorios incluso para paquetes que parecen actualizados.</li>
+<li><code>pacman -Syu</code> Sincroniza repositorios y actualiza paquetes.</li>
+<li><code>pacman -Syyu</code> Fuerza sincronización y actualiza paquetes.</li>
+<li><code>pacman -Su</code> Actualiza paquetes sin sincronizar repositorios.</li>
+</ul>
+<h3 id="buscar-paquetes">Buscar paquetes</h3>
+<ul>
+<li><code>pacman -Ss “paquete”</code> Busca un paquete.</li>
+<li><code>pacman -Si “paquete”</code> Muestra información detallada de un paquete.</li>
+<li><code>pacman -Sg “grupo”</code> Lista los paquetes que pertenecen a un grupo.</li>
+<li><code>pacman -Qs “paquete”</code> Busca un paquete YA instalado.</li>
+<li><code>pacman -Qi “paquete”</code> Muestra información detallada de un paquete YA instalado.</li>
+<li><code>pacman -Qdt</code> Muestra paquetes huerfanos.</li>
+</ul>
+<h3 id="eliminar-paquetes">Eliminar paquetes</h3>
+<ul>
+<li><code>pacman -R “paquete”</code> Borra paquete sin sus dependencias.</li>
+<li><code>pacman -Rs “paquete”</code> Borra paquete y sus dependencias no utilizadas.</li>
+</ul>
+<p>Fuente: sobrebits.com</p>
+<h2 id="aplicaciones-imprescindibles">Aplicaciones Imprescindibles</h2>
+<p>Navegador Chrome</p>
+<p><code>yaourt -S google-chrome</code></p>
+<p>Editor de video</p>
+<p><code>sudo pacman -S openshot</code></p>
+<p>Notas de Nextcloud</p>
+<p><code>yaourt -S qownnotes</code></p>
+<p>Descarga videos de youtube</p>
+<p><code>sudo pacman -S clipgrab</code></p>
+<p>Hacer capturas de pantalla</p>
+<p><code>yaourt -S shutter</code></p>
+<p>Convertir audios de m4a a MP3</p>
+<p><code>sudo pacman -S soundconverter</code></p>
+<p>Editor de Fotografía</p>
+<p><code>sudo pacman -S gimp</code></p>
+<p>Instalar Inkscape</p>
+<p><code>sudo pacman -S inkscape</code></p>
+<p>Transmission</p>
+<p><code>sudo pacman -S transmission-gtk</code></p>
+<p>Skype</p>
+<p><code>sudo pacman -S skype</code></p>
+<br>
+<p>Publicado por Angel el Sunday 04 December del 2022</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html">Comprimiendo archivos pdf desde la terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-07-13-gestionando-y-previsualizando-archivos-markdown-en-terminal-con-glow.html">Gestionando y previsualizando archivos markdown en terminal con glow</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html">Tunel SSH para conectar puertos remotos como si fuera local</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-28-sincronizaciones-remotas-y-locales-con-rsync.html">Sincronizaciones remotas y locales con rsync</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html">Kodbox. La nueva versión de KodExplorer como explorador de archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html">Telethon Downloader. Bot de descargas para Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-28-editando-csv-usando-emacs.html">Editando CSV usando Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-04-pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica.html">Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html">Docker: Raneto</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

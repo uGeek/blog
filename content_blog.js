@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Manjaro. Comandos para terminal y derivadas de Arch Linux',
+            'text': 'Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás', 
+            'tags': 'arch,manjaro,comandos,terminal,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-04-manjaro-comandos-para-terminal-y-derivadas-de-arch-linux.html' 
+},
+{
             'title': 'Shaarli. Cambiando el tema',
             'text': 'El tema por defecto que trae Shaarli, quizás no se de tu agrado. Vamos a ver como cambiarlo.', 
             'tags': 'shaarli,links,,,,', 
@@ -1303,7 +1309,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
@@ -2032,12 +2038,6 @@ var tipuesearch = {pages: [
             'text': 'Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. ', 
             'tags': 'snap,paquetes,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html' 
-},
-{
-            'title': 'Antergos. Comandos para terminal y derivadas de Arch Linux',
-            'text': 'Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás', 
-            'tags': 'arch,antergos,comandos,terminal,,', 
-            'url': 'https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html' 
 },
 {
             'title': 'Utilizando Git con la Terminal. GitHub',

@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Manjaro. Comandos para terminal y derivadas de Arch Linux</title>
+    <link>https://ugeek.github.io/blog/post/2022-12-04-manjaro-comandos-para-terminal-y-derivadas-de-arch-linux.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Manjaro. Comandos para terminal y derivadas de Arch Linux"&gt;
+&lt;br&gt;&lt;p&gt;Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-12-04-manjaro-comandos-para-terminal-y-derivadas-de-arch-linux.html&gt;Manjaro. Comandos para terminal y derivadas de Arch Linux&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 04 Dec 2022 21:30 +0100</pubDate>
+    <category>arch</category>
+    <category>manjaro</category>
+    <category>comandos</category>
+    <category>terminal</category>
+    <guid>https://ugeek.github.io/blog/post/2022-12-04-manjaro-comandos-para-terminal-y-derivadas-de-arch-linux.html</guid>
+   </item>
+   <item>
     <title>Shaarli. Cambiando el tema</title>
     <link>https://ugeek.github.io/blog/post/2022-10-19-shaarli-cambiando-el-tema.html</link>
     <description>
@@ -7178,7 +7211,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
@@ -11198,39 +11231,6 @@
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</guid>
-   </item>
-   <item>
-    <title>Antergos. Comandos para terminal y derivadas de Arch Linux</title>
-    <link>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Antergos. Comandos para terminal y derivadas de Arch Linux"&gt;
-&lt;br&gt;&lt;p&gt;Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html&gt;Antergos. Comandos para terminal y derivadas de Arch Linux&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Mon, 21 Jan 2019 21:30 +0100</pubDate>
-    <category>arch</category>
-    <category>antergos</category>
-    <category>comandos</category>
-    <category>terminal</category>
-    <guid>https://ugeek.github.io/blog/post/2019-01-21-antergos-comandos-para-terminal-y-derivadas-de-arch-linux.html</guid>
    </item>
    <item>
     <title>Utilizando Git con la Terminal. GitHub</title>
