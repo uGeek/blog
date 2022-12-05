@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'ZettelNotes Repositorio del desarrollador',
+            'text': 'Si no utilizas Google Play o simplemente quieres instalar las últimas versiones de Zettel Notes desde los repositorios del desarrollador, agrega a tu tienda de aplicaciones ya sea Fdroid, Droidy-fy,...', 
+            'tags': 'notas,markdown,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-05-zettelnotes-repositorio-del-desarrollador.html' 
+},
+{
             'title': 'Manjaro. Comandos para terminal y derivadas de Arch Linux',
             'text': 'Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás', 
             'tags': 'arch,manjaro,comandos,terminal,,', 

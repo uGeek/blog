@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>ZettelNotes Repositorio del desarrollador</title>
+    <link>https://ugeek.github.io/blog/post/2022-12-05-zettelnotes-repositorio-del-desarrollador.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="ZettelNotes Repositorio del desarrollador"&gt;
+&lt;br&gt;&lt;p&gt;Si no utilizas Google Play o simplemente quieres instalar las últimas versiones de Zettel Notes desde los repositorios del desarrollador, agrega a tu tienda de aplicaciones ya sea Fdroid, Droidy-fy,...... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-12-05-zettelnotes-repositorio-del-desarrollador.html&gt;ZettelNotes Repositorio del desarrollador&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 05 Dec 2022  +0100</pubDate>
+    <category>notas</category>
+    <category>markdown</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-12-05-zettelnotes-repositorio-del-desarrollador.html</guid>
+   </item>
+   <item>
     <title>Manjaro. Comandos para terminal y derivadas de Arch Linux</title>
     <link>https://ugeek.github.io/blog/post/2022-12-04-manjaro-comandos-para-terminal-y-derivadas-de-arch-linux.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 04 Dec 2022  +0100</pubDate>
+    <pubDate>Sun, 04 Dec 2022 22:25 +0100</pubDate>
     <category>arch</category>
     <category>manjaro</category>
     <category>comandos</category>
