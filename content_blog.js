@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html' 
 },
 {
+            'title': 'thunar. Cambiar a tema oscuro. Dark theme',
+            'text': 'Para cambiar thunar a tema oscuro es tan sencillo como...', 
+            'tags': 'thunar,arch,ubuntu,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-07-thunar-cambiar-a-tema-oscuro-dark-theme.html' 
+},
+{
             'title': 'ZettelNotes Repositorio del desarrollador',
             'text': 'Si no utilizas Google Play o simplemente quieres instalar las últimas versiones de Zettel Notes desde los repositorios del desarrollador, agrega a tu tienda de aplicaciones ya sea Fdroid, Droidy-fy,...', 
             'tags': 'notas,markdown,,,,', 

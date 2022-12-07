@@ -122,17 +122,17 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="instalando-portainer">Instalando Portainer</h2>
 <p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>
 <div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="ex">portainer</span>:</a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="ex">image</span>: portainer/portainer-ce:latest</a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="ex">container_name</span>: portainer</a>
-<a class="sourceLine" id="cb10-4" title="4"><span class="ex">restart</span>: unless-stopped</a>
-<a class="sourceLine" id="cb10-5" title="5"><span class="ex">security_opt</span>:</a>
-<a class="sourceLine" id="cb10-6" title="6"><span class="ex">-</span> no-new-privileges:true</a>
-<a class="sourceLine" id="cb10-7" title="7"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb10-8" title="8"><span class="ex">-</span> /etc/localtime:/etc/localtime:ro</a>
-<a class="sourceLine" id="cb10-9" title="9"><span class="ex">-</span> /var/run/docker.sock:/var/run/docker.sock:ro</a>
-<a class="sourceLine" id="cb10-10" title="10"><span class="ex">-</span> ./portainer-data:/data</a>
-<a class="sourceLine" id="cb10-11" title="11"><span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb10-12" title="12"><span class="ex">-</span> 9000:9000</a></code></pre></div>
+<a class="sourceLine" id="cb10-2" title="2">  <span class="ex">image</span>: portainer/portainer-ce:latest</a>
+<a class="sourceLine" id="cb10-3" title="3">  <span class="ex">container_name</span>: portainer</a>
+<a class="sourceLine" id="cb10-4" title="4">  <span class="ex">restart</span>: unless-stopped</a>
+<a class="sourceLine" id="cb10-5" title="5">  <span class="ex">security_opt</span>:</a>
+<a class="sourceLine" id="cb10-6" title="6">    <span class="ex">-</span> no-new-privileges:true</a>
+<a class="sourceLine" id="cb10-7" title="7">  <span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb10-8" title="8">    <span class="ex">-</span> /etc/localtime:/etc/localtime:ro</a>
+<a class="sourceLine" id="cb10-9" title="9">    <span class="ex">-</span> /var/run/docker.sock:/var/run/docker.sock:ro</a>
+<a class="sourceLine" id="cb10-10" title="10">    <span class="ex">-</span> ./portainer-data:/data</a>
+<a class="sourceLine" id="cb10-11" title="11">  <span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb10-12" title="12">    <span class="ex">-</span> 9000:9000</a></code></pre></div>
 <br>
 <p>Publicado por Angel el Wednesday 07 December del 2022</p>
 <br><br> 
