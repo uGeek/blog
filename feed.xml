@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker. Instalar docker, docker compose y Portainer en Arch Linux</title>
+    <link>https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/docker.png" alt="Docker. Instalar docker, docker compose y Portainer en Arch Linux"&gt;
+&lt;br&gt;&lt;p&gt;Vamos a instalar docker en Arch Linux, en mi caso, Majaro:... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html&gt;Docker. Instalar docker, docker compose y Portainer en Arch Linux&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 07 Dec 2022  +0100</pubDate>
+    <category>docker</category>
+    <category>arch</category>
+    <category>manjaro</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html</guid>
+   </item>
+   <item>
     <title>ZettelNotes Repositorio del desarrollador</title>
     <link>https://ugeek.github.io/blog/post/2022-12-05-zettelnotes-repositorio-del-desarrollador.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 05 Dec 2022  +0100</pubDate>
+    <pubDate>Mon, 05 Dec 2022 01:25 +0100</pubDate>
     <category>notas</category>
     <category>markdown</category>
     <category></category>

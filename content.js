@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker. Instalar docker, docker compose y Portainer en Arch Linux',
+            'text': 'Vamos a instalar docker en Arch Linux, en mi caso, Majaro:', 
+            'tags': 'docker,arch,manjaro,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html' 
+},
+{
             'title': 'ZettelNotes Repositorio del desarrollador',
             'text': 'Si no utilizas Google Play o simplemente quieres instalar las últimas versiones de Zettel Notes desde los repositorios del desarrollador, agrega a tu tienda de aplicaciones ya sea Fdroid, Droidy-fy,...', 
             'tags': 'notas,markdown,,,,', 
