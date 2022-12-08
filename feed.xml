@@ -13,6 +13,72 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Firefox. Cambiando el tema de Firefox en Manjaro al tema por defecto</title>
+    <link>https://ugeek.github.io/blog/post/2022-12-08-firefox-cambiando-el-tema-de-firefox-en-manjaro-al-tema-por-defecto.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/firefox.png" alt="Firefox. Cambiando el tema de Firefox en Manjaro al tema por defecto"&gt;
+&lt;br&gt;&lt;p&gt;Una de las sorpresas que he encontrado al instalar Manjaro, es que el tema por defecto de Firefox es totalmente diferente al que podemos instalar por defecto. Las pestañas están... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-12-08-firefox-cambiando-el-tema-de-firefox-en-manjaro-al-tema-por-defecto.html&gt;Firefox. Cambiando el tema de Firefox en Manjaro al tema por defecto&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 08 Dec 2022  +0100</pubDate>
+    <category>firefox</category>
+    <category>manjaro</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-12-08-firefox-cambiando-el-tema-de-firefox-en-manjaro-al-tema-por-defecto.html</guid>
+   </item>
+   <item>
+    <title>thunar. Cambiar a tema oscuro. Dark theme</title>
+    <link>https://ugeek.github.io/blog/post/2022-12-07-thunar-cambiar-a-tema-oscuro-dark-theme.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="thunar. Cambiar a tema oscuro. Dark theme"&gt;
+&lt;br&gt;&lt;p&gt;Para cambiar thunar a tema oscuro es tan sencillo como...... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-12-07-thunar-cambiar-a-tema-oscuro-dark-theme.html&gt;thunar. Cambiar a tema oscuro. Dark theme&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 07 Dec 2022 18:30 +0100</pubDate>
+    <category>thunar</category>
+    <category>arch</category>
+    <category>ubuntu</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2022-12-07-thunar-cambiar-a-tema-oscuro-dark-theme.html</guid>
+   </item>
+   <item>
     <title>Docker. Instalar docker, docker compose y Portainer en Arch Linux</title>
     <link>https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html</link>
     <description>
@@ -44,39 +110,6 @@
     <category>manjaro</category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html</guid>
-   </item>
-   <item>
-    <title>thunar. Cambiar a tema oscuro. Dark theme</title>
-    <link>https://ugeek.github.io/blog/post/2022-12-07-thunar-cambiar-a-tema-oscuro-dark-theme.html</link>
-    <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="thunar. Cambiar a tema oscuro. Dark theme"&gt;
-&lt;br&gt;&lt;p&gt;Para cambiar thunar a tema oscuro es tan sencillo como...... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-12-07-thunar-cambiar-a-tema-oscuro-dark-theme.html&gt;thunar. Cambiar a tema oscuro. Dark theme&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
-
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
-
-&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
-
-&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
-
-</description>
-    <pubDate>Wed, 07 Dec 2022  +0100</pubDate>
-    <category>thunar</category>
-    <category>arch</category>
-    <category>ubuntu</category>
-    <category></category>
-    <guid>https://ugeek.github.io/blog/post/2022-12-07-thunar-cambiar-a-tema-oscuro-dark-theme.html</guid>
    </item>
    <item>
     <title>ZettelNotes Repositorio del desarrollador</title>

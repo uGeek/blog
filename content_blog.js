@@ -1,15 +1,21 @@
 var tipuesearch = {pages: [
 {
-            'title': 'Docker. Instalar docker, docker compose y Portainer en Arch Linux',
-            'text': 'Vamos a instalar docker en Arch Linux, en mi caso, Majaro:', 
-            'tags': 'docker,arch,manjaro,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html' 
+            'title': 'Firefox. Cambiando el tema de Firefox en Manjaro al tema por defecto',
+            'text': 'Una de las sorpresas que he encontrado al instalar Manjaro, es que el tema por defecto de Firefox es totalmente diferente al que podemos instalar por defecto. Las pestañas están', 
+            'tags': 'firefox,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-08-firefox-cambiando-el-tema-de-firefox-en-manjaro-al-tema-por-defecto.html' 
 },
 {
             'title': 'thunar. Cambiar a tema oscuro. Dark theme',
             'text': 'Para cambiar thunar a tema oscuro es tan sencillo como...', 
             'tags': 'thunar,arch,ubuntu,,,', 
             'url': 'https://ugeek.github.io/blog/post/2022-12-07-thunar-cambiar-a-tema-oscuro-dark-theme.html' 
+},
+{
+            'title': 'Docker. Instalar docker, docker compose y Portainer en Arch Linux',
+            'text': 'Vamos a instalar docker en Arch Linux, en mi caso, Majaro:', 
+            'tags': 'docker,arch,manjaro,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html' 
 },
 {
             'title': 'ZettelNotes Repositorio del desarrollador',
