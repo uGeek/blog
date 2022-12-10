@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Obsidian en Raspberry Pi',
+            'text': 'Cuando decido utilizar una aplicación de notas, busco la total compatibilidad con todos los dispositivos en las que voy a utilizarlo. Uno de estos dispositivos es la Raspberry Pi. Que', 
+            'tags': 'notas,obsidian,arm,raspberry,appimage,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-10-obsidian-en-raspberry-pi.html' 
+},
+{
             'title': 'Firefox. Cambiando el tema de Firefox en Manjaro al tema por defecto',
             'text': 'Una de las sorpresas que he encontrado al instalar Manjaro, es que el tema por defecto de Firefox es totalmente diferente al que podemos instalar por defecto. Las pestañas están', 
             'tags': 'firefox,manjaro,,,,', 
@@ -1333,7 +1339,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Obsidian en Raspberry Pi</title>
+    <link>https://ugeek.github.io/blog/post/2022-12-10-obsidian-en-raspberry-pi.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/obsidian.png" alt="Obsidian en Raspberry Pi"&gt;
+&lt;br&gt;&lt;p&gt;Cuando decido utilizar una aplicación de notas, busco la total compatibilidad con todos los dispositivos en las que voy a utilizarlo. Uno de estos dispositivos es la Raspberry Pi. Que... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2022-12-10-obsidian-en-raspberry-pi.html&gt;Obsidian en Raspberry Pi&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 10 Dec 2022  +0100</pubDate>
+    <category>notas</category>
+    <category>obsidian</category>
+    <category>arm</category>
+    <category>raspberry</category>
+    <guid>https://ugeek.github.io/blog/post/2022-12-10-obsidian-en-raspberry-pi.html</guid>
+   </item>
+   <item>
     <title>Firefox. Cambiando el tema de Firefox en Manjaro al tema por defecto</title>
     <link>https://ugeek.github.io/blog/post/2022-12-08-firefox-cambiando-el-tema-de-firefox-en-manjaro-al-tema-por-defecto.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 08 Dec 2022  +0100</pubDate>
+    <pubDate>Thu, 08 Dec 2022 02:30 +0100</pubDate>
     <category>firefox</category>
     <category>manjaro</category>
     <category></category>
@@ -7343,7 +7376,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
