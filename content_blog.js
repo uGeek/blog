@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'i3wm en Arch',
+            'text': 'Me he pasado a Manjaro, una distro linux basada en Arch. Esto implica que todos mis archivos de configuración del gestor de ventanas i3wm son válidos, en cambio los paquetes', 
+            'tags': 'i3wm,arch,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-11-i3wm-en-arch.html' 
+},
+{
             'title': 'Obsidian en Raspberry Pi',
             'text': 'Cuando decido utilizar una aplicación de notas, busco la total compatibilidad con todos los dispositivos en las que voy a utilizarlo. Uno de estos dispositivos es la Raspberry Pi. Que', 
             'tags': 'notas,obsidian,arm,raspberry,appimage,', 
