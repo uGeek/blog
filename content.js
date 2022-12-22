@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker. Borrar logs',
+            'text': 'Si tienes Dockers funcionando desde hace mucho tiempo, es probable que los archivos con los logs sea muy grande, dependiendo del servicio puede llegar incluso a varios gigas.', 
+            'tags': 'docker,logs,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html' 
+},
+{
             'title': 'i3wm en Arch',
             'text': 'Me he pasado a Manjaro, una distro linux basada en Arch. Esto implica que todos mis archivos de configuración del gestor de ventanas i3wm son válidos, en cambio los paquetes', 
             'tags': 'i3wm,arch,,,,', 
