@@ -98,12 +98,12 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="agregando-a-caddyfile">Agregando a Caddyfile</h2>
 <p>Añade en el archivo Caddyfile siguiendo esta estructura:</p>
 <div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">midominio.duckdns.org</span> {</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="ex">basicauth</span> {</a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="ex">angel</span>   <span class="va">$2</span>a<span class="va">$1</span>4<span class="va">$gfbDG4p8ZFtUUIQ9cZSNzuNS1EtIqAqSgbBJPkFvsyJAhG4Kp3</span>.xe</a>
-<a class="sourceLine" id="cb2-4" title="4">}</a>
-<a class="sourceLine" id="cb2-5" title="5"><span class="ex">reverse_proxy</span> nginx:</a>
+<a class="sourceLine" id="cb2-2" title="2">    <span class="ex">basicauth</span> {</a>
+<a class="sourceLine" id="cb2-3" title="3">        <span class="ex">angel</span>   <span class="va">$2</span>a<span class="va">$1</span>4<span class="va">$gfbDG4p8ZFtUUIQ9cZSNzuNS1EtIqAqSgbBJPkFvsyJAhG4Kp3</span>.xe</a>
+<a class="sourceLine" id="cb2-4" title="4">    }</a>
+<a class="sourceLine" id="cb2-5" title="5">    <span class="ex">reverse_proxy</span> nginx:</a>
 <a class="sourceLine" id="cb2-6" title="6">}</a></code></pre></div>
-<p>En este ejemplo, el usuario será: angel y la contraseña: 1234. El servicio donde tendré que introducir el usuario y contraseña, como puedes ver es un servidor nginx.</p>
+<p>En este ejemplo, el usuario será: angel y la contraseña: 1234. El servicio donde tendré que introducir el usuario y contraseña, en este ejemplo es un servidor nginx.</p>
 <br>
 <p>Publicado por Angel el Friday 23 December del 2022</p>
 <br><br> 
