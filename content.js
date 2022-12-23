@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Caddy. Crear usuario y contraseña',
+            'text': 'Con caddy es posible crear un usuario y contraseña al acceder a los servicios expuestos a la red mediante el proxy inverso.', 
+            'tags': 'caddy,contraseña,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-23-caddy-crear-usuario-y-contrasena.html' 
+},
+{
             'title': 'Docker. Borrar logs',
             'text': 'Si tienes Dockers funcionando desde hace mucho tiempo, es probable que los archivos con los logs sea muy grande, dependiendo del servicio puede llegar incluso a varios gigas.', 
             'tags': 'docker,logs,,,,', 
@@ -1357,7 +1363,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
