@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Servidor SSH en Manjaro',
+            'text': 'Vamos a ver cómo instalar un servidor SSH en Manjaro.', 
+            'tags': 'ssh,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2022-12-31-servidor-ssh-en-manjaro.html' 
+},
+{
             'title': 'Caddy. Crear usuario y contraseña',
             'text': 'Con caddy es posible crear un usuario y contraseña al acceder a los servicios expuestos a la red mediante el proxy inverso.', 
             'tags': 'caddy,contraseña,,,,', 
@@ -1363,7 +1369,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

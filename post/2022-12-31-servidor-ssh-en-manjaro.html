@@ -1,5 +1,5 @@
 <head>
-<title>Listado de Servicios con System V y Systemd. uGeek Blog </title>
+<title>Servidor SSH en Manjaro. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado" />
+<meta name="description" content="Vamos a ver cómo instalar un servidor SSH en Manjaro." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Listado de Servicios con System V y Systemd" />
-<meta property="og:description" content="Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html" />
+<meta property="og:title" content="Servidor SSH en Manjaro" />
+<meta property="og:description" content="Vamos a ver cómo instalar un servidor SSH en Manjaro." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2022-12-31-servidor-ssh-en-manjaro.html" />
 
-<meta name="twitter:title" content="Listado de Servicios con System V y Systemd" />
-<meta name="twitter:description" content="Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/" />
+<meta name="twitter:title" content="Servidor SSH en Manjaro" />
+<meta name="twitter:description" content="Vamos a ver cómo instalar un servidor SSH en Manjaro." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,46 +85,36 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="listado-de-servicios-con-system-v-y-systemd-1" title="Listado de Servicios con System V y Systemd" data-export_file_name="Listado de Servicios con System V y Systemd" data-description="Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado" data-export_date="2019-09-16 17:55" data-category="servidor" data-tag="ssh, terminal" data-image="">Listado de Servicios con System V y Systemd</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 242 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
-<p>Buscaba el modo de comprobar los servicios que tengo corriendo y he llegado al <a href="https://www.jesusamieiro.com/como-comprobar-que-servicios-estan-en-ejecucion-en-un-sistema-linux/">Blog de Jesus Mieiro</a>, donde explica con System V y Systemd, como obtener esta información.</p>
-<p>Gracias una vez más, nuestro amigo Grep, toda esta información la podemos filtrar accediendo exactamente al servicio que nos interesa.</p>
-<h2 id="basado-en-system-v">Basado en System V</h2>
-<h3 id="comprobar-el-estado-de-los-servicios">Comprobar el estado de los servicios</h3>
-<pre><code>sudo service --status-all
-</code></pre>
-<h3 id="filtrar-los-servicios-corriendo">Filtrar los servicios corriendo</h3>
-<pre><code>sudo service --status-all | grep +
-</code></pre>
-<h2 id="si-el-sistema-esta-está-systemd">Si el sistema esta está Systemd</h2>
-<h3 id="estado-de-todos-los-servicios">Estado de todos los servicios</h3>
-<pre><code>sudo systemctl list-unit-files
-</code></pre>
-<h3 id="para-filtrar-los-servicios-corriendo">Para filtrar los servicios corriendo</h3>
-<pre><code>sudo systemctl list-unit-files | grep enabled
-sudo systemctl list-unit-files --state=enabled
-</code></pre>
-<h3 id="ver-el-estado-de-docker">Ver el estado de docker</h3>
-<p>Vamos a ver, por ejemplo, el estado del servicio docker.</p>
-<pre><code>sudo systemctl list-unit-files | grep docker
-</code></pre>
-<p>Si quisiéramos filtrarlo todavía mas, podríamos utilizar <strong>cut</strong>.</p>
-<pre><code>sudo systemctl list-unit-files | grep docker.service | cut -d &quot; &quot; -f2-
-</code></pre>
+<h1 id="servidor-ssh-en-manjaro-1" title="Servidor SSH en Manjaro" data-export_file_name="servidor-ssh-en-manjaro" data-description="Vamos a ver cómo instalar un servidor SSH en Manjaro." data-export_date="2022-12-31 13:25" data-category="ssh" data-tag="manjaro" data-image="./images-blog/ugeek.png">Servidor SSH en Manjaro</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 232 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<p>Vamos a ver cómo instalar un servidor SSH en Manjaro.</p>
+<h2 id="instalar-openssh">Instalar OpenSSH</h2>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pacman -S openssh</a></code></pre></div>
+<h2 id="habilitar-e-iniciar-el-servicio-ssh">Habilitar e iniciar el servicio SSH</h2>
+<p>El servicio está instalado siguiendo el paso anterior. Ahora lo que necesitamos es que el servicio corra ininterrumpidamente mediante el daemon. Para ello haremos uso de <strong>systemd</strong>.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> systemctl enable sshd.service</a></code></pre></div>
+<p>Con este comando habilitaremos el servicio cada vez que iniciemos el sistema operativo, hará que corra el servidor.</p>
+<p>Para iniciar el servicio ejecutaremos el siguiente comando.</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> systemctl start sshd.service</a></code></pre></div>
+<h2 id="otras-opciones">Otras opciones</h2>
+<p>Con la opción status, podremos ver el estado del servicio.</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> systemctl status sshd.service</a></code></pre></div>
+<p>Si necesitas editar el archivo de configuración de SSH, puedes hacerlo del siguiente modo utilizando Nano:</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> nano /etc/ssh/sshd_config</a></code></pre></div>
 <br>
-<p>Publicado por Angel el Monday 16 September del 2019</p>
+<p>Publicado por Angel el Saturday 31 December del 2022</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html">WebDAV. Acceso al servidor WebDAV desde escritorio Windows</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html">Notificaciones de Jellyfin en Telegram</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-07-11-conduit-el-matrix-escrito-en-rust.html">Conduit. El matrix escrito en rust</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html">Tunel SSH para conectar puertos remotos como si fuera local</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-socks5.html">SocksDroid. Enrutando todo el tráfico de tu Android por servidores SOCKS5</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html">FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html">Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc…</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html">Configurar una ip estática en tu Raspberry Pi</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html">Kodbox con mariadb</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-03-10-audiobookshelf-servidor-de-audiolibros.html">Audiobookshelf. Servidor de Audiolibros</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-11-instalando-ssh-en-fedora-centos-o-redhat.html">Instalando SSH en Fedora, Centos o RedHat</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
