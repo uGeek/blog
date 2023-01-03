@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Cambiar correctamente el nombre de host en Manjaro',
+            'text': 'Para cambiar el nombre de host, de la máquina que estamos utilizando en ese momento, es tan sencillo como seguir los siguientes pasos:', 
+            'tags': 'host,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-03-cambiar-correctamente-el-nombre-de-host-en-manjaro.html' 
+},
+{
             'title': 'Servidor SSH en Manjaro',
             'text': 'Vamos a ver cómo instalar un servidor SSH en Manjaro.', 
             'tags': 'ssh,manjaro,,,,', 

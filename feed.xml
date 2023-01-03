@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Cambiar correctamente el nombre de host en Manjaro</title>
+    <link>https://ugeek.github.io/blog/post/2023-01-03-cambiar-correctamente-el-nombre-de-host-en-manjaro.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Cambiar correctamente el nombre de host en Manjaro"&gt;
+&lt;br&gt;&lt;p&gt;Para cambiar el nombre de host, de la máquina que estamos utilizando en ese momento, es tan sencillo como seguir los siguientes pasos:... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-01-03-cambiar-correctamente-el-nombre-de-host-en-manjaro.html&gt;Cambiar correctamente el nombre de host en Manjaro&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Tue, 03 Jan 2023  +0100</pubDate>
+    <category>host</category>
+    <category>manjaro</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-01-03-cambiar-correctamente-el-nombre-de-host-en-manjaro.html</guid>
+   </item>
+   <item>
     <title>Servidor SSH en Manjaro</title>
     <link>https://ugeek.github.io/blog/post/2022-12-31-servidor-ssh-en-manjaro.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 31 Dec 2022  +0100</pubDate>
+    <pubDate>Sat, 31 Dec 2022 18:40 +0100</pubDate>
     <category>ssh</category>
     <category>manjaro</category>
     <category></category>
