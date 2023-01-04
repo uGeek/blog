@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Quitar modo suspensión e hibernación</title>
+    <link>https://ugeek.github.io/blog/post/2023-01-04-quitar-modo-suspension-e-hibernacion.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Quitar modo suspensión e hibernación"&gt;
+&lt;br&gt;&lt;p&gt;Uno de mis PC's he decidido utilizarlo de servidor con Manjaro. He instalado el escritorio gnome y al reiniciarlo, como no ha ejecutado ningún comando ha pasado a modo hibernación.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-01-04-quitar-modo-suspension-e-hibernacion.html&gt;Quitar modo suspensión e hibernación&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 04 Jan 2023  +0100</pubDate>
+    <category>hibernación</category>
+    <category>manjaro</category>
+    <category>suspensión</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-01-04-quitar-modo-suspension-e-hibernacion.html</guid>
+   </item>
+   <item>
     <title>Cambiar correctamente el nombre de host en Manjaro</title>
     <link>https://ugeek.github.io/blog/post/2023-01-03-cambiar-correctamente-el-nombre-de-host-en-manjaro.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 03 Jan 2023  +0100</pubDate>
+    <pubDate>Tue, 03 Jan 2023 12:40 +0100</pubDate>
     <category>host</category>
     <category>manjaro</category>
     <category></category>

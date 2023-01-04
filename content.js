@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Quitar modo suspensión e hibernación',
+            'text': 'Uno de mis PC,s he decidido utilizarlo de servidor con Manjaro. He instalado el escritorio gnome y al reiniciarlo, como no ha ejecutado ningún comando ha pasado a modo hibernación.', 
+            'tags': 'hibernación,manjaro,suspensión,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-04-quitar-modo-suspension-e-hibernacion.html' 
+},
+{
             'title': 'Cambiar correctamente el nombre de host en Manjaro',
             'text': 'Para cambiar el nombre de host, de la máquina que estamos utilizando en ese momento, es tan sencillo como seguir los siguientes pasos:', 
             'tags': 'host,manjaro,,,,', 
