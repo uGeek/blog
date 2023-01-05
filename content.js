@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'TigerVNC. Servidor VNC en Manjaro',
+            'text': '#+HTML: <center>', 
+            'tags': 'vnc,tigervnc,manjaro,lxde,i3wm,resolución', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-06-tigervnc-servidor-vnc-en-manjaro.html' 
+},
+{
             'title': 'Habilitar Cron en Manjaro',
             'text': 'Después de instalar Manjaro con el escritorio gnome, he abierto mi archivo cron para editar mis scripts automatizados y... He aquí mi sorpresa!, el servicio estaba detenido.', 
             'tags': 'cron,manjaro,,,,', 
