@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Habilitar Cron en Manjaro',
+            'text': 'Después de instalar Manjaro con el escritorio gnome, he abierto mi archivo cron para editar mis scripts automatizados y... He aquí mi sorpresa!, el servicio estaba detenido.', 
+            'tags': 'cron,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-05-habilitar-cron-en-manjaro.html' 
+},
+{
             'title': 'Quitar modo suspensión e hibernación',
             'text': 'Uno de mis PC,s he decidido utilizarlo de servidor con Manjaro. He instalado el escritorio gnome y al reiniciarlo, como no ha ejecutado ningún comando ha pasado a modo hibernación.', 
             'tags': 'hibernación,manjaro,suspensión,,,', 

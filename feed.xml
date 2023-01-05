@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Habilitar Cron en Manjaro</title>
+    <link>https://ugeek.github.io/blog/post/2023-01-05-habilitar-cron-en-manjaro.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Habilitar Cron en Manjaro"&gt;
+&lt;br&gt;&lt;p&gt;Después de instalar Manjaro con el escritorio gnome, he abierto mi archivo cron para editar mis scripts automatizados y... He aquí mi sorpresa!, el servicio estaba detenido.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-01-05-habilitar-cron-en-manjaro.html&gt;Habilitar Cron en Manjaro&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 05 Jan 2023  +0100</pubDate>
+    <category>cron</category>
+    <category>manjaro</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-01-05-habilitar-cron-en-manjaro.html</guid>
+   </item>
+   <item>
     <title>Quitar modo suspensión e hibernación</title>
     <link>https://ugeek.github.io/blog/post/2023-01-04-quitar-modo-suspension-e-hibernacion.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 04 Jan 2023  +0100</pubDate>
+    <pubDate>Wed, 04 Jan 2023 07:40 +0100</pubDate>
     <category>hibernación</category>
     <category>manjaro</category>
     <category>suspensión</category>
