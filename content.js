@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Instalando Impresora en Manjaro',
+            'text': 'Tenia instalado Ubuntu y me reconocía perfectamente mi impresora, pero al instalar Manjaro, no ha sido así.', 
+            'tags': 'impresora,manjaro,arch,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-07-instalando-impresora-en-manjaro.html' 
+},
+{
             'title': 'TigerVNC. Servidor VNC en Manjaro',
             'text': '#+HTML: <center>', 
             'tags': 'vnc,tigervnc,manjaro,lxde,i3wm,resolución', 
