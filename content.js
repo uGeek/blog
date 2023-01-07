@@ -13,7 +13,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'Habilitar Cron en Manjaro',
-            'text': 'Después de instalar Manjaro con el escritorio gnome, he abierto mi archivo cron para editar mis scripts automatizados y... He aquí mi sorpresa!, el servicio estaba detenido.', 
+            'text': 'Después de instalar Manjaro con el escritorio gnome, he abierto mi archivo cron ', 
             'tags': 'cron,manjaro,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2023-01-05-habilitar-cron-en-manjaro.html' 
 },
@@ -1399,7 +1399,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
