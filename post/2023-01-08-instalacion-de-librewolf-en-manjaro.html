@@ -1,5 +1,5 @@
 <head>
-<title>hibernación</title>
+<title>Instalación de LibreWolf en Manjaro. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,14 +47,54 @@ gtag("js", new Date())
 gtag("config", "");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>hibernación</a></h2>
-<ul>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-04-quitar-modo-suspension-e-hibernacion.html>Quitar modo suspensión e hibernación</a></li>
-</ul>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instalación-de-librewolf-en-manjaro-1" title="Instalación de LibreWolf en Manjaro" data-export_file_name="instalacion-de-librewolf-en-manjaro" data-description="LibreWolf para Arch Linux se puede descargar desde el [[https://wiki.archlinux.org/title/Arch_User_Repository][AUR]] . Hay dos paquetes, [[https://aur.archlinux.org/packages/librewolf-bin][=librewolf-bin=]] y [[https://aur.archlinux.org/packages/librewolf][=librewolf=]]. La primera opción instala un binario desde yay. En pocos segundos ya podrás" data-export_date="2023-01-08 13:00" data-category="librewolf" data-tag="manjaro,firefox,arch" data-image="./images-blog/Instalación_de_LibreWolf_en_Manjaro.png">Instalación de LibreWolf en Manjaro</h1>
+<h5>Tiempo estimado de lectura: 0 minutos. 100 palabras.    <a href="https://ugeek.github.io/blog/categories/librewolf">librewolf</a></h5>
+<p>LibreWolf para Arch Linux se puede descargar desde el <a href="https://wiki.archlinux.org/title/Arch_User_Repository">AUR</a> . Hay dos paquetes, <a href="https://aur.archlinux.org/packages/librewolf-bin"><code>librewolf-bin</code></a> y <a href="https://aur.archlinux.org/packages/librewolf"><code>librewolf</code></a>. La primera opción instala un binario desde yay. En pocos segundos ya podrás utilizar LibreWolf.</p>
+<p>La segunda opción compila Librewolf en tu PC a partir del código fuente de Firefox con los parches añadidos y modificaciones de LibreWolf. Esta primera opción es más lenta.</p>
+<h2 id="instalación-de-librewolf-con-yay.">Instalación de LibreWolf con yay.</h2>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">yay</span> -S librewolf-bin</a></code></pre></div>
+<h2 id="instalación-de-librewolf-con-yay-y-compilado-en-tu-pc">Instalación de LibreWolf con yay y compilado en tu PC</h2>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">yay</span> -S librewolf</a></code></pre></div>
+<br>
+<p>Publicado por Angel el Sunday 08 January del 2023</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
