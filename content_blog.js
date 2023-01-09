@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Manjaro. Elegir los repositorios más rápidos',
+            'text': 'Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos:', 
+            'tags': 'manjaro,repositorios,pacman,snap,flatpak,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-09-manjaro-elegir-los-repositorios-mas-rapidos.html' 
+},
+{
             'title': 'Instalación de LibreWolf en Manjaro',
             'text': 'LibreWolf para Arch Linux se puede descargar desde el [[https://wiki.archlinux.org/title/Arch_User_Repository][AUR]] . Hay dos paquetes, [[https://aur.archlinux.org/packages/librewolf-bin][=librewolf-bin=]] y [[https://aur.archlinux.org/packages/librewolf][=librewolf=]]. La primera opción instala un binario desde yay. En pocos segundos ya podrás', 
             'tags': 'librewolf,manjaro,firefox,arch,,', 
