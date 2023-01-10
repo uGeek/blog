@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Instalación de yay en Arch y Manjaro',
+            'text': 'Yay es un asistente desarrollado en GO para instalar software de AUR (Arch User Repository).', 
+            'tags': 'yay,manjaro,arch,aur,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-10-instalacion-de-yay-en-arch-y-manjaro.html' 
+},
+{
             'title': 'Manjaro. Elegir los repositorios más rápidos',
             'text': 'Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos:', 
             'tags': 'manjaro,repositorios,pacman,snap,flatpak,', 
