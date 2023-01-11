@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Enviar llave pública al servidor SSH',
+            'text': 'Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos', 
+            'tags': 'ssh,llaves,publico,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html' 
+},
+{
             'title': 'Instalación de yay en Arch y Manjaro',
             'text': 'Yay es un asistente desarrollado en GO para instalar software de AUR (Arch User Repository).', 
             'tags': 'yay,manjaro,arch,aur,,', 

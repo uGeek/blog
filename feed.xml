@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Enviar llave pública al servidor SSH</title>
+    <link>https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Enviar llave pública al servidor SSH"&gt;
+&lt;br&gt;&lt;p&gt;Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html&gt;Enviar llave pública al servidor SSH&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 11 Jan 2023  +0100</pubDate>
+    <category>ssh</category>
+    <category>llaves</category>
+    <category>publico</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html</guid>
+   </item>
+   <item>
     <title>Instalación de yay en Arch y Manjaro</title>
     <link>https://ugeek.github.io/blog/post/2023-01-10-instalacion-de-yay-en-arch-y-manjaro.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 10 Jan 2023  +0100</pubDate>
+    <pubDate>Tue, 10 Jan 2023 10:18 +0100</pubDate>
     <category>yay</category>
     <category>manjaro</category>
     <category>arch</category>

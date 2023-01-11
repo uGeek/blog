@@ -1,5 +1,5 @@
 <head>
-<title>Simplifica o abrevia tus conexiones SSH. uGeek Blog </title>
+<title>Enviar llave pública al servidor SSH. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Cuando tienes muchas Raspberry, Servidores, Pc's,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP's, puertos, etc... También es mucho más rápido en el" />
+<meta name="description" content="Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Simplifica o abrevia tus conexiones SSH" />
-<meta property="og:description" content="Cuando tienes muchas Raspberry, Servidores, Pc's,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP's, puertos, etc... También es mucho más rápido en el" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html" />
+<meta property="og:title" content="Enviar llave pública al servidor SSH" />
+<meta property="og:description" content="Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html" />
 
-<meta name="twitter:title" content="Simplifica o abrevia tus conexiones SSH" />
-<meta name="twitter:description" content="Cuando tienes muchas Raspberry, Servidores, Pc's,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP's, puertos, etc... También es mucho más rápido en el" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta name="twitter:title" content="Enviar llave pública al servidor SSH" />
+<meta name="twitter:description" content="Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,73 +85,19 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="simplifica-o-abrevia-tus-conexiones-ssh-1" title="Simplifica o abrevia tus conexiones SSH" data-export_file_name="simplifica-o-abrevia-tus-conexiones-ssh" data-description="Cuando tienes muchas Raspberry, Servidores, Pc&#39;s,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP&#39;s, puertos, etc... También es mucho más rápido en el" data-export_date="2019-11-09 09:45" data-category="ssh" data-tag="bash,zsh" data-image="./images-blog/bash.png">Simplifica o abrevia tus conexiones SSH</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 347 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
-<p>Cuando tienes muchas Raspberry, Servidores, Pc's,… y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP's, puertos, etc… También es mucho más rápido en el momento de conectarnos destinar a cada dispositivo un nombre abreviado que podamos recordar y no tener que poner toda la línea completa.</p>
-<center>
-<p><img src="../images-blog/bash.png" /></p>
-</center>
-<p>Vamos a ver como crear este archivo de configuración muy simple.</p>
-<h2 id="crear-archivo-de-configuración">Crear archivo de configuración</h2>
-<p>Vamos a crear el archivo de configuración. Utilizaremos de editor Vim.</p>
-<pre><code>vim ~/.ssh/config
-</code></pre>
-<p>Rellenamos la Ip, puerto, usuario y nombre que utilizaremos para conectarno. En mi caso <strong>rp4</strong></p>
-<pre><code>Host rp4
-    Hostname 192.168.1.100
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-    User pi
-    Port 22
-</code></pre>
-<p>Ahora voy a añadir también mi Raspberry Pi 3.</p>
-<pre><code>Host rp4
-    Hostname 192.168.1.100
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-    User pi
-    Port 22
-Host rp3
-    Hostname 192.168.1.101
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-    User angel
-    Port 22
-</code></pre>
-<ul>
-<li>Hostname: ip del servidor</li>
-<li>Port: puerto</li>
-<li>User: usuario</li>
-<li>IdentityFile: Es la ruta del archivo donde está la clave privada del servidor</li>
-<li>IdentitiesOnly:Especifica que la conexión se hará solo bajo el archivo <strong>IdentityFile</strong></li>
-</ul>
-<h2 id="simplificar-si-hay-cosas-en-común">Simplificar si hay cosas en común</h2>
-<pre><code>Host rp4
-    Hostname 192.168.1.100
-    User pi
-Host rp3
-    Hostname 192.168.1.101
-    User angel
-Host *
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-    Port 22
-</code></pre>
-<h2 id="conectarme-ahora-de-un-modo-simple-gracias-al-archivo-de-configuración">Conectarme ahora de un modo simple, gracias al archivo de configuración</h2>
-<pre><code>ssh rp4
-</code></pre>
-<p>y</p>
-<pre><code>ssh rp3
-</code></pre>
-<p>Quizás quieras abrir una aplicación de tu servidor remoto en local:</p>
-<pre><code>ssh -X rp4
-</code></pre>
-<h2 id="fuentes">Fuentes</h2>
-<ul>
-<li><a href="https://www.atareao.es/ubuntu/configuracion-de-ssh/">https://www.atareao.es/ubuntu/configuracion-de-ssh/</a></li>
-</ul>
+<h1 id="enviar-llave-pública-al-servidor-ssh-1" title="Enviar llave pública al servidor SSH" data-export_file_name="enviar-llave-publica-al-servidor-ssh" data-description="Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos" data-export_date="2023-01-11 10:18" data-category="ssh" data-tag="llaves,publico" data-image="./images-blog/ugeek.png">Enviar llave pública al servidor SSH</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 227 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<p>Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos maneras mediante una sola línea de terminal.</p>
+<p>El proceso será copiar la clave pública en el archivo <strong>autorized_keys</strong> del servidor. Esto es muy simple con el comando <code>ssh-copy-id</code>.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">ssh-copy-id</span> angel@192.168.1.100</a></code></pre></div>
+<p>También lo podemos hacer así:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">cat</span> ~/.ssh/id_rsa.pub <span class="kw">|</span> <span class="fu">ssh</span> angel@192.168.1.100 <span class="st">&quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt;  ~/.ssh/authorized_keys&quot;</span></a></code></pre></div>
+<p>Por último, si has copiado tus archivos de configuración <code>.ssh</code> de dotfiles que tengas guardados, es probable que tengas que cambiar los permisos para que el servidor acepte la conexión</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">chmod</span> 750 ~/</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="fu">chmod</span> 700 ~/.ssh</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="fu">chmod</span> 600 ~/.ssh/authorized_keys</a></code></pre></div>
 <br>
-<p>Publicado por Angel el Saturday 09 November del 2019</p>
+<p>Publicado por Angel el Wednesday 11 January del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
