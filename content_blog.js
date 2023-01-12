@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Editar Markdown con gedit',
+            'text': 'Recuerdo mis inicios en Linux cuando utilizaba gedit. gedit es el editor de texto que viene por defecto en los escritorios gnome.', 
+            'tags': 'markdown,gedit,editor,markdown,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-12-editar-markdown-con-gedit.html' 
+},
+{
             'title': 'Enviar llave pública al servidor SSH',
             'text': 'Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos', 
             'tags': 'ssh,llaves,publico,,,', 

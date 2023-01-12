@@ -1,5 +1,5 @@
 <head>
-<title>Trilium. Notas jerárquicas en Markdown. uGeek Blog </title>
+<title>Editar Markdown con gedit. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
+<meta name="description" content="Recuerdo mis inicios en Linux cuando utilizaba gedit. gedit es el editor de texto que viene por defecto en los escritorios gnome." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Trilium. Notas jerárquicas en Markdown" />
-<meta property="og:description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/trilium.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html" />
+<meta property="og:title" content="Editar Markdown con gedit" />
+<meta property="og:description" content="Recuerdo mis inicios en Linux cuando utilizaba gedit. gedit es el editor de texto que viene por defecto en los escritorios gnome." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-01-12-editar-markdown-con-gedit.html" />
 
-<meta name="twitter:title" content="Trilium. Notas jerárquicas en Markdown" />
-<meta name="twitter:description" content="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/trilium.png" />
+<meta name="twitter:title" content="Editar Markdown con gedit" />
+<meta name="twitter:description" content="Recuerdo mis inicios en Linux cuando utilizaba gedit. gedit es el editor de texto que viene por defecto en los escritorios gnome." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,66 +85,36 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="trilium.-notas-jerárquicas-en-markdown-1" title="Trilium. Notas jerárquicas en Markdown" data-export_file_name="trilium-notas-jerarquicas-en-markdown" data-description="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" data-export_date="2020-12-25 20:41 2022-03-18" data-category="markdown" data-tag="servidor" data-image="./images-blog/trilium.png">Trilium. Notas jerárquicas en Markdown</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 355 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
-<p>Quizás ha llegado el momento de tomar notas para seres humanos, voy a hablar de Trilum.</p>
-<p>Trilium es un método jerárquico para tomar notas, tareas,… donde estás se gestionan con un método jerarquico como el orgmode y las podemos exportar a posterior a HTML, Markdown o incluso imprimirlas en pdf. </p>
-<center>
-<p><img src="../images-blog/trilium.png" /></p>
-</center>
-<p>El método para introducir el texto es mediante la sintaxis markdown.</p>
-<p>He probado diferentes dockers para la arquitectura amd64 y ARM así que finalmente me quedo con él dockers oficial para amd64 y otro que he encontrado de "hlince" para arm, que funciona muy bien en Raspberry.</p>
-<h2 id="docker-amd64">Docker amd64</h2>
-<p>El docker oficial y más actualizado para amd64 es:</p>
-<pre class="example"><code>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data zadam/trilium
-</code></pre>
-<p>Servicio disponible por el puerto en este ejemplo 99.</p>
+<h1 id="editar-markdown-con-gedit-1" title="Editar Markdown con gedit" data-export_file_name="editar-markdown-con-gedit" data-description="Recuerdo mis inicios en Linux cuando utilizaba gedit. gedit es el editor de texto que viene por defecto en los escritorios gnome." data-export_date="2023-01-12 09:40" data-category="markdown" data-tag="gedit,editor,markdown" data-image="./images-blog/ugeek.png">Editar Markdown con gedit</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 289 palabras.    <a href="https://ugeek.github.io/blog/categories/markdown">markdown</a></h5>
+<p>Recuerdo mis inicios en Linux cuando utilizaba gedit. gedit es el editor de texto que viene por defecto en los escritorios gnome.</p>
+<p>Si eres de aquellos que no te gusta la terminal, utilizas gedit y habitualmente editas tus notas en markdown, estás de suerte.</p>
+<p>Hay un fantástico complemento que te permite previsualizar en la columna izquierda, el documento Markdown que estás editando.</p>
+<p>Lo genial de este complemento es que además si haces clic sobre alguna de las URLs que tengas escrita en el documento, te va a abrir esa URL y la va a previsualizar.</p>
+<p>También permite previsualizar, como no, imágenes.</p>
+<p>Vamos a ver cómo instalar este complemento</p>
+<h2 id="instalación">Instalación</h2>
+<p>Dependencies necesarias</p>
 <ul>
-<li><a href="https://github.com/zadam/trilium/wiki/Docker-server-installation">https://github.com/zadam/trilium/wiki/Docker-server-installation</a></li>
+<li><code>gedit</code> (≥3.22)</li>
+<li><code>gir1.2-webkit2-4.0</code></li>
+<li><code>python3-markdown</code> o <code>pandoc</code></li>
 </ul>
-<p>Fork ugeek</p>
-<p>Servicio disponible por el puerto en este ejemplo 99.</p>
-<h2 id="docker-con-proxy-inverso-con-caddy">Docker con Proxy Inverso con Caddy</h2>
-<p>1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen</p>
-<pre><code>#volumes:
-#  - ./trilium-data:/home/node/trilium-data
-</code></pre>
-<p>2.- Una vez iniciado del docker, copia el volumen trilium-data en el host</p>
-<p>docker cp trilium:/home/node/trilium-data ./trilium-data</p>
-<p>3.- Descomenta quitando las almohadillas y vuelve a crear el docker con el directorio de trilium-data</p>
-<pre><code>version: &#39;2.1&#39;
-services:
-  trilium:
-    image: zadam/trilium
-    restart: always
-    container_name: trilium
-    ports:
-      - &quot;8080:8080&quot;
-    volumes:
-      - ./trilium-data:/home/node/trilium-data
-    networks:
-      - DockerLAN
-
-
-###########
-## REDES ##
-###########
-networks:
-  DockerLAN:  ## Red bridge propia ##
-    name: DockerLAN
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.20.0.0/24
-</code></pre>
+<h3 id="arch-manjaro">Arch, Manjaro</h3>
+<p>Tan sencillo como:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">yay</span> -S gedit-plugin-markdown_preview</a></code></pre></div>
+<h2 id="ubuntu-debian">Ubuntu, debian,…</h2>
+<p><a href="https://github.com/maoschanz/gedit-plugin-markdown_preview/releases">Descarga desde de GitHub</a> el archivo <code>.zip</code> y extrae los archivos. Ahora ejecuta el script <code>./install.sh.</code></p>
+<p><em>Para habilitar el complemento, abre <strong>gedit</strong>  y ves a: Preferencias &gt; Complementos</em> y luego habilita el <em>complemento <strong>Markdown Preview</strong></em> .</p>
+<p>Reinicia gedit</p>
+<h2 id="funcionamieto">Funcionamieto</h2>
+<p>Cuando abras una archivo .md con <strong>gedit</strong>, tendría que mostrar en la columna izquierda la previsualización. Si no es así, pulsa la tecla <strong>F9</strong>.</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
-<li><a href="https://github.com/zadam/trilium">https://github.com/zadam/trilium</a></li>
-<li><a href="https://www.electronjs.org/apps/trilium-notes">https://www.electronjs.org/apps/trilium-notes</a></li>
+<li><code>gedit-plugin-markdown_preview</code></li>
 </ul>
 <br>
-<p>Publicado por Angel el Friday 25 December del 2020 y <strong>actualizado</strong> el Friday 18 March del 2022</p>
+<p>Publicado por Angel el Thursday 12 January del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

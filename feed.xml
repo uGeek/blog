@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Editar Markdown con gedit</title>
+    <link>https://ugeek.github.io/blog/post/2023-01-12-editar-markdown-con-gedit.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Editar Markdown con gedit"&gt;
+&lt;br&gt;&lt;p&gt;Recuerdo mis inicios en Linux cuando utilizaba gedit. gedit es el editor de texto que viene por defecto en los escritorios gnome.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-01-12-editar-markdown-con-gedit.html&gt;Editar Markdown con gedit&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 12 Jan 2023  +0100</pubDate>
+    <category>markdown</category>
+    <category>gedit</category>
+    <category>editor</category>
+    <category>markdown</category>
+    <guid>https://ugeek.github.io/blog/post/2023-01-12-editar-markdown-con-gedit.html</guid>
+   </item>
+   <item>
     <title>Enviar llave pública al servidor SSH</title>
     <link>https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Wed, 11 Jan 2023  +0100</pubDate>
+    <pubDate>Wed, 11 Jan 2023 09:40 +0100</pubDate>
     <category>ssh</category>
     <category>llaves</category>
     <category>publico</category>
