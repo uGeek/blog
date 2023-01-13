@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Acceso usando credenciales en la URL. Autenticación básica por http',
+            'text': 'Para no tener que poner el usuario y contraseña cada vez que nos conectamos a una url con autenticación básica http, como la que os expliqué en el artículo [[https://ugeek.github.io/blog/post/2022-12-23-caddy-crear-usuario-y-contrasena.html][Caddy.', 
+            'tags': 'http,autenticación,https,caddy,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-13-autenticacion-http-y-https-basica-md.html' 
+},
+{
             'title': 'Editar Markdown con gedit',
             'text': 'Recuerdo mis inicios en Linux cuando utilizaba gedit. gedit es el editor de texto que viene por defecto en los escritorios gnome.', 
             'tags': 'markdown,gedit,editor,markdown,,', 
@@ -1429,7 +1435,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

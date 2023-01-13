@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Acceso usando credenciales en la URL. Autenticación básica por http</title>
+    <link>https://ugeek.github.io/blog/post/2023-01-13-autenticacion-http-y-https-basica-md.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Acceso usando credenciales en la URL. Autenticación básica por http"&gt;
+&lt;br&gt;&lt;p&gt;Para no tener que poner el usuario y contraseña cada vez que nos conectamos a una url con autenticación básica http, como la que os expliqué en el artículo [[https://ugeek.github.io/blog/post/2022-12-23-caddy-crear-usuario-y-contrasena.html][Caddy.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-01-13-autenticacion-http-y-https-basica-md.html&gt;Acceso usando credenciales en la URL. Autenticación básica por http&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 13 Jan 2023  +0100</pubDate>
+    <category>http</category>
+    <category>autenticación</category>
+    <category>https</category>
+    <category>caddy</category>
+    <guid>https://ugeek.github.io/blog/post/2023-01-13-autenticacion-http-y-https-basica-md.html</guid>
+   </item>
+   <item>
     <title>Editar Markdown con gedit</title>
     <link>https://ugeek.github.io/blog/post/2023-01-12-editar-markdown-con-gedit.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Thu, 12 Jan 2023  +0100</pubDate>
+    <pubDate>Thu, 12 Jan 2023 10:19 +0100</pubDate>
     <category>markdown</category>
     <category>gedit</category>
     <category>editor</category>
@@ -7871,7 +7904,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

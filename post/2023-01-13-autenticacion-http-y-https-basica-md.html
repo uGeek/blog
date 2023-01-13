@@ -1,5 +1,5 @@
 <head>
-<title>rss</title>
+<title>Acceso usando credenciales en la URL. Autenticación básica por http. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,17 +47,66 @@ gtag("js", new Date())
 gtag("config", "");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>rss</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="autenticación-http-y-https-básica" title="Acceso usando credenciales en la URL. Autenticación básica por http" data-export_file_name="autenticacion-http-y-https-basica-md" data-description="Para no tener que poner el usuario y contraseña cada vez que nos conectamos a una url con autenticación básica http, como la que os expliqué en el artículo [[https://ugeek.github.io/blog/post/2022-12-23-caddy-crear-usuario-y-contrasena.html][Caddy." data-export_date="2023-01-13 10:19" data-category="http" data-tag="autenticación,https,caddy" data-image="./images-blog/ugeek.png">Autenticación http y https básica</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 197 palabras.    <a href="https://ugeek.github.io/blog/categories/http">http</a></h5>
+<p>Para no tener que poner el usuario y contraseña cada vez que nos conectamos a una url con autenticación básica http, como la que os expliqué en el artículo <a href="https://ugeek.github.io/blog/post/2022-12-23-caddy-crear-usuario-y-contrasena.html">Caddy. Crear usuario y contraseña. uGeek Blog</a> es tan sencillo como seguir la siguiente estructura:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">https</span>://usuario:contraseña@URL</a></code></pre></div>
+<p>Por ejemplo. Sí nuestra url fuera: - URL: <a href="https://fulltextrss.midominio.duckdns.org">https://fulltextrss.midominio.duckdns.org</a> - usuario: angel - contraseña: 1234</p>
+<p>En nuestro navegador pondríamos:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">https</span>://angel:1234@fulltextrss.midominio.duckdns.org</a></code></pre></div>
+<p>Muchos clientes también le permiten evitar el mensaje de inicio de sesión enviando el usuario y la contraseña codificados por la URL</p>
+<br>
+<p>Publicado por Angel el Friday 13 January del 2023</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html>Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html>Backup de tu Shaarli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html>FreshRSS. Mi servidor de RSS</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-15-suscribirte-al-rss-de-canales-de-youtube.html>Suscribirte al RSS de canales de YouTube</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-08-instalacion-de-librewolf-en-manjaro.html">Instalación de LibreWolf en Manjaro</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html">Termux. Una distro Linux en Android con la que crear tus aplicaciones</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html">Script para crear acceso a aplicaciones AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html">Abrir aplicaciones de Ubuntu desde una web html</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html">ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-09-07-gadgetbridge-emparejando-mi-xiaomi-mi-smart-band.html">Gadgetbridge. Emparejando mi Xiaomi Mi Smart Band 4, 5, 6</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-28-el-modo-mas-facil-de-instalar-administrar-wireguard.html">El modo más fácil de instalar y administrar Wireguard</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
