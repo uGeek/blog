@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="tigervnc.-el-cliente-vnc-más-liviano-1" title="TigerVNC. El cliente vnc más liviano" data-export_file_name="tigervnc-el-cliente-vnc-mas-liviano" data-description="En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC." data-export_date="2022-07-10 05:15" data-category="vnc" data-tag="cliente" data-image="./images-blog/ugeek.png">TigerVNC. El cliente vnc más liviano</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 323 palabras.    <a href="https://ugeek.github.io/blog/categories/vnc">vnc</a></h5>
+<h1 id="tigervnc.-el-cliente-vnc-más-liviano-1" title="TigerVNC. El cliente vnc más liviano" data-export_file_name="tigervnc-el-cliente-vnc-mas-liviano" data-description="En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC." data-export_date="2022-07-10 05:15 2023-01-12" data-category="vnc" data-tag="cliente" data-image="./images-blog/ugeek.png">TigerVNC. El cliente vnc más liviano</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 406 palabras.    <a href="https://ugeek.github.io/blog/categories/vnc">vnc</a></h5>
 <p>En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC.</p>
 <p>Lo más interesante de este cliente, es que el cliente funciona a pantalla completa mostrando el escritorio remoto, maximizando la pantalla sin ningún tipo de pestaña, teniendo la sensación de trabajar directamente en el PC remoto  saliendo solo  pulsando la tecla <strong>F8</strong>.</p>
 <h2 id="instalación">Instalación</h2>
@@ -109,7 +109,12 @@ $("#tipue_search_input").tipuesearch();
 <li>*F8*+ <strong>f</strong> = Pantalla completa</li>
 </ul>
 <h2 id="el-cursor-desaparece">El cursor desaparece</h2>
+<p><strong>Es muy muy importante, sobretodo en PC's con Windows, Dejar conectado un ratón en la torre. Si no está conectado, depende del PC, pero es posible que no funciones el teclado númerico del teclado y no se vea el cursor del ratón</strong>.</p>
 <p>Si desaparece el cursor dependiendo del escritorio que utilices, puedes habilitar el cursor de <strong>TigerVNC</strong> que es un punto. Para ello, pulsando <strong>F8</strong>, seleccionaremos la pestaña <strong>Misc.</strong> de Miscelánea y marcaremos la opción <code>Show dot when no cursor</code>. </p>
+<h2 id="ejemplo-de-otro-comando-para-lanzar-tigervnc">Ejemplo de otro comando para lanzar tigervnc</h2>
+<p>Me pareción interesante dejar esta opción para lanzar tigervnc de un usuario.</p>
+<pre><code>vncviewer -viewonly -DotWhenNoCursor=1 -QualityLevel=9 -NoJPEG -PreferredEncoding=Raw -CompressLevel=0 -geometry 1920x1080+0+0 -AutoSelect=0 -Fullscreen=1 -FullscreenSystemKeys=0 [HOSTNAME]::2222[0- 1] 
+</code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://tigervnc.org/">https://tigervnc.org/</a></li>
@@ -120,7 +125,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://github.com/TigerVNC/tigervnc">https://github.com/TigerVNC/tigervnc</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el Sunday 10 July del 2022</p>
+<p>Publicado por Angel el Sunday 10 July del 2022 y <strong>actualizado</strong> el Thursday 12 January del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
