@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Cerrando ventanas con wmctrl',
+            'text': 'Estoy utilizando un PC antiguo de tan solo 2Gb de ram. Aunque estoy utilizando el gestor de ventanas y i3wm, cuando abro Firefox y más de cuatro o cinco pestañas,', 
+            'tags': 'escritorio,wmctrl,bash,terminal,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html' 
+},
+{
             'title': 'Acceso usando credenciales en la URL. Autenticación básica por http',
             'text': 'Para no tener que poner el usuario y contraseña cada vez que nos conectamos a una url con autenticación básica http, como la que os expliqué en el artículo [[https://ugeek.github.io/blog/post/2022-12-23-caddy-crear-usuario-y-contrasena.html][Caddy.', 
             'tags': 'http,autenticación,https,caddy,,', 

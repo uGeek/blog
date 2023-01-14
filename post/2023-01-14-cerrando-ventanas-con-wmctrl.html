@@ -1,5 +1,5 @@
 <head>
-<title>Teamviewer en Ubuntu, Debian. uGeek Blog </title>
+<title>Cerrando ventanas con wmctrl. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC" />
+<meta name="description" content="Estoy utilizando un PC antiguo de tan solo 2Gb de ram. Aunque estoy utilizando el gestor de ventanas y i3wm, cuando abro Firefox y más de cuatro o cinco pestañas," />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Teamviewer en Ubuntu, Debian" />
-<meta property="og:description" content="Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/teamviewer.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-08-teamviewer-en-ubuntu-debian.html" />
+<meta property="og:title" content="Cerrando ventanas con wmctrl" />
+<meta property="og:description" content="Estoy utilizando un PC antiguo de tan solo 2Gb de ram. Aunque estoy utilizando el gestor de ventanas y i3wm, cuando abro Firefox y más de cuatro o cinco pestañas," />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html" />
 
-<meta name="twitter:title" content="Teamviewer en Ubuntu, Debian" />
-<meta name="twitter:description" content="Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/teamviewer.png" />
+<meta name="twitter:title" content="Cerrando ventanas con wmctrl" />
+<meta name="twitter:description" content="Estoy utilizando un PC antiguo de tan solo 2Gb de ram. Aunque estoy utilizando el gestor de ventanas y i3wm, cuando abro Firefox y más de cuatro o cinco pestañas," />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,24 +85,34 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="teamviewer-en-ubuntu-debian-1" title="Teamviewer en Ubuntu, Debian" data-export_file_name="Teamviewer en Ubuntu Debian" data-description="Siempre hay el típico falimiar que te pide que le arregles algo que ha pasado en su PC" data-export_date="2019-09-08 13:29" data-category="escritorio" data-tag="ubuntu, debian, servidor, android" data-image="./images-blog/teamviewer.png">Teamviewer en Ubuntu, Debian</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 211 palabras.    <a href="https://ugeek.github.io/blog/categories/escritorio">escritorio</a></h5>
-<p>No todo el mundo utiliza Software Libre. Siempre hay el típico familiar que te pide que le arregles algo que ha pasado en su PC y tiene mítico Teamviewer.</p>
-<center>
-<p><img src="../images-blog/teamviewer.png" /></p>
-</center>
-<p>De salida, puede parecer imposible para nosotros, aquellos que utilizamos Linux, instalar Teamviewer. Instalando únicamente el archivo <strong>.deb</strong> , puede dar problemas la instalación, así que te explico como hacerlo.</p>
+<h1 id="cerrando-ventanas-con-wmctrl-1" title="Cerrando ventanas con wmctrl" data-export_file_name="cerrando-ventanas-con-wmctrl" data-description="Estoy utilizando un PC antiguo de tan solo 2Gb de ram. Aunque estoy utilizando el gestor de ventanas y i3wm, cuando abro Firefox y más de cuatro o cinco pestañas," data-export_date="2023-01-14 10:00" data-category="escritorio" data-tag="wmctrl,bash,terminal" data-image="./images-blog/ugeek.png">Cerrando ventanas con wmctrl</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 310 palabras.    <a href="https://ugeek.github.io/blog/categories/escritorio">escritorio</a></h5>
+<p>Estoy utilizando un PC antiguo de tan solo 2Gb de ram. Aunque estoy utilizando el gestor de ventanas y i3wm, cuando abro Firefox y más de cuatro o cinco pestañas, comienza a ver una reescalada de RAM que llega a un lugar de no retorno y acaba bloqueando el PC.</p>
+<p>Buscando información en internet, he encontrado el comando wmctrl que explica el amigo Joan del blog de <a href="https://geekland.eu/">Linux - Nuevas tecnologías y Linux en general</a></p>
+<p>wmctrl proporciona una interfaz de línea de comandos para las tareas estándar de administración de ventanas, por lo que puede cambiar el tamaño y mover las ventanas, cambiar los escritorios, alternar los estados fijos, acumulados en una ventana y mucho más, todo desde un script</p>
 <h2 id="instalación">Instalación</h2>
-<p>Vamos a la <a href="https://www.teamviewer.com/es/descarga/linux/">Página de Teamviewer</a>, para descargar el archivo <strong>.deb</strong>. Lo descargaremos y lo instalaremos del siguiente modo:</p>
-<pre><code>sudo dpkg -i teamviewer_14.5.5819_amd64.deb
-</code></pre>
-<p>Si lo ejecutas ahora, no funcionará, Teamviewer necesita algunas dependencias. Para que se instalen escribiremos en nuestra terminal:</p>
-<pre><code>sudo apt install -f 
-</code></pre>
-<h2 id="conclusión">Conclusión</h2>
-<p>Ya puedes disfrutar de Teamviewer en tu PC con Linux. Así de sencillo</p>
+<h3 id="ubuntu-debian">Ubuntu, debian,…</h3>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt-get install wmctrl</a></code></pre></div>
+<h3 id="manjaro-arch">Manjaro, Arch</h3>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> pacman -S wmctrl</a></code></pre></div>
+<h2 id="cerrando-todas-las-ventanas">Cerrando todas las ventanas</h2>
+<p>Si escribimos este comando en la terminal, nos cerrará todas las ventanas abiertas en el escritorio.</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">for</span> <span class="ex">xid</span> in <span class="va">$(</span><span class="ex">wmctrl</span> -l <span class="kw">|</span> <span class="fu">grep</span> -e <span class="st">&quot;-1&quot;</span> -v <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{print $1}&#39;</span><span class="va">)</span><span class="kw">;</span> <span class="kw">do</span> <span class="ex">wmctrl</span> -i -c <span class="va">$xid</span> <span class="kw">;</span> <span class="kw">done</span></a></code></pre></div>
+<p>Explicación resumida del comando:</p>
+<ul>
+<li><strong>wmctrl -l</strong> Lista ventanas abiertas</li>
+<li><strong>wmctrl -i -c</strong> cerramos la totalidad de ventanas</li>
+<li><strong>awk '{print $1}'</strong> recorte primera columna</li>
+</ul>
+<h2 id="ayuda">Ayuda</h2>
+<p>Encontrarás más ayuda con el comando:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">wmctrl</span> --help</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://geekland.eu/cerrar-todas-las-ventanas-abiertas-de-golpe/">Cerrar todas las ventanas abiertas de forma simultánea en Linux</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el Sunday 08 September del 2019</p>
+<p>Publicado por Angel el Saturday 14 January del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

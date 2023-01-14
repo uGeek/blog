@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Cerrando ventanas con wmctrl</title>
+    <link>https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Cerrando ventanas con wmctrl"&gt;
+&lt;br&gt;&lt;p&gt;Estoy utilizando un PC antiguo de tan solo 2Gb de ram. Aunque estoy utilizando el gestor de ventanas y i3wm, cuando abro Firefox y más de cuatro o cinco pestañas,... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html&gt;Cerrando ventanas con wmctrl&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 14 Jan 2023  +0100</pubDate>
+    <category>escritorio</category>
+    <category>wmctrl</category>
+    <category>bash</category>
+    <category>terminal</category>
+    <guid>https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html</guid>
+   </item>
+   <item>
     <title>Acceso usando credenciales en la URL. Autenticación básica por http</title>
     <link>https://ugeek.github.io/blog/post/2023-01-13-autenticacion-http-y-https-basica-md.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 13 Jan 2023  +0100</pubDate>
+    <pubDate>Fri, 13 Jan 2023 10:00 +0100</pubDate>
     <category>http</category>
     <category>autenticación</category>
     <category>https</category>
