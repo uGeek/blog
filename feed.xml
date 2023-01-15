@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Crear servicio con Systemd</title>
+    <link>https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Crear servicio con Systemd"&gt;
+&lt;br&gt;&lt;p&gt;El script que va a estar corriendo en segundo plano para controlar el consumo de RAM de mi PC, necesito iniciarlo y detenerlo a determinadas horas.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html&gt;Crear servicio con Systemd&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 15 Jan 2023  +0100</pubDate>
+    <category>systemd</category>
+    <category>servicio</category>
+    <category>bash</category>
+    <category>script</category>
+    <guid>https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html</guid>
+   </item>
+   <item>
     <title>Cerrando ventanas con wmctrl</title>
     <link>https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 14 Jan 2023  +0100</pubDate>
+    <pubDate>Sat, 14 Jan 2023 10:13 +0100</pubDate>
     <category>escritorio</category>
     <category>wmctrl</category>
     <category>bash</category>

@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Crear servicio con Systemd',
+            'text': 'El script que va a estar corriendo en segundo plano para controlar el consumo de RAM de mi PC, necesito iniciarlo y detenerlo a determinadas horas.', 
+            'tags': 'systemd,servicio,bash,script,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html' 
+},
+{
             'title': 'Cerrando ventanas con wmctrl',
             'text': 'Estoy utilizando un PC antiguo de tan solo 2Gb de ram. Aunque estoy utilizando el gestor de ventanas y i3wm, cuando abro Firefox y más de cuatro o cinco pestañas,', 
             'tags': 'escritorio,wmctrl,bash,terminal,,', 
