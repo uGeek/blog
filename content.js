@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Wireguard en Manjaro',
+            'text': 'Vamos a ver como instalar Wireguard en Manjaro', 
+            'tags': 'wireguard,manjaro,arch,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-16-wireguard-en-manjaro.html' 
+},
+{
             'title': 'Crear servicio con Systemd',
             'text': 'El script que va a estar corriendo en segundo plano para controlar el consumo de RAM de mi PC, necesito iniciarlo y detenerlo a determinadas horas.', 
             'tags': 'systemd,servicio,bash,script,,', 
