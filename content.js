@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Liberar el puerto 53 utilizado por systemd-resolved',
+            'text': 'Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu', 
+            'tags': 'manjaro,puertos,ubuntu,systemd,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html' 
+},
+{
             'title': 'Wireguard en Manjaro',
             'text': 'Vamos a ver como instalar Wireguard en Manjaro', 
             'tags': 'wireguard,manjaro,arch,,,', 
