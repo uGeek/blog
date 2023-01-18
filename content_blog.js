@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Instalación de Manjaro en Raspberry',
+            'text': 'He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky,', 
+            'tags': 'raspberry,manjaro,arch,OS,pacman,instalación', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html' 
+},
+{
             'title': 'Liberar el puerto 53 utilizado por systemd-resolved',
             'text': 'Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu', 
             'tags': 'manjaro,puertos,ubuntu,systemd,,', 

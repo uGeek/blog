@@ -1,0 +1,178 @@
+<head>
+<title>Instalación de Manjaro en Raspberry. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky," />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Instalación de Manjaro en Raspberry" />
+<meta property="og:description" content="He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky," />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html" />
+
+<meta name="twitter:title" content="Instalación de Manjaro en Raspberry" />
+<meta name="twitter:description" content="He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky," />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="instalación-de-manjaro-en-raspberry-1" title="Instalación de Manjaro en Raspberry" data-export_file_name="instalacion-de-manjaro-en-raspberry" data-description="He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky," data-export_date="2023-01-18 10:00" data-category="raspberry" data-tag="manjaro,arch,OS,pacman,instalación" data-image="./images-blog/raspberrypi.jpg">Instalación de Manjaro en Raspberry</h1>
+<h5>Tiempo estimado de lectura: 6 minutos. 717 palabras.    <a href="https://ugeek.github.io/blog/categories/raspberry">raspberry</a></h5>
+<p>He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky, Socks5.</p>
+<center>
+<p><img src="../images-blog/raspberrypi.jpg" /></p>
+</center>
+<p>Raspberry OS funciona perfectamente, pero como ahora estoy utilizando Manjaro, he pensado que sería una buena decisión probarlo en mi Raspberry.</p>
+<p>Vamos a ver como hacerlo.</p>
+<h2 id="quemar-imagen-con-raspberry-pi-imager">Quemar Imagen con Raspberry Pi Imager</h2>
+<p>No lo había utilizado nunca y reconozco que <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> es una solución super sencilla y práctica de quemar o grabar imágenes en tu disco SSD, USB o tarjeta SD. Actualmente hay muchisimas versiones disponibles para instalar y correr en tu Raspberry Pi, entre ellas Manjaro.</p>
+<h3 id="instalación-desde-manjaro-o-arch">Instalación desde Manjaro  o Arch</h3>
+<p>Instalación de Raspberry Pi Imager</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">yay</span>  rpi-imager</a></code></pre></div>
+<h3 id="ejecutar-raspberry-pi-imager">Ejecutar Raspberry Pi Imager</h3>
+<p>Siempre como usuario root para poder quemar el SSD o USB.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> rpi-imager</a></code></pre></div>
+<h3 id="otras-opciones">Otras opciones</h3>
+<p>Hay otras formas de instalar Raspberry Pi Imager, por snap y flatpak, pero no las he probado.</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> snap install rpi-imager</a></code></pre></div>
+<h2 id="selecciona-manjaro-minimal">Selecciona Manjaro Minimal</h2>
+<p>He seleccionado la versión  *Manjaro ARM Minimal 22.12* que ocupa 0.4Gb. Una versión de Manajaro sin escritorio y con el mínimo de paquetes.</p>
+<p>Una versión ideal para usarla a modo servidor.</p>
+<h2 id="inicia-manjaro-por-primera-vez-en-tu-raspberry-pi">Inicia Manjaro por primera vez en tu Raspberry Pi</h2>
+<p>En Manjaro, el truco de crear el archivo SSH en la raíz del root para no conectar el monitor, no es necesario, ya que Manjaro Minimal viene con el servidor SSH instalado por defecto. Lo que si es obligatorio por el momento conectarlo a un monitor, ya que tenemos que configurar el usuario, contraseña,… al inicio. Igual que hariamos con una versión de escritorio.</p>
+<p>Cuando arranquemos nos aparecerá el logo de Manjaro y tras unos instantes un menú para comenzar con el registro del usuario, contraseña, grupo y nombre del host. También aparece para que registres tu zona horaria y lenguaje del teclado.</p>
+<p><strong>Las preguntas del menú son</strong>:</p>
+<ul>
+<li>Nombre completo del usuario</li>
+<li>Contraseña de usuario</li>
+<li>Contraseña root (sí, hay un usuario raíz disponible)</li>
+<li>Zona horaria y configuración regional\</li>
+</ul>
+<p>Puede ingresar la primera letra para ir más rápido en estos menús y los siguientes</p>
+<ul>
+<li>Nombre de host del dispositivo</li>
+</ul>
+<p>Al finalizar todo el proceso, nuestra raspberry se reiniciará y estará lista para utilizar.</p>
+<h2 id="que-ip-tiene-mi-raspberry">Que IP tiene mi Raspberry</h2>
+<p>Por defecto Manjaro no trae el comando ifconfig, así que utilizaremos:</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">ip</span> a</a></code></pre></div>
+<p>De todas maneras, si quieres utilizar ipconfig, lo instalaremos con:</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> pacman -S net-tools</a></code></pre></div>
+<p>Ahora ya funciona</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">ifconfig</span></a></code></pre></div>
+<h3 id="actualizar-repositorios">Actualizar repositorios</h3>
+<p>Antes de instalar ningún paquete, vamos a actualizar los repositorios de Manjaro</p>
+<p>Se paciente, este probablemente puede ser un proceso muy largo</p>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">sudo</span> pacman -Syu</a></code></pre></div>
+<h3 id="reinicia">Reinicia</h3>
+<p>Tras la actualización, es buen idea reiniciar</p>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">sudo</span> reboot now</a></code></pre></div>
+<h2 id="aplicaciones-para-instalar">Aplicaciones para instalar</h2>
+<p>Instala aquellos paquetes que necesites o desees. Yo principalmente he echado a faltar aplicaciones como <strong>htop</strong>.</p>
+<p>También instalaremos <strong>yay</strong>, para instalar paquetes de los repositorios <strong>AUR</strong>.</p>
+<p>Esta es algunas de mis sugerencias a instalar</p>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">sudo</span> pacman -Syu neofetch htop yay emacs micro pcmanfm rclone docker docker-compose python-pip screen</a></code></pre></div>
+<p>Después de Instalar <strong>htop</strong>, he visto que Manjaro solo me estaba consumiendo 81Mb de RAM.</p>
+<p>Para buscar paquetes:</p>
+<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="fu">sudo</span> pacman -Ss paquete</a></code></pre></div>
+<h2 id="instalo-mi-aplicación-dk-para-gestionar-docker">Instalo mi aplicación dk para gestionar docker</h2>
+<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="fu">sudo</span> curl -L https://raw.githubusercontent.com/uGeek/dk/master/dk               -o /usr/bin/dk <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> chmod +x /usr/bin/dk</a></code></pre></div>
+<h2 id="problemas-para-conectarte-por-ssh">Problemas para conectarte por SSH</h2>
+<p>Si has reinstalado por algún problema tu Raspberry o previamente has utilizado la misma <strong>IP</strong> con otro servidor, el cliente de SSH te dirá que las keys del server son diferentes. Para poder conectarte:</p>
+<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="fu">ssh-keygen</span> -f <span class="st">&quot;/home/angel/.ssh/known_hosts&quot;</span> -R <span class="st">&quot;192.168.1.100&quot;</span></a></code></pre></div>
+<p>Cambia el <strong>usuario</strong> e <strong>IP</strong> por el tuyo.</p>
+<h2 id="servidor-ssh-para-versiones-de-escritorio">Servidor SSH para versiones de Escritorio</h2>
+<p><strong>Manjaro ARM Minimal</strong> viene con un servidor SSH instalado. </p>
+<p>Si instalas una versión de escritorio, tendrías que instalarlo manualmente. </p>
+<h3 id="instalación">Instalación</h3>
+<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="fu">sudo</span> pacman -S openssh</a></code></pre></div>
+<h3 id="habilitar-para-que-inicie-el-servidor-ssh-al-iniciar-manjaro">Habilitar para que inicie el servidor SSH al iniciar Manjaro</h3>
+<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="fu">sudo</span> systemctl enable sshd</a></code></pre></div>
+<h3 id="inicia-ssh">Inicia SSH</h3>
+<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="fu">sudo</span> systemctl start sshd</a></code></pre></div>
+<br>
+<p>Publicado por Angel el Wednesday 18 January del 2023</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-10-obsidian-en-raspberry-pi.html">Obsidian en Raspberry Pi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html">Configurar una ip estática en tu Raspberry Pi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-05-13-kodbox-la-nueva-version-de-kodexplorer-como-explorador-de-archivos.html">Kodbox. La nueva versión de KodExplorer como explorador de archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-10-audiobookshelf-servidor-de-audiolibros.html">Audiobookshelf. Servidor de Audiolibros</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html">Telethon Downloader. Bot de descargas para Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-24-homer-mi-dashboard.html">Homer. Mi Dashboard</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html">Ampliar memoria SWAP</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
