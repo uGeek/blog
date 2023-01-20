@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'ZSH en Manjaro',
+            'text': 'Voy a instalar ZSH en la terminal de mi Raspberry Pi con Manjaro', 
+            'tags': 'zsh,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html' 
+},
+{
             'title': 'Instalación de Manjaro en Raspberry',
             'text': 'He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky,', 
             'tags': 'raspberry,manjaro,arch,OS,pacman,instalación', 

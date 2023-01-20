@@ -1,5 +1,5 @@
 <head>
-<title>Plugin zsh-autosuggestions. Autocompletado en la terminal. uGeek Blog </title>
+<title>ZSH en Manjaro. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones" />
+<meta name="description" content="Voy a instalar ZSH en la terminal de mi Raspberry Pi con Manjaro" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Plugin zsh-autosuggestions. Autocompletado en la terminal" />
-<meta property="og:description" content="Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones" />
+<meta property="og:title" content="ZSH en Manjaro" />
+<meta property="og:description" content="Voy a instalar ZSH en la terminal de mi Raspberry Pi con Manjaro" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html" />
 
-<meta name="twitter:title" content="Plugin zsh-autosuggestions. Autocompletado en la terminal" />
-<meta name="twitter:description" content="Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones" />
+<meta name="twitter:title" content="ZSH en Manjaro" />
+<meta name="twitter:description" content="Voy a instalar ZSH en la terminal de mi Raspberry Pi con Manjaro" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" />
 
 
@@ -85,30 +85,31 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="plugin-zsh-autosuggestions.-autocompletado-en-la-terminal-1" title="Plugin zsh-autosuggestions. Autocompletado en la terminal" data-export_file_name="Plugin zsh-autosuggestions Autocompletado en la terminal" data-description="Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones" data-export_date="2019-07-23 18:00" data-category="zsh" data-tag="bash,zsh,terminal" data-image="./images-blog/omzsh.png">Plugin zsh-autosuggestions. Autocompletado en la terminal</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 204 palabras.    <a href="https://ugeek.github.io/blog/categories/zsh">zsh</a></h5>
-<p>Sigo explorando y conociendo los plugin para Zsh.</p>
+<h1 id="zsh-en-manjaro-1" title="ZSH en Manjaro" data-export_file_name="zsh-en-manjaro" data-description="Voy a instalar ZSH en la terminal de mi Raspberry Pi con Manjaro" data-export_date="2023-01-20 06:45" data-category="zsh" data-tag="manjaro" data-image="./images-blog/omzsh.png">ZSH en Manjaro</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 189 palabras.    <a href="https://ugeek.github.io/blog/categories/zsh">zsh</a></h5>
+<p>Voy a instalar ZSH en la terminal de mi Raspberry Pi con Manjaro</p>
 <center>
 <p><img src="../images-blog/omzsh.png" /></p>
 </center>
-<p>Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones. Este plugin me recuerda mucho a las sugerencias que hace la shell <strong>fish</strong>.</p>
 <h2 id="instalación">Instalación</h2>
-<p>El método mas sencillo de instalación, es clonando el repositorio del proyecto y precargar este plugin al arrancar la terminal, desde el archivo de configuración <strong>.zshcr</strong></p>
-<h3 id="clonar-el-repositorio">Clonar el repositorio</h3>
-<p>Vamos a clonar el repositorio, en la carpeta local <strong>~/.zsh/zsh-autosuggestions</strong>:</p>
-<p><code>git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions</code></p>
-<h3 id="añadir-en-el-archivo-de-configuración">Añadir en el archivo de configuración</h3>
-<p>Editamos con nano:</p>
-<p><code>nano ~/.zshrc</code></p>
-<p>Añadimos esta línea:</p>
-<p><code>source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh</code></p>
-<p>Reiniciamos nuestra terminal y ya podemos disfrutar del nuevo plugin</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pacman -S zsh git gedit</a></code></pre></div>
+<p>Instalación de Oh My Zsh</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sh</span> -c <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="va">)</span><span class="st">&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> chsh -s /bin/zsh usuario</a></code></pre></div>
+<p>Ejemplo: Cambiar a ZSH al usuario <strong>angel</strong></p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> chsh -s /bin/zsh angel</a></code></pre></div>
+<h2 id="cambia-el-tema">Cambia el tema</h2>
+<p>Si deseas cambiar el tema de <strong>ZSH</strong>, Edita:</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">nano</span> ~/.zshrc</a></code></pre></div>
+<p>Para usar un tema diferente, cambie el valor para que coincida con el nombre del tema deseado.\ Por ejemplo:</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="va">ZSH_THEME=</span><span class="st">&quot;agnoster&quot;</span> <span class="co"># (this is one of the fancy ones)</span></a></code></pre></div>
 <h2 id="fuente">Fuente</h2>
 <ul>
-<li><a href="https://github.com/zsh-users/zsh-autosuggestions">https://github.com/zsh-users/zsh-autosuggestions</a></li>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh\">https://github.com/ohmyzsh/ohmyzsh\</a></li>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el Tuesday 23 July del 2019</p>
+<p>Publicado por Angel el Friday 20 January del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
