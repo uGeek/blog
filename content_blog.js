@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'IP estática o fija en Manjaro',
+            'text': 'Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una', 
+            'tags': 'ip,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html' 
+},
+{
             'title': 'ZSH en Manjaro',
             'text': 'Voy a instalar ZSH en la terminal de mi Raspberry Pi con Manjaro', 
             'tags': 'zsh,manjaro,,,,', 
