@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="comandos-sudo-sin-contraseña-1" title="Comandos sudo sin contraseña" data-export_file_name="comandos-sudo-sin-contrasena" data-description="** sudoers" data-export_date="2022-06-29 06:29 2022-07-04" data-category="sudo" data-tag="visudo" data-image="./images-blog/bash.png">Comandos sudo sin contraseña</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 350 palabras.    <a href="https://ugeek.github.io/blog/categories/sudo">sudo</a></h5>
+<h1 id="comandos-sudo-sin-contraseña-1" title="Comandos sudo sin contraseña" data-export_file_name="comandos-sudo-sin-contrasena" data-description="** sudoers" data-export_date="2022-06-29 06:29 2023-02-01" data-category="sudo" data-tag="visudo" data-image="./images-blog/bash.png">Comandos sudo sin contraseña</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 382 palabras.    <a href="https://ugeek.github.io/blog/categories/sudo">sudo</a></h5>
 <h2 id="sudoers">sudoers</h2>
 <p>El <strong>archivo sudoers</strong> contiene información sobre los privilegios sudo del usuario y del grupo.</p>
 <center>
@@ -106,30 +106,34 @@ $("#tipue_search_input").tipuesearch();
 <p> </p>
 <p>Esto creará un nuevo directorio con la copia actual, por ejemplo <code>/etc/sudoers.backup_20220628</code></p>
 <p> </p>
+<h2 id="instalar-vi">Instalar vi</h2>
+<p>Es probable que tu distro ya tenga instalado vi, pero si no es así como en Manjaro Minimal, para utilizar el comando <code>visudo</code> es necesario instalarlo:</p>
+<pre><code>sudo pacman -S vi
+</code></pre>
 <h2 id="editando-el-archivo-sudoers">Editando el archivo sudoers</h2>
 <p>Vamos a editar el archivo para añadir comandos sudo sin necesidad de poner la contraseña:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> visudo</a></code></pre></div>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> visudo</a></code></pre></div>
 <p> </p>
 <p> </p>
 <h2 id="cualquier-comando-sin-necesidad-de-poner-contraseña">Cualquier comando sin necesidad de poner contraseña</h2>
 <p>Agrega al final de archivo… Recuerda que en este ejemplo estoy utilizando el usuario <strong>angel</strong>, escribe tu usuario:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">angel</span> ALL=(ALL) <span class="ex">NOPASSWD</span>:ALL</a></code></pre></div>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">angel</span> ALL=(ALL) <span class="ex">NOPASSWD</span>:ALL</a></code></pre></div>
 <p> </p>
 <h2 id="algunos-comandos">Algunos comandos</h2>
 <p>Estaba harto de poner la contraseña para habilitar o deshabilitar wireguard, así que lo utilizaré de ejemplo.</p>
 <p>En este caso, solo los comandos agregados tras <code>NOPASSWD:</code> y separados por comas, son los que no se solicitará la contraseña</p>
 <p>También he añadido los comandos <code>/usr/bin/mount,/usr/bin/umount</code> para poder montar discos duros sin tener que utilizar <strong>sudo</strong>.</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">angel</span> ALL=(ALL) <span class="ex">NOPASSWD</span>:/usr/bin/wg,/usr/bin/wg-quick up wg0,/usr/bin/wg-quick down wg0,/usr/bin/mount,/usr/bin/umount</a></code></pre></div>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">angel</span> ALL=(ALL) <span class="ex">NOPASSWD</span>:/usr/bin/wg,/usr/bin/wg-quick up wg0,/usr/bin/wg-quick down wg0,/usr/bin/mount,/usr/bin/umount</a></code></pre></div>
 <p> </p>
 <h2 id="archivos-complementarios">Archivos complementarios</h2>
 <p>Es probable que no quieras editar el archivo de configuración y crear otros suplementarios. En tal caso crearemos el siguiente archivo de prueba:</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> nano /etc/sudoers.d/angel</a></code></pre></div>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">sudo</span> nano /etc/sudoers.d/angel</a></code></pre></div>
 <p>Ahora igual que antes, dentro del archivo añadiremos la siguiente línea para no tener que poner la contraseña:</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">angel</span> ALL=(ALL) <span class="ex">NOPASSWD</span>:ALL</a></code></pre></div>
+<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">angel</span> ALL=(ALL) <span class="ex">NOPASSWD</span>:ALL</a></code></pre></div>
 <p> </p>
 <p> </p>
 <br>
-<p>Publicado por Angel el Wednesday 29 June del 2022 y <strong>actualizado</strong> el Monday 04 July del 2022</p>
+<p>Publicado por Angel el Wednesday 29 June del 2022 y <strong>actualizado</strong> el Wednesday 01 February del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Servidor SSH en Termux Android',
+            'text': 'Crear tus scripts para *termux* con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC', 
+            'tags': 'termux,ssh,servidor,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html' 
+},
+{
             'title': 'IP estática o fija en Manjaro',
             'text': 'Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una', 
             'tags': 'ip,manjaro,,,,', 

@@ -86,18 +86,24 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="habilitar-cron-en-manjaro-1" title="Habilitar Cron en Manjaro" data-export_file_name="habilitar-cron-en-manjaro" data-description="Después de instalar Manjaro con el escritorio gnome, he abierto mi archivo cron" data-export_date="2023-01-05 07:40" data-category="cron" data-tag="manjaro" data-image="./images-blog/ugeek.png">Habilitar Cron en Manjaro</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 222 palabras.    <a href="https://ugeek.github.io/blog/categories/cron">cron</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 235 palabras.    <a href="https://ugeek.github.io/blog/categories/cron">cron</a></h5>
 <p>Después de instalar Manjaro con el escritorio gnome, he abierto mi archivo cron para editar mis scripts automatizados y… He aquí mi sorpresa!, el servicio estaba detenido.</p>
 <p>Para que todo funcionara, he tenido que habilitar cron, pero previamente he comprobado si estaba instalado.</p>
 <p>Aquí te explico lo que he hecho.</p>
 <h2 id="comprobar-si-el-paquete-estaba-instalado">Comprobar si el paquete estaba instalado</h2>
 <p>Verifica si ya está instalado mediante el siguiente comando:</p>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">pacman</span> -Qs cron</a></code></pre></div>
+<p>o</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">pacman</span> -Qs cronie</a></code></pre></div>
+<h2 id="instalación">Instalación</h2>
+<p>Si no está instalado…</p>
+<pre><code>sudo pacman -S cronie
+</code></pre>
 <h2 id="servicio-cron">Servicio cron</h2>
 <p>Ahora comprobaremos si cron se está ejecutando:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">systemctl</span> status cronie</a></code></pre></div>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">systemctl</span> status cronie</a></code></pre></div>
 <p>Para habilitar el servicio, lo haremos así:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> systemctl enable cronie</a></code></pre></div>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> systemctl enable cronie</a></code></pre></div>
 <br>
 <p>Publicado por Angel el Thursday 05 January del 2023</p>
 <br><br> 

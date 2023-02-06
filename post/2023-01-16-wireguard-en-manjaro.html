@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="wireguard-en-manjaro-1" title="Wireguard en Manjaro" data-export_file_name="wireguard-en-manjaro" data-description="Vamos a ver como instalar Wireguard en Manjaro" data-export_date="2023-01-16 10:16" data-category="wireguard" data-tag="manjaro,arch" data-image="./images-blog/wireguard.png">Wireguard en Manjaro</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 138 palabras.    <a href="https://ugeek.github.io/blog/categories/wireguard">wireguard</a></h5>
+<h1 id="wireguard-en-manjaro-1" title="Wireguard en Manjaro" data-export_file_name="wireguard-en-manjaro" data-description="Vamos a ver como instalar Wireguard en Manjaro" data-export_date="2023-01-16 10:16 2023-01-27" data-category="wireguard" data-tag="manjaro,arch" data-image="./images-blog/wireguard.png">Wireguard en Manjaro</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 185 palabras.    <a href="https://ugeek.github.io/blog/categories/wireguard">wireguard</a></h5>
 <p>Vamos a ver como instalar Wireguard en Manjaro</p>
 <center>
 <p><img src="../images-blog/wireguard.png" /></p>
@@ -103,8 +103,14 @@ $("#tipue_search_input").tipuesearch();
 <h3 id="por-defecto">Por defecto</h3>
 <p>Por defecto el nombre que se suele utilizar para el cliente es <strong>wg0.conf</strong></p>
 <div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> wg-quick up wg0</a></code></pre></div>
+<p>## Error? Instala resolvconf En la Raspberry Pi 4, me apareció este error y no podía conectarme con el servidor:</p>
+<pre><code>/usr/bin/wg-quick: line 32: resolvconf: command not found
+</code></pre>
+<p>La solución es muy sencilla, tan sencilla como instalar el paquete <code>resolvconf</code></p>
+<pre><code>sudo pacman -S openresolv
+</code></pre>
 <br>
-<p>Publicado por Angel el Monday 16 January del 2023</p>
+<p>Publicado por Angel el Monday 16 January del 2023 y <strong>actualizado</strong> el Friday 27 January del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

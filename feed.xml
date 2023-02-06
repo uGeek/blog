@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Servidor SSH en Termux Android</title>
+    <link>https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Servidor SSH en Termux Android"&gt;
+&lt;br&gt;&lt;p&gt;Crear tus scripts para *termux* con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html&gt;Servidor SSH en Termux Android&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 06 Feb 2023  +0100</pubDate>
+    <category>termux</category>
+    <category>ssh</category>
+    <category>servidor</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html</guid>
+   </item>
+   <item>
     <title>IP estática o fija en Manjaro</title>
     <link>https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 27 Jan 2023  +0100</pubDate>
+    <pubDate>Fri, 27 Jan 2023 06:55 +0100</pubDate>
     <category>ip</category>
     <category>manjaro</category>
     <category></category>

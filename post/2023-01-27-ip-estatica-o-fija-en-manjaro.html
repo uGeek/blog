@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="ip-estática-o-fija-en-manjaro-1" title="IP estática o fija en Manjaro" data-export_file_name="ip-estatica-o-fija-en-manjaro" data-description="Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una" data-export_date="2023-01-27 09:10" data-category="ip" data-tag="manjaro" data-image="./images-blog/ugeek.png">IP estática o fija en Manjaro</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 420 palabras.    <a href="https://ugeek.github.io/blog/categories/ip">ip</a></h5>
+<h5>Tiempo estimado de lectura: 3 minutos. 432 palabras.    <a href="https://ugeek.github.io/blog/categories/ip">ip</a></h5>
 <p>Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una IP fija en Manjaro.</p>
 <p>Si no deseas utilizar NetworkManager, lo siguiente más fácil es configurar una IP estática en systemd.</p>
 <h2 id="configurar-ip-estática-con-systemd">Configurar IP estática con systemd</h2>
@@ -112,6 +112,11 @@ $("#tipue_search_input").tipuesearch();
 <div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> nano /etc/systemd/network/entd0.network</a></code></pre></div>
 <p>En <code>Address=</code> pondremos la IP que deseemos. yo en este ejemplo he elegido <code>192.168.1.100</code>.</p>
 <p>También puedes personalizar las <strong>DNS</strong>.</p>
+<p><strong>IMPORTANTE CAMBIAR EL NOMBRE DE RED POR EL TUYO</strong></p>
+<ul>
+<li>Name=entd0</li>
+<li>También en el nombre de archivo <code>/etc/systemd/network/NOMBRE_RED.network</code></li>
+</ul>
 <div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1">[<span class="ex">Match</span>]</a>
 <a class="sourceLine" id="cb5-2" title="2"><span class="va">Name=</span>entd0</a>
 <a class="sourceLine" id="cb5-3" title="3"></a>
@@ -137,6 +142,7 @@ $("#tipue_search_input").tipuesearch();
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html">Crear servicio con Systemd</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html">Configurar una ip estática en tu Raspberry Pi</a></li>
@@ -146,6 +152,5 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html">Script para crear acceso a aplicaciones AppImage</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html">Sonixd. Player para Jellyfin y Subsonic</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html">Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
