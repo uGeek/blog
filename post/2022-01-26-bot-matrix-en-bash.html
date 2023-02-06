@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="bot-matrix-en-bash-1" title="Bot Matrix en Bash" data-export_file_name="bot-matrix-en-bash" data-description="Si has montado tu servidor Matrix, probablemente quieras tener publicaciones automatizadas de algunos de tus scripts, proyectos, etcétera..." data-export_date="2022-01-26 10:00" data-category="matrix" data-tag="synapse,bot,bash" data-image="./images-blog/matrix.png">Bot Matrix en Bash</h1>
-<h5>Tiempo estimado de lectura: 7 minutos. 786 palabras.    <a href="https://ugeek.github.io/blog/categories/matrix">matrix</a></h5>
+<h1 id="bot-matrix-en-bash-1" title="Bot Matrix en Bash" data-export_file_name="bot-matrix-en-bash" data-description="Si has montado tu servidor Matrix, probablemente quieras tener publicaciones automatizadas de algunos de tus scripts, proyectos, etcétera..." data-export_date="2022-01-26 10:00 2023-02-06" data-category="matrix" data-tag="synapse,bot,bash" data-image="./images-blog/matrix.png">Bot Matrix en Bash</h1>
+<h5>Tiempo estimado de lectura: 8 minutos. 891 palabras.    <a href="https://ugeek.github.io/blog/categories/matrix">matrix</a></h5>
 <p>Si has montado tu servidor Matrix, probablemente quieras tener publicaciones automatizadas de algunos de tus scripts, proyectos, etcétera…</p>
 <center>
 <p><img src="../images-blog/matrix.png" /></p>
@@ -117,46 +117,68 @@ $("#tipue_search_input").tipuesearch();
 <p>El token quedará guardado en <code>~/.matrix.sh</code>. Si ya existe, se sobrescribirá. Dado que el contenido de este archivo permite acceder a tu servidor doméstico, debe mantener su contenido en secreto. Por tanto, se creará con el modo de acceso 600.</p>
 <p>El inicio de sesión también establece un nombre para el dispositivo que estas utilizando para conectarse. Por defecto, esto es <code>&lt;user&gt;@&lt;host&gt; using matrix.sh</code>, pero puede establecer otro nombre usando el =–identifier=opción:</p>
 <div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">matrix</span> --login --identifier=<span class="st">&quot;linux server @home&quot;</span></a></code></pre></div>
+<h2 id="error-en-manjaro-solución-al-comando-hostname">Error en Manjaro, solución al comando hostname</h2>
+<p>He visto que el comando <code>hostname</code> no está disponible en Manjaro. La verdad es que no he encontrado a que paquete pertenece.</p>
+<p>Así que lo he solucionado de una forma cutre pero que funciona.</p>
+<p>Crea un script con el siguiente contenido:</p>
+<pre><code>mkdir ~/hostname ; nano ~/hostname/hostname
+</code></pre>
+<p>Ahora pega:</p>
+<pre><code>#!/bin/bash
+
+cat /etc/hostname
+</code></pre>
+<p>Ahora crearemos un enlace sibólico al script:</p>
+<pre><code>sudo ln -s ~/hostname/hostname /usr/bin/hostname
+</code></pre>
+<p>Cuando ejecutemos el comando <strong>hostname</strong>, hará un <strong>cat</strong> de la ruta <code>/etc/hostname</code>, que es el nombre de hostname.</p>
 <h2 id="selecciona-una-sala">Selecciona una Sala</h2>
 <p>Con nuestro usuario, podemos agregar el bot a una sala, pero el bot tiene que aceptar formar parte de ella. Vamos a aceptar estar dentro de la sala.</p>
 <p>Listamos salas a donde esté nuestro bot.</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">matrix</span>  --list-rooms</a></code></pre></div>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">matrix</span>  --list-rooms</a></code></pre></div>
 <p>Nos unimos a una de estas salas. Seguimos el menú para unirnos.</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">matrix</span> --join-room</a></code></pre></div>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">matrix</span> --join-room</a></code></pre></div>
 <p>Recuerda que tanto el <strong>Token</strong> como los <strong>ID</strong> de las salas, quedará en el archivo de configuración <code>~/.matrix.sh</code></p>
+<p>La estructura del archivo, quedaría así:</p>
+<pre><code>MATRIX_TOKEN=&quot;fsTYVEYSHnu73490765623sIM&quot;
+MATRIX_HOMESERVER=&quot;https://matrix.midominio.duckdns.org&quot;
+MATRIX_USER=&quot;@pi:matrix.midominio.duckdns.org&quot;
+
+MATRIX_ROOM_ID=&quot;!Rt2JHO&amp;85GJKIpT1K:matrix.midominio.duckdns.org&quot;
+</code></pre>
 <h3 id="seleccionar-una-sala-predeterminada">Seleccionar una sala predeterminada</h3>
 <p>Puedes seleccionar una sala predeterminada que se utilizará si no proporciona una room_id en tiempo de ejecución.</p>
 <p>Mostrará todas las salas unidas, así como las salas a las que estas invitado. Seleccionar uno de estos últimos también aceptará la invitación y se unirá a esa sala.</p>
 <h2 id="sin-iniciar-sesión">Sin iniciar sesión</h2>
 <p>También puedes utilizar este script sin iniciar sesión primero. Si tienes acceso a un token, puedes usarlo así:</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">matrix</span> --homeserver=https://matrix.org --token=abcdefg --room=!2o587thjlgjHUIUHni:matrix.org</a></code></pre></div>
+<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="ex">matrix</span> --homeserver=https://matrix.org --token=abcdefg --room=!2o587thjlgjHUIUHni:matrix.org</a></code></pre></div>
 <h2 id="enviar-mensajes">Enviar mensajes</h2>
 <p>Como he instalado el script en mi sistema, ahora para ejecutarlo solo tendré que introducir el comando <strong>matrix</strong></p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">matrix</span>  <span class="st">&quot;este es mi primer mensaje&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">matrix</span>  <span class="st">&quot;este es mi primer mensaje&quot;</span></a></code></pre></div>
 <p>También podemos utilizar la opción <code>--send</code>, aunque no es necesario introducirla:</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">matrix</span>  --send <span class="st">&quot;este es mi primer mensaje&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="ex">matrix</span>  --send <span class="st">&quot;este es mi primer mensaje&quot;</span></a></code></pre></div>
 <h2 id="enviar-un-mensajes-de-texto-con-sintaxis-html">Enviar un mensajes de texto con sintaxis html</h2>
 <p>Para que habilite la sintaxis <strong>html</strong>, introduciremos la opción <code>--html</code></p>
-<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="ex">matrix</span> --html <span class="st">&quot;This is &lt;strong&gt;very important&lt;/strong&gt;.&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="ex">matrix</span> --html <span class="st">&quot;This is &lt;strong&gt;very important&lt;/strong&gt;.&quot;</span></a></code></pre></div>
 <h2 id="mostrando-el-contenido-de-una-variable">Mostrando el contenido de una variable</h2>
 <p>Esto se pone interesante. Con <strong>echo</strong>, podemos enviar el mensaje a <strong>matrix</strong> y podemos no solo escribir un texto, sino que mostrar el valor de una variable:</p>
-<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="bu">echo</span> <span class="st">&quot;Hola&quot;</span> <span class="kw">|</span> <span class="ex">matrix.sh</span> -</a></code></pre></div>
+<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="bu">echo</span> <span class="st">&quot;Hola&quot;</span> <span class="kw">|</span> <span class="ex">matrix.sh</span> -</a></code></pre></div>
 <p>Si estuviéramos dentro del directorio donde está el script, lo haríamos así:</p>
-<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="bu">echo</span> <span class="st">&quot;Hola&quot;</span> <span class="kw">|</span> <span class="ex">./matrix.sh</span> -</a></code></pre></div>
+<div class="sourceCode" id="cb16" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="bu">echo</span> <span class="st">&quot;Hola&quot;</span> <span class="kw">|</span> <span class="ex">./matrix.sh</span> -</a></code></pre></div>
 <h2 id="formato-de-código">Formato de código</h2>
 <p>Podemos utilizar <code>--pre</code> para enviar mensajes formateados como código. Esto también se escapará Etiquetas HTML.</p>
 <p>Listamos el contenido de un directorio:</p>
-<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="fu">ls</span> -l <span class="kw">|</span> <span class="ex">matrix</span> --pre -</a></code></pre></div>
+<div class="sourceCode" id="cb17" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="fu">ls</span> -l <span class="kw">|</span> <span class="ex">matrix</span> --pre -</a></code></pre></div>
 <p>Ejecutando el script sin instalar:</p>
-<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="fu">ls</span> -l <span class="kw">|</span> <span class="ex">./matrix.sh</span> --pre -</a></code></pre></div>
+<div class="sourceCode" id="cb18" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" title="1"><span class="fu">ls</span> -l <span class="kw">|</span> <span class="ex">./matrix.sh</span> --pre -</a></code></pre></div>
 <p>## Enviar archivos</p>
 <p>Para enviar un archivo, es tan sencillo como:</p>
-<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="ex">matrix</span> --file=upload.zip</a></code></pre></div>
+<div class="sourceCode" id="cb19" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb19-1" title="1"><span class="ex">matrix</span> --file=upload.zip</a></code></pre></div>
 <p>Además use <code>--audio</code>, =-image=o =–video=para enviar archivos como audio, imágenes o video, respectivamente:</p>
-<div class="sourceCode" id="cb16" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="ex">matrix</span> --file=IMG1234.jpg --image</a></code></pre></div>
+<div class="sourceCode" id="cb20" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb20-1" title="1"><span class="ex">matrix</span> --file=IMG1234.jpg --image</a></code></pre></div>
 <p>## Enviar a otra sala</p>
 <p>Puedes utilizar <code>--room=&lt;room_id&gt;</code> para proporcionar un room_id. Esto reemplaza la sala predeterminada.</p>
-<div class="sourceCode" id="cb17" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="ex">matrix</span> --room=<span class="st">&#39;!OEassajhhkasLULVAa:matrix.org&#39;</span> <span class="st">&quot;Prueba&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb21" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" title="1"><span class="ex">matrix</span> --room=<span class="st">&#39;!OEassajhhkasLULVAa:matrix.org&#39;</span> <span class="st">&quot;Prueba&quot;</span></a></code></pre></div>
 <p>A bash no le gustan los signos de exclamación en cadenas entre comillas dobles. Es recomendable <strong>utilizar comillas simples</strong> para la identificación la sala.</p>
 <p>## Otras acciones</p>
 <ul>
@@ -174,7 +196,7 @@ $("#tipue_search_input").tipuesearch();
 <p><img src="../images-blog/matrix.png" /></p>
 </center>
 <br>
-<p>Publicado por Angel el Wednesday 26 January del 2022</p>
+<p>Publicado por Angel el Wednesday 26 January del 2022 y <strong>actualizado</strong> el Monday 06 February del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
