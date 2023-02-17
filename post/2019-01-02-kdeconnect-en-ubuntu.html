@@ -1,5 +1,5 @@
 <head>
-<title> Kde Connect en Ubuntu.... uGeek Blog </title>
+<title> Kde Connect. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -26,12 +26,12 @@
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Kde Connect en Ubuntu..." />
+<meta property="og:title" content=" Kde Connect" />
 <meta property="og:description" content="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html" />
 
-<meta name="twitter:title" content=" Kde Connect en Ubuntu..." />
+<meta name="twitter:title" content=" Kde Connect" />
 <meta name="twitter:description" content="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
@@ -85,21 +85,20 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="kde-connect-en-ubuntu-debian-lubuntu-mint-y-derivadas" title="Kde Connect en Ubuntu..." data-export_file_name="kdeconnect-en-ubuntu" data-description="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso" data-export_date="2019-01-02 18:00" data-category="bash" data-tag="bash, terminal, i3, kdeconnect, ubuntu" data-image="./images-blog/ugeek.png">Kde Connect en Ubuntu, Debian, Lubuntu, Mint… y derivadas</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 352 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<h1 id="kde-connect-1" title="Kde Connect" data-export_file_name="kdeconnect-en-ubuntu" data-description="He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso" data-export_date="2019-01-02 18:00 2023-02-13" data-category="bash" data-tag="bash, terminal, i3, kdeconnect, ubuntu" data-image="./images-blog/ugeek.png">Kde Connect</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 334 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
 <p>He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso.</p>
 <p>Hasta el paso 3, ya estaría listo gracias a indicator-kdeconnect mediante interfaz gráfica. Pero si te animas con la terminal, llega hasta el final del post.</p>
 <p>Recordaros que Kde Connect está tanto en Google Play como en F-Droid para Android.</p>
 <h2 id="instalación">Instalación</h2>
+<h2 id="arch">Arch</h2>
+<pre><code>sudo pacman -S kdeconnect
+</code></pre>
+<h2 id="debian">Debian</h2>
 <ol>
 <li>Instalamos en nuestro Ubuntu</li>
 </ol>
 <p><code>sudo apt install kdeconnect</code></p>
-<p>Si tienes una versión superior a Ubuntu 16.04, incator-kdeconnect posiblemente estará disponible, en caso contrario, el equipo de webupd8team nos lo pone fácil. Instala esto:</p>
-<pre><code>sudo add-apt-repository ppa:webupd8team/indicator-kdeconnect
-sudo apt update
-sudo apt install kdeconnect indicator-kdeconnect
-</code></pre>
 <ol>
 <li><p>Instalamos la app en nuestro movil, tablet…</p></li>
 <li><p>Buscará dentro de nuestra red local los dispositivos con Kde Connect. Empareja tu dispositivo y… Ya está!! Si quieres seguir con la terminal, sigue leyendo.</p></li>
@@ -108,24 +107,33 @@ sudo apt install kdeconnect indicator-kdeconnect
 </ol>
 <p><code>kdeconnect-cli -l</code></p>
 <p>La terminal nos mostrará todos los dispositivos disponibles, en mi caso, mi Xiaomi A1:</p>
-<pre><code>angel@angel /usr/lib/kde4 $ kdeconnect-cli -l
-        - Xiami A1: 35826fca13f58Gsu (reachable)
-        1 device found  
+<pre><code>kdeconnect-cli -l
+   - Xiami A1: 35826fca13f58Gsu (reachable)
+     1 device found  
 </code></pre>
 <ol>
 <li>Vinculamos PC a mi Xiaomi A1 con nuestro:</li>
 </ol>
-<p><code>kdeconnect-cli -d 35826fca13f58Gsu --pair</code></p>
+<pre><code>kdeconnect-cli -d 35826fca13f58Gsu --pair
+</code></pre>
 <ol>
 <li><p>En tu movil, tablet Android, recibirás una solicitud para vincularlo.</p></li>
 <li><p>Ya está condectado Kde Connect!!!</p></li>
 </ol>
 <p>Si tienes i3 y quieres que se inicie Kde Connect por defecto, escribe estas líneas en tu archivo de configuración:</p>
 <pre><code># Autostart kdeconnect
-exec --no-startup-id /usr/bin/indicator-kdeconnect
+exec --no-startup-id /usr/bin/kdeconnect-indicator 
+</code></pre>
+<h2 id="opciones">Opciones</h2>
+<pre><code>usr/bin/kdeconnect-app
+usr/bin/kdeconnect-cli
+usr/bin/kdeconnect-handler
+usr/bin/kdeconnect-indicator
+usr/bin/kdeconnect-settings
+usr/bin/kdeconnect-sms
 </code></pre>
 <br>
-<p>Publicado por Angel el Wednesday 02 January del 2019</p>
+<p>Publicado por Angel el Wednesday 02 January del 2019 y <strong>actualizado</strong> el Monday 13 February del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

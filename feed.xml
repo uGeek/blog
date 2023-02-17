@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>croc en windows</title>
+    <link>https://ugeek.github.io/blog/post/2023-02-17-croc-en-windows.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="croc en windows"&gt;
+&lt;br&gt;&lt;p&gt;Es posible instalar croc en Windows e intercambiar archivos, directorios y texto desde tus servidores, móvil, etc,...... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-02-17-croc-en-windows.html&gt;croc en windows&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Fri, 17 Feb 2023  +0100</pubDate>
+    <category>croc</category>
+    <category>windows</category>
+    <category>scp</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-02-17-croc-en-windows.html</guid>
+   </item>
+   <item>
     <title>Servidor SSH en Termux Android</title>
     <link>https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 06 Feb 2023  +0100</pubDate>
+    <pubDate>Mon, 06 Feb 2023 09:05 +0100</pubDate>
     <category>termux</category>
     <category>ssh</category>
     <category>servidor</category>
@@ -8168,7 +8201,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
@@ -12619,12 +12652,12 @@
     <guid>https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html</guid>
    </item>
    <item>
-    <title>Kde Connect en Ubuntu...</title>
+    <title>Kde Connect</title>
     <link>https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Kde Connect en Ubuntu..."&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Kde Connect"&gt;
 &lt;br&gt;&lt;p&gt;He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html&gt;Kde Connect en Ubuntu...&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html&gt;Kde Connect&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 

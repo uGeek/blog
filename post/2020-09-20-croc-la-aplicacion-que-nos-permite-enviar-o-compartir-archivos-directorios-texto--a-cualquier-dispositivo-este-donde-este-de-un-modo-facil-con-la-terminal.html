@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="croc-la-aplicación-que-nos-permite-enviar-o-compartir-archivos-directorios-texto-a-cualquier-dispositivo-esté-donde-esté-de-un-modo-fácil-con-la-terminal-1" title="Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal" data-export_file_name="croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal" data-description="Croc una herramienta que permite transferir archivos,directorios y texto, de forma sencilla y segura, entre dos PC&#39;s, servidores, etc...." data-export_date="2020-09-20 17:30" data-category="sincronización" data-tag="sync,go" data-image="./images-blog/croc.png">Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto… a cualquier dispositivo esté donde esté de un modo fácil con la terminal</h1>
-<h5>Tiempo estimado de lectura: 8 minutos. 903 palabras.    <a href="https://ugeek.github.io/blog/categories/sincronización">sincronización</a></h5>
+<h1 id="croc-la-aplicación-que-nos-permite-enviar-o-compartir-archivos-directorios-texto-a-cualquier-dispositivo-esté-donde-esté-de-un-modo-fácil-con-la-terminal-1" title="Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal" data-export_file_name="croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal" data-description="Croc una herramienta que permite transferir archivos,directorios y texto, de forma sencilla y segura, entre dos PC&#39;s, servidores, etc...." data-export_date="2020-09-20 17:30 2023-02-15" data-category="sincronización" data-tag="sync,go" data-image="./images-blog/croc.png">Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto… a cualquier dispositivo esté donde esté de un modo fácil con la terminal</h1>
+<h5>Tiempo estimado de lectura: 8 minutos. 938 palabras.    <a href="https://ugeek.github.io/blog/categories/sincronización">sincronización</a></h5>
 <p>Croc una herramienta que permite transferir archivos,directorios y texto, de forma sencilla y segura, entre dos PC's, servidores, etc….</p>
 <center>
 <p><img src="../images-blog/croc.png" /></p>
@@ -109,6 +109,9 @@ $("#tipue_search_input").tipuesearch();
 </code></pre>
 <h3 id="instalación-por-snap">Instalación por snap</h3>
 <pre><code>sudo snap install croc
+</code></pre>
+<h3 id="arch-manjaro">Arch, Manjaro</h3>
+<pre><code>sudo pacman -S croc
 </code></pre>
 <h3 id="termux">Termux</h3>
 <p>Si utilizas Termux en Android:</p>
@@ -168,6 +171,18 @@ unison.log 100% |████████████████████| (
 <p>En el otro dispositivo pondremos para descargar utilizando nuestro relay:</p>
 <pre><code>croc --pass TU_CONTRASEÑA --relay &quot;mirelay.duckdns.org:9009&quot; código_que_dará_nuestro_relay
 </code></pre>
+<h2 id="relay-con-docker-compose-imagen-ugeek">Relay con docker-compose imagen uGeek</h2>
+<pre><code>version: &#39;3&#39;
+services:
+  croc:
+    image: ugeek/croc:arm64
+    container_name: croc-relay
+    environment:
+      - CROC_PASS=xxxxxxxxxxxxx
+    restart: always
+    ports:
+      - &#39;9009-9013:9009-9013&#39;
+</code></pre>
 <h2 id="código-personalizado-en-mi-relay">Código personalizado en mi Relay</h2>
 <pre><code>croc --pass CONTRASEÑA --relay &quot;mi.duckdns.org:9009&quot;  send --code este-es-mi-codigo archivo.txt
 </code></pre>
@@ -225,7 +240,7 @@ GLOBAL OPTIONS:
 <li><a href="https://hub.docker.com/r/schollz/croc">https://hub.docker.com/r/schollz/croc</a></li>
 </ul>
 <br>
-<p>Publicado por Angel el Sunday 20 September del 2020</p>
+<p>Publicado por Angel el Sunday 20 September del 2020 y <strong>actualizado</strong> el Wednesday 15 February del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

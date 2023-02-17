@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'croc en windows',
+            'text': 'Es posible instalar croc en Windows e intercambiar archivos, directorios y texto desde tus servidores, móvil, etc,...', 
+            'tags': 'croc,windows,scp,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-02-17-croc-en-windows.html' 
+},
+{
             'title': 'Servidor SSH en Termux Android',
             'text': 'Crear tus scripts para *termux* con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC', 
             'tags': 'termux,ssh,servidor,,,', 
@@ -1483,7 +1489,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
@@ -2292,7 +2298,7 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html' 
 },
 {
-            'title': 'Kde Connect en Ubuntu...',
+            'title': 'Kde Connect',
             'text': 'He instalado Kde Connect en Lubuntu y Mint con el escritorio i3. Os detallo como instalarlo paso a paso', 
             'tags': 'bash,bash,terminal,i3,kdeconnect,ubuntu', 
             'url': 'https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html' 

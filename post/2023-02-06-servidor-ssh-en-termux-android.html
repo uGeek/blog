@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="servidor-ssh-en-termux-android-1" title="Servidor SSH en Termux Android" data-export_file_name="servidor-ssh-en-termux-android" data-description="Crear tus scripts para *termux* con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC" data-export_date="2023-02-06 06:55" data-category="termux" data-tag="ssh,servidor" data-image="./images-blog/ugeek.png">Servidor SSH en Termux Android</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 216 palabras.    <a href="https://ugeek.github.io/blog/categories/termux">termux</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 288 palabras.    <a href="https://ugeek.github.io/blog/categories/termux">termux</a></h5>
 <p>Crear tus scripts para <strong>termux</strong> con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC conectado vía <strong>SSH</strong> al móvil.</p>
 <p>Vamos a ver como instalar un servidor <strong>SSH</strong> en mi móvil Android y acceder remotamente.</p>
 <h2 id="instalar-openssh">Instalar OpenSSH</h2>
@@ -112,6 +112,19 @@ $("#tipue_search_input").tipuesearch();
 <div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">pkg</span> install procps</a></code></pre></div>
 <p>Ahora, para matar el servidor <strong>SSH</strong></p>
 <div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">pkill</span> sshd</a></code></pre></div>
+<h2 id="copiar-por-ssh-de-un-movil-con-termux-a-otro">Copiar por SSH de un movil con termux a otro</h2>
+<h3 id="copiar-todo-un-directorio">Copiar todo un directorio</h3>
+<p>Copiaré todos los archivos del directorio <code>$HOME/.shortcuts/.</code> dentro del directorio <code>.shortcuts</code> del otro movil.</p>
+<ul>
+<li><code>-P 8022</code> Puerto de SSH en termux</li>
+<li><code>-r</code> Recursivamente, todos los archivos y directorios dentro del directorio</li>
+</ul>
+<pre><code>scp -P 8022 -r $HOME/.shortcuts/.  angel@192.168.1.100:$HOME/.shortcuts
+</code></pre>
+<h3 id="copiar-un-archivo">Copiar un archivo</h3>
+<p>Situado dentro del directorio <code>.ssh</code>, voy a copiar el archivo <strong>config</strong>.</p>
+<pre><code>scp -P 8022  config   angel@192.168.1.100:$HOME/.ssh
+</code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://rubikcuv.medium.com/instalar-servidor-ssh-sobre-termux-en-android-2aabfe7a47e">https://rubikcuv.medium.com/instalar-servidor-ssh-sobre-termux-en-android-2aabfe7a47e</a></li>
