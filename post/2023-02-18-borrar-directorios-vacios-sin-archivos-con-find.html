@@ -1,5 +1,5 @@
 <head>
-<title>Paquetes instalados en tu sistema. uGeek Blog </title>
+<title>Borrar directorios vacios, sin archivos con find. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="He instalado tantas cosas para probar, que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas, para borrar todo aquello que sobra. *Importante borrar" />
+<meta name="description" content="Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Paquetes instalados en tu sistema" />
-<meta property="og:description" content="He instalado tantas cosas para probar, que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas, para borrar todo aquello que sobra. *Importante borrar" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html" />
+<meta property="og:title" content="Borrar directorios vacios, sin archivos con find" />
+<meta property="og:description" content="Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html" />
 
-<meta name="twitter:title" content="Paquetes instalados en tu sistema" />
-<meta name="twitter:description" content="He instalado tantas cosas para probar, que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas, para borrar todo aquello que sobra. *Importante borrar" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta name="twitter:title" content="Borrar directorios vacios, sin archivos con find" />
+<meta name="twitter:description" content="Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,36 +85,32 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="paquetes-instalados-en-tu-sistema-1" title="Paquetes instalados en tu sistema" data-export_file_name="paquetes-instalados-en-tu-sistema" data-description="He instalado tantas cosas para probar, que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas, para borrar todo aquello que sobra. *Importante borrar" data-export_date="2021-03-06 20:30" data-category="bash" data-tag="zsh,fish,snap,flatpak" data-image="./images-blog/bash.png">Paquetes instalados en tu sistema</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 310 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
-<p>He instalado tantas cosas para probar, que no recuerdo exactamente que. Vamos a ver los paquetes instalados en nuestro debian y derivadas, para borrar todo aquello que sobra. <strong>Importante borrar solo aquello que conozcas</strong> ya que si borras algún paquete importante, puedes romper el sistema, dejar de funcionar el WiFi, etc…</p>
-<center>
-<p><img src="../images-blog/bash.png" /></p>
-</center>
-<h2 id="listar-paquetes-instalados-con-apt">Listar paquetes instalados con apt</h2>
-<p>Para ver el listado de todos los paquetes y dependencias (con todas sus librerías necesarias) instalados por <strong>apt</strong> o archivos <strong>.deb</strong>. Utilizaremos el siguiente comando</p>
-<p><code>apt list --installed</code></p>
-<p>En este ejemplo, he filtrado por aquellos paquetes o aplicaciones que llevan la palabra <strong>i3</strong>.</p>
-<p><code>apt list --installed | grep "i3"</code></p>
-<h2 id="listar-los-paquetes-instalados-con-dpkg">Listar los paquetes instalados con dpkg</h2>
-<p>También podemos listar los paquetes con <strong>dpkg</strong>, pero desde mi punto de vista, es menos práctico. Aún así, es interesante conocerlo</p>
-<p><code>dpkg-query -l</code></p>
-<p>o</p>
-<p><code>dpkg -l</code></p>
-<h2 id="listar-paquetes-snap">Listar paquetes snap</h2>
-<p>Para listar todos los paquetes snap instalados, en caso de utilizar snap.</p>
-<p><code>snap list</code></p>
-<h2 id="listar-paquetes-flatpak">Listar paquetes Flatpak</h2>
-<p>Para listar los paquetes Flatpak instalados:</p>
-<p><code>flatpak list</code></p>
-<h2 id="registros-del-sistema">registros del sistema</h2>
-<p>Linux registra todo lo que sucede en nuestro sistema. Vamos a ver los registros.</p>
-<h3 id="ver-registros-del-sistema">Ver registros del sistema</h3>
-<p>Para ver los registros del sistema, filtrados una vez más con grep, mediante la palabra install: <code>grep " install " /var/log/dpkg.log</code></p>
-<h3 id="registros-de-programas-instalados-mediante-apt">Registros de programas instalados mediante apt</h3>
-<p><code>grep " install " /var/log/apt/history.log</code></p>
+<h1 id="borrar-directorios-vacios-sin-archivos-con-find-1" title="Borrar directorios vacios, sin archivos con find" data-export_file_name="borrar-directorios-vacios-sin-archivos-con-find" data-description="Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la" data-export_date="2023-02-18 13:48" data-category="bash" data-tag="find,directorios" data-image="./images-blog/ugeek.png">Borrar directorios vacios, sin archivos con find</h1>
+<h5>Tiempo estimado de lectura: 3 minutos. 336 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p>Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la acabo borrando. De manera que acaban quedando directorios vacíos.</p>
+<p>Vamos a ver como con comando find y con una sola línea de terminal, limpiar recursivamente todos esos directorios vacíos en menos de un segundo.</p>
+<h2 id="buscando-directorios-vacios">Buscando directorios vacios</h2>
+<p>Buscar desde la ruta en la que estoy:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">find</span> . -type d -empty</a></code></pre></div>
+<p><code>'-empty'</code> nos permite buscar objetos vacíos y <code>'-type d'</code> es para encontrar sólo directorios.</p>
+<h2 id="buscando-directorios-vacios-y-borrarlos">Buscando directorios vacios y borrarlos</h2>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">find</span> . -type d -empty -exec rmdir {} ;</a></code></pre></div>
+<p>Este comando realizará una única ronda de búsqueda y eliminará los directorios que estén vacíos.</p>
+<ul>
+<li><code>-exec</code> junto con el <strong>comando find</strong> ejecutará <strong>rmdir</strong> a cada resultado del comando find.</li>
+<li>El marcador de posición ={}=sustituye cada entrada en la lista de directorios encontrados y =;=significa el final del comando a ejecutar.</li>
+</ul>
+<h3 id="comando-rmdir">Comando rmdir</h3>
+<p><strong>El comando rmdir</strong> se utiliza para eliminar directorios si están vacíos.</p>
+<p>Si vamos a borrar más de un directorios a la vez, igual que hacemos con mkdir, utilizaremos la opción <strong>-p</strong>.</p>
+<p>Cuando un directorio no está vacio, sale un mensaje de error. Si no quieres que lo muestre en terminal, añade la opción <code>rmdir –ignore-fail-on-non-empty</code></p>
+<h2 id="borrando-de-una-pasada-sin-rmdir">Borrando de una pasada sin rmdir</h2>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">find</span> . -type d -empty -delete</a></code></pre></div>
+<ul>
+<li>='-delete'=opción, que eliminará repetidamente todos los directorios vacíos hasta el directorio de nivel superior.</li>
+</ul>
 <br>
-<p>Publicado por Angel el Saturday 06 March del 2021</p>
+<p>Publicado por Angel el Saturday 18 February del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Borrar directorios vacios, sin archivos con find',
+            'text': 'Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la', 
+            'tags': 'bash,find,directorios,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html' 
+},
+{
             'title': 'croc en windows',
             'text': 'Es posible instalar croc en Windows e intercambiar archivos, directorios y texto desde tus servidores, móvil, etc,...', 
             'tags': 'croc,windows,scp,,,', 
