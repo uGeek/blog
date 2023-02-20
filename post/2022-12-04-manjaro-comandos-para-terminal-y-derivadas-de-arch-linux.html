@@ -86,76 +86,149 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="manjaro.-comandos-para-terminal-y-derivadas-de-arch-linux-1" title="Manjaro. Comandos para terminal y derivadas de Arch Linux" data-export_file_name="Manjaro Comandos para terminal y derivadas de Arch Linux" data-description="Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás" data-export_date="2022-12-04 18:30" data-category="arch" data-tag="manjaro,comandos,terminal" data-image="./images-blog/ugeek.png">Manjaro. Comandos para terminal y derivadas de Arch Linux</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 440 palabras.    <a href="https://ugeek.github.io/blog/categories/arch">arch</a></h5>
+<h5>Tiempo estimado de lectura: 5 minutos. 551 palabras.    <a href="https://ugeek.github.io/blog/categories/arch">arch</a></h5>
 <p>Los que venimos de Ubuntu, tenemos problemas al pasar a una dervada de Arch, porque no conocemos bien las instrucciones para actualizar el Sistema Operativo, instalar y demás…</p>
 <p>Aquí iré añadiendo periodicamente comandos para ir conociendolos.</p>
 <h2 id="pacman">pacman</h2>
-<p>Pacman es el sistema de paquetes de Arch oficial, supervisado por ellos.</p>
-<h3 id="actualizar-el-sistema-operativo-y-repositorios">Actualizar el Sistema Operativo y repositorios</h3>
-<p><code>sudo pacman -Syyuu</code></p>
-<h3 id="buscar-en-los-repositorios-usaremos-de-ejem-gimp">Buscar en los repositorios (usaremos de ejem: gimp)</h3>
-<p><code>sudo pacman -Ss gimp</code></p>
-<h3 id="instalar-aplicaciones">Instalar aplicaciones</h3>
-<p><code>sudo pacman -S gimp</code></p>
-<h2 id="yaourt">yaourt</h2>
-<p>Las aplicaciones que no esten en los repositorios oficiales de Arch, estan en AUR. AUR (Arch User Repository) es el lugar donde la comunidad de Arch Linux puede subir los PKGBUILD de las aplicaciones, bibliotecas, etc.,</p>
-<p>Para instalar desde Aur utilizaremos yaourt.</p>
-<h3 id="actualizar-los-repositorios">Actualizar los repositorios</h3>
-<p><code>yaourt -Syu</code></p>
-<h3 id="buscar-en-yaourt-usaremos-de-ejem-utext">Buscar en yaourt (usaremos de ejem: utext)</h3>
-<p><code>yaourt -Ss utext</code></p>
-<h3 id="instalar-aplicaciones-que-no-encontremos-en-pacman-como-utext">Instalar aplicaciones que no encontremos en Pacman (como utext)</h3>
-<p><code>yaourt -S utext</code></p>
-<h2 id="guía-de-comandos-básicos-de-pacman">Guía de comandos básicos de Pacman</h2>
-<h3 id="instalar-paquetes">Instalar paquetes</h3>
-<ul>
-<li><code>pacman -S “paquete”</code> Instala un paquete.</li>
-<li><code>pacman -Sy “paquete”</code> Sincroniza repositorios e instala el paquete.</li>
-</ul>
-<h3 id="actualizar-paquetes">Actualizar paquetes</h3>
-<ul>
-<li><code>pacman -Sy</code> Sincroniza repositorios.</li>
-<li><code>pacman -Syy</code> Fuerza la sincronización de repositorios incluso para paquetes que parecen actualizados.</li>
-<li><code>pacman -Syu</code> Sincroniza repositorios y actualiza paquetes.</li>
-<li><code>pacman -Syyu</code> Fuerza sincronización y actualiza paquetes.</li>
-<li><code>pacman -Su</code> Actualiza paquetes sin sincronizar repositorios.</li>
-</ul>
-<h3 id="buscar-paquetes">Buscar paquetes</h3>
-<ul>
-<li><code>pacman -Ss “paquete”</code> Busca un paquete.</li>
-<li><code>pacman -Si “paquete”</code> Muestra información detallada de un paquete.</li>
-<li><code>pacman -Sg “grupo”</code> Lista los paquetes que pertenecen a un grupo.</li>
-<li><code>pacman -Qs “paquete”</code> Busca un paquete YA instalado.</li>
-<li><code>pacman -Qi “paquete”</code> Muestra información detallada de un paquete YA instalado (pacman -Q).</li>
-<li><code>pacman -Qdt</code> Muestra paquetes huerfanos.</li>
-</ul>
-<h3 id="eliminar-paquetes">Eliminar paquetes</h3>
-<ul>
-<li><code>pacman -R “paquete”</code> Borra paquete sin sus dependencias.</li>
-<li><code>pacman -Rs “paquete”</code> Borra paquete y sus dependencias no utilizadas.</li>
-</ul>
-<p>Fuente: sobrebits.com</p>
-<h2 id="aplicaciones-imprescindibles">Aplicaciones Imprescindibles</h2>
-<p>Navegador Chrome</p>
-<p><code>yaourt -S google-chrome</code></p>
-<p>Editor de video</p>
-<p><code>sudo pacman -S openshot</code></p>
-<p>Notas de Nextcloud</p>
-<p><code>yaourt -S qownnotes</code></p>
-<p>Descarga videos de youtube</p>
-<p><code>sudo pacman -S clipgrab</code></p>
-<p>Hacer capturas de pantalla</p>
-<p><code>yaourt -S shutter</code></p>
-<p>Convertir audios de m4a a MP3</p>
-<p><code>sudo pacman -S soundconverter</code></p>
-<p>Editor de Fotografía</p>
-<p><code>sudo pacman -S gimp</code></p>
-<p>Instalar Inkscape</p>
-<p><code>sudo pacman -S inkscape</code></p>
-<p>Transmission</p>
-<p><code>sudo pacman -S transmission-gtk</code></p>
-<p>Skype</p>
-<p><code>sudo pacman -S skype</code></p>
+<p>Pacman es el sistema de paquetes de Arch oficial, supervisado por ellos. Aquí te muestro un resumen de los comandos más utilizados:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Opción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-S</code></td>
+<td>Instala uno o más paquetes.</td>
+</tr>
+<tr class="even">
+<td><code>-R</code></td>
+<td>Desinstala uno o más paquetes.</td>
+</tr>
+<tr class="odd">
+<td><code>-Syu</code></td>
+<td>Sincroniza la base de datos de paquetes y actualiza todos los paquetes instalados en el sistema.</td>
+</tr>
+<tr class="even">
+<td><code>-Ss</code></td>
+<td>Busca paquetes en los repositorios disponibles.</td>
+</tr>
+<tr class="odd">
+<td><code>-Si</code></td>
+<td>Muestra información detallada sobre un paquete.</td>
+</tr>
+<tr class="even">
+<td><code>-Q</code></td>
+<td>Muestra una lista de paquetes instalados.</td>
+</tr>
+<tr class="odd">
+<td><code>-Qi</code></td>
+<td>Muestra información detallada sobre un paquete instalado.</td>
+</tr>
+<tr class="even">
+<td><code>-Qu</code></td>
+<td>Muestra una lista de paquetes que están disponibles para actualizar.</td>
+</tr>
+<tr class="odd">
+<td><code>-Sy</code></td>
+<td>Sincroniza la base de datos de paquetes.</td>
+</tr>
+<tr class="even">
+<td><code>-Sw</code></td>
+<td>Descarga un paquete sin instalarlo.</td>
+</tr>
+<tr class="odd">
+<td><code>-Syy</code></td>
+<td>Sincroniza la base de datos de paquetes, incluso si ya está sincronizada.</td>
+</tr>
+<tr class="even">
+<td><code>-Sg</code></td>
+<td>Muestra los grupos disponibles y los paquetes que pertenecen a cada grupo.</td>
+</tr>
+<tr class="odd">
+<td><code>-Sgg</code></td>
+<td>Muestra una lista de paquetes que pertenecen a un grupo específico.</td>
+</tr>
+<tr class="even">
+<td><code>-Sc</code></td>
+<td>Elimina los paquetes antiguos o huérfanos de la caché de paquetes.</td>
+</tr>
+<tr class="odd">
+<td><code>-Scc</code></td>
+<td>Limpia completamente la caché de paquetes.</td>
+</tr>
+<tr class="even">
+<td><code>-Qdt</code></td>
+<td>Muestra una lista de paquetes huérfanos.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="yay">yay</h2>
+<p><code>yay</code> es un gestor de paquetes AUR (Arch User Repository). A continuación, te muestro una tabla de algunos de los comandos más utilizados con <code>yay</code>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>yay -S &lt;paquete&gt;</code></td>
+<td>Instala un paquete de los repositorios AUR.</td>
+</tr>
+<tr class="even">
+<td><code>yay -Syu</code></td>
+<td>Sincroniza la base de datos de paquetes AUR y actualiza los paquetes instalados en el sistema.</td>
+</tr>
+<tr class="odd">
+<td><code>yay -Rs &lt;paquete&gt;</code></td>
+<td>Desinstala un paquete del sistema y sus dependencias no utilizadas.</td>
+</tr>
+<tr class="even">
+<td><code>yay -Ss &lt;palabra&gt;</code></td>
+<td>Busca un paquete en los repositorios AUR.</td>
+</tr>
+<tr class="odd">
+<td><code>yay -Si &lt;paquete&gt;</code></td>
+<td>Muestra información detallada sobre un paquete de AUR.</td>
+</tr>
+<tr class="even">
+<td><code>yay -Q</code></td>
+<td>Muestra una lista de paquetes instalados del AUR.</td>
+</tr>
+<tr class="odd">
+<td><code>yay -Qi &lt;paquete&gt;</code></td>
+<td>Muestra información detallada sobre un paquete instalado del AUR.</td>
+</tr>
+<tr class="even">
+<td><code>yay -Qua</code></td>
+<td>Muestra una lista de paquetes AUR que están disponibles para actualizar.</td>
+</tr>
+<tr class="odd">
+<td><code>yay -Sua</code></td>
+<td>Actualiza todos los paquetes AUR instalados en el sistema.</td>
+</tr>
+<tr class="even">
+<td><code>yay -Pw &lt;paquete&gt;</code></td>
+<td>Descarga un paquete de AUR sin instalarlo.</td>
+</tr>
+<tr class="odd">
+<td><code>yay -Yc</code></td>
+<td>Elimina los paquetes huérfanos del sistema.</td>
+</tr>
+<tr class="even">
+<td><code>yay -Ycc</code></td>
+<td>Elimina todos los paquetes de la caché de AUR.</td>
+</tr>
+<tr class="odd">
+<td><code>yay -Yua</code></td>
+<td>Actualiza todos los paquetes de la caché de AUR.</td>
+</tr>
+</tbody>
+</table>
 <br>
 <p>Publicado por Angel el Sunday 04 December del 2022</p>
 <br><br> 
