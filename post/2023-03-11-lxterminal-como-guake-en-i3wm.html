@@ -1,0 +1,186 @@
+<head>
+<title>lxterminal como guake en i3wm. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba 2023-03-11-lxterminal-como-guake-en-i3wm.org (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="lxterminal como guake en i3wm" />
+<meta property="og:description" content="Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba 2023-03-11-lxterminal-como-guake-en-i3wm.org (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html" />
+
+<meta name="twitter:title" content="lxterminal como guake en i3wm" />
+<meta name="twitter:description" content="Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba 2023-03-11-lxterminal-como-guake-en-i3wm.org (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="lxterminal-como-guake-en-i3wm-1" title="lxterminal como guake en i3wm" data-export_file_name="lxterminal-como-guake-en-i3wm" data-description="Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba *lxterminal* (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una" data-export_date="2023-03-11 22:07" data-category="i3wm" data-tag="terminal,lxde" data-image="./images-blog/ugeek.png">lxterminal como guake en i3wm</h1>
+<h5>Tiempo estimado de lectura: 5 minutos. 579 palabras.    <a href="https://ugeek.github.io/blog/categories/i3wm">i3wm</a></h5>
+<p>Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba <strong>lxterminal</strong> (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una terminal muy ligera) en los escritorios LXDE. Como somos animales de costumbres, vuelvo a esta terminal que me gusta mucho, pero lo malo de este cambio, es que no quiero perder la función de estar en cualquier escritorio y con un simple <code>F12</code>, lanzar y ocultar la terminal igual que hacer guake, así que voy a mostrar como he configurado en mi gestor de ventanas i3wm para utilizarlo de ese modo.</p>
+<p>Al lanzar por primera vez <strong>lxterminal</strong> pulsando <code>F1</code> o si así lo prefieres, como aparece en la primera opción que está comentada medinate <code>#</code>, crea una primera pesataña llamada <strong>ScratchPad</strong>. Recuerda que <strong>solo en la pestaña ScratchPad, funcionará la opción F12 para ocultar o des-ocultar la terminal</strong>.</p>
+<h2 id="archivo-de-configuración-de-i3wm">Archivo de configuración de i3wm</h2>
+<p>Añade a tu archivo <code>~/.config/i3/config</code></p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="co">#exec --no-startup-id lxterminal -t ScratchPad</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="ex">bindsym</span> <span class="va">$mod</span>+F1 exec lxterminal -t ScratchPad</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">assign</span> [title=<span class="st">&quot;ScratchPad&quot;</span>] scratchpad</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="ex">bindsym</span> F12 [title=<span class="st">&quot;ScratchPad&quot;</span>] scratchpad show<span class="kw">;</span> [<span class="va">title=</span><span class="st">&quot;ScratchPad&quot;</span>] <span class="ex">move</span> position center<span class="kw">;</span> [<span class="va">title=</span><span class="st">&quot;ScratchPad&quot;</span>] <span class="ex">resize</span> set 100 ppt 100 ppt<span class="kw">;</span> [<span class="va">title=</span><span class="st">&quot;ScratchP    ad&quot;</span>] <span class="ex">fullscreen</span> enable</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ex">for_window</span> [title=<span class="st">&quot;ScratchPad&quot;</span>] floating enable, move scratchpad, resize set 100 ppt 100 ppt, border none, focus, sticky enable</a></code></pre></div>
+<p>Explicación del archivo de configuración:</p>
+<ul>
+<li><code>#exec --no-startup-id lxterminal -t ScratchPad</code>: esta opción también se utiliza para ejecutar un programa al iniciar i3wm, en este caso, una terminal con un título específico <strong>ScratchPad</strong>.</li>
+<li><code>bindsym $mod+F1 exec lxterminal -t ScratchPad</code>: esta opción define una combinación de teclas (<code>$mod+F1</code>) que ejecuta un programa específico (lxterminal con el título "ScratchPad").</li>
+<li><code>assign [title</code>"ScratchPad"] scratchpad=: esta opción asigna la ventana con el título "ScratchPad" al scratchpad, que es una zona especial para ventanas que se pueden ocultar y mostrar rápidamente.</li>
+<li><code>bindsym F12 [title</code>"ScratchPad"] scratchpad show; [title="ScratchPad"] move position center; [title="ScratchPad"] resize set 100 ppt 100 ppt; [title="ScratchPad"] fullscreen enable=: esta opción define otra combinación de teclas (<code>F12</code>) que muestra la ventana con el título "ScratchPad" y la ajusta a un tamaño y posición específicos, y luego la pone en pantalla completa.</li>
+<li><code>for_window [title</code>"ScratchPad"] floating enable, move scratchpad, resize set 100 ppt 100 ppt, border none, focus, sticky enable=: esta opción se aplica a cualquier ventana con el título "ScratchPad" y la configura para que sea flotante, se mueva al scratchpad, se ajuste a un tamaño específico, no tenga borde, tenga el enfoque y que se mantenga en la parte superior de otras ventanas.</li>
+</ul>
+<h2 id="mi-archivo-de-configuración-de-lxterminal">Mi archivo de configuración de lxterminal</h2>
+<p>El archivo de configuración de <strong>lxterminal</strong> está en <code>~/.config/lxterminal/lxterminal.conf</code>.</p>
+<p>Este es mi archivo actual de configuración:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1">[<span class="ex">general</span>]</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="va">fontname=</span>Monospace <span class="ex">15</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="va">selchars=</span>-A-Za-z0-9,./<span class="ex">?%</span><span class="kw">&amp;</span>#:<span class="ex">_</span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="va">scrollback=</span>1000</a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="va">bgcolor=</span>rgb<span class="va">(</span>0,0,0<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="va">fgcolor=</span>rgb<span class="va">(</span>170,170,170<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="va">palette_color_0=</span>rgb<span class="va">(</span>0,0,0<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="va">palette_color_1=</span>rgb<span class="va">(</span>170,0,0<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="va">palette_color_2=</span>rgb<span class="va">(</span>0,170,0<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="va">palette_color_3=</span>rgb<span class="va">(</span>170,85,0<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="va">palette_color_4=</span>rgb<span class="va">(</span>0,0,170<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="va">palette_color_5=</span>rgb<span class="va">(</span>170,0,170<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="va">palette_color_6=</span>rgb<span class="va">(</span>0,170,170<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="va">palette_color_7=</span>rgb<span class="va">(</span>170,170,170<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="va">palette_color_8=</span>rgb<span class="va">(</span>85,85,85<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="va">palette_color_9=</span>rgb<span class="va">(</span>255,85,85<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-17" title="17"><span class="va">palette_color_10=</span>rgb<span class="va">(</span>85,255,85<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-18" title="18"><span class="va">palette_color_11=</span>rgb<span class="va">(</span>255,255,85<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-19" title="19"><span class="va">palette_color_12=</span>rgb<span class="va">(</span>85,85,255<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-20" title="20"><span class="va">palette_color_13=</span>rgb<span class="va">(</span>255,85,255<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-21" title="21"><span class="va">palette_color_14=</span>rgb<span class="va">(</span>85,255,255<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-22" title="22"><span class="va">palette_color_15=</span>rgb<span class="va">(</span>255,255,255<span class="va">)</span></a>
+<a class="sourceLine" id="cb2-23" title="23"><span class="va">color_preset=</span>VGA</a>
+<a class="sourceLine" id="cb2-24" title="24"><span class="va">disallowbold=</span>false</a>
+<a class="sourceLine" id="cb2-25" title="25"><span class="va">boldbright=</span>true</a>
+<a class="sourceLine" id="cb2-26" title="26"><span class="va">cursorblinks=</span>false</a>
+<a class="sourceLine" id="cb2-27" title="27"><span class="va">cursorunderline=</span>false</a>
+<a class="sourceLine" id="cb2-28" title="28"><span class="va">audiblebell=</span>false</a>
+<a class="sourceLine" id="cb2-29" title="29"><span class="va">visualbell=</span>false</a>
+<a class="sourceLine" id="cb2-30" title="30"><span class="va">tabpos=</span>bottom</a>
+<a class="sourceLine" id="cb2-31" title="31"><span class="va">geometry_columns=</span>1000</a>
+<a class="sourceLine" id="cb2-32" title="32"><span class="va">geometry_rows=</span>1000</a>
+<a class="sourceLine" id="cb2-33" title="33"><span class="va">hidescrollbar=</span>true</a>
+<a class="sourceLine" id="cb2-34" title="34"><span class="va">hidemenubar=</span>true</a>
+<a class="sourceLine" id="cb2-35" title="35"><span class="va">hideclosebutton=</span>false</a>
+<a class="sourceLine" id="cb2-36" title="36"><span class="va">hidepointer=</span>false</a>
+<a class="sourceLine" id="cb2-37" title="37"><span class="va">disablef10=</span>false</a>
+<a class="sourceLine" id="cb2-38" title="38"><span class="va">disablealt=</span>false</a>
+<a class="sourceLine" id="cb2-39" title="39"><span class="va">disableconfirm=</span>false</a>
+<a class="sourceLine" id="cb2-40" title="40"></a>
+<a class="sourceLine" id="cb2-41" title="41">[<span class="ex">shortcut</span>]</a>
+<a class="sourceLine" id="cb2-42" title="42"><span class="va">new_window_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;&lt;</span>Shift<span class="op">&gt;</span>n</a>
+<a class="sourceLine" id="cb2-43" title="43"><span class="va">new_tab_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;&lt;</span>Shift<span class="op">&gt;</span>t</a>
+<a class="sourceLine" id="cb2-44" title="44"><span class="va">close_tab_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;&lt;</span>Shift<span class="op">&gt;</span>w</a>
+<a class="sourceLine" id="cb2-45" title="45"><span class="va">close_window_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;&lt;</span>Shift<span class="op">&gt;</span>q</a>
+<a class="sourceLine" id="cb2-46" title="46"><span class="va">copy_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;</span>Up</a>
+<a class="sourceLine" id="cb2-47" title="47"><span class="va">paste_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;</span>Down</a>
+<a class="sourceLine" id="cb2-48" title="48"><span class="va">name_tab_accel=</span>F2</a>
+<a class="sourceLine" id="cb2-49" title="49"><span class="va">previous_tab_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;</span>Left</a>
+<a class="sourceLine" id="cb2-50" title="50"><span class="va">next_tab_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;</span>Right</a>
+<a class="sourceLine" id="cb2-51" title="51"><span class="va">move_tab_left_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;&lt;</span>Shift<span class="op">&gt;</span>Left</a>
+<a class="sourceLine" id="cb2-52" title="52"><span class="va">move_tab_right_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;&lt;</span>Shift<span class="op">&gt;</span>Right</a>
+<a class="sourceLine" id="cb2-53" title="53"><span class="va">zoom_in_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;</span>plus</a>
+<a class="sourceLine" id="cb2-54" title="54"><span class="va">zoom_out_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;</span>minus</a>
+<a class="sourceLine" id="cb2-55" title="55"><span class="va">zoom_reset_accel=</span><span class="op">&lt;</span><span class="ex">Primary</span><span class="op">&gt;&lt;</span>Shift<span class="op">&gt;</span>parenright</a></code></pre></div>
+<p>Estos son algunos de mis atajos personalizados:</p>
+<ul>
+<li><code>Ctrl+arriba</code> = copiar</li>
+<li><code>Ctrl+abajo</code> = pegar</li>
+<li><code>Ctrl+izquierda</code> = Pestaña izquierda</li>
+<li><code>Ctrl+derecha</code> = Pestaña derecha</li>
+<li><code>Ctrl+Shi.+Izqui.</code> = Mover pestaña a la izquierda</li>
+<li><code>Ctrl+Shi.+Dere.</code> = Mover pestaña a la derecha</li>
+</ul>
+<br>
+<p>Publicado por Angel el Saturday 11 March del 2023</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-06-tigervnc-servidor-vnc-en-manjaro.html">TigerVNC. Servidor VNC en Manjaro</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-11-i3wm-en-arch.html">i3wm en Arch</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html">Nautilus con Tema Oscuro en I3wm</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-28-i3wm-en-ubuntu-debian-raspbian---desde-0.html">i3wm en Ubuntu, Debian, Raspbian,… desde 0</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

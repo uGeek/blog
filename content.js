@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'lxterminal como guake en i3wm',
+            'text': 'Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba *lxterminal* (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una', 
+            'tags': 'i3wm,terminal,lxde,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html' 
+},
+{
             'title': 'Borrar directorios vacios, sin archivos con find',
             'text': 'Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la', 
             'tags': 'bash,find,directorios,,,', 
@@ -1495,7 +1501,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
