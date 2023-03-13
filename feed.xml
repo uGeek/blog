@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Edge en Manjaro para utilizar Bing Cha</title>
+    <link>https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-cha.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Edge en Manjaro para utilizar Bing Cha"&gt;
+&lt;br&gt;&lt;p&gt;Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-cha.html&gt;Edge en Manjaro para utilizar Bing Cha&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 13 Mar 2023  +0100</pubDate>
+    <category>edge</category>
+    <category>manjaro</category>
+    <category>chrome</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-cha.html</guid>
+   </item>
+   <item>
     <title>lxterminal como guake en i3wm</title>
     <link>https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 11 Mar 2023  +0100</pubDate>
+    <pubDate>Sat, 11 Mar 2023 07:03 +0100</pubDate>
     <category>i3wm</category>
     <category>terminal</category>
     <category>lxde</category>
@@ -8267,7 +8300,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;

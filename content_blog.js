@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Edge en Manjaro para utilizar Bing Cha',
+            'text': 'Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde', 
+            'tags': 'edge,manjaro,chrome,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-cha.html' 
+},
+{
             'title': 'lxterminal como guake en i3wm',
             'text': 'Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba *lxterminal* (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una', 
             'tags': 'i3wm,terminal,lxde,,,', 
@@ -1501,7 +1507,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
