@@ -1,5 +1,5 @@
 <head>
-<title>Crea tu Bot en Mastodon con Python. uGeek Blog </title>
+<title>Edge en Manjaro para utilizar Bing Chat. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Hemos visto como publicar en Mastodon mediante un Bot en Bash, Ahora vamos a ver como hacerlo con Python." />
+<meta name="description" content="Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Crea tu Bot en Mastodon con Python" />
-<meta property="og:description" content="Hemos visto como publicar en Mastodon mediante un Bot en Bash, Ahora vamos a ver como hacerlo con Python." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/mastodon.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-30-crea-tu-bot-en-mastodon-con-python.html" />
+<meta property="og:title" content="Edge en Manjaro para utilizar Bing Chat" />
+<meta property="og:description" content="Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-chat.html" />
 
-<meta name="twitter:title" content="Crea tu Bot en Mastodon con Python" />
-<meta name="twitter:description" content="Hemos visto como publicar en Mastodon mediante un Bot en Bash, Ahora vamos a ver como hacerlo con Python." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/mastodon.png" />
+<meta name="twitter:title" content="Edge en Manjaro para utilizar Bing Chat" />
+<meta name="twitter:description" content="Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,49 +85,25 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="crea-tu-bot-en-mastodon-con-python-1" title="Crea tu Bot en Mastodon con Python" data-export_file_name="crea-tu-bot-en-mastodon-con-python" data-description="Hemos visto como publicar en Mastodon mediante un Bot en Bash, Ahora vamos a ver como hacerlo con Python." data-export_date="2019-10-30 19:32" data-category="bot" data-tag="python,mastodon" data-image="./images-blog/mastodon.png">Crea tu Bot en Mastodon con Python</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 247 palabras.    <a href="https://ugeek.github.io/blog/categories/bot">bot</a></h5>
-<p>Hemos visto como publicar en Mastodon mediante un Bot en Bash, Ahora vamos a ver como hacerlo con Python.</p>
-<center>
-<p><img src="../images-blog/mastodon.png" /></p>
-</center>
-<p>Además, en la parte final del artículo, vamos a ver como publicar un imagen adjunta al toot.</p>
-<h2 id="instalando-librerias">Instalando librerias</h2>
-<pre><code>pip3 install Mastodon.py
-</code></pre>
-<h2 id="creando-el-bot-y-publicando-mensajes-de-texto">Creando el Bot y publicando mensajes de texto</h2>
-<p>Creamos el archivo, por ejemplo <strong>bot-mastodon.py</strong> y pego el siguiente contenido, añadiendo mi <strong>Token</strong>, <strong>instancia</strong> y mensaje. <strong>El Token 84fbgar354 es inventado, sustituye por el tuyo</strong></p>
-<pre><code>from mastodon import Mastodon
-
-# Token y url de la Instancia 
-mastodon = Mastodon(
-    access_token = &#39;84fbgar354&#39;,
-    api_base_url = &#39;https://mastodon.social/&#39;
-)
-
-mastodon.status_post(&quot;Mensaje desde mi Bot en Python&quot;)
-</code></pre>
-<p>Ejecutamos para ver si funciona.</p>
-<pre><code>python3 bot-mastodon.py
-</code></pre>
-<p>Hay un método muy sencillo de instalarlo mediante <strong>curl</strong>. Con solo una línea de terminal, tendremos la última versión de rclone instalada en nuestra derivada de Debian.</p>
+<h1 id="edge-en-manjaro-para-utilizar-bing-chat-1" title="Edge en Manjaro para utilizar Bing Chat" data-export_file_name="edge-en-manjaro-para-utilizar-bing-chat" data-description="Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde" data-export_date="2023-03-13 07:03" data-category="edge" data-tag="manjaro,chrome" data-image="./images-blog/ugeek.png">Edge en Manjaro para utilizar Bing Chat</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 124 palabras.    <a href="https://ugeek.github.io/blog/categories/edge">edge</a></h5>
+<p>Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde Edge.</p>
+<p>Para instalarlo en distros Arch mediante AUR lo tenemos súper fácil en sus tres versiones:</p>
 <h2 id="instalación">Instalación</h2>
-<p>Escribe en tu terminal</p>
-<pre><code>curl https://rclone.org/install.sh | sudo bash
-</code></pre>
+<p>Tenemos 3 versiones de Edge. Estable, Beta y de desarrollo. Yo me he decantado por la versión estable.</p>
+<h3 id="estable">Estable</h3>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">yay</span> -S microsoft-edge-stable-bin</a></code></pre></div>
+<h3 id="beta">Beta</h3>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">yay</span> -S microsoft-edge-beta-bin</a></code></pre></div>
+<h3 id="developer">Developer</h3>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">yay</span> -S microsoft-edge-dev-bin</a></code></pre></div>
 <br>
-<p>Publicado por Angel el Wednesday 30 October del 2019</p>
+<p>Publicado por Angel el Monday 13 March del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html">Telethon Downloader. Bot de descargas para Telegram</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html">Docker: Gotify. Tu servidor de Notificaciones</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-10-30-crea-tu-bot-en-mastodon-con-python.html">Crea tu Bot en Mastodon con Python</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-10-28-crea-tu-bot-de-mastodon-en-bash-con-una-sola-linea.html">Crea tu Bot de Mastodon en Bash con una sola línea de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html">Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-31-notificaciones-org-mode-en-telegram-con-mi-bot.html">Notificaciones Org Mode en Telegram con mi Bot</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos… con mi bot de Telegram de una sola Línea de Terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-chat.html">Edge en Manjaro para utilizar Bing Chat</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-07-09-ublock-origin--bloqueando-publicidad-en-tu-navegador.html">uBlock Origin. . Bloqueando publicidad en tu navegador</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html">Emacs siempre a la última versión, betas, edge… gracias a Snap</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

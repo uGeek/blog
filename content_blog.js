@@ -1,9 +1,15 @@
 var tipuesearch = {pages: [
 {
-            'title': 'Edge en Manjaro para utilizar Bing Cha',
+            'title': 'Bing Chat en cualquier Navegador',
+            'text': 'Bing Chat es una versión integrada del chatbot disponible en el sitio web de Bing, que puede responder a preguntas generales.', 
+            'tags': 'chatgtp,bing,edge,chat,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-17-bing-chat-en-cualquier-navegador.html' 
+},
+{
+            'title': 'Edge en Manjaro para utilizar Bing Chat',
             'text': 'Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde', 
             'tags': 'edge,manjaro,chrome,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-cha.html' 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-chat.html' 
 },
 {
             'title': 'lxterminal como guake en i3wm',
