@@ -3,7 +3,7 @@ var tipuesearch = {pages: [
             'title': 'Bing Chat en cualquier Navegador',
             'text': 'Bing Chat es una versión integrada del chatbot disponible en el sitio web de Bing, que puede responder a preguntas generales.', 
             'tags': 'chatgtp,bing,edge,chat,,', 
-            'url': 'https://ugeek.github.io/blog/post/2023-03-17-bing-chat-en-cualquier-navegador.html' 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-18-bing-chat-en-cualquier-navegador.html' 
 },
 {
             'title': 'Edge en Manjaro para utilizar Bing Chat',
@@ -1513,7 +1513,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
