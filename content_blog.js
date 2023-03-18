@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2023-03-18-bing-chat-en-cualquier-navegador.html' 
 },
 {
+            'title': 'eddif en emacs, el Meld de terminal',
+            'text': 'A veces quiero comparar dos archivos de texto y ver las diferencias entre ellos. Emacs tiene una función llamada ediff que me permite hacer eso, pero por defecto me muestra', 
+            'tags': 'emacs,diff,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html' 
+},
+{
             'title': 'Edge en Manjaro para utilizar Bing Chat',
             'text': 'Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde', 
             'tags': 'edge,manjaro,chrome,,,', 
@@ -1513,7 +1519,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },

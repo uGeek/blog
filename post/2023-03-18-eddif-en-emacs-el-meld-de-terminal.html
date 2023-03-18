@@ -1,5 +1,5 @@
 <head>
-<title>Añadir cajetilla de código en orgmode como antes. uGeek Blog </title>
+<title>eddif en emacs, el Meld de terminal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="A partir de la versión Org 9.2, ya no es posible utilizar el atajo que utilizábamos en versiones anteriores" />
+<meta name="description" content="A veces quiero comparar dos archivos de texto y ver las diferencias entre ellos. Emacs tiene una función llamada ediff que me permite hacer eso, pero por defecto me muestra" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Añadir cajetilla de código en orgmode como antes" />
-<meta property="og:description" content="A partir de la versión Org 9.2, ya no es posible utilizar el atajo que utilizábamos en versiones anteriores" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/orgmode.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-13-añadir-cajetilla-de-código-en-orgmode-como-antes.html" />
+<meta property="og:title" content="eddif en emacs, el Meld de terminal" />
+<meta property="og:description" content="A veces quiero comparar dos archivos de texto y ver las diferencias entre ellos. Emacs tiene una función llamada ediff que me permite hacer eso, pero por defecto me muestra" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html" />
 
-<meta name="twitter:title" content="Añadir cajetilla de código en orgmode como antes" />
-<meta name="twitter:description" content="A partir de la versión Org 9.2, ya no es posible utilizar el atajo que utilizábamos en versiones anteriores" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/orgmode.png" />
+<meta name="twitter:title" content="eddif en emacs, el Meld de terminal" />
+<meta name="twitter:description" content="A veces quiero comparar dos archivos de texto y ver las diferencias entre ellos. Emacs tiene una función llamada ediff que me permite hacer eso, pero por defecto me muestra" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,17 +85,16 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="añadir-cajetilla-de-código-en-orgmode-como-antes-1" title="Añadir cajetilla de código en orgmode como antes" data-export_file_name="Añadir cajetilla de código en orgmode como antes" data-description="A partir de la versión Org 9.2, ya no es posible utilizar el atajo que utilizábamos en versiones anteriores" data-export_date="2019-07-13 16:30" data-category="emacs" data-tag="orgmode" data-image="./images-blog/orgmode.png">Añadir cajetilla de código en orgmode como antes</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 180 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
-<p>A partir de la versión Org 9.2, ya no es posible utilizar el atajo que utilizábamos en versiones anteriores, <strong>&lt;s</strong>, para añadir la cajetilla de código.</p>
-<center height="250" width="250"> 
-<p><img src="../images-blog/orgmode.png" /></p>
-</center
-<p>Ahora tenemos que pulsar C-c C-, y aparecerá un listado de que sintaxis queremos utilizar.</p>
-<p>Si eres como yo y quieres recuperar ese atajo, tan sencillo como añadir al archivo de configuración <strong>init.el</strong>:</p>
-<p><code>(require 'org-tempo)</code></p>
+<h1 id="eddif-en-emacs-el-meld-de-terminal-1" title="eddif en emacs, el Meld de terminal" data-export_file_name="eddif-en-emacs-el-meld-de-terminal" data-description="A veces quiero comparar dos archivos de texto y ver las diferencias entre ellos. Emacs tiene una función llamada ediff que me permite hacer eso, pero por defecto me muestra" data-export_date="2023-03-18 13:20" data-category="emacs" data-tag="diff" data-image="./images-blog/ugeek.png">eddif en emacs, el Meld de terminal</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 300 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<p>A veces quiero comparar dos archivos de texto y ver las diferencias entre ellos. Emacs tiene una función llamada ediff que me permite hacer eso, pero por defecto me muestra los archivos en horizontal, uno encima del otro. Con la tecla "|" permite cambiar de la división horizontal predeterminada a una división vertical, pero eso me resulta incómodo. Por eso he encontrado este código que cambia la forma de mostrar los archivos en ediff. Ahora los veo en vertical, a la izquierda y a la derecha, como si fuera un programa externo como meld. Así se me hace mucho más fácil ver las diferencias y editar los archivos si quiero.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">(</span><span class="ex">custom-set-variables</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="st">&#39;(ediff-window-setup-function &#39;</span><span class="ex">ediff-setup-windows-plain</span><span class="kw">)</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="st">&#39;(ediff-diff-options &quot;-w&quot;)</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="st">&#39;</span><span class="kw">(</span><span class="ex">ediff-split-window-function</span> <span class="st">&#39;split-window-horizontally))</span></a></code></pre></div>
+<p>Algunas funciones que debes probar son: <code>ediff-current-file</code> (ver cambios entre el archivo modificado actual y su versión guardada), <code>ediff-buffers</code> y <code>ediff-files</code> (marcar dos archivos en <code>dired</code> y llamar a esto). Con estas funciones podrás ver las diferencias en una ventana dividida, navegar por los cambios con las teclas n y p, y elegir qué versión quieres conservar con las teclas a, b o c.</p>
 <br>
-<p>Publicado por Angel el Saturday 13 July del 2019</p>
+<p>Publicado por Angel el Saturday 18 March del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
