@@ -1,5 +1,5 @@
 <head>
-<title>Edge en Manjaro para utilizar Bing Chat. uGeek Blog </title>
+<title>Lanzar navegadores en modo privado o incógnito. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde" />
+<meta name="description" content="Si quieres abrir tu navegador en modo privado con un comando de terminal o click, voy a enseñarte cómo hacerlo. No importa si usas i3wm o cualquier otro gestor de" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Edge en Manjaro para utilizar Bing Chat" />
-<meta property="og:description" content="Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde" />
+<meta property="og:title" content="Lanzar navegadores en modo privado o incógnito" />
+<meta property="og:description" content="Si quieres abrir tu navegador en modo privado con un comando de terminal o click, voy a enseñarte cómo hacerlo. No importa si usas i3wm o cualquier otro gestor de" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-chat.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html" />
 
-<meta name="twitter:title" content="Edge en Manjaro para utilizar Bing Chat" />
-<meta name="twitter:description" content="Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde" />
+<meta name="twitter:title" content="Lanzar navegadores en modo privado o incógnito" />
+<meta name="twitter:description" content="Si quieres abrir tu navegador en modo privado con un comando de terminal o click, voy a enseñarte cómo hacerlo. No importa si usas i3wm o cualquier otro gestor de" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
@@ -85,26 +85,34 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="edge-en-manjaro-para-utilizar-bing-chat-1" title="Edge en Manjaro para utilizar Bing Chat" data-export_file_name="edge-en-manjaro-para-utilizar-bing-chat" data-description="Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde" data-export_date="2023-03-13 07:03" data-category="edge" data-tag="manjaro,chrome" data-image="./images-blog/ugeek.png">Edge en Manjaro para utilizar Bing Chat</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 130 palabras.    <a href="https://ugeek.github.io/blog/categories/edge">edge</a></h5>
-<p>Se que hay mucha gente contraria a utilizar Edge porque es de Microsoft, pero si quieres probar y utilizar Bing Chat desde Linux, ahora solo es posible en Linux desde Edge.</p>
-<p>Para instalarlo en distros Arch mediante AUR lo tenemos súper fácil en sus tres versiones:</p>
-<h2 id="instalación">Instalación</h2>
-<p>Tenemos 3 versiones de Edge. Estable, Beta y de desarrollo. Yo me he decantado por la versión estable.</p>
-<h3 id="estable">Estable</h3>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">yay</span> -S microsoft-edge-stable-bin</a></code></pre></div>
-<h3 id="beta">Beta</h3>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">yay</span> -S microsoft-edge-beta-bin</a></code></pre></div>
-<h3 id="developer">Developer</h3>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">yay</span> -S microsoft-edge-dev-bin</a></code></pre></div>
+<h1 id="lanzar-navegadores-en-modo-privado-o-incógnito-1" title="Lanzar navegadores en modo privado o incógnito" data-export_file_name="lanzar-navegadores-en-modo-privado-o-incognito" data-description="Si quieres abrir tu navegador en modo privado con un comando de terminal o click, voy a enseñarte cómo hacerlo. No importa si usas i3wm o cualquier otro gestor de" data-export_date="2023-03-19 10:40" data-category="navegador" data-tag="firefox,chrome,edge" data-image="./images-blog/ugeek.png">Lanzar navegadores en modo privado o incógnito</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 283 palabras.    <a href="https://ugeek.github.io/blog/categories/navegador">navegador</a></h5>
+<p>Si quieres abrir tu navegador en modo privado con un comando de terminal o click, voy a enseñarte cómo hacerlo. No importa si usas i3wm o cualquier otro gestor de ventanas, escritorio o terminal. Solo tienes que crear un atajo o un script con el comando adecuado para tu navegador favorito. Existen muchos navegadores, pero se pueden agrupar en dos grandes categorías principales: los basados en la tecnología de Chrome y los basados en la tecnología de Firefox. Estas dos tecnologías se diferencian en el motor de renderizado que utilizan para mostrar las páginas web, así como en otros aspectos como la velocidad, la seguridad, la compatibilidad y las extensiones disponibles.</p>
+<p>La cuestión es que si quieres lanzar algunos de estos navegadores u otro que no esté en este artículo, conociendo al grupo al que pertenece sabrás la opción con la que tienes que lanzarlo, ya que muy probablemente sea similar. <strong>Recuerda que dependiendo del paquete instalado o distro que utilices, en nombre del navegador puede variar</strong>, lo que no variará es la opción <code>-private-window</code> y <code>--incognito</code>.</p>
+<h2 id="firefox">Firefox</h2>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">firefox</span> -private-window</a></code></pre></div>
+<h2 id="brave">Brave</h2>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">brave</span> --incognito</a></code></pre></div>
+<h2 id="google-chrome">Google chrome</h2>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">google-chrome</span> --incognito</a></code></pre></div>
+<h2 id="chromium">Chromium</h2>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">chromium-browser</span> --incognito</a></code></pre></div>
+<h2 id="edge">Edge</h2>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">microsoft-edge-beta</span> --inprivate</a></code></pre></div>
 <br>
-<p>Publicado por Angel el Monday 13 March del 2023</p>
+<p>Publicado por Angel el Sunday 19 March del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-03-18-bing-chat-en-cualquier-navegador.html">Bing Chat en cualquier Navegador</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-13-edge-en-manjaro-para-utilizar-bing-chat.html">Edge en Manjaro para utilizar Bing Chat</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-10-vieb-navegador-estilo-vim.html">vieb. Navegador estilo Vim</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-09-30-firefox-navegador-movil.html">Firefox. Navegador móvil</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-07-09-ublock-origin--bloqueando-publicidad-en-tu-navegador.html">uBlock Origin. . Bloqueando publicidad en tu navegador</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html">Emacs siempre a la última versión, betas, edge… gracias a Snap</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html">FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html">Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html">Sincronización de nuestros bookmarks con floccus</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-06-23-brave-tiene-un-nuevo-buscador.html">Brave tiene un nuevo buscador</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-05-styx.html">Styx. El mejor Navegador Open Source para Android</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Lanzar navegadores en modo privado o incógnito',
+            'text': 'Si quieres abrir tu navegador en modo privado con un comando de terminal o click, voy a enseñarte cómo hacerlo. No importa si usas i3wm o cualquier otro gestor de', 
+            'tags': 'navegador,firefox,chrome,edge,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html' 
+},
+{
             'title': 'Bing Chat en cualquier Navegador',
             'text': 'Bing Chat es una versión integrada del chatbot disponible en el sitio web de Bing, que puede responder a preguntas generales.', 
             'tags': 'chatgtp,bing,edge,chat,,', 

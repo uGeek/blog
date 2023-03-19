@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Lanzar navegadores en modo privado o incógnito</title>
+    <link>https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Lanzar navegadores en modo privado o incógnito"&gt;
+&lt;br&gt;&lt;p&gt;Si quieres abrir tu navegador en modo privado con un comando de terminal o click, voy a enseñarte cómo hacerlo. No importa si usas i3wm o cualquier otro gestor de... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html&gt;Lanzar navegadores en modo privado o incógnito&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sun, 19 Mar 2023  +0100</pubDate>
+    <category>navegador</category>
+    <category>firefox</category>
+    <category>chrome</category>
+    <category>edge</category>
+    <guid>https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html</guid>
+   </item>
+   <item>
     <title>Bing Chat en cualquier Navegador</title>
     <link>https://ugeek.github.io/blog/post/2023-03-18-bing-chat-en-cualquier-navegador.html</link>
     <description>
@@ -71,7 +104,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 18 Mar 2023  +0100</pubDate>
+    <pubDate>Sat, 18 Mar 2023 10:40 +0100</pubDate>
     <category>emacs</category>
     <category>diff</category>
     <category></category>
