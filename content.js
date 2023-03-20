@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'SearXNG. Buscador privado',
+            'text': '¿Qué es SearXNG y por qué deberías usarlo?', 
+            'tags': 'searxng,buscasdor,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-20-searxng-buscador-privado.html' 
+},
+{
             'title': 'Lanzar navegadores en modo privado o incógnito',
             'text': 'Si quieres abrir tu navegador en modo privado con un comando de terminal o click, voy a enseñarte cómo hacerlo. No importa si usas i3wm o cualquier otro gestor de', 
             'tags': 'navegador,firefox,chrome,edge,,', 
