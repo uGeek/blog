@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Syncthing. ERROR syncthing folder marker missing (this indicates potential data loss, search docs/forum to get information about how to proceed)',
+            'text': 'Esto significa que el directorio raíz de la carpeta que está sincronizando con Syncthing no contiene un archivo o directorio llamado *.stfolder*. Syncthing se *detiene cuando este marcador desaparece para', 
+            'tags': 'syncthing,error,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-21-syncthing-error-syncthing-folder-marker-missing-(this-indicates-potential-data-loss-search-docs/forum-to-get-information-about-how-to-proceed).html' 
+},
+{
             'title': 'SearXNG. Buscador privado',
             'text': '¿Qué es SearXNG y por qué deberías usarlo?', 
             'tags': 'searxng,buscasdor,,,,', 
