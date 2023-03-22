@@ -13,12 +13,12 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
-    <title>Syncthing. ERROR syncthing folder marker missing (this indicates potential data loss, search docs/forum to get information about how to proceed)</title>
-    <link>https://ugeek.github.io/blog/post/2023-03-21-syncthing-error-syncthing-folder-marker-missing-(this-indicates-potential-data-loss-search-docs/forum-to-get-information-about-how-to-proceed).html</link>
+    <title>Directorio .stfolder</title>
+    <link>https://ugeek.github.io/blog/post/2023-03-22-directorio-stfolder.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Syncthing. ERROR syncthing folder marker missing (this indicates potential data loss, search docs/forum to get information about how to proceed)"&gt;
-&lt;br&gt;&lt;p&gt;Esto significa que el directorio raíz de la carpeta que está sincronizando con Syncthing no contiene un archivo o directorio llamado *.stfolder*. Syncthing se *detiene cuando este marcador desaparece para... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-03-21-syncthing-error-syncthing-folder-marker-missing-(this-indicates-potential-data-loss-search-docs/forum-to-get-information-about-how-to-proceed).html&gt;Syncthing. ERROR syncthing folder marker missing (this indicates potential data loss, search docs/forum to get information about how to proceed)&lt;/a&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/Docker_oficial_de_Syncthing.png" alt="Directorio .stfolder"&gt;
+&lt;br&gt;&lt;p&gt;Syncthing es un programa de sincronización de archivos continuo y seguro que te permite compartir archivos entre diferentes dispositivos. Hay algunos errores populares con syncthing que a veces no son... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-03-22-directorio-stfolder.html&gt;Directorio .stfolder&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -38,12 +38,12 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 21 Mar 2023  +0100</pubDate>
+    <pubDate>Wed, 22 Mar 2023  +0100</pubDate>
     <category>syncthing</category>
     <category>error</category>
     <category></category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2023-03-21-syncthing-error-syncthing-folder-marker-missing-(this-indicates-potential-data-loss-search-docs/forum-to-get-information-about-how-to-proceed).html</guid>
+    <guid>https://ugeek.github.io/blog/post/2023-03-22-directorio-stfolder.html</guid>
    </item>
    <item>
     <title>SearXNG. Buscador privado</title>
@@ -71,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 20 Mar 2023 13:15 +0100</pubDate>
+    <pubDate>Mon, 20 Mar 2023 07:10 +0100</pubDate>
     <category>searxng</category>
     <category>buscasdor</category>
     <category></category>
