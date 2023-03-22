@@ -1,5 +1,5 @@
 <head>
-<title>Directorio .stfolder. uGeek Blog </title>
+<title>Solución a Errores con Syncthing. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -26,12 +26,12 @@
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Directorio .stfolder" />
+<meta property="og:title" content="Solución a Errores con Syncthing" />
 <meta property="og:description" content="Syncthing es un programa de sincronización de archivos continuo y seguro que te permite compartir archivos entre diferentes dispositivos. Hay algunos errores populares con syncthing que a veces no son" />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Docker_oficial_de_Syncthing.png" />
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2023-03-22-directorio-stfolder.html" />
 
-<meta name="twitter:title" content="Directorio .stfolder" />
+<meta name="twitter:title" content="Solución a Errores con Syncthing" />
 <meta name="twitter:description" content="Syncthing es un programa de sincronización de archivos continuo y seguro que te permite compartir archivos entre diferentes dispositivos. Hay algunos errores populares con syncthing que a veces no son" />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Docker_oficial_de_Syncthing.png" />
 
@@ -85,7 +85,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="directorio-.stfolder-1" title="Directorio .stfolder" data-export_file_name="directorio-stfolder" data-description="Syncthing es un programa de sincronización de archivos continuo y seguro que te permite compartir archivos entre diferentes dispositivos. Hay algunos errores populares con syncthing que a veces no son" data-export_date="2023-03-22 07:10" data-category="syncthing" data-tag="error" data-image="./images-blog/Docker_oficial_de_Syncthing.png">Directorio .stfolder</h1>
+<h1 id="solución-a-errores-con-syncthing-1" title="Solución a Errores con Syncthing" data-export_file_name="directorio-stfolder" data-description="Syncthing es un programa de sincronización de archivos continuo y seguro que te permite compartir archivos entre diferentes dispositivos. Hay algunos errores populares con syncthing que a veces no son" data-export_date="2023-03-22 07:10" data-category="syncthing" data-tag="error" data-image="./images-blog/Docker_oficial_de_Syncthing.png">Solución a Errores con Syncthing</h1>
 <h5>Tiempo estimado de lectura: 4 minutos. 479 palabras.    <a href="https://ugeek.github.io/blog/categories/syncthing">syncthing</a></h5>
 <p>Syncthing es un programa de sincronización de archivos continuo y seguro que te permite compartir archivos entre diferentes dispositivos. Hay algunos errores populares con syncthing que a veces no son errores del propio servicio, sino incluso del usuario que son fáciles de solucionar y al principio pueden asustar, voy a citar algunos de los errores más comunes:</p>
 <ul>
@@ -97,7 +97,7 @@ $("#tipue_search_input").tipuesearch();
 <p><img src="../images-blog/Docker_oficial_de_Syncthing.png" /></p>
 </center>
 <p>En el <a href="https://forum.syncthing.net/">foro de la comunidad de Syncthing es <code>https://forum.syncthing.net/</code></a> encontrarás más información sobre posibles eerrores, pero vamos a ver los más comunes para solucionarlos.</p>
-<h2 id="directorio-.stfolder-2">Directorio .stfolder</h2>
+<h2 id="directorio-.stfolder">Directorio .stfolder</h2>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">ERROR</span> syncthing folder marker missing (this indicates potential data loss, search docs/forum to get information about how to proceed)</a></code></pre></div>
 <p>Esto significa que el directorio raíz de la carpeta que está sincronizando con Syncthing no contiene un archivo o directorio llamado <strong>.stfolder</strong>. Syncthing se <strong>detiene cuando este marcador desaparece para prevenir la pérdida de datos</strong>, por ejemplo, cuando la ruta de la carpeta se desmonta.</p>
 <p>Si el marcador se borró accidentalmente, debes recrearlo y presionar el botón de reescanear en la interfaz web de usuario.</p>
