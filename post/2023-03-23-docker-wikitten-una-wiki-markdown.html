@@ -1,5 +1,5 @@
 <head>
-<title> Instalar Docker en Raspberry Pi con Raspbian. uGeek Blog </title>
+<title>Docker. Wikitten. Una wiki markdown. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,18 +21,18 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" />
+<meta name="description" content="Wikitten es una wiki PHP pequeña y rápida que se puede usar para almacenar notas, fragmentos de código, ideas y demás." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" Instalar Docker en Raspberry Pi con Raspbian" />
-<meta property="og:description" content="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" />
+<meta property="og:title" content="Docker. Wikitten. Una wiki markdown" />
+<meta property="og:description" content="Wikitten es una wiki PHP pequeña y rápida que se puede usar para almacenar notas, fragmentos de código, ideas y demás." />
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-02-03-instalar-docker-en-raspberry-pi-con-raspbian.html" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-03-23-docker-wikitten-una-wiki-markdown.html" />
 
-<meta name="twitter:title" content=" Instalar Docker en Raspberry Pi con Raspbian" />
-<meta name="twitter:description" content="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" />
+<meta name="twitter:title" content="Docker. Wikitten. Una wiki markdown" />
+<meta name="twitter:description" content="Wikitten es una wiki PHP pequeña y rápida que se puede usar para almacenar notas, fragmentos de código, ideas y demás." />
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
@@ -85,35 +85,34 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="instalar-docker-en-raspberry-pi-con-raspbian-1" title="Instalar Docker en Raspberry Pi con Raspbian" data-export_file_name="Instalar Docker en Raspberry Pi con Raspbian" data-description="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" data-export_date="2019-02-03 19:45" data-category="docker" data-tag="raspberry,raspbian" data-image="./images-blog/ugeek.png">Instalar Docker en Raspberry Pi con Raspbian</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 243 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este.</p>
-<h2 id="instala-primero-algunos-paquetes-que-necesitamos">Instala primero algunos paquetes que necesitamos</h2>
-<p><code>sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common</code></p>
-<h2 id="obtener-la-clave-de-firma-docker-para-paquetes">Obtener la clave de firma Docker para paquetes</h2>
-<p><code>sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -</code></p>
-<h2 id="añadimos-los-repositorios-oficiales">Añadimos los repositorios oficiales</h2>
-<pre><code>sudo echo &quot;deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; echo &quot;$ID&quot;) \
-     $(lsb_release -cs) stable&quot; | \
-    sudo tee /etc/apt/sources.list.d/docker.list
-</code></pre>
-<h2 id="instalamos-docker">Instalamos Docker</h2>
-<pre><code>sudo apt update
-sudo apt install docker-ce
-</code></pre>
-<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
-<pre><code>sudo systemctl enable docker
-sudo systemctl start docker
-</code></pre>
-<h2 id="crear-el-grupo-docker-para-no-tener-que-poner-sudo">Crear el grupo Docker, para no tener que poner sudo</h2>
-<pre><code>sudo groupadd docker
-sudo usermod -aG docker $USER
-</code></pre>
-<p>Salir de la terminal y volver a entrar</p>
-<h2 id="instalar-portainer">Instalar Portainer</h2>
-<p><code>docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></p>
+<h1 id="docker.-wikitten.-una-wiki-markdown-1" title="Docker. Wikitten. Una wiki markdown" data-export_file_name="docker-wikitten-una-wiki-markdown" data-description="Wikitten es una wiki PHP pequeña y rápida que se puede usar para almacenar notas, fragmentos de código, ideas y demás." data-export_date="2023-03-23 08:00" data-category="docker" data-tag="markdown" data-image="./images-blog/ugeek.png">Docker. Wikitten. Una wiki markdown</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 272 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Wikitten es una wiki PHP pequeña y rápida que se puede usar para almacenar notas, fragmentos de código, ideas y demás.</p>
+<p>Wikitten se utiliza archivos Markdown que se guardan en una carpeta llamada library, que se pueden organizar en subcarpetas según las categorías deseadas. Wikitten tiene una interfaz sencilla y elegante que muestra el árbol de archivos en el lado izquierdo y el contenido del archivo seleccionado en el lado derecho.</p>
+<p>Se puede instalar fácilmente en un servidor web con PHP y se puede proteger con un usuario y una contraseña. También se puede usar con Docker para facilitar su despliegue y configuración.</p>
+<p>Wikitten es una buena opción para crear una wiki personal o una base de conocimiento sin necesidad de una base de datos o un sistema complejo.</p>
+<h2 id="docker-compose">Docker Compose</h2>
+<p>Hay dos versiones de imágenes docker, <strong>amd64</strong> y <strong>arm64</strong>. En este ejemplo os comparto del docker-compose de la versión de ARM.</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&quot;3.9&quot;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="ex">services</span>:</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="ex">wikitten</span>:</a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="ex">image</span>: lnzu/wikitten:arm64</a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ex">container_name</span>: wikitten</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="ex">restart</span>: unless-stopped</a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="ex">ports</span>:</a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="ex">-</span> <span class="st">&quot;81:80&quot;</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="ex">environment</span>:</a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="ex">-</span> USER=admin</a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="ex">-</span> PASSWD=admin</a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="ex">volumes</span>:</a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="ex">-</span> /media/nas/wiki/:/var/www/html/wikitten/library/</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://github.com/devaneando/Wikitten">https://github.com/devaneando/Wikitten</a></li>
+<li><a href="https://hub.docker.com/r/lnzu/wikitten">https://hub.docker.com/r/lnzu/wikitten</a></li>
+</ul>
 <br>
-<p>Publicado por Angel el Sunday 03 February del 2019</p>
+<p>Publicado por Angel el Thursday 23 March del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
