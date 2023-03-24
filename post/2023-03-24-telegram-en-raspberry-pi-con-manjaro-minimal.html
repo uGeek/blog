@@ -1,5 +1,5 @@
 <head>
-<title>impresora</title>
+<title>Telegram en Raspberry Pi con Manjaro Minimal. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,14 +47,68 @@ gtag("js", new Date())
 gtag("config", "");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>impresora</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="telegram-en-raspberry-pi-con-manjaro-minimal-1" title="Telegram en Raspberry Pi con Manjaro Minimal" data-export_file_name="telegram-en-raspberry-pi-con-manjaro-minimal" data-description="Para instalar Telegram Desktop en nuestra Raspberry Pi con Manjaro Minimal necesitamos seguir estos pasos:" data-export_date="2023-03-24 18:15" data-category="telegram" data-tag="manjaro" data-image="./images-blog/ugeek.png">Telegram en Raspberry Pi con Manjaro Minimal</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 252 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
+<p>Para instalar Telegram Desktop en nuestra Raspberry Pi con Manjaro Minimal necesitamos seguir estos pasos:</p>
+<ol>
+<li>Actualizar el sistema operativo con el comando <code>sudo pacman -Syu</code>. Esto nos asegurará que tenemos la última versión de los paquetes disponibles y evitará posibles problemas de dependencias o compatibilidad.</li>
+<li>Instalar el paquete `telegram-desktop` desde los repositorios oficiales de Manjaro con el comando <code>sudo pacman -S telegram-desktop</code>. Este paquete contiene la aplicación de Telegram Desktop compilada para la arquitectura ARM de la Raspberry Pi.</li>
+<li>Ejecutar la aplicación desde el menú de aplicaciones o desde la terminal con el comando `telegram-desktop`. La primera vez que lo hagamos tendremos que introducir nuestro número de teléfono y el código de verificación que nos enviará Telegram por SMS o por otro dispositivo donde tengamos instalada la app. Después podremos disfrutar de todas las ventajas de Telegram Desktop en nuestra Raspberry Pi.</li>
+</ol>
+<h2 id="instalación">Instalación</h2>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pacman -Syu <span class="kw">;</span> <span class="fu">sudo</span> pacman -S telegram-desktop</a></code></pre></div>
+<br>
+<p>Publicado por Angel el Friday 24 March del 2023</p>
+<br><br> 
+<p>También te puede interesar:</p>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-07-instalando-impresora-en-manjaro.html>Instalando Impresora en Manjaro</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html">Notificaciones de Jellyfin en Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html">Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html">Telethon Downloader. Bot de descargas para Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html">TelegramTUI. Cliente de Terminal en Python</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html">Aplicaciones Telegram versión web, Android, IOS,…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html">Grabar lo que suena en tu ordenador</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-08-varias-cuentas-de-telegram-en-un-mismo-pc.html">Varias cuentas de telegram en un mismo PC</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-02-28-telegram-desktop-atajos-de-teclado.html">Telegram Desktop. Atajos de teclado</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Telegram en Raspberry Pi con Manjaro Minimal',
+            'text': 'Para instalar Telegram Desktop en nuestra Raspberry Pi con Manjaro Minimal necesitamos seguir estos pasos:', 
+            'tags': 'telegram,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-24-telegram-en-raspberry-pi-con-manjaro-minimal.html' 
+},
+{
             'title': 'Docker. Wikitten. Una wiki markdown',
             'text': 'Wikitten es una wiki PHP pequeña y rápida que se puede usar para almacenar notas, fragmentos de código, ideas y demás.', 
             'tags': 'docker,markdown,,,,', 
