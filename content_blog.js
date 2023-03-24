@@ -1,15 +1,15 @@
 var tipuesearch = {pages: [
 {
+            'title': 'SD Maid SE. Mantén limpio tu dispositivo Android',
+            'text': '¿Te has preguntado alguna vez qué pasa con los archivos que quedan en tu dispositivo después de desinstalar una aplicación? ¿O con los archivos temporales que se acumulan en la', 
+            'tags': 'android,android,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-25-sd-maid-se-manten-limpio-tu-dispositivo-android.html' 
+},
+{
             'title': 'Telegram en Raspberry Pi con Manjaro Minimal',
             'text': 'Para instalar Telegram Desktop en nuestra Raspberry Pi con Manjaro Minimal necesitamos seguir estos pasos:', 
             'tags': 'telegram,manjaro,,,,', 
             'url': 'https://ugeek.github.io/blog/post/2023-03-24-telegram-en-raspberry-pi-con-manjaro-minimal.html' 
-},
-{
-            'title': 'SD Maid SE. Mantén limpio tu dispositivo Android',
-            'text': '¿Te has preguntado alguna vez qué pasa con los archivos que quedan en tu dispositivo después de desinstalar una aplicación? ¿O con los archivos temporales que se acumulan en la', 
-            'tags': 'android,android,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2023-03-24-sd-maid-se-manten-limpio-tu-dispositivo-android.html' 
 },
 {
             'title': 'Docker. Wikitten. Una wiki markdown',
