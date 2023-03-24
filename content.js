@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2023-03-24-telegram-en-raspberry-pi-con-manjaro-minimal.html' 
 },
 {
+            'title': 'SD Maid SE. Mantén limpio tu dispositivo Android',
+            'text': '¿Te has preguntado alguna vez qué pasa con los archivos que quedan en tu dispositivo después de desinstalar una aplicación? ¿O con los archivos temporales que se acumulan en la', 
+            'tags': 'android,android,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-24-sd-maid-se-manten-limpio-tu-dispositivo-android.html' 
+},
+{
             'title': 'Docker. Wikitten. Una wiki markdown',
             'text': 'Wikitten es una wiki PHP pequeña y rápida que se puede usar para almacenar notas, fragmentos de código, ideas y demás.', 
             'tags': 'docker,markdown,,,,', 
@@ -1549,7 +1555,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
