@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2023-03-25-sd-maid-se-manten-limpio-tu-dispositivo-android.html' 
 },
 {
+            'title': 'Copilot de Edge. Integración total de ChatGPT en tu navegación',
+            'text': 'Llevo un par de semana utilizando *Copilot de Edge* y hay que reconocer que tener esta opción integrada en tu navegador es un factor muy diferencial sobre el resto de', 
+            'tags': 'edge,chatgtp,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-25-copilot-de-edge-integracion-total-de-chatgpt-en-tu-navegacion.html' 
+},
+{
             'title': 'Telegram en Raspberry Pi con Manjaro Minimal',
             'text': 'Para instalar Telegram Desktop en nuestra Raspberry Pi con Manjaro Minimal necesitamos seguir estos pasos:', 
             'tags': 'telegram,manjaro,,,,', 
@@ -1555,7 +1561,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
