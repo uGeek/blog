@@ -1,0 +1,128 @@
+<head>
+<title>X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="** Redireccionar X11" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro" />
+<meta property="og:description" content="** Redireccionar X11" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-03-26-x11-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-grafica-en-local-manjaro.html" />
+
+<meta name="twitter:title" content="X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro" />
+<meta name="twitter:description" content="** Redireccionar X11" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="x11.-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-gráfica-en-local.-manjaro-1" title="X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro" data-export_file_name="x11-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-grafica-en-local-manjaro" data-description="** Redireccionar X11" data-export_date="2023-03-26 10:00" data-category="x11" data-tag="manjaro" data-image="./images-blog/ugeek.png">X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 487 palabras.    <a href="https://ugeek.github.io/blog/categories/x11">x11</a></h5>
+<h2 id="redireccionar-x11">Redireccionar X11</h2>
+<p>El reenvío de X11 es una forma de usar aplicaciones gráficas que están instaladas en un sistema remoto, como si estuvieran en nuestro sistema local. Por ejemplo, podemos conectarnos por SSH a un servidor Linux que tiene Telegram instalado y abrir desde la sesión de SSH. Telegram se ejecuta en el servidor remoto, pero la ventana del aparece en nuestro sistema local. Así podemos usar aplicaciones gráficas de otros sistemas sin tener que instalarlas en el nuestro. Para que el reenvío de X11 funcione, necesitamos tener un servidor X en nuestro sistema local, que es el encargado de mostrar las ventanas de las aplicaciones gráficas.</p>
+<p>También necesitamos tener instalado xauth en el sistema remoto, que es una utilidad que se ocupa de la autenticación de la sesión de X11.</p>
+<p>El servidor y el cliente deben estar configurados para permitir el reenvío de X11, y debemos usar el parámetro -X o -Y al conectarnos por SSH. El parámetro -X es más seguro, pero el parámetro -Y puede ser más rápido.</p>
+<p>Vamos con la instalación y configuración.</p>
+<h2 id="instalación">Instalación</h2>
+<p>Instala los paquetes:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pacman -S xorg-xauth xorg-xhost</a></code></pre></div>
+<h2 id="editar-archivo-configuración">Editar archivo configuración</h2>
+<p>Edita el archivo sshd_config.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> nano /etc/ssh/sshd_config</a></code></pre></div>
+<p>Verifica que las opciones:</p>
+<ul>
+<li>AllowTcpForwarding yes</li>
+<li>X11UseLocalhost yes</li>
+<li>X11DisplayOffset 10</li>
+<li>X11Forwarding yes</li>
+<li>ForwardX11Trusted yes</li>
+</ul>
+<h2 id="reinicia-el-servidor">Reinicia el servidor</h2>
+<p>Ahora reinicia el servidor ssh</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> systemctl restart sshd</a></code></pre></div>
+<h2 id="conectandonos-al-servidor">Conectandonos al servidor</h2>
+<p>El comando ssh -X -C -Y usuario@servidor permite establecer una conexión segura y cifrada con un servidor remoto, usando el protocolo SSH (Secure Shell).</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">ssh</span> -X -C usuario@servidor</a></code></pre></div>
+<p>Las opciones de este comando son las siguientes: -X: Habilita el reenvío de la interfaz gráfica de usuario (X11) desde el servidor al cliente. Esto permite ejecutar aplicaciones gráficas en el servidor y verlas en el cliente. Para que funcione, se necesita tener instalado un servidor X en el cliente. -C: Habilita la compresión de los datos que se envían y reciben por la conexión. Esto puede mejorar el rendimiento de la conexión si el ancho de banda es limitado o si se transfieren archivos grandes. -Y: Habilita el reenvío de la interfaz gráfica de usuario (X11) desde el servidor al cliente, con una verificación de seguridad menos estricta que la opción -X. Esto puede ser útil si se confía en el servidor y se quiere evitar posibles errores de autenticación. usuario: Es el nombre de usuario con el que se quiere acceder al servidor. Se debe tener una cuenta válida en el servidor y conocer la contraseña o tener una clave pública autorizada. servidor: Es el nombre o la dirección IP del servidor al que se quiere conectar. Se debe tener acceso a la red del servidor y al puerto 22, que es el que usa SSH por defecto.</p>
+<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">ssh</span> -Y -C usuario@servidor</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/OpenSSH_(Espa%C3%B1ol)">https://wiki.archlinux.org/title/OpenSSH_(Espa%C3%B1ol)</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el Sunday 26 March del 2023</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

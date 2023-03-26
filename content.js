@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro',
+            'text': '** Redireccionar X11', 
+            'tags': 'x11,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-26-x11-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-grafica-en-local-manjaro.html' 
+},
+{
             'title': 'SD Maid SE. Mantén limpio tu dispositivo Android',
             'text': '¿Te has preguntado alguna vez qué pasa con los archivos que quedan en tu dispositivo después de desinstalar una aplicación? ¿O con los archivos temporales que se acumulan en la', 
             'tags': 'android,android,,,,', 
@@ -1561,7 +1567,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
