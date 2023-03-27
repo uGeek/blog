@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Snap. Desinstalar o Instalar en Manjaro',
+            'text': 'La paquetería snap es un sistema de gestión de paquetes creado por Canonical, la empresa que desarrolla Ubuntu. Los paquetes snap son aplicaciones compiladas que incluyen todas sus dependencias y', 
+            'tags': 'snap,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-27-snap-desinstalar-o-instalar-en-manjaro.html' 
+},
+{
             'title': 'X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro',
             'text': '** Redireccionar X11', 
             'tags': 'x11,manjaro,,,,', 

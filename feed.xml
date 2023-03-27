@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Snap. Desinstalar o Instalar en Manjaro</title>
+    <link>https://ugeek.github.io/blog/post/2023-03-27-snap-desinstalar-o-instalar-en-manjaro.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Snap. Desinstalar o Instalar en Manjaro"&gt;
+&lt;br&gt;&lt;p&gt;La paquetería snap es un sistema de gestión de paquetes creado por Canonical, la empresa que desarrolla Ubuntu. Los paquetes snap son aplicaciones compiladas que incluyen todas sus dependencias y... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-03-27-snap-desinstalar-o-instalar-en-manjaro.html&gt;Snap. Desinstalar o Instalar en Manjaro&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 27 Mar 2023  +0100</pubDate>
+    <category>snap</category>
+    <category>manjaro</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-03-27-snap-desinstalar-o-instalar-en-manjaro.html</guid>
+   </item>
+   <item>
     <title>X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro</title>
     <link>https://ugeek.github.io/blog/post/2023-03-26-x11-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-grafica-en-local-manjaro.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 26 Mar 2023  +0100</pubDate>
+    <pubDate>Sun, 26 Mar 2023 10:10 +0100</pubDate>
     <category>x11</category>
     <category>manjaro</category>
     <category></category>

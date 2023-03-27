@@ -1,5 +1,5 @@
 <head>
-<title>audiolibros</title>
+<title>Snap. Desinstalar o Instalar en Manjaro. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -47,14 +47,72 @@ gtag("js", new Date())
 gtag("config", "");
 </script>
 
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
 </head>
 
 <br><br><br><br><br><br><br><br><br>
 
  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
 
-<h2><a>audiolibros</a></h2>
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="snap.-desinstalar-o-instalar-en-manjaro-1" title="Snap. Desinstalar o Instalar en Manjaro" data-export_file_name="snap-desinstalar-o-instalar-en-manjaro" data-description="La paquetería snap es un sistema de gestión de paquetes creado por Canonical, la empresa que desarrolla Ubuntu. Los paquetes snap son aplicaciones compiladas que incluyen todas sus dependencias y" data-export_date="2023-03-27 10:10" data-category="snap" data-tag="manjaro" data-image="./images-blog/ugeek.png">Snap. Desinstalar o Instalar en Manjaro</h1>
+<h5>Tiempo estimado de lectura: 1 minutos. 210 palabras.    <a href="https://ugeek.github.io/blog/categories/snap">snap</a></h5>
+<p>La paquetería snap es un sistema de gestión de paquetes creado por Canonical, la empresa que desarrolla Ubuntu. Los paquetes snap son aplicaciones compiladas que incluyen todas sus dependencias y bibliotecas, lo que les permite funcionar en cualquier distribución de Linux que soporte snap. Los paquetes snap se ejecutan en un entorno aislado, lo que mejora la seguridad y la estabilidad. Además, los paquetes snap pueden recibir las últimas actualizaciones del software de forma automática.</p>
+<p>En la versión de escritorio de Manjaro, me venía snap instalada por defecto. Vamos a ver como desinstalarlo y volverlo a instalar, si fuera necesario.</p>
+<p>Ver si el servicio está instalado y corriendo en Manjaro</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> systemctl status snapd.socket</a></code></pre></div>
+<h2 id="eliminando-snap-de-tu-sistema">Eliminando snap de tu sistema</h2>
+<p>Detenemos el servicio</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> systemctl stop snapd.socket</a></code></pre></div>
+<h2 id="desinstalando-snap">Desinstalando snap</h2>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> pacman -R libpamac-snap-plugin snapd</a></code></pre></div>
+<h2 id="eliminar-los-archivos-residuales">Eliminar los archivos residuales</h2>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> rm -rf /var/lib/snapd</a></code></pre></div>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-10-audiobookshelf-servidor-de-audiolibros.html>Audiobookshelf. Servidor de Audiolibros</a></li>
+<li><a href="https://linuxhint.com/install-snap-packages-manjaro/">https://linuxhint.com/install-snap-packages-manjaro/</a></li>
+</ul>
+<br>
+<p>Publicado por Angel el Monday 27 March del 2023</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-09-manjaro-elegir-los-repositorios-mas-rapidos.html">Manjaro. Elegir los repositorios más rápidos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-05-07-joplin-para-terminal-llega-a-snap.html">Joplin para terminal, llega a snap</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html">Paquetes instalados en tu sistema</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-12-04-los-paquetes-snap-no-aparecen-una-vez-instalados.html">Los paquetes snap no aparecen una vez instalados</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html">Emacs siempre a la última versión, betas, edge… gracias a Snap</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html">Paquetes Snap</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
