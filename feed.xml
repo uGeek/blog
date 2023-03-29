@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Docker. Flatnotes tomando notas en markdown</title>
+    <link>https://ugeek.github.io/blog/post/2023-03-29-flatnotes.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Docker. Flatnotes tomando notas en markdown"&gt;
+&lt;br&gt;&lt;p&gt;Flatnotes es una aplicación web de toma de notas que se autohospeda y que utiliza archivos markdown para almacenar tus notas. Esta aplicación sin base de datos está diseñada para... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-03-29-flatnotes.html&gt;Docker. Flatnotes tomando notas en markdown&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 29 Mar 2023  +0100</pubDate>
+    <category>markdown</category>
+    <category>notes</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-03-29-flatnotes.html</guid>
+   </item>
+   <item>
     <title>ZSH con el tema PowerLevel10k</title>
     <link>https://ugeek.github.io/blog/post/2023-03-28-zsh-con-el-tema-powerlevel10k.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 28 Mar 2023  +0100</pubDate>
+    <pubDate>Tue, 28 Mar 2023 10:00 +0100</pubDate>
     <category>zsh</category>
     <category>tema</category>
     <category></category>

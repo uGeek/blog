@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Docker. Flatnotes tomando notas en markdown',
+            'text': 'Flatnotes es una aplicación web de toma de notas que se autohospeda y que utiliza archivos markdown para almacenar tus notas. Esta aplicación sin base de datos está diseñada para', 
+            'tags': 'markdown,notes,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-03-29-flatnotes.html' 
+},
+{
             'title': 'ZSH con el tema PowerLevel10k',
             'text': '** Tema alucinante de ZSH con PowerLevel10k', 
             'tags': 'zsh,tema,,,,', 
