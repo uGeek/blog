@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Listado de Webs de IA para Búsquedas, Desarrollo y Productividad',
+            'text': 'La inteligencia artificial (IA) es una de las áreas más innovadoras y prometedoras de la tecnología actual. Cada día surgen nuevos servicios y aplicaciones que aprovechan el potencial de la', 
+            'tags': 'ia,desarrollo,buscador,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html' 
+},
+{
             'title': 'Docker. Flatnotes tomando notas en markdown',
             'text': 'Flatnotes es una aplicación web de toma de notas que se autohospeda y que utiliza archivos markdown para almacenar tus notas. Esta aplicación sin base de datos está diseñada para', 
             'tags': 'markdown,notes,,,,', 
