@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Caddy. Evitar que los motores de búsqueda indexen tu servicio',
+            'text': 'En este artículo, voy a explicar por qué deberíamos utilizar la etiqueta header X-Robots-Tag en un servidor caddy. Esta etiqueta nos permite controlar cómo los motores de búsqueda rastrean e', 
+            'tags': 'caddy,buscadores,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-04-07-caddy-evitar-que-los-motores-de-busqueda-indexen-tu-servicio.html' 
+},
+{
             'title': 'Listado de Webs de IA para Búsquedas, Desarrollo y Productividad',
             'text': 'La inteligencia artificial (IA) es una de las áreas más innovadoras y prometedoras de la tecnología actual. Cada día surgen nuevos servicios y aplicaciones que aprovechan el potencial de la', 
             'tags': 'ia,desarrollo,buscador,,,', 
@@ -1591,7 +1597,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
