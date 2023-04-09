@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo',
+            'text': 'Ha llegado la hora de mantener limpio nuestro PC o servidor con Manjaro. Como sobéis, Manjaro es una distro Arch, así que lo que veáis aquí, es aplicable a cualquier', 
+            'tags': 'manjaro,pacman,yay,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-04-09-manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo.html' 
+},
+{
             'title': 'Caddy. Evitar que los motores de búsqueda indexen tu servicio',
             'text': 'En este artículo, voy a explicar por qué deberíamos utilizar la etiqueta header X-Robots-Tag en un servidor caddy. Esta etiqueta nos permite controlar cómo los motores de búsqueda rastrean e', 
             'tags': 'caddy,buscadores,,,,', 
