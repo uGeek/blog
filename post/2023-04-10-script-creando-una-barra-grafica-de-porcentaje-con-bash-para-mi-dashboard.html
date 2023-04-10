@@ -1,0 +1,131 @@
+<head>
+<title>Script. Creando una barra gráfica de porcentaje con bash para mi dashboard. uGeek Blog </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
+
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
+<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<meta property="og:locale" content="es_ES" />
+
+
+
+<meta name="robots" content="index, follow">
+<meta name="twitter:site" content="@ugeekpodcast" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
+
+
+<meta name="author" content="Angel">
+<meta name="description" content="Quería un script en bash que utilizando 2 variables, una el tamaño total del disco duro y la otra, obteniendo el valor del espacio utilizado en disco (ya se en" />
+
+
+<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Script. Creando una barra gráfica de porcentaje con bash para mi dashboard" />
+<meta property="og:description" content="Quería un script en bash que utilizando 2 variables, una el tamaño total del disco duro y la otra, obteniendo el valor del espacio utilizado en disco (ya se en" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Script._Creando_una_barra_gráfica_de_porcentaje_con_bash_para_mi_dashboard.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-04-10-script-creando-una-barra-grafica-de-porcentaje-con-bash-para-mi-dashboard.html" />
+
+<meta name="twitter:title" content="Script. Creando una barra gráfica de porcentaje con bash para mi dashboard" />
+<meta name="twitter:description" content="Quería un script en bash que utilizando 2 variables, una el tamaño total del disco duro y la otra, obteniendo el valor del espacio utilizado en disco (ya se en" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Script._Creando_una_barra_gráfica_de_porcentaje_con_bash_para_mi_dashboard.png" />
+
+
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date())
+gtag("config", "");
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../content.js"></script>
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+
+
+</head>
+
+<br><br><br><br><br><br><br><br><br>
+
+ <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+
+
+<!-- THIS IS THE SEARCH BOX -->
+
+
+<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
+<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
+
+<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
+<div align="center" id="tipue_search_content"></div>
+<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<script>
+
+$(document).ready(function() {
+$("#tipue_search_input").tipuesearch();
+});
+
+</script>
+
+<!-- END BOX -->
+
+
+
+
+<h1 id="script.-creando-una-barra-gráfica-de-porcentaje-con-bash-para-mi-dashboard-1" title="Script. Creando una barra gráfica de porcentaje con bash para mi dashboard" data-export_file_name="script-creando-una-barra-grafica-de-porcentaje-con-bash-para-mi-dashboard" data-description="Quería un script en bash que utilizando 2 variables, una el tamaño total del disco duro y la otra, obteniendo el valor del espacio utilizado en disco (ya se en" data-export_date="2023-04-10 10:14" data-category="script" data-tag="disco" data-image="./images-blog/Script._Creando_una_barra_gráfica_de_porcentaje_con_bash_para_mi_dashboard.png">Script. Creando una barra gráfica de porcentaje con bash para mi dashboard</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 322 palabras.    <a href="https://ugeek.github.io/blog/categories/script">script</a></h5>
+<p>Quería un script en bash que utilizando 2 variables, una el tamaño total del disco duro y la otra, obteniendo el valor del espacio utilizado en disco (ya se en local con el comando <code>du -hs</code> o con <code>rclone size</code>), pre-visualizará una barra gráfica con el porcentaje.</p>
+<p>Se verá de este modo:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">Espacio</span> utilizado: 91.00%</a>
+<a class="sourceLine" id="cb1-2" title="2">[=============================================    ] <span class="ex">20.207</span> GiB / 22 GiB</a></code></pre></div>
+<p>El objetivo ha sido incluir esta barra en mi dashboard y creando un bucle con <code>while</code>, mostrar todos mis discos del vps, local y nubes con rclone.</p>
+<p>Os dejo esta idea para que la apliquéis a vuestro gusto.</p>
+<h2 id="script">script</h2>
+<p>Este es el script para crear una barra gráfica en la terminal de Bash para mostrar el espacio utilizado en un disco.</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="co">#!/bin/bash</span></a>
+<a class="sourceLine" id="cb2-2" title="2"></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="va">total=</span>22</a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="va">used=</span>20.207</a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="va">free=$(</span><span class="bu">echo</span> <span class="st">&quot;scale=2; </span><span class="va">$total</span><span class="st">-</span><span class="va">$used</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="va">)</span></a>
+<a class="sourceLine" id="cb2-6" title="6"></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="va">used_percent=$(</span><span class="bu">echo</span> <span class="st">&quot;scale=2; </span><span class="va">$used</span><span class="st">/</span><span class="va">$total</span><span class="st">*100&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="va">)</span></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="va">free_percent=$(</span><span class="bu">echo</span> <span class="st">&quot;scale=2; </span><span class="va">$free</span><span class="st">/</span><span class="va">$total</span><span class="st">*100&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="va">)</span></a>
+<a class="sourceLine" id="cb2-9" title="9"></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="va">used_bar=$(</span><span class="bu">printf</span> <span class="st">&quot;%.0f&quot;</span> <span class="va">$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$used_percent</span><span class="st">/2&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="va">))</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="va">free_bar=$(</span><span class="bu">printf</span> <span class="st">&quot;%.0f&quot;</span> <span class="va">$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$free_percent</span><span class="st">/2&quot;</span> <span class="kw">|</span> <span class="fu">bc</span><span class="va">))</span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="va">bar=$(</span><span class="bu">printf</span> <span class="st">&#39;=%.0s&#39;</span> <span class="va">$(</span><span class="fu">seq</span> 1 <span class="va">$used_bar))</span></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="va">space=$(</span><span class="bu">printf</span> <span class="st">&#39; %.0s&#39;</span> <span class="va">$(</span><span class="fu">seq</span> 1 <span class="va">$free_bar))</span></a>
+<a class="sourceLine" id="cb2-14" title="14"></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="bu">echo</span> <span class="st">&quot;Espacio utilizado: </span><span class="va">$used_percent</span><span class="st">%&quot;</span></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="bu">echo</span> <span class="st">&quot;[</span><span class="va">$bar$space</span><span class="st">] </span><span class="va">$used</span><span class="st"> GiB / </span><span class="va">$total</span><span class="st"> GiB&quot;</span></a></code></pre></div>
+<p>Este script primero define las variables <code>total</code>, <code>used</code> y <code>free</code> con los valores del espacio total, utilizado y libre, respectivamente. Luego, se calculan los porcentajes correspondientes y se crea la barra gráfica utilizando el comando <code>printf</code>. Finalmente, se imprime la barra gráfica junto con el porcentaje y los valores utilizados y totales.</p>
+<br>
+<p>Publicado por Angel el Monday 10 April del 2023</p>
+<br><br> 
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html">Crear servicio con Systemd</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html">Script para crear acceso a aplicaciones AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html">ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-10-20-rctodosync-comparte-tareas-del-todo-txt-por-contextos-proyectos-o-palabras.html">rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</a></li>
+</ul>
+<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
