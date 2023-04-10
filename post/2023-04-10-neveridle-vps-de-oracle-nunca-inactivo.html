@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="neveridle.-vps-de-oracle-nunca-inactivo-1" title="NeverIdle. VPS de Oracle nunca inactivo" data-export_file_name="neveridle-vps-de-oracle-nunca-inactivo" data-description="** VPS de Oracle y las cuentas Oracle Cloud Free Tier" data-export_date="2023-04-10 13:16" data-category="vps" data-tag="oracle" data-image="./images-blog/ugeek.png">NeverIdle. VPS de Oracle nunca inactivo</h1>
-<h5>Tiempo estimado de lectura: 9 minutos. 1029 palabras.    <a href="https://ugeek.github.io/blog/categories/vps">vps</a></h5>
+<h5>Tiempo estimado de lectura: 9 minutos. 1028 palabras.    <a href="https://ugeek.github.io/blog/categories/vps">vps</a></h5>
 <h2 id="vps-de-oracle-y-las-cuentas-oracle-cloud-free-tier">VPS de Oracle y las cuentas Oracle Cloud Free Tier</h2>
 <p>Algunos usuarios han recibido un aviso de Oracle Cloud Free Tier, que consiste en un servicio gratuito de Oracle Cloud Infrastructure (OCI) que ofrece recursos limitados de computación, almacenamiento y red, entre otros. El aviso les informa de que OCI va a reclamar los recursos de computación que hayan estado inactivos durante más de una semana, y que estos recursos serán detenidos en una fecha determinada. También les sugiere que conviertan su cuenta a un plan de pago por uso (PAYG), con el que no tendrán que pagar nada si se mantienen dentro de los límites de Always Free, pero evitarán que sus recursos inactivos sean detenidos.</p>
 <p>Esta medida se debe a que OCI quiere optimizar el uso de los recursos para ofrecer un mejor servicio a los clientes de Always Free, y que se basa en unos criterios de inactividad que tienen en cuenta la utilización de la CPU, la red y la memoria de las instancias de computación. Esta medida se anunció previamente en la página web de OCI, pero que luego desapareció y volvió a aparecer.</p>
@@ -114,7 +114,7 @@ $("#tipue_search_input").tipuesearch();
 <a class="sourceLine" id="cb3-2" title="2"><span class="fu">sudo</span> tar -C /usr/local -xvf go1.20.3.linux-amd64.tar.gz</a></code></pre></div>
 <p>Ahora debes establecer las rutas en tu entorno.</p>
 <p>En primer lugar, debes establecer el valor raíz de Go, que le indica a Go dónde buscar sus archivos. Puedes hacerlo editando el archivo ".profile", que contiene una lista de comandos que el sistema ejecuta cada vez que inicias sesión. Usa tu editor preferido para abrir ".profile", que se encuentra en el directorio de inicio de tu usuario. Aquí, usaremos nano:</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> nano ~/.profile</a></code></pre></div>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">nano</span> ~/.profile</a></code></pre></div>
 <p>Luego, agregas la siguiente información al final de tu archivo:</p>
 <div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="bu">export</span> <span class="va">PATH=$PATH</span>:/usr/local/go/bin</a></code></pre></div>
 <p>Después de agregar esta información a tu perfil, guarda y cierra el archivo. Si usaste nano, hazlo presionando CTRL+X, luego Y y finalmente ENTER. A continuación, actualiza tu perfil ejecutando el siguiente comando:</p>
@@ -123,10 +123,10 @@ $("#tipue_search_input").tipuesearch();
 <div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">go</span> version</a></code></pre></div>
 <p>Este comando mostrará el número de versión de la versión de Go instalada en tu sistema</p>
 <h2 id="instalación-de-neveridle">Instalación de NeverIdle</h2>
-<h3 id="amd-server">AMD Server</h3>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">wget</span> https://github.com/layou233/NeverIdle/releases/download/0.2.3/NeverIdle-linux-amd64 -O NeverIdle</a></code></pre></div>
 <h3 id="arm-server">ARM Server</h3>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">wget</span> https://github.com/layou233/NeverIdle/releases/download/0.2.3/NeverIdle-linux-arm64 -O NeverIdle</a></code></pre></div>
+<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">wget</span> https://github.com/layou233/NeverIdle/releases/download/0.2.3/NeverIdle-linux-arm64 -O NeverIdle</a></code></pre></div>
+<h3 id="amd-server">AMD Server</h3>
+<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">wget</span> https://github.com/layou233/NeverIdle/releases/download/0.2.3/NeverIdle-linux-amd64 -O NeverIdle</a></code></pre></div>
 <h2 id="probando-neveridle">Probando NeverIdle</h2>
 <p>Damos permisos de ejecución:</p>
 <div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="fu">chmod</span> +x NeverIdle</a></code></pre></div>
