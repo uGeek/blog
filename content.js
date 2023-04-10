@@ -6,6 +6,12 @@ var tipuesearch = {pages: [
             'url': 'https://ugeek.github.io/blog/post/2023-04-10-script-creando-una-barra-grafica-de-porcentaje-con-bash-para-mi-dashboard.html' 
 },
 {
+            'title': 'NeverIdle. VPS de Oracle nunca inactivo',
+            'text': '** VPS de Oracle y las cuentas Oracle Cloud Free Tier', 
+            'tags': 'vps,oracle,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-04-10-neveridle-vps-de-oracle-nunca-inactivo.html' 
+},
+{
             'title': 'Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo',
             'text': 'Ha llegado la hora de mantener limpio nuestro PC o servidor con Manjaro. Como sabéis, Manjaro es una distro Arch, así que lo que veáis aquí, es aplicable a cualquier', 
             'tags': 'manjaro,pacman,yay,,,', 

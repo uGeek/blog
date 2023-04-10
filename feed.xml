@@ -38,12 +38,45 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 10 Apr 2023  +0100</pubDate>
+    <pubDate>Mon, 10 Apr 2023 13:16 +0100</pubDate>
     <category>script</category>
     <category>disco</category>
     <category></category>
     <category></category>
     <guid>https://ugeek.github.io/blog/post/2023-04-10-script-creando-una-barra-grafica-de-porcentaje-con-bash-para-mi-dashboard.html</guid>
+   </item>
+   <item>
+    <title>NeverIdle. VPS de Oracle nunca inactivo</title>
+    <link>https://ugeek.github.io/blog/post/2023-04-10-neveridle-vps-de-oracle-nunca-inactivo.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="NeverIdle. VPS de Oracle nunca inactivo"&gt;
+&lt;br&gt;&lt;p&gt;** VPS de Oracle y las cuentas Oracle Cloud Free Tier... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-04-10-neveridle-vps-de-oracle-nunca-inactivo.html&gt;NeverIdle. VPS de Oracle nunca inactivo&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 10 Apr 2023  +0100</pubDate>
+    <category>vps</category>
+    <category>oracle</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-04-10-neveridle-vps-de-oracle-nunca-inactivo.html</guid>
    </item>
    <item>
     <title>Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</title>

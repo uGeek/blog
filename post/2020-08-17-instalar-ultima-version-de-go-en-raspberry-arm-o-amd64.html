@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="instalar-última-versión-de-go-en-raspberry-arm-o-amd64-1" title="Instalar última versión de Go en Raspberry, ARM o amd64" data-export_file_name="instalar-ultima-version-de-go-en-raspberry-arm-o-amd64" data-description="Cada vez utilizo más aplicaciones en Go y aunque en las últimas versiones de Debian, Ubuntu, Raspbian,... viene en los repositorios oficiales, no disponemos de la última versión." data-export_date="2020-08-17 17:25" data-category="go" data-tag="arm,amd64" data-image="./images-blog/go.png">Instalar última versión de Go en Raspberry, ARM o amd64</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 299 palabras.    <a href="https://ugeek.github.io/blog/categories/go">go</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 304 palabras.    <a href="https://ugeek.github.io/blog/categories/go">go</a></h5>
 <p>Cada vez utilizo más aplicaciones en Go y aunque en las últimas versiones de Debian, Ubuntu, Raspbian,… viene en los repositorios oficiales, no disponemos de la última versión.</p>
 <center>
 <p><img src="../images-blog/go.png" /></p>
@@ -101,8 +101,8 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="instalar-go-en-raspberry-o-arm">Instalar Go en Raspberry o ARM</h2>
 <h3 id="descargando-en-instalando-go">Descargando en instalando Go</h3>
 <p>Descargamos la versión más reciente <a href="https://golang.org/doc/install">desde la página de go</a>.</p>
-<pre><code>wget https://storage.googleapis.com/golang/go1.14.6.linux-armv6l.tar.gz
-sudo tar -C /usr/local -xvf go1.14.6.linux-armv6l.tar.gz
+<pre><code>wget https://storage.googleapis.com/golang/go1.20.3.linux-arm64.tar.gz
+sudo tar -C /usr/local -xvf go1.20.3.linux-arm64.tar.gz
 </code></pre>
 <h3 id="añadimos-a-.bashr-o-.zshrc">Añadimos a .bashr o .zshrc</h3>
 <pre><code>export GOPATH=$HOME/go
@@ -119,8 +119,9 @@ export PATH=/usr/local/go/bin:$PATH:$GOPATH/bin
 </code></pre>
 <h2 id="instalar-go-en-amd64">Instalar Go en amd64</h2>
 <h3 id="descargando-en-instalando-go-1">Descargando en instalando Go</h3>
-<pre><code>wget https://storage.googleapis.com/golang/go1.14.6.linux-amd64.tar.gz
-sudo tar -C /usr/local -xvf go1.14.6.linux-amd64.tar.gz
+<p>Versión del 10/04/2023 para amd64</p>
+<pre><code>wget https://storage.googleapis.com/golang/go1.20.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xvf go1.20.3.linux-amd64.tar.gz
 </code></pre>
 <h3 id="añadimos-a-.bashr-o-.zshrc-1">Añadimos a .bashr o .zshrc</h3>
 <pre><code>export GOPATH=$HOME/go
