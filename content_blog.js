@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Geolocalización de una ip en la terminal y offline',
+            'text': '¿Te has preguntado alguna vez cómo saber la ubicación geográfica de una dirección IP? Existen varias herramientas en línea que te permiten hacerlo, pero si quieres tener más control y', 
+            'tags': 'ip,web,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html' 
+},
+{
             'title': 'Geolocalizando y mostrando rutas por la ip.',
             'text': 'Voy a explicar cómo se puede geolocalizar una dirección IP usando diferentes métodos y herramientas. Una dirección IP es un identificador único que se asigna a cada dispositivo conectado a', 
             'tags': 'ip,web,,,,', 

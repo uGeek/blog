@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Geolocalización de una ip en la terminal y offline</title>
+    <link>https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Geolocalización de una ip en la terminal y offline"&gt;
+&lt;br&gt;&lt;p&gt;¿Te has preguntado alguna vez cómo saber la ubicación geográfica de una dirección IP? Existen varias herramientas en línea que te permiten hacerlo, pero si quieres tener más control y... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html&gt;Geolocalización de una ip en la terminal y offline&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 12 Apr 2023  +0100</pubDate>
+    <category>ip</category>
+    <category>web</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html</guid>
+   </item>
+   <item>
     <title>Geolocalizando y mostrando rutas por la ip.</title>
     <link>https://ugeek.github.io/blog/post/2023-04-11-geolocalizando-y-mostrando-rutas-por-la-ip-.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Tue, 11 Apr 2023  +0100</pubDate>
+    <pubDate>Tue, 11 Apr 2023 10:15 +0100</pubDate>
     <category>ip</category>
     <category>web</category>
     <category></category>
