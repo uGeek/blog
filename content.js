@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Ubuntu: Elimina Get more security updates through Ubuntu Pro',
+            'text': 'Es posible que si has actualizado ubuntu, te aparezca este mensaje:', 
+            'tags': 'ubuntu,actualizar,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-04-13-ubuntu-elimina-get-more-security-updates-through-ubuntu-pro.html' 
+},
+{
             'title': 'Geolocalización de una ip en la terminal y offline',
             'text': '¿Te has preguntado alguna vez cómo saber la ubicación geográfica de una dirección IP? Existen varias herramientas en línea que te permiten hacerlo, pero si quieres tener más control y', 
             'tags': 'ip,web,,,,', 
