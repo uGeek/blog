@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Chrome. Shortkeys en Brave, Edge, Firefox',
+            'text': '¿Te gustaría personalizar los atajos de teclado de tu navegador web? ¿Quieres ahorrar tiempo y esfuerzo al navegar por Internet? Entonces te interesa conocer Shortkeys, una extensión gratuita y de', 
+            'tags': 'chrome,brave,edge,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-05-10-chrome-shortkeys-en-brave-edge-firefox.html' 
+},
+{
             'title': 'SSH. Eliminar la clave del host en un servidor remoto',
             'text': 'Cuando se ha cambiado la dirección IP del servidor o cuando se ha reinstalado el sistema operativo en el servidor, es necesario eliminar la clave del host, para obligar al', 
             'tags': 'ssh,host,,,,', 

@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Chrome. Shortkeys en Brave, Edge, Firefox</title>
+    <link>https://ugeek.github.io/blog/post/2023-05-10-chrome-shortkeys-en-brave-edge-firefox.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Chrome. Shortkeys en Brave, Edge, Firefox"&gt;
+&lt;br&gt;&lt;p&gt;¿Te gustaría personalizar los atajos de teclado de tu navegador web? ¿Quieres ahorrar tiempo y esfuerzo al navegar por Internet? Entonces te interesa conocer Shortkeys, una extensión gratuita y de... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-05-10-chrome-shortkeys-en-brave-edge-firefox.html&gt;Chrome. Shortkeys en Brave, Edge, Firefox&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 10 May 2023  +0100</pubDate>
+    <category>chrome</category>
+    <category>brave</category>
+    <category>edge</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-05-10-chrome-shortkeys-en-brave-edge-firefox.html</guid>
+   </item>
+   <item>
     <title>SSH. Eliminar la clave del host en un servidor remoto</title>
     <link>https://ugeek.github.io/blog/post/2023-05-06-ssh-eliminar-la-clave-del-host-en-un-servidor-remoto.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sat, 06 May 2023  +0100</pubDate>
+    <pubDate>Sat, 06 May 2023 10:07 +0100</pubDate>
     <category>ssh</category>
     <category>host</category>
     <category></category>
