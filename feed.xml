@@ -16,7 +16,7 @@
     <title>Bard de google para terminal</title>
     <link>https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html</link>
     <description>
-&lt;img src="https://ugeek.github.io/blog/images-blog/Bard_de_google_para_terminal.png" alt="Bard de google para terminal"&gt;
+&lt;img src="https://ugeek.github.io/blog/images-blog/bard.png" alt="Bard de google para terminal"&gt;
 &lt;br&gt;&lt;p&gt;El proyecto de Bard para terminal está liderado por acheong08 en GitHub igual que el de *edge-gpt*, es una obra de ingeniería inversa de la API de Bard de Google.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html&gt;Bard de google para terminal&lt;/a&gt;
 
@@ -9125,7 +9125,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
@@ -12722,7 +12722,7 @@
     <link>https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/papelera.jpg" alt="Papelera Reciclaje desde la Terminal"&gt;
-&lt;br&gt;&lt;p&gt;Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.... 
+&lt;br&gt;&lt;p&gt;Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer go1.20.3.linux-arm64.tar.gz y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html&gt;Papelera Reciclaje desde la Terminal&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
