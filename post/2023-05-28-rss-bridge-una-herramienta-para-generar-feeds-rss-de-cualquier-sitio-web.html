@@ -108,13 +108,13 @@ $("#tipue_search_input").tipuesearch();
 <p>Es posible montarlo de un modo privado en tu servidor con docker:</p>
 <pre><code>version: &#39;2&#39;
 services:
-rss-bridge:
-image: rssbridge/rss-bridge:latest
-volumes:
-- ./config:/config
-ports:
-- 3000:80
-restart: unless-stopped
+  rss-bridge:
+    image: rssbridge/rss-bridge:latest
+    volumes:
+      - ./config:/config
+    ports:
+      - 3000:80
+    restart: unless-stopped
 </code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>RSS-Bridge es una herramienta muy útil para crear feeds RSS de cualquier sitio web o servicio que te interese. Con ella, podrás estar al día de las novedades de tus fuentes favoritas sin tener que visitarlas manualmente. Además, gracias a servicios como RSS-Bridge.org, no necesitas instalar nada ni tener conocimientos técnicos para usarla. Solo tienes que elegir el bridge que quieras y disfrutar de tu feed personalizado. ¿A qué esperas para probarla?</p>
