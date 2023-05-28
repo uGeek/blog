@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web-1" title="RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web" data-export_file_name="rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web" data-description="¿Te gustaría seguir las actualizaciones de tus sitios web favoritos sin tener que visitarlos uno por uno? ¿Quieres recibir las últimas noticias de fuentes que no ofrecen un feed RSS?" data-export_date="2023-05-28 18:00" data-category="rss" data-tag="telegram" data-image="./images-blog/ugeek.png">RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web</h1>
-<h5>Tiempo estimado de lectura: 5 minutos. 626 palabras.    <a href="https://ugeek.github.io/blog/categories/rss">rss</a></h5>
+<h5>Tiempo estimado de lectura: 5 minutos. 648 palabras.    <a href="https://ugeek.github.io/blog/categories/rss">rss</a></h5>
 <p>¿Te gustaría seguir las actualizaciones de tus sitios web favoritos sin tener que visitarlos uno por uno? ¿Quieres recibir las últimas noticias de fuentes que no ofrecen un feed RSS? ¿Buscas una forma sencilla gratuita y privada de crear tus propios feeds personalizados? Si la respuesta es sí, entonces RSS-Bridge es la solución que necesitas.</p>
 <p>RSS-Bridge es un proyecto de código abierto que permite generar feeds RSS de cualquier sitio web, incluso si este no los ofrece. Con RSS-Bridge, puedes convertir el contenido de páginas web, redes sociales, plataformas de vídeo, podcasts y otros servicios en un formato estándar que puedes leer con tu lector de feeds favorito.</p>
 <h2 id="cómo-funciona-rss-bridge">¿Cómo funciona RSS-Bridge?</h2>
@@ -104,19 +104,7 @@ $("#tipue_search_input").tipuesearch();
 <p>Para usar RSS-Bridge, tienes dos opciones: instalarlo en tu propio servidor o utilizar un servicio público que lo ofrezca. La primera opción te da más control y privacidad, pero requiere tener conocimientos técnicos y acceso a un servidor web. La segunda opción es más sencilla y rápida, pero depende de la disponibilidad y fiabilidad del servicio elegido.</p>
 <p>Si optas por la segunda opción, una buena alternativa es <a href="https://rss-bridge.org/">RSS-Bridge.org</a>, un servicio gratuito y sin publicidad que ofrece RSS-Bridge con todos los bridges disponibles. Para usarlo, solo tienes que acceder a su página web y seleccionar el bridge que te interese. Luego, podrás configurar las opciones del feed y obtener el enlace para añadirlo a tu lector de feeds.</p>
 <p>Por ejemplo, si quieres generar un feed RSS de las últimas publicaciones del blog de GitHub, puedes usar el bridge "GithubCommits", introducir "github" como nombre de usuario y "blog" como nombre del repositorio. Al hacer clic en "Get Feed", obtendrás el enlace del feed RSS generado por RSS-Bridge.org.</p>
-<h2 id="docker">Docker</h2>
-<p>Es posible montarlo de un modo privado en tu servidor con docker:</p>
-<pre><code>version: &#39;2&#39;
-services:
-  rss-bridge:
-    image: rssbridge/rss-bridge:latest
-    volumes:
-      - ./config:/config
-    ports:
-      - 3000:80
-    restart: unless-stopped
-</code></pre>
-<h3 id="habilitar-todos-los-puentes">Habilitar todos los puentes</h3>
+<h2 id="habilitar-todos-los-puentes">Habilitar todos los puentes</h2>
 <p>Nos situamos dentro del directorio de configuración ./config que hemos creado en el volumen y creamos el archivos <code>whitelist.txt</code>. Dentro de él, añadiremos un <code>*</code> que quiere decir que habilite todos los puentes:</p>
 <pre><code>echo &#39;*&#39; &gt; whitelist.txt
 </code></pre>
@@ -130,6 +118,19 @@ TwitterBridge
 <pre><code>Facebook
 Wikipedia
 Twitter
+</code></pre>
+<p>En caso de problemas con el nombre del puente, utiliza el del archivo <strong>.php</strong> que encontrarás en el repositorio de GitHub <a href="https://github.com/RSS-Bridge/rss-bridge/tree/master/bridges">https://github.com/RSS-Bridge/rss-bridge/tree/master/bridges</a></p>
+<h2 id="docker">Docker</h2>
+<p>Es posible montarlo de un modo privado en tu servidor con docker:</p>
+<pre><code>version: &#39;2&#39;
+services:
+  rss-bridge:
+    image: rssbridge/rss-bridge:latest
+    volumes:
+      - ./config:/config
+    ports:
+      - 3000:80
+    restart: unless-stopped
 </code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>RSS-Bridge es una herramienta muy útil para crear feeds RSS de cualquier sitio web o servicio que te interese. Con ella, podrás estar al día de las novedades de tus fuentes favoritas sin tener que visitarlas manualmente. Además, gracias a servicios como RSS-Bridge.org, no necesitas instalar nada ni tener conocimientos técnicos para usarla. Solo tienes que elegir el bridge que quieras y disfrutar de tu feed personalizado. ¿A qué esperas para probarla?</p>
