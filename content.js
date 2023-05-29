@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo',
+            'text': 'JH Joselu, nos recomendaba en el grupo de uGeek en Telegram una alternativa a edge-gpt. *gpt-cli* es una interfaz de línea de comandos chatbot. Esto le permite tener conversaciones interactivas', 
+            'tags': 'chatgpt,terminal,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html' 
+},
+{
             'title': 'RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web',
             'text': '¿Te gustaría seguir las actualizaciones de tus sitios web favoritos sin tener que visitarlos uno por uno? ¿Quieres recibir las últimas noticias de fuentes que no ofrecen un feed RSS?', 
             'tags': 'rss,telegram,,,,', 
@@ -1663,7 +1669,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'html2txt. Convirtiendo una web a texto plano con w3m',
-            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.', 
+            'text': 'Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.', 
             'tags': 'w3m,bash,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html' 
 },
@@ -2317,7 +2323,7 @@ var tipuesearch = {pages: [
 },
 {
             'title': 'Papelera Reciclaje desde la Terminal',
-            'text': 'Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer go1.20.3.linux-arm64.tar.gz y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.', 
+            'text': 'Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.', 
             'tags': 'bash,terminal,zsh,,,', 
             'url': 'https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html' 
 },

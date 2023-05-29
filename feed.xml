@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo</title>
+    <link>https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo"&gt;
+&lt;br&gt;&lt;p&gt;JH Joselu, nos recomendaba en el grupo de uGeek en Telegram una alternativa a edge-gpt. *gpt-cli* es una interfaz de línea de comandos chatbot. Esto le permite tener conversaciones interactivas... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html&gt;gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 29 May 2023  +0100</pubDate>
+    <category>chatgpt</category>
+    <category>terminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html</guid>
+   </item>
+   <item>
     <title>RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web</title>
     <link>https://ugeek.github.io/blog/post/2023-05-28-rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 28 May 2023  +0100</pubDate>
+    <pubDate>Sun, 28 May 2023 17:40 +0100</pubDate>
     <category>rss</category>
     <category>telegram</category>
     <category></category>
@@ -9158,7 +9191,7 @@
     <link>https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt="html2txt. Convirtiendo una web a texto plano con w3m"&gt;
-&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo -.html org-bash-blog.html org-bash-podcast.html a texto plano.... 
+&lt;br&gt;&lt;p&gt;Ya hemos aprendido a utilizar w3m en Emacs y desde la terminal. Ahora vamos a convertir cualquier web o archivo index.html list.html org-bash-blog.html tag.html a texto plano.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html&gt;html2txt. Convirtiendo una web a texto plano con w3m&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
@@ -12755,7 +12788,7 @@
     <link>https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/papelera.jpg" alt="Papelera Reciclaje desde la Terminal"&gt;
-&lt;br&gt;&lt;p&gt;Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer go1.20.3.linux-arm64.tar.gz y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.... 
+&lt;br&gt;&lt;p&gt;Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.... 
 &lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html&gt;Papelera Reciclaje desde la Terminal&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
