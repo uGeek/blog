@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'SilverBullet. Un servicio para editar y crear tus notas, tareas,... Markdown',
+            'text': '*SilverBullet* es un servicio muy liviano que permite crear y editar notas en Markdown con muchisimas opciones personalizables.', 
+            'tags': 'silverbullet,notas,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-06-13-silverbullet-un-servicio-para-editar-y-crear-tus-notas-tareas---markdown.html' 
+},
+{
             'title': 'gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo',
             'text': 'JH Joselu, nos recomendaba en el grupo de uGeek en Telegram una alternativa a edge-gpt. *gpt-cli* es una interfaz de línea de comandos chatbot. Esto le permite tener conversaciones interactivas', 
             'tags': 'chatgpt,terminal,,,,', 
