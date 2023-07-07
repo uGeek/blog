@@ -85,8 +85,8 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="montando-carpetas-del-servidor-raspberry-en-tu-escritorio.-sshfs-1" title="Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS" data-export_file_name="Montando carpetas del servidor Raspberry en tu escritorio" data-description="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil" data-export_date="2019-04-04 18:40" data-category="ssh" data-tag="servidor" data-image="./images-blog/sshfs.png">Montando carpetas del servidor, Raspberry,… en tu escritorio. SSHFS</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 451 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<h1 id="montando-carpetas-del-servidor-raspberry-en-tu-escritorio.-sshfs-1" title="Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS" data-export_file_name="Montando carpetas del servidor Raspberry en tu escritorio" data-description="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil" data-export_date="2019-04-04 18:40 2023-07-04" data-category="ssh" data-tag="servidor" data-image="./images-blog/sshfs.png">Montando carpetas del servidor, Raspberry,… en tu escritorio. SSHFS</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 503 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
 <p>Hay momentos que estás conectado remotamente vía SSH a tu servidor, Raspberry… y aunque cada vez conoces mejor la terminal y te mueves con total soltura por los directorios 😜, te gustaría acceder a esas carpetas de un modo gráfico para hacer un copia-pega, arrastrar un archivo,… tener tu carpeta remota montada en local, como si fuera una carpeta de tu propio PC o Portátil.</p>
 <center>
 <p><img src="../images-blog/sshfs.png" /></p>
@@ -101,6 +101,8 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="instalación-en-la-máquina-local">Instalación en la máquina local</h2>
 <p>SSHFS, lo encontraremos en los repositorios de cualquier distro. En Ubuntu lo instalaremos así:</p>
 <p><code>sudo apt install sshfs</code></p>
+<p>En manjaro lo haremos con:</p>
+<p><code>sudo pacman -S sshfs</code></p>
 <h2 id="creando-la-carpeta-de-montaje">Creando la carpeta de montaje</h2>
 <p>En nuestro PC o portátil, crearemos una carpeta para el montaje, por ejemplo: ~/carpeta_montaje</p>
 <p><code>mkdir -p ~/carpeta_montaje</code></p>
@@ -111,13 +113,16 @@ $("#tipue_search_input").tipuesearch();
 <p><code>sshfs usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code></p>
 <p>En caso de haber cambiado el puerto del servidor SSH, por ejemplo al 5555, nos conectaríamos así:</p>
 <p><code>sshfs -p 5555 usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code></p>
+<h2 id="comprimir-la-conexión">Comprimir la conexión</h2>
+<p><code>sshfs miusuario@micomputadora:/ruta/remota /ruta/local -C -p 9876</code></p>
+<p>Aquí <strong>-C</strong> activa la compresión y <strong>-p 9876</strong> especifica el número de puerto. Hay más opciones disponibles que puedes consultar en la página del manual <strong>sshfs</strong>.</p>
 <h2 id="desmontar">Desmontar</h2>
 <p>Para desmontar la carpeta, introduciremos en la terminal <strong>fusermount -u</strong> seguido de la carpeta de montaje:</p>
 <p><code>fusermount -u ~/carpeta_montaje</code></p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Esta es la base de algunos de los siguientes Post donde vamos a utilizar SSHFS. Hacia tiempo que no lo utilizaba, pero la verdad es que aunque a veces puede ir un poco lento, es muy cómodo para gestionar tus archivos de un modo gráfico desde tu escritorio.</p>
 <br>
-<p>Publicado por Angel el Thursday 04 April del 2019</p>
+<p>Publicado por Angel el Thursday 04 April del 2019 y <strong>actualizado</strong> el Tuesday 04 July del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

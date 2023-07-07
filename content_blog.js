@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'rclone: Montando mis notas para una rapida escritura y lectura.',
+            'text': 'En los últimos años, he almacenado mis notas en un servidor remoto y he utilizado un script de mi creación para editarlas. Esto me ha permitido seleccionar la nota que', 
+            'tags': 'rclone,notas,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura-.html' 
+},
+{
             'title': 'SilverBullet. Un servicio para editar y crear tus notas, tareas,... Markdown',
             'text': '*SilverBullet* es un servicio muy liviano que permite crear y editar notas en Markdown con muchisimas opciones personalizables.', 
             'tags': 'silverbullet,notas,,,,', 
