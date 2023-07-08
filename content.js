@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'SilverBullet. Mi página Índice',
+            'text': 'Con SilverBullet puedes crearte una buena página índice con muchísimas opciones e información.', 
+            'tags': 'silverbullet,notas,markdown,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-07-08-silverbullet-mi-pagina-indice.html' 
+},
+{
             'title': 'rclone: Montando mis notas para una rapida escritura y lectura.',
             'text': 'En los últimos años, he almacenado mis notas en un servidor remoto y he utilizado un script de mi creación para editarlas. Esto me ha permitido seleccionar la nota que', 
             'tags': 'rclone,notas,,,,', 

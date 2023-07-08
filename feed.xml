@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>SilverBullet. Mi página Índice</title>
+    <link>https://ugeek.github.io/blog/post/2023-07-08-silverbullet-mi-pagina-indice.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="SilverBullet. Mi página Índice"&gt;
+&lt;br&gt;&lt;p&gt;Con SilverBullet puedes crearte una buena página índice con muchísimas opciones e información.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-07-08-silverbullet-mi-pagina-indice.html&gt;SilverBullet. Mi página Índice&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Sat, 08 Jul 2023  +0100</pubDate>
+    <category>silverbullet</category>
+    <category>notas</category>
+    <category>markdown</category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-07-08-silverbullet-mi-pagina-indice.html</guid>
+   </item>
+   <item>
     <title>rclone: Montando mis notas para una rapida escritura y lectura.</title>
     <link>https://ugeek.github.io/blog/post/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura-.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 07 Jul 2023  +0100</pubDate>
+    <pubDate>Fri, 07 Jul 2023 20:56 +0100</pubDate>
     <category>rclone</category>
     <category>notas</category>
     <category></category>
