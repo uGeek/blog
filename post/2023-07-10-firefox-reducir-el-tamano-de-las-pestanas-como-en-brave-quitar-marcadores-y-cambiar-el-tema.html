@@ -1,5 +1,5 @@
 <head>
-<title>Instalar Brave en Ubuntu, Debian, Linux Mint. uGeek Blog </title>
+<title>Firefox. Reducir el tamaño de las pestañas como en Brave, quitar marcadores y cambiar el tema. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Brave es el navegador de moda, un navegador web de código abierto basado en Chromium, creado por por el cofundador del Proyecto Mozilla y creador de JavaScript, Brendan Eich." />
+<meta name="description" content="Estoy utilizando Firefox nuevamente, pero después de estar utilizando *Brave*, veo las pestañas muy grandes. Vamos a ver como reducir el tamaño de las pestañas y dejarlas aproximadamente como *Brave*" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Instalar Brave en Ubuntu, Debian, Linux Mint" />
-<meta property="og:description" content="Brave es el navegador de moda, un navegador web de código abierto basado en Chromium, creado por por el cofundador del Proyecto Mozilla y creador de JavaScript, Brendan Eich." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/brave.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2020-04-06-instalar-brave-en-ubuntu-debian-linux-mint.html" />
+<meta property="og:title" content="Firefox. Reducir el tamaño de las pestañas como en Brave, quitar marcadores y cambiar el tema" />
+<meta property="og:description" content="Estoy utilizando Firefox nuevamente, pero después de estar utilizando *Brave*, veo las pestañas muy grandes. Vamos a ver como reducir el tamaño de las pestañas y dejarlas aproximadamente como *Brave*" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-07-10-firefox-reducir-el-tamano-de-las-pestanas-como-en-brave-quitar-marcadores-y-cambiar-el-tema.html" />
 
-<meta name="twitter:title" content="Instalar Brave en Ubuntu, Debian, Linux Mint" />
-<meta name="twitter:description" content="Brave es el navegador de moda, un navegador web de código abierto basado en Chromium, creado por por el cofundador del Proyecto Mozilla y creador de JavaScript, Brendan Eich." />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/brave.png" />
+<meta name="twitter:title" content="Firefox. Reducir el tamaño de las pestañas como en Brave, quitar marcadores y cambiar el tema" />
+<meta name="twitter:description" content="Estoy utilizando Firefox nuevamente, pero después de estar utilizando *Brave*, veo las pestañas muy grandes. Vamos a ver como reducir el tamaño de las pestañas y dejarlas aproximadamente como *Brave*" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,53 +85,46 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="instalar-brave-en-ubuntu-debian-linux-mint-1" title="Instalar Brave en Ubuntu, Debian, Linux Mint" data-export_file_name="instalar-brave-en-ubuntu-debian-linux-mint" data-description="Brave es el navegador de moda, un navegador web de código abierto basado en Chromium, creado por por el cofundador del Proyecto Mozilla y creador de JavaScript, Brendan Eich." data-export_date="2020-04-06 17:00" data-category="navegador" data-tag="brave" data-image="./images-blog/brave.png">Instalar Brave en Ubuntu, Debian, Linux Mint</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 250 palabras.    <a href="https://ugeek.github.io/blog/categories/navegador">navegador</a></h5>
-<p>Brave es el navegador de moda, un navegador web de código abierto basado en Chromium, creado por por el cofundador del Proyecto Mozilla y creador de JavaScript, Brendan Eich. Brave permite bloquear de publicidad y rastreadores en línea.</p>
-<center>
-<p><img src="../images-blog/brave.png" /></p>
-</center>
-<p>También dice proteger la privacidad de sus usuarios compartiendo menos datos con sus anunciantes.</p>
-<p>Vamos a ver como instalarlo en nuestro pc con Ubuntu, debian, Mint y otras distros</p>
-<h2 id="instalación-debian-ubuntu-linux-mint-desde-los-repositorios-de-brave">Instalación Debian, Ubuntu, Linux Mint desde los repositorios de Brave</h2>
-<p>Para añadir el repositorio de Brave en instalar:</p>
-<pre><code>sudo apt install apt-transport-https curl
-
-curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-
-echo &quot;deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main&quot; | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-
-sudo apt update
-
-sudo apt install brave-browser
-</code></pre>
-<h2 id="por-snap">Por Snap</h2>
-<p>Brave también podemos instalarlo con una línea desde snap.</p>
-<pre><code>sudo snap install brave
-</code></pre>
-<h2 id="instalación-resto-de-distros">Instalación resto de distros</h2>
-<p>Si quieres instalar Brave en otras distros</p>
-<p><a href="https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux">https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux</a></p>
-<h2 id="añade-extensiones">Añade extensiones</h2>
-<p>Brave permite <a href="https://chrome.google.com/webstore/category/extensions?hl=es">instalar extensiones disponibles de Chronium</a>.</p>
-<h2 id="fuentes">Fuentes</h2>
+<h1 id="firefox.-reducir-el-tamaño-de-las-pestañas-como-en-brave-quitar-marcadores-y-cambiar-el-tema-1" title="Firefox. Reducir el tamaño de las pestañas como en Brave, quitar marcadores y cambiar el tema" data-export_file_name="firefox-reducir-el-tamano-de-las-pestanas-como-en-brave-quitar-marcadores-y-cambiar-el-tema" data-description="Estoy utilizando Firefox nuevamente, pero después de estar utilizando *Brave*, veo las pestañas muy grandes. Vamos a ver como reducir el tamaño de las pestañas y dejarlas aproximadamente como *Brave*" data-export_date="2023-07-10 22:00" data-category="firefox" data-tag="navegador" data-image="./images-blog/ugeek.png">Firefox. Reducir el tamaño de las pestañas como en Brave, quitar marcadores y cambiar el tema</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 312 palabras.    <a href="https://ugeek.github.io/blog/categories/firefox">firefox</a></h5>
+<p>Estoy utilizando Firefox nuevamente, pero después de estar utilizando <strong>Brave</strong>, veo las pestañas muy grandes. Vamos a ver como reducir el tamaño de las pestañas y dejarlas aproximadamente como <strong>Brave</strong> y de pasada, poner el tema oscuro.</p>
+<h2 id="cambiar-el-tamaño-de-las-pestañas">Cambiar el tamaño de las pestañas</h2>
+<p>Para reducir el tamaño de las pestañas de Firefox, puedes seguir estos pasos:</p>
 <ul>
-<li><a href="https://brave.com/">https://brave.com/</a></li>
+<li>En la barra de direcciones de Firefox, escribe =<a href="about:config=">about:config=</a> y presiona Enter.</li>
+<li>Busca la preferencia =browser.compactmode.show= y cámbiala al valor =true=.</li>
+<li>Reinicia Firefox.</li>
+<li>Haz clic con el botón derecho del ratón en la barra de pestañas y selecciona =Personalizar la barra de herramientas…=.</li>
+<li>En el menú desplegable del botón =Densidad=, selecciona la opción =Compacto (No mantenido)=.</li>
+<li>Haz clic en el botón =Hecho=.</li>
+</ul>
+<h2 id="ocultar-barra-de-marcadores">Ocultar Barra de Marcadores</h2>
+<p>Para ocultar la barra de marcadores en Firefox, debes hacer lo siguiente:</p>
+<ul>
+<li>Haz clic en el espacio al lado de donde están las pestañas, clica al botón derecho del ratón y selecciona <strong>Barra de herramientas de marcadores</strong>.</li>
+<li>Selecciona <strong>Nunca mostrar</strong></li>
+</ul>
+<h2 id="cambiar-el-tema">Cambiar el tema</h2>
+<p>Para cambiar el color de las pestañas de Firefox, hay que seguir estos pasos:</p>
+<ul>
+<li>Abrir el menú de Firefox (el icono de tres líneas horizontales en la esquina superior derecha).</li>
+<li>Hacer clic en "Ajustes" y luego en "Extensiones y Temas".</li>
+<li>Seleccionar el tema oscuro de la lista de opciones disponibles.</li>
+<li>Hacer clic en "Activar" para aplicar el cambio.</li>
 </ul>
 <br>
-<p>Publicado por Angel el Monday 06 April del 2020</p>
+<p>Publicado por Angel el Monday 10 July del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-05-10-chrome-shortkeys-en-brave-edge-firefox.html">Chrome. Shortkeys en Brave, Edge, Firefox</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-25-copilot-de-edge-integracion-total-de-chatgpt-en-tu-navegacion.html">Copilot de Edge. Integración total de ChatGPT en tu navegación</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-18-bing-chat-en-cualquier-navegador.html">Bing Chat en cualquier Navegador</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-12-10-vieb-navegador-estilo-vim.html">vieb. Navegador estilo Vim</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-08-instalacion-de-librewolf-en-manjaro.html">Instalación de LibreWolf en Manjaro</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-08-firefox-cambiando-el-tema-de-firefox-en-manjaro-al-tema-por-defecto.html">Firefox. Cambiando el tema de Firefox en Manjaro al tema por defecto</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-09-30-firefox-navegador-movil.html">Firefox. Navegador móvil</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-07-09-ublock-origin--bloqueando-publicidad-en-tu-navegador.html">uBlock Origin. . Bloqueando publicidad en tu navegador</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html">FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html">Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc…</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-03-firefox-por-ppa-en-ubuntu-y-derivadas-de-debian.html">Firefox por PPA en Ubuntu y derivadas de Debian</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-17-atajos-de-firefox-vimium-ff.html">Atajos de teleclado para Firefox y Vimium-FF</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-01-16-instalando-la-ultima-version-de-firefox.html">Instalando la última versión de Firefox</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
