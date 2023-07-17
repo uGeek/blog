@@ -1,5 +1,5 @@
 <head>
-<title>Simplifica o abrevia tus conexiones SSH. uGeek Blog </title>
+<title>SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="Cuando tienes muchas Raspberry, Servidores, Pc's,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP's, puertos, etc... También es mucho más rápido en el" />
+<meta name="description" content="Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución" />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Simplifica o abrevia tus conexiones SSH" />
-<meta property="og:description" content="Cuando tienes muchas Raspberry, Servidores, Pc's,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP's, puertos, etc... También es mucho más rápido en el" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html" />
+<meta property="og:title" content="SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" />
+<meta property="og:description" content="Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución" />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html" />
 
-<meta name="twitter:title" content="Simplifica o abrevia tus conexiones SSH" />
-<meta name="twitter:description" content="Cuando tienes muchas Raspberry, Servidores, Pc's,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP's, puertos, etc... También es mucho más rápido en el" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png" />
+<meta name="twitter:title" content="SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" />
+<meta name="twitter:description" content="Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución" />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,73 +85,25 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="simplifica-o-abrevia-tus-conexiones-ssh-1" title="Simplifica o abrevia tus conexiones SSH" data-export_file_name="simplifica-o-abrevia-tus-conexiones-ssh" data-description="Cuando tienes muchas Raspberry, Servidores, Pc&#39;s,... y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP&#39;s, puertos, etc... También es mucho más rápido en el" data-export_date="2019-11-09 09:45" data-category="ssh" data-tag="bash,zsh" data-image="./images-blog/bash.png">Simplifica o abrevia tus conexiones SSH</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 338 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
-<p>Cuando tienes muchas Raspberry, Servidores, Pc's,… y te conectas a ellos vía SSH, llega un momento que no recuerdas las IP's, puertos, etc… También es mucho más rápido en el momento de conectarnos destinar a cada dispositivo un nombre abreviado que podamos recordar y no tener que poner toda la línea completa.</p>
-<center>
-<p><img src="../images-blog/bash.png" /></p>
-</center>
-<p>Vamos a ver como crear este archivo de configuración muy simple.</p>
-<h2 id="crear-archivo-de-configuración">Crear archivo de configuración</h2>
-<p>Vamos a crear el archivo de configuración. Utilizaremos de editor Vim.</p>
-<pre><code>vim ~/.ssh/config
-</code></pre>
-<p>Rellenamos la Ip, puerto, usuario y nombre que utilizaremos para conectarno. En mi caso <strong>rp4</strong></p>
-<pre><code>Host rp4
-    Hostname 192.168.1.100
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-    User pi
-    Port 22
-</code></pre>
-<p>Ahora voy a añadir también mi Raspberry Pi 3.</p>
-<pre><code>Host rp4
-    Hostname 192.168.1.100
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-    User pi
-    Port 22
-Host rp3
-    Hostname 192.168.1.101
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-    User angel
-    Port 22
-</code></pre>
-<ul>
-<li>Hostname: ip del servidor</li>
-<li>Port: puerto</li>
-<li>User: usuario</li>
-<li>IdentityFile: Es la ruta del archivo donde está la clave privada del servidor</li>
-<li>IdentitiesOnly:Especifica que la conexión se hará solo bajo el archivo <strong>IdentityFile</strong></li>
-</ul>
-<h2 id="simplificar-si-hay-cosas-en-común">Simplificar si hay cosas en común</h2>
-<pre><code>Host rp4
-    Hostname 192.168.1.100
-    User pi
-Host rp3
-    Hostname 192.168.1.101
-    User angel
-Host *
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-    Port 22
-</code></pre>
-<h2 id="conectarme-ahora-de-un-modo-simple-gracias-al-archivo-de-configuración">Conectarme ahora de un modo simple, gracias al archivo de configuración</h2>
-<pre><code>ssh rp4
-</code></pre>
-<p>y</p>
-<pre><code>ssh rp3
-</code></pre>
-<p>Quizás quieras abrir una aplicación de tu servidor remoto en local:</p>
-<pre><code>ssh -X rp4
-</code></pre>
-<h2 id="fuentes">Fuentes</h2>
-<ul>
-<li><a href="https://www.atareao.es/ubuntu/configuracion-de-ssh/">https://www.atareao.es/ubuntu/configuracion-de-ssh/</a></li>
-</ul>
+<h1 id="ssh.-solucionar-el-problema-de-conexión-warning-remote-host-identification-has-changed-1" title="SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" data-export_file_name="ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!" data-description="Si alguna vez te has encontrado con el mensaje de error &quot;WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!&quot; al intentar conectarte a un servidor SSH, no te preocupes, hay una solución" data-export_date="2023-07-17 06:55" data-category="ssh" data-tag="terminal" data-image="./images-blog/ugeek.png">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</h1>
+<h5>Tiempo estimado de lectura: 4 minutos. 530 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<p>Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución simple. Este error ocurre cuando la identificación del host remoto ha cambiado desde la última vez que te conectaste, lo que puede ser resultado de varios escenarios, como una reinstalación del sistema operativo del servidor o cambios en la configuración de red.</p>
+<p>Para solucionar este problema, puedes utilizar el comando ssh-keygen -R. Este comando es parte de OpenSSH y se utiliza para eliminar las claves de host anteriores almacenadas en el archivo known_hosts. A continuación, te mostraremos cómo utilizar este comando para solucionar el problema de conexión SSH.</p>
+<h2 id="paso-1-ejecuta-ssh-keygen--r">Paso 1: Ejecuta ssh-keygen -R</h2>
+<p>Abre una terminal y ejecuta el siguiente comando:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">ssh-keygen</span> -R angel@192.168.1.100</a></code></pre></div>
+<p>Este comando elimina la clave de host asociada con el nombre de usuario <code>angel</code> y la dirección IP <code>192.168.1.100</code> del archivo <code>known_hosts</code>. Asegúrate de reemplazar <code>angel@192.168.1.100</code> con el nombre de usuario y la dirección IP correspondientes del servidor SSH al que intentas conectarte.</p>
+<h2 id="paso-2-edita-el-archivo-knownhosts">Paso 2: Edita el archivo known_hosts</h2>
+<p>Después de ejecutar el comando <code>ssh-keygen -R</code>, es posible que aún encuentres el mismo error al intentar conectarte al servidor SSH. En ese caso, es posible que necesites editar manualmente el archivo <code>known_hosts</code>.</p>
+<p>Puedes utilizar tu editor de texto favorito, como <code>nano</code>, para editar el archivo <code>known_hosts</code>. Ejecuta el siguiente comando en la terminal:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">nano</span> ~/.ssh/known_hosts</a></code></pre></div>
+<p>Esto abrirá el archivo <code>known_hosts</code> en el editor de texto <code>nano</code>. Busca la línea que corresponda al servidor SSH al que intentas conectarte y elimínala. Luego guarda los cambios y cierra el editor de texto.</p>
+<h2 id="paso-3-intenta-conectarte-nuevamente">Paso 3: Intenta conectarte nuevamente</h2>
+<p>Una vez que hayas eliminado las claves de host anteriores utilizando <code>ssh-keygen -R</code> y hayas editado correctamente el archivo <code>known_hosts</code>, intenta conectarte nuevamente al servidor SSH. Deberías poder conectarte sin ver el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!".</p>
+<p>Recuerda que, al eliminar las claves de host anteriores, estás eliminando la capa de seguridad que brinda la verificación de la identidad del servidor. Siempre asegúrate de verificar la autenticidad del servidor antes de volver a conectarte, especialmente en entornos de red no confiables.</p>
+<p>En resumen, el comando <code>ssh-keygen -R</code> te permite eliminar las claves de host anteriores almacenadas en el archivo <code>known_hosts</code> y solucionar el problema de conexión SSH causado por un cambio en la identificación del host remoto. Además, puedes editar manualmente el archivo <code>known_hosts</code> si el problema persiste después de ejecutar el comando. Recuerda seguir las mejores prácticas de seguridad al conectarte a servidores SSH.</p>
 <br>
-<p>Publicado por Angel el Saturday 09 November del 2019</p>
+<p>Publicado por Angel el Monday 17 July del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

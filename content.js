@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!',
+            'text': 'Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución', 
+            'tags': 'ssh,terminal,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html' 
+},
+{
             'title': 'Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux',
             'text': 'La interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite es una interfaz de audio de 2 entradas y 2 salidas con conexión USB-C que permite grabar y reproducir', 
             'tags': 'scarlett,música,,,,', 

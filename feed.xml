@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</title>
+    <link>https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"&gt;
+&lt;br&gt;&lt;p&gt;Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html&gt;SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 17 Jul 2023  +0100</pubDate>
+    <category>ssh</category>
+    <category>terminal</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html</guid>
+   </item>
+   <item>
     <title>Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux</title>
     <link>https://ugeek.github.io/blog/post/2023-07-14-como-hacer-funcionar-la-interfaz-de-audio-usb-scarlett-2i2-3-ª-gen-de-focusrite-en-linux.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Fri, 14 Jul 2023  +0100</pubDate>
+    <pubDate>Fri, 14 Jul 2023 06:55 +0100</pubDate>
     <category>scarlett</category>
     <category>música</category>
     <category></category>
