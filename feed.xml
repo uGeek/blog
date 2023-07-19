@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>I3wm y sus Problemas con Manjaro</title>
+    <link>https://ugeek.github.io/blog/post/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="I3wm y sus Problemas con Manjaro"&gt;
+&lt;br&gt;&lt;p&gt;Hay un problema conocido con la última versión de Manjaro y el escritorio i3wm que causa que las aplicaciones se abran lentamente.... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html&gt;I3wm y sus Problemas con Manjaro&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Wed, 19 Jul 2023  +0100</pubDate>
+    <category>i3wm</category>
+    <category>manjaro</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html</guid>
+   </item>
+   <item>
     <title>SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</title>
     <link>https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 17 Jul 2023  +0100</pubDate>
+    <pubDate>Mon, 17 Jul 2023 19:35 +0100</pubDate>
     <category>ssh</category>
     <category>terminal</category>
     <category></category>

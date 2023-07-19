@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'I3wm y sus Problemas con Manjaro',
+            'text': 'Hay un problema conocido con la última versión de Manjaro y el escritorio i3wm que causa que las aplicaciones se abran lentamente.', 
+            'tags': 'i3wm,manjaro,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html' 
+},
+{
             'title': 'SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!',
             'text': 'Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución', 
             'tags': 'ssh,terminal,,,,', 
