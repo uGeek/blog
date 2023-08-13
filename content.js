@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Android. Mis Nuevas Apps imprescindibles 2023',
+            'text': 'Tal como explicaba en mi último podcast, aquí os dejo los enlaces de las aplicaciones más interesantes para Android del 2023, o al menos hasta el momento.', 
+            'tags': 'android,apps,navidrome,youtube,jellyfin,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-08-13-android-mis-nuevas-apps-imprescindibles-2023.html' 
+},
+{
             'title': 'I3wm y sus Problemas con Manjaro',
             'text': 'Hay un problema conocido con la última versión de Manjaro y el escritorio i3wm que causa que las aplicaciones se abran lentamente.', 
             'tags': 'i3wm,manjaro,,,,', 
