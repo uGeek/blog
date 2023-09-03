@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Android. Teclado Físico Bluetooth en Inglés, configurarlo en Español',
+            'text': 'Me he comprado un teclado Bluetooth en Aliexpress por unos 10 euros. Mi intención es convertir mi tablet de 10 pulgadas en un especie de portátil con Android.', 
+            'tags': 'android,teclado,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-09-03-android-teclado-fisico-bluetooth-en-ingles-configurarlo-en-espanol.html' 
+},
+{
             'title': 'Android. Mis Nuevas Apps imprescindibles 2023',
             'text': 'Tal como explicaba en mi último podcast, aquí os dejo los enlaces de las aplicaciones más interesantes para Android del 2023, o al menos hasta el momento.', 
             'tags': 'android,apps,navidrome,youtube,jellyfin,', 
