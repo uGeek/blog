@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>MPV. Solucionando el audio desincronizado por defecto en MPV</title>
+    <link>https://ugeek.github.io/blog/post/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="MPV. Solucionando el audio desincronizado por defecto en MPV"&gt;
+&lt;br&gt;&lt;p&gt;Os hablé en el podcast que al conectar mis altavoces con Bluetooth Xiaomi con Google Home, sincronizados ambos en modo Stereo, cuando se reproduzco vídeos en mi proyector, hay una... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html&gt;MPV. Solucionando el audio desincronizado por defecto en MPV&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Mon, 04 Sep 2023  +0100</pubDate>
+    <category>mpv</category>
+    <category>video</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html</guid>
+   </item>
+   <item>
     <title>Android. Teclado Físico Bluetooth en Inglés, configurarlo en Español</title>
     <link>https://ugeek.github.io/blog/post/2023-09-03-android-teclado-fisico-bluetooth-en-ingles-configurarlo-en-espanol.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Sun, 03 Sep 2023  +0100</pubDate>
+    <pubDate>Sun, 03 Sep 2023 07:30 +0100</pubDate>
     <category>android</category>
     <category>teclado</category>
     <category></category>

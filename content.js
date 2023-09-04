@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'MPV. Solucionando el audio desincronizado por defecto en MPV',
+            'text': 'Os hablé en el podcast que al conectar mis altavoces con Bluetooth Xiaomi con Google Home, sincronizados ambos en modo Stereo, cuando se reproduzco vídeos en mi proyector, hay una', 
+            'tags': 'mpv,video,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html' 
+},
+{
             'title': 'Android. Teclado Físico Bluetooth en Inglés, configurarlo en Español',
             'text': 'Me he comprado un teclado Bluetooth en Aliexpress por unos 10 euros. Mi intención es convertir mi tablet de 10 pulgadas en un especie de portátil con Android.', 
             'tags': 'android,teclado,,,,', 
