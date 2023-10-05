@@ -13,6 +13,39 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
+    <title>Caddy. Certificado https autofirmado red local</title>
+    <link>https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html</link>
+    <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Caddy. Certificado https autofirmado red local"&gt;
+&lt;br&gt;&lt;p&gt;Hay servicios como Vaultwarden o floccus que necesitan una conexión *https* para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo... 
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html&gt;Caddy. Certificado https autofirmado red local&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io/blog&gt;Visita uGeek Blog &lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=https://ugeek.github.io&gt;Visita uGeek Podcast&lt;/a&gt;
+
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeekblog&gt;Suscribete al Blog de uGeek&lt;/a&gt;
+
+&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+
+&lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
+
+</description>
+    <pubDate>Thu, 05 Oct 2023  +0100</pubDate>
+    <category>caddy</category>
+    <category>proxy</category>
+    <category></category>
+    <category></category>
+    <guid>https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html</guid>
+   </item>
+   <item>
     <title>MPV. Solucionando el audio desincronizado por defecto en MPV</title>
     <link>https://ugeek.github.io/blog/post/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html</link>
     <description>
@@ -38,7 +71,7 @@
 &lt;a href=http://feeds.feedburner.com/ugeek&gt;Suscribete al Podcast de uGeek&lt;/a&gt;
 
 </description>
-    <pubDate>Mon, 04 Sep 2023  +0100</pubDate>
+    <pubDate>Mon, 04 Sep 2023 07:39 +0100</pubDate>
     <category>mpv</category>
     <category>video</category>
     <category></category>

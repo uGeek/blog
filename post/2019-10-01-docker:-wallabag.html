@@ -85,39 +85,45 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-wallabag-1" title="Docker: Wallabag" data-export_file_name="Docker: Wallabag" data-description="Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,... pero" data-export_date="2019-10-01 5:15 2020-05-23" data-category="docker" data-tag="ubuntu, debian, nas, raspberry,wallabag" data-image="./images-blog/wallabag.png">Docker: Wallabag</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 272 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h1 id="docker-wallabag-1" title="Docker: Wallabag" data-export_file_name="Docker: Wallabag" data-description="Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,... pero" data-export_date="2019-10-01 5:15 2023-10-04" data-category="docker" data-tag="ubuntu, debian, nas, raspberry,wallabag" data-image="./images-blog/wallabag.png">Docker: Wallabag</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 274 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
 <p>Os hable de Wallabag en el Podcast, cuando estaba en la primera versión. Al pasar a la segunda versión, todo cambió. La interfaz mejoró muchísimo, más moderna, más opciones,… pero dejó de funcionar para Raspberry.</p>
 <center>
 <p><img src="../images-blog/wallabag.png" /></p>
 </center>
 <p>Ha pasado el tiempo y ahora que estoy liado con la creación de Dockers, así que decidí el intentarlo una vez más y esta vez con éxito.</p>
-<h2 id="montando-el-docker">Montando el Docker</h2>
-<p>Al montar el Docker siguiendo la documentación, se monta pero, pero no aparece del modo correcto, es como que faltan las hojas de estílo. Es muy importante para solucionar esto el añadir la ruta ip de nuestro servidor al montar el docker:</p>
-<p>Ejemplo. Si fuera la ip 192.168.1.100:</p>
-<pre><code>SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100
+<h2 id="montando-el-docker-con-docker-compose">Montando el Docker con docker compose</h2>
+<pre><code>version: &quot;3.7&quot;
+services:
+  wallabag:
+    image: wallabag/wallabag
+    init: true
+    container_name: wallabag
+    environment:
+      - SYMFONY__ENV__DOMAIN_NAME=&quot;https://wallabag.midominio.duckdns.org&quot;
+      - SYMFONY__ENV__SERVER_NAME=&quot;vps&quot;
+#    volumes:
+#      - ./images:/var/www/wallabag/web/assets/images
+#      - ./data:/var/www/wallabag/data    
 </code></pre>
-<h2 id="wallabag-para-arm-o-raspberry-pi">Wallabag para ARM o Raspberry Pi</h2>
-<pre><code>docker create --name wallabag  \
-  -p 80:80 \
-  -v $HOME/docker/wallabag/data:/var/www/wallabag/data \
-  -v $HOME/docker/wallabag/images:/var/www/wallabag/web/assets/images \
-  -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100:80 \
-  ugeek/wallabag:arm 
-</code></pre>
-<h2 id="wallabag-docker-oficial-amd64">Wallabag docker oficial amd64</h2>
-<pre><code>docker create --name wallabag  \
-  -p 80:80 \
-  -v $HOME/docker/wallabag/data:/var/www/wallabag/data \
-  -v $HOME/docker/wallabag/images:/var/www/wallabag/web/assets/images \
-  -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100:80 \
-wallabag/wallabag
-</code></pre>
-<h2 id="wallabar-para-i386">Wallabar para i386</h2>
-<pre><code>docker run --name wallabag  -p 80:80 -e SYMFONY__ENV__DOMAIN_NAME=http://192.168.1.100 ugeek/wallabag:i386
-</code></pre>
+<p>Logeate por primera vez:</p>
+<ul>
+<li>usuario: wallabag</li>
+<li>contraseña: wallabag</li>
+</ul>
+<h2 id="hacer-los-volumenes-persitentes">Hacer los volumenes persitentes</h2>
+<p>1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen</p>
+<p>volumes:</p>
+<ul>
+<li>./images:/var/www/wallabag/web/assets/images</li>
+<li>./<a href="data:/var/www/wallabag/data">data:/var/www/wallabag/data</a></li>
+</ul>
+<p>2.- Una vez iniciado del docker, copia los volumenes de wallabag en el host, dentro del directorio donde está el docker-compose.yml</p>
+<p>docker cp wallabag:/var/www/wallabag/web/assets/images ./images docker cp wallabag:/var/www/wallabag/data ./data</p>
+<p><strong>Da permisos a ambos directorios</strong> <code>sudo chmod 777 -R images/ data/</code></p>
+<p>3.- Descomenta quitando las almohadillas y vuelve a crear el docker con el directorio de wallabag <code>docker-compose up -d</code></p>
 <br>
-<p>Publicado por Angel el Tuesday 01 October del 2019 y <strong>actualizado</strong> el Saturday 23 May del 2020</p>
+<p>Publicado por Angel el Tuesday 01 October del 2019 y <strong>actualizado</strong> el Wednesday 04 October del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>

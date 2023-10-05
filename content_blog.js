@@ -1,5 +1,11 @@
 var tipuesearch = {pages: [
 {
+            'title': 'Caddy. Certificado https autofirmado red local',
+            'text': 'Hay servicios como Vaultwarden o floccus que necesitan una conexión *https* para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo', 
+            'tags': 'caddy,proxy,,,,', 
+            'url': 'https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html' 
+},
+{
             'title': 'MPV. Solucionando el audio desincronizado por defecto en MPV',
             'text': 'Os hablé en el podcast que al conectar mis altavoces con Bluetooth Xiaomi con Google Home, sincronizados ambos en modo Stereo, cuando se reproduzco vídeos en mi proyector, hay una', 
             'tags': 'mpv,video,,,,', 
