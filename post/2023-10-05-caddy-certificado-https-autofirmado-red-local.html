@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="caddy.-certificado-https-autofirmado-red-local-1" title="Caddy. Certificado https autofirmado red local" data-export_file_name="caddy-certificado-https-autofirmado-red-local" data-description="Hay servicios como Vaultwarden o floccus que necesitan una conexión *https* para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" data-export_date="2023-10-05 07:39" data-category="caddy" data-tag="proxy" data-image="./images-blog/ugeek.png">Caddy. Certificado https autofirmado red local</h1>
-<h5>Tiempo estimado de lectura: 5 minutos. 553 palabras.    <a href="https://ugeek.github.io/blog/categories/caddy">caddy</a></h5>
+<h5>Tiempo estimado de lectura: 5 minutos. 550 palabras.    <a href="https://ugeek.github.io/blog/categories/caddy">caddy</a></h5>
 <p>Hay servicios como Vaultwarden o floccus que necesitan una conexión <strong>https</strong> para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo accesibles en red local pero con la conexiones cifradas.</p>
 <p>Voy a mostrarte como crear un certificado autofirmado para utilizarlo con Caddy y mediante proxy inverso habilitar a cualquier servicio la conexión https.</p>
 <h2 id="genera-un-certificado-autofirmado">Genera un certificado autofirmado</h2>
@@ -161,13 +161,15 @@ $("#tipue_search_input").tipuesearch();
 <li><p>Verifica que los archivos contengan certificados y claves privadas válidos en formato PEM.</p></li>
 <li><p>Puedes usar el siguiente comando para verificar si los archivos son válidos:</p></li>
 </ul>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">```</span><span class="fu">bash</span></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="ex">openssl</span> x509 -in /config/certificado.crt -text</a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="ex">openssl</span> rsa -in /config/privateKey.key -check</a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="kw">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="co">#+</span><span class="re">BEGIN</span><span class="co">_SRC </span></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="ex">openssl</span> x509 -in /config/certificado.crt -text</a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="ex">openssl</span> rsa -in /config/privateKey.key -check</a></code></pre></div>
+<p>#+END_SRC</p>
 <h2 id="comprobar-el-tiempo-para-que-caduquen-los-certificados">Comprobar el tiempo para que caduquen los certificados</h2>
 <p>Para conocer cuanto tiempo le queda a nuestro certificado:</p>
-<p>``` openssl x509 -enddate -noout -in certificado.crt</p>
+<pre><code>openssl x509 -enddate -noout -in certificado.crt
+</code></pre>
 <br>
 <p>Publicado por Angel el Thursday 05 October del 2023</p>
 <br><br> 
