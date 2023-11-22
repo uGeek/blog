@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="neveridle.-vps-de-oracle-nunca-inactivo-1" title="NeverIdle. VPS de Oracle nunca inactivo" data-export_file_name="neveridle-vps-de-oracle-nunca-inactivo" data-description="** VPS de Oracle y las cuentas Oracle Cloud Free Tier" data-export_date="2023-04-10 13:16" data-category="vps" data-tag="oracle" data-image="./images-blog/ugeek.png">NeverIdle. VPS de Oracle nunca inactivo</h1>
-<h5>Tiempo estimado de lectura: 11 minutos. 1287 palabras.    <a href="https://ugeek.github.io/blog/categories/vps">vps</a></h5>
+<h5>Tiempo estimado de lectura: 11 minutos. 1291 palabras.    <a href="https://ugeek.github.io/blog/categories/vps">vps</a></h5>
 <h2 id="vps-de-oracle-y-las-cuentas-oracle-cloud-free-tier">VPS de Oracle y las cuentas Oracle Cloud Free Tier</h2>
 <p>Algunos usuarios han recibido un aviso de Oracle Cloud Free Tier, que consiste en un servicio gratuito de Oracle Cloud Infrastructure (OCI) que ofrece recursos limitados de computación, almacenamiento y red, entre otros. El aviso les informa de que OCI va a reclamar los recursos de computación que hayan estado inactivos durante más de una semana, y que estos recursos serán detenidos en una fecha determinada. También les sugiere que conviertan su cuenta a un plan de pago por uso (PAYG), con el que no tendrán que pagar nada si se mantienen dentro de los límites de Always Free, pero evitarán que sus recursos inactivos sean detenidos.</p>
 <p>Esta medida se debe a que OCI quiere optimizar el uso de los recursos para ofrecer un mejor servicio a los clientes de Always Free, y que se basa en unos criterios de inactividad que tienen en cuenta la utilización de la CPU, la red y la memoria de las instancias de computación. Esta medida se anunció previamente en la página web de OCI, pero que luego desapareció y volvió a aparecer.</p>
@@ -181,6 +181,7 @@ services:
       - /etc/ssl/certs/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro
 </code></pre>
 <p>La linea de "command" está configurada para que gaste CPU cada 2h (-c 2h), que gaste 2GiB memoria (-m 2) y que gaste red, con un test de velocidad, cada 4h (-n 4h), pero si lo vais a ejecutar en una instancia que no sea ARM se debe quitar la parte de la memoria por un lado porque no cuenta para considerarla sin uso por parte de Oracle y por otro lado importante porque esas instancias tienen 1GB de RAM y si le dejas, eso te la deja frita al intentar gastar 2GB de RAM.</p>
+<p>Por cortesia de <span class="citation" data-cites="Rapejim">@Rapejim</span></p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/layou233/NeverIdle">https://github.com/layou233/NeverIdle</a></li>
