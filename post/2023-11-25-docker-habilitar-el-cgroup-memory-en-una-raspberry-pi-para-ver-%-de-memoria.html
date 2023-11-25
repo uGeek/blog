@@ -1,5 +1,5 @@
 <head>
-<title>Docker: KodExplorer. uGeek Blog </title>
+<title>Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria. uGeek Blog </title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
@@ -21,19 +21,19 @@
 
 
 <meta name="author" content="Angel">
-<meta name="description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
+<meta name="description" content="Si haces un =docker stats= y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory." />
 
 
 <meta property="og:site_name" content="uGeek Blog "/>
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: KodExplorer" />
-<meta property="og:description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-09-09-docker-kodexplorer.html" />
+<meta property="og:title" content="Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria" />
+<meta property="og:description" content="Si haces un =docker stats= y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory." />
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-%-de-memoria.html" />
 
-<meta name="twitter:title" content="Docker: KodExplorer" />
-<meta name="twitter:description" content="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png" />
+<meta name="twitter:title" content="Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria" />
+<meta name="twitter:description" content="Si haces un =docker stats= y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory." />
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
@@ -85,32 +85,22 @@ $("#tipue_search_input").tipuesearch();
 
 
 
-<h1 id="docker-kodexplorer-1" title="Docker: KodExplorer" data-export_file_name="Docker KodExplorer" data-description="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" data-export_date="2019-09-09 21:40" data-category="docker" data-tag="ssh, terminal, nas, servicios" data-image="./images-blog/kodexplorer.png">Docker: KodExplorer</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 321 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
-<p>Ya os he hablado en más de una ocasión sobre KodExplorer. KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming,… a través del navegador web.</p>
-<center>
-<p><img src="../images-blog/kodexplorer.png" /></p>
-</center>
-<p>En esta versión del docker, podemos enlazar en la sesión de administrador, con una de las carpetas de nuestro servidor, Raspberry,… La ruta de esta carpeta la tienes que introducir donde aparece <strong>&lt;RUTA&gt;</strong>. Yo he montado una nube cifrada que tengo mediante rclone, de esta manera me permite subir y bajar archivos a la nube remotamente, desde el navegador web.</p>
-<p>Puedes <a href="http://demo.kodcloud.com/index.php?user/login">ver una demo aquí</a>.</p>
-<h2 id="montar-docker">Montar Docker</h2>
-<h3 id="montar-docker-para-raspberry-pi-o-arm-32bits">Montar Docker para Raspberry Pi o ARM 32bits</h3>
-<pre><code>docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v &lt;RUTA&gt;:/var/www/html/data/User/admin/home ugeek/kodexplorer:arm
-</code></pre>
-<h3 id="montar-docker-para-amd64">Montar Docker para amd64</h3>
-<pre><code>docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v &lt;RUTA&gt;:/var/www/html/data/User/admin/home ugeek/kodexplorer:amd64
-</code></pre>
-<h2 id="funcionamiento">Funcionamiento</h2>
-<p>La primera vez que iniciamos KodExplorer, nos pedirá que introduzcamos dos veces la contraseña de la cuenta <strong>admin</strong>, que va a ser la que vamos a utilizar para enlazar con nuestra carpeta local en la <strong>&lt;RUTA&gt;</strong>.</p>
-<p>Tras iniciar el servicio, KodExplorer nos pedirá que actualicemos, ya que hay una versión más actualizada no disponible actualmente en GitHub. Le daremos a actualizar.</p>
-<p>Listo!!!! Ya tenemos nuestro KodExplorer totalmente funcional y actualizado a la última</p>
-<h2 id="fuentes">Fuentes</h2>
-<ul>
-<li><a href="https://github.com/kalcaddle/KodExplorer">Repositorio en GitHub</a></li>
-<li><a href="https://cloud.docker.com/u/ugeek/repository/docker/ugeek/kodexplorer">Docker en DockerHub</a></li>
-</ul>
+<h1 id="docker.-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria-1" title="Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria" data-export_file_name="docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-%-de-memoria" data-description="Si haces un =docker stats= y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory." data-export_date="2023-11-25 01:25" data-category="docker" data-tag="memoria" data-image="./images-blog/ugeek.png">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</h1>
+<h5>Tiempo estimado de lectura: 2 minutos. 250 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Si haces un <code>docker stats</code> y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory.</p>
+<p>Para habilitar el cgroup memory en una Raspberry Pi, necesitas modificar el archivo /boot/cmdline.txt y añadir los siguientes parámetros al final de la línea:</p>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="va">cgroup_enable=</span>memory <span class="va">cgroup_memory=</span>1 <span class="va">cgroup_enable=</span>cpuset</a></code></pre></div>
+<p>Debes añadir todo en la misma línea, separado por un espacio.</p>
+<p>Por ejemplo, si tu archivo /boot/cmdline.txt tiene esta línea:</p>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="va">console=</span>serial0,115200 <span class="va">console=</span>tty1 <span class="va">root=</span>PARTUUID=<span class="ex">738a4d67-02</span> rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles</a></code></pre></div>
+<p>Debes modificarla para que quede así:</p>
+<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">console=</span>serial0,115200 <span class="va">console=</span>tty1 <span class="va">root=</span>PARTUUID=<span class="ex">738a4d67-02</span> rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles cgroup_enable=memory cgroup_memory=1 cgroup_enable=cpuset</a></code></pre></div>
+<p>Estos parámetros le indican al kernel que active el subsistema de control de memoria y que lo monte en /sys/fs/cgroup/memory.</p>
+<p>Después de añadir estos parámetros, <strong>debes reiniciar la Raspberry Pi</strong> para que los cambios surtan efecto.</p>
+<p>Puedes comprobar si el cgroup memory está habilitado usando el comando cat /proc/cgroups y buscando la línea que dice memory.</p>
+<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">cat</span> /proc/cgroups</a></code></pre></div>
 <br>
-<p>Publicado por Angel el Monday 09 September del 2019</p>
+<p>Publicado por Angel el Saturday 25 November del 2023</p>
 <br><br> 
 <p>También te puede interesar:</p>
 <ul>
