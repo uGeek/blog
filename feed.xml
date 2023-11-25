@@ -14,11 +14,11 @@
     <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
    <item>
     <title>Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</title>
-    <link>https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-%-de-memoria.html</link>
+    <link>https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html</link>
     <description>
 &lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria"&gt;
 &lt;br&gt;&lt;p&gt;Si haces un =docker stats= y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory.... 
-&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-%-de-memoria.html&gt;Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria&lt;/a&gt;
+&lt;p&gt;Sigue leyendo el post completo de &lt;a href=https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html&gt;Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria&lt;/a&gt;
 
 &lt;/a&gt;&lt;/p&gt;&lt;p&gt;
 
@@ -43,7 +43,7 @@
     <category>memoria</category>
     <category></category>
     <category></category>
-    <guid>https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-%-de-memoria.html</guid>
+    <guid>https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html</guid>
    </item>
    <item>
     <title>Docker. Dockge Gestionando mis Docker Compose de forma gráfica</title>

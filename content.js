@@ -3,7 +3,7 @@ var tipuesearch = {pages: [
             'title': 'Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria',
             'text': 'Si haces un =docker stats= y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory.', 
             'tags': 'docker,memoria,,,,', 
-            'url': 'https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-%-de-memoria.html' 
+            'url': 'https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html' 
 },
 {
             'title': 'Docker. Dockge Gestionando mis Docker Compose de forma gráfica',
