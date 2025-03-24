@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="manjaro.-elegir-los-repositorios-más-rápidos-1" title="Manjaro. Elegir los repositorios más rápidos" data-export_file_name="manjaro-elegir-los-repositorios-mas-rapidos" data-description="Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos:" data-export_date="2023-01-09 10:00" data-category="manjaro" data-tag="repositorios,pacman,snap,flatpak" data-image="./images-blog/manjaro.png">Manjaro. Elegir los repositorios más rápidos</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 420 palabras.    <a href="https://ugeek.github.io/blog/categories/manjaro">manjaro</a></h5>
+<h5>Tiempo estimado de lectura: 3 minutos. 430 palabras.    <a href="https://ugeek.github.io/blog/categories/manjaro">manjaro</a></h5>
 <p>Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos:</p>
 <center>
 <p><img src="../images-blog/manjaro.png" /></p>
@@ -121,6 +121,8 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="reiniciar">Reiniciar</h2>
 <p>Llegará a un punto en el que desees restablecer los valores predeterminados.</p>
 <div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="fu">sudo</span> pacman-mirrors --country all --api --protocols all --set-branch stable <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> pacman -Syu</a></code></pre></div>
+<h2 id="para-eliminar-la-configuración-personalizada-ejecuta">Para eliminar la configuración personalizada ejecuta</h2>
+<p><code>sudo pacman-mirrors -c all</code></p>
 <h2 id="añadir-más-repositorios-de-otras-paqueterías-en-la-tienda">Añadir más repositorios de otras paqueterías en la tienda</h2>
 <p>Lanzar tienda de aplicaciones</p>
 <div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="fu">sudo</span> pamac-manager</a></code></pre></div>
