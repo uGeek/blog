@@ -86,13 +86,13 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="i3wm-en-arch-1" title="i3wm en Arch" data-export_file_name="i3wm-en-arch" data-description="Me he pasado a Manjaro, una distro linux basada en Arch. Esto implica que todos mis archivos de configuración del gestor de ventanas i3wm son válidos, en cambio los paquetes" data-export_date="2022-12-11 10:14 2023-01-14" data-category="i3wm" data-tag="arch" data-image="./images-blog/ugeek.png">i3wm en Arch</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 322 palabras.    <a href="https://ugeek.github.io/blog/categories/i3wm">i3wm</a></h5>
+<h5>Tiempo estimado de lectura: 3 minutos. 330 palabras.    <a href="https://ugeek.github.io/blog/categories/i3wm">i3wm</a></h5>
 <p>Me he pasado a Manjaro, una distro linux basada en Arch. Esto implica que todos mis archivos de configuración del gestor de ventanas i3wm son válidos, en cambio los paquetes de instalación para que todo funcione correctamente, el lugar de utilizar el gestor de paquetes apt, ahora tengo que utilizar pacman.</p>
 <p>Esta es la principal diferencia, ya que a excepción de solo un paquete, todos los paquetes tienen el mismo nombre en ambas distribuciones. De manera que el cambio ha sido muy cómodo.</p>
 <p>La distro Manjaro que ha instalado tiene el escritorio gnome. Vamos a ver todos los paquetes necesarios, igual que en el otro artículo que publiqué partiendo de una distro Ubuntu.</p>
 <p>Recuerda que estos son los paquetes que estoy utilizando en base mi configuración.</p>
 <h2 id="instalación-de-paquetes-básicos">Instalación de paquetes básicos</h2>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pacman -Syy i3-wm i3status i3lock i3-gaps dmenu nitrogen lightdm i3blocks lm_sensors rofi feh volumeicon</a></code></pre></div>
+<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pacman -Syy i3-wm i3status i3lock i3-gaps dmenu nitrogen lightdm i3blocks lm_sensors rofi feh volumeicon acpi dunst</a></code></pre></div>
 <ul>
 <li><strong>i3-wm:</strong> Manejador de Ventanas</li>
 <li><strong>i3status :</strong> Estatus de monitoreo para el panel</li>
@@ -103,11 +103,13 @@ $("#tipue_search_input").tipuesearch();
 <li><strong>nitrogen:</strong> Programa para generar fondo de pantalla</li>
 <li><strong>feh</strong>: Habilitar el fondo de pantalla</li>
 <li><strong>volumeicon</strong>: Icono de control de volumen</li>
+<li><strong>acpi</strong>: Nivel de batería</li>
+<li><strong>dunst</strong>: Notificaciones</li>
 </ul>
 <h2 id="otras-aplicaciones-que-utilizo">Otras aplicaciones que utilizo</h2>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> pacman -Syy qutebrowser brave-browser flameshot mpv vlc thunar pcmanfm micro</a></code></pre></div>
+<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> pacman -Syy brave-browser flameshot mpv vlc thunar pcmanfm micro lxterminal</a></code></pre></div>
 <ul>
-<li><strong>qutebrowser - brave-browser</strong>: Navegadores</li>
+<li><strong>brave-browser</strong>: Navegadores</li>
 <li><strong>flameshot</strong>: Capturar desde pantalla de escritorio</li>
 <li><strong>mpv - vlc</strong>: Reproductor multimedia</li>
 <li><strong>pcmanfm - thunar</strong>: Exploradores de archivos alternativos</li>

@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="enviar-llave-pública-al-servidor-ssh-1" title="Enviar llave pública al servidor SSH" data-export_file_name="enviar-llave-publica-al-servidor-ssh" data-description="Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos" data-export_date="2023-01-11 10:18" data-category="ssh" data-tag="llaves,publico" data-image="./images-blog/ugeek.png">Enviar llave pública al servidor SSH</h1>
-<h5>Tiempo estimado de lectura: 1 minutos. 218 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 221 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
 <p>Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos maneras mediante una sola línea de terminal.</p>
 <p>El proceso será copiar la clave pública en el archivo <strong>autorized_keys</strong> del servidor. Esto es muy simple con el comando <code>ssh-copy-id</code>.</p>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">ssh-copy-id</span> angel@192.168.1.100</a></code></pre></div>
@@ -95,7 +95,9 @@ $("#tipue_search_input").tipuesearch();
 <p>Por último, si has copiado tus archivos de configuración <code>.ssh</code> de dotfiles que tengas guardados, es probable que tengas que cambiar los permisos para que el servidor acepte la conexión</p>
 <div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">chmod</span> 750 ~/</a>
 <a class="sourceLine" id="cb3-2" title="2"><span class="fu">chmod</span> 700 ~/.ssh</a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="fu">chmod</span> 600 ~/.ssh/authorized_keys</a></code></pre></div>
+<a class="sourceLine" id="cb3-3" title="3"><span class="fu">chmod</span> 600 ~/.ssh/authorized_keys</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="fu">chmod</span> 600 ~/.ssh/id_rsa</a>
+<a class="sourceLine" id="cb3-5" title="5"></a></code></pre></div>
 <br>
 <p>Publicado por Angel el Wednesday 11 January del 2023</p>
 <br><br> 
