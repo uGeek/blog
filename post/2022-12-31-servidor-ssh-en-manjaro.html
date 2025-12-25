@@ -86,7 +86,7 @@ $("#tipue_search_input").tipuesearch();
 
 
 <h1 id="servidor-ssh-en-manjaro-1" title="Servidor SSH en Manjaro" data-export_file_name="servidor-ssh-en-manjaro" data-description="Vamos a ver cómo instalar un servidor SSH en Manjaro." data-export_date="2022-12-31 13:25" data-category="ssh" data-tag="manjaro" data-image="./images-blog/ugeek.png">Servidor SSH en Manjaro</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 220 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
+<h5>Tiempo estimado de lectura: 2 minutos. 242 palabras.    <a href="https://ugeek.github.io/blog/categories/ssh">ssh</a></h5>
 <p>Vamos a ver cómo instalar un servidor SSH en Manjaro.</p>
 <h2 id="instalar-openssh">Instalar OpenSSH</h2>
 <div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> pacman -S openssh</a></code></pre></div>
@@ -101,6 +101,9 @@ $("#tipue_search_input").tipuesearch();
 <div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> systemctl status sshd.service</a></code></pre></div>
 <p>Si necesitas editar el archivo de configuración de SSH, puedes hacerlo del siguiente modo utilizando Nano:</p>
 <div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> nano /etc/ssh/sshd_config</a></code></pre></div>
+<h2 id="no-podemos-acceder-desde-nuestra-ip">¿No podemos acceder desde nuestra ip?</h2>
+<p>Quizas es un problema del cortafuegos. Abre el puerto del servicio con:</p>
+<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">sudo</span> ufw allow ssh</a></code></pre></div>
 <br>
 <p>Publicado por Angel el Saturday 31 December del 2022</p>
 <br><br> 
