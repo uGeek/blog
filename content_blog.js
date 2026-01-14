@@ -1,5 +1,11 @@
 var tipuesearch = {"pages": [
 {
+            'title': 'Actualización del Editor de Texto Micro a la Última Versión',
+            'text': ':DESCRIPTION:', 
+            'tags': 'micro terminal editor texto  ', 
+            'url': 'https://ugeek.github.io/blog/post/2026-01-14-actualizacion-del-editor-de-texto-micro-a-la-ultima-version.html' 
+},
+{
             'title': 'RSS. Google News, generando Feeds de temas personalizados',
             'text': 'Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus', 
             'tags': 'rss google news feed  ', 
