@@ -1,164 +1,160 @@
 <head>
-<title>bash</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="./icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> 
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<meta name="robots" content="index, follow"> 
+<meta name="author" content="Angel"> 
+<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek" />
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
-<meta name="description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
-<meta property="og:type" content="article" /> 
-<meta property="og:title" content="RSS. Google News, generando Feeds de temas personalizados" />
-<meta property="og:description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2024-03-25-rss-google-news-generando-feeds-de-temas-personalizados.html" />
-
-<meta name="twitter:title" content="RSS. Google News, generando Feeds de temas personalizados" />
-<meta name="twitter:description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:title" content="uGeek Blog " /> 
+<meta property="og:description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek" /> 
+<meta property="og:image" content="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blogindex.html" />
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="css/search.css"></link> 
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="content.js"></script> 
+<script type="text/javascript" src="js/tipuesearch.min.js"></script>
 </head>
-
 <br><br><br><br><br><br><br><br><br>
 
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
+
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
+
+<div id="icon">
+<a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="./icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="./icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;
+<a href="https://github.com/ugeek"><img src="./icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="./icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;
+<a href="https://twitter.com/ugeekpodcast"><img src="./icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;
+<a href="https://t.me/uGeek"><img src="./icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+
+<div id="menu">
+<a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script> $(document).ready(function() { $("#tipue_search_input").tipuesearch(); }); </script>
 
 <h2><a>bash</a></h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html>Instala la última versión de Pandoc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html>Exportando tu Notas de Google Keep a Org Mode o Markdown</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html>Plugin zsh-autosuggestions. Autocompletado en la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html>Instalar Oh My ZSH</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html>Eliminar líneas en Blanco con sed</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html>Kde Connect</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html>Crear listas m3u para minidlna o vlc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html>Eliminar comentarios de nuestros script</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html>Descargar todos los episodios de un Podcast con wget</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html>El poder de la terminal y el scripting</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html>Elimina archivos duplicados con fduples</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html>Castero. Podcatcher ligero para Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html>Navegar por el Historial de comandos en Bash</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html>Que aparezca en el Prompt en que rama estamos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html>Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html>Crear Alias</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html>Papelera Reciclaje desde la Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html>No todo es echo. También existe printf</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html>Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html>Calculando con mi terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html>Cambiando estados de forma masiva en mis Org Mode</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html>youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html>Renombrando archivos masivamente</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html>Cambiando el Idioma en Debian, Ubuntu, Raspbian...</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html>CryFS. Cifrando el contenido de tu carpeta</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-15-recupera-archivos-borrados-con-test-disk.html>Recupera archivos borrados con Test Disk</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-16-corrector-ortagráfico-para-emacs-en-raspbian.html>Corrector Ortográfico para Emacs en Raspbian</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-17-actualiza-el-firmware-de-tu-raspberry.html>Actualiza el Firmware de tu Raspberry</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-19-configuracion-y-diferencias-entre-bashrc-bash-profile.html>Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-08-29-fim.-un-vilsualizador-de-imagenes-liviano-para-terminal.html>Fim. Un vilsualizador de imágenes liviano para terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-21-exportando-a-csv-desde-excel-online.html>Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html>Comando para saber los dockers corriendo y sus puertos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-25-donde-está-el-comando-ifconfig-y-como-instalarlo.html>Donde está el comando ifconfig y como instalarlo</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-30-extraer-audio-de-un-vídeo-con-ffmpeg.html>Extraer audio de un vídeo con ffmpeg</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html>Acceder dentro de un Docker como usuario root</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-11-calendario-en-la-terminal.html>Calendario en la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-15-cron-ejemplos.html>Cron. Ejemplos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-21-apagada-automática-de-tu-raspberry-si-hay-alta-temperatura.html>Apagada automática de tu Raspberry si hay alta temperatura</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-23-crea-tu-cron-de-un-modo-gráfico.html>Crea tu cron de un modo gráfico</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-25-descargar-archivos-con-curl.html>Descargar archivos con curl</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-28-crea-tu-bot-de-mastodon-en-bash-con-una-sola-linea.html>Crea tu Bot de Mastodon en Bash con una sola línea de Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-29-grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd.html>Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-31-habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor.html>Habilitar SSH en la Raspberry sin conectar el Monitor</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-01-rclone-instalando-la-ultima-version.html>Rclone. Instalando la última versión</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html>Simplifica o abrevia tus conexiones SSH</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-12-compilando-la-ultima-version-de-nano.html>Compilando La última versión de Nano</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-13-compilando-la-ultima-version-de-emacs.html>Compilando la última versión de Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-20-test-de-velocidad-en-la-terminal.html>Test de velocidad en la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-20-habilitar-repositorios-privativos-en-debian.html>Habilitar Repositorios Privativos en Debian</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-23-convertir-texto-a-voz-con-espeak.html>Convertir texto a voz con espeak</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html>Bullet Journal Digital en OrgMode</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-04-bat-el-cat-enriquecido.html>Bat, el Cat enriquecido</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html>W3M. Navegador para Terminal y Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html>html2txt. Convirtiendo una web a texto plano con w3m</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html>Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-21-screen-enviar-scripts-a-segundo-plano.html>Screen. Enviar scripts a segundo plano</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html>Creando contenedores con dockerc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html>El htop 2.0 desarrollado en bash. bashtop</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html>screen. Comandos básicos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html>Informacion de tu sistema, pc, servidor,... con neofetch</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-07-02-listar-paquetes-instalados-y-hacer-un-poco-de-limpieza.html>Listar paquetes instalados y hacer un poco de limpieza</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html>Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html>Procesos que consumen más CPU y RAM en Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html>Saltando de un directorio a otro con Jump</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html>Crear enlaces simbólicos a otros directorios o archivos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html>Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html>duf. Visualizando el almacenamiento</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html>Buscar texto en un directorio, archivo,... con grep y find</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html>Añadiendo texto al principio de cada línea en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html>s-screen. Gestionando mis procesos en segundo plano de un modo sencillo</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html>Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html>Montar un directorio en otro directorio</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html>Docker: Ctop. El portanier de terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html>Comando sudo y su</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-01-29-saber-si-existen-variables-directorios-o-archivos-con-bash.html>Saber si existen variables, directorios o archivos con bash</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html>Docker. Servidor SSH para conectarte por SFTP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html>Paquetes instalados en tu sistema</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-07-cambiar-el-hostname-ubuntu-debian-raspberry-os--.html>Cambiar el hostname Ubuntu, Debian, Raspberry OS...</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html>vim. Resaltado de sintaxis</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html>Vim Cheat Sheet. Chuleta de atajos para Vim</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-17-como-cambiar-la-contrasena-de-usuario-en-linux.html>Cómo cambiar la contraseña de usuario en Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html>YTFZF. Youtube desde la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-30-utilizando-twitter-desde-la-terminal-con-bti.html>Utilizando twitter desde la terminal con bti</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html>SCP. Copias por SSH</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-06-unrar-en-raspberry-pi.html>unrar en Raspberry Pi</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html>Ampliar memoria SWAP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html>Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html>Sensors y psensor. Controlando la temperatura de mi PC</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html>Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-07-24-vizex.html>Vizex. Ver almacenamiento disponible y ocupado de tus discos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html>Bash en Docker</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html>¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-01-06-cambiar-editor-por-defecto-en-crontab.html>Cambiar editor por defecto en Crontab</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html>Bot Matrix en Bash</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html>Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html>Corrector ortográfico en nano</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html>Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html>Comandos sudo sin contraseña</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html>Copiando en la terminal con barra de proceso</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html>Opciones de tiempo en el comando sleep en bash</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html>Comprimiendo archivos pdf desde la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html>Cerrando ventanas con wmctrl</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html>Crear servicio con Systemd</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html>Borrar directorios vacios, sin archivos con find</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-04-10-script-creando-una-barra-grafica-de-porcentaje-con-bash-para-mi-dashboard.html>Script. Creando una barra gráfica de porcentaje con bash para mi dashboard</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-04-10-script-creando-una-barra-grafica-de-porcentaje-con-bash-para-mi-dashboard.html">Script. Creando una barra gráfica de porcentaje con bash para mi dashboard</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html">Crear servicio con Systemd</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html">Comprimiendo archivos pdf desde la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html">Copiando en la terminal con barra de proceso</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html">Comandos sudo sin contraseña</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-07-25-bash-en-docker.html">Bash en Docker</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-07-24-vizex.html">Vizex. Ver almacenamiento disponible y ocupado de tus discos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html">Ampliar memoria SWAP</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-06-unrar-en-raspberry-pi.html">unrar en Raspberry Pi</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-30-utilizando-twitter-desde-la-terminal-con-bti.html">Utilizando twitter desde la terminal con bti</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-26-ytfzf-youtube-desde-la-terminal.html">YTFZF. Youtube desde la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-17-como-cambiar-la-contrasena-de-usuario-en-linux.html">Cómo cambiar la contraseña de usuario en Linux</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html">Vim Cheat Sheet. Chuleta de atajos para Vim</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html">vim. Resaltado de sintaxis</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-07-cambiar-el-hostname-ubuntu-debian-raspberry-os--.html">Cambiar el hostname Ubuntu, Debian, Raspberry OS...</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html">Paquetes instalados en tu sistema</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-01-29-saber-si-existen-variables-directorios-o-archivos-con-bash.html">Saber si existen variables, directorios o archivos con bash</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html">Comando sudo y su</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html">Docker: Ctop. El portanier de terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html">Montar un directorio en otro directorio</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-28-s-screen-gestionando-mis-procesos-en-segundo-plano-de-un-modo-sencillo.html">s-screen. Gestionando mis procesos en segundo plano de un modo sencillo</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-14-buscar-texto-en-un-directorio-archivo---con-grep-y-find.html">Buscar texto en un directorio, archivo,... con grep y find</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html">duf. Visualizando el almacenamiento</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html">Crear enlaces simbólicos a otros directorios o archivos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html">Saltando de un directorio a otro con Jump</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-07-02-listar-paquetes-instalados-y-hacer-un-poco-de-limpieza.html">Listar paquetes instalados y hacer un poco de limpieza</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,... con neofetch</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-05-23-2020-05-23-screen-comandos-basicos.html">screen. Comandos básicos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-03-31-creando-contenedores-con-dockerc.html">Creando contenedores con dockerc</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-01-21-screen-enviar-scripts-a-segundo-plano.html">Screen. Enviar scripts a segundo plano</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-01-13-html2txt-convirtiendo-una-web-a-texto-plano-con-w3m.html">html2txt. Convirtiendo una web a texto plano con w3m</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-01-09-w3m-navegador-para-terminal-y-emacs.html">W3M. Navegador para Terminal y Emacs</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-01-04-bat-el-cat-enriquecido.html">Bat, el Cat enriquecido</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html">Bullet Journal Digital en OrgMode</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-23-convertir-texto-a-voz-con-espeak.html">Convertir texto a voz con espeak</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-20-habilitar-repositorios-privativos-en-debian.html">Habilitar Repositorios Privativos en Debian</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-20-test-de-velocidad-en-la-terminal.html">Test de velocidad en la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-13-compilando-la-ultima-version-de-emacs.html">Compilando la última versión de Emacs</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-12-compilando-la-ultima-version-de-nano.html">Compilando La última versión de Nano</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html">Simplifica o abrevia tus conexiones SSH</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-01-rclone-instalando-la-ultima-version.html">Rclone. Instalando la última versión</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-31-habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor.html">Habilitar SSH en la Raspberry sin conectar el Monitor</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-30-crea-tu-bot-en-mastodon-con-python.html">Crea tu Bot en Mastodon con Python</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-29-grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd.html">Grabar Raspbian, Ubuntu, Debian,... en un Pendrive o SD desde la Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-28-crea-tu-bot-de-mastodon-en-bash-con-una-sola-linea.html">Crea tu Bot de Mastodon en Bash con una sola línea de Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-25-descargar-archivos-con-curl.html">Descargar archivos con curl</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-23-crea-tu-cron-de-un-modo-gráfico.html">Crea tu cron de un modo gráfico</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-21-apagada-automática-de-tu-raspberry-si-hay-alta-temperatura.html">Apagada automática de tu Raspberry si hay alta temperatura</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-15-cron-ejemplos.html">Cron. Ejemplos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-11-calendario-en-la-terminal.html">Calendario en la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-04-acceder-dentro-de-un-docker-como-usuario-root.html">Acceder dentro de un Docker como usuario root</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-30-extraer-audio-de-un-vídeo-con-ffmpeg.html">Extraer audio de un vídeo con ffmpeg</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-25-donde-está-el-comando-ifconfig-y-como-instalarlo.html">Donde está el comando ifconfig y como instalarlo</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html">Comando para saber los dockers corriendo y sus puertos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-21-exportando-a-csv-desde-excel-online.html">Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-08-29-fim.-un-vilsualizador-de-imagenes-liviano-para-terminal.html">Fim. Un vilsualizador de imágenes liviano para terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-08-19-configuracion-y-diferencias-entre-bashrc-bash-profile.html">Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-08-17-actualiza-el-firmware-de-tu-raspberry.html">Actualiza el Firmware de tu Raspberry</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-08-16-corrector-ortagráfico-para-emacs-en-raspbian.html">Corrector Ortográfico para Emacs en Raspbian</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-08-15-recupera-archivos-borrados-con-test-disk.html">Recupera archivos borrados con Test Disk</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-08-15-cryfs.-cifrando-el-contenido-de-tu-carpeta.html">CryFS. Cifrando el contenido de tu carpeta</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-08-15-cambiando-el-idioma-en-debian-ubuntu-raspbian.html">Cambiando el Idioma en Debian, Ubuntu, Raspbian...</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html">Instala la última versión de Pandoc</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html">Exportando tu Notas de Google Keep a Org Mode o Markdown</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html">Plugin zsh-autosuggestions. Autocompletado en la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-22-instalar-oh-my-zsh.html">Instalar Oh My ZSH</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-06-renombrando-archivos-masivamente.html">Renombrando archivos masivamente</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-05-01-youtube2org-añadir-la-imagen-de-un-vídeo-de-youtube-en-un-orgmode-o-markdown.html">youtube2org. Añadir la Imagen de un Vídeo de YouTube, en un OrgMode o Markdown</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-04-17-cambiando-estados-de-forma-masiva-en-mis-org-mode.html">Cambiando estados de forma masiva en mis Org Mode</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html">Crear página de error 404 en GitHub Pages</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-02-08-no-todo-es-echo-tambien-existe-printf.html">No todo es echo. También existe printf</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-29-comprimir-archivos-de-forma-automatizada-en-rar-para-subirlos-a-telegram-u-otra-nube-publica.html">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-29-que-aparezca-en-el-prompt-en-que-rama-estamos.html">Que aparezca en el Prompt en que rama estamos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-28-navegar-por-el-historial-de-comandos-en-bash.html">Navegar por el Historial de comandos en Bash</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-26-castero-podcatcher-ligero-para-terminal.html">Castero. Podcatcher  ligero para Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-05-elimina-archivos-duplicados-con-fduples.html">Elimina archivos duplicados con fduples</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html">El poder de la terminal y el scripting</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-02-kdeconnect-en-ubuntu.html">Kde Connect</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

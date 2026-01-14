@@ -1,111 +1,115 @@
 <head>
-<title>go</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="./icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> 
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<meta name="robots" content="index, follow"> 
+<meta name="author" content="Angel"> 
+<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek" />
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
-<meta name="description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
-<meta property="og:type" content="article" /> 
-<meta property="og:title" content="RSS. Google News, generando Feeds de temas personalizados" />
-<meta property="og:description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2024-03-25-rss-google-news-generando-feeds-de-temas-personalizados.html" />
-
-<meta name="twitter:title" content="RSS. Google News, generando Feeds de temas personalizados" />
-<meta name="twitter:description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:title" content="uGeek Blog " /> 
+<meta property="og:description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek" /> 
+<meta property="og:image" content="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blogindex.html" />
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="css/search.css"></link> 
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="content.js"></script> 
+<script type="text/javascript" src="js/tipuesearch.min.js"></script>
 </head>
-
 <br><br><br><br><br><br><br><br><br>
 
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
+
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
+
+<div id="icon">
+<a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="./icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="./icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;
+<a href="https://github.com/ugeek"><img src="./icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="./icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;
+<a href="https://twitter.com/ugeekpodcast"><img src="./icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;
+<a href="https://t.me/uGeek"><img src="./icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+
+<div id="menu">
+<a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script> $(document).ready(function() { $("#tipue_search_input").tipuesearch(); }); </script>
 
 <h2><a>go</a></h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html>Exportando tu Notas de Google Keep a Org Mode o Markdown</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html>Plugin zsh-autosuggestions. Autocompletado en la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html>Crear Alias</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html>Papelera Reciclaje desde la Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html>Exportando bonito a html mi OrgMode y creando web estática</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html>Atajos de Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-13-añadir-cajetilla-de-código-en-orgmode-como-antes.html>Añadir cajetilla de código en orgmode como antes</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-08-teamviewer-en-ubuntu-debian.html>Teamviewer en Ubuntu, Debian</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-08-anydesk-en-ubuntu-debian.html>AnyDesk en Ubuntu, Debian</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html>Listado de Servicios con System V y Systemd</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html>Comando para saber los dockers corriendo y sus puertos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html>Docker: Supysonic. El mejor y más ligero servidor de música</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-28-crea-tu-bot-de-mastodon-en-bash-con-una-sola-linea.html>Crea tu Bot de Mastodon en Bash con una sola línea de Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-01-marcar-una-linea-en-tu-orgmode-para-despues-volver-a-ella.html>Marcar una línea en tu OrgMode, para después volver a ella</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html>Docker: Gotify. Tu servidor de Notificaciones</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-23-convertir-texto-a-voz-con-espeak.html>Convertir texto a voz con espeak</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html>Bullet Journal Digital en OrgMode</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html>Controlando mis Contenedores desde Android</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-06-instalar-brave-en-ubuntu-debian-linux-mint.html>Instalar Brave en Ubuntu, Debian, Linux Mint</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-08-varias-cuentas-de-telegram-en-un-mismo-pc.html>Varias cuentas de telegram en un mismo PC</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html>Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html>Gonic. El mejor y más ligero servidor de música con api Subsonic</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html>FreshRSS. Mi servidor de RSS</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html>Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html>Procesos que consumen más CPU y RAM en Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-17-instalar-ultima-version-de-go-en-raspberry-arm-o-amd64.html>Instalar última versión de Go en Raspberry, ARM o amd64</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html>gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html>Navidrome. La alternativa a Airsonic desarrollada en Go</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html>Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html>Crear enlaces simbólicos a otros directorios o archivos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html>duf. Visualizando el almacenamiento</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html>Añadiendo texto al principio de cada línea en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html>Proxy Inverso con Caddy</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-21-mpv-chuleta-con-atajos-de-teclado.html>MPV. Chuleta con atajos de teclado</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html>Docker: Raneto</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-19-sleek-una-aplicacion-de-todo-txt-moderna-y-elegante.html>Sleek. Una aplicación de todo.txt moderna y elegante</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-22-golink.html>Golink</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-05-24-homer-mi-dashboard.html>Homer. Mi Dashboard</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html>Docker: DLNA no esta muerto. Me gusta Gerbera</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-08-29-zettel-notes-la-mejor-aplicacion-zettelkasten-para-android.html>Zettel Notes. La mejor aplicación Zettelkasten para Android</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-09-07-gadgetbridge-emparejando-mi-xiaomi-mi-smart-band.html>Gadgetbridge. Emparejando mi Xiaomi Mi Smart Band 4, 5, 6</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html>ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html>Reemplazar texto de uno o varios archivos con dired en Emacs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-21-newpipe-la-aplicacion-predeterminada-en-android.html>NewPipe. La aplicación predeterminada en Android</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html>Gotty. Terminal en tu Navegador Web</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-07-09-ublock-origin--bloqueando-publicidad-en-tu-navegador.html>uBlock Origin. . Bloqueando publicidad en tu navegador</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html>Instalación de Manjaro en Raspberry</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html>Borrar directorios vacios, sin archivos con find</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-03-23-docker-wikitten-una-wiki-markdown.html>Docker. Wikitten. Una wiki markdown</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html>Bard de google para terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2024-03-25-rss-google-news-generando-feeds-de-temas-personalizados.html>RSS. Google News, generando Feeds de temas personalizados</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2024-03-25-rss-google-news-generando-feeds-de-temas-personalizados.html">RSS. Google News, generando Feeds de temas personalizados</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html">MPV. Solucionando el audio desincronizado por defecto en MPV</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html">Bard de google para terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-10-instalacion-de-yay-en-arch-y-manjaro.html">Instalación de yay en Arch y Manjaro</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-12-05-zettelnotes-repositorio-del-desarrollador.html">ZettelNotes Repositorio del desarrollador</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-07-09-ublock-origin--bloqueando-publicidad-en-tu-navegador.html">uBlock Origin. . Bloqueando publicidad en tu navegador</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-03-21-newpipe-la-aplicacion-predeterminada-en-android.html">NewPipe. La aplicación predeterminada en Android</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html">Sincronización de nuestros bookmarks con floccus</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html">ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-09-07-gadgetbridge-emparejando-mi-xiaomi-mi-smart-band.html">Gadgetbridge. Emparejando mi Xiaomi Mi Smart Band 4, 5, 6</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-08-29-zettel-notes-la-mejor-aplicacion-zettelkasten-para-android.html">Zettel Notes. La mejor aplicación Zettelkasten para Android</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-05-24-homer-mi-dashboard.html">Homer. Mi Dashboard</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-22-golink.html">Golink</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html">Aplicaciones Telegram versión web, Android, IOS,...</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-19-sleek-una-aplicacion-de-todo-txt-moderna-y-elegante.html">Sleek. Una aplicación de todo.txt moderna y elegante</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-13-docker-raneto.html">Docker: Raneto</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-21-mpv-chuleta-con-atajos-de-teclado.html">MPV. Chuleta con atajos de teclado</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html">Proxy Inverso con Caddy</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html">PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-10-duf-visualizando-el-almacenamiento.html">duf. Visualizando el almacenamiento</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html">Crear enlaces simbólicos a otros directorios o archivos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html">Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html">Navidrome. La alternativa a Airsonic desarrollada en Go</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html">gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-08-17-instalar-ultima-version-de-go-en-raspberry-arm-o-amd64.html">Instalar última versión de Go en Raspberry, ARM o amd64</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html">FreshRSS. Mi servidor de RSS</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html">Gonic. El mejor y más ligero servidor de música con api Subsonic</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html">Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-04-08-varias-cuentas-de-telegram-en-un-mismo-pc.html">Varias cuentas de telegram en un mismo PC</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-04-06-instalar-brave-en-ubuntu-debian-linux-mint.html">Instalar Brave en Ubuntu, Debian, Linux Mint</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html">Bullet Journal Digital en OrgMode</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-23-convertir-texto-a-voz-con-espeak.html">Convertir texto a voz con espeak</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html">Docker: Gotify. Tu servidor de Notificaciones</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-01-marcar-una-linea-en-tu-orgmode-para-despues-volver-a-ella.html">Marcar una línea en tu OrgMode, para después volver a ella</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-28-crea-tu-bot-de-mastodon-en-bash-con-una-sola-linea.html">Crea tu Bot de Mastodon en Bash con una sola línea de Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html">Docker: Supysonic. El mejor y más ligero servidor de música</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-23-comando-para-saber-los-dockers-corriendo-y-sus-puertos.html">Comando para saber los dockers corriendo y sus puertos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-21-exportando-a-csv-desde-excel-online.html">Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html">Listado de Servicios con System V y Systemd</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-08-anydesk-en-ubuntu-debian.html">AnyDesk en Ubuntu, Debian</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-08-teamviewer-en-ubuntu-debian.html">Teamviewer en Ubuntu, Debian</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-26-exportando-tu-notas-de-google-keep-a-org-mode-o-markdown.html">Exportando tu Notas de Google Keep a Org Mode o Markdown</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html">Plugin zsh-autosuggestions. Autocompletado en la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-13-añadir-cajetilla-de-código-en-orgmode-como-antes.html">Añadir cajetilla de código en orgmode como antes</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-04-02-exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica.html">Exportando bonito a html mi OrgMode y creando web estática</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-02-07-papelera-reciclaje-desde-la-terminal.html">Papelera Reciclaje desde la Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-31-crear-alias.html">Crear Alias</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

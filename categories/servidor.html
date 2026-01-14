@@ -1,176 +1,173 @@
 <head>
-<title>servidor</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="./icon/ugeek.png" border="0" width="90" height="90" alt="uGeek"></a></div> 
+<link rel="stylesheet" type="text/css" href="./css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<meta name="robots" content="index, follow"> 
+<meta name="author" content="Angel"> 
+<meta name="description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek" />
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
-<meta name="description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
-<meta property="og:type" content="article" /> 
-<meta property="og:title" content="RSS. Google News, generando Feeds de temas personalizados" />
-<meta property="og:description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2024-03-25-rss-google-news-generando-feeds-de-temas-personalizados.html" />
-
-<meta name="twitter:title" content="RSS. Google News, generando Feeds de temas personalizados" />
-<meta name="twitter:description" content="Google News es una herramienta de agregación de noticias desarrollada por Google. Esta plataforma recopila artículos de noticias de diversas fuentes y los presenta al usuario en función de sus" />
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:title" content="uGeek Blog " /> 
+<meta property="og:description" content="Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek" /> 
+<meta property="og:image" content="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blogindex.html" />
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="css/search.css"></link> 
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="content.js"></script> 
+<script type="text/javascript" src="js/tipuesearch.min.js"></script>
 </head>
-
 <br><br><br><br><br><br><br><br><br>
 
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
+
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a>
+
+<div id="icon">
+<a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="./icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="./icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;
+<a href="https://github.com/ugeek"><img src="./icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="./icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;
+<a href="https://twitter.com/ugeekpodcast"><img src="./icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;
+<a href="https://t.me/uGeek"><img src="./icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+
+<div id="menu">
+<a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;
+<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script> $(document).ready(function() { $("#tipue_search_input").tipuesearch(); }); </script>
 
 <h2><a>servidor</a></h2>
 <ul>
- <li><a href=https://ugeek.github.io/blog/post/2019-06-12-compartiendo-tus-dockers.html>Compartiendo tus Dockers</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html>Montar un servidor webdav con dafs2</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html>Crear listas m3u para minidlna o vlc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html>Redirigir el tráfico de una página web a otra</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2018-12-27-minidlna.html>minidlna</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html>Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html>Crear un Blog en GitLab. GitLab Pages</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html>NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html>Crear un Blog en GitHub. GitHub Pages</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html>GPG. Cifrado de archivos simétrico</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html>Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html>Instalando una Dokuwiki en 4 pasos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html>Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html>Cliente dlna para tu escritorio</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html>Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html>Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html>Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html>Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html>Crear página de error 404 en GitHub Pages</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html>Tomb. Mis secretos son una Tumba. Crifrar Archivos</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html>Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html>Montando una carpeta con todos mis servidores dlna</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html>Atajos de Terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html>Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html>El Adiós a Plex y Emby. Llega Jellyfin</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html>Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html>Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html>Instalar VNC en tu servidor con debian u otra derivada</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-08-teamviewer-en-ubuntu-debian.html>Teamviewer en Ubuntu, Debian</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-08-anydesk-en-ubuntu-debian.html>AnyDesk en Ubuntu, Debian</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html>Listado de Servicios con System V y Systemd</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html>Docker: Supysonic. El mejor y más ligero servidor de música</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html>Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html>Docker: Duck DNS. Facilitando la conexión a tus servicios</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html>Docker: Servidor Webdav</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html>Bsync. Sincronización de archivos bidireccional, que utiliza Rsync</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-25-descargar-archivos-con-curl.html>Descargar archivos con curl</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-10-31-habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor.html>Habilitar SSH en la Raspberry sin conectar el Monitor</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html>Docker: Gotify. Tu servidor de Notificaciones</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-11-27-ordena-renombra-y-actualiza-tus-metadatos-con-tiny-media-manager.html>Ordena, renombra y actualiza tus metadatos con Tiny Media Manager</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-04-los-paquetes-snap-no-aparecen-una-vez-instalados.html>Los paquetes snap no aparecen una vez instalados</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-18-remmina-de-los-mejores-clientes-vnc.html>Remmina. De los mejores Clientes VNC</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html>Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-28-instalar-un-servidor-con-debian.html>Instalar un Servidor con Debian</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2019-12-31-supysonic-0-5-0-total-compatibilidad-con-todos-los-clientes-subsonic.html>Supysonic 0.5.0. Total compatibilidad con todos los clientes Subsonic</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html>Controlando mis Contenedores desde Android</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html>Wireguard en 2 minutos con wgc</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-03-09-el-mejor-y-mas-ligero-cliente-para-tu-escritorio-de-jellyfin-jellyfin-cli.html>El mejor y más ligero cliente para tu Escritorio de Jellyfin. Jellyfin-cli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-03-10-escuchando-musica-de-mi-servidor-jellyfin-con-jellycli.html>Escuchando música de mi servidor Jellyfin con jellycli</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html>Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html>El htop 2.0 desarrollado en bash. bashtop</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html>Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html>Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html>Gonic. El mejor y más ligero servidor de música con api Subsonic</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-07-servidor-de-ebooks-con-calibre.html>Servidor de ebooks en Ubuntu, Debian, Raspbian,... con Calibre</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html>FreshRSS. Mi servidor de RSS</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html>Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html>Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html>Sincronización con Rclone via SSH y SFTP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html>Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html>Informacion de tu sistema, pc, servidor,... con neofetch</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html>Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html>gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html>Navidrome. La alternativa a Airsonic desarrollada en Go</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html>Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html>Docker: Wireguard para Raspberry, Ubuntu, Debian,...</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html>Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html>Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html>Trilium. Notas jerárquicas en Markdown</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html>PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html>Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html>Docker. Servidor SSH para conectarte por SFTP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-09-controlando-la-papelera-de-nextcloud.html>Controlando la papelera de Nextcloud</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-10-tu-pornhub-privado-se-llama-stash.html>Tu PornHub privado se llama Stash</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html>nncli. Notas desde el terminal con Nextcloud Notes</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html>Convierte archivos .crt y .key en archivos .pem</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html>SCP. Copias por SSH</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-02-servidor-de-samba-facil.html>Servidor de Samba fácil</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html>Ampliar memoria SWAP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html>Crear un Servidor git con SSH</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-04-22-golink.html>Golink</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html>Servidor WebDAV con rclone, con nube público o privada</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html>Docker: DLNA no esta muerto. Me gusta Gerbera</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-06-30-owntracks-o-nextracks-con-home-assitant.html>Owntracks o Nextracks con Home Assitant</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-10-02-mi-servidor-de-musica-con-webdav.html>Mi servidor de música con WebDAV</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html>Utilizando git en mi servidor WebDAV</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html>ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html>Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html>Sonixd. Player para Jellyfin y Subsonic</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html>Bot Matrix en Bash</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html>Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-03-10-audiobookshelf-servidor-de-audiolibros.html>Audiobookshelf. Servidor de Audiolibros</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html>Kodbox con mariadb</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html>Configurar una ip estática en tu Raspberry Pi</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html>Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc...</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html>FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-socks5.html>SocksDroid. Enrutando todo el tráfico de tu Android por servidores SOCKS5</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html>Tunel SSH para conectar puertos remotos como si fuera local</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-07-11-conduit-el-matrix-escrito-en-rust.html>Conduit. El matrix escrito en rust</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html>Notificaciones de Jellyfin en Telegram</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html>WebDAV. Acceso al servidor WebDAV desde escritorio Windows</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2022-12-31-servidor-ssh-en-manjaro.html>Servidor SSH en Manjaro</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-04-quitar-modo-suspension-e-hibernacion.html>Quitar modo suspensión e hibernación</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-06-tigervnc-servidor-vnc-en-manjaro.html>TigerVNC. Servidor VNC en Manjaro</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html>Enviar llave pública al servidor SSH</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html>Liberar el puerto 53 utilizado por systemd-resolved</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html>IP estática o fija en Manjaro</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html>Servidor SSH en Termux Android</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-02-17-croc-en-windows.html>croc en windows</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-03-26-x11-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-grafica-en-local-manjaro.html>X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-04-07-caddy-evitar-que-los-motores-de-busqueda-indexen-tu-servicio.html>Caddy. Evitar que los motores de búsqueda indexen tu servicio</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-04-09-manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo.html>Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-05-06-ssh-eliminar-la-clave-del-host-en-un-servidor-remoto.html>SSH. Eliminar la clave del host en un servidor remoto</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura-.html>rclone: Montando mis notas para una rapida escritura y lectura.</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html>SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
- <li><a href=https://ugeek.github.io/blog/post/2024-03-25-docker-merino-un-servidor-proxy-socks5-en-rust.html>Docker. Merino, un servidor proxy SOCKS5 en rust</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2024-03-25-docker-merino-un-servidor-proxy-socks5-en-rust.html">Docker. Merino, un servidor proxy SOCKS5 en rust</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura-.html">rclone: Montando mis notas para una rapida escritura y lectura.</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-05-06-ssh-eliminar-la-clave-del-host-en-un-servidor-remoto.html">SSH. Eliminar la clave del host en un servidor remoto</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-04-09-manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo.html">Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-04-07-caddy-evitar-que-los-motores-de-busqueda-indexen-tu-servicio.html">Caddy. Evitar que los motores de búsqueda indexen tu servicio</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-03-26-x11-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-grafica-en-local-manjaro.html">X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-02-17-croc-en-windows.html">croc en windows</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html">Enviar llave pública al servidor SSH</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-06-tigervnc-servidor-vnc-en-manjaro.html">TigerVNC. Servidor VNC en Manjaro</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2023-01-04-quitar-modo-suspension-e-hibernacion.html">Quitar modo suspensión e hibernación</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-12-31-servidor-ssh-en-manjaro.html">Servidor SSH en Manjaro</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html">WebDAV. Acceso al servidor WebDAV desde escritorio Windows</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html">Notificaciones de Jellyfin en Telegram</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-07-11-conduit-el-matrix-escrito-en-rust.html">Conduit. El matrix escrito en rust</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html">Tunel SSH para conectar puertos remotos como si fuera local</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-06-30-socksdroid-enrutando-todo-el-trafico-de-tu-android-por-servidores-socks5.html">SocksDroid. Enrutando todo el tráfico de tu Android por servidores SOCKS5</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-06-30-foxyproxy-extension-de-navegador-para-navegar-mediante-proxy-socks5.html">FoxyProxy. Extensión de navegador para navegar mediante Proxy SOCKS5</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html">Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc...</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html">Configurar una ip estática en tu Raspberry Pi</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html">Kodbox con mariadb</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-03-10-audiobookshelf-servidor-de-audiolibros.html">Audiobookshelf. Servidor de Audiolibros</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html">Sonixd. Player para Jellyfin y Subsonic</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html">Abrir aplicaciones de Ubuntu desde una web html</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html">Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html">ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-10-02-mi-servidor-de-musica-con-webdav.html">Mi servidor de música con WebDAV</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-06-30-owntracks-o-nextracks-con-home-assitant.html">Owntracks o Nextracks con Home Assitant</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html">Servidor WebDAV con rclone, con nube público o privada</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-22-golink.html">Golink</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-13-ampliar-memoria-swap.html">Ampliar memoria SWAP</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-02-servidor-de-samba-facil.html">Servidor de Samba fácil</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html">Convierte archivos .crt y .key en archivos .pem</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html">nncli. Notas desde el terminal con Nextcloud Notes</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-10-tu-pornhub-privado-se-llama-stash.html">Tu PornHub privado se llama Stash</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-03-09-controlando-la-papelera-de-nextcloud.html">Controlando la papelera de Nextcloud</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html">PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-12-25-trilium-notas-jerarquicas-en-markdown.html">Trilium. Notas jerárquicas en Markdown</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html">Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html">Docker: Wireguard para Raspberry, Ubuntu, Debian,...</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto--a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html">Croc, la aplicación que nos permite enviar o compartir archivos, directorios, texto... a cualquier dispositivo esté donde esté de un modo fácil con la terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-09-16-navidrome-la-alternativa-a-airsonic-desarrollada-en-go.html">Navidrome. La alternativa a Airsonic desarrollada en Go</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-08-21-gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go.html">gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html">Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-06-30-informacion-de-tu-sistema-pc-servidor-con-neofetch.html">Informacion de tu sistema, pc, servidor,... con neofetch</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-06-08-sincronizacion-con-rclone-via-ssh-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html">Mumble. El docker del servidor de VoIP de Software Libre.</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-05-27-copiar-directorios-o-archivos-de-un-docker-a-local-o-viceversa.html">Copiar directorios o archivos de un Docker a Local o viceversa</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html">FreshRSS. Mi servidor de RSS</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-05-07-servidor-de-ebooks-con-calibre.html">Servidor de ebooks en Ubuntu, Debian, Raspbian,... con Calibre</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html">Gonic. El mejor y más ligero servidor de música con api Subsonic</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html">Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html">Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-03-10-escuchando-musica-de-mi-servidor-jellyfin-con-jellycli.html">Escuchando música de mi servidor Jellyfin con jellycli</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-03-09-el-mejor-y-mas-ligero-cliente-para-tu-escritorio-de-jellyfin-jellyfin-cli.html">El mejor y más ligero cliente para tu Escritorio de Jellyfin. Jellyfin-cli</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html">Wireguard en 2 minutos con wgc</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2020-01-01-controlando-mis-contenedores-desde-android.html">Controlando mis Contenedores desde Android</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-31-supysonic-0-5-0-total-compatibilidad-con-todos-los-clientes-subsonic.html">Supysonic 0.5.0. Total compatibilidad con todos los clientes Subsonic</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-28-instalar-un-servidor-con-debian.html">Instalar un Servidor con Debian</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-21-docker-bitwarden-un-servidor-de-contrasenas-en-tu-raspberry-pi.html">Docker: Bitwarden. Un servidor de contraseñas en tu Raspberry Pi</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-18-remmina-de-los-mejores-clientes-vnc.html">Remmina. De los mejores Clientes VNC</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-12-04-los-paquetes-snap-no-aparecen-una-vez-instalados.html">Los paquetes snap no aparecen una vez instalados</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-27-ordena-renombra-y-actualiza-tus-metadatos-con-tiny-media-manager.html">Ordena, renombra y actualiza tus metadatos con Tiny Media Manager</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html">Simplifica o abrevia tus conexiones SSH</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html">Docker: Gotify. Tu servidor de Notificaciones</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-31-habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor.html">Habilitar SSH en la Raspberry sin conectar el Monitor</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-25-descargar-archivos-con-curl.html">Descargar archivos con curl</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html">Bsync. Sincronización de archivos bidireccional, que utiliza Rsync</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-22-docker-servidor-webdav.html">Docker: Servidor Webdav</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html">Docker: Duck DNS. Facilitando la conexión a tus servicios</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-08-docker-jamstash-cliente-de-subsonic.html">Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-10-07-docker:-supysonic.-el-mejor-y-más-ligero-servidor-de-música.html">Docker: Supysonic. El mejor y más ligero servidor de música</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-17-instalar-telegram-desktop-y-rclone-browser.html">Instalar Telegram Desktop y Rclone Browser en una Raspberry Pi o Servidor</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html">Listado de Servicios con System V y Systemd</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-08-anydesk-en-ubuntu-debian.html">AnyDesk en Ubuntu, Debian</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-09-08-teamviewer-en-ubuntu-debian.html">Teamviewer en Ubuntu, Debian</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-06-12-compartiendo-tus-dockers.html">Compartiendo tus Dockers</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html">Montar un servidor webdav con dafs2</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html">Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html">El Adiós a Plex y Emby. Llega Jellyfin</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-04-11-controla-tu-raspberry-servidor-o-pc-desde-telegram.html">Controla tu Raspberry, Servidor o PC desde Telegram</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-04-05-montando-una-carpeta-con-todos-mis-servidores-dlna.html">Montando una carpeta con todos mis servidores dlna</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio.html">Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html">Tomb. Mis secretos son una Tumba. Crifrar Archivos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-03-29-crear-pagina-de-error-404-en-github-pages.html">Crear página de error 404 en GitHub Pages</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-02-24-instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnu-linux.html">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html">Instalando una Dokuwiki en 4 pasos</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-08-crear-un-blog-en-github.-github-pages.html">Crear un Blog en GitHub. GitHub Pages</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-06-nextcloudpi.-nextcloud-en-raspbian-con-docker.html">NextcloudPi. Nextcloud en Raspbian con Docker</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-04-crear-un-blog-en-gitlab.-gitlab-pages.html">Crear un Blog en GitLab. GitLab Pages</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html">Visualiza tus Notas Markdown Versión Web con MkDocs</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2018-12-29-redirigir-el-trafico-de-pagina-web-a-otra.html">Redirigir el tráfico de una página web a otra</a></li>
+ <li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
 </ul>
 <br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
