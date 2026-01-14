@@ -1,7 +1,7 @@
 var tipuesearch = {"pages": [
 {
             'title': 'Actualización del Editor de Texto Micro a la Última Versión',
-            'text': ':DESCRIPTION:', 
+            'text': 'Este artículo explica detalladamente el procedimiento necesario para actualizar el editor de texto Micro, asegurándose de que la instalación incluya el binario más reciente obtenido directamente desde el repositorio oficial.', 
             'tags': 'micro terminal editor texto  ', 
             'url': 'https://ugeek.github.io/blog/post/2026-01-14-actualizacion-del-editor-de-texto-micro-a-la-ultima-version.html' 
 },
