@@ -1309,6 +1309,17 @@
  <guid>https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html</guid>
  </item>
  <item>
+ <title>YouTube y YouTube Music. Aplicaciones Open Source</title>
+ <link>https://ugeek.github.io/blog/post/2022-02-24-youtube-y-youtube-music-aplicaciones-open-source.html</link>
+ <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/youtube.png" alt="YouTube y YouTube Music. Aplicaciones Open Source"&gt;
+&lt;br&gt;&lt;p&gt;YouTube tiene una política de privacidad extremadamente invasiva que se basa en el uso de datos de usuarios de manera poco ética.... &lt;p&gt;Sigue leyendo: &lt;a href="https://ugeek.github.io/blog/post/2022-02-24-youtube-y-youtube-music-aplicaciones-open-source.html"&gt;YouTube y YouTube Music. Aplicaciones Open Source&lt;/a&gt;
+</description>
+ <pubDate>Thu, 24 Feb 2022 08:06:00 +0100</pubDate>
+ <category>youtube</category>
+ <guid>https://ugeek.github.io/blog/post/2022-02-24-youtube-y-youtube-music-aplicaciones-open-source.html</guid>
+ </item>
+ <item>
  <title>Enviar clave SSH al servidor, para no utilizar la contraseña</title>
  <link>https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html</link>
  <description>
@@ -2937,6 +2948,17 @@
  <guid>https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html</guid>
  </item>
  <item>
+ <title>Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</title>
+ <link>https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html</link>
+ <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ubuntu.png" alt="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo"&gt;
+&lt;br&gt;&lt;p&gt;Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry.... &lt;p&gt;Sigue leyendo: &lt;a href="https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html"&gt;Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo&lt;/a&gt;
+</description>
+ <pubDate>Sun, 26 Apr 2020 16:12:00 +0100</pubDate>
+ <category>ubuntu</category>
+ <guid>https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html</guid>
+ </item>
+ <item>
  <title>Creando una página web de tu proyecto en GitHub</title>
  <link>https://ugeek.github.io/blog/post/2020-04-15-creando-una-pagina-web-de-tu-proyecto-en-github.html</link>
  <description>
@@ -3001,6 +3023,17 @@
  <pubDate>Sat, 04 Apr 2020 17:30:00 +0100</pubDate>
  <category>tareas</category>
  <guid>https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html</guid>
+ </item>
+ <item>
+ <title>Shaarli. El Delicious del Software Libre</title>
+ <link>https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html</link>
+ <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/shaarli.png" alt="Shaarli. El Delicious del Software Libre"&gt;
+&lt;br&gt;&lt;p&gt;Shaarly es un servicio de marcadores personal, minimalista, súper rápido, sin bases de datos.... &lt;p&gt;Sigue leyendo: &lt;a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html"&gt;Shaarli. El Delicious del Software Libre&lt;/a&gt;
+</description>
+ <pubDate>Thu, 02 Apr 2020 11:30:00 +0100</pubDate>
+ <category>docker</category>
+ <guid>https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html</guid>
  </item>
  <item>
  <title>EteSync. Tareas, Contactos y Calendarios, sincronizadas de extremo a extremo</title>
@@ -3322,6 +3355,17 @@
  <guid>https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html</guid>
  </item>
  <item>
+ <title>Instalar un Servidor con Debian</title>
+ <link>https://ugeek.github.io/blog/post/2019-12-28-instalar-un-servidor-con-debian.html</link>
+ <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/debian.png" alt="Instalar un Servidor con Debian"&gt;
+&lt;br&gt;&lt;p&gt;Quizás te estas planteando el montarte un servidor con debian, pero no sabes muy bien por donde empezar. Si has instalado alguna vez debian, la imagen contiene varias versiones de... &lt;p&gt;Sigue leyendo: &lt;a href="https://ugeek.github.io/blog/post/2019-12-28-instalar-un-servidor-con-debian.html"&gt;Instalar un Servidor con Debian&lt;/a&gt;
+</description>
+ <pubDate>Sat, 28 Dec 2019 21:45:00 +0100</pubDate>
+ <category>servidor</category>
+ <guid>https://ugeek.github.io/blog/post/2019-12-28-instalar-un-servidor-con-debian.html</guid>
+ </item>
+ <item>
  <title>Convertir texto a voz con espeak</title>
  <link>https://ugeek.github.io/blog/post/2019-12-23-convertir-texto-a-voz-con-espeak.html</link>
  <description>
@@ -3465,6 +3509,17 @@
  <guid>https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html</guid>
  </item>
  <item>
+ <title>Docker: Gotify. Tu servidor de Notificaciones</title>
+ <link>https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html</link>
+ <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/gotify.png" alt="Docker: Gotify. Tu servidor de Notificaciones"&gt;
+&lt;br&gt;&lt;p&gt;Después de montar un bot con Telegram y Mastodon, ha llegado el momento de crear tu propio servicio de notificaciones. No vamos a depender de servicios de terceros para saber... &lt;p&gt;Sigue leyendo: &lt;a href="https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html"&gt;Docker: Gotify. Tu servidor de Notificaciones&lt;/a&gt;
+</description>
+ <pubDate>Wed, 06 Nov 2019 17:55:00 +0100</pubDate>
+ <category>docker</category>
+ <guid>https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html</guid>
+ </item>
+ <item>
  <title>Marcar una línea en tu OrgMode, para después volver a ella</title>
  <link>https://ugeek.github.io/blog/post/2019-11-01-marcar-una-linea-en-tu-orgmode-para-despues-volver-a-ella.html</link>
  <description>
@@ -3562,6 +3617,17 @@
  <pubDate>Thu, 24 Oct 2019 22:22:00 +0100</pubDate>
  <category>sync</category>
  <guid>https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html</guid>
+ </item>
+ <item>
+ <title>Crea tu cron de un modo gráfico</title>
+ <link>https://ugeek.github.io/blog/post/2019-10-23-crea-tu-cron-de-un-modo-gráfico.html</link>
+ <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/cron.png" alt="Crea tu cron de un modo gráfico"&gt;
+&lt;br&gt;&lt;p&gt;Si queremos automatizar un script, utilizamos cron. Pero hay que reconocer que hasta que no le pillas el tranquillo, los parametros que tenemos que introducir para esta programación son muy... &lt;p&gt;Sigue leyendo: &lt;a href="https://ugeek.github.io/blog/post/2019-10-23-crea-tu-cron-de-un-modo-gráfico.html"&gt;Crea tu cron de un modo gráfico&lt;/a&gt;
+</description>
+ <pubDate>Wed, 23 Oct 2019 18:00:00 +0100</pubDate>
+ <category>bash</category>
+ <guid>https://ugeek.github.io/blog/post/2019-10-23-crea-tu-cron-de-un-modo-gráfico.html</guid>
  </item>
  <item>
  <title>Orzly. Tus OrgMode syncronizados por WebDav</title>
@@ -4114,6 +4180,17 @@
  <guid>https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html</guid>
  </item>
  <item>
+ <title>Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</title>
+ <link>https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html</link>
+ <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/mountain-man.jpg" alt="Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN"&gt;
+&lt;br&gt;&lt;p&gt;Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios... &lt;p&gt;Sigue leyendo: &lt;a href="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html"&gt;Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN&lt;/a&gt;
+</description>
+ <pubDate>Wed, 15 May 2019 20:30:00 +0100</pubDate>
+ <category>servidor</category>
+ <guid>https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html</guid>
+ </item>
+ <item>
  <title>El Adiós a Plex y Emby. Llega Jellyfin</title>
  <link>https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html</link>
  <description>
@@ -4530,6 +4607,17 @@
  <pubDate>Thu, 24 Jan 2019 21:30:00 +0100</pubDate>
  <category>snap</category>
  <guid>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</guid>
+ </item>
+ <item>
+ <title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
+ <link>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</link>
+ <description>
+&lt;img src="https://ugeek.github.io/blog/images-blog/ugeek.png" alt="Crear el Feed para el podcast en tu Blog con Jekyll"&gt;
+&lt;br&gt;&lt;p&gt;Voy a explicar en este post, como generar el Feed del podcast de forma automática.... &lt;p&gt;Sigue leyendo: &lt;a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html"&gt;Crear el Feed para el podcast en tu Blog con Jekyll&lt;/a&gt;
+</description>
+ <pubDate>Mon, 21 Jan 2019 16:16:00 +0100</pubDate>
+ <category>jekyll</category>
+ <guid>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</guid>
  </item>
  <item>
  <title>Utilizando Git con la Terminal. GitHub</title>

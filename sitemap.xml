@@ -730,6 +730,12 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://ugeek.github.io/blog/post/2022-02-24-youtube-y-youtube-music-aplicaciones-open-source.html</loc>
+      <lastmod>2022-02-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html</loc>
       <lastmod>2022-02-15</lastmod>
       <changefreq>monthly</changefreq>
@@ -1618,6 +1624,12 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html</loc>
+      <lastmod>2020-04-26</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://ugeek.github.io/blog/post/2020-04-15-creando-una-pagina-web-de-tu-proyecto-en-github.html</loc>
       <lastmod>2020-04-15</lastmod>
       <changefreq>monthly</changefreq>
@@ -1650,6 +1662,12 @@
    <url>
       <loc>https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html</loc>
       <lastmod>2020-04-04</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html</loc>
+      <lastmod>2020-04-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
@@ -1828,6 +1846,12 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://ugeek.github.io/blog/post/2019-12-28-instalar-un-servidor-con-debian.html</loc>
+      <lastmod>2019-12-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://ugeek.github.io/blog/post/2019-12-23-convertir-texto-a-voz-con-espeak.html</loc>
       <lastmod>2019-12-23</lastmod>
       <changefreq>monthly</changefreq>
@@ -1906,6 +1930,12 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html</loc>
+      <lastmod>2019-11-06</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://ugeek.github.io/blog/post/2019-11-01-marcar-una-linea-en-tu-orgmode-para-despues-volver-a-ella.html</loc>
       <lastmod>2019-11-01</lastmod>
       <changefreq>monthly</changefreq>
@@ -1956,6 +1986,12 @@
    <url>
       <loc>https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html</loc>
       <lastmod>2019-10-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ugeek.github.io/blog/post/2019-10-23-crea-tu-cron-de-un-modo-gráfico.html</loc>
+      <lastmod>2019-10-23</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
@@ -2260,6 +2296,12 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html</loc>
+      <lastmod>2019-05-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html</loc>
       <lastmod>2019-05-07</lastmod>
       <changefreq>monthly</changefreq>
@@ -2484,6 +2526,12 @@
    <url>
       <loc>https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html</loc>
       <lastmod>2019-01-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</loc>
+      <lastmod>2019-01-21</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
