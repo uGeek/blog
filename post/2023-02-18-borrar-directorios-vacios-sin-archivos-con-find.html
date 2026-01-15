@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="borrar-directorios-vacios-sin-archivos-con-find">Borrar directorios vacios, sin archivos con find</h1>
+<h1 id="borrar-directorios-vacios-sin-archivos-con-find" title="Borrar directorios vacios, sin archivos con find" data-export_file_name="borrar-directorios-vacios-sin-archivos-con-find" data-description="Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la" data-export_date="2023-02-18 13:48" data-category="bash" data-tag="find,directorios" data-image="./images-blog/ugeek.png">Borrar directorios vacios, sin archivos con find</h1>
 <p>Mis fotografías las guardo siguiendo una estructura de directorios por año, mes, día. Siempre hay días en los que solo hago una foto sin interés y cuando las reviso, la acabo borrando. De manera que acaban quedando directorios vacíos.</p>
 <p>Vamos a ver como con comando find y con una sola línea de terminal, limpiar recursivamente todos esos directorios vacíos en menos de un segundo.</p>
 <h2 id="buscando-directorios-vacios">Buscando directorios vacios</h2>
@@ -52,26 +52,26 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <pre><code class="language-sh">
 find . -type d -empty
 </code></pre>
-<p><code class="verbatim">'-empty'= nos permite buscar objetos vacíos y ='-type d'</code> es para encontrar sólo directorios.</p>
+<p><code>'-empty'</code> nos permite buscar objetos vacíos y <code>'-type d'</code> es para encontrar sólo directorios.</p>
 <h2 id="buscando-directorios-vacios-y-borrarlos">Buscando directorios vacios y borrarlos</h2>
 <pre><code class="language-sh">
 find . -type d -empty -exec rmdir {} ;
 </code></pre>
 <p>Este comando realizará una única ronda de búsqueda y eliminará los directorios que estén vacíos.</p>
 <ul>
-<li><code class="verbatim">-exec</code> junto con el <strong>comando find</strong> ejecutará <strong>rmdir</strong> a cada resultado del comando find.</li>
-<li>El marcador de posición <code class="verbatim">{}=sustituye cada entrada en la lista de directorios encontrados y =;</code>significa el final del comando a ejecutar.</li>
+<li><code>-exec</code> junto con el <strong>comando find</strong> ejecutará <strong>rmdir</strong> a cada resultado del comando find.</li>
+<li>El marcador de posición <code>{}</code>sustituye cada entrada en la lista de directorios encontrados y <code>;</code>significa el final del comando a ejecutar.</li>
 </ul>
 <h3 id="comando-rmdir">Comando rmdir</h3>
 <p><strong>El comando rmdir</strong> se utiliza para eliminar directorios si están vacíos.</p>
 <p>Si vamos a borrar más de un directorios a la vez, igual que hacemos con mkdir, utilizaremos la opción <strong>-p</strong>.</p>
-<p>Cuando un directorio no está vacio, sale un mensaje de error. Si no quieres que lo muestre en terminal, añade la opción <code class="verbatim">rmdir –ignore-fail-on-non-empty</code></p>
+<p>Cuando un directorio no está vacio, sale un mensaje de error. Si no quieres que lo muestre en terminal, añade la opción <code>rmdir –ignore-fail-on-non-empty</code></p>
 <h2 id="borrando-de-una-pasada-sin-rmdir">Borrando de una pasada sin rmdir</h2>
 <pre><code class="language-sh">
 find . -type d -empty -delete
 </code></pre>
 <ul>
-<li><code class="verbatim">'-delete'</code>opción, que eliminará repetidamente todos los directorios vacíos hasta el directorio de nivel superior.</li>
+<li><code>'-delete'</code>opción, que eliminará repetidamente todos los directorios vacíos hasta el directorio de nivel superior.</li>
 <p>Publicado por Angel el Saturday 18 February del 2023</p>
 <p>También te puede interesar:</p>
 <li><a href="https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li>
@@ -84,6 +84,7 @@ find . -type d -empty -delete
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

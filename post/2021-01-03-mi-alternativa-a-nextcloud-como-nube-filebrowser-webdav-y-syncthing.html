@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</h1>
+<h1 id="mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing" title="Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing" data-export_file_name="mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing" data-description="Siempre he comentado que una nube como Nextcloud para solo acceder o sincronizar archivos es muy pesada. Existen otros proyectos, mucho más ligeros con lenguajes de programación mucho más modernos," data-export_date="2021-01-03 15:10" data-category="nube" data-tag="syncthing,filebrowser,webdav" data-image="./images-blog/nube.png">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</h1>
 <p>Siempre he comentado que una nube como Nextcloud para solo acceder o sincronizar archivos es muy pesada. Existen otros proyectos, mucho más ligeros con lenguajes de programación mucho más modernos, por ejemplo en GO como FileBrowser.</p>
 <p>El objetivo por mi parte, ha sido el sumar lo mejor de 2 servicios. </p>
 <ol>
@@ -54,16 +54,16 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p><img src="../images-blog/nube.png" /></p>
 <p>FileBrowser es la herramienta que nos permitirá visualizar nuestros archivos y directorios, a través de un navegador web. FileBrowser no tiene aplicación, es única y exclusivamente para utilizarla desde un navegador web. Eso significa que allá donde haya un navegador web, podremos acceder a nuestros archivos. En dispositivos móviles y tablets, FileBrowser se adapta perfectamente a todo tipo de pantalla, así que es un servicio fantástico. Webdav es el servicio para sincronizar mis archivos con aplicaciones como <strong>SimpleTask</strong>, <strong>Orgzly</strong>, <strong>FolderSync</strong>, <strong>X-plore</strong>, <strong>Solid Explorer</strong> o <strong>Pure Writer</strong>. También envío <strong>backups</strong> y accedo a archivos con <strong>rclone</strong>.</p>
 <p>FileBrowser tiene una función para compartir archivos o directorios con cualquier persona mediante un link que podemos determinar una duración de validez para su descarga.</p>
-<p>FileBrowser también permite crear tantos usuarios como queramos, pero si queremos combinar esta función con <strong>WebDav</strong>, entonces necesitaremos crear tantos servidores WebDav como usuarios lo necesiten y dirigir el directorio donde estarán los archivos, en mi ejemplo <code class="verbatim">/webdav</code>, por el directorio del usuario de FileBrowser.</p>
+<p>FileBrowser también permite crear tantos usuarios como queramos, pero si queremos combinar esta función con <strong>WebDav</strong>, entonces necesitaremos crear tantos servidores WebDav como usuarios lo necesiten y dirigir el directorio donde estarán los archivos, en mi ejemplo <code>/webdav</code>, por el directorio del usuario de FileBrowser.</p>
 <p>FileBrowser + WebDav es la apuesta ganadora como servicios super livianos y sencillos. Podemos ampliar esta apuesta incluyendo algún directorio de nuestra nube mediante <strong>Syncthing</strong>. En mi caso, no he añadido esta opción en la primera parte del artículo, para no complicar más el tutorial. Lo que está claro, es que es muy recomendable utilizar <strong>docker-compose</strong>, para esta tarea ya que permite ir incluyendo servicios dentro de nuestra nube igual que lo hariamos con Nextcloud y ganar en diversidad, funcionalidades y potencia.</p>
-<p>Partiendo de que el directorio <code class="verbatim">/webdav</code> es compartido con el servicio <strong>FileBrowser</strong> y <strong>Webdab</strong>,  personalmente recomiendo ir añadiendo servicios enlazados a determinados directorios como:</p>
+<p>Partiendo de que el directorio <code>/webdav</code> es compartido con el servicio <strong>FileBrowser</strong> y <strong>Webdab</strong>,  personalmente recomiendo ir añadiendo servicios enlazados a determinados directorios como:</p>
 <ul>
 <li>Radicale (Calendarios, tareas, contactos)</li>
 <li>Navidrome (Servidor de música)</li>
 <li>Jellyfin (Servidor multimedia. Películas, Música, Libros,...)</li>
 <li>Syncthing (Sincronización de directorios. Sincronizo mis fotos y dotfiles)</li>
 </ul>
-<p>Como he comentado antes, el directorio donde irán los archivos de la nube será <code class="verbatim">/webdav</code>. Yo he decidido que sea esta, pero tu puedes personalizarlo al directorio que desees.</p>
+<p>Como he comentado antes, el directorio donde irán los archivos de la nube será <code>/webdav</code>. Yo he decidido que sea esta, pero tu puedes personalizarlo al directorio que desees.</p>
 <h2 id="iniciando">Iniciando</h2>
 <p>Vamos a clonar el repositorio que tengo en GitHub, donde están los archivos de configuración para Filebrowser para que persista la configuración una vez actualicemos el docker.</p>
 <p>#+BEGIN_EXAMPLE</p>
@@ -73,7 +73,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="filebrowser-para-arm">Filebrowser para ARM</h2>
 <p>Inicia el docker desde el repositorio que hemos clonado de GitHub. Este directorio es donde se guardarán la configuración y base de datos de FileBrowser.</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run --name filebrowser         -v  <em>webdav:</em>srv         -v  $PWD<em>filebrowser.db:</em>database.db         -v  $PWD<em>filebrowser.json:</em>.filebrowser.json         -p  80:80         filebrowser/filebrowser</p>
+<p>docker run --name filebrowser         -v  /webdav:/srv         -v  $PWD/filebrowser.db:/database.db         -v  $PWD/filebrowser.json:/.filebrowser.json         -p  80:80         filebrowser/filebrowser</p>
 <p>#+END_EXAMPLE</p>
 <ul>
 <li>Username: admin</li>
@@ -85,7 +85,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>#+END_EXAMPLE</p>
 <h3 id="webdav-para-arm">WebDav para ARM</h3>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run --name webdav       --restart<code class="verbatim">unless-stopped       -p 80:80       -v /webdav:/media       -e USERNAME=webdav       -e PASSWORD=webdav       -e TZ=Europe/Madrid        -e UDI=1000       -e GID</code>1000       -d  ugeek/webdav:arm</p>
+<p>docker run --name webdav       --restart<code>unless-stopped       -p 80:80       -v /webdav:/media       -e USERNAME</code>webdav       -e PASSWORD<code>webdav       -e TZ</code>Europe/Madrid        -e UDI<code>1000       -e GID</code>1000       -d  ugeek/webdav:arm</p>
 <p>#+END_EXAMPLE</p>
 <ul>
 <li>Username: webdav</li>
@@ -97,7 +97,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="filebrowser-para-amd64">Filebrowser para amd64</h2>
 <p>Inicia el docker desde el repositorio que hemos clonado de GitHub. Este directorio es donde se guardarán la configuración y base de datos de FileBrowser.</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run --name filebrowser         -v  <em>webdav:</em>srv         -v  $PWD<em>filebrowser.db:</em>database.db         -v  $PWD<em>filebrowser.json:</em>.filebrowser.json         -p  80:80         filebrowser/filebrowser</p>
+<p>docker run --name filebrowser         -v  /webdav:/srv         -v  $PWD/filebrowser.db:/database.db         -v  $PWD/filebrowser.json:/.filebrowser.json         -p  80:80         filebrowser/filebrowser</p>
 <p>#+END_EXAMPLE</p>
 <ul>
 <li>Username: admin</li>
@@ -112,7 +112,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </ul>
 <h2 id="webdav-para-amd64">WebDav para amd64</h2>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run --name webdav       --restart<code class="verbatim">unless-stopped       -p 80:80       -v /webdav:/media       -e USERNAME=webdav       -e PASSWORD=webdav       -e TZ=Europe/Madrid        -e UDI=1000       -e GID</code>1000       -d  ugeek/webdav:amd64</p>
+<p>docker run --name webdav       --restart<code>unless-stopped       -p 80:80       -v /webdav:/media       -e USERNAME</code>webdav       -e PASSWORD<code>webdav       -e TZ</code>Europe/Madrid        -e UDI<code>1000       -e GID</code>1000       -d  ugeek/webdav:amd64</p>
 <p>#+END_EXAMPLE</p>
 <ul>
 <li>Username: webdav</li>
@@ -128,12 +128,12 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>sed -i s'|dominio|ugeek|'g docker-compose.yml</p>
 <p>#+END_EXAMPLE</p>
 <ul>
-<li>Pon tu dominio si no tienes duckdns.org en las tres lineas donde está <code class="verbatim">filebrowser.dominio.duckdns.org= y =webdav.dominio.duckdns.org</code>.</li>
+<li>Pon tu dominio si no tienes duckdns.org en las tres lineas donde está <code>filebrowser.dominio.duckdns.org</code> y <code>webdav.dominio.duckdns.org</code>.</li>
 </ul>
 <h2 id="ajustes-de-webdav">Ajustes de Webdav</h2>
 <ul>
 <li>Añade en el docker webdav el <strong>usuario</strong>, <strong>contraseña</strong> y <strong>zona horaria</strong>.</li>
-<li>Los archivos irán al directorio <code class="verbatim">/webdav</code>, pero puedes utilizar el que tu desees, simplemente cambiandolo</li>
+<li>Los archivos irán al directorio <code>/webdav</code>, pero puedes utilizar el que tu desees, simplemente cambiandolo</li>
 </ul>
 <h2 id="ajustes-de-filebrowser">Ajustes de FileBrowser</h2>
 <p>Inicia el docker desde el repositorio que hemos clonado de GitHub. Este directorio es donde se guardarán la configuración y base de datos de FileBrowser.</p>
@@ -156,15 +156,15 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>   restart: unless-stopped</p>
 <p>   volumes:</p>
 <ul>
-<li><em>webdav:</em>srv</li>
-<li>$PWD<em>filebrowser.db:</em>database.db</li>
-<li>$PWD<em>filebrowser.json:</em>.filebrowser.json</li>
+<li>/webdav:/srv</li>
+<li>$PWD/filebrowser.db:/database.db</li>
+<li>$PWD/filebrowser.json:/.filebrowser.json</li>
 <p>  webdav:</p>
 <p>   container_name: webdav</p>
 <p>   image: ugeek/webdav:arm</p>
 <p>   restart: unless-stopped</p>
 <p>    volumes:</p>
-<li><em>webdav:</em>media</li>
+<li>/webdav:/media</li>
 <p>   environment:</p>
 <li>USERNAME=usuario</li>
 <li>PASSWORD=contraseña</li>
@@ -183,9 +183,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>   restart: unless-stopped</p>
 <p>   volumes:</p>
 <ul>
-<li><em>webdav:</em>srv</li>
-<li>$PWD<em>filebrowser.db:</em>database.db</li>
-<li>$PWD<em>filebrowser.json:</em>.filebrowser.json</li>
+<li>/webdav:/srv</li>
+<li>$PWD/filebrowser.db:/database.db</li>
+<li>$PWD/filebrowser.json:/.filebrowser.json</li>
 <p>   networks:</p>
 <li>web</li>
 <p>   labels:</p>
@@ -205,7 +205,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>   restart: unless-stopped</p>
 <p>   volumes:</p>
 <ul>
-<li><em>webdav:</em>media</li>
+<li>/webdav:/media</li>
 <p>   environment:</p>
 <li>USERNAME=usuario</li>
 <li>PASSWORD=contraseña</li>
@@ -246,9 +246,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>restart: unless-stopped</p>
 <p>volumes:</p>
 <ul>
-<li><em>webdav:</em>srv</li>
-<li>$PWD<em>filebrowser.db:</em>database.db</li>
-<li>$PWD<em>filebrowser.json:</em>.filebrowser.json</li>
+<li>/webdav:/srv</li>
+<li>$PWD/filebrowser.db:/database.db</li>
+<li>$PWD/filebrowser.json:/.filebrowser.json</li>
 </ul>
 <p>webdav:</p>
 <p>container_name: webdav</p>
@@ -256,7 +256,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>restart: unless-stopped</p>
 <p>volumes:</p>
 <ul>
-<li><em>webdav:</em>media</li>
+<li>/webdav:/media</li>
 <p>environment:</p>
 <li>USERNAME=usuario</li>
 <li>PASSWORD=contraseña</li>
@@ -275,9 +275,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>restart: unless-stopped</p>
 <p>volumes:</p>
 <ul>
-<li><em>webdav:</em>srv</li>
-<li>$PWD<em>filebrowser.db:</em>database.db</li>
-<li>$PWD<em>filebrowser.json:</em>.filebrowser.json</li>
+<li>/webdav:/srv</li>
+<li>$PWD/filebrowser.db:/database.db</li>
+<li>$PWD/filebrowser.json:/.filebrowser.json</li>
 <p>networks:</p>
 <li>web</li>
 <p>labels:</p>
@@ -297,7 +297,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>restart: unless-stopped</p>
 <p>volumes:</p>
 <ul>
-<li><em>webdav:</em>media</li>
+<li>/webdav:/media</li>
 <p>environment:</p>
 <li>USERNAME=usuario</li>
 <li>PASSWORD=contraseña</li>
@@ -333,7 +333,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>Añade al docker-compose.yml anteriores, estas líneas si quieres añadir <strong>Syncthing</strong>.</p>
 <p>#+BEGIN_EXAMPLE</p>
 <p>syncthing:</p>
-<p>image: ghcr.io<em>linuxserver</em>syncthing</p>
+<p>image: ghcr.io/linuxserver/syncthing</p>
 <p>container_name: syncthing</p>
 <p>environment:</p>
 <ul>
@@ -341,9 +341,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li>PGID=1000</li>
 <li>TZ=Europe/Madrid</li>
 <p>volumes:</p>
-<li>$HOME<em>syncthing</em>config:/config</li>
-<li><em>webdav</em>Fotos:<em>webdav</em>Fotos              ## Directorio a sincronizar</li>
-<li><em>webdav</em>dotfiles:<em>webdav</em>dotfiles        ## Directorio a sincronizar</li>
+<li>$HOME/syncthing/config:/config</li>
+<li>/webdav/Fotos:/webdav/Fotos              ## Directorio a sincronizar</li>
+<li>/webdav/dotfiles:/webdav/dotfiles        ## Directorio a sincronizar</li>
 <p>ports:</p>
 <li>8384:8384</li>
 <li>22000:22000</li>
@@ -355,7 +355,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <ul>
 <li><a href="https://github.com/filebrowser/filebrowser">https://github.com/filebrowser/filebrowser</a></li>
 <li><a href="https://hub.docker.com/r/ugeek/webdav">https://hub.docker.com/r/ugeek/webdav</a></li>
-<li><a href="https://www.freepik.es/foto-gratis/conexion-red-computacion-nube-papel-perforado_2761244.htm#page">https://www.freepik.es/foto-gratis/conexion-red-computacion-nube-papel-perforado_2761244.htm#page</a><code class="verbatim">1&amp;query=cloud%20computing&amp;position</code>13</li>
+<li><a href="https://www.freepik.es/foto-gratis/conexion-red-computacion-nube-papel-perforado_2761244.htm#page">https://www.freepik.es/foto-gratis/conexion-red-computacion-nube-papel-perforado_2761244.htm#page</a><code>1&amp;query</code>cloud%20computing&amp;position=13</li>
 </ul>
 <p>Publicado por Angel el Sunday 03 January del 2021</p>
 <p>También te puede interesar:</p>
@@ -370,6 +370,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,15 +44,15 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="papelera-reciclaje-desde-la-terminal">Papelera Reciclaje desde la Terminal</h1>
+<h1 id="papelera-reciclaje-desde-la-terminal" title="Papelera Reciclaje desde la Terminal" data-export_file_name="Papelera Reciclaje desde la Terminal" data-description="Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer *rm* y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal." data-export_date="2019-02-07 17:15" data-category="bash" data-tag="terminal,zsh" data-image="./images-blog/papelera.jpg">Papelera Reciclaje desde la Terminal</h1>
 <p><img src="../images-blog/papelera.jpg" /></p>
 <p>Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer <strong>rm</strong> y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.</p>
 <h2 id="donde-están-los-archivos-de-mi-papelera">¿Donde están los archivos de mi Papelera?</h2>
 <p>Todos los archivos que eliminamos por interfaz gráfica, van a la papelera. La ruta de esta, es:</p>
-<p><code class="verbatim">~/.local/share/Trash/files</code></p>
+<p><code>~/.local/share/Trash/files</code></p>
 <h2 id="instalando-trash-cli">Instalando trash-cli</h2>
 <p>La instalación de trash-cli, es muy simple, ya que está en los repositorios oficiales:</p>
-<p><code class="verbatim">sudo apt install trash-cli</code></p>
+<p><code>sudo apt install trash-cli</code></p>
 <h2 id="tabla-de-comandos">Tabla de comandos</h2>
 <table>
 <tbody>
@@ -79,20 +79,20 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </table>
 <h2 id="buscar-un-archivo-en-la-papelera">Buscar un Archivo en la Papelera</h2>
 <p>Si combinamos trash-cli con grep, podremos buscar archivos y carpetas que hay en nuestra papelera, mediante el nombre</p>
-<p><code class="verbatim">trash-list | grep foo</code></p>
+<p><code>trash-list | grep foo</code></p>
 <p>También podriamos jugar con nuestro comandos favoritos, como conocer cuantos archivos y carpetas tenemos:</p>
-<p><code class="verbatim">trash-list | wc -l</code></p>
+<p><code>trash-list | wc -l</code></p>
 <h2 id="eliminar-solo-los-archivos-que-coincidan-con-un-patrón">Eliminar solo los archivos que coincidan con un patrón:</h2>
 <p>Aquí, por ejemplo, eliminaremos todos los archivos con extensión .txt</p>
-<p><code class="verbatim">trash-rm \ *.txt</code></p>
+<p><code>trash-rm \ *.txt</code></p>
 <h2 id="eliminar-en-función-de-los-dias">Eliminar en función de los dias</h2>
 <p>Eliminar los archivos enviados a la papelera los últimos 10 dias.</p>
-<p><code class="verbatim">trash-empty 10</code></p>
+<p><code>trash-empty 10</code></p>
 <h2 id="puedo-alias-rm-a-trash-put">¿Puedo alias rm a trash-put?</h2>
 <p>Si no me acuerdo de lo que hice ayer, menos me voy a acordar de esta magnífica aplicación. Así que para no borrar de una forma drástica mis archivos o carpetas y hacer uso de esta aplicación, he sustituido mediante el archivo de configuración <strong>.bashrc</strong>, que cuando ejecute el comando <strong>rm</strong>, en realidad ejecute el comando <strong>trash-put</strong> para que lo envie a la papelera.</p>
 <p>Para hacer esto, vamos ha hacer uso de los alias:</p>
 <p>Con tu editor de texto favorito en terminal, en este caso utilizaremos nano, añadiremos al final esta línea:</p>
-<p><code class="verbatim">nano ~/.bashrc</code></p>
+<p><code>nano ~/.bashrc</code></p>
 <pre><code>
 alias rm='trash-put'
 </code></pre>
@@ -117,6 +117,7 @@ alias rm='trash-put'
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

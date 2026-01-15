@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="conectarse-a-una-red-wifi-desde-la-terminal">Conectarse a una red Wifi desde la Terminal</h1>
+<h1 id="conectarse-a-una-red-wifi-desde-la-terminal" title="Conectarse a una red Wifi desde la Terminal" data-export_file_name="conectarse-a-una-red-wifi-desde-la-terminal" data-description="Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi.  Ha" data-export_date="2020-12-26 21:38" data-category="wifi" data-tag="terminal" data-image="./images-blog/wifi.png">Conectarse a una red Wifi desde la Terminal</h1>
 <p>Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi.  Ha</p>
 <p>sido muy sencillo volver a conectarme, utilizando la terminal.</p>
 <p>Como siempre he comentado,  aunque al principio puede dar un poco de</p>
@@ -65,14 +65,14 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>#+begin_example</p>
 <p>ip link sho | grep w</p>
 <p>#+end_example</p>
-<p>Antiguamente el resultado sería <code class="verbatim">wlan0=, ahora Ubuntu, Debian,... toma por defecto otro nombre aleatorio, en mi caso =wlp5s0=, pero vamos a considerar ahora en el tutorial que el nombre de mi dispositivo wifi es  =wlan0</code>.</p>
+<p>Antiguamente el resultado sería <code>wlan0</code>, ahora Ubuntu, Debian,... toma por defecto otro nombre aleatorio, en mi caso <code>wlp5s0</code>, pero vamos a considerar ahora en el tutorial que el nombre de mi dispositivo wifi es  <code>wlan0</code>.</p>
 <h2 id="activar-tu-tarjeta-wifi">Activar tu tarjeta Wifi</h2>
 <p>Para activar tu tarjeta wifi:</p>
 <p>#+begin_example</p>
 <p>sudo iwconfig wlan0</p>
 <p>#+end_example</p>
 <h2 id="conectarse-a-un-punto-de-acceso-wifi">Conectarse a un punto de acceso Wifi</h2>
-<p>Introduciremos este comando, sustituyendo <code class="verbatim">nombre_punto_acceso</code> por tu</p>
+<p>Introduciremos este comando, sustituyendo <code>nombre_punto_acceso</code> por tu</p>
 <p>nombre de acceso, en este caso sería el nombre de tu red Wifi.</p>
 <p>#+begin_example</p>
 <p>iwconfig wlan0 essid nombre<u>punto</u>acceso</p>

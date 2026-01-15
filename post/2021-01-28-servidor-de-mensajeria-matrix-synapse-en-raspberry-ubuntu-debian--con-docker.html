@@ -44,24 +44,24 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="servidor-de-mensajería-matrix-synapse-en-raspberry-ubuntu-debian-con-docker">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</h1>
+<h1 id="servidor-de-mensajería-matrix-synapse-en-raspberry-ubuntu-debian-con-docker" title="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker" data-export_file_name="servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker" data-description="Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. " data-export_date="2021-01-28 18:55" data-category="matrix" data-tag="mensajería" data-image="./images-blog/matrix.png">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</h1>
 <p>Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero <strong>black0</strong> ha creado una para todo tipo de arquitecturas, entre ellas ARM. </p>
 <p><img src="../images-blog/matrix.png" /></p>
-<p>El contenedor de <code class="verbatim">black0/synapse= se crea exactamente igual que con la  imagen oficial, =matrixdotorg/synapse</code>.</p>
-<p>He utilizado la versión <code class="verbatim">black0/synapse:v1.20.1</code>,  porque la versión <strong>latest</strong>, he visto que no tiene compatibilidad con arquitectura ARM,  en el momento de escribir este artículo.</p>
-<p>Si vas a instalarlo en un Ubuntu, Debian,... con arquitectura amd64, puedes utilizar la imagen oficial <code class="verbatim">matrixdotorg/synapse=. Sustituye en cada comando =black0/synapse:v1.20.1= por =matrixdotorg/synapse</code>.</p>
+<p>El contenedor de <code>black0/synapse</code> se crea exactamente igual que con la  imagen oficial, <code>matrixdotorg/synapse</code>.</p>
+<p>He utilizado la versión <code>black0/synapse:v1.20.1</code>,  porque la versión <strong>latest</strong>, he visto que no tiene compatibilidad con arquitectura ARM,  en el momento de escribir este artículo.</p>
+<p>Si vas a instalarlo en un Ubuntu, Debian,... con arquitectura amd64, puedes utilizar la imagen oficial <code>matrixdotorg/synapse</code>. Sustituye en cada comando <code>black0/synapse:v1.20.1</code> por <code>matrixdotorg/synapse</code>.</p>
 <h2 id="creando-archivos-de-configuración">Creando archivos de configuración</h2>
 <p>Vamos a utilizar la imagen con el comando <strong>generate</strong>, para generar el archivo de configuración de nuestro servidor matrix-synapse.</p>
-<p>Crearemos un volumen en la ruta <code class="verbatim">$HOME/docker/synapse-data</code>, dónde están los archivos de configuración.</p>
+<p>Crearemos un volumen en la ruta <code>$HOME/docker/synapse-data</code>, dónde están los archivos de configuración.</p>
 <p>Recuerda añadir en la variable <strong>SYNAPSE_SERVER_NAME</strong>,  la dirección de tu servidor.</p>
-<p>Voy a utilizar <code class="verbatim">matrix.ugeek.duckdns.org</code>, como dirección de ejemplo de mi servidor.</p>
+<p>Voy a utilizar <code>matrix.ugeek.duckdns.org</code>, como dirección de ejemplo de mi servidor.</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run -it --rm         -v $HOME<em>docker</em>synapse-data:<em>data         -e SYNAPSE_SERVER_NAME11yes         black0</em>synapse:v1.20.1 generate</p>
+<p>docker run -it --rm         -v $HOME/docker/synapse-data:/data         -e SYNAPSE<u>SERVER</u>NAME<code>matrix.ugeek.duckdns.org         -e SYNAPSE_REPORT_STATS</code>yes         black0/synapse:v1.20.1 generate</p>
 <p>#+END_EXAMPLE</p>
 <h2 id="crear-el-contenedor">Crear el Contenedor</h2>
 <p> Ahora que tenemos los archivos de configuración, vamos a crear el contenedor con el servidor.</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run -d --name matrix         -v $HOME<em>docker</em>synapse-data:<em>data         -p 8008:8008         black0</em>synapse:v1.20.1</p>
+<p>docker run -d --name matrix         -v $HOME/docker/synapse-data:/data         -p 8008:8008         black0/synapse:v1.20.1</p>
 <p>#+END_EXAMPLE</p>
 <p>Si todo ha salido correctamente, conectándonos a la dirección de nuestro servidor por el puerto 8008,  veremos una página de Matrix, conforme el servidor está disponible.</p>
 <h2 id="crear-contenedor-con-traefik">Crear contenedor con traefik</h2>
@@ -79,7 +79,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <ul>
 <li>web</li>
 <p>volumes:</p>
-<li>$HOME<em>docker</em>synapse-data:/data</li>
+<li>$HOME/docker/synapse-data:/data</li>
 <p>environment:</p>
 <li>SYNAPSE<u>NO</u>TLS=1  # La documentación dice si este valor es igual a 0, permite la federación</li>
 <li>SYNAPSE<u>SERVER</u>NAME=matrix.ugeek.duckdns.org</li>
@@ -107,9 +107,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 docker exec -it matrix register_new_matrix_user -u USUARIO&quot; -p &quot;CONTRASEÑA&quot; -a -c /data/homeserver.yaml https://midominio.duckdns.org 
 </code></pre>
 <p>Los usuarios hay que crearlos desde un cliente de Matrix (fluffy Chat, Element,...), en esta web hay un amplio listado para todos los sistemas operativos <a href="https://matrix.org/clients/">https://matrix.org/clients/</a>. Pero antes tenemos que habilitar la opción en el servidor.</p>
-<p>Para permitir el registro de usuarios, hay que editar el archivo <strong>homeserver.yaml</strong> y desmarcar la "<strong>#</strong>" habilitando <code class="verbatim">enable_registration: true</code>. </p>
+<p>Para permitir el registro de usuarios, hay que editar el archivo <strong>homeserver.yaml</strong> y desmarcar la "<strong>#</strong>" habilitando <code>enable_registration: true</code>. </p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>nano ~<em>docker</em>synapse-data/homeserver.yaml</p>
+<p>nano ~/docker/synapse-data/homeserver.yaml</p>
 <p>#+END_EXAMPLE</p>
 <p>Desmarcamos la opción <strong>enable_registration</strong> y ponemos <strong>true</strong>.</p>
 <p> </p>
@@ -134,6 +134,7 @@ docker exec -it matrix register_new_matrix_user -u USUARIO&quot; -p &quot;CONTRA
 <li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

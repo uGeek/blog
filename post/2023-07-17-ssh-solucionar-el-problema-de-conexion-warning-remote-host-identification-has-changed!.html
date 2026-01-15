@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="ssh-solucionar-el-problema-de-conexión-warning-remote-host-identification-has-changed">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</h1>
+<h1 id="ssh-solucionar-el-problema-de-conexión-warning-remote-host-identification-has-changed" title="SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" data-export_file_name="ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!" data-description="Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución" data-export_date="2023-07-17 06:55" data-category="ssh" data-tag="terminal" data-image="./images-blog/ugeek.png">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</h1>
 <p>Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución simple. Este error ocurre cuando la identificación del host remoto ha cambiado desde la última vez que te conectaste, lo que puede ser resultado de varios escenarios, como una reinstalación del sistema operativo del servidor o cambios en la configuración de red.</p>
 <p>Para solucionar este problema, puedes utilizar el comando ssh-keygen -R. Este comando es parte de OpenSSH y se utiliza para eliminar las claves de host anteriores almacenadas en el archivo known_hosts. A continuación, te mostraremos cómo utilizar este comando para solucionar el problema de conexión SSH.</p>
 <h2 id="paso-1-ejecuta-ssh-keygen-r">Paso 1: Ejecuta ssh-keygen -R</h2>
@@ -52,18 +52,18 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <pre><code class="language-sh">
 ssh-keygen -R angel@192.168.1.100
 </code></pre>
-<p>Este comando elimina la clave de host asociada con el nombre de usuario <code class="verbatim">angel= y la dirección IP =192.168.1.100= del archivo =known_hosts=. Asegúrate de reemplazar =angel@192.168.1.100</code> con el nombre de usuario y la dirección IP correspondientes del servidor SSH al que intentas conectarte.</p>
+<p>Este comando elimina la clave de host asociada con el nombre de usuario <code>angel</code> y la dirección IP <code>192.168.1.100</code> del archivo <code>known_hosts</code>. Asegúrate de reemplazar <code>angel@192.168.1.100</code> con el nombre de usuario y la dirección IP correspondientes del servidor SSH al que intentas conectarte.</p>
 <h2 id="paso-2-edita-el-archivo-knownhosts">Paso 2: Edita el archivo known_hosts</h2>
-<p>Después de ejecutar el comando <code class="verbatim">ssh-keygen -R=, es posible que aún encuentres el mismo error al intentar conectarte al servidor SSH. En ese caso, es posible que necesites editar manualmente el archivo =known_hosts</code>.</p>
-<p>Puedes utilizar tu editor de texto favorito, como <code class="verbatim">nano=, para editar el archivo =known_hosts</code>. Ejecuta el siguiente comando en la terminal:</p>
+<p>Después de ejecutar el comando <code>ssh-keygen -R</code>, es posible que aún encuentres el mismo error al intentar conectarte al servidor SSH. En ese caso, es posible que necesites editar manualmente el archivo <code>known_hosts</code>.</p>
+<p>Puedes utilizar tu editor de texto favorito, como <code>nano</code>, para editar el archivo <code>known_hosts</code>. Ejecuta el siguiente comando en la terminal:</p>
 <pre><code class="language-sh">
 nano ~/.ssh/known_hosts
 </code></pre>
-<p>Esto abrirá el archivo <code class="verbatim">known_hosts= en el editor de texto =nano</code>. Busca la línea que corresponda al servidor SSH al que intentas conectarte y elimínala. Luego guarda los cambios y cierra el editor de texto.</p>
+<p>Esto abrirá el archivo <code>known_hosts</code> en el editor de texto <code>nano</code>. Busca la línea que corresponda al servidor SSH al que intentas conectarte y elimínala. Luego guarda los cambios y cierra el editor de texto.</p>
 <h2 id="paso-3-intenta-conectarte-nuevamente">Paso 3: Intenta conectarte nuevamente</h2>
-<p>Una vez que hayas eliminado las claves de host anteriores utilizando <code class="verbatim">ssh-keygen -R= y hayas editado correctamente el archivo =known_hosts</code>, intenta conectarte nuevamente al servidor SSH. Deberías poder conectarte sin ver el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!".</p>
+<p>Una vez que hayas eliminado las claves de host anteriores utilizando <code>ssh-keygen -R</code> y hayas editado correctamente el archivo <code>known_hosts</code>, intenta conectarte nuevamente al servidor SSH. Deberías poder conectarte sin ver el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!".</p>
 <p>Recuerda que, al eliminar las claves de host anteriores, estás eliminando la capa de seguridad que brinda la verificación de la identidad del servidor. Siempre asegúrate de verificar la autenticidad del servidor antes de volver a conectarte, especialmente en entornos de red no confiables.</p>
-<p>En resumen, el comando <code class="verbatim">ssh-keygen -R= te permite eliminar las claves de host anteriores almacenadas en el archivo =known_hosts= y solucionar el problema de conexión SSH causado por un cambio en la identificación del host remoto. Además, puedes editar manualmente el archivo =known_hosts</code> si el problema persiste después de ejecutar el comando. Recuerda seguir las mejores prácticas de seguridad al conectarte a servidores SSH.</p>
+<p>En resumen, el comando <code>ssh-keygen -R</code> te permite eliminar las claves de host anteriores almacenadas en el archivo <code>known_hosts</code> y solucionar el problema de conexión SSH causado por un cambio en la identificación del host remoto. Además, puedes editar manualmente el archivo <code>known_hosts</code> si el problema persiste después de ejecutar el comando. Recuerda seguir las mejores prácticas de seguridad al conectarte a servidores SSH.</p>
 <p>Publicado por Angel el Monday 17 July del 2023</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -77,6 +77,7 @@ nano ~/.ssh/known_hosts
 <li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

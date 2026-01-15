@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-borrar-logs">Docker. Borrar logs</h1>
+<h1 id="docker-borrar-logs" title="Docker. Borrar logs" data-export_file_name="docker-borrar-logs" data-description="Si tienes Dockers funcionando desde hace mucho tiempo, es probable que los archivos con los logs sea muy grande, dependiendo del servicio puede llegar incluso a varios gigas." data-export_date="2022-12-22 18:35" data-category="docker" data-tag="logs" data-image="./images-blog/ugeek.png">Docker. Borrar logs</h1>
 <p>Si tienes muchos Dockers funcionando desde hace mucho tiempo, es probable que los archivos con sus logs sea muy grande, dependiendo del servicio puede llegar incluso a varios gigas.</p>
 <p>Si ya no tienes nada que consultar del pasado, quizás sería este el momento de borrarlos y empezar de nuevo.</p>
 <p>Vamos a ver un par de métodos de cómo hacerlo y añadirlos a tu cron, para que periódicamente se vaya autolimpiando y despreocuparnos.</p>
@@ -95,6 +95,7 @@ sudo sh -c &quot;truncate -s 0 /var/lib/docker/containers/*/*-json.log&quot;
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

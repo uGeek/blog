@@ -44,10 +44,10 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="los-paquetes-snap-no-aparecen-una-vez-instalados">Los paquetes snap no aparecen una vez instalados</h1>
+<h1 id="los-paquetes-snap-no-aparecen-una-vez-instalados" title="Los paquetes snap no aparecen una vez instalados" data-export_file_name="los-paquetes-snap-no-aparecen-una-vez-instalados" data-description="Ya sabéis que últimamente ando utilizando debian como distro principal tanto en mi PC como servidor. Aunque snap funciona perfectamente en Debian, es posible que no quede plenamente del todo" data-export_date="2019-12-04 17:55" data-category="snap" data-tag="ubuntu,debian" data-image="./images-blog/snap.png">Los paquetes snap no aparecen una vez instalados</h1>
 <p>Ya sabéis que últimamente ando utilizando debian como distro principal tanto en mi PC como servidor. Aunque snap funciona perfectamente en Debian, es posible que no quede plenamente del todo integrado y cuando instalas un snap, por ejemplo <strong>mumble</strong>, si lo escribes en tu terminal, <strong>no hay respuesta</strong>, la sensación que te queda es que no lo has instalado, pero realmente <strong>si</strong>.</p>
 <p><img src="../images-blog/snap.png" /></p>
-<p>Los ejecutables de los paquetes snap que instalamos, están situados en la carpeta <code class="verbatim">/snap/bin/=, así que sería tan sencillo como ejecutar en la terminal: =/snap/bin/mumble</code></p>
+<p>Los ejecutables de los paquetes snap que instalamos, están situados en la carpeta <code>/snap/bin/</code>, así que sería tan sencillo como ejecutar en la terminal: <code>/snap/bin/mumble</code></p>
 <p>La verdad, es que esto no queda del todo elegante. Lo ideal sería simplemente escribir <strong>mumble</strong>, como cualquier otra aplicación del propio sistema. Así que vamos a solucionar este pequeño problema</p>
 <h2 id="añadiendo-los-snaps-a-debian">Añadiendo los snaps a Debian</h2>
 <p>La solución es tan sencilla como añadir la final del archivo <strong>.bashrc</strong> o <strong>.zshrc</strong>, la siguiente línea:</p>
@@ -65,6 +65,7 @@ PATH=$PATH:/snap/bin
 <li><a href="https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html">Emacs siempre a la última versión, betas, edge... gracias a Snap</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html">Paquetes Snap</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

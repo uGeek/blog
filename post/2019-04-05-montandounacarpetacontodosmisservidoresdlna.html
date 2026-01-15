@@ -44,20 +44,20 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="montando-una-carpeta-con-todos-mis-servidores-dlna">Montando una carpeta con todos mis servidores dlna</h1>
+<h1 id="montando-una-carpeta-con-todos-mis-servidores-dlna" title="Montando una carpeta con todos mis servidores dlna" data-export_file_name="Montando una carpeta con todos mis servidores dlna" data-description="Vamos a montar en una carpeta de nuestro PC, todos los servidores dlna que haya en nuestra red local y acceder a todo el contenido a través de nuestro explorador de archivos o terminal igual que lo haríamos con cualquier otra carpeta de nuestro PC" data-export_date="2019-04-05 18:00" data-category="dlna" data-tag="servidor" data-image="./images-blog/dlna.png">Montando una carpeta con todos mis servidores dlna</h1>
 <p><img src="../images-blog/dlna.png" /></p>
 <p>Este es el cuarto Post de dlna, despues de:  <a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">monta tu servidor dlna</a>, <a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a> y <a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a>. En el último Post, donde os hablé de los clientes de escritorio, estoy seguro que llevaste decepción porque no podías utilizar con tu servidor <strong>dlna</strong> tu reproductor de música favorito. También la <strong>no</strong> posibilidad de poder descargar todas tus canciones o contenido multimedia, a través de tu servidor dlna para tenerlo en local. En el Post de hoy, vamos a solucionar todo esto montando en una carpeta de nuestro PC, <strong>todos los servidores dlna</strong> que haya en nuestra red local y acceder a todo el contenido a través de nuestro explorador de archivos o terminal, igual que lo haríamos con cualquier otra carpeta de nuestro PC.</p>
 <p>Lo mejor de todo, es que es súper sencillo de instalar. Vamos a utilizar <strong>djmount</strong></p>
 <h2 id="instalación-de-djmount">Instalación de djmount</h2>
 <p>Podemos instalarlo desde los repositorios oficiales de cualquier distro con solo una línea de terminal:</p>
-<p><code class="verbatim">sudo apt install djmount</code></p>
+<p><code>sudo apt install djmount</code></p>
 <p>Creamos la carpeta donde queramos montar todos los servidores <strong>dlna</strong> que hayan en nuestra red local. En mi caso voy a crear la carpeta <strong>~/dlna</strong>:</p>
-<p><code class="verbatim">mkdir ~/dlna</code></p>
+<p><code>mkdir ~/dlna</code></p>
 <h2 id="montando-y-desmontando-mi-carpeta-dlna">Montando y desmontando mi carpeta dlna</h2>
 <p>Para montar la carpeta donde estarán todos los servidores <strong>dlna</strong>, tan simple como:</p>
-<p><code class="verbatim">djmount ~/dlna</code></p>
+<p><code>djmount ~/dlna</code></p>
 <p>Para desmontar:</p>
-<p><code class="verbatim">fusermount -u ~/dlna</code></p>
+<p><code>fusermount -u ~/dlna</code></p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Como ves, cada Post que voy publicando sobre <strong>dlna</strong>, te vas dando cuenta que montar el servidor multimedia <strong>minidlna</strong>, súper ligero y muy sencillo de configurar, no es ninguna tontería y vale muy mucho la pena. Es una forma de tener todo tu contenido multimedia centralizado y con aplicaciones como <strong>djmount</strong>, podemos acceder a todo el contenido, sin correr riesgo de borrar ningún archivo.</p>
 <p>Publicado por Angel el Friday 05 April del 2019</p>
@@ -67,6 +67,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2019-02-16-cliente-dlna-para-tu-escritorio.html">Cliente dlna para tu escritorio</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">Crear listas m3u para minidlna o vlc</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">minidlna</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

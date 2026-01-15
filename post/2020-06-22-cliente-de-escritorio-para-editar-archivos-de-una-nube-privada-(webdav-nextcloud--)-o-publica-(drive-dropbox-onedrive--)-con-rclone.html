@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-webdav-nextcloud-o-pública-drive-dropbox-onedrive-con-rclone">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</h1>
+<h1 id="cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-webdav-nextcloud-o-pública-drive-dropbox-onedrive-con-rclone" title="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone" data-export_file_name="cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone" data-description="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt." data-export_date="2020-06-22 22:22" data-category="rclone" data-tag="webdav,nextcloud,dropbox,nube,ssh" data-image="./images-blog/rclone.png">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</h1>
 <p>Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt.</p>
 <p>Para ello, aunque existe otros clientes webdav, me ha parecido más simple y eficaz utilizar rclone.</p>
 <p>Esto podremos hacerlo con cualquier nube pública, privada, como Webdav, Nextcloud, Dropbox, Google Drive, OneDrive,... SSH, SFTP,... vamos, todas las opciones disponibles con Rclone.</p>
@@ -60,7 +60,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="descomenta-allow-others">Descomenta --allow-others</h2>
 <p>Descomenta la línea --allow-others, para permitir a usuarios no root, montar unidades</p>
 <p>#+begin_example</p>
-<p>sudo nano <em>etc</em>fuse.conf</p>
+<p>sudo nano /etc/fuse.conf</p>
 <p>#+end_example</p>
 <p>Descomenta --allow-others</p>
 <p>#+begin_example</p>
@@ -69,7 +69,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>#+end_example</p>
 <p>Reinicia</p>
 <h2 id="montando-la-nube">Montando la nube</h2>
-<p>Tan sencillo como utilizar <code class="verbatim">rclone mount</code>.</p>
+<p>Tan sencillo como utilizar <code>rclone mount</code>.</p>
 <p>#+begin_example</p>
 <p>rclone mount drive:org ~/org</p>
 <p>#+end_example</p>
@@ -84,9 +84,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>#+end_example</p>
 <p>Añadímos la siguiente línea</p>
 <p>#+begin_example</p>
-<p>@reboot ( sleep 25 &amp;&amp; nohup rclone mount drive:org <em>home</em>angel<em>org --vfs-cache-mode full -v --allow-other  2&gt;</em>dev/null &amp; )</p>
+<p>@reboot ( sleep 25 &amp;&amp; nohup rclone mount drive:org /home/angel/org --vfs-cache-mode full -v --allow-other  2&gt;/dev/null &amp; )</p>
 <p>#+end_example</p>
-<p>Este comando en crontab, indica que cada vez que iniciamos el sistema operativo, con <code class="verbatim">@reboot=, esperará 25 segundos y montará la nube que tengo en rclone con el nombre =drive:org=, en la carpeta =~/org</code>.</p>
+<p>Este comando en crontab, indica que cada vez que iniciamos el sistema operativo, con <code>@reboot</code>, esperará 25 segundos y montará la nube que tengo en rclone con el nombre <code>drive:org</code>, en la carpeta <code>~/org</code>.</p>
 <p><strong>nohup</strong> y <strong>2&gt;/dev/null</strong>, envía a esta posición de memoria el resultado que muestra la terminal, una posición de memoria que tiene nuestro sistema operativo precisamente para no mostrar nada en terminal.</p>
 <p><strong>&amp;</strong>, dejará corriendo el comando indefinidamente, a no ser que lo detengamos nosotros.</p>
 <p><strong>--vfs-cache-mode full</strong>, activa la caché de lectura y escritura</p>
@@ -107,6 +107,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2020-03-26-rclone-bidireccional-con-rclonesync.html">Rclone bidireccional con Rclonesync</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html">Instalando, Compilando el última versión de Rclone-Browser</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

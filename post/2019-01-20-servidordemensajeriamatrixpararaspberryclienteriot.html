@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="servidor-de-mensajería-matrix-para-raspberry-cliente-riot">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h1>
+<h1 id="servidor-de-mensajería-matrix-para-raspberry-cliente-riot" title="Servidor de Mensajería Matrix para Raspberry. Cliente Riot" data-export_file_name="Servidor de Mensajeria Matrix para Raspberry Cliente Riot" data-description="Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor." data-export_date="2019-01-20 19:26" data-category="mensajeria" data-tag="servidor, raspberry" data-image="./images-blog/ugeek.png">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h1>
 <p>Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.</p>
 <p>Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos.</p>
 <p>Características:</p>
@@ -74,11 +74,11 @@ pip install --upgrade setuptools
 pip install https://github.com/matrix-org/synapse/tarball/master
 </code></pre>
 <p>Instala también el modulo para synapse.app.</p>
-<p><code class="verbatim">pip install (--upgrade) synapseclient</code></p>
+<p><code>pip install (--upgrade) synapseclient</code></p>
 <h2 id="configurar-synapse">CONFIGURAR SYNAPSE</h2>
 <p>    Recuerda sustituir el nombre del servidor <strong>my.domain.name</strong></p>
 <p>    En –report-stats= tienes que seleccionar <strong>yes o no</strong>.</p>
-<p><code class="verbatim">cd ~/.synapse</code></p>
+<p><code>cd ~/.synapse</code></p>
 <pre><code>
 python2.7 -B -m synapse.app.homeserver \
     --server-name=my.domain.name \
@@ -90,19 +90,19 @@ python2.7 -B -m synapse.app.homeserver \
 <ol>
 <li>Nos situamos en la carpeta de <strong>synapse</strong></li>
 </ol>
-<p><code class="verbatim">cd ~/.synapse</code></p>
+<p><code>cd ~/.synapse</code></p>
 <ol>
 <li>Iniciar el servidor</li>
 </ol>
-<p><code class="verbatim">source ./bin/activate ; synctl start</code></p>
+<p><code>source ./bin/activate ; synctl start</code></p>
 <p>La Terminal nos devolverá que por el puerto 8008, encontraremos una inferfaz de gestión. Esta es antigua, <strong>no te recomiendo que la uses</strong>, te recomiendo crear ususarios mediante el comando que veremos mas adelante.</p>
 <p><strong>Detener el servicio, si lo deseamos:</strong></p>
-<p><code class="verbatim">source ./bin/activate ; synctl stop</code></p>
+<p><code>source ./bin/activate ; synctl stop</code></p>
 <p>CREAR USUARIOS</p>
 <p>Iniciamos el servidor y situándonos dentro del directorio <strong>.synapse</strong></p>
-<p><code class="verbatim">cd ~/.synapse</code></p>
+<p><code>cd ~/.synapse</code></p>
 <p>Ejecutaremos el siguiente comando:</p>
-<p><code class="verbatim">register_new_matrix_user -c homeserver.yaml https://localhost:8448</code></p>
+<p><code>register_new_matrix_user -c homeserver.yaml https://localhost:8448</code></p>
 <p>Ahora nos preguntará por el usuario, contraseña y si este usuario es administrador o no.</p>
 <h2 id="utilizar-el-cliente-riot">UTILIZAR EL CLIENTE RIOT</h2>
 <p><img src="../images-blog/riot.png" /></p>
@@ -124,6 +124,7 @@ python2.7 -B -m synapse.app.homeserver \
 <li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

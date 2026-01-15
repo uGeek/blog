@@ -44,17 +44,17 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="cliente-dlna-para-tu-escritorio">Cliente dlna para tu escritorio </h1>
+<h1 id="cliente-dlna-para-tu-escritorio" title="Cliente dlna para tu escritorio" data-export_file_name="Cliente dlna para tu escritorio" data-description="Ya os expliqué como crear tu servidor dlna en raspberry o servidor Linux y como crear listas en m3u para el servidor, ahora tocaría el poder utilizar un cliente dlna en tu escritorio. Tenemos muchas aplicaciones para movil, smart TV,... pero, ¿Para escritorio?, no tendría sentido el montar un servidor multimedia solo para movil, tabletas y Tv. La verdad, es que escasean para escritorio, pero gracias a aplicaciones como Rhythmbox y sus plugins, podemos utilizar dlna de un modo muy sencillo. Aquí os explico como hacerlo" data-export_date="2019-02-16 20:30" data-category="servidor" data-tag="dlna" data-image="./images-blog/rhythmbox.png">Cliente dlna para tu escritorio </h1>
 <p><img src="../images-blog/rhythmbox.png" /></p>
 <p>Ya os expliqué como <a href="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html">crear tu servidor dlna en raspberry o servidor Linux</a> y <a href="https://ugeek.github.io/blog/post/2019-01-02-crear-listas-m3u-para-minidlna-o-vlc.html">como crear listas en m3u para el servidor</a>, ahora tocaría el poder utilizar un cliente dlna en tu escritorio. Tenemos muchas aplicaciones para movil, smart TV,... pero, ¿Para escritorio?, no tendría sentido el montar un servidor multimedia solo para movil, tabletas y Tv. La verdad, es que escasean para escritorio, pero gracias a aplicaciones como <a href="https://wiki.gnome.org/Apps/Rhythmbox">Rhythmbox</a> y sus plugins, podemos utilizar dlna de un modo muy sencillo. Aquí os explico como hacerlo:</p>
 <h2 id="instalaremos-rhythmbox">Instalaremos Rhythmbox</h2>
-<p><code class="verbatim">sudo apt install rhythmbox</code></p>
+<p><code>sudo apt install rhythmbox</code></p>
 <p>Una vez instalado, en los menús, accederemos a: <strong>Herramientas -&gt; Complementos</strong>, habilitaremos marcando el checklist: <strong>Explorador de medios Grilo</strong></p>
 <h2 id="instalando-en-tu-distro">Instalando en tu distro</h2>
 <p>Buscamos los plugins de Grilo en nuestra distro:</p>
-<p><code class="verbatim">sudo apt search grilo-plugins</code></p>
+<p><code>sudo apt search grilo-plugins</code></p>
 <p>En Ubuntu 18.04, nos aparece <strong>grilo-plugins-0.3</strong>, dependerá la versión de que distro tengamos instalada. Instala la que tengas:</p>
-<p><code class="verbatim">sudo apt install grilo-plugins-0.3</code></p>
+<p><code>sudo apt install grilo-plugins-0.3</code></p>
 <p>Ahora si abrimos Rhythmbox, tendría que aparecer nuestro servidor.</p>
 <h2 id="vlc">VLC</h2>
 <p><img src="../images-blog/vlc.png" /></p>
@@ -77,6 +77,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

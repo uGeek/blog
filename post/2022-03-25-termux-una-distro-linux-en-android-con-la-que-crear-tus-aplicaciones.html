@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones">Termux. Una distro Linux en Android con la que crear tus aplicaciones</h1>
+<h1 id="termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones" title="Termux. Una distro Linux en Android con la que crear tus aplicaciones" data-export_file_name="termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones" data-description="Termux es una aplicación que podemos instalar desde [[https://f-droid.org/repository/browse/?fdid=com.termux][F-Droid]] con la que podemos correr una distro Linux dentro de Android." data-export_date="2022-03-25 22:50" data-category="termux" data-tag="android,linux" data-image="./images-blog/Termux._Una_distro_Linux_en_Android_con_la_que_crear_tus_aplicaciones.png">Termux. Una distro Linux en Android con la que crear tus aplicaciones</h1>
 <p>Termux es una aplicación que podemos instalar desde <a href="https://f-droid.org/repository/browse/?fdid=com.termux">F-Droid</a> con la que podemos correr una distro Linux dentro de Android.</p>
 <p><img src="../images-blog/Termux._Una_distro_Linux_en_Android_con_la_que_crear_tus_aplicaciones.png" /></p>
 <p>Vamos a ver muchas de las posibilidades disponibles para poder correr nuestro scripts favoritos dentro de Android.</p>
@@ -57,28 +57,28 @@ pkg upgrade
 <pre><code class="language-sh">
 termux-setup-storage
 </code></pre>
-<p>Vamos ha hacer un <code class="verbatim">ls</code> para listar todos nuestro archivos y directorios:</p>
+<p>Vamos ha hacer un <code>ls</code> para listar todos nuestro archivos y directorios:</p>
 <pre><code class="language-sh">
 ls storage/shared
 </code></pre>
-<h2 id="usr-bin"><em>usr </em>bin ...</h2>
-<p>Termux no sigue el estándar de jerarquía a diferencia de la mayoría de las distribuciones de Linux. No puede encontrar directorios como <em>bin, </em>etc, <em>usr, </em>tmp y otros en las ubicaciones habituales.</p>
-<p>Para los scripts con <code class="verbatim">#!/bin/sh</code> es posible que sea necesario ejecutar:</p>
+<h2 id="usr-bin">/usr /bin ...</h2>
+<p>Termux no sigue el estándar de jerarquía a diferencia de la mayoría de las distribuciones de Linux. No puede encontrar directorios como /bin, /etc, /usr, /tmp y otros en las ubicaciones habituales.</p>
+<p>Para los scripts con <code>#!/bin/sh</code> es posible que sea necesario ejecutar:</p>
 <pre><code class="language-sh">
 termux-fix-shebang
 </code></pre>
-<p>Las últimas versiones traen un paquete <code class="verbatim">termux-exec</code> que permite el uso de she-bangs estándar.</p>
-<p>Termux-exec permite ejecutar scripts con shebangs para estructuras de archivos Unix tradicionales. Así que shebangs como <code class="verbatim">#!/bin/sh=y =#!/usr/bin/env python</code> deberían poder ejecutarse sin <a href="https://wiki.termux.com/wiki/Termux-fix-shebang">termux-fix-shebang</a>.</p>
+<p>Las últimas versiones traen un paquete <code>termux-exec</code> que permite el uso de she-bangs estándar.</p>
+<p>Termux-exec permite ejecutar scripts con shebangs para estructuras de archivos Unix tradicionales. Así que shebangs como <code>#!/bin/sh</code>y <code>#!/usr/bin/env python</code> deberían poder ejecutarse sin <a href="https://wiki.termux.com/wiki/Termux-fix-shebang">termux-fix-shebang</a>.</p>
 <pre><code class="language-sh">
 termux-exec
 </code></pre>
 <h3 id="directorios-clásicos">Directorios clásicos</h3>
-<p>Si quieres que un script se ejecute en la ruta <code class="verbatim">/usr/bin</code> o simplemente quieres disponer de la estructura de directorios clásicos, ejecuta los siguientes comandos:</p>
+<p>Si quieres que un script se ejecute en la ruta <code>/usr/bin</code> o simplemente quieres disponer de la estructura de directorios clásicos, ejecuta los siguientes comandos:</p>
 <pre><code class="language-sh">
 pkg install proot
 termux-chroot
 </code></pre>
-<p>Ahora si hacemos un <code class="verbatim">ls</code>, veremos la estructura</p>
+<p>Ahora si hacemos un <code>ls</code>, veremos la estructura</p>
 <pre><code class="language-sh">
 ls /usr
 bin  doc  etc  include  lib  libexec  share  tmp  var
@@ -107,35 +107,35 @@ crontab -e
 pkg install termux-api
 </code></pre>
 <h3 id="comparte-con-termux-y-ejecuta-un-script">Comparte con termux y ejecuta un script</h3>
-<p>Si compartimos un enlace con termux, termux ejecutará el script <code class="verbatim">~/bin/termux-url-opener= y añadirá aquello que compartamos en la variable =$1</code>.</p>
+<p>Si compartimos un enlace con termux, termux ejecutará el script <code>~/bin/termux-url-opener</code> y añadirá aquello que compartamos en la variable <code>$1</code>.</p>
 <p>Así que en el script <strong>termux-url-opener</strong> tendremos que crear un menú o procesar aquello que compartamos.</p>
-<p>Hay que crear el directorio <code class="verbatim">~/bin= con el archivo dentro =termux-url-opener= y darle permisos de ejecución, *si no no funcionará*, con =chmod +x</code>.</p>
+<p>Hay que crear el directorio <code>~/bin</code> con el archivo dentro <code>termux-url-opener</code> y darle permisos de ejecución, <strong>si no no funcionará</strong>, con <code>chmod +x</code>.</p>
 <p>Termux es capaz de capturar varios intentos y ejecutar scripts de shell para actuar sobre ellos:</p>
 <ul>
 <li>Compartir archivos individuales con Termux.\</li>
-<p>Se ejecutará el siguiente identificador: <code class="verbatim">~/bin/termux-file-editor</code></p>
+<p>Se ejecutará el siguiente identificador: <code>~/bin/termux-file-editor</code></p>
 </ul>
 <ul>
 <li>Abriendo en su editor popular usando un enlace simbólico:\</li>
-<p><code class="verbatim">ln -s $PREFIX/bin/nvim ~/bin/termux-file-editor</code></p>
+<p><code>ln -s $PREFIX/bin/nvim ~/bin/termux-file-editor</code></p>
 <li>Crear un identificador creando un archivo y cambiando los derechos de acceso:</li>
 </ul>
 <ol>
-<li><code class="verbatim">nano ~/bin/termux-file-editor</code>)</li>
-<li><code class="verbatim">chmod +x ~/bin/termux-file-editor</code>)</li>
+<li><code>nano ~/bin/termux-file-editor</code>)</li>
+<li><code>chmod +x ~/bin/termux-file-editor</code>)</li>
 </ol>
 <ul>
 <li>Uso compartido de URL disponible en aplicaciones comunes (por ejemplo, Youtube).\</li>
-<p>Se ejecutará el siguiente identificador: <code class="verbatim">~/bin/termux-url-opener</code></p>
+<p>Se ejecutará el siguiente identificador: <code>~/bin/termux-url-opener</code></p>
 </ul>
 <ul>
 <li>Compartir una URL para ser descargada.\</li>
 <p>Puede manejar la URL entrante editando el contenido.\</p>
-<p><code class="verbatim">yoursth-dl -f 'bestvideo[ext=mp4][height&lt;=720]+bestaudio' --restrict-filenames -o '~/storage/downloads/%(title)s-%(id)s.%(ext)s' $1</code></p>
+<p><code>yoursth-dl -f 'bestvideo[ext</code>mp4][height&lt;<code>720]+bestaudio' --restrict-filenames -o '~/storage/downloads/%(title)s-%(id)s.%(ext)s' $1</code></p>
 </ul>
 <p><a href="https://wiki.termux.com/wiki/Intents_and_Hooks">Fuente: Intenciones y Hooks - Termux Wiki</a></p>
 <h3 id="cuadro-de-dialogo">Cuadro de dialogo</h3>
-<p>Si ejecutamos <code class="verbatim">termux-dialog</code> en la terminal, nos abrirá un cuadro de dialogo, para introducir algún valor, texto, etc....</p>
+<p>Si ejecutamos <code>termux-dialog</code> en la terminal, nos abrirá un cuadro de dialogo, para introducir algún valor, texto, etc....</p>
 <h3 id="mostrar-texto-en-pantalla">Mostrar texto en pantalla</h3>
 <p>Puedes mostrar un texto en pantalla. Hay muchas opciones de color, etc... Si quieres profundizar visita la wiki de termux en <a href="https://wiki.termux.com/wiki/Termux-toast">https://wiki.termux.com/wiki/Termux-toast</a>.</p>
 <pre><code class="language-sh">
@@ -213,9 +213,9 @@ ALARM, MUSIC, NOTIFICATION, RING, SYSTEM, VOICE_CALL
 <h2 id="termux-widget">Termux Widget</h2>
 <p>Descarga el complemento de en <a href="https://f-droid.org/en/packages/com.termux.widget">F-Droid</a></p>
 <p>Es un de complemento de Termux para ejecutar scripts en Termux con accesos directos y widgets del iniciador.</p>
-<p>Los scripts que dejemos en la ruta <code class="verbatim">~/.shortcuts/</code>, se visualizará en el Widget.</p>
-<p>Las tareas que se ejecutaran, están en la ruta <code class="verbatim">~/.shortcuts/tasks</code></p>
-<p>los iconos se almacenan en <code class="verbatim">~/.shortcuts/icons= que se usará para un script cuando se cree un acceso directo del iniciador para la versión =&gt;= 0.12=. El nombre del archivo del icono debe ser igual a =&lt;script_name&gt;.png=, por ejemplo =script.sh.png=. Para =1080p= =~6in=pantalla, algo como =96x96px= =png=el archivo probablemente debería estar bien, de lo contrario intente =144px=o =196px</code>para pantallas de mayor resolución.</p>
+<p>Los scripts que dejemos en la ruta <code>~/.shortcuts/</code>, se visualizará en el Widget.</p>
+<p>Las tareas que se ejecutaran, están en la ruta <code>~/.shortcuts/tasks</code></p>
+<p>los iconos se almacenan en <code>~/.shortcuts/icons</code> que se usará para un script cuando se cree un acceso directo del iniciador para la versión <code>&gt;</code> 0.12<code>. El nombre del archivo del icono debe ser igual a </code>&lt;script_name&gt;.png<code>, por ejemplo </code>script.sh.png<code>. Para </code>1080p= <code>~6in</code>pantalla, algo como <code>96x96px</code> <code>png</code>el archivo probablemente debería estar bien, de lo contrario intente <code>144px</code>o <code>196px</code>para pantallas de mayor resolución.</p>
 <h2 id="complementos-disponibles">Complementos disponibles</h2>
 <h2 id="complementos">Complementos</h2>
 <p>Termux tiene algunas características adicionales. Puede agregarlos instalando complementos:</p>
@@ -240,6 +240,7 @@ ALARM, MUSIC, NOTIFICATION, RING, SYSTEM, VOICE_CALL
 <p>También te puede interesar:</p>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html">Termux. Una distro Linux en Android con la que crear tus aplicaciones</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

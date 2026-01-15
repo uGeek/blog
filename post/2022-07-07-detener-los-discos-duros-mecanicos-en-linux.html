@@ -44,10 +44,10 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="detener-el-discos-duros-mecánicos-en-linux">Detener el discos duros mecánicos en Linux</h1>
+<h1 id="detener-el-discos-duros-mecánicos-en-linux" title="Detener los discos duros mecánicos en Linux" data-export_file_name="detener-los-discos-duros-mecanicos-en-linux" data-description="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene" data-export_date="2022-07-07 05:15" data-category="hdd" data-tag="discos_duros" data-image="./images-blog/ugeek.png">Detener el discos duros mecánicos en Linux</h1>
 <p>Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene un alto consumo de energía innecesario y deterioro de las piezas mecánicas.</p>
 <p> </p>
-<p>Los discos duros modernos ya incluyen un modo de espera precisamente para esta función. Hay discos como la serie <em>1</em> que el modo de espera de fábrica es o era de 8 segundos, esto reducía la vida del disco. </p>
+<p>Los discos duros modernos ya incluyen un modo de espera precisamente para esta función. Hay discos como la serie /<strong>Western Digital Green</strong>/ que el modo de espera de fábrica es o era de 8 segundos, esto reducía la vida del disco. </p>
 <p> </p>
 <p>Así que como mínimo es recomendable un tiempo de espera de 30 segundos una vez hecha la lectura o escritura. No tiene sentido si vamos ha hacer lecturas y escrituras en un breve espacio de tiempo, tener que estar deteniendo el disco duro ya que reduce también su vida útil.</p>
 <p> </p>
@@ -56,8 +56,8 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p> </p>
 <ul>
 <li>3,5 (w) - 4 (w) = Raspberry Pi + SSD</li>
-<li>4,5 (w) - 5 (w) = Raspberry Pi + SSD + Disco Duro mecánico de 2.5 pulgadas <strong>detenido</strong></li>
-<li>5,5 (w) - 6 (w) = Raspberry Pi + SSD + Disco Duro mecánico de 2.5 pulgadas <strong>en funcionamiento</strong></li>
+<li>4,5 (w) - 5 (w) = Raspberry Pi <del> SSD </del> Disco Duro mecánico de 2.5 pulgadas <strong>detenido</strong></li>
+<li>5,5 (w) - 6 (w) = Raspberry Pi <del> SSD </del> Disco Duro mecánico de 2.5 pulgadas <strong>en funcionamiento</strong></li>
 </ul>
 <p> </p>
 <h2 id="instalación-de-hdparm">Instalación de hdparm</h2>
@@ -91,17 +91,17 @@ sudo hdparm -y /dev/sdb
 <p>El tiempo máximo y mínimo va de 1-255 minutos.</p>
 <p> </p>
 <h3 id="desactivar-el-modo-de-espera">Desactivar el modo de espera</h3>
-<p>Para desactivar el modo espera, utilizaremos la opción <code class="verbatim">-s 0</code></p>
+<p>Para desactivar el modo espera, utilizaremos la opción <code>-s 0</code></p>
 <pre><code class="language-sh">
 sudo hdparm -s 0 /dev/sdb
 </code></pre>
 <p> </p>
 <h3 id="activar-modo-espera">Activar modo espera</h3>
-<p>Para activar el modo espera, utilizaremos la opción <code class="verbatim">-s 1</code></p>
+<p>Para activar el modo espera, utilizaremos la opción <code>-s 1</code></p>
 <pre><code class="language-sh">
 sudo hdparm --yes-i-know-what-i-am-doing -s 1 /dev/sdb
 </code></pre>
-<p>La opción <code class="verbatim">--yes-i-know-what-i-am-doing</code> es necesaria añadirla para una verificación de compatibilidad modo espera adicional de la BIOS y el firmware del disco duro</p>
+<p>La opción <code>--yes-i-know-what-i-am-doing</code> es necesaria añadirla para una verificación de compatibilidad modo espera adicional de la BIOS y el firmware del disco duro</p>
 <p> </p>
 <h2 id="comprobar-el-estado-en-el-que-está-el-disco-duro">Comprobar el estado en el que está el disco duro</h2>
 <p> </p>
@@ -126,6 +126,7 @@ sudo smartctl -i -n standby /dev/sdb
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-07-07-detener-los-discos-duros-mecanicos-en-linux.html">Detener los discos duros mecánicos en Linux</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

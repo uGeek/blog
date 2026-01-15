@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="bot-matrix-en-bash">Bot Matrix en Bash</h1>
+<h1 id="bot-matrix-en-bash" title="Bot Matrix en Bash" data-export_file_name="bot-matrix-en-bash" data-description="Si has montado tu servidor Matrix, probablemente quieras tener publicaciones automatizadas de algunos de tus scripts, proyectos, etcétera..." data-export_date="2022-01-26 10:00 2023-02-06" data-category="matrix" data-tag="synapse,bot,bash" data-image="./images-blog/matrix.png">Bot Matrix en Bash</h1>
 <p>Si has montado tu servidor Matrix, probablemente quieras tener publicaciones automatizadas de algunos de tus scripts, proyectos, etcétera...</p>
 <p><img src="../images-blog/matrix.png" /></p>
 <p>He encontrado un repositorio en Github dónde hay publicado un script en bash llamado matrix.sh, que permite hacer esto de un modo sencillo y además utiliza la sintaxis <strong>html</strong> para enriquecer el texto.</p>
@@ -59,13 +59,13 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </ul>
 <h2 id="instalación">Instalación</h2>
 <p>Descargamos el script del <a href="https://github.com/fabianonline/matrix.sh">repositorio de GitHub</a>. Hay otro <a href="https://github.com/Bash-Projects/matrix.sh">repositorio por si se elimina el proyecto original</a>.</p>
-<p>Tenemos que instalar las dependencias <code class="verbatim">curl= y =jq</code></p>
-<p>En <strong>Ubuntu</strong>, <strong>Debian</strong> <code class="verbatim">, ...</code></p>
+<p>Tenemos que instalar las dependencias <code>curl</code> y <code>jq</code></p>
+<p>En <strong>Ubuntu</strong>, <strong>Debian</strong> <code>, ...</code></p>
 <pre><code class="language-sh">
 sudo apt-get install curl jq
 </code></pre>
 <p>A mi personalmente me gusta instalar los scripts en el sistema. De esta manera, no tengo que recordar donde están.</p>
-<p>Vamos a crear un enlace simbólico para que cuando escriba en la terminal <code class="verbatim">matrix</code>, se ejecute el script.</p>
+<p>Vamos a crear un enlace simbólico para que cuando escriba en la terminal <code>matrix</code>, se ejecute el script.</p>
 <pre><code class="language-sh">
 sudo ln -s /home/angel/scripts/matrix.sh/matrix.sh /usr/bin/matrix
 </code></pre>
@@ -76,13 +76,13 @@ sudo ln -s /home/angel/scripts/matrix.sh/matrix.sh /usr/bin/matrix
 <pre><code class="language-sh">
 matrix --login
 </code></pre>
-<p>El token quedará guardado en <code class="verbatim">~/.matrix.sh</code>. Si ya existe, se sobrescribirá. Dado que el contenido de este archivo permite acceder a tu servidor doméstico, debe mantener su contenido en secreto. Por tanto, se creará con el modo de acceso 600.</p>
-<p>El inicio de sesión también establece un nombre para el dispositivo que estas utilizando para conectarse. Por defecto, esto es <code class="verbatim">&lt;user&gt;@&lt;host&gt; using matrix.sh=, pero puede establecer otro nombre usando el =--identifier</code>opción:</p>
+<p>El token quedará guardado en <code>~/.matrix.sh</code>. Si ya existe, se sobrescribirá. Dado que el contenido de este archivo permite acceder a tu servidor doméstico, debe mantener su contenido en secreto. Por tanto, se creará con el modo de acceso 600.</p>
+<p>El inicio de sesión también establece un nombre para el dispositivo que estas utilizando para conectarse. Por defecto, esto es <code>&lt;user&gt;@&lt;host&gt; using matrix.sh</code>, pero puede establecer otro nombre usando el <code>--identifier</code>opción:</p>
 <pre><code class="language-sh">
 matrix --login --identifier=&quot;linux server @home&quot;
 </code></pre>
 <h2 id="error-en-manjaro-solución-al-comando-hostname">Error en Manjaro, solución al comando hostname</h2>
-<p>He visto que el comando <code class="verbatim">hostname</code> no está disponible en Manjaro. La verdad es que no he encontrado a que paquete pertenece.</p>
+<p>He visto que el comando <code>hostname</code> no está disponible en Manjaro. La verdad es que no he encontrado a que paquete pertenece.</p>
 <p>Así que lo he solucionado de una forma cutre pero que funciona.</p>
 <p>Crea un script con el siguiente contenido:</p>
 <pre><code>
@@ -98,7 +98,7 @@ cat /etc/hostname
 <pre><code>
 sudo ln -s ~/hostname/hostname /usr/bin/hostname
 </code></pre>
-<p>Cuando ejecutemos el comando <strong>hostname</strong>, hará un <strong>cat</strong> de la ruta <code class="verbatim">/etc/hostname</code>, que es el nombre de hostname.</p>
+<p>Cuando ejecutemos el comando <strong>hostname</strong>, hará un <strong>cat</strong> de la ruta <code>/etc/hostname</code>, que es el nombre de hostname.</p>
 <h2 id="selecciona-una-sala">Selecciona una Sala</h2>
 <p>Con nuestro usuario, podemos agregar el bot a una sala, pero el bot tiene que aceptar formar parte de ella. Vamos a aceptar estar dentro de la sala.</p>
 <p>Listamos salas a donde esté nuestro bot.</p>
@@ -109,7 +109,7 @@ matrix  --list-rooms
 <pre><code class="language-sh">
 matrix --join-room
 </code></pre>
-<p>Recuerda que tanto el <strong>Token</strong> como los <strong>ID</strong> de las salas, quedará en el archivo de configuración <code class="verbatim">~/.matrix.sh</code></p>
+<p>Recuerda que tanto el <strong>Token</strong> como los <strong>ID</strong> de las salas, quedará en el archivo de configuración <code>~/.matrix.sh</code></p>
 <p>La estructura del archivo, quedaría así:</p>
 <pre><code>
 MATRIX_TOKEN=&quot;fsTYVEYSHnu73490765623sIM&quot;
@@ -131,12 +131,12 @@ matrix --homeserver=https://matrix.org --token=abcdefg --room=!2o587thjlgjHUIUHn
 <pre><code class="language-sh">
 matrix  &quot;este es mi primer mensaje&quot;
 </code></pre>
-<p>También podemos utilizar la opción <code class="verbatim">--send</code>, aunque no es necesario introducirla:</p>
+<p>También podemos utilizar la opción <code>--send</code>, aunque no es necesario introducirla:</p>
 <pre><code class="language-sh">
 matrix  --send &quot;este es mi primer mensaje&quot;
 </code></pre>
 <h2 id="enviar-un-mensajes-de-texto-con-sintaxis-html">Enviar un mensajes de texto con sintaxis html</h2>
-<p>Para que habilite la sintaxis <strong>html</strong>, introduciremos la opción <code class="verbatim">--html</code></p>
+<p>Para que habilite la sintaxis <strong>html</strong>, introduciremos la opción <code>--html</code></p>
 <pre><code class="language-sh">
 matrix --html &quot;This is &lt;strong&gt;very important&lt;/strong&gt;.&quot;
 </code></pre>
@@ -150,7 +150,7 @@ echo &quot;Hola&quot; | matrix.sh -
 echo &quot;Hola&quot; | ./matrix.sh -
 </code></pre>
 <h2 id="formato-de-código">Formato de código</h2>
-<p>Podemos utilizar <code class="verbatim">--pre</code> para enviar mensajes formateados como código. Esto también se escapará Etiquetas HTML.</p>
+<p>Podemos utilizar <code>--pre</code> para enviar mensajes formateados como código. Esto también se escapará Etiquetas HTML.</p>
 <p>Listamos el contenido de un directorio:</p>
 <pre><code class="language-sh">
 ls -l | matrix --pre -
@@ -164,22 +164,22 @@ ls -l | ./matrix.sh --pre -
 <pre><code class="language-sh">
 matrix --file=upload.zip
 </code></pre>
-<p>Además use <code class="verbatim">--audio=, =-image=o =--video</code>para enviar archivos como audio, imágenes o video, respectivamente:</p>
+<p>Además use <code>--audio</code>, <code>-image</code>o <code>--video</code>para enviar archivos como audio, imágenes o video, respectivamente:</p>
 <pre><code class="language-sh">
 matrix --file=IMG1234.jpg --image
 </code></pre>
 <p>## Enviar a otra sala</p>
-<p>Puedes utilizar <code class="verbatim">--room=&lt;room_id&gt;</code> para proporcionar un room_id. Esto reemplaza la sala predeterminada.</p>
+<p>Puedes utilizar <code>--room</code>&lt;room<u>id&gt;= para proporcionar un room</u>id. Esto reemplaza la sala predeterminada.</p>
 <pre><code class="language-sh">
 matrix --room='!OEassajhhkasLULVAa:matrix.org' &quot;Prueba&quot;
 </code></pre>
 <p>A bash no le gustan los signos de exclamación en cadenas entre comillas dobles. Es recomendable <strong>utilizar comillas simples</strong> para la identificación la sala.</p>
 <p>## Otras acciones</p>
 <ul>
-<li><code class="verbatim">--help</code> Muestra todos los comandos y opciones disponibles.</li>
-<li><code class="verbatim">--join-room</code> Se une a una habitación. Se le pedirá la identificación de la habitación.</li>
-<li><code class="verbatim">--invite-user= Invita a un usuario a la sala predeterminada o la proporcionada por =--room</code>. Se le pedirá la identificación de usuario.</li>
-<li><code class="verbatim">--leave-room</code> Deja una sala. Se le preguntará qué sala dejar.</li>
+<li><code>--help</code> Muestra todos los comandos y opciones disponibles.</li>
+<li><code>--join-room</code> Se une a una habitación. Se le pedirá la identificación de la habitación.</li>
+<li><code>--invite-user</code> Invita a un usuario a la sala predeterminada o la proporcionada por <code>--room</code>. Se le pedirá la identificación de usuario.</li>
+<li><code>--leave-room</code> Deja una sala. Se le preguntará qué sala dejar.</li>
 </ul>
 <p>## Fuentes</p>
 <ul>
@@ -191,6 +191,7 @@ matrix --room='!OEassajhhkasLULVAa:matrix.org' &quot;Prueba&quot;
 <li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

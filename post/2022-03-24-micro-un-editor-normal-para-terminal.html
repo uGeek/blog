@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="micro-un-editor-normal-para-terminal">Micro. Un editor normal para terminal</h1>
+<h1 id="micro-un-editor-normal-para-terminal" title="Micro. Un editor normal para terminal" data-export_file_name="micro-un-editor-normal-para-terminal" data-description="No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano." data-export_date="2022-03-24 18:07 2022-07-19" data-category="editor" data-tag="micro,terminal" data-image="./images-blog/Micro._Un_editor_normal_para_terminal.png">Micro. Un editor normal para terminal</h1>
 <p>No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano.</p>
 <p><img src="../images-blog/Micro._Un_editor_normal_para_terminal.png" /></p>
 <p>Micro es un editor de texto basado en terminal que pretende ser fácil de usar e intuitivo, al mismo tiempo que aprovecha todas las capacidades de los terminales modernos. Viene como un único binario estático, con baterías incluidas, sin dependencias, y puede descargarlo y usarlo ahora mismo.</p>
@@ -61,30 +61,30 @@ sudo apt install micro
 <h2 id="ratón">Ratón</h2>
 <p>Aunque es una aplicación para terminal, <strong>micro</strong> se destaca por el hecho de poder utilizar el ratón.</p>
 <h2 id="atajos">Atajos</h2>
-<p>Con <code class="verbatim">Alt+g</code> micro mostrará un resumen de los atajos más importantes:</p>
+<p>Con <code>Alt+g</code> micro mostrará un resumen de los atajos más importantes:</p>
 <ul>
-<li>Salir o Cancelar último comando <code class="verbatim">Ctrl-q</code></li>
-<li>Guardar <code class="verbatim">Ctrl+s</code></li>
-<li>Ayuda <code class="verbatim">Ctrl+g</code></li>
-<li>Abrir un archivo. Previsualiza en parte inferior y ayúdate de Tabulado <code class="verbatim">Ctrl+o</code></li>
-<li>Zoom <code class="verbatim">Ctrl+ += y =Ctrl + -</code></li>
-<li>Buscar <code class="verbatim">Ctrl+f=. Buscar siguiente palabra =Ctrl+n= y anterior =Ctrl+p</code></li>
-<li>Seleccionar bloque de texto. <code class="verbatim">Shift+Izq/Arriba/abajo/Derecha</code></li>
-<li>Seleccionar todo el texto <code class="verbatim">Ctrl+a</code></li>
-<li>Copiar <code class="verbatim">Ctrl-c</code></li>
-<li>Cortar texto seleccionado <code class="verbatim">Ctrl+x</code></li>
-<li>Pegar <code class="verbatim">Ctrl + V</code></li>
-<li>Cortar la línea actual <code class="verbatim">Ctrl + K</code></li>
-<li>Duplicar la línea actual <code class="verbatim">Ctrl+D</code></li>
-<li>Deshacer <code class="verbatim">Ctrl + Z</code></li>
-<li>Rehacer <code class="verbatim">Ctrl + Y</code></li>
-<li>Mover la línea actual hacia arriba <code class="verbatim">Alt + flecha arriba</code></li>
-<li>Mover la línea actual hacia abajo <code class="verbatim">Alt + flecha abajo</code></li>
+<li>Salir o Cancelar último comando <code>Ctrl-q</code></li>
+<li>Guardar <code>Ctrl+s</code></li>
+<li>Ayuda <code>Ctrl+g</code></li>
+<li>Abrir un archivo. Previsualiza en parte inferior y ayúdate de Tabulado <code>Ctrl+o</code></li>
+<li>Zoom <code>Ctrl+ +</code> y <code>Ctrl + -</code></li>
+<li>Buscar <code>Ctrl+f</code>. Buscar siguiente palabra <code>Ctrl+n</code> y anterior <code>Ctrl+p</code></li>
+<li>Seleccionar bloque de texto. <code>Shift+Izq/Arriba/abajo/Derecha</code></li>
+<li>Seleccionar todo el texto <code>Ctrl+a</code></li>
+<li>Copiar <code>Ctrl-c</code></li>
+<li>Cortar texto seleccionado <code>Ctrl+x</code></li>
+<li>Pegar <code>Ctrl + V</code></li>
+<li>Cortar la línea actual <code>Ctrl + K</code></li>
+<li>Duplicar la línea actual <code>Ctrl+D</code></li>
+<li>Deshacer <code>Ctrl + Z</code></li>
+<li>Rehacer <code>Ctrl + Y</code></li>
+<li>Mover la línea actual hacia arriba <code>Alt + flecha arriba</code></li>
+<li>Mover la línea actual hacia abajo <code>Alt + flecha abajo</code></li>
 </ul>
 <h3 id="personalizar-atajos">Personalizar atajos</h3>
-<p>Mediante el archivo de configuración <code class="verbatim">~/.config/micro/bindings.json</code>, podemos personalizar los atajos:</p>
+<p>Mediante el archivo de configuración <code>~/.config/micro/bindings.json</code>, podemos personalizar los atajos:</p>
 <p><a href="https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md#bindable-actions-and-bindable-keys">En esta página</a> tenemos todas las opciones para personalizar los atajos.</p>
-<p>Si quisiéramos que el atajo <code class="verbatim">Ctrl-Tab</code> para ir a la siguiente pestaña:</p>
+<p>Si quisiéramos que el atajo <code>Ctrl-Tab</code> para ir a la siguiente pestaña:</p>
 <pre><code class="language-sh">
 {
 &quot;Ctrl-Tab&quot;: &quot;NextTab&quot;
@@ -99,12 +99,12 @@ sudo apt install micro
 <p>Los atajos de teclado disponibles por defecto, podemos entrontrarlo en <a href="https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md#default-keybinding-configuration">esta web</a></p>
 <h2 id="pestañas">Pestañas</h2>
 <ul>
-<li>Abrir nueva Pestaña <code class="verbatim">Ctrl+t</code></li>
-<li>Pestaña Anterior <code class="verbatim">Ctrl+,</code></li>
-<li>Pestaña siguiente <code class="verbatim">Ctrl+.</code></li>
+<li>Abrir nueva Pestaña <code>Ctrl+t</code></li>
+<li>Pestaña Anterior <code>Ctrl+,</code></li>
+<li>Pestaña siguiente <code>Ctrl+.</code></li>
 </ul>
 <h2 id="introducir-comandos">Introducir Comandos</h2>
-<p>Con <code class="verbatim">Ctrl+e= podemos introducir comando a *Micro*. Por ejemplo el comando de ayuda a plugins =help plugins</code></p>
+<p>Con <code>Ctrl+e</code> podemos introducir comando a <strong>Micro</strong>. Por ejemplo el comando de ayuda a plugins <code>help plugins</code></p>
 <h3 id="ir-a-una-n-de-línea-concreto">Ir a una nº de línea concreto:</h3>
 <ul>
 <li>goto [nº linea]</li>
@@ -133,13 +133,13 @@ sudo apt install aspell aspell-es aspell-ca
 <pre><code class="language-sh">
 micro -plugin install aspell
 </code></pre>
-<p>Resaltado de palabras con introduciendo en comando (<code class="verbatim">Ctrl+e</code>) set</p>
+<p>Resaltado de palabras con introduciendo en comando (<code>Ctrl+e</code>) set</p>
 <pre><code class="language-sh">
 {
 &quot;aspell.check&quot;: &quot;on&quot;,
 }
 </code></pre>
-<p>Es genial porque si y hay una falta de ortografía en una línea, en la <strong>parte iaquierda</strong> aparece <code class="verbatim">&gt;&gt;</code></p>
+<p>Es genial porque si y hay una falta de ortografía en una línea, en la <strong>parte iaquierda</strong> aparece <code>&gt;&gt;</code></p>
 <h3 id="resaltar-palabras-mal-escritas">Resaltar palabras mal escritas</h3>
 <p>complemento que corrige palabras comúnmente mal escritas</p>
 <pre><code class="language-sh">
@@ -150,16 +150,16 @@ micro -plugin install misspell
 <pre><code class="language-sh">
 micro plugin install snippets
 </code></pre>
-<p>O introducimos el comando dentro de micro con: <code class="verbatim">Ctrl+e= y después =plugin install snippets</code></p>
+<p>O introducimos el comando dentro de micro con: <code>Ctrl+e</code> y después <code>plugin install snippets</code></p>
 <h3 id="filemanager-explorador-de-archivos">filemanager. Explorador de archivos</h3>
-<p>Ejecutando el comando <code class="verbatim">Ctrl+e</code></p>
+<p>Ejecutando el comando <code>Ctrl+e</code></p>
 <pre><code class="language-sh">
 plugin install filemanager
 </code></pre>
 <p>Reinicia</p>
 <h4 id="iniciando">Iniciando</h4>
-<p>Para initroduce el comando <code class="verbatim">tree</code></p>
-<p>Ahora con <code class="verbatim">TAB</code> podemos abrir el archivo.</p>
+<p>Para initroduce el comando <code>tree</code></p>
+<p>Ahora con <code>TAB</code> podemos abrir el archivo.</p>
 <p>Aquí dejo un resumen disponible en el repositorio de GitHub.</p>
 <table>
 <thead>
@@ -167,75 +167,75 @@ plugin install filemanager
 <th>Command</th>
 <th>Keybinding(s)</th>
 <th>What it does</th>
-<th>API for <code class="verbatim">bindings.json</code></th>
+<th>API for <code>bindings.json</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code class="verbatim">tree</code></td>
+<td><code>tree</code></td>
 <td>-</td>
 <td>Open/close the tree</td>
-<td><code class="verbatim">filemanager.toggle_tree</code></td>
+<td><code>filemanager.toggle_tree</code></td>
 </tr>
 <tr>
 <td>-</td>
 <td>Tab &amp; MouseLeft</td>
-<td>Open a file, or go into the directory. Goes back a dir if on <code class="verbatim">..</code></td>
-<td><code class="verbatim">filemanager.try_open_at_cursor</code></td>
+<td>Open a file, or go into the directory. Goes back a dir if on <code>..</code></td>
+<td><code>filemanager.try_open_at_cursor</code></td>
 </tr>
 <tr>
 <td>-</td>
 <td>→</td>
 <td>Expand directory in tree listing</td>
-<td><code class="verbatim">filemanager.uncompress_at_cursor</code></td>
+<td><code>filemanager.uncompress_at_cursor</code></td>
 </tr>
 <tr>
 <td>-</td>
 <td>←</td>
 <td>Collapse directory listing</td>
-<td><code class="verbatim">filemanager.compress_at_cursor</code></td>
+<td><code>filemanager.compress_at_cursor</code></td>
 </tr>
 <tr>
 <td>-</td>
 <td>Shift ⬆</td>
 <td>Go to the target's parent directory</td>
-<td><code class="verbatim">filemanager.goto_parent_dir</code></td>
+<td><code>filemanager.goto_parent_dir</code></td>
 </tr>
 <tr>
 <td>-</td>
 <td>Alt Shift {</td>
 <td>Jump to the previous directory in the view</td>
-<td><code class="verbatim">filemanager.goto_next_dir</code></td>
+<td><code>filemanager.goto_next_dir</code></td>
 </tr>
 <tr>
 <td>-</td>
 <td>Alt Shift }</td>
 <td>Jump to the next directory in the view</td>
-<td><code class="verbatim">filemanager.goto_prev_dir</code></td>
+<td><code>filemanager.goto_prev_dir</code></td>
 </tr>
 <tr>
-<td><code class="verbatim">rm</code></td>
+<td><code>rm</code></td>
 <td>-</td>
 <td>Prompt to delete the target file/directory your cursor is on</td>
-<td><code class="verbatim">filemanager.prompt_delete_at_cursor</code></td>
+<td><code>filemanager.prompt_delete_at_cursor</code></td>
 </tr>
 <tr>
-<td><code class="verbatim">rename</code></td>
+<td><code>rename</code></td>
 <td>-</td>
 <td>Rename the file/directory your cursor is on, using the passed name</td>
-<td><code class="verbatim">filemanager.rename_at_cursor</code></td>
+<td><code>filemanager.rename_at_cursor</code></td>
 </tr>
 <tr>
-<td><code class="verbatim">touch</code></td>
+<td><code>touch</code></td>
 <td>-</td>
-<td>Make a new file under<em>into the file</em>directory your cursor is on, using the passed name</td>
-<td><code class="verbatim">filemanager.new_file</code></td>
+<td>Make a new file under/into the file/directory your cursor is on, using the passed name</td>
+<td><code>filemanager.new_file</code></td>
 </tr>
 <tr>
-<td><code class="verbatim">mkdir</code></td>
+<td><code>mkdir</code></td>
 <td>-</td>
-<td>Make a new directory under<em>into the file</em>directory your cursor is on, using the passed name</td>
-<td><code class="verbatim">filemanager.new_dir</code></td>
+<td>Make a new directory under/into the file/directory your cursor is on, using the passed name</td>
+<td><code>filemanager.new_dir</code></td>
 </tr>
 </tbody>
 </table>
@@ -257,11 +257,11 @@ nano ~/.config/micro/settings.json
 <pre><code class="language-sh">
 micro -autosave 5 archivo.md
 </code></pre>
-<p>Podemos establecer cada cuanto tiempo queremos que se guarde en una sesión con el comando <code class="verbatim">set=. Pulsamos =Ctrl+e</code></p>
+<p>Podemos establecer cada cuanto tiempo queremos que se guarde en una sesión con el comando <code>set</code>. Pulsamos <code>Ctrl+e</code></p>
 <ul>
 <li>set autosave [número de segundos]</li>
 </ul>
-<p>Una vez introducido el comando, quedará guardado en el archivo de configuración <code class="verbatim">nano ~/.config/micro/settings.json</code>.</p>
+<p>Una vez introducido el comando, quedará guardado en el archivo de configuración <code>nano ~/.config/micro/settings.json</code>.</p>
 <pre><code class="language-sh">
 {
 &quot;autosave&quot;: 3,
@@ -280,11 +280,11 @@ micro +33 archivo.md
 <h2 id="reemplazar-palabras-por-otras">Reemplazar palabras por otras</h2>
 <p>El proceso sería:</p>
 <ul>
-<li>Introducimos el comando con <code class="verbatim">Ctrl+e</code></li>
-<li>Escribimos <code class="verbatim">replace palabra palabra_a_reemplazar</code></li>
-<li>Pulsamos Enter y palabra a palabra, micro nos preguntará si deseeamos sustituirla. Para sustituir <code class="verbatim">y=, para no sustituila =n</code>.</li>
+<li>Introducimos el comando con <code>Ctrl+e</code></li>
+<li>Escribimos <code>replace palabra palabra_a_reemplazar</code></li>
+<li>Pulsamos Enter y palabra a palabra, micro nos preguntará si deseeamos sustituirla. Para sustituir <code>y</code>, para no sustituila <code>n</code>.</li>
 </ul>
-<p>Con el comando <code class="verbatim">replaceall palabra palabra_a_reemplazar</code>, reemplazaremos todas las palabras de un archivo.</p>
+<p>Con el comando <code>replaceall palabra palabra_a_reemplazar</code>, reemplazaremos todas las palabras de un archivo.</p>
 <h2 id="tema-cambio-de-color">Tema. Cambio de color</h2>
 <p>Podemos cambiar el tema de <strong>micro</strong> y acceder a la ayuda, lo haremos con el comando:</p>
 <pre><code class="language-sh">
@@ -296,19 +296,19 @@ set colorscheme twilight
 </code></pre>
 <p>Hay varios temas disponibles como: monokai, darcula,</p>
 <ul>
-<li><code class="verbatim">monokai= (also the =default</code> colorscheme)</li>
-<li><code class="verbatim">zenburn</code></li>
-<li><code class="verbatim">gruvbox</code></li>
-<li><code class="verbatim">darcula</code></li>
-<li><code class="verbatim">twilight</code></li>
-<li><code class="verbatim">railscast</code></li>
-<li><code class="verbatim">bubblegum</code> (light theme)</li>
+<li><code>monokai</code> (also the <code>default</code> colorscheme)</li>
+<li><code>zenburn</code></li>
+<li><code>gruvbox</code></li>
+<li><code>darcula</code></li>
+<li><code>twilight</code></li>
+<li><code>railscast</code></li>
+<li><code>bubblegum</code> (light theme)</li>
 </ul>
 <p>Yo he optado de momento por:</p>
 <pre><code class="language-sh">
 set colorscheme simple
 </code></pre>
-<p>O instalando el plugin <code class="verbatim">monokai-dark= introduciendo también desde el propio micro con =Ctrl+e</code></p>
+<p>O instalando el plugin <code>monokai-dark</code> introduciendo también desde el propio micro con <code>Ctrl+e</code></p>
 <pre><code class="language-sh">
 plugin install monokai-dark
 </code></pre>
@@ -339,6 +339,7 @@ micro -options
 <li><a href="https://ugeek.github.io/blog/post/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html">Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html">vim. Resaltado de sintaxis</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-monta-tu-propio-servidor-de-mensajería-ejabberd-xmpp">Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</h1>
+<h1 id="docker-monta-tu-propio-servidor-de-mensajería-ejabberd-xmpp" title="Docker. Monta tu propio servidor de mensajería ejabberd - xmpp" data-export_file_name="docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp" data-description="De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP." data-export_date="2021-11-07 14:50" data-category="ejabberd" data-tag="xmpp,docker,caddy" data-image="./images-blog/ejabberd.png">Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</h1>
 <p>De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP.</p>
 <p>Voy a explicaros como instalar el docker del servidor ejabberd que creé y habilitar los certificados para podernos conectar fuera de nuestra red local.</p>
 <p><img src="../images-blog/ejabberd.png" /></p>
@@ -85,7 +85,7 @@ docker exec -it xmpp vi /etc/ejabberd/ejabberd.yml
 hosts:
 - &quot;midominio.duckdns.org&quot;
 </code></pre>
-<p>En este ejemplo de configuración, he utilizado el nombre de dominio <code class="verbatim">midominio.duckdns.org</code>. Esto quiere decir que los usuarios que estarán registrados en el servidor, utilizan de nombre de usuario, por ejemplo:</p>
+<p>En este ejemplo de configuración, he utilizado el nombre de dominio <code>midominio.duckdns.org</code>. Esto quiere decir que los usuarios que estarán registrados en el servidor, utilizan de nombre de usuario, por ejemplo:</p>
 <ul>
 <li><a href="mailto:angel@ugeek.duckdns.org">angel@midominio.duckdns.org</a></li>
 </ul>
@@ -148,17 +148,17 @@ docker exec -it xmpp tail -f /var/log/ejabberd/ejabberd.log
 </code></pre>
 <h2 id="certificados">Certificados</h2>
 <p>Para poder abrir tu servidor ejabberd a la red de un modo seguro, necesitamos que generar el certificado TLS para que nuestro usuario, contraseña y mensajes viajen cifrados.</p>
-<p>Para generarlo voy a utilizar <strong>caddy</strong> o <strong>traefik</strong>. Voy a montar un servidor <strong>nginx</strong> con el dominio <code class="verbatim">midominio.duckdns.org</code> y como ambos servicios crean el certificado automáticamente, ya tendremos el primer paso hecho, conseguir el certificado SSL para el servidor web.</p>
+<p>Para generarlo voy a utilizar <strong>caddy</strong> o <strong>traefik</strong>. Voy a montar un servidor <strong>nginx</strong> con el dominio <code>midominio.duckdns.org</code> y como ambos servicios crean el certificado automáticamente, ya tendremos el primer paso hecho, conseguir el certificado SSL para el servidor web.</p>
 <p>Ahora vamos combertirlo en ejabberd.pem para utilizarlo con ejabberd con TLS.</p>
 <h3 id="certificado-con-caddy">Certificado con caddy</h3>
-<p>Con Caddy, en el directorio de configuración (caddy<em>data</em>caddy<em>data</em>caddy<em>certificates</em>acme-v02.api.letsencrypt.org-directory/midominio.duckdns.org), encontraremos dos archivos. El .key y .crt.</p>
+<p>Con Caddy, en el directorio de configuración (caddy/data/caddy/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/midominio.duckdns.org), encontraremos dos archivos. El .key y .crt.</p>
 <p>El archivo crt es el certificado que contiene la llave pública de la url y key contiene la llave privada.</p>
 <p>Para fusionarlos y crear el archivo .pem, utilizaremos el comando <strong>cat</strong>.</p>
 <p><strong>Primero irá el archivo .key y despues el .crt</strong></p>
 <pre><code class="language-sh">
 cat midominio.duckdns.org.key  midominio.duckdns.org.crt &gt; ejabberd.pem
 </code></pre>
-<p>Para que ejabberd reconozca el certificado, edita el archivo ejabberd.pem y elmina el último bloque desde <code class="verbatim">-----BEGIN CERTIFICATE-----= a =-----END CERTIFICATE-----</code>.</p>
+<p>Para que ejabberd reconozca el certificado, edita el archivo ejabberd.pem y elmina el último bloque desde <code>-----BEGIN CERTIFICATE-----</code> a <code>-----END CERTIFICATE-----</code>.</p>
 <p><u>Copiamos el certificado en el servidor con docker</u></p>
 <pre><code class="language-sh">
 docker cp ejabberd.pem  xmpp:/etc/ejabberd
@@ -190,7 +190,7 @@ docker exec -it xmpp service ejabberd restart
           - traefik.port=8081
           - traefik.enable=true
 </code></pre>
-<p>El docker-compose es un servidor nginx basado en un Alpine Linux. Cuando levantemos el contenedor, traefik se encargará de crear los certificados Let's Encrypt para la url: <code class="verbatim">midominio.duckdns.org</code></p>
+<p>El docker-compose es un servidor nginx basado en un Alpine Linux. Cuando levantemos el contenedor, traefik se encargará de crear los certificados Let's Encrypt para la url: <code>midominio.duckdns.org</code></p>
 <p>Necesitamos las claves públicas y privadas, pero Traefik solo crea un archivo <strong>acme.json.</strong> Necesitariamos exporta las llaves y para ello utilizaremos un docker:</p>
 <pre><code class="language-sh">
 docker run --name extractor -d -v ~/docker/traefik/:/app/data ~/docker/traefik/extractor/certs:/app/certs ugeek/traefik-certificate-extractor:arm
@@ -219,6 +219,7 @@ docker exec -it xmpp service ejabberd restart
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html">Convierte archivos .crt y .key en archivos .pem</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

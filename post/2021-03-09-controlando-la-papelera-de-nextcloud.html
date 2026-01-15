@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="controlando-la-papelera-de-nextcloud">Controlando la papelera de Nextcloud</h1>
+<h1 id="controlando-la-papelera-de-nextcloud" title="Controlando la papelera de Nextcloud" data-export_file_name="controlando-la-papelera-de-nextcloud" data-description="Mediante el archivo de configuración *config.php*, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera." data-export_date="2021-03-09 21:30" data-category="nextcloud" data-tag="servidor,docker" data-image="./images-blog/nextcloud.png">Controlando la papelera de Nextcloud</h1>
 <p>Mediante el archivo de configuración <strong>config.php</strong>, podemos determinar el tiempo en el que los archivos borrados permanecerán en la papelera.</p>
 <p><img src="../images-blog/nextcloud.png" /></p>
 <p>Para tener el control de la papelera, tenemos que utilizar esta variable en el archivo <strong>config.php</strong>.</p>
@@ -60,7 +60,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="d1-d2">D1, D2</h2>
 <p>Mantenga archivos durante <strong>D1</strong> días y elimina archivos que superan <strong>D2</strong> día. <strong>No</strong> eliminar archivos o directorios si necesita espacio.</p>
 <h2 id="deshabilitar">Deshabilitar</h2>
-<p>Deshabilitar la papelera con <code class="verbatim">disabled</code>.</p>
+<p>Deshabilitar la papelera con <code>disabled</code>.</p>
 <pre><code class="language-sh">
 'trashbin_retention_obligation' =&gt; 'disabled',
 </code></pre>
@@ -79,6 +79,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

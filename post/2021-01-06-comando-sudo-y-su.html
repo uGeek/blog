@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="comando-sudo-y-su">Comando sudo y su</h1>
+<h1 id="comando-sudo-y-su" title="Comando sudo y su" data-export_file_name="comando-sudo-y-su" data-description="Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución." data-export_date="2021-01-06 18:20" data-category="bash" data-tag="zsh,fish,bash" data-image="./images-blog/bash.png">Comando sudo y su</h1>
 <p>Cuando utilizas Ubuntu, Debían y Raspberry OS, te das cuenta que entrar en la terminal como usuario root, es totalmente diferente dependiendo de la distribución.</p>
 <p><img src="../images-blog/bash.png" /></p>
 <p>Esto es debido a que distribuciones como Ubuntu, deshabilitan el usuario root por razones de seguridad.</p>
 <p>Vamos a ver cómo utilizar el comando su o sudo.</p>
 <h2 id="comando-su">Comando su</h2>
 <p>Es un comando que te permite convertirte temporalmente en otro usuario.</p>
-<p>La sintaxis del comando <code class="verbatim">su</code> es la siguiente:</p>
+<p>La sintaxis del comando <code>su</code> es la siguiente:</p>
 <p>#+BEGIN_EXAMPLE</p>
 <p>su [OPTIONS] [USER [ARGUMENT...]</p>
 <p>#+END_EXAMPLE</p>
@@ -60,23 +60,23 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>su</p>
 <p>#+END_EXAMPLE</p>
 <p>Una vez introducida la contraseña, estaremos en una sesión de root.</p>
-<p>Para confirmar que realmente estamos en la sesión root y no en el usuario, introduciremos el comando <code class="verbatim">whoami</code></p>
+<p>Para confirmar que realmente estamos en la sesión root y no en el usuario, introduciremos el comando <code>whoami</code></p>
 <p>#+BEGIN_EXAMPLE</p>
 <p>whoami</p>
 <p>#+END_EXAMPLE</p>
-<p>Si iniciamos la sesión con -, <code class="verbatim">-l= o =--login</code>, cambiar directorio de actual de la shell, inicia como si comentaremos una sesión totalmente de cero.</p>
+<p>Si iniciamos la sesión con -, <code>-l</code> o <code>--login</code>, cambiar directorio de actual de la shell, inicia como si comentaremos una sesión totalmente de cero.</p>
 <p>#+BEGIN_EXAMPLE</p>
 <p>su -</p>
 <p>#+END_EXAMPLE</p>
 <p>Para iniciar la nueva sesión iniciando un comando, por ejemplo zsh</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>su -s <em>usr</em>bin/zsh</p>
+<p>su -s /usr/bin/zsh</p>
 <p>#+END_EXAMPLE</p>
-<p>Para preservar el entorno actual de usuario ejecutando comandos de root, utilizaremos la opción <code class="verbatim">-p=, =--preserve-environment</code></p>
+<p>Para preservar el entorno actual de usuario ejecutando comandos de root, utilizaremos la opción <code>-p</code>, <code>--preserve-environment</code></p>
 <p>#+BEGIN_EXAMPLE</p>
 <p>su -p</p>
 <p>#+END_EXAMPLE</p>
-<p>Si utilizas la opción <code class="verbatim">-=, =-p</code> se ignora.</p>
+<p>Si utilizas la opción <code>-</code>, <code>-p</code> se ignora.</p>
 <h2 id="cambiar-de-usuario">Cambiar de usuario</h2>
 <p>Para cambiar a otra sesión de usuario</p>
 <p>#+BEGIN_EXAMPLE</p>
@@ -111,6 +111,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

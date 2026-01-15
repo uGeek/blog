@@ -44,12 +44,12 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="instalar-docker-en-raspberry-pi-con-raspbian">Instalar Docker en Raspberry Pi con Raspbian</h1>
+<h1 id="instalar-docker-en-raspberry-pi-con-raspbian" title="Instalar Docker en Raspberry Pi con Raspbian" data-export_file_name="Instalar Docker en Raspberry Pi con Raspbian" data-description="En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este" data-export_date="2019-02-03 19:45" data-category="docker" data-tag="raspberry,raspbian" data-image="./images-blog/ugeek.png">Instalar Docker en Raspberry Pi con Raspbian</h1>
 <p>En los repositorios de Raspbian, esta disponible el paquete Docker. Aún así, el método de instalación que no te dará errores y funcionará sin ningún problema, es este.</p>
 <h2 id="instala-primero-algunos-paquetes-que-necesitamos">Instala primero algunos paquetes que necesitamos</h2>
-<p><code class="verbatim">sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common</code></p>
+<p><code>sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common</code></p>
 <h2 id="obtener-la-clave-de-firma-docker-para-paquetes">Obtener la clave de firma Docker para paquetes</h2>
-<p><code class="verbatim">sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -</code></p>
+<p><code>sudo curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -</code></p>
 <h2 id="añadimos-los-repositorios-oficiales">Añadimos los repositorios oficiales</h2>
 <pre><code>
 sudo echo &quot;deb [arch=armhf] https://download.docker.com/linux/$(. /etc/os-release; echo &quot;$ID&quot;) \
@@ -73,7 +73,7 @@ sudo usermod -aG docker $USER
 </code></pre>
 <p>Salir de la terminal y volver a entrar</p>
 <h2 id="instalar-portainer">Instalar Portainer</h2>
-<p><code class="verbatim">docker run -d --name=Portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></p>
+<p><code>docker run -d --name</code>Portainer --restart<code>always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</code></p>
 <p>Publicado por Angel el Sunday 03 February del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -87,6 +87,7 @@ sudo usermod -aG docker $USER
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

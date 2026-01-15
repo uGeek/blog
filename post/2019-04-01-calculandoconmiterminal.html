@@ -44,27 +44,27 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="calculando-con-mi-terminal">Calculando con mi terminal</h1>
+<h1 id="calculando-con-mi-terminal" title="Calculando con mi terminal" data-export_file_name="Calculando con mi terminal" data-description="Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos" data-export_date="2019-04-01 20:40" data-category="terminal" data-tag="bash,unix" data-image="./images-blog/expr.jpg">Calculando con mi terminal</h1>
 <p>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, <strong>expr</strong> (evalúa los argumentos como una expresión) y <strong>calc</strong> (Calculadora de precisión arbitraria).</p>
 <p><img src="../images-blog/expr.jpg" /></p>
 <p><strong>Expr</strong> viene preinstalado en Ubuntu por defecto, cosa que no sucede con <strong>calc</strong>. Y os preguntareis: ¿Porque utilizar dos comandos? <strong>expr</strong> no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de <strong>calc</strong>.</p>
 <p>Otro método de hacer cálculos sería con <strong>bc</strong>, pero lo dejo para otro Post porque <strong>expr</strong> y <strong>calc</strong> diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora.</p>
 <p>Con <strong>expr</strong> vamos a ejecutar operaciones aritméticas o de comparación. Vamos a ver como funciona:</p>
-<p><code class="verbatim">expr &lt;número&gt; &lt;operador matemático&gt; &lt;número&gt;</code></p>
+<p><code>expr &lt;número&gt; &lt;operador matemático&gt; &lt;número&gt;</code></p>
 <h2 id="suma">Suma</h2>
 <p>Hay que dejar un espacio en blanco entre los números y símbolo de <strong>+</strong>.</p>
-<p><code class="verbatim">expr 8 + 4</code></p>
+<p><code>expr 8 + 4</code></p>
 <p>Suma con números negativos:</p>
-<p><code class="verbatim">expr -30 + 47</code></p>
+<p><code>expr -30 + 47</code></p>
 <h2 id="resta"> Resta</h2>
-<p><code class="verbatim">expr 8 - 4</code></p>
+<p><code>expr 8 - 4</code></p>
 <h2 id="multiplicación">Multiplicación</h2>
 <p>Lleva la contrabarra <strong>\</strong> para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:</p>
-<p><code class="verbatim">expr 8 \* 4</code></p>
+<p><code>expr 8 \* 4</code></p>
 <h2 id="división">División</h2>
-<p><code class="verbatim">expr 8 / 4</code></p>
+<p><code>expr 8 / 4</code></p>
 <h2 id="porcentaje">Porcentaje</h2>
-<p><code class="verbatim">expr 10 % 100</code></p>
+<p><code>expr 10 % 100</code></p>
 <h2 id="comparaciones">Comparaciones</h2>
 <p>Otra cosa que nos permite <strong>expr</strong> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <strong>1</strong>, si es falsa <strong>0</strong>.</p>
 <p>Aquí también hay símbolos que llevan la contrabarra <strong>\</strong> para escapar.</p>
@@ -78,15 +78,15 @@ expr 10 \&gt;= 7   # Mayor o igual
 </code></pre>
 <h2 id="contando-el-número-de-letras">Contando el número de letras</h2>
 <p>También podemos contar el número de letras que hay en una frase:</p>
-<p><code class="verbatim">expr length "hola mundo"</code></p>
+<p><code>expr length "hola mundo"</code></p>
 <p>O en un archivo de texto plano:</p>
-<p><code class="verbatim">expr length "$(cat mis_notas.txt)"</code></p>
+<p><code>expr length "$(cat mis_notas.txt)"</code></p>
 <h2 id="manual">Manual</h2>
 <p>Hay muchas mas opciones. Lee en manual para conocerlas:</p>
-<p><code class="verbatim">man expr</code></p>
+<p><code>man expr</code></p>
 <h2 id="instalación-de-calc">Instalación de Calc</h2>
 <p>Calc no viene instalado por defecto en Ubuntu. Lo instalaremos así:</p>
-<p><code class="verbatim">sudo apt install apcalc</code></p>
+<p><code>sudo apt install apcalc</code></p>
 <h2 id="suma">Suma</h2>
 <p>Suma con decimales:</p>
 <pre><code>
@@ -129,7 +129,7 @@ calc 10%100
 </code></pre>
 <h2 id="manual">Manual </h2>
 <p>Hay muchas mas en manual:</p>
-<p><code class="verbatim">man calc</code></p>
+<p><code>man calc</code></p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,... y muchas más cosas</p>
 <p>Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.</p>
@@ -146,6 +146,7 @@ calc 10%100
 <li><a href="https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html">lxterminal como guake en i3wm</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

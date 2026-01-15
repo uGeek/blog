@@ -44,16 +44,16 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="exportando-bonito-a-html-mi-orgmode-y-creando-web-estática">Exportando bonito a html mi OrgMode y creando web estática</h1>
+<h1 id="exportando-bonito-a-html-mi-orgmode-y-creando-web-estática" title="Exportando bonito a html mi OrgMode y creando web estática" data-export_file_name="Exportando bonito a html mi OrgMode y creando web estatica" data-description="Hoy os traigo un paquete que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad" data-export_date="2019-04-02 19:00" data-category="emacs" data-tag="html,github,gitlab" data-image="./images-blog/ox-twbs.png">Exportando bonito a html mi OrgMode y creando web estática</h1>
 <p>Emacs es espectacular, pero los usuarios que lo utilizan y crean paquetes, están al mismo nivel. Hoy os traigo un paquete que está disponible en los repositorios de <a href="https://melpa.org/">Melpa</a> desarrollado por Brandon van Beekum, que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad. </p>
 <p>Por defecto emacs, exporta a html pero de un modo plano, osea código html puro y duro, necesitamos una plantilla css para que tenga formato y se vea mas bonito. Este paquete es como si llevara una plantilla css y javascript adjunta, creando la tabla de contenido del documento en la parte superior derecha, si utilizamos la versión de escritorio y en la parte inferior, si utilizamos un móvil. Esta tabla de contenido se va expandiendo conforme navegamos por nuestro orgmode en versión web.</p>
 <p><img src="../images-blog/ox-twbs.png" /></p>
 <p>En la configuración, adjunto un ejemplo de como tener tus archivos orgmode en una carpeta y exportar los html a otra. Esto es interesante porque podríamos apuntar a esa carpeta como raíz de un servidor web, por ejemplo siguiendo el post del <a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Docker de Nginx</a>, haciendo accesible estas notas en formato web en nuestra red Local o via Internet.</p>
 <p>Otra posibilidad sería publicarlo en las GitHub o GitLab Pages.</p>
 <h2 id="instalación">Instalación</h2>
-<p><code class="verbatim">M-x package-install [RET] ox-twbs [RET]</code></p>
+<p><code>M-x package-install [RET] ox-twbs [RET]</code></p>
 <p>Para exportar el archivo que estamos editando de orgmode a html con este paquete, ejecutaremos el siguiente comando en emacs:</p>
-<p><code class="verbatim">M-x org-twbs-export-to-html</code></p>
+<p><code>M-x org-twbs-export-to-html</code></p>
 <p>El archivo html resultante, estará en la misma carpeta donde está el archivo orgmode.</p>
 <h2 id="configuración">Configuración </h2>
 <p>Vamos a ver como exportar los html a otra carpeta que no sea la misma donde está el archivo orgmode. Copiaremos en nuestro archivo de configuración de emacs <strong>init.el</strong> o <strong>.emacs</strong>:</p>
@@ -66,9 +66,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
          :with-sub-superscript nil
          )))
 </code></pre>
-<p>En este archivo de configuración, utilizaremos las carpetas <strong>9/public_html/</strong>.</p>
+<p>En este archivo de configuración, utilizaremos las carpetas <strong>9/public_html/</strong>. Los archivos orgmode los guardaremos en la carpeta  <strong>10/public_html/</strong>.</p>
 <p>Previamente, crearemos las carpetas desde nuestra terminal:</p>
-<p><code class="verbatim">mkdir -p carpeta ~/org ~/public_html</code></p>
+<p><code>mkdir -p carpeta ~/org ~/public_html</code></p>
 <p>Podemos personalizar la carpeta que deseemos, modificando la ruta de las carpetas en el archivo de configuración.</p>
 <h2 id="sin-tabla-de-contenido-o-índice-autor">Sin tabla de contenido o índice, autor...</h2>
 <p>Si no queremos que aparezca tabla de contenido o índice, ni a pie de página el autor, fecha...  añadiremos al inicio de nuestro OrgMode:</p>
@@ -98,6 +98,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

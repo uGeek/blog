@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="el-modo-más-fácil-de-instalar-y-administrar-wireguard">El modo más fácil de instalar y administrar Wireguard</h1>
+<h1 id="el-modo-más-fácil-de-instalar-y-administrar-wireguard" title="El modo más fácil de instalar y administrar Wireguard" data-export_file_name="el-modo-mas-facil-de-instalar-administrar-wireguard" data-description="Wireguard es mi VPN favorita. Rápida, ligera,... pero es cierto que no es fácil de instalar y administrarla. [[https://emilenijssen.nl][Emile Nijssen]] nos trae un servicio fantástico que soluciona este problema." data-export_date="2021-05-28 18:32" data-category="docker" data-tag="wireguard" data-image="./images-blog/wg-easy.png">El modo más fácil de instalar y administrar Wireguard</h1>
 <p>Wireguard es mi VPN favorita. Rápida, ligera,... pero es cierto que no es fácil de instalar y administrarla. <a href="https://emilenijssen.nl">Emile Nijssen</a> nos trae un servicio fantástico que soluciona este problema.</p>
 <p>Por un lado nos instala <strong>Wireguard</strong> mediante <strong>docker</strong>. Después, crea una página de administración donde poder gestionar todos los clientes, extraer el código QR,...</p>
 <p><img src="../images-blog/wg-easy.png" /></p>
@@ -61,9 +61,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </ul>
 <h2 id="docker-compose">Docker Compose</h2>
 <ul>
-<li>El servicio corre por el puerto <code class="verbatim">51820</code>.</li>
-<li>La web de administración corre po el puerto <code class="verbatim">85</code>.</li>
-<li>Voy a utilizar de url <code class="verbatim">midominio.duckdns.org</code>, cambialo por la url de tu servidor</li>
+<li>El servicio corre por el puerto <code>51820</code>.</li>
+<li>La web de administración corre po el puerto <code>85</code>.</li>
+<li>Voy a utilizar de url <code>midominio.duckdns.org</code>, cambialo por la url de tu servidor</li>
 </ul>
 <pre><code class="language-sh">
 version: &quot;3.8&quot;
@@ -96,7 +96,7 @@ sysctls:
 
 </code></pre>
 <p>Opciones</p>
-<p>Estas opciones se pueden configurar en <code class="verbatim">docker-compose.yml= debajo =environment</code>.</p>
+<p>Estas opciones se pueden configurar en <code>docker-compose.yml</code> debajo <code>environment</code>.</p>
 <table>
 <thead>
 <tr>
@@ -108,39 +108,39 @@ sysctls:
 </thead>
 <tbody>
 <tr>
-<td><code class="verbatim">PASSWORD</code></td>
+<td><code>PASSWORD</code></td>
 <td>-</td>
-<td><code class="verbatim">foobar123</code></td>
+<td><code>foobar123</code></td>
 <td>Cuando se establece, requiere una contraseña al iniciar sesión</td>
 </tr>
 <tr>
-<td><code class="verbatim">WG_HOST</code></td>
+<td><code>WG_HOST</code></td>
 <td>-</td>
-<td><code class="verbatim">vpn.myserver.com</code></td>
+<td><code>vpn.myserver.com</code></td>
 <td>Url del host público</td>
 </tr>
 <tr>
-<td><code class="verbatim">WG_PORT</code></td>
-<td><code class="verbatim">51820</code></td>
-<td><code class="verbatim">51820</code></td>
+<td><code>WG_PORT</code></td>
+<td><code>51820</code></td>
+<td><code>51820</code></td>
 <td>puerto UDP del servidor Wireguard</td>
 </tr>
 <tr>
-<td><code class="verbatim">WG_DEFAULT_ADDRESS</code></td>
-<td><code class="verbatim">10.8.0.x</code></td>
-<td><code class="verbatim">10.6.0.x</code></td>
+<td><code>WG_DEFAULT_ADDRESS</code></td>
+<td><code>10.8.0.x</code></td>
+<td><code>10.6.0.x</code></td>
 <td>Rango de IP's de clientes</td>
 </tr>
 <tr>
-<td><code class="verbatim">WG_DEFAULT_DNS</code></td>
-<td><code class="verbatim">1.1.1.1</code></td>
-<td><code class="verbatim">8.8.8.8, 8.8.4.4</code></td>
+<td><code>WG_DEFAULT_DNS</code></td>
+<td><code>1.1.1.1</code></td>
+<td><code>8.8.8.8, 8.8.4.4</code></td>
 <td>DNS del servidor Wireguard</td>
 </tr>
 </tbody>
 </table>
 <h2 id="habilita-contraseña-usuario">Habilita contraseña usuario</h2>
-<p>Establece una contraseña de interfaz de usuario web, quitando los comentarios <code class="verbatim">PASSWORD=</code>foobar123 y cambiando la contraseña.</p>
+<p>Establece una contraseña de interfaz de usuario web, quitando los comentarios <code>PASSWORD</code>=foobar123 y cambiando la contraseña.</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/WeeJeWel/wg-easy">https://github.com/WeeJeWel/wg-easy</a></li>
@@ -157,6 +157,7 @@ sysctls:
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

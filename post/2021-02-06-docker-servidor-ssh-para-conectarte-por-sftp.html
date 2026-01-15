@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-servidor-ssh-para-conectarte-por-sftp">Docker. Servidor SSH para conectarte por SFTP</h1>
+<h1 id="docker-servidor-ssh-para-conectarte-por-sftp" title="Docker. Servidor SSH para conectarte por SFTP" data-export_file_name="docker-servidor-ssh-para-conectarte-por-sftp" data-description="Me he encontrado con un dilema cuando he montado ownCloud y es que antes tenía directorios en mi Raspberry con los que editaba mis orgmode, todo.txt, que ahora están dentro" data-export_date="2021-02-06 18:30" data-category="ssh" data-tag="bash,servidor" data-image="./images-blog/sftp.png">Docker. Servidor SSH para conectarte por SFTP</h1>
 <p>Me he encontrado con un dilema cuando he montado ownCloud y es que antes tenía directorios en mi Raspberry con los que editaba mis orgmode, todo.txt, que ahora están dentro de la nube y no los puedo editar.</p>
 <p>Para solucionar este problema, he creado un docker con un servidor SSH para conectarme via SFTP. De esta manera también soluciono el problema que me comento un oyente, de como crear un servidor para conectarse a un directorio remoto cifrando el tráfico, todo ello dentro de una red local.</p>
 <p><img src="../images-blog/sftp.png" /></p>
@@ -53,7 +53,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>He creado el docker para varias arquitecturas partiendo de un Alpine Linux, lo que significa que la imágen tan solo tiene 11mb de tamaño y no consume nada en reposo.</p>
 <h2 id="docker-para-raspberry-o-arm">Docker para Raspberry o ARM</h2>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run -d --name=ssh -p 7777:22 -v <em>nube:</em>nube  ugeek/ssh:arm</p>
+<p>docker run -d --name=ssh -p 7777:22 -v /nube:/nube  ugeek/ssh:arm</p>
 <p>#+END_EXAMPLE</p>
 <p>Por defecto:</p>
 <ul>
@@ -62,7 +62,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </ul>
 <h2 id="docker-para-amd64">Docker para AMD64</h2>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run -d --name=ssh -p 7777:22 -v <em>nube:</em>nube  ugeek/ssh:amd64</p>
+<p>docker run -d --name=ssh -p 7777:22 -v /nube:/nube  ugeek/ssh:amd64</p>
 <p>#+END_EXAMPLE</p>
 <p>Por defecto:</p>
 <ul>
@@ -79,8 +79,8 @@ ssh root@localhost -p 7777
 ssh root@192.168.1.100 -p 7777
 </code></pre>
 <h2 id="cambiar-contraseña">Cambiar Contraseña</h2>
-<p><code class="verbatim">EntraenlaMatrix</code> es la contraseña por defecto, pero quizás quieras cambiarla por una que decidas tu. </p>
-<p>Vamos a cambiar la contraseña.  Para hacer esto, tenemos que utilizar el comando <code class="verbatim">passwd.</code></p>
+<p><code>EntraenlaMatrix</code> es la contraseña por defecto, pero quizás quieras cambiarla por una que decidas tu. </p>
+<p>Vamos a cambiar la contraseña.  Para hacer esto, tenemos que utilizar el comando <code>passwd.</code></p>
 <p>Podemos hacerlo con un solo comando con:</p>
 <p>#+BEGIN_EXAMPLE</p>
 <p>docker exec -it ssh passwd</p>
@@ -92,11 +92,11 @@ ssh root@192.168.1.100 -p 7777
 <p>Para no tener que escribir la contraseña cada vez y para darle más seguridad a nuestro servidor, vamos añadir la llave pública en nuestro servidor.</p>
 <p>Creamos directorio de configuración ssh</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker exec -it ssh mkdir <em>root</em>.ssh</p>
+<p>docker exec -it ssh mkdir /root/.ssh</p>
 <p>#+END_EXAMPLE</p>
 <p>Creamos el archivo <strong>authorized_keys</strong> y añadimos id_<strong>rsa.pub</strong> de nuestra máquina local</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker exec -it ssh vi <em>root</em>.ssh/authorized_keys</p>
+<p>docker exec -it ssh vi /root/.ssh/authorized_keys</p>
 <p>#+END_EXAMPLE</p>
 <p>Ahora solo falta que envíes o añadas añadas la llave pública del servidor.</p>
 <h2 id="fuentes">Fuentes</h2>
@@ -114,6 +114,7 @@ ssh root@192.168.1.100 -p 7777
 <li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

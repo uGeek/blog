@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="silverbullet-mi-página-índice">SilverBullet. Mi página Índice</h1>
+<h1 id="silverbullet-mi-página-índice" title="SilverBullet. Mi página Índice" data-export_file_name="silverbullet-mi-pagina-indice" data-description="Con SilverBullet puedes crearte una buena página índice con muchísimas opciones e información." data-export_date="2023-07-08 21:15" data-category="silverbullet" data-tag="notas,markdown" data-image="./images-blog/ugeek.png">SilverBullet. Mi página Índice</h1>
 <p>Con SilverBullet puedes crearte una buena página índice con muchísimas opciones e información.</p>
 <p>Te dejo algunos ejemplos de los que tengo yo creados.</p>
 <h2 id="botones">Botones</h2>
@@ -57,26 +57,26 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="plantillas">Plantillas</h2>
 <p>Es necesario primero crear unas plantantillas, que nos permitirá listar las notas como si fueran hipervínculos interactivos, así será muy sencillo acceder a las notas con solo un clik:</p>
 <h3 id="templetelink">templete/link</h3>
-<p>Crea la nota <code class="verbatim">templete/link.md</code> y copia:</p>
+<p>Crea la nota <code>templete/link.md</code> y copia:</p>
 <pre><code class="language-sh">
 - [[{{name}}]]
 </code></pre>
 <p>Esta plantilla solo mostrará el título de la nota</p>
 <h3 id="templetepage">templete/page</h3>
-<p>Crea la nota <code class="verbatim">templete/page.md</code> y copia uno de los siguiente ejemplo.</p>
+<p>Crea la nota <code>templete/page.md</code> y copia uno de los siguiente ejemplo.</p>
 <p>Te dejo tres opciones que puedes personalizar a tu gusto:</p>
 <pre><code class="language-sh">
   * [[{{name}}]] {{#if lastModified}} {{niceDate   lastModified}}{{/if}}
 </code></pre>
-<p>Esta plantilla solo mostrará el título de la nota y la fecha de la última modificación mostrando <code class="verbatim">2023-12-01</code></p>
+<p>Esta plantilla solo mostrará el título de la nota y la fecha de la última modificación mostrando <code>2023-12-01</code></p>
 <pre><code class="language-sh">
   * [[{{name}}]] {{#if lastModified}}(modificado: {{niceDate lastModified}}){{/if}}
 </code></pre>
-<p>Esta plantilla solo mostrará el título de la nota y la fecha de la última modificación mostrando <code class="verbatim">(modificado: 2023-12-01)</code></p>
+<p>Esta plantilla solo mostrará el título de la nota y la fecha de la última modificación mostrando <code>(modificado: 2023-12-01)</code></p>
 <pre><code class="language-sh">
   * [[{{name}}]] {{#if lastModified}} : {{niceDate lastModified}}{{/if}}
 </code></pre>
-<p>Esta plantilla solo mostrará el título de la nota y la fecha de la última modificación mostrando <code class="verbatim">: 2023-12-01</code></p>
+<p>Esta plantilla solo mostrará el título de la nota y la fecha de la última modificación mostrando <code>: 2023-12-01</code></p>
 <h2 id="creando-listados">Creando listados</h2>
 <p>Ahora si ya has creado las plantillas, ya estas preparado para crear los listados con los hipervinculos.</p>
 <h3 id="últimas-notas">Últimas Notas</h3>
@@ -124,6 +124,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-06-13-silverbullet-un-servicio-para-editar-y-crear-tus-notas-tareas---markdown.html">SilverBullet. Un servicio para editar y crear tus notas, tareas,... Markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,15 +44,15 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="que-aparezca-en-el-prompt-en-que-rama-estamos">Que aparezca en el Prompt en que rama estamos   </h1>
+<h1 id="que-aparezca-en-el-prompt-en-que-rama-estamos" title="Que aparezca en el Prompt en que rama estamos" data-export_file_name="Que aparezca en el Prompt en que rama estamos" data-description="Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.Es cierto que con un git status, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos" data-export_date="2019-01-29 16:15" data-category="bash" data-tag="terminal" data-image="./images-blog/ugeek.png">Que aparezca en el Prompt en que rama estamos   </h1>
 <p>Una vez te familiarizas con git, comienzas a crear ramas y llega un momento en el que vas un poco perdido, sin saber bien donde estás.  </p>
 <p>Es cierto que con un <strong>git status</strong>, te dice en que tema estas trabajando, pero mucho mejor que te lo informe directamente el prompt. Para hacer esto, sigue estos simples pasos:</p>
 <h2 id="descargando-git-promptsh">Descargando .git-prompt.sh</h2>
 <p>Descargamos con wget .git-prompt.sh:</p>
-<p><code class="verbatim">wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh</code></p>
+<p><code>wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh</code></p>
 <h2 id="editamos-bashrc">Editamos ~/.bashrc</h2>
 <p>Vamos al archivo de configuración de bash <strong>~/.bashrc</strong> para editarlo con emacs:</p>
-<p><code class="verbatim">emacs ~/.bashrc</code></p>
+<p><code>emacs ~/.bashrc</code></p>
 <p>Y añadimos el siguiente código:</p>
 <pre><code>
 source ~/.git-prompt.sh
@@ -86,6 +86,7 @@ PS1=&quot;\n[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;33m\]\u\[\033[32m
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

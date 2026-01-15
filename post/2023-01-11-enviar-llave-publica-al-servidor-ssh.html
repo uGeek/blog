@@ -44,9 +44,9 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="enviar-llave-pública-al-servidor-ssh">Enviar llave pública al servidor SSH</h1>
+<h1 id="enviar-llave-pública-al-servidor-ssh" title="Enviar llave pública al servidor SSH" data-export_file_name="enviar-llave-publica-al-servidor-ssh" data-description="Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos" data-export_date="2023-01-11 10:18" data-category="ssh" data-tag="llaves,publico" data-image="./images-blog/ugeek.png">Enviar llave pública al servidor SSH</h1>
 <p>Si ya tienes generada la llave pública del cliente SSH de tu PC y quieres enviarla al servidor para conectarte sin tener que poner la contraseña, puedes hacerlo de dos maneras mediante una sola línea de terminal.</p>
-<p>El proceso será copiar la clave pública en el archivo <strong>autorized_keys</strong> del servidor. Esto es muy simple con el comando <code class="verbatim">ssh-copy-id</code>.</p>
+<p>El proceso será copiar la clave pública en el archivo <strong>autorized_keys</strong> del servidor. Esto es muy simple con el comando <code>ssh-copy-id</code>.</p>
 <pre><code class="language-sh">
 ssh-copy-id angel@192.168.1.100
 </code></pre>
@@ -54,7 +54,7 @@ ssh-copy-id angel@192.168.1.100
 <pre><code class="language-sh">
 cat ~/.ssh/id_rsa.pub | ssh angel@192.168.1.100 &quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt;  ~/.ssh/authorized_keys&quot;
 </code></pre>
-<p>Por último, si has copiado tus archivos de configuración <code class="verbatim">.ssh</code> de dotfiles que tengas guardados, es probable que tengas que cambiar los permisos para que el servidor acepte la conexión</p>
+<p>Por último, si has copiado tus archivos de configuración <code>.ssh</code> de dotfiles que tengas guardados, es probable que tengas que cambiar los permisos para que el servidor acepte la conexión</p>
 <pre><code class="language-sh">
 chmod 750 ~/
 chmod 700 ~/.ssh
@@ -75,6 +75,7 @@ chmod 600 ~/.ssh/id_rsa
 <li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

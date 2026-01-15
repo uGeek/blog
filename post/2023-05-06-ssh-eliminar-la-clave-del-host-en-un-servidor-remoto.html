@@ -44,9 +44,9 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="ssh-eliminar-la-clave-del-host-en-un-servidor-remoto">SSH. Eliminar la clave del host en un servidor remoto</h1>
+<h1 id="ssh-eliminar-la-clave-del-host-en-un-servidor-remoto" title="SSH. Eliminar la clave del host en un servidor remoto" data-export_file_name="ssh-eliminar-la-clave-del-host-en-un-servidor-remoto" data-description="Cuando se ha cambiado la dirección IP del servidor o cuando se ha reinstalado el sistema operativo en el servidor, es necesario eliminar la clave del host, para obligar al" data-export_date="2023-05-06 15:30" data-category="ssh" data-tag="host" data-image="./images-blog/ugeek.png">SSH. Eliminar la clave del host en un servidor remoto</h1>
 <p>Cuando se ha cambiado la dirección IP del servidor o cuando se ha reinstalado el sistema operativo en el servidor, es necesario eliminar la clave del host, para obligar al cliente SSH a volver a comprobar la identidad del servidor la próxima vez que se conecte.</p>
-<p>Con el comando <code class="verbatim">ssh-keygen -R IP_Servidor</code> eliminaremos la clave del host de un servidor remoto.</p>
+<p>Con el comando <code>ssh-keygen -R IP_Servidor</code> eliminaremos la clave del host de un servidor remoto.</p>
 <p>Por ejemplo, si deseas eliminar la clave del host para un servidor con dirección IP 192.168.1.100, es tan sencillo como ejecutar el siguiente comando:</p>
 <pre><code class="language-sh">
 ssh-keygen -R 192.168.1.100
@@ -65,6 +65,7 @@ ssh-keygen -R 192.168.1.100
 <li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,13 +44,13 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="gestionando-mis-tareas-en-la-terminal-con-topydo">Gestionando mis tareas en la terminal con topydo</h1>
+<h1 id="gestionando-mis-tareas-en-la-terminal-con-topydo" title="Gestionando mis tareas en la terminal con topydo" data-export_file_name="gestionando-mis-tareas-en-la-terminal-con-topydo" data-description="Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original todotxt-cli de Gina Trapani" data-export_date="2020-05-22 20:10" data-category="todo.txt" data-tag="tareas,terminal" data-image="./images-blog/topydo.png">Gestionando mis tareas en la terminal con topydo</h1>
 <p>Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original <strong>todotxt-cli</strong> de Gina Trapani.</p>
 <p>Las opciones de uso son muy parecidas y en algunos casos, más simples. Una de las mejoras, es la visualización de los listados de proyectos, contextos, prioridades,... son más visibles, ya cada uno se muestran con colores diferentes.</p>
 <p>Lo más espectacular, son dos modos que podemos utilizar de topydo.</p>
-<p>Prompt, te permite gestionar tus tareas, estando dentro de la aplicación, sin necesidad de estar todo el rato introduciendo el comando <code class="verbatim">topydo</code>.</p>
+<p>Prompt, te permite gestionar tus tareas, estando dentro de la aplicación, sin necesidad de estar todo el rato introduciendo el comando <code>topydo</code>.</p>
 <p><img src="../images-blog/topydo.png" /></p>
-<p><code class="verbatim">Column</code>, es otro modo que permite mostrarnos todas nuestras tareas en columnas, fusionando si lo deseas el método kanban con el todo.txt, o mostrar columnas con tus contextos, proyectos, prioridades,....</p>
+<p><code>Column</code>, es otro modo que permite mostrarnos todas nuestras tareas en columnas, fusionando si lo deseas el método kanban con el todo.txt, o mostrar columnas con tus contextos, proyectos, prioridades,....</p>
 <p>La verdad es que he profundizado muchísimo con esta aplicación y he disfrutado mucho. Voy a explicaros un poco de los tres modos.</p>
 <p>Si buscas algo más concreto, <a href="https://ugeek.github.io/blog/varios/topydo.html">he clonado el Tiki Wiki de su documentación</a>, para que puedas consultarla cuando lo desees. Actualmente, su página principal que contenía esta documentación, ya no esta disponible.</p>
 <p>Crearé en breve una nueva sección dentro del Blog de uGeek para cosas como estas. Documentaciones, atajos de teclado,...</p>
@@ -73,7 +73,7 @@ topydo.ini (en el directorio de trabajo actual) (para soporte mejorado en Window
 <p>Los valores en archivos de configuración posteriores, anulan los valores anteriores.</p>
 <h3 id="alias">Alias</h3>
 <p>Mediante el archivo de configuración, podremos crear nuestros propios alias para invocar a topydo con comandos personalizados. Esta funcionalidad es similar a los alias en un shell de Unix (bash, zsh, etc.).</p>
-<p>Vamos a crear el archivo de configuración <code class="verbatim">$HOME/.config/topydo/config</code> y añadir unos alias de ejemplo:</p>
+<p>Vamos a crear el archivo de configuración <code>$HOME/.config/topydo/config</code> y añadir unos alias de ejemplo:</p>
 <pre><code>
 [aliases]
 # Muestra la primera linea de la lista
@@ -103,7 +103,7 @@ t l
 </code></pre>
 <h2 id="topydo-uso-básico">topydo. Uso Básico</h2>
 <p>topydo es mucho más simple que todotxt-cli, ya que no necesitamos crear previamente un archivo de configuración.</p>
-<p>Simplemente entramos en el directorio donde está el archivo todo.txt y ejecutando el comando <code class="verbatim">topydo</code>, ya podemos gestionar nuestra lista de tareas de nuestro archivo todo.txt.</p>
+<p>Simplemente entramos en el directorio donde está el archivo todo.txt y ejecutando el comando <code>topydo</code>, ya podemos gestionar nuestra lista de tareas de nuestro archivo todo.txt.</p>
 <h3 id="indicando-la-ruta-del-archivo-todotxt-y-donetxt">Indicando la ruta del archivo todo.txt y done.txt</h3>
 <p>Si no accedemos al directorio, tenemos que indicar la ruta del archivo todo.txt o done.txt.</p>
 <pre><code>
@@ -249,7 +249,7 @@ revert
 star = tag {} star 1
 unstar = tag {} star
 </code></pre>
-<p>Para visualizar el autocompletado, escribimos <code class="verbatim">s + TAB</code> , start 1.</p>
+<p>Para visualizar el autocompletado, escribimos <code>s + TAB</code> , start 1.</p>
 <p>start 2</p>
 <h4 id="añadiendo-estrellas">Añadiendo estrellas</h4>
 <p>A la tarea 42, le pongo una estralla</p>
@@ -511,8 +511,8 @@ topydo columns -l $HOME/.config/topydo/config
 <p>Voy a explicar un poco el proceso</p>
 <ol>
 <li>Instalaremos Termux desde Google Play o F-Droid</li>
-<li>Instalamos Python3 <code class="verbatim">apt-get install python</code></li>
-<li>Instalamos topydo <code class="verbatim">pip3 install topydo</code></li>
+<li>Instalamos Python3 <code>apt-get install python</code></li>
+<li>Instalamos topydo <code>pip3 install topydo</code></li>
 <li>Crearemos unos alias para que nos se más sencillo:</li>
 </ol>
 <pre><code>
@@ -527,7 +527,7 @@ alias add=&quot;topydo add&quot;
 # -N and %S make sure that the list fits on the screen properly
 alias t=&quot;topydo ls -N -F '%I %S' &quot;
 </code></pre>
-<p>Asegurate tener source <code class="verbatim">$HOME/.bashrc= en tu =$HOME/.bash_profile</code>.</p>
+<p>Asegurate tener source <code>$HOME/.bashrc</code> en tu <code>$HOME/.bash_profile</code>.</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/bram85/topydo/">https://github.com/bram85/topydo/</a></li>
@@ -547,6 +547,7 @@ alias t=&quot;topydo ls -N -F '%I %S' &quot;
 <li><a href="https://ugeek.github.io/blog/post/2020-01-29-integracion-total-de-todotxt-en-emacs.html">Integración total de todotxt en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-01-27-aprendiendo-todo-txt-todotxt-cli.html">Aprendiendo todo.txt. todotxt-cli</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-08-21-qtodotxt.html">QTodoTxt. todo.txt en tu escritorio</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

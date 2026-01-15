@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="liberar-el-puerto-53-utilizado-por-systemd-resolved">Liberar el puerto 53 utilizado por systemd-resolved</h1>
+<h1 id="liberar-el-puerto-53-utilizado-por-systemd-resolved" title="Liberar el puerto 53 utilizado por systemd-resolved" data-export_file_name="liberar-el-puerto-53-utilizado-por-systemd-resolved" data-description="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu" data-export_date="2023-01-17 10:00" data-category="manjaro" data-tag="puertos,ubuntu,systemd" data-image="./images-blog/ugeek.png">Liberar el puerto 53 utilizado por systemd-resolved</h1>
 <p>Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu tiene una escucha resuelta por systemd en el puerto 53 de forma predeterminada. En caso de que desees ejecutar tu propio servidor DNS (Como instalar blocky, AdguardHome, PiHole,...), no podrás ya que el puerto 53 ya está en uso, por lo que obtendrá un error.</p>
 <h2 id="comprobar-puertos-en-uso">Comprobar puertos en uso</h2>
 <p>Vamos a comprobar los puertos utilizados y confirmar que el puerto 53 está ocupado.</p>
@@ -53,11 +53,11 @@ sudo ss -tulwn | grep LISTEN
 </code></pre>
 <p>Vamos a ver que sigunifican las opciones:</p>
 <ul>
-<li><code class="verbatim">-t</code> Mostrar solo sockets TCP en Linux</li>
-<li><code class="verbatim">-u</code> Mostrar solo sockets UDP en Linux</li>
-<li><code class="verbatim">-l</code> Mostrar tomas de escucha (por ejemplo, el puerto TCP 22 es abierto por el servidor SSHD)</li>
-<li><code class="verbatim">-p</code> Lista el nombre del proceso que abrió el socket</li>
-<li><code class="verbatim">-n</code> No resuelve los nombres de servicio</li>
+<li><code>-t</code> Mostrar solo sockets TCP en Linux</li>
+<li><code>-u</code> Mostrar solo sockets UDP en Linux</li>
+<li><code>-l</code> Mostrar tomas de escucha (por ejemplo, el puerto TCP 22 es abierto por el servidor SSHD)</li>
+<li><code>-p</code> Lista el nombre del proceso que abrió el socket</li>
+<li><code>-n</code> No resuelve los nombres de servicio</li>
 </ul>
 <p>Fuente: <a href="https://esgeeks.com/abrir-cerrar-puertos-linux/">https://esgeeks.com/abrir-cerrar-puertos-linux/</a></p>
 <p>Filtrar el puerto 53</p>
@@ -82,10 +82,10 @@ sudo kill -9 $(sudo lsof -t -i:53)
 <pre><code class="language-sh">
 sudo nano /etc/systemd/resolved.conf
 </code></pre>
-<p>Descomenta "quita la #" de la linea <code class="verbatim">DNSStubListener=no</code> poniendo el valor de <strong>yes</strong> a <strong>no</strong>.</p>
+<p>Descomenta "quita la #" de la linea <code>DNSStubListener</code>no= poniendo el valor de <strong>yes</strong> a <strong>no</strong>.</p>
 <p>Descomentando <strong>DNSStubListener</strong> y poniendo el valor <strong>no</strong>, el sistema no podrá resolver ningún nombre de dominio, por lo que no podrá visitar sitios web en el navegador web, etc.</p>
 <h2 id="crea-un-enlace-simbolico">Crea un enlace simbolico</h2>
-<p>Crea un enlace simbólico para <code class="verbatim">/run/systemd/resolve/resolv.conf=con =/etc/resolv.conf</code>.</p>
+<p>Crea un enlace simbólico para <code>/run/systemd/resolve/resolv.conf</code>con <code>/etc/resolv.conf</code>.</p>
 <pre><code class="language-sh">
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 </code></pre>
@@ -130,6 +130,7 @@ sudo ss -tulwn | grep LISTEN
 <li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

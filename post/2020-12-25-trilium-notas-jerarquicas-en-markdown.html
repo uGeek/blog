@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="trilium-notas-jerárquicas-en-markdown">Trilium. Notas jerárquicas en Markdown</h1>
+<h1 id="trilium-notas-jerárquicas-en-markdown" title="Trilium. Notas jerárquicas en Markdown" data-export_file_name="trilium-notas-jerarquicas-en-markdown" data-description="Quizás ha llegado el momento de tomar notas para seres humanos, voy a" data-export_date="2020-12-25 20:41 2022-03-18" data-category="markdown" data-tag="servidor" data-image="./images-blog/trilium.png">Trilium. Notas jerárquicas en Markdown</h1>
 <p>Quizás ha llegado el momento de tomar notas para seres humanos, voy a</p>
 <p>hablar de Trilum.</p>
 <p>Trilium es un método jerárquico para tomar notas, tareas,... donde estás</p>
@@ -56,7 +56,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="docker-amd64">Docker amd64</h2>
 <p>El docker oficial y más actualizado para amd64 es:</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~<em>trilium-data:</em>root<em>trilium-data zadam</em>trilium</p>
+<p>docker run -t -i --name=trilium -p 127.0.0.1:99:8080 -v ~/trilium-data:/root/trilium-data zadam/trilium</p>
 <p>#+END_EXAMPLE</p>
 <p>Servicio disponible por el puerto en este ejemplo 99.</p>
 <ul>
@@ -71,7 +71,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
       #  - ./trilium-data:/home/node/trilium-data
 </code></pre>
 <p>2.- Una vez iniciado del docker, copia el volumen trilium-data en el host</p>
-<p>      docker cp trilium:<em>home</em>node<em>trilium-data .</em>trilium-data</p>
+<p>      docker cp trilium:/home/node/trilium-data ./trilium-data</p>
 <p>3.- Descomenta quitando las almohadillas y vuelve a crear el docker con el directorio de trilium-data</p>
 <pre><code>
 version: '2.1'
@@ -118,6 +118,7 @@ networks:
 <li><a href="https://ugeek.github.io/blog/post/2022-01-10-zettel-notes-la-mejor-aplicacion-de-notas-para-android-con-atajos-de-teclado.html">Zettel Notes. La mejor aplicación de Notas para Android con atajos de Teclado</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html">Typora. El mejor editor Multiplataforma sale de la Beta. Como utilizarlo y configurarlo</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-08-29-zettel-notes-la-mejor-aplicacion-zettelkasten-para-android.html">Zettel Notes. La mejor aplicación Zettelkasten para Android</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

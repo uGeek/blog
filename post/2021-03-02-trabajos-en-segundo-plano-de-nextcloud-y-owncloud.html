@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="trabajos-en-segundo-plano-de-nextcloud-y-owncloud">Trabajos en segundo plano de Nextcloud y ownCloud</h1>
+<h1 id="trabajos-en-segundo-plano-de-nextcloud-y-owncloud" title="Trabajos en segundo plano de Nextcloud y ownCloud" data-export_file_name="trabajos-en-segundo-plano-de-nextcloud-y-owncloud" data-description="Un sistema como Nextcloud a veces requiere que las tareas se realicen de forma regular sin la necesidad de interacción del usuario ni obstaculizar el rendimiento de Nextcloud. Para ese" data-export_date="2021-03-02 20:02" data-category="nextcloud" data-tag="owncloud,docker" data-image="./images-blog/nextcloud.png">Trabajos en segundo plano de Nextcloud y ownCloud</h1>
 <p>Un sistema como Nextcloud a veces requiere que las tareas se realicen de forma regular sin la necesidad de interacción del usuario ni obstaculizar el rendimiento de Nextcloud. Para ese propósito, como administrador del sistema, puede definir trabajos en segundo plano (para ejemplo, limpiezas de bases de datos) que se ejecutan sin necesidad de que el usuario Interacción.</p>
 <p><img src="../images-blog/nextcloud.png" /></p>
 <p>Disponemos de tres tipos de configuraciones cron:</p>
@@ -61,7 +61,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 https://nextcloud.midominio.duckdns.org/cron.php
 </code></pre>
 <h2 id="cron">Cron</h2>
-<p>Genaremos con crontab una tarea que se ejecute cada cierto tiempo, <code class="verbatim">www-data=o =wwwrun</code></p>
+<p>Genaremos con crontab una tarea que se ejecute cada cierto tiempo, <code>www-data</code>o <code>wwwrun</code></p>
 <pre><code class="language-sh">
 docker exec --user www-data nextcloud  php -f /var/www/html/cron.php
 </code></pre>
@@ -84,6 +84,7 @@ docker exec --user www-data nextcloud  php -f /var/www/html/cron.php
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

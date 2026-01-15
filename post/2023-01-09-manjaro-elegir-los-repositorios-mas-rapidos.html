@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="manjaro-elegir-los-repositorios-más-rápidos">Manjaro. Elegir los repositorios más rápidos</h1>
+<h1 id="manjaro-elegir-los-repositorios-más-rápidos" title="Manjaro. Elegir los repositorios más rápidos" data-export_file_name="manjaro-elegir-los-repositorios-mas-rapidos" data-description="Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos:" data-export_date="2023-01-09 10:00" data-category="manjaro" data-tag="repositorios,pacman,snap,flatpak" data-image="./images-blog/manjaro.png">Manjaro. Elegir los repositorios más rápidos</h1>
 <p>Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos:</p>
 <p><img src="../images-blog/manjaro.png" /></p>
 <p>Lanzaremos el siguiente comando:</p>
 <pre><code class="language-sh">
 sudo pacman-mirrors -g
 </code></pre>
-<p>Empezará a listar los servidores y hará un test de velocidad. Una vez acabado, los ordenará por velocidad y los guardará en el archivo <code class="verbatim">/etc/pacman.d/mirrorlist</code>.</p>
+<p>Empezará a listar los servidores y hará un test de velocidad. Una vez acabado, los ordenará por velocidad y los guardará en el archivo <code>/etc/pacman.d/mirrorlist</code>.</p>
 <p>Una vez acabado, puedes actualizar repositorios</p>
 <pre><code class="language-sh">
 sudo pacman -Syyu
@@ -86,7 +86,7 @@ pacman-mirrors --country-list
 <pre><code class="language-sh">
 sudo nano /etc/pacman.conf
 </code></pre>
-<p>Des-comenta <code class="verbatim">#ParallelDownloads = 5</code></p>
+<p>Des-comenta <code>#ParallelDownloads </code> 5=</p>
 <pre><code class="language-sh">
 ParallelDownloads = 5
 </code></pre>
@@ -100,7 +100,7 @@ sudo pacman -Syyu
 sudo pacman-mirrors --country all --api --protocols all --set-branch stable &amp;&amp; sudo pacman -Syu
 </code></pre>
 <h2 id="para-eliminar-la-configuración-personalizada-ejecuta">Para eliminar la configuración personalizada ejecuta </h2>
-<p><code class="verbatim">sudo pacman-mirrors -c all</code></p>
+<p><code>sudo pacman-mirrors -c all</code></p>
 <h2 id="añadir-más-repositorios-de-otras-paqueterías-en-la-tienda">Añadir más repositorios de otras paqueterías en la tienda</h2>
 <p>Lanzar tienda de aplicaciones</p>
 <pre><code class="language-sh">
@@ -126,6 +126,7 @@ sudo pamac-manager
 <li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

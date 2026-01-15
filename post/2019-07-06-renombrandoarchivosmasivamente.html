@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="renombrando-archivos-masivamente">Renombrando archivos masivamente</h1>
+<h1 id="renombrando-archivos-masivamente" title="Renombrando archivos masivamente" data-export_file_name="Renombrando archivos masivamente" data-description="Quería eliminar masivamente el título de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas" data-export_date="2019-07-06 23:30" data-category="unix" data-tag="terminal,sed,bash" data-image="./images-blog/unix.png">Renombrando archivos masivamente</h1>
 <p>Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en <strong>sed</strong>, o <strong>tr</strong>, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog <a href="https://www.ochobitshacenunbyte.com/2015/09/14/renombrar-multiples-nombres-ficheros-linux/">ochobitshacenunbyte.com</a> donde explica, en este caso, sustituir los espacios en blanco por "_".</p>
 <p><img src="../images-blog/unix.png" /></p>
 <p>Yo siguiendo con mi ejemplo, vamos a renombrar unos archivos mp3 que todos contienen la palabra "Supertramp":</p>
@@ -63,6 +63,7 @@ for FILE in *.mp3 ; do NUEVOFICHERO=`echo $FILE | sed 's/Supertramp//g'`; mv &qu
 <li><a href="https://ugeek.github.io/blog/post/2018-12-30-eliminar-comentarios-de-nuestros-script.html">Eliminar comentarios de nuestros script</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html">Descargar todos los episodios de un Podcast con wget</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html">Eliminar líneas en Blanco con sed</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

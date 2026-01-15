@@ -44,12 +44,12 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="audiobookshelf-servidor-de-audiolibros">Audiobookshelf. Servidor de Audiolibros</h1>
+<h1 id="audiobookshelf-servidor-de-audiolibros" title="Audiobookshelf. Servidor de Audiolibros" data-export_file_name="audiobookshelf-servidor-de-audiolibros" data-description="Audiobookshelf es un servidor de audiolibros autohospedado para administrar y reproducir tus audiolibros tanto en tu móvil como en una página web." data-export_date="2022-03-10 09:45" data-category="audiolibros" data-tag="raspberry" data-image="./images-blog/Audiobookshelf._Servidor_de_Audiolibros.png">Audiobookshelf. Servidor de Audiolibros</h1>
 <p>Audiobookshelf es un servidor de audiolibros autohospedado para administrar y reproducir tus audiolibros tanto en tu móvil como en una página web.</p>
 <p><img src="../images-blog/Audiobookshelf._Servidor_de_Audiolibros.png" /></p>
 <h2 id="docker-compose">Docker Compose</h2>
 <ul>
-<li>El volumen <code class="verbatim">/audiobooks</code> es donde vamos a dejar nuestros audiolibros.</li>
+<li>El volumen <code>/audiobooks</code> es donde vamos a dejar nuestros audiolibros.</li>
 <li>Recuerda que para que indexe bien el servicio todos los audiolibros, es necesario crear un directorio con el nombre del audio libro y depositar dentro todos los archivos de audio.</li>
 </ul>
 <p>Para construir el servicio:</p>
@@ -64,7 +64,7 @@ volumes:
 - ./metadata:/metadata
 - ./config:/config
 </code></pre>
-<p>El usuario por defecto es <code class="verbatim">root</code> y no tiene contraseña.</p>
+<p>El usuario por defecto es <code>root</code> y no tiene contraseña.</p>
 <h2 id="aplicaciones-para-android-y-ios">Aplicaciones para Android y IOS</h2>
 <p>Las aplicaciones móviles son de código abierto en <a href="https://github.com/advplyr/audiobookshelf-app">Github</a>.</p>
 <h3 id="android">Android</h3>
@@ -81,6 +81,7 @@ volumes:
 <li><a href="https://hub.docker.com/r/advplyr/audiobookshelf/tags">Docker Hub</a></li>
 <p>Publicado por Angel el Thursday 10 March del 2022</p>
 <p>También te puede interesar:</p>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,12 +44,12 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="screen-enviar-scripts-a-segundo-plano">Screen. Enviar scripts a segundo plano</h1>
+<h1 id="screen-enviar-scripts-a-segundo-plano" title="Screen. Enviar scripts a segundo plano" data-export_file_name="screen-enviar-scripts-a-segundo-plano" data-description="Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano." data-export_date="2020-01-21 20:50" data-category="bash" data-tag="screen,zsh" data-image="./images-blog/bash.png">Screen. Enviar scripts a segundo plano</h1>
 <p>Aprovechando que Linux permite la multitarea, vamos a enviar un script corriendo a segundo plano.</p>
 <p><img src="../images-blog/bash.png" /></p>
 <p>Para ello vamos a utilizar <strong>screen</strong>. <strong>Screen</strong> mediante la opción <strong>-S</strong>, permite el crear un nombre de sesión. Ideal para recordar en que sesión se está ejecutando este script y así poder volver a esta.</p>
 <h2 id="enviar-script-a-segundo-plano">Enviar script a segundo plano</h2>
-<p>Vamos a enviar el <strong>script.sh</strong> a segundo plano. En este ejemplo el nombre de la sesión es <code class="verbatim">nombre_sesion</code>.</p>
+<p>Vamos a enviar el <strong>script.sh</strong> a segundo plano. En este ejemplo el nombre de la sesión es <code>nombre_sesion</code>.</p>
 <pre><code>
 screen -dmS nombre_sesion script.sh
 </code></pre>
@@ -90,6 +90,7 @@ screen -XS nombre_sesion quit
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,17 +44,17 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="gpg-cifrado-de-archivos-simétrico">GPG. Cifrado de archivos simétrico</h1>
+<h1 id="gpg-cifrado-de-archivos-simétrico" title="GPG. Cifrado de archivos simétrico" data-export_file_name="GPG Cifrado de archivos simetrico" data-description="En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg" data-export_date="2019-01-17 21:20" data-category="seguridad" data-tag="gpg, nube, servidor, raspberry" data-image="./images-blog/ugeek.png">GPG. Cifrado de archivos simétrico</h1>
 <p>En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg.</p>
 <h2 id="cifrado">Cifrado</h2>
-<p><code class="verbatim">gpg -c archivo.txt</code></p>
+<p><code>gpg -c archivo.txt</code></p>
 <p>Te pedirá contraseña para cifrar el archivo.</p>
 <p>Si eres como yo y te gusta incluirlo en un script para automatizar y no tener poner contraseña:</p>
 <pre><code>
 gpg --yes --batch --passphrase=&quot;pon aquí tu contraseña&quot; -c archivo.txt
 </code></pre>
 <h2 id="descifrado">Descifrado</h2>
-<p><code class="verbatim">gpg archivo.txt.gpg</code></p>
+<p><code>gpg archivo.txt.gpg</code></p>
 <p>Para automatizar como en el caso anterior...</p>
 <pre><code>
 gpg --yes --batch --passphrase=&quot;pon aquí tu contraseña&quot; archivo.txt.gpg
@@ -68,6 +68,7 @@ gpg --yes --batch --passphrase=&quot;pon aquí tu contraseña&quot; archivo.txt.
 <li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

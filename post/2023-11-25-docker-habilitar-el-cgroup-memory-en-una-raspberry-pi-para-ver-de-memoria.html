@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</h1>
-<p>Si haces un <code class="verbatim">docker stats</code> y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory.</p>
-<p>Para habilitar el cgroup memory en una Raspberry Pi, necesitas modificar el archivo <em>boot</em>cmdline.txt y añadir los siguientes parámetros al final de la línea:</p>
+<h1 id="docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria" title="Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria" data-export_file_name="docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria" data-description="Si haces un =docker stats= y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory." data-export_date="2023-11-25 01:25" data-category="docker" data-tag="memoria" data-image="./images-blog/ugeek.png">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</h1>
+<p>Si haces un <code>docker stats</code> y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory.</p>
+<p>Para habilitar el cgroup memory en una Raspberry Pi, necesitas modificar el archivo /boot/cmdline.txt y añadir los siguientes parámetros al final de la línea:</p>
 <pre><code class="language-sh">
 cgroup_enable=memory cgroup_memory=1 cgroup_enable=cpuset
 </code></pre>
 <p>Debes añadir todo en la misma línea, separado por un espacio.</p>
-<p>Por ejemplo, si tu archivo <em>boot</em>cmdline.txt tiene esta línea:</p>
+<p>Por ejemplo, si tu archivo /boot/cmdline.txt tiene esta línea:</p>
 <pre><code class="language-sh">
 console=serial0,115200 console=tty1 root=PARTUUID=738a4d67-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles
 </code></pre>
@@ -59,9 +59,9 @@ console=serial0,115200 console=tty1 root=PARTUUID=738a4d67-02 rootfstype=ext4 el
 <pre><code class="language-sh">
 console=serial0,115200 console=tty1 root=PARTUUID=738a4d67-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles cgroup_enable=memory cgroup_memory=1 cgroup_enable=cpuset
 </code></pre>
-<p>Estos parámetros le indican al kernel que active el subsistema de control de memoria y que lo monte en <em>sys</em>fs<em>cgroup</em>memory.</p>
+<p>Estos parámetros le indican al kernel que active el subsistema de control de memoria y que lo monte en /sys/fs/cgroup/memory.</p>
 <p>Después de añadir estos parámetros, <strong>debes reiniciar la Raspberry Pi</strong> para que los cambios surtan efecto.</p>
-<p>Puedes comprobar si el cgroup memory está habilitado usando el comando cat <em>proc</em>cgroups y buscando la línea que dice memory.</p>
+<p>Puedes comprobar si el cgroup memory está habilitado usando el comando cat /proc/cgroups y buscando la línea que dice memory.</p>
 <pre><code class="language-sh">
 cat /proc/cgroups
 </code></pre>
@@ -78,6 +78,7 @@ cat /proc/cgroups
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

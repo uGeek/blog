@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="navegando-sin-publicidad-con-blocky-socks5-y-wireguard">Navegando sin publicidad con Blocky, SOCKS5 y Wireguard</h1>
+<h1 id="navegando-sin-publicidad-con-blocky-socks5-y-wireguard" title="Navegando sin publicidad con Blocky, SOCKS5 y Wireguard" data-export_file_name="navegando-sin-publicidad-con-blocky-socks5-y-wireguard" data-description=" " data-export_date="2022-07-04 06:55" data-category="blocky" data-tag="wireguard,SOCKS5" data-image="./images-blog/ugeek.png">Navegando sin publicidad con Blocky, SOCKS5 y Wireguard</h1>
 <p> </p>
 <p>Me encanta <strong>blocky</strong> porque es un servidor <strong>DNS</strong> que me permite bloquear toda la publicidad de un modo fácil y liviano en mi red local.</p>
 <p><strong>Wireguard</strong> es la mejor solución como <strong>VPN y SOCKS5</strong> como servidor proxy para la navegación remota desde mi navegador, pero.... Que lástima no poder hacer las peticiones <strong>DNS</strong> de SOCKS5 y Wireguard a Blocky.... ¿Sería posible?...</p>
@@ -82,16 +82,16 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p> </p>
 <h2 id="funcionamiento-del-docker-compose">Funcionamiento del Docker Compose</h2>
 <p>Este sería el docker compose. Está compuesto de los 3 servicios en un único docker-compose.yml</p>
-<p>El secreto para que todo funcione, es crear una red ( <code class="verbatim">172.21.0.0/24</code>) y otorgar  a cada servicio (docker) una <strong>IP</strong> fija. De este modo, al tener <strong>blocky</strong> una IP fija, desde los otros servicios podemos especificar que las peticiones DNS las haga a la IP de blocky.</p>
+<p>El secreto para que todo funcione, es crear una red ( <code>172.21.0.0/24</code>) y otorgar  a cada servicio (docker) una <strong>IP</strong> fija. De este modo, al tener <strong>blocky</strong> una IP fija, desde los otros servicios podemos especificar que las peticiones DNS las haga a la IP de blocky.</p>
 <p> </p>
-<p>En este ejemplo <strong>blocky</strong> tiene la IP <code class="verbatim">172.21.0.7</code>:</p>
+<p>En este ejemplo <strong>blocky</strong> tiene la IP <code>172.21.0.7</code>:</p>
 <pre><code class="language-sh">
       networks:
             containers:
               ipv4_address: 172.21.0.7
 </code></pre>
 <p> </p>
-<p><strong>SOCKS5 tiene la IP</strong> <code class="verbatim">172.21.0.8= y hace las peticiones DNS a la IP =172.21.0.7</code>, que es la IP de blocky.</p>
+<p><strong>SOCKS5 tiene la IP</strong> <code>172.21.0.8</code> y hace las peticiones DNS a la IP <code>172.21.0.7</code>, que es la IP de blocky.</p>
 <p>Si no utilizáramos blocky y quisieras hacer las peticiones DNS a un servidor que ya te filtra la publicidad como <strong>AdguardHome</strong>, sería tan sencillo como añadir la ruta del servidor DNS.</p>
 <p> </p>
 <pre><code class="language-sh">
@@ -102,7 +102,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
               ipv4_address: 172.21.0.8
 </code></pre>
 <p> </p>
-<p>Wireguard tiene la IP <code class="verbatim">172.21.0.9= y hace las peticiones DNS a blocky a su IP =172.21.0.7</code>.</p>
+<p>Wireguard tiene la IP <code>172.21.0.9</code> y hace las peticiones DNS a blocky a su IP <code>172.21.0.7</code>.</p>
 <p> </p>
 <pre><code class="language-sh">
        dns:
@@ -214,6 +214,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-07-09-ublock-origin--bloqueando-publicidad-en-tu-navegador.html">uBlock Origin. . Bloqueando publicidad en tu navegador</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-07-04-navegando-sin-publicidad-con-blocky-socks5-y-wireguard.html">Navegando sin publicidad con Blocky, SOCKS5 y Wireguard</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

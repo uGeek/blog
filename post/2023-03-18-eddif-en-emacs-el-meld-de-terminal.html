@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="eddif-en-emacs-el-meld-de-terminal">eddif en emacs, el Meld de terminal</h1>
+<h1 id="eddif-en-emacs-el-meld-de-terminal" title="eddif en emacs, el Meld de terminal" data-export_file_name="eddif-en-emacs-el-meld-de-terminal" data-description="A veces quiero comparar dos archivos de texto y ver las diferencias entre ellos. Emacs tiene una función llamada ediff que me permite hacer eso, pero por defecto me muestra" data-export_date="2023-03-18 13:20" data-category="emacs" data-tag="diff" data-image="./images-blog/ugeek.png">eddif en emacs, el Meld de terminal</h1>
 <p>A veces quiero comparar dos archivos de texto y ver las diferencias entre ellos. Emacs tiene una función llamada ediff que me permite hacer eso, pero por defecto me muestra los archivos en horizontal, uno encima del otro. Con la tecla "|" permite cambiar de la división horizontal predeterminada a una división vertical, pero eso me resulta incómodo. Por eso he encontrado este código que cambia la forma de mostrar los archivos en ediff. Ahora los veo en vertical, a la izquierda y a la derecha, como si fuera un programa externo como meld. Así se me hace mucho más fácil ver las diferencias y editar los archivos si quiero.</p>
 <pre><code class="language-sh">
 (custom-set-variables
@@ -52,7 +52,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 '(ediff-diff-options &quot;-w&quot;)
 '(ediff-split-window-function 'split-window-horizontally))
 </code></pre>
-<p>Algunas funciones que debes probar son: <code class="verbatim">ediff-current-file= (ver cambios entre el archivo modificado actual y su versión guardada), =ediff-buffers= y =ediff-files= (marcar dos archivos en =dired</code> y llamar a esto). Con estas funciones podrás ver las diferencias en una ventana dividida, navegar por los cambios con las teclas n y p, y elegir qué versión quieres conservar con las teclas a, b o c.</p>
+<p>Algunas funciones que debes probar son: <code>ediff-current-file</code> (ver cambios entre el archivo modificado actual y su versión guardada), <code>ediff-buffers</code> y <code>ediff-files</code> (marcar dos archivos en <code>dired</code> y llamar a esto). Con estas funciones podrás ver las diferencias en una ventana dividida, navegar por los cambios con las teclas n y p, y elegir qué versión quieres conservar con las teclas a, b o c.</p>
 <p>Publicado por Angel el Saturday 18 March del 2023</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -66,6 +66,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

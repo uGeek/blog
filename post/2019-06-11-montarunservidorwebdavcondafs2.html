@@ -44,21 +44,21 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="montar-un-servidor-webdav-con-dafs2">Montar un servidor webdav con dafs2 </h1>
+<h1 id="montar-un-servidor-webdav-con-dafs2" title="Montar un servidor webdav con dafs2" data-export_file_name="Montar un servidor webdav con dafs2" data-description="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" data-export_date="2019-06-11 20:20" data-category="servidor" data-tag="webdav,raspberry" data-image="./images-blog/dav.png">Montar un servidor webdav con dafs2 </h1>
 <p>En próximos Podcast y Posts, os hablaré de como montar un servidor con webdav, para sincronizar nuestros archivos. </p>
 <p><img src="../images-blog/dav.png" /></p>
 <p>Ahora de momento, vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2.</p>
 <h2 id="instalación">Instalación</h2>
 <p>La instalación la haremos desde los repositorios:</p>
-<p><code class="verbatim">sudo apt-get install davfs2</code></p>
+<p><code>sudo apt-get install davfs2</code></p>
 <p>Seleccionanos <strong>YES</strong>, indicando que cualquiera que no sea usuario root, pueda montar una unidad.</p>
 <p>Creamos una carpeta, por ejemplo la llamaremos webdav, para montar después nuestro servidor.</p>
-<p><code class="verbatim">mkdir -p ~/webdav</code></p>
+<p><code>mkdir -p ~/webdav</code></p>
 <p>Reconfigurar davfs2:</p>
-<p><code class="verbatim">sudo dpkg-reconfigure davfs2</code></p>
+<p><code>sudo dpkg-reconfigure davfs2</code></p>
 <h2 id="montar">Montar</h2>
 <p>Vamos a montar nuestra servidor webdav en la carpeta local llamada webdav.</p>
-<p><code class="verbatim">sudo mount.davfs https://&lt;URL&gt;/ ~/webdav</code></p>
+<p><code>sudo mount.davfs https://&lt;URL&gt;/ ~/webdav</code></p>
 <p>también podemos utilizar:</p>
 <pre><code>
 sudo mount -t davfs -o noexec https://&lt;URL&gt;/ ~/webdav
@@ -82,6 +82,7 @@ sudo fusermount -u ~/webdav
 <li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

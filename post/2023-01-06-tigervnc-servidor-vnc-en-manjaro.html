@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="tigervnc-servidor-vnc-en-manjaro">TigerVNC. Servidor VNC en Manjaro</h1>
+<h1 id="tigervnc-servidor-vnc-en-manjaro" title="TigerVNC. Servidor VNC en Manjaro" data-export_file_name="tigervnc-servidor-vnc-en-manjaro" data-description="TigerVNC es uno de los servidores que más me gusta para conectarme a mis escritorios remotos" data-export_date="2023-01-06 00:01 2023-07-16" data-category="vnc" data-tag="tigervnc,manjaro,lxde,i3wm,resolución" data-image="./images-blog/tightvnc.png">TigerVNC. Servidor VNC en Manjaro</h1>
 <p><img src="../images-blog/tightvnc.png" /></p>
 <p>TigerVNC es uno de los servidores que más me gusta para conectarme a mis escritorios remotos, ya que no solo me permite acceder al escritorio que está abierto, sino también abrir diferentes instancias en paralelo dentro de una misma sesión. Esto significa que varios usuarios pueden estar utilizando la misma sesión de usuario con diferentes entornos de escritorio, como puede ser i3, LXDE, gnome,etc...</p>
 <p>Es una posible solución práctica si te inicias en gestores de ventana como i3wm y no sabes cómo configurar ciertos parámetros, arrancas un escritorio en paralelo dentro de la misma sección y lo configuras de un modo más amigable.</p>
@@ -149,11 +149,11 @@ vncserver :4
 x0vncserver -display :0 -passwordfile ~/.vnc/passwd
 </code></pre>
 <h2 id="crear-un-servicio-para-correr-tigervnc-en-segundo-plano">Crear un servicio para correr TigerVNC en segundo plano</h2>
-<p>Para la sesión <strong>*:1</strong><strong>, crearemos el archivo </strong><strong>tigervnc@:1.service</strong>*</p>
+<p>Para la sesión <strong>19</strong>, crearemos el archivo <strong>21</strong></p>
 <pre><code>
 sudo nano /etc/systemd/system/tigervnc@:1.service
 </code></pre>
-<p>Pega el texto a continuación en el archivo y reemplaza el usuario <strong>*angel</strong>* por tu usuario.</p>
+<p>Pega el texto a continuación en el archivo y reemplaza el usuario <strong>23</strong> por tu usuario.</p>
 <pre><code>
 [Unit]
 Description=Remote desktop service
@@ -197,7 +197,7 @@ sudo pacman -S net-tools
 netstat -tln | grep 590  
 </code></pre>
 <h2 id="no-se-salir-de-mi-cliente-vnc">No se salir de mi cliente vnc</h2>
-<p>Si maximizas la pantalla en tu PC cliente y no sabes salir, si está máquina tiene habilitado un servidor <strong>SSH</strong>, siempre puedes conectarte y si estás utilizando por ejemplo <strong>remmina</strong>, hacer un <code class="verbatim">kilall remmina</code>.</p>
+<p>Si maximizas la pantalla en tu PC cliente y no sabes salir, si está máquina tiene habilitado un servidor <strong>SSH</strong>, siempre puedes conectarte y si estás utilizando por ejemplo <strong>remmina</strong>, hacer un <code>kilall remmina</code>.</p>
 <p>Publicado por Angel el Friday 06 January del 2023</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -206,6 +206,7 @@ netstat -tln | grep 590
 <li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-12-18-remmina-de-los-mejores-clientes-vnc.html">Remmina. De los mejores Clientes VNC</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

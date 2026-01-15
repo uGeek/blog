@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-servidor-webdav">Docker: Servidor Webdav</h1>
+<h1 id="docker-servidor-webdav" title="Docker: Servidor Webdav" data-export_file_name="docker-servidor-webdav" data-description="Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos. Nextcloud, Box.com, Yandex,... utilizan esta tecnología para conectarnos a sus nubes, pero" data-export_date="2019-10-22 17:55" data-category="servidor" data-tag="webdav,raspberry" data-image="./images-blog/dav.png">Docker: Servidor Webdav</h1>
 <p>Montar un servidor webdav puede ser muy útil, ya que nos va a permitir sincronizar o compartir archivos. </p>
 <p>Nextcloud, Box.com, Yandex,... utilizan esta tecnología para conectarnos a sus nubes, pero si lo único que quieres hacer es simplemente compartir, sincronizar o subir y bajar archivos, quizás no necesitas el montar una nube tan pesada como Nextcloud.</p>
 <p><img src="../images-blog/dav.png" /></p>
 <p>Para conectarte a un servidor Webdav solo necesitas tu navegador. Te conectas a la url y puerto donde montes el servicio, y el servidor te pedirá el usuario y contraseña para acceder.</p>
 <p>Una vez introducido, tendrás acceso a todos los archivos que estén en la carpeta del servidor. Podrás ver todos los archivos desde el navegador.</p>
 <p>Si no quieres utilizar el navegador, también podemos utilizar clientes webdav. Hay aplicaciones como <strong>cadaver</strong>, que nos permite el gestionar archivos desde nuestra terminal. <strong>Curl</strong>, permite el descargar y subir archivos a nuestro servidor <strong>webdav</strong>, muy útil para backups. (En breve haré un artículo sobre esto).</p>
-<p><a href="https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html">En este artículo, expliqué como montar la carpeta de un servidor webdav, en tu PC local con fuse</a>. Para conectarte desde tu explorador de archivos en Linux, es tan sencillo como escribir <code class="verbatim">dav://tu_ip:puerto/=, o =davs://tu_ip:puerto/</code> si tienes un certificado de Letsencript.</p>
+<p><a href="https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html">En este artículo, expliqué como montar la carpeta de un servidor webdav, en tu PC local con fuse</a>. Para conectarte desde tu explorador de archivos en Linux, es tan sencillo como escribir <code>dav://tu_ip:puerto/</code>, o <code>davs://tu_ip:puerto/</code> si tienes un certificado de Letsencript.</p>
 <p><strong>Muy importante si abres el servidor a internet, el securizar el servidor con Letsencript para que todo el tráfico vaya cifrado</strong>.</p>
 <p>La mayor parte de exploradores de archivos de Android y IOS, son compatibles con webdav, así que como ves, tus archivos van a ser accesibles desde todos tus dispositivos.</p>
 <p>¿Recuerdas <a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Rclone</a>?, también puedes utilizarlo como cliente y cifrar el contenido de tu nube.</p>
@@ -65,7 +65,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li>Username: webdav                   -&gt; usuario</li>
 <li>Password: webdav                   -&gt; contraseña</li>
 <li>port: 80                           -&gt; Puerto del servicio</li>
-<li>root path: $HOME<em>docker</em>webdav     -&gt; Ruta de la carpeta, donde estarán los archivos</li>
+<li>root path: $HOME/docker/webdav     -&gt; Ruta de la carpeta, donde estarán los archivos</li>
 <li>--restart=unless-stopped           -&gt; Siempre se inicia, a menos que tu lo detengas</li>
 </ul>
 <h3 id="raspberry-o-arm">Raspberry o ARM</h3>
@@ -96,6 +96,7 @@ docker run --name webdav --restart=unless-stopped -p 80:80 -v $HOME/docker/webda
 <li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

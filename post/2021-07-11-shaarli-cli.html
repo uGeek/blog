@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="shaarli-cli">Shaarli cli</h1>
+<h1 id="shaarli-cli" title="Shaarli cli" data-export_file_name="shaarli-cli" data-description="Gracias a esta aplicación desarrollada en Python, puedo acceder a mi instancia de *Shaarli*." data-export_date="2021-07-11 18:30 2021-07-14 2022-08-26" data-category="shaarli" data-tag="terminal,cli" data-image="./images-blog/shaarli.png">Shaarli cli</h1>
 <p>Gracias a esta aplicación desarrollada en Python, puedo acceder a mi instancia de <strong>Shaarli</strong>.</p>
 <p><img src="../images-blog/shaarli.png" /></p>
 <p>Vamos a ver como es su instalación y configuración.</p>
@@ -63,7 +63,7 @@ mkdir ~/.config/shaarli/
 ~/.config/shaarli/client.ini
 </code></pre>
 <p>Voy a añadir mi instancia:</p>
-<p>secret es el número <strong>Api secret</strong> que encontraremos en nuestra instancia, en el apartado <code class="verbatim">Tools &gt;&gt; Configure</code></p>
+<p>secret es el número <strong>Api secret</strong> que encontraremos en nuestra instancia, en el apartado <code>Tools &gt;&gt; Configure</code></p>
 <pre><code class="language-sh">
 [shaarli]
 url = https://shaarli.midominio.duckdns.org
@@ -106,17 +106,17 @@ shaarli get-links | jq | grep title | sed s'|&quot;title&quot;: &quot;||'g | sed
 shaarli post-link --url https://url --description
 </code></pre>
 <ul>
-<li><code class="verbatim">--url</code>: Enlace</li>
-<li><code class="verbatim">--description</code>: Texto descripción del enlace</li>
-<li><code class="verbatim">--title</code>: Título</li>
-<li><code class="verbatim">--private</code>: Privado</li>
+<li><code>--url</code>: Enlace</li>
+<li><code>--description</code>: Texto descripción del enlace</li>
+<li><code>--title</code>: Título</li>
+<li><code>--private</code>: Privado</li>
 </ul>
 <p>En este ejemplo no he añadido la descripción, ya que no es obligatoria:</p>
 <pre><code class="language-sh">
 shaarli post-link --url https://ugeek.github.io/blog/post/2021-07-2-comandos-docker-para-guardar-imagen.html
 </code></pre>
 <h3 id="enviar-urls-a-shaarli-como-enlace-privado">Enviar urls a shaarli como enlace privado</h3>
-<p>Para añadir un enlace como privado, añadiremos al final la etiqueta <code class="verbatim">--private</code>.</p>
+<p>Para añadir un enlace como privado, añadiremos al final la etiqueta <code>--private</code>.</p>
 <pre><code>
 shaarli post-link --url https://url.. --description &quot;Descripción&quot;  --private  
 </code></pre>
@@ -135,6 +135,8 @@ shaarli get-tags --limit 5
 <p>También te puede interesar:</p>
 <li><a href="https://ugeek.github.io/blog/post/2021-07-11-shaarli-cli.html">Shaarli cli</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html">Shaarli. El Delicious del Software Libre</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

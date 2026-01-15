@@ -44,16 +44,16 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="lee-super-rápido-en-emacs-con-spray">Lee Super rápido en Emacs con Spray</h1>
+<h1 id="lee-super-rápido-en-emacs-con-spray" title="Lee Super rápido en Emacs con Spray" data-export_file_name="Lee Super rapido en Emacs con Spray" data-description="No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo." data-export_date="2019-01-27 19:15" data-category="emacs" data-tag="melpa" data-image="./images-blog/ugeek.png">Lee Super rápido en Emacs con Spray</h1>
 <p><img src="../images-blog/spray.gif" /></p>
 <p>No se si recordáis la aplicación Spritz, aquella aplicación que apareció a principios del año 2014 y que sus desarrolladores prometían que podríamos doblar o triplicar la velocidad de lectura. Si eres de aquellos que quieren leer más rápido o te cuesta concentrarte en la lectura de tus orgmode, voy a explicarte como instalarlo en el propio emacs de un modo sencillo.</p>
 <h2 id="instalación">Instalación</h2>
 <p>Instalaremos desde los repositorios de Melpa:</p>
-<p><code class="verbatim">M-x package-install RET spray</code></p>
+<p><code>M-x package-install RET spray</code></p>
 <h2 id="atajo-de-teclado"> Atajo de Teclado</h2>
 <p>La verdad es que si utilizamos un atajo instantáneo, tal como recomienda su desarrollador, aunque a priori pueda parecer una tontería, es un paquete que puede ser muy interesante tener instalado. El desarrollador recomienda utilizar la tecla <strong>F6</strong> para hacer uso de <strong>spray</strong>, aunque como sabes, puedes utilizar cualquier otro atajo si este ya lo tienes ocupado.</p>
 <p>Para añadir este atajo, tenemos que añadir a nuestro archivo de configuración de emacs, ya sea el archivo <strong>.emacs</strong> o <strong>init.el</strong>, la siguiente línea:</p>
-<p><code class="verbatim">(global-set-key (kbd "&lt;f6&gt;") 'spray-mode)</code> </p>
+<p><code>(global-set-key (kbd "&lt;f6&gt;") 'spray-mode)</code> </p>
 <h2 id="modo-de-uso">Modo de uso</h2>
 <p>La verdad es que es muy fácil de utilizar. Simplemente tenemos que situarnos el la parte del texto que deseamos leer y pulsar la tecla <strong>F6</strong>. Para salir de <strong>spray</strong>, pulsaremos nuevamente la tecla <strong>F6</strong>.</p>
 <p>Algunos atajos mas:</p>
@@ -100,6 +100,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

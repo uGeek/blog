@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="crea-un-bot-de-telegram-con-bash-y-una-sola-línea-de-terminal">Crea un Bot de Telegram con Bash y una sola línea de Terminal</h1>
+<h1 id="crea-un-bot-de-telegram-con-bash-y-una-sola-línea-de-terminal" title="Crea un Bot de Telegram con Bash y una sola línea de Terminal" data-export_file_name="Crea un Bot de Telegram con Bash y una sola linea de Terminal" data-description="Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc" data-export_date="2019-03-14 21:30" data-category="telegram" data-tag="bot, telegram" data-image="./images-blog/telegram.jpg">Crea un Bot de Telegram con Bash y una sola línea de Terminal</h1>
 <p><img src="../images-blog/telegram.jpg" /></p>
 <p>Como ya sabéis, Telegram es de mis aplicaciones favoritas. Y no solo por todas las características a la hora de enviar mensajes, almacenar archivos, etc... si no que gracias a la sencilla api de Telegram, puedo crear mis bots para que notifiquen todo tipo de cosas que suceden en mi raspberry, servidor, pc... </p>
 <p>Si, pero... ¿Que nos puede notificar?.</p>
@@ -85,7 +85,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="vamos-a-crear-nuestro-bot">Vamos a crear nuestro Bot</h2>
 <p>Lo primero que haremos, es confirmar que realmente podemos enviar mensajes con nuestro bot desde la terminal.</p>
 <p>Creamos el script:</p>
-<p><code class="verbatim">nano mi_bot_telegram.sh</code></p>
+<p><code>nano mi_bot_telegram.sh</code></p>
 <p>Una vez abierto nano, vamos a copiar el contenido añadiendo el <strong>TOKEN</strong> del bot y nuestro <strong>ID</strong>.</p>
 <pre><code>
 #!/bin/bash
@@ -98,9 +98,9 @@ URL=&quot;https://api.telegram.org/bot$TOKEN/sendMessage&quot;
 curl -s -X POST $URL -d chat_id=$ID -d text=&quot;$MENSAJE&quot;
 </code></pre>
 <p>Ahora daremos permisos de ejecución:</p>
-<p><code class="verbatim">sudo chmod +x mi_bot_telegram.sh</code></p>
+<p><code>sudo chmod +x mi_bot_telegram.sh</code></p>
 <p>Vamos a ejecutarlo:</p>
-<p><code class="verbatim">sh mi_bot_telegram.sh</code></p>
+<p><code>sh mi_bot_telegram.sh</code></p>
 <p>FUNCIONA!!!!!!!!</p>
 <p>Si hemos escrito correctamente tanto el <strong>TOKEN</strong> como el número de nuestro <strong>ID</strong>, habremos recibido un mensaje en el chat del bot que hayamos creado con el contenido: <strong>Esto es un Mensaje de Prueba</strong></p>
 <p>Si somos un poco mas atrevidos o conocemos mejor bash, te abras dado cuenta que no era necesario hacer un script y podemos enviar el mensaje desde una única línea de Terminal. Sustituye añade el valor de las variables en la última línea del script así:</p>
@@ -118,12 +118,12 @@ $(echo $SSH_CLIENT | awk '{ print $1}')
 curl -s -X POST https://api.telegram.org/bot&quot;30534591:AAH5d23KtktfTQSWJMT9CiuginbsFQiF_2nB4&quot;/sendMessage -d chat_id=&quot;57384545&quot; -d text=&quot;Se acaba de contecta por ssh con la IP $(echo $SSH_CLIENT | awk '{ print $1}')&quot;
 </code></pre>
 <p>Si quieres probar que realmente funciona desde tu terminal, escribe en ella:</p>
-<p><code class="verbatim">echo $SSH_CLIENT | awk '{ print $1}'</code></p>
+<p><code>echo $SSH_CLIENT | awk '{ print $1}'</code></p>
 <h2 id="ip-pública">Ip Pública</h2>
 <p>Vamos a conocer la IP pública y conectarnos directamente con nuestra Raspberry:</p>
-<p><code class="verbatim">curl ifconfig.co</code></p>
+<p><code>curl ifconfig.co</code></p>
 <p>Como en el caso anterior, sustituiremos el texto plano por esto:</p>
-<p><code class="verbatim">$(curl ifconfig.co)</code></p>
+<p><code>$(curl ifconfig.co)</code></p>
 <h2 id="temperatura-de-tu-raspberry">Temperatura de tu Raspberry</h2>
 <p>Con este comando, tendré controlada la temperatura de mi raspberry y además, quedará guardado el historial en el chat del Bot:</p>
 <pre><code>
@@ -138,9 +138,9 @@ $(/opt/vc/bin/vcgencmd measure_temp)
 <p><strong>Se ha iniciado mi Raspberry</strong></p>
 <p>Para que esto funciones, vamos a escribir en cron, que cada vez que inicie nuestro servidor, PC, raspberry,... Nos envíe el mensaje:</p>
 <p>Escribe en la Terminal:</p>
-<p><code class="verbatim">crontab -e</code></p>
+<p><code>crontab -e</code></p>
 <p>Y en la primera línea, escribiremos lo siguiente:</p>
-<p><code class="verbatim">@reboot ( sleep 100 ; sh $HOME/scripts/inicio.sh )</code></p>
+<p><code>@reboot ( sleep 100 ; sh $HOME/scripts/inicio.sh )</code></p>
 <p>Esto significa que tras 100 segundos después del  inicio de nuestro servidor, pc, raspberry,... ejecutará el script <strong>inicio.sh</strong>, de manera que nos enviará el texto que pusimos en el script "<strong>Se ha iniciado mi Raspberry</strong>".</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Espero que te haya gustado este Post y Podcast. Ahora te toca a ti experimentar y juguetear con tu Bot de Telegram. Comenta tu experiencia en el Grupo de uGeek en Telegram.</p>
@@ -157,6 +157,7 @@ $(/opt/vc/bin/vcgencmd measure_temp)
 <li><a href="https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html">Grabar lo que suena en tu ordenador</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

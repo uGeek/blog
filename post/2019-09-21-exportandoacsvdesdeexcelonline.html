@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="exportando-a-csv-desde-microsoft-excel-online-hojas-de-cálculo-de-google-etc">Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc</h1>
+<h1 id="exportando-a-csv-desde-microsoft-excel-online-hojas-de-cálculo-de-google-etc" title="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" data-export_file_name="Exportando a CSV desde Excel Online" data-description="Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc" data-export_date="2019-09-21 14:12" data-category="bash" data-tag="terminal" data-image="./images-blog/excel.png">Exportando a CSV desde Microsoft Excel Online, Hojas de cálculo de Google, etc</h1>
 <p>Quería trabajar con unos excels de Microsoft Excel Online que me habían compartido y quería integrarlos en un script en bash que he hecho para hacer unos cálculos. </p>
 <p>El script que he hecho funciona a partir de una archivo <strong>.csv</strong>, así que necesitaba exportar esas Hojas de cálculo a este formato. </p>
 <p><img src="../images-blog/excel.png" /></p>
@@ -59,10 +59,10 @@ cat archivo.txt | sed &quot;s/,/./g&quot; | sed &quot;s/\t/,/g&quot; | sed &quot
 </code></pre>
 <p>Explicación:</p>
 <ul>
-<li><code class="verbatim">cat</code> <strong>--&gt;</strong>             Visualiza el archivo de texto</li>
-<li><code class="verbatim">sed "s/,/./g"</code> <strong>--&gt;</strong>    El archivo tenía números decimales que se podría confundir con las "comas" del csv, así que convierto las comas a puntos.</li>
-<li><code class="verbatim">sed "s/\t/,/g"</code> <strong>--&gt;</strong>  La separación de columnas es superior a dos espacios, así que son un tabulado. Convierte los tabulados en comas</li>
-<li><code class="verbatim">sed "/^ *$/d"</code> <strong>--&gt;</strong>    Cada fila, queda representada por una línea en blanco. Sed eliminará las líneas</li>
+<li><code>cat</code> <strong>--&gt;</strong>             Visualiza el archivo de texto</li>
+<li><code>sed "s/,/./g"</code> <strong>--&gt;</strong>    El archivo tenía números decimales que se podría confundir con las "comas" del csv, así que convierto las comas a puntos.</li>
+<li><code>sed "s/\t/,/g"</code> <strong>--&gt;</strong>  La separación de columnas es superior a dos espacios, así que son un tabulado. Convierte los tabulados en comas</li>
+<li><code>sed "/^ *$/d"</code> <strong>--&gt;</strong>    Cada fila, queda representada por una línea en blanco. Sed eliminará las líneas</li>
 </ul>
 <h3 id="exportar-a-cav">Exportar a cav</h3>
 <p>Exportamos a archivo.csv el resultado filtrado por el comando</p>
@@ -84,6 +84,7 @@ cat archivo.txt | sed &quot;s/,/./g&quot; | sed &quot;s/\t/,/g&quot; | sed &quot
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,11 +44,11 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="utilizando-git-en-mi-servidor-webdav">Utilizando git en mi servidor WebDAV</h1>
+<h1 id="utilizando-git-en-mi-servidor-webdav" title="Utilizando git en mi servidor WebDAV" data-export_file_name="utilizando-git-en-mi-servidor-webdav" data-description="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" data-export_date="2021-10-30 21:00" data-category="git" data-tag="webdav" data-image="./images-blog/git.png">Utilizando git en mi servidor WebDAV</h1>
 <p>Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de <strong>git</strong>. He creado dentro de mi nube un directorio llamado <strong>git</strong>, donde voy a guardar todos mis proyectos y tener un control de versiones allí donde esté.</p>
 <p><img src="../images-blog/git.png" /></p>
 <h2 id="creando-el-repositorio">Creando el repositorio</h2>
-<p>Voy a crear el nuevo proyecto llamado <code class="verbatim">repositorio</code>.</p>
+<p>Voy a crear el nuevo proyecto llamado <code>repositorio</code>.</p>
 <pre><code class="language-sh">
 mkdir repositorio
 cd repositorio
@@ -56,7 +56,7 @@ git init --bare
 git update-server-info
 cd ..
 </code></pre>
-<p>Con <code class="verbatim">git update-server-info</code> actualizamos el archivo de información auxiliar para ayudar al servidor.</p>
+<p>Con <code>git update-server-info</code> actualizamos el archivo de información auxiliar para ayudar al servidor.</p>
 <h2 id="subiendo-el-repositorio-al-servidor-webdav">Subiendo el repositorio al servidor WebDAV</h2>
 <p>Ahora voy a utilizar <strong>rclone</strong> para subir el repositorio al servidor:</p>
 <pre><code class="language-sh">
@@ -96,6 +96,7 @@ git clone http://angel@192.168.1.100:100/git/repositorio
 <li><a href="https://ugeek.github.io/blog/post/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html">Crear una imagen docker desde un repositorio de GitHub</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

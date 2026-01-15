@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="veracrypt-en-ubuntu-y-tu-raspberry-por-terminal">Veracrypt en Ubuntu y tu Raspberry por Terminal</h1>
+<h1 id="veracrypt-en-ubuntu-y-tu-raspberry-por-terminal" title="Veracrypt en Ubuntu y tu Raspberry por Terminal" data-export_file_name="Veracrypt en Ubuntu y tu Raspberry por Terminal" data-description="Es muy probable que desees tener parte de tus datos cifrados para poder almacenarlo en una nube pública o simplemente quieras cifrar parte del contenido almacenado en tu Raspberry" data-export_date="2019-03-29 21:00" data-category="cifrado" data-tag="servidor,raspberry" data-image="./images-blog/veracrypt.png">Veracrypt en Ubuntu y tu Raspberry por Terminal</h1>
 <p><img src="../images-blog/veracrypt.png" /></p>
 <p>Es muy probable que desees tener parte de tus datos cifrados para poder almacenarlo en una nube pública o simplemente quieras cifrar el contenido almacenado en tu Raspberry.</p>
 <p>Quizás quieras cifrar un número de archivos que hay en un PC compartido con otras personas y este contenido lo tengas sincronizado con Syncthing hacia tu Raspberry. </p>
@@ -62,8 +62,8 @@ sudo apt install veracrypt
 </code></pre>
 <ul>
 <li><a href="https://launchpad.net/~unit193/+archive/ubuntu/encryption">Fuente</a></li>
-<h2 id="instalación-en-raspberry">Instalación en Raspberry</h2>
 </ul>
+<h2 id="instalación-en-raspberry">Instalación en Raspberry</h2>
 <p>Instalamos las siguientes dependencias:</p>
 <pre><code>
 sudo apt-get update
@@ -87,9 +87,9 @@ chmod +x veracrypt-1.21-setup-*
 </code></pre>
 <p>Ahora seguiremos los pasos que nos pedirá el programa:</p>
 <ul>
-<li><code class="verbatim">1</code> (instalar)</li>
-<li><code class="verbatim">Enter</code> (aceptar la licencia)</li>
-<li><code class="verbatim">yes</code></li>
+<li><code>1</code> (instalar)</li>
+<li><code>Enter</code> (aceptar la licencia)</li>
+<li><code>yes</code></li>
 </ul>
 <h2 id="desinstalar">Desinstalar</h2>
 <p>Para desinstalar:</p>
@@ -107,21 +107,21 @@ veracrypt -t -c
 </code></pre>
 <p>Ahora veracrypt nos preguntará:</p>
 <ul>
-<li>Si queremos que el volumen sea oculto. En caso de no serlo, pulsa <code class="verbatim">1</code></li>
-<li>Introduce la ruta completa del archivo cifrado: <code class="verbatim">$HOME/archivo_cifrado</code></li>
-<li>Ahora nos preguntará el tamaño del archivo: <code class="verbatim">(sizeK/size[M]/sizeG)</code> por ejemplo 50M (50Mb)</li>
+<li>Si queremos que el volumen sea oculto. En caso de no serlo, pulsa <code>1</code></li>
+<li>Introduce la ruta completa del archivo cifrado: <code>$HOME/archivo_cifrado</code></li>
+<li>Ahora nos preguntará el tamaño del archivo: <code>(sizeK/size[M]/sizeG)</code> por ejemplo 50M (50Mb)</li>
 <li>Nos pedirá con que algoritmo queremos cifrar nuestro archivo, el mas popular es AES, si quieres complicar un poco mas la cosa, selecciona uno de los otros. Introduce el número deseado</li>
-<li>Selecciona el algoritmo de hash deseado <code class="verbatim">1</code></li>
-<li>Ahora seleccionaremos el sistema de archivos. <code class="verbatim">5</code></li>
+<li>Selecciona el algoritmo de hash deseado <code>1</code></li>
+<li>Ahora seleccionaremos el sistema de archivos. <code>5</code></li>
 <li>Introduce la contraseña. Se recomienda mas de 20 caracteres</li>
-<li>PIM significa Multiplicador de Iteraciones Personales. Presiona <code class="verbatim">ENTER</code></li>
-<li>Si desea utilizar el archivo de claves en lugar de la contraseña, aquí puede definir el archivo de claves. Yo no lo utilizaré, así que presiono <code class="verbatim">ENTER</code></li>
+<li>PIM significa Multiplicador de Iteraciones Personales. Presiona <code>ENTER</code></li>
+<li>Si desea utilizar el archivo de claves en lugar de la contraseña, aquí puede definir el archivo de claves. Yo no lo utilizaré, así que presiono <code>ENTER</code></li>
 <li>Como en la versión de terminal, no podemos utilizar el ratón como en la versión gráfica, vamos a teclear 320 caracteres aleatorios para crear la base para tu clave de cifrado.</li>
 <li>Ahora paciencia, la Raspberry será un poco lenta si el volumen que deseamos crear es muy grande</li>
 </ul>
 <h2 id="montar-volumen">Montar Volumen</h2>
 <p>Para montar un volumen ya creado, como la mayoría de cifrados en GNU/Linux, el comando sería:</p>
-<p><code class="verbatim">veracrypt &lt;carpeta_origen&gt; &lt;carpeta_montaje&gt;</code></p>
+<p><code>veracrypt &lt;carpeta_origen&gt; &lt;carpeta_montaje&gt;</code></p>
 <p>Ahora vamos a seguir el ejemplo práctico:</p>
 <pre><code>
 veracrypt $HOME/archivo_cifrado /media/veracrypt
@@ -134,8 +134,8 @@ veracrypt $HOME/archivo_cifrado /media/veracrypt --pim=0 --keyfiles= --protect-h
 </code></pre>
 <h2 id="desmontar-la-unidad">Desmontar la unidad</h2>
 <p>Para desmontar todas las unidades montadas con veracrypt:</p>
-<p><code class="verbatim">veracrypt -d</code></p>
-<p><code class="verbatim">veracrypt -d &lt;carpeta_origen&gt;</code></p>
+<p><code>veracrypt -d</code></p>
+<p><code>veracrypt -d &lt;carpeta_origen&gt;</code></p>
 <h2 id="alias-puede-ser-una-buena-idea">Alias puede ser una Buena Idea</h2>
 <p>Alias puede ser una buena idea si no queremos recordar la ruta de las carpetas:</p>
 <p>Enviar mediante printf a .bashrc nuestro comando con las carpetas que vamos a utilizar y el alias, en mi caso, <strong>veracrypt_m</strong>.</p>
@@ -159,6 +159,7 @@ printf &quot;\nalias veracrypt_d=\&quot;veracrypt -d $HOME/veracrypt&quot;&quot;
 <li><a href="https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html">Tomb. Mis secretos son una Tumba. Crifrar Archivos</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

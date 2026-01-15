@@ -44,15 +44,15 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="wireguard-en-2-minutos-con-wgc">Wireguard en 2 minutos con wgc</h1>
+<h1 id="wireguard-en-2-minutos-con-wgc" title="Wireguard en 2 minutos con wgc" data-export_file_name="wireguard-en-2-minutos-con-wgc" data-description="Uno de los defectos que he encontrado a Wireguard,  es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable" data-export_date="2020-02-11 19:02" data-category="wireguard" data-tag="vpn,raspberry,debian,ubuntu" data-image="./images-blog/wireguard.png">Wireguard en 2 minutos con wgc</h1>
 <p>Uno de los defectos que he encontrado a Wireguard,  es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable  y eso al final puede hacer que te desanimes.</p>
 <p><img src="../images-blog/wireguard.png" /></p>
 <p>¿Te imaginas montar un servidor y configuración de clientes en tan solo 2 minutos?</p>
 <p>Gracias al pequeño script que he creado llamado wgc,  podras hacer tus sueños realidad.</p>
 <p>Vamos a conocer su funcionamiento.</p>
 <h3 id="descargar-wgc">Descargar wgc</h3>
-<p>Creamos la carpeta <code class="verbatim">/etc/wireguard</code></p>
-<p>Tenemos que crearla como <strong>sudo</strong>. Para acceder, <code class="verbatim">sudo su</code></p>
+<p>Creamos la carpeta <code>/etc/wireguard</code></p>
+<p>Tenemos que crearla como <strong>sudo</strong>. Para acceder, <code>sudo su</code></p>
 <pre><code>
 mkdir -p /etc/wireguard ; cd /etc/wireguard
 </code></pre>
@@ -168,6 +168,7 @@ sudo systemctl start wg-quick@wg0.service
 <li><a href="https://ugeek.github.io/blog/post/2021-05-28-el-modo-mas-facil-de-instalar-administrar-wireguard.html">El modo más fácil de instalar y administrar Wireguard</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html">Docker: Wireguard para Raspberry, Ubuntu, Debian,...</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html">Wireguard en 2 minutos con wgc</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

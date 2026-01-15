@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnulinux">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</h1>
+<h1 id="instalar-servicios-o-aplicaciones-con-docker-para-tu-raspberry-o-cualquier-servidor-gnulinux" title="Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux" data-export_file_name="Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU-Linux" data-description="El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un Ubuntu 18.04 en una Raspberry con sistema operativo Raspbian" data-export_date="2019-02-24 17:30" data-category="docker" data-tag="docker" data-image="./images-blog/docker.png">Instalar servicios o aplicaciones con Docker para tu Raspberry o cualquier servidor GNU/Linux</h1>
 <p><img src="../images-blog/docker.png" /></p>
 <p>El objetivo del post de hoy, va a ser crear un contenedor con una sola línea de comandos, entrar dentro de este, instalar un servicio o aplicación e iniciarlo. Pero lo mejor de todo, es que vamos a utilizar una distro diferente para nuestro contenedor, creando un servidor con un <strong>Ubuntu 18.04</strong> en una Raspberry con sistema operativo <strong>Raspbian</strong>.</p>
 <p>De esta manera, podremos acceder a los repositorios de Ubuntu en su última versión, con paquetes totalmente actualizados utilizando Raspbian.</p>
 <p>Parece muy complejo, pero es muy sencillo.</p>
 <h2 id="instalación">Instalación</h2>
 <p>Vamos a instalar Docker desde los repositorios oficiales:</p>
-<p><code class="verbatim">sudo apt install docker</code></p>
+<p><code>sudo apt install docker</code></p>
 <p>También lo tenemos disponible en la paquetería snap, así que a dia de hoy, es muy sencilla su instalación.</p>
 <h2 id="crear-el-grupo-docker-para-no-tener-que-poner-siempre-sudo">Crear el grupo docker, para no tener que poner siempre sudo</h2>
 <p>Para no tener que utilizar Docker como usuario root y así evitar el tener que poner siempre <strong>sudo</strong>, crearemos el grupo docker y añadiremos los usuarios.</p>
@@ -62,50 +62,50 @@ sudo usermod -aG docker $USER
 <p>También es muy útil a nivel de seguridad deshabilitar el usuario root, para iniciar y detener servicios con la sesión del propio usuario o mediante el cron este, programar el encendido y apagado de los contenedores. </p>
 <h2 id="creando-un-contendedor-con-ubuntu-en-su-ultima-versión">Creando un contendedor con Ubuntu en su ultima versión</h2>
 <p>Creando el nuevo contenedor con la última versión de Ubuntu para Raspberry o cualquier arquitectura de procesador y entrando directamente a este contenedor una vez creado:</p>
-<p><code class="verbatim">docker run -t -i ubuntu:latest /bin/bash</code></p>
+<p><code>docker run -t -i ubuntu:latest /bin/bash</code></p>
 <p>Para nuestra Raspberry, si queremos, también podemos especificar la arquitectura con la que queremos montar en nuestro contenedor:</p>
-<p><code class="verbatim">docker run -t -i arm32v7/ubuntu:latest /bin/bash</code></p>
+<p><code>docker run -t -i arm32v7/ubuntu:latest /bin/bash</code></p>
 <p>La versión <strong>"latest"</strong>, es la 18.04, si queremos utilizar una en concreto, deberemos especificarlo.</p>
-<p>Una vez creado el contenedor y dentro de él, podemos salir pulsando <code class="verbatim">exit= o =Ctrl-d=. Esto dentendrá nuestro contenedor, para que esto no suceda, pulsa =Ctrl+p+q</code></p>
+<p>Una vez creado el contenedor y dentro de él, podemos salir pulsando <code>exit</code> o <code>Ctrl-d</code>. Esto dentendrá nuestro contenedor, para que esto no suceda, pulsa <code>Ctrl+p+q</code></p>
 <h2 id="listar-todos-los-contenedores-de-nuestro-servidor">Listar todos los Contenedores de nuestro servidor</h2>
 <p>Vamos a listar todos los contenedores que tenemos en nuestro servidor, indistintamente si están corriendo ahora o no:</p>
-<p><code class="verbatim">docker ps -a</code></p>
+<p><code>docker ps -a</code></p>
 <p>No confundir con ver todos los contenedores que están corriendo ahora mismo en nuestro servidor, que lo haríamos así:</p>
-<p><code class="verbatim">docker ps</code></p>
+<p><code>docker ps</code></p>
 <h2 id="iniciar-o-detener-un-contenedor">Iniciar o detener un contenedor</h2>
 <p>Super sencillo, con docker <strong>start/stop</strong>:</p>
-<p><code class="verbatim">docker start nombre_del_contenedor</code></p>
-<p><code class="verbatim">docker stop nombre_del_contenedor</code></p>
+<p><code>docker start nombre_del_contenedor</code></p>
+<p><code>docker stop nombre_del_contenedor</code></p>
 <h2 id="entrar-dentro-del-docker-vía-terminal">Entrar dentro del Docker vía terminal</h2>
 <p>Para entrar a la terminal de nuestro contenedor, tenemos que ejecutar:</p>
-<p><code class="verbatim">docker exec -i -t nombre_del_contenedor /bin/bash</code></p>
+<p><code>docker exec -i -t nombre_del_contenedor /bin/bash</code></p>
 <h2 id="ejemplo-práctico-de-todo-lo-visto-descargar-imagen-y-crear-e-iniciar-contenedor">Ejemplo práctico de todo lo visto. Descargar imagen y crear e iniciar contenedor</h2>
 <p>Voy a explicar, con el servicio garbera de ejemplo, como descargar la imagen, crear el contenedor e iniciarlo con una única línea de terminal. </p>
-<p><code class="verbatim">docker run -t -i --name gerbera -p 1900:1900 -p 49152:49152 -v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root arm32v7/ubuntu:latest /bin/bash</code></p>
+<p><code>docker run -t -i --name gerbera -p 1900:1900 -p 49152:49152 -v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root arm32v7/ubuntu:latest /bin/bash</code></p>
 <p>Vamos a entenderlo:</p>
 <ul>
-<li>Poner un nombre al contenedor que se creará <code class="verbatim">--name gerbera</code> El nombre será gerbera</li>
-<li>Crea imagen con la ultima versión de ubuntu con arquitectura para raspberry: <code class="verbatim">arm32v7/ubuntu:latest=. Si fuera para cualquier arquitectura y que se instale el más adecuado:  =ubuntu:latest</code></li>
-<li>Que el contenedor creado, tenga abiertos los puertos 1900 y 49152 <code class="verbatim">-p 1900:1900 -p 49152:49152</code></li>
-<li>Tener 2 carpetas de intercambio de archivos, entre carpetas del servidor y carpetas internas del contenedor <code class="verbatim">-v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root</code></li>
+<li>Poner un nombre al contenedor que se creará <code>--name gerbera</code> El nombre será gerbera</li>
+<li>Crea imagen con la ultima versión de ubuntu con arquitectura para raspberry: <code>arm32v7/ubuntu:latest</code>. Si fuera para cualquier arquitectura y que se instale el más adecuado:  <code>ubuntu:latest</code></li>
+<li>Que el contenedor creado, tenga abiertos los puertos 1900 y 49152 <code>-p 1900:1900 -p 49152:49152</code></li>
+<li>Tener 2 carpetas de intercambio de archivos, entre carpetas del servidor y carpetas internas del contenedor <code>-v /home/usuario/docker/gerbera:/etc/gerbera/ -v /media:/root</code></li>
 </ul>
 <p>Una vez estemos dentro del contenedor, igual que haríamos si nos hubiéramos conectado a un servidor por ssh, instalaremos e iniciaremos el servicio:</p>
 <p> <strong>Recuerda sustituir "usuario", por tu usuario, no hagas un copia y pega</strong> 😜</p>
 <h2 id="borrar-un-contenedor">Borrar un contenedor</h2>
 <p>Si ya has acabado con tus pruebas, voy a explicarte algunos comando muy útiles, como borrar el contenedor, imagenes, etc... que ya no vamos a utilizar:</p>
 <p>Detenemos el contentedor:</p>
-<p><code class="verbatim">docker stop nombre_del_contenedor</code></p>
+<p><code>docker stop nombre_del_contenedor</code></p>
 <p>Borramos el contendedor:</p>
-<p><code class="verbatim">docker rm nombre_del_contenedor</code></p>
+<p><code>docker rm nombre_del_contenedor</code></p>
 <h2 id="listar-y-borrar-imagenes">Listar y borrar imagenes</h2>
 <p>Es posible que quieras eliminar la imagen con la que habíamos creado nuestro Docker, para ello, listaremos y borraremos así:</p>
 <p>Listar todas las imágenes:</p>
-<p><code class="verbatim">docker images</code></p>
+<p><code>docker images</code></p>
 <p>Borrar la imagen (rm"i" de imágen, para recordar):</p>
-<p><code class="verbatim">docker rmi nombre_de_la_imagen</code></p>
+<p><code>docker rmi nombre_de_la_imagen</code></p>
 <h2 id="renombrar-contenedor">Renombrar Contenedor</h2>
 <p>En caso que quisieras cambiar el nombre del contenedor, haremos lo siguiente:</p>
-<p><code class="verbatim">docker rename nombre_actual nombre_nuevo</code> </p>
+<p><code>docker rename nombre_actual nombre_nuevo</code> </p>
 <h2 id="conclusiones">Conclusiones</h2>
 <p>Con un poco de práctica, como ves, Docker puede ayudarte a probar, practicar y utilizar servicios o aplicaciones, dentro de estos de un modo muy limpio y sencillo. El punto fuerte es que no vas a romper nada del sistema operativo anfitrión, y además, en el caso de la Raspberry, utilizar aplicaciones a la última que no están disponibles en Raspbian. </p>
 <p>Publicado por Angel el Sunday 24 February del 2019</p>
@@ -121,6 +121,7 @@ sudo usermod -aG docker $USER
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

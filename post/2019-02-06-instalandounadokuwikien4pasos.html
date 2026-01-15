@@ -44,24 +44,24 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="instalando-una-dokuwiki-en-4-pasos">Instalando una Dokuwiki en 4 pasos</h1>
+<h1 id="instalando-una-dokuwiki-en-4-pasos" title="Instalando una Dokuwiki en 4 pasos" data-export_file_name="Instalando una Dokuwiki en 4 pasos" data-description="Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts. En este post os explico como instalar Dokuwiki en tan solo 4 pasos. En este post, doy por hecho que tienes instalado apache2." data-export_date="2019-02-06 15:15" data-category="servidor" data-tag="raspberry,notas" data-image="./images-blog/dokuwiki.png">Instalando una Dokuwiki en 4 pasos</h1>
 <p><img src="../images-blog/dokuwiki.png" /></p>
 <p>Dokuwiki puede servirnos tanto para tomar nuestras notas, como previsualizar y editar contenido generado por nuestros scripts.</p>
 <p>En este post os explico como instalar Dokuwiki en tan solo 4 pasos. Doy por hecho que tienes instalado apache2.</p>
-<p><code class="verbatim">sudo apt install apache2</code></p>
+<p><code>sudo apt install apache2</code></p>
 <p>Lo bueno que tiene dokuwiki, es que no tenemos que instalar base de datos y todas nuestras entradas están en formato texto plano.</p>
 <h2 id="descargando-dokuwiki">Descargando Dokuwiki </h2>
 <p>Hay Versiones estables y no estables. Descargamos con wget, por ejemplo, la versión estable copiando el link de la ruta desde la web de <a href="https://www.dokuwiki.org/dokuwiki">DokuWiki</a>.</p>
-<p>Nos situamos en  <code class="verbatim">/var/www/html/</code>, raiz de nuestro servidor web y descargamos ahí el archivo comprimido con <strong>wget</strong>:</p>
-<p>Si no tenemos permisos, podremos descargarlo utilizando <strong>sudo</strong>. Posteriormente, para descomprimir la carpeta, también tendremos que usarlo. <code class="verbatim">sudo wget ...=, =sudo tar ...=, =sudo mv ...</code></p>
-<p><code class="verbatim">wget https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz</code></p>
+<p>Nos situamos en  <code>/var/www/html/</code>, raiz de nuestro servidor web y descargamos ahí el archivo comprimido con <strong>wget</strong>:</p>
+<p>Si no tenemos permisos, podremos descargarlo utilizando <strong>sudo</strong>. Posteriormente, para descomprimir la carpeta, también tendremos que usarlo. <code>sudo wget ...</code>, <code>sudo tar ...</code>, <code>sudo mv ...</code></p>
+<p><code>wget https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz</code></p>
 <h2 id="descomprimamos">Descomprimamos</h2>
 <p>Descomprimimos el archivo descargado. Si no es este el nombre, utiliza el nombre del archivo.</p>
-<p><code class="verbatim">tar -xzvf dokuwiki-stable.tgz</code></p>
+<p><code>tar -xzvf dokuwiki-stable.tgz</code></p>
 <p>Renombra la carpeta con el nombre que desees, yo en mi caso, le podré <strong>dokuwiki</strong>:</p>
-<p><code class="verbatim">mv dokuwiki-stable/ dokuwiki/</code></p>
+<p><code>mv dokuwiki-stable/ dokuwiki/</code></p>
 <p>Ahora vamos a dar permisos de visualización y edición desde el navegador</p>
-<p><code class="verbatim">sudo chown -R www-data:www-data /var/www/html/dokuwiki</code></p>
+<p><code>sudo chown -R www-data:www-data /var/www/html/dokuwiki</code></p>
 <h2 id="dando-el-último-paso">Dando el último paso</h2>
 <p>Accedemos desde el navegador web, a la ip de nuestro servidor y la siguiente ruta:</p>
 <p><a href="http://ip/dokuwiki/install.php">http://ip/dokuwiki/install.php</a></p>
@@ -83,6 +83,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

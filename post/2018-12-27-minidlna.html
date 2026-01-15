@@ -44,13 +44,13 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="minidlna">minidlna</h1>
+<h1 id="minidlna" title="minidlna" data-export_file_name="minidlna" data-description="DLNA es un servidor multimedia" data-export_date="2018-12-27 21:00 2019-02-24 2019-03-24" data-category="servidor" data-tag="servidor,raspberry,minidlna,multimedia" data-image="./images-blog/dlna.png">minidlna</h1>
 <p>DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.</p>
 <p><img src="../images-blog/dlna.png" /></p>
 <h2 id="instalación">Instalación</h2>
-<p><code class="verbatim">sudo apt install minidlna</code></p>
+<p><code>sudo apt install minidlna</code></p>
 <h2 id="archivo-de-configuración-del-servicio">Archivo de configuración del servicio</h2>
-<p><code class="verbatim">sudo nano /etc/minidlna.conf</code></p>
+<p><code>sudo nano /etc/minidlna.conf</code></p>
 <p>Añadiremos al inicio del archivo de configuración, la ruta donde están nuestros archivos multimedia. Ejem:</p>
 <pre><code>
 media_dir=V,/media/Peliculas
@@ -58,7 +58,7 @@ media_dir=P,/media/Fotos
 media_dir=A,/media/Musica
 </code></pre>
 <p>Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la siguiente manera:</p>
-<p><code class="verbatim">media_dir=PV,/media/Peliculas_y_ Fotos</code></p>
+<p><code>media_dir</code>PV,/media/Peliculas<u>y</u> Fotos=</p>
 <p>Si tenemos nuestros archivos multimedia en dos o más carpetas, podemos especificarlo así:</p>
 <pre><code>
 media_dir=A,~/Música
@@ -85,27 +85,27 @@ inotify=yes
 <h2 id="crear-nueva-base-de-datos"> Crear nueva base de datos</h2>
 <p>Para crear una nueva base de datos en nuestro servidor y eliminar la actual, por ejemplo, en el caso que cambiemos las carpetas donde esté nuestro contenido multimedia:</p>
 <p>Borraremos la base de datos:  </p>
-<p><code class="verbatim">sudo rm -f /var/cache/minidlna/files.db</code></p>
+<p><code>sudo rm -f /var/cache/minidlna/files.db</code></p>
 <p>Reiniciaremos el servidor</p>
-<p><code class="verbatim">sudo service minidlna restart</code></p>
+<p><code>sudo service minidlna restart</code></p>
 <p>Como has podido ver en este paso anterior, la base de datos así como las portadas de los archivos multimedia, están defecto en la carpeta <strong>/var/cache/minidlna</strong>. Pero en el archivo de configuración, podemos cambiar la ruta. Para ello desmarcaremos la almohadilla y especificaremos la ruta deseada.</p>
 <pre><code>
 # Path to the directory that should hold the database and album art cache.                                                                  
 #db_dir=/var/cache/minidlna  
 </code></pre>
 <h2 id="iniciar-detener-restaurar-servicio">Iniciar, Detener, Restaurar servicio</h2>
-<p><code class="verbatim">exec /usr/sbin/service minidlna start</code></p>
+<p><code>exec /usr/sbin/service minidlna start</code></p>
 <p>o</p>
-<p><code class="verbatim">sudo systemctl start minidlna.service</code></p>
+<p><code>sudo systemctl start minidlna.service</code></p>
 <p>o</p>
-<p><code class="verbatim">sudo service minidlna start</code></p>
-<p><code class="verbatim">sudo service minidlna stop</code></p>
-<p><code class="verbatim">sudo service minidlna restart</code></p>
+<p><code>sudo service minidlna start</code></p>
+<p><code>sudo service minidlna stop</code></p>
+<p><code>sudo service minidlna restart</code></p>
 <h2 id="forzar-el-reescaneado">Forzar el reescaneado</h2>
 <p>Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:</p>
-<p><code class="verbatim">sudo minidlnad -R ; sudo service minidlna restart</code></p>
+<p><code>sudo minidlnad -R ; sudo service minidlna restart</code></p>
 <p>o sino, podemos hacer:</p>
-<p><code class="verbatim">sudo service minidlna force-reload</code></p>
+<p><code>sudo service minidlna force-reload</code></p>
 <p>Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través de nuestro servidor DLNA.</p>
 <h2 id="puertos">Puertos</h2>
 <p>En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:</p>
@@ -126,6 +126,7 @@ inotify=yes
 <li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

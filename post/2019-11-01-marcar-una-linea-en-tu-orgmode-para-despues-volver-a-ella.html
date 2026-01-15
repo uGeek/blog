@@ -44,20 +44,20 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="marcar-una-línea-en-tu-orgmode-para-después-volver-a-ella">Marcar una línea en tu OrgMode, para después volver a ella</h1>
-<p>Mi archivo orgmode, actualmente supera de largo las 40.000 líneas. Hay momentos que estoy accediendo a una parte del documento, por ejemplo la línea <em>1345,</em> donde estoy leyendo parte de un contendio que tiene relación con la línea <em>38915</em>. </p>
+<h1 id="marcar-una-línea-en-tu-orgmode-para-después-volver-a-ella" title="Marcar una línea en tu OrgMode, para después volver a ella" data-export_file_name="marcar-una-linea-en-tu-orgmode-para-despues-volver-a-ella" data-description="Mi archivo orgmode, actualmente supera de largo las 40.000 líneas. Hay momentos que estoy accediendo a una parte del documento, por ejemplo la línea /1345,/ donde estoy leyendo parte de" data-export_date="2019-11-01 18:00" data-category="emacs" data-tag="orgmode" data-image="./images-blog/orgmode.png">Marcar una línea en tu OrgMode, para después volver a ella</h1>
+<p>Mi archivo orgmode, actualmente supera de largo las 40.000 líneas. Hay momentos que estoy accediendo a una parte del documento, por ejemplo la línea /1345,/ donde estoy leyendo parte de un contendio que tiene relación con la línea /38915/. </p>
 <p>¿Como podría marcar una línea, para después volver a ella?. </p>
 <p>Normalmente suelo escribir, por ejemplo, la palabra #anchor en ambas líneas y esta manera, mediante la búsqueda, salto de una línea a otra. </p>
 <p><img src="../images-blog/orgmode.png" /></p>
 <p>Hay un método que tiene emacs para marcar una línea y después volver a ella.</p>
 <h2 id="marcar-línea-al-anillo">Marcar línea al anillo</h2>
 <p>Para guardar una marca, <strong>que solo durará la sesión que tengamos el documento abierto</strong>, utilizaremos el atajo:</p>
-<p><code class="verbatim">C-c %</code></p>
-<p><code class="verbatim">M-x  org-mark-ring-push</code></p>
+<p><code>C-c %</code></p>
+<p><code>M-x  org-mark-ring-push</code></p>
 <p>Ahora podremos movernos a lo largo del documento. </p>
 <p>Para Volver a la línea que hemos marcado antes:</p>
-<p><code class="verbatim">C-c &amp;</code></p>
-<p><code class="verbatim">M-x  org-mark-ring-goto</code></p>
+<p><code>C-c &amp;</code></p>
+<p><code>M-x  org-mark-ring-goto</code></p>
 <p>Publicado por Angel el Friday 01 November del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -71,6 +71,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

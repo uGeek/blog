@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="enviando-imágenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-línea-de-terminal">Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de terminal</h1>
+<h1 id="enviando-imágenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-línea-de-terminal" title="Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal" data-export_file_name="Enviando Imagenes audios archivos con mi bot de Telegram de una sola Linea de terminal" data-description="En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!" data-export_date="2019-03-28 16:25" data-category="telegram" data-tag="bot" data-image="./images-blog/botfather.png">Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de terminal</h1>
 <p>El duelo está a un nivel muy alto y sabia que enfrentarme a Lorenzo, no iba a ser tarea fácil. La pasión que ambos tenemos por la creación de Bots en  Telegram, va ha hacer que este duelo nos haga asentar muchísimo mas nuestros conocimientos.</p>
 <p><img src="../images-blog/botfather.png" /></p>
 <p>En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!!, así que vamos a ver como enviar estos desde una sola línea de terminal con bash, pero antes, vamos a hacer recuento de como van los Post del duelo: </p>
@@ -63,14 +63,16 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li>TOKEN</li>
 <li>ID</li>
 <li>TU MENSAJE DE TEXTO</li>
+</ul>
 <pre><code>
 curl -s -X POST https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendMessage -d chat_id=&quot;&lt;ID&gt;&quot; -d text=&quot;&lt;TU MENSAJE DE TEXTO&gt;&quot;
 </code></pre>
 <h2 id="enviar-una-imagen">Enviar una imagen</h2>
 <p>Para enviar imágenes con nuestro Bot, tendremos que especificar la ruta completa del archivo así como el Token e ID:</p>
+<ul>
 <li>TOKEN</li>
 <li>ID</li>
-<li>RUTA DE NUESTRA IMÁGEN ( Tipo: "~<em>Imágenes</em>mifoto.jpg")</li>
+<li>RUTA DE NUESTRA IMÁGEN ( Tipo: "~/Imágenes/mifoto.jpg")</li>
 </ul>
 <pre><code>
 curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F photo=&quot;@&lt;RUTA DE NUESTRA IMAGEN&gt;&quot;
@@ -80,12 +82,14 @@ curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPh
 <ul>
 <li>TOKEN</li>
 <li>ID</li>
-<li>RUTA DE NUESTRA IMÁGEN ( Tipo: "<code class="verbatim">https://ugeek.github.io/blog/icon/ugeek.png</code>")</li>
+<li>RUTA DE NUESTRA IMÁGEN ( Tipo: "<code>https://ugeek.github.io/blog/icon/ugeek.png</code>")</li>
+</ul>
 <pre><code>
 curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F photo=&quot;&lt;RUTA DE LA IMAGEN EN INTERNET&gt;&quot;
 </code></pre>
 <h2 id="adjuntar-texto-junto-a-la-imágen">Adjuntar texto junto a la Imágen</h2>
 <p>Habrás visto que hay imágenes que llevan adjunto un texto en la parte inferior. Para hacer esto, tendremos que adjuntar un nuevo tag a nuestra línea:</p>
+<ul>
 <li>TOKEN</li>
 <li>ID</li>
 <li>RUTA DE NUESTRA IMÁGEN</li>
@@ -100,10 +104,10 @@ curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPh
 <li>TOKEN</li>
 <li>ID</li>
 <li>RUTA DEL ARCHIVO</li>
+</ul>
 <pre><code>
 curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendDocument&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F document=&quot;@&lt;RUTA DEL ARCHIVO&gt;&quot;
 </code></pre>
-</ul>
 <h2 id="adjuntar-texto-junto-al-archivo">Adjuntar texto junto al archivo</h2>
 <p>Para adjunta texto junto a la archivo:</p>
 <ul>
@@ -111,12 +115,12 @@ curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendDo
 <li>ID</li>
 <li>RUTA DEL ARCHIVO</li>
 <li>TEXTO JUNTO IMAGEN</li>
+</ul>
 <pre><code>
 curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendDocument&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F caption=&quot;&lt;TEXTO JUNTO IMAGEN&gt; -F document=&quot;@&lt;RUTA DEL ARCHIVO&gt;&quot;
 </code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Con todo esto y un poco de imaginación, ahora podemos ampliar mucho más las posibilidades de automatización. Espero que os haya gustado el Post y a disfrutar con los Bots</p>
-</ul>
 <p>Publicado por Angel el Thursday 28 March del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -130,6 +134,7 @@ curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendDo
 <li><a href="https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html">Grabar lo que suena en tu ordenador</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

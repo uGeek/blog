@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="borrar-contenedores-imágenes-volúmenes-y-redes-de-tus-dockers-con-prune">Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</h1>
+<h1 id="borrar-contenedores-imágenes-volúmenes-y-redes-de-tus-dockers-con-prune" title="Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune" data-export_file_name="Dockers con Prune" data-description="Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores" data-export_date="2019-08-29 10:30" data-category="docker" data-tag="ssh, terminal" data-image="./images-blog/docker.png">Borrar Contenedores, imágenes, Volúmenes y Redes de tus Dockers con Prune</h1>
 <p>Si trasteas mucho con docker, siempre llega un momento en el que te das cuenta que tu disco está lleno de contenedores, imágenes y volúmenes colgados, que ya no están en uso y han quedado obsoletos en tu disco ocupando espacio. Si tienes muchos, es una labor muy tediosa tener que borrar uno a uno todos los contenedores e imágenes. Hay un modo sencillo de borrarlo, vamos a utilizar <strong>prune</strong>.</p>
 <p><img src="../images-blog/docker.png" /></p>
 <h2 id="detener-todos-los-contenedores">Detener todos los contenedores</h2>
@@ -108,7 +108,7 @@ docker system prune
 <p>La terminal te pedirá que confirmes si deseas eliminarlos</p>
 <h3 id="contenedores-imágenes-redes-colgados-detenidos">Contenedores, imágenes, redes colgados detenidos</h3>
 <p>Borrar todos los contenedores <strong>detenidos</strong>, todas <strong>las redes no utilizadas</strong> por al menos un contenedor, *todas las imágenes sin al menos un </p>
-<p>contenedor* asociado a ellas y <strong>todo el caché</strong> de construcción.</p>
+<p>contenedor<strong> asociado a ellas y </strong>todo el caché* de construcción.</p>
 <pre><code>
 docker system prune -a
 </code></pre>
@@ -145,6 +145,7 @@ docker system prune --help.
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

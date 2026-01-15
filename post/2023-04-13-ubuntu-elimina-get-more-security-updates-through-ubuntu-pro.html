@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="ubuntu-elimina-get-more-security-updates-through-ubuntu-pro">Ubuntu: Elimina Get more security updates through Ubuntu Pro</h1>
+<h1 id="ubuntu-elimina-get-more-security-updates-through-ubuntu-pro" title="Ubuntu: Elimina Get more security updates through Ubuntu Pro" data-export_file_name="ubuntu-elimina-get-more-security-updates-through-ubuntu-pro" data-description="Es posible que si has actualizado ubuntu, te aparezca este mensaje:" data-export_date="2023-04-13 19:05" data-category="ubuntu" data-tag="actualizar" data-image="./images-blog/ugeek.png">Ubuntu: Elimina Get more security updates through Ubuntu Pro</h1>
 <p>Es posible que si has actualizado ubuntu, te aparezca este mensaje:</p>
 <pre><code class="language-sh">
 Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
@@ -53,13 +53,13 @@ Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
 <ol>
 <li>Inicia sesión en tu cuenta de Ubuntu en <a href="https://ubuntu.com/pro">https://ubuntu.com/pro</a>.</li>
 <li>Obtén un token personal gratuito que incluye hasta 5 máquinas.</li>
-<li>Ejecuta el comando <code class="verbatim">sudo pro attach tu-token-personal</code> en la terminal de tu máquina Ubuntu.</li>
-<li>Actualiza tu sistema utilizando el comando <code class="verbatim">sudo apt update &amp;&amp; sudo apt upgrade</code>.</li>
+<li>Ejecuta el comando <code>sudo pro attach tu-token-personal</code> en la terminal de tu máquina Ubuntu.</li>
+<li>Actualiza tu sistema utilizando el comando <code>sudo apt update &amp;&amp; sudo apt upgrade</code>.</li>
 </ol>
 <p>Esto debería permitir que se descarguen e instalen las actualizaciones de seguridad necesarias, incluyendo las relacionadas con los paquetes mencionados en el mensaje de error.</p>
 <h2 id="eliminar-mensaje">Eliminar Mensaje</h2>
-<p>Otra opción sería eliminar el archivo <code class="verbatim">/etc/apt/apt.conf.d/20apt-esm-hook.conf</code>, que proporciona el gancho que llama a la generación del mensaje de marketing. Puedes hacerlo con los siguientes comandos:</p>
-<p>Moveremos el archivo <code class="verbatim">20apt-esm-hook.conf</code> al directorio que crearemos, por si queremos volver atrás:</p>
+<p>Otra opción sería eliminar el archivo <code>/etc/apt/apt.conf.d/20apt-esm-hook.conf</code>, que proporciona el gancho que llama a la generación del mensaje de marketing. Puedes hacerlo con los siguientes comandos:</p>
+<p>Moveremos el archivo <code>20apt-esm-hook.conf</code> al directorio que crearemos, por si queremos volver atrás:</p>
 <pre><code class="language-sh">
 mkdir -p ~/relocated_apt
 sudo mv /etc/apt/apt.conf.d/20apt-esm-hook.conf ~/relocated_apt/.
@@ -70,12 +70,12 @@ sudo mv /etc/apt/apt.conf.d/20apt-esm-hook.conf ~/relocated_apt/.
 sudo apt list –upgradable
 sudo apt-get dist-upgrade
 </code></pre>
-<p>También puedes actualizar un solo paquete utilizando el comando <code class="verbatim">sudo apt install "paquete"</code>. Finalmente, si deseas instalar de forma automática las últimas actualizaciones de seguridad en Ubuntu Server, puedes utilizar los siguientes comandos:</p>
+<p>También puedes actualizar un solo paquete utilizando el comando <code>sudo apt install "paquete"</code>. Finalmente, si deseas instalar de forma automática las últimas actualizaciones de seguridad en Ubuntu Server, puedes utilizar los siguientes comandos:</p>
 <pre><code class="language-sh">
 sudo apt install unattended-upgrades
 sudo dpkg-reconfigure unattended-upgrades
 </code></pre>
-<p>Ten en cuenta que las actualizaciones pueden reiniciar los servicios de Ubuntu Server, lo que puede afectar la operación crítica de la empresa, por lo que debes ser cuidadoso con este tipo de actualizaciones. Puedes ejecutar <code class="verbatim">sudo unattended-upgrade= o =sudo unattended-upgrade -d</code> para instalar las actualizaciones de forma automática.</p>
+<p>Ten en cuenta que las actualizaciones pueden reiniciar los servicios de Ubuntu Server, lo que puede afectar la operación crítica de la empresa, por lo que debes ser cuidadoso con este tipo de actualizaciones. Puedes ejecutar <code>sudo unattended-upgrade</code> o <code>sudo unattended-upgrade -d</code> para instalar las actualizaciones de forma automática.</p>
 <p>Publicado por Angel el Thursday 13 April del 2023</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -89,6 +89,7 @@ sudo dpkg-reconfigure unattended-upgrades
 <li><a href="https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html">Nautilus con Tema Oscuro en I3wm</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html">Sonixd. Player para Jellyfin y Subsonic</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html">Abrir aplicaciones de Ubuntu desde una web html</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,13 +44,13 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="vizex-ver-almacenamiento-disponible-y-ocupado-de-tus-discos">Vizex. Ver almacenamiento disponible y ocupado de tus discos</h1>
+<h1 id="vizex-ver-almacenamiento-disponible-y-ocupado-de-tus-discos" title="Vizex. Ver almacenamiento disponible y ocupado de tus discos" data-export_file_name="vizex" data-description="Soy amante de las aplicaciones que te muestran todo el espacio que tienes en tu disco duro. Ya he escrito en varios artículos diferentes aplicaciones, hoy toca el turno a" data-export_date="2021-07-24 20:15" data-category="discoduro" data-tag="python" data-image="./images-blog/bash.png">Vizex. Ver almacenamiento disponible y ocupado de tus discos</h1>
 <p>Soy amante de las aplicaciones que te muestran todo el espacio que tienes en tu disco duro. Ya he escrito en varios artículos diferentes aplicaciones, hoy toca el turno a <strong>vizex</strong>.</p>
 <p><img src="../images-blog/bash.png" /></p>
 <pre><code class="language-sh">
 sudo pip3 install vizex
 </code></pre>
-<p>En ubuntu 20.04 me ha funcionado sin problemas, en cambio, en Raspberry OS me daba el siguiente error <code class="verbatim">Original error was: libf77blas.so.3: cannot open shared object file: No such file or directory</code> , así que he tenido que instalar:</p>
+<p>En ubuntu 20.04 me ha funcionado sin problemas, en cambio, en Raspberry OS me daba el siguiente error <code>Original error was: libf77blas.so.3: cannot open shared object file: No such file or directory</code> , así que he tenido que instalar:</p>
 <pre><code class="language-sh">
 sudo apt-get install libatlas-base-dev
 </code></pre>
@@ -59,11 +59,11 @@ sudo apt-get install libatlas-base-dev
 sudo pip3 install vizex --upgrade
 </code></pre>
 <h2 id="uso">Uso</h2>
-<p>Con el comando <code class="verbatim">vizex</code>, nos muestra el almacenamiento ocupado y libre de todas las unidades que tenemos</p>
+<p>Con el comando <code>vizex</code>, nos muestra el almacenamiento ocupado y libre de todas las unidades que tenemos</p>
 <pre><code class="language-sh">
 vizex
 </code></pre>
-<p>Si ejecutamos <code class="verbatim">vizexdf</code>, nos mostrará todos los archivos o directorios de la ubicación actual, con el tamaño</p>
+<p>Si ejecutamos <code>vizexdf</code>, nos mostrará todos los archivos o directorios de la ubicación actual, con el tamaño</p>
 <pre><code class="language-sh">
 vizexdf
 </code></pre>
@@ -78,6 +78,7 @@ vizex --help
 <li><a href="https://github.com/bexxmodd/vizex">https://github.com/bexxmodd/vizex</a></li>
 <p>Publicado por Angel el Saturday 24 July del 2021</p>
 <p>También te puede interesar:</p>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

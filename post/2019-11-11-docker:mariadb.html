@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-mariadb">Docker: Mariadb</h1>
+<h1 id="docker-mariadb" title="Docker: Mariadb" data-export_file_name="Docker: Mariadb" data-description="Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero" data-export_date="2019-11-11 17:55" data-category="docker" data-tag="mariadb" data-image="./images-blog/mariadb.png">Docker: Mariadb</h1>
 <p>Mariadb es una base de datos que hemos utilizado para muchos servicios y que podemos instalarla desde un docker. Hay dockers de mariadb tanto oficial, de la comunidad LinuxServer,... Pero yo he optado por crear uno yo mismo.</p>
 <p>El Docker que creé lo subí al DockerHub, y dos meses después ya supera mucho más de 10.000 descargas.</p>
 <p><img src="../images-blog/mariadb.png" /></p>
 <p>El objetivo erá utilizar un mariadb muy ligero que partiera de un Alpine Linux.</p>
 <h2 id="montar-el-docker">Montar el Docker</h2>
 <p>El puerto por defecto de mariadb, que es el 3306, yo en le ejemplo lo estoy desviando al 3307. Puedes utilizar el que tu desees.</p>
-<p>Recuerda poner la contraseña de la base de datos, poniéndola en lugar de <code class="verbatim">my-secret-pw</code>.</p>
+<p>Recuerda poner la contraseña de la base de datos, poniéndola en lugar de <code>my-secret-pw</code>.</p>
 <p>Si creas el contenedor como está aquí:</p>
 <ul>
 <li>usuario -&gt; root</li>
@@ -121,6 +121,7 @@ exit
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

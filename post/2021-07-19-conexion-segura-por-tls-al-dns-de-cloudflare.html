@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="conexión-segura-por-tls-al-dns-de-cloudflare">Conexión segura por TLS al DNS de CloudFlare</h1>
+<h1 id="conexión-segura-por-tls-al-dns-de-cloudflare" title="Conexión segura por TLS al DNS de CloudFlare" data-export_file_name="conexion-segura-por-tls-al-dns-de-cloudflare" data-description="Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu" data-export_date="2021-07-19 19:15" data-category="dns" data-tag="cloudflare" data-image="./images-blog/cloudflare.png">Conexión segura por TLS al DNS de CloudFlare</h1>
 <p>Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu 20.04.</p>
 <p><img src="../images-blog/cloudflare.png" /></p>
 <p>Por cierto... <strong>Muchas Felicidades por conseguir más de 100.000 subscriptores!!!</strong>.</p>
@@ -57,7 +57,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <pre><code class="language-sh">
 sudo apt install stubby
 </code></pre>
-<p>Esto instalará stubby y la biblioteca <code class="verbatim">getdns</code> . Una vez instalado, stubby se ejecuta en segundo plano.</p>
+<p>Esto instalará stubby y la biblioteca <code>getdns</code> . Una vez instalado, stubby se ejecuta en segundo plano.</p>
 <p>Verifica su estado con:</p>
 <pre><code class="language-sh">
 systemctl status stubby
@@ -66,13 +66,13 @@ systemctl status stubby
 <pre><code class="language-sh">
 sudo netstat -lnptu | grep stubby
 </code></pre>
-<p>El solucionador de stub predeterminado proporcionado por <code class="verbatim">systemd-resolved</code> escucha en el puerto 53 de TCP y UDP de 127.0.0.53.</p>
+<p>El solucionador de stub predeterminado proporcionado por <code>systemd-resolved</code> escucha en el puerto 53 de TCP y UDP de 127.0.0.53.</p>
 <pre><code class="language-sh">
 sudo netstat -lnptu |  sistema de agarred-resolv
 </code></pre>
 <p>Nota: Si dnsmasq está escuchando en el puerto TCP 53 de 127.0.0.1, Stubby solo escuchará en el puerto UDP 53 de 127.0.0.1.</p>
 <h2 id="archivo-de-configuración">Archivo de configuración</h2>
-<p>El archivo de configuración principal es <code class="verbatim">/etc/stubby/stubby.yml</code>.</p>
+<p>El archivo de configuración principal es <code>/etc/stubby/stubby.yml</code>.</p>
 <p>Normalmente, no es necesario realizar cambios a menos que desee utilizar otro o <a href="https://www.linuxbabe.com/ubuntu/dns-over-tls-resolver-nginx">solucionador recursivo su propio</a> .</p>
 <p>Déjame explicarte algunas configuraciones predeterminadas. Puede abrir el archivo con:</p>
 <pre><code class="language-sh">
@@ -102,7 +102,7 @@ listen_addresses:
 round_robin_upstreams: 1
 </code></pre>
 <p>De forma predeterminada, hay 3 resolutores recursivos habilitados en el archivo de configuración stubby.</p>
-<p>Yo los he comentado para que no funcionen, añadiendo delante <strong>*#</strong>*.</p>
+<p>Yo los he comentado para que no funcionen, añadiendo delante <strong>8</strong>.</p>
 <p>Añade al final del archivo de configuración el siguiente servidor DNS de CloudFlare:</p>
 <pre><code>
 #CloudFlare servers
@@ -120,7 +120,7 @@ round_robin_upstreams: 1
     tls_auth_name: &quot;dns.google&quot;
 </code></pre>
 <p>Cambiar a Stubby</p>
-<p>Ya no se recomienda editar el archivo `<em>etc</em>resolve.conf` para cambiar el nombre del servidor DNS. Sigue las instrucciones para hacer `systemd-resolved`enviar consultas de DNS a stubby.</p>
+<p>Ya no se recomienda editar el archivo `/etc/resolve.conf` para cambiar el nombre del servidor DNS. Sigue las instrucciones para hacer `systemd-resolved`enviar consultas de DNS a stubby.</p>
 <p>El método antiguo y no recomendado, que también nos puede ser útil para consultar los servidores DNS actuales, es:</p>
 <pre><code>
 cat /etc/resolv.conf
@@ -131,7 +131,7 @@ cat /etc/resolv.conf
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
 </code></pre>
-<p>En la siguiente línea a <code class="verbatim">[main]=, en el archivo =/etc/NetworkManager/NetworkManager.conf</code>, añade:</p>
+<p>En la siguiente línea a <code>[main]</code>, en el archivo <code>/etc/NetworkManager/NetworkManager.conf</code>, añade:</p>
 <pre><code>
 nano /etc/NetworkManager/NetworkManager.conf
 </code></pre>
@@ -140,7 +140,7 @@ nano /etc/NetworkManager/NetworkManager.conf
 plugins=ifupdown,keyfile
 dns=default
 </code></pre>
-<p>Eliminar el enlace simbólico <code class="verbatim">/etc/resolv.conf</code></p>
+<p>Eliminar el enlace simbólico <code>/etc/resolv.conf</code></p>
 <pre><code class="language-sh">
 rm /etc/resolv.conf
 </code></pre>
@@ -169,6 +169,7 @@ sudo systemctl restart NetworkManager
 <li><a href="https://ugeek.github.io/blog/post/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html">Conexión segura por TLS al DNS de CloudFlare</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-10-29-nuevas-dns-de-cloudflare.html">Nuevas DNS de Cloudflare</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html">Docker: Duck DNS. Facilitando la conexión a tus servicios</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

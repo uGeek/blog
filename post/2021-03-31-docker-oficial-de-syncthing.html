@@ -44,13 +44,13 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-oficial-de-syncthing">Docker oficial de Syncthing</h1>
+<h1 id="docker-oficial-de-syncthing" title="Docker oficial de Syncthing" data-export_file_name="docker-oficial-de-syncthing" data-description="En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura." data-export_date="2021-03-31 15:05" data-category="docker" data-tag="syncthing" data-image="./images-blog/Docker_oficial_de_Syncthing.png">Docker oficial de Syncthing</h1>
 <p>En su dia os expliqué como montar el docker de Syncthing con la imagen de LinuxServer. El motivo de hacerlo así, era porque no teníamos imagen oficial multiarquitectura.</p>
 <p><img src="../images-blog/Docker_oficial_de_Syncthing.png" /></p>
 <p>Ahora la imagen oficial de Syncthing ya es multiarquitectura y podemos utilizarla en amd64, ARM,...</p>
 <p>Vamos a ver como utilizarlo.</p>
 <h2 id="directorio-a-sincronizar">Directorio a sincronizar</h2>
-<p>Utiliza el volumen <code class="verbatim">/var/syncthing</code>, para tener los archivos sincronizados disponibles en el host.</p>
+<p>Utiliza el volumen <code>/var/syncthing</code>, para tener los archivos sincronizados disponibles en el host.</p>
 <p>Puedes agregar más directorios y asignarlos como prefieras.</p>
 <p>Ten en cuenta que Syncthing se ejecuta como UID 1000 y GID 1000 de forma predeterminada. Estos pueden modificarse con las variables de entorno PUID y PGID.</p>
 <h2 id="docker-compose">Docker-Compose</h2>
@@ -74,8 +74,10 @@ syncthing:
 <p>Aquí hay un listado en tiempo real de todos los realy disponibles:</p>
 <ul>
 <li><a href="https://relays.syncthing.net/">https://relays.syncthing.net/</a></li>
+</ul>
 <h2 id="fuentes">Fuentes</h2>
-<li><a href="https://hub.docker.com/r/syncthing/syncthing/tags?page">https://hub.docker.com/r/syncthing/syncthing/tags?page</a><code class="verbatim">1&amp;ordering</code>last_updated</li>
+<ul>
+<li><a href="https://hub.docker.com/r/syncthing/syncthing/tags?page">https://hub.docker.com/r/syncthing/syncthing/tags?page</a><code>1&amp;ordering</code>last_updated</li>
 </ul>
 <p>Publicado por Angel el Wednesday 31 March del 2021</p>
 <p>También te puede interesar:</p>
@@ -90,6 +92,7 @@ syncthing:
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="script-creando-una-barra-gráfica-de-porcentaje-con-bash-para-mi-dashboard">Script. Creando una barra gráfica de porcentaje con bash para mi dashboard</h1>
-<p>Quería un script en bash que utilizando 2 variables, una el tamaño total del disco duro y la otra, obteniendo el valor del espacio utilizado en disco (ya se en local con el comando <code class="verbatim">du -hs= o con =rclone size</code>), pre-visualizará una barra gráfica con el porcentaje.</p>
+<h1 id="script-creando-una-barra-gráfica-de-porcentaje-con-bash-para-mi-dashboard" title="Script. Creando una barra gráfica de porcentaje con bash para mi dashboard" data-export_file_name="script-creando-una-barra-grafica-de-porcentaje-con-bash-para-mi-dashboard" data-description="Quería un script en bash que utilizando 2 variables, una el tamaño total del disco duro y la otra, obteniendo el valor del espacio utilizado en disco (ya se en" data-export_date="2023-04-10 10:14" data-category="script" data-tag="disco" data-image="./images-blog/Script._Creando_una_barra_gráfica_de_porcentaje_con_bash_para_mi_dashboard.png">Script. Creando una barra gráfica de porcentaje con bash para mi dashboard</h1>
+<p>Quería un script en bash que utilizando 2 variables, una el tamaño total del disco duro y la otra, obteniendo el valor del espacio utilizado en disco (ya se en local con el comando <code>du -hs</code> o con <code>rclone size</code>), pre-visualizará una barra gráfica con el porcentaje.</p>
 <p>Se verá de este modo:</p>
 <pre><code class="language-sh">
 Espacio utilizado: 91.00%
 [=============================================    ] 20.207 GiB / 22 GiB
 </code></pre>
-<p>El objetivo ha sido incluir esta barra en mi dashboard y creando un bucle con <code class="verbatim">while</code>, mostrar todos mis discos del vps, local y nubes con rclone.</p>
+<p>El objetivo ha sido incluir esta barra en mi dashboard y creando un bucle con <code>while</code>, mostrar todos mis discos del vps, local y nubes con rclone.</p>
 <p>Os dejo esta idea para que la apliquéis a vuestro gusto.</p>
 <h2 id="script">script</h2>
 <p>Este es el script para crear una barra gráfica en la terminal de Bash para mostrar el espacio utilizado en un disco.</p>
@@ -73,7 +73,7 @@ space=$(printf ' %.0s' $(seq 1 $free_bar))
 echo &quot;Espacio utilizado: $used_percent%&quot;
 echo &quot;[$bar$space] $used GiB / $total GiB&quot;
 </code></pre>
-<p>Este script primero define las variables <code class="verbatim">total=, =used= y =free= con los valores del espacio total, utilizado y libre, respectivamente. Luego, se calculan los porcentajes correspondientes y se crea la barra gráfica utilizando el comando =printf</code>. Finalmente, se imprime la barra gráfica junto con el porcentaje y los valores utilizados y totales.</p>
+<p>Este script primero define las variables <code>total</code>, <code>used</code> y <code>free</code> con los valores del espacio total, utilizado y libre, respectivamente. Luego, se calculan los porcentajes correspondientes y se crea la barra gráfica utilizando el comando <code>printf</code>. Finalmente, se imprime la barra gráfica junto con el porcentaje y los valores utilizados y totales.</p>
 <p>Publicado por Angel el Monday 10 April del 2023</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -87,6 +87,7 @@ echo &quot;[$bar$space] $used GiB / $total GiB&quot;
 <li><a href="https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html">Script para crear acceso a aplicaciones AppImage</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-11-20-shebang-en-bash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-11-05-ntfy-sh-otro-sistema-de-notificaciones-pub-sub-simple-basado-en-http.html">ntfy.sh otro sistema de notificaciones pub-sub simple basado en HTTP</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

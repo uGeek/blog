@@ -44,19 +44,19 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-topydo-y-todotxt-machine-en-un-docker">Docker: topydo y todotxt-machine en un docker</h1>
+<h1 id="docker-topydo-y-todotxt-machine-en-un-docker" title="Docker: topydo y todotxt-machine en un docker" data-export_file_name="docker-topydo-y-todotxt-machine-en-un-docker" data-description="Si te gusta el todo.txt, te gustará este docker" data-export_date="2021-01-12 18:15" data-category="docker" data-tag="todo.txt,tareas" data-image="./images-blog/todotxt-machine.png">Docker: topydo y todotxt-machine en un docker</h1>
 <p>Si te gusta el todo.txt, te gustará este docker.</p>
 <p>Para no tener que instalar estás aplicaciones en tu sistema mediante Python, he decidido crear este docker que podemos correr tanto en nuestro PC, servidor o raspberry en remoto mediante SSH.</p>
-<p>Nuestro archivo <strong>todo.txt</strong>, en este caso estará en la ruta <code class="verbatim">~/todo/todo.txt</code> </p>
+<p>Nuestro archivo <strong>todo.txt</strong>, en este caso estará en la ruta <code>~/todo/todo.txt</code> </p>
 <h2 id="montar-el-docker-amd64">Montar el docker amd64</h2>
 <p>Tan sencillo como:</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run -it --name=todotxt -v $HOME<em>todo:</em>data ugeek/topydo-todotxt-machine:amd64 sh</p>
+<p>docker run -it --name=todotxt -v $HOME/todo:/data ugeek/topydo-todotxt-machine:amd64 sh</p>
 <p>#+END_EXAMPLE</p>
 <h2 id="montar-el-docker-para-arm-y-raspberry-pi">Montar el docker para ARM y Raspberry Pi</h2>
 <p>En tu Raspberry</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run -it --name=todotxt -v $HOME<em>todo:</em>data ugeek/topydo-todotxt-machine:arm sh</p>
+<p>docker run -it --name=todotxt -v $HOME/todo:/data ugeek/topydo-todotxt-machine:arm sh</p>
 <p>#+END_EXAMPLE</p>
 <h2 id="topydo">topydo</h2>
 <p>Para iniciar topydo. </p>
@@ -99,6 +99,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

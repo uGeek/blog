@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-kodexplorer">Docker: KodExplorer</h1>
+<h1 id="docker-kodexplorer" title="Docker: KodExplorer" data-export_file_name="Docker KodExplorer" data-description="KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming" data-export_date="2019-09-09 21:40" data-category="docker" data-tag="ssh, terminal, nas, servicios" data-image="./images-blog/kodexplorer.png">Docker: KodExplorer</h1>
 <p>Ya os he hablado en más de una ocasión sobre KodExplorer. KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming,...  a través del navegador web. </p>
 <p><img src="../images-blog/kodexplorer.png" /></p>
 <p>En esta versión del docker, podemos enlazar en la sesión de administrador, con una de las carpetas de nuestro servidor, Raspberry,... La ruta de esta carpeta la tienes que introducir donde aparece <strong>&lt;RUTA&gt;</strong>. Yo he montado una nube cifrada que tengo mediante rclone, de esta manera me permite subir y bajar archivos a la nube remotamente, desde el navegador web.</p>
@@ -78,6 +78,7 @@ docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/h
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

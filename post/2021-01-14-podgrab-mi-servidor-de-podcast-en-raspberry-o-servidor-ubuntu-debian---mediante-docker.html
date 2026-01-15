@@ -44,10 +44,10 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian-mediante-docker">PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker</h1>
+<h1 id="podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian-mediante-docker" title="PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker" data-export_file_name="podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker" data-description="Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito." data-export_date="2021-01-14 18:38" data-category="docker" data-tag="podcast" data-image="./images-blog/podgrab.png">PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker</h1>
 <p>Podgrab es un administrador de podcasts desarrollado en Go, que descarga automáticamente los últimos episodios de podcasts a los que estés suscrito.</p>
 <p><img src="../images-blog/podgrab.png" /></p>
-<p>Existe la posibilidad de buscar podcast a través de iTunes para su posterior susbcripción, así como importar mediante el archivo <em>OPML</em> que  tiene  la  mayor  parte  de  las  aplicaciones  de  podcast.</p>
+<p>Existe la posibilidad de buscar podcast a través de iTunes para su posterior susbcripción, así como importar mediante el archivo /OPML/ que  tiene  la  mayor  parte  de  las  aplicaciones  de  podcast.</p>
 <p><img src="../images-blog/podgrab1.png" /></p>
 <p>El desarrollador explica en su repositorio de GitHub, que la motivación de crear este servidor, fue que desde el inicio de pandemia comenzó a salir a correr y como no quería llevarse el móvil, decidió escuchar podcasts utilizando su reloj inteligente sincronizado con auriculares bluetooth y montó este método que podemos instalar a modo de servidor, para que se descarguen los podcast y tenerlos siempre disponibles.</p>
 <p>El desarrollador explica que está trabajando para implementar un reproductor integrado en el servidor y crear una API para que se puedan crear aplicaciones que sincronicen con este servidor.</p>
@@ -55,7 +55,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="docker-para-amd64-raspberry-pi-y-arm">Docker para amd64, Raspberry Pi y ARM</h2>
 <p>Yo he expuesto el servicio por el puerto 90</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run -d -p 90:8080 --name=podgrab -v "$HOME<em>docker</em>podgrab<em>assets:</em>assets" -v "$HOME<em>docker</em>podgrab<em>config:</em>config" akhilrex/podgrab</p>
+<p>docker run -d -p 90:8080 --name=podgrab -v "$HOME/docker/podgrab/assets:/assets" -v "$HOME/docker/podgrab/config:/config" akhilrex/podgrab</p>
 <p>#+END_EXAMPLE</p>
 <p>La base de datos que en el volumen <strong>/config</strong> y los podcasts se descargan en el directorio <strong>assets</strong>.</p>
 <h2 id="docker-compose">Docker-compose</h2>
@@ -70,8 +70,8 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <ul>
 <li>CHECK_FREQUENCY=240</li>
 <p>volumes:</p>
-<li>$HOME<em>docker</em>podgrab:/config</li>
-<li><em>media</em>podcast:/assets</li>
+<li>$HOME/docker/podgrab:/config</li>
+<li>/media/podcast:/assets</li>
 <p>ports:</p>
 <li>90:8080</li>
 <p>restart: unless-stopped</p>
@@ -116,6 +116,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

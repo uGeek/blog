@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="saltando-de-un-directorio-a-otro-con-jump">Saltando de un directorio a otro con Jump</h1>
+<h1 id="saltando-de-un-directorio-a-otro-con-jump" title="Saltando de un directorio a otro con Jump" data-export_file_name="saltando-de-un-directorio-a-otro-con-jump" data-description="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía." data-export_date="2020-08-24 17:30 2020-12-31" data-category="bash" data-tag="terminal" data-image="./images-blog/jump.svg">Saltando de un directorio a otro con Jump</h1>
 <p>Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía.</p>
 <p><img src="../images-blog/jump.svg" /></p>
 <p>Es un complemento súper productivo para moverte por la terminal.</p>
@@ -63,12 +63,12 @@ wget https://github.com/gsamokovarov/jump/releases/download/v0.30.1/jump_0.30.1_
 <h3 id="mac-y-otras-distros">Mac y otras distros</h3>
 <p>Visita el repositorio de Jump donde explica como instalarlo en el resto de distros</p>
 <h2 id="añadir-a-bash-o-zsh">Añadir a bash o zsh</h2>
-<p>Para bash y zsh, añade la siguiente línea a <code class="verbatim">/.bashrc, ~/bash_profileo o </code>/.zshrc</p>
+<p>Para bash y zsh, añade la siguiente línea a <code>/.bashrc, </code>/bash_profileo o ~/.zshrc</p>
 <pre><code>
 eval &quot;$(jump shell)&quot;
 </code></pre>
 <h2 id="en-fish">En fish</h2>
-<p>Para que funcione en fish, tenemos que añadir al archivo <code class="verbatim">~/.config/fish/config.fish</code></p>
+<p>Para que funcione en fish, tenemos que añadir al archivo <code>~/.config/fish/config.fish</code></p>
 <pre><code>
 status --is-interactive; and source (jump shell fish | psub)
 </code></pre>
@@ -76,7 +76,7 @@ status --is-interactive; and source (jump shell fish | psub)
 <pre><code>
 alias j='~/go/bin/jump shell fish |'
 </code></pre>
-<p>Ahora cuando pulso <strong>j</strong> en la terminal, ejecuta <code class="verbatim">~/go/bin/jump shell fish |</code></p>
+<p>Ahora cuando pulso <strong>j</strong> en la terminal, ejecuta <code>~/go/bin/jump shell fish |</code></p>
 <h2 id="cambiar-j-por-z">Cambiar j por z</h2>
 <p>Si deseas utilizar otra letra para ejecutar jump, por ejemplo la letra z</p>
 <pre><code>
@@ -91,7 +91,7 @@ eval &quot;$(jump shell --bind=z)&quot;
 <pre><code>
 j dk
 </code></pre>
-<p>Si no coincide con lo que buscabamos, ya que queríamos ir al directorio ~<em>docker</em>docker, escribiremos <strong>j</strong> + <strong>enter</strong> y nos aparecerá la siguiente sugerencia.</p>
+<p>Si no coincide con lo que buscabamos, ya que queríamos ir al directorio ~/docker/docker, escribiremos <strong>j</strong> + <strong>enter</strong> y nos aparecerá la siguiente sugerencia.</p>
 <pre><code>
 j
 </code></pre>
@@ -127,6 +127,7 @@ jump
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

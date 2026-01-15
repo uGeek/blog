@@ -44,19 +44,19 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="cryfs-cifrando-el-contenido-de-tu-carpeta">CryFS. Cifrando el contenido de tu carpeta</h1>
+<h1 id="cryfs-cifrando-el-contenido-de-tu-carpeta" title="CryFS. Cifrando el contenido de tu carpeta" data-export_file_name="CryFS. Cifrando el contenido de tu carpeta" data-description="CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar" data-export_date="2019-08-15 13:10" data-category="cifrado" data-tag="bash" data-image="./images-blog/ugeek.png">CryFS. Cifrando el contenido de tu carpeta</h1>
 <p>CryFS es un sistema de cifrado parecido a EncFS, pero mas robusto. Utiliza dos carpetas, una donde están los archivos cifrados y otra que tenemos que crear, para montar los archivos si cifrar. </p>
 <h3 id="instalación">Instalación</h3>
-<p><code class="verbatim">sudo apt install cryfs</code></p>
+<p><code>sudo apt install cryfs</code></p>
 <h3 id="creando-las-carpetas">Creando las carpetas</h3>
 <p>Creámos las carpetas donde pondremos nuestro datos tanto cifrados y la unidad de montaje.</p>
-<p><code class="verbatim">mkdir ~/directorio_cifrado</code></p>
-<p><code class="verbatim">mkdir ~/directorio_montaje</code></p>
+<p><code>mkdir ~/directorio_cifrado</code></p>
+<p><code>mkdir ~/directorio_montaje</code></p>
 <h3 id="cifrado">Cifrado</h3>
 <p>Vamos a montar la carpeta cifrada:</p>
-<p><code class="verbatim">cryfs ~/directorio_cifrado ~/directorio_montaje</code></p>
+<p><code>cryfs ~/directorio_cifrado ~/directorio_montaje</code></p>
 <h3 id="desmontando">Desmontando</h3>
-<p><code class="verbatim">fursermount -u ~/directorio_montaje</code></p>
+<p><code>fursermount -u ~/directorio_montaje</code></p>
 <h3 id="documentación">Documentación</h3>
 <p><a href="https://www.cryfs.org/tutorial">https://www.cryfs.org/tutorial</a></p>
 <h3 id="fuentes">Fuentes</h3>
@@ -71,6 +71,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2019-03-31-tomb-mis-secretos-son-una-tumba-crifrar-archivos.html">Tomb. Mis secretos son una Tumba. Crifrar Archivos</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-29-veracrypt-en-ubuntu-y-tu-raspberry-por-terminal.html">Veracrypt en Ubuntu y tu Raspberry por Terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

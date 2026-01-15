@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="servidor-webdav-con-rclone-con-nube-público-o-privada">Servidor WebDAV con rclone, con nube público o privada</h1>
+<h1 id="servidor-webdav-con-rclone-con-nube-público-o-privada" title="Servidor WebDAV con rclone, con nube público o privada" data-export_file_name="servidor-webdav-con-rclone-con-nube-publico-o-privada" data-description="Os he explicado varias formas de montar un servidor WebDAV." data-export_date="2021-05-11 17:00" data-category="docker" data-tag="rclone,webdav,nube" data-image="./images-blog/rclone.png">Servidor WebDAV con rclone, con nube público o privada</h1>
 <p>Os he explicado varias formas de montar un servidor WebDAV.</p>
 <p>El modo que os explicaré hoy con rclone, es el más fácil, rápido y seguro de todos los que os he explicado.</p>
 <p><img src="../images-blog/rclone.png" /></p>
@@ -63,9 +63,9 @@ htpasswd -nb angel 1234
 <pre><code class="language-sh">
 angel:$apr1$DANrK6fl$Ov/imrJhcDk/t5TgPEm9N1
 </code></pre>
-<p>Esto lo copiaré en el archivo <code class="verbatim">htpasswd</code>, donde guardaré todas mis contraseñas para acceder a la nube.</p>
+<p>Esto lo copiaré en el archivo <code>htpasswd</code>, donde guardaré todas mis contraseñas para acceder a la nube.</p>
 <p>Recuerda que puedo crear tantos usuarios y contraseñas como desee</p>
-<p>En mi caso, para no montar tantos volúmenes, guardaré el archivo <code class="verbatim">htpasswd= en la misma ruta que el archivo =rclone.conf</code>.</p>
+<p>En mi caso, para no montar tantos volúmenes, guardaré el archivo <code>htpasswd</code> en la misma ruta que el archivo <code>rclone.conf</code>.</p>
 <h2 id="servidor-almacenamiento-local">Servidor almacenamiento local</h2>
 <p>Voy a montar un servidor WebDAV con almacenamiento local, osea, todos los archivos y directorios de mi servidor WebDAV, estarán en mi Raspberry, Servidor o VPS.</p>
 <h3 id="docker-compose">docker-compose</h3>
@@ -104,13 +104,13 @@ angel:$apr1$DANrK6fl$Ov/imrJhcDk/t5TgPEm9N1
 <li>Personaliza el puerto, en este ejemplo utilizo en puerto <strong>100</strong>.</li>
 <li>webdav: Nombre de la nube en rclone</li>
 <li>--htpasswd : Archivo para el usuario y contraseña.</li>
-<li><em>root</em>.config<em>rclone</em>htpasswd : Ruta del archivo <strong>htpasswd</strong></li>
+<li>/root/.config/rclone/htpasswd : Ruta del archivo <strong>htpasswd</strong></li>
 </ul>
 <h2 id="almacenamiento-en-nube-pública">Almacenamiento en nube pública</h2>
 <p>En este caso, voy a utilizar la nube pública como almacenamiento de mis archivos. Mi servidor WebDAV servirá estos archivos.</p>
 <p><strong>En mi caso, he cifrado todos los archivos</strong> de la nube pública, así tengo <strong>más privacidad</strong>.</p>
 <h3 id="docker-compose">docker-compose</h3>
-<p>La nube que tengo configurada en rclone es <code class="verbatim">drive:</code>.</p>
+<p>La nube que tengo configurada en rclone es <code>drive:</code>.</p>
 <pre><code class="language-sh">
     rclone-webdav-server:
       container_name: webdav
@@ -138,7 +138,7 @@ angel:$apr1$DANrK6fl$Ov/imrJhcDk/t5TgPEm9N1
          - TZ=Europe/Madrid
 </code></pre>
 <h2 id="logs-de-acceso">logs de acceso</h2>
-<p>En el docker-compose anterior, tenemos que añadir la opción <code class="verbatim">-v= y =--log-file</code> para crear un archivo de texto plano donde se guardarán todos los logs.</p>
+<p>En el docker-compose anterior, tenemos que añadir la opción <code>-v</code> y <code>--log-file</code> para crear un archivo de texto plano donde se guardarán todos los logs.</p>
 <pre><code class="language-sh">
 - &quot;-v&quot;
 - &quot;--log-file&quot;
@@ -146,9 +146,9 @@ angel:$apr1$DANrK6fl$Ov/imrJhcDk/t5TgPEm9N1
 </code></pre>
 <ul>
 <li>--htpasswd : Archivo para el usuario y contraseña.</li>
-<li><em>root</em>.config<em>rclone</em>htpasswd : Ruta del archivo <strong>htpasswd</strong> con el usuario y contraseña.</li>
+<li>/root/.config/rclone/htpasswd : Ruta del archivo <strong>htpasswd</strong> con el usuario y contraseña.</li>
 </ul>
-<p>También crearemos un volumen para guardar el archivo de texto plano. Como ves en el ejemplo, lo he nombrado como <code class="verbatim">webdav.log</code>.</p>
+<p>También crearemos un volumen para guardar el archivo de texto plano. Como ves en el ejemplo, lo he nombrado como <code>webdav.log</code>.</p>
 <pre><code class="language-sh">
 volumes:
 - $HOME/docker/webdav/webdav.log:/webdav.log
@@ -171,6 +171,7 @@ docker logs -f webdav
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="golink">Golink</h1>
+<h1 id="golink" title="Golink" data-export_file_name="golink" data-description="golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar" data-export_date="2021-04-22 17:00" data-category="go" data-tag="bookmarks,marcadores,servidor" data-image="./images-blog/Golink.png">Golink</h1>
 <p>golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar a bunny1 o yubnub.</p>
 <p><img src="../images-blog/Golink.png" /></p>
 <h2 id="docker-amd64">Docker amd64</h2>
@@ -92,29 +92,29 @@ volumes:
 - &quot;$HOME/docker/golinks/search.db:/container/search.db&quot;
 </code></pre>
 <h2 id="uso">Uso</h2>
-<p>Escribe <code class="verbatim">help</code> para ver la página principal de ayuda</p>
-<p><code class="verbatim">add [name] [url]</code> para agregar un nuevo marcador (o sobrescribir uno existente).</p>
-<p><code class="verbatim">remove [name]</code> para eliminar un marcador.</p>
-<p><code class="verbatim">list=para [[http://192.168.1.102:222/?q</code>list][ver todos los marcadores y comandos]].</p>
+<p>Escribe <code>help</code> para ver la página principal de ayuda</p>
+<p><code>add [name] [url]</code> para agregar un nuevo marcador (o sobrescribir uno existente).</p>
+<p><code>remove [name]</code> para eliminar un marcador.</p>
+<p><code>list</code>para <a href="http://192.168.1.102:222/?q=list">ver todos los marcadores y comandos</a>.</p>
 <h3 id="marcadores-personalizados">Marcadores personalizados</h3>
-<p>Para agregar un marcador (o sobrescribir uno existente), ingresa <code class="verbatim">add [name] [url]= como su consulta de búsqueda, donde =name= es el atajo para el marcador y =url</code> la URL:</p>
+<p>Para agregar un marcador (o sobrescribir uno existente), ingresa <code>add [name] [url]</code> como su consulta de búsqueda, donde <code>name</code> es el atajo para el marcador y <code>url</code> la URL:</p>
 <pre><code class="language-sh">
 add imdb https://www.imdb.com
 </code></pre>
-<p>Ahora puedes entrar <code class="verbatim">imdb</code> en la barra de búsqueda para ir directamente a imdb.com.</p>
-<p>También puede agregar <code class="verbatim">%s</code> a tu URL, que será reemplazada por su consulta de búsqueda:</p>
+<p>Ahora puedes entrar <code>imdb</code> en la barra de búsqueda para ir directamente a imdb.com.</p>
+<p>También puede agregar <code>%s</code> a tu URL, que será reemplazada por su consulta de búsqueda:</p>
 <pre><code class="language-sh">
 add ddg https://duckduckgo.com/?q=%s
 </code></pre>
-<p>Ahora puedes usar <code class="verbatim">ddg [query]= para buscar a través de DuckDuckGo, por ejemplo =ddg cosas gratis</code> para encontrar algunas cosas gratis.</p>
-<p>Para eliminar una búsqueda, use <code class="verbatim">remove [name]=, asi que =remove ddg</code> eliminarás la búsqueda anterior.</p>
+<p>Ahora puedes usar <code>ddg [query]</code> para buscar a través de DuckDuckGo, por ejemplo <code>ddg cosas gratis</code> para encontrar algunas cosas gratis.</p>
+<p>Para eliminar una búsqueda, use <code>remove [name]</code>, asi que <code>remove ddg</code> eliminarás la búsqueda anterior.</p>
 <h2 id="listando">Listando</h2>
 <p>Por defecto viene todos estos marcadores y buscadores. Recuerda que podemos modificarlos</p>
 <p>Nombre y URL</p>
 <ul>
-<li>g <a href="https://www.google.com/search?q11all">https://www.google.com/search?q11all</a></li>
-<li>gh <a href="https://github.com/search?q13opensearch">https://github.com/search?q13opensearch</a></li>
-<li>gim <a href="https://www.google.com/search?q15isch">https://www.google.com/search?q15isch</a></li>
+<li>g <a href="https://www.google.com/search?q16define%%3A+%s&amp;hl17&amp;oi18all">https://www.google.com/search?q16define%%3A+%s&amp;hl17&amp;oi18all</a></li>
+<li>gh <a href="https://github.com/search?q20opensearch">https://github.com/search?q20opensearch</a></li>
+<li>gim <a href="https://www.google.com/search?q221&amp;ie23en&amp;tbm=isch">https://www.google.com/search?q221&amp;ie23en&amp;tbm=isch</a></li>
 <li>gl <a href="https://www.google.com/search?q=%s&amp;btnI">https://www.google.com/search?q=%s&amp;btnI</a></li>
 <li>gm <a href="http://maps.google.com/maps?q=%s">http://maps.google.com/maps?q=%s</a></li>
 <li>go <a href="https://golang.org/search?q=%s">https://golang.org/search?q=%s</a></li>
@@ -122,7 +122,7 @@ add ddg https://duckduckgo.com/?q=%s
 <li>py <a href="https://docs.python.org/2/search.html?q=%s">https://docs.python.org/2/search.html?q=%s</a></li>
 <li>py3 <a href="https://docs.python.org/3/search.html?q=%s">https://docs.python.org/3/search.html?q=%s</a></li>
 <li>wp <a href="http://en.wikipedia.org/?search=%s">http://en.wikipedia.org/?search=%s</a></li>
-<li>yt <a href="http://www.youtube.com/results?search_type24Search">http://www.youtube.com/results?search_type24Search</a></li>
+<li>yt <a href="http://www.youtube.com/results?search_type32relevance&amp;search_query33Search">http://www.youtube.com/results?search_type32relevance&amp;search_query33Search</a></li>
 </ul>
 <h3 id="comandos">Comandos</h3>
 <p>Comandos varios</p>
@@ -196,6 +196,7 @@ Display the current time
 <li><a href="https://ugeek.github.io/blog/post/2022-07-09-ublock-origin--bloqueando-publicidad-en-tu-navegador.html">uBlock Origin. . Bloqueando publicidad en tu navegador</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-21-newpipe-la-aplicacion-predeterminada-en-android.html">NewPipe. La aplicación predeterminada en Android</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

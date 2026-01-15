@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="mi-nueva-nube-es-owncloud">Mi nueva nube es ownCloud</h1>
+<h1 id="mi-nueva-nube-es-owncloud" title="Mi nueva nube es ownCloud" data-export_file_name="mi-nueva-nube-es-owncloud" data-description="Después de probar Nextcloud, FileRun,... y otras tantas nubes, me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10, ha decidido reescribir el" data-export_date="2021-01-31 18:54" data-category="owncloud" data-tag="nube" data-image="./images-blog/owncloud.png">Mi nueva nube es ownCloud</h1>
 <p>Después de probar Nextcloud, FileRun,... y otras tantas nubes, me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10, ha decidido reescribir el código a Go, aumentando muchisímo su velocidad, reduciendo consumo, temperatura de nuestro servidor, pudiendo ejecutarlo en máquinas con menos hardware...</p>
 <p><img src="../images-blog/owncloud.png" /></p>
 <p>Os dejo esta <a href="https://owncloud.com/es/news/ready-steady-go/">traducción casi literal del blog de ownCloud donde explica los motivos</a>.</p>
@@ -68,7 +68,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>La nueva generación de ownCloud, ownCloud Infinite Scale, irá un paso más allá y almacena los metadatos de los archivos directamente con los datos en el almacenamiento y por lo tanto ya no requiere una base de datos.</p>
 <p>Fuente:  <a href="https://owncloud.com/es/news/ready-steady-go/">https://owncloud.com/es/news/ready-steady-go/</a></p>
 <h2 id="montar-docker-para-amd64">Montar docker para amd64</h2>
-<p>Puedes añadir las variables de <code class="verbatim">ADMIN_USERNAME= y =ADMIN_PASSWORD</code> a la línea de terminal, si quieres cambiar el usuario y contraseña por defecto.</p>
+<p>Puedes añadir las variables de <code>ADMIN_USERNAME</code> y <code>ADMIN_PASSWORD</code> a la línea de terminal, si quieres cambiar el usuario y contraseña por defecto.</p>
 <ul>
 <li>usuario: <strong>admin</strong></li>
 <li>contraseña: <strong>admin</strong></li>
@@ -88,29 +88,29 @@ docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/ownclo
 </thead>
 <tbody>
 <tr>
-<td><code class="verbatim">OWNCLOUD_VERSION</code></td>
+<td><code>OWNCLOUD_VERSION</code></td>
 <td>La versión ownCloud</td>
-<td><code class="verbatim">latest</code></td>
+<td><code>latest</code></td>
 </tr>
 <tr>
-<td><code class="verbatim">OWNCLOUD_DOMAIN</code></td>
+<td><code>OWNCLOUD_DOMAIN</code></td>
 <td>El dominio ownCloud</td>
-<td><code class="verbatim">localhost:8080</code></td>
+<td><code>localhost:8080</code></td>
 </tr>
 <tr>
-<td><code class="verbatim">ADMIN_USERNAME</code></td>
+<td><code>ADMIN_USERNAME</code></td>
 <td>El nombre de usuario del administrador</td>
-<td><code class="verbatim">admin</code></td>
+<td><code>admin</code></td>
 </tr>
 <tr>
-<td><code class="verbatim">ADMIN_PASSWORD</code></td>
+<td><code>ADMIN_PASSWORD</code></td>
 <td>La contraseña del usuario administrador</td>
-<td><code class="verbatim">admin</code></td>
+<td><code>admin</code></td>
 </tr>
 <tr>
-<td><code class="verbatim">HTTP_PORT</code></td>
+<td><code>HTTP_PORT</code></td>
 <td>El puerto HTTP al que enlazar</td>
-<td><code class="verbatim">8080</code></td>
+<td><code>8080</code></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@ docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/ownclo
 <li>OWNCLOUD<u>ADMIN</u>USERNAME=admin</li>
 <li>OWNCLOUD<u>ADMIN</u>PASSWORD=admin</li>
 <p>volumes:</p>
-<li>$HOME<em>docker</em>owncloud:<em>mnt</em>data</li>
+<li>$HOME/docker/owncloud:/mnt/data</li>
 <p>#+END_EXAMPLE</p>
 </ul>
 <h2 id="docker-compose-con-proxy-inverso-en-traefik">Docker-compose con proxy inverso en traefik</h2>
@@ -143,7 +143,7 @@ docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/ownclo
 <li>OWNCLOUD<u>ADMIN</u>USERNAME=admin</li>
 <li>OWNCLOUD<u>ADMIN</u>PASSWORD=admin</li>
 <p>volumes:</p>
-<li>$HOME<em>docker</em>owncloud:<em>mnt</em>data</li>
+<li>$HOME/docker/owncloud:/mnt/data</li>
 <p>networks:</p>
 <li>web</li>
 </ul>
@@ -162,7 +162,7 @@ docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/ownclo
 <p>#+END_EXAMPLE</p>
 <h2 id="docker-cli-para-raspberry-o-arm">Docker cli para Raspberry o ARM</h2>
 <p>#+BEGIN_EXAMPLE sh</p>
-<p>docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME<em>docker</em>owncloud:<em>mnt</em>data owncloud/server</p>
+<p>docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/owncloud:/mnt/data owncloud/server</p>
 <p>#+END_EXAMPLE</p>
 <h2 id="docker-compose">Docker Compose</h2>
 <p>#+BEGIN_EXAMPLE sh</p>
@@ -177,7 +177,7 @@ docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/ownclo
 <li>OWNCLOUD<u>ADMIN</u>USERNAME=admin</li>
 <li>OWNCLOUD<u>ADMIN</u>PASSWORD=admin</li>
 <p>volumes:</p>
-<li>$HOME<em>docker</em>owncloud:<em>mnt</em>data</li>
+<li>$HOME/docker/owncloud:/mnt/data</li>
 <p>#+END_EXAMPLE</p>
 </ul>
 <h2 id="docker-compose-arm-proxy-inverso-con-traefik">Docker-compose ARM proxy inverso con Traefik</h2>
@@ -194,7 +194,7 @@ docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/ownclo
 <li>OWNCLOUD<u>ADMIN</u>USERNAME=admin</li>
 <li>OWNCLOUD<u>ADMIN</u>PASSWORD=admin</li>
 <p>volumes:</p>
-<li>$HOME<em>docker</em>owncloud:<em>mnt</em>data</li>
+<li>$HOME/docker/owncloud:/mnt/data</li>
 <p>networks:</p>
 <li>web</li>
 </ul>
@@ -467,7 +467,7 @@ docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/ownclo
 <p>#+BEGIN_HTML</p>
 <p>&lt;th&gt;</p>
 <p>#+END_HTML</p>
-<p>Posibilidad de alojamiento en un servidor propio<em>vps</em>Raspberry</p>
+<p>Posibilidad de alojamiento en un servidor propio/vps/Raspberry</p>
 <p>#+BEGIN_HTML</p>
 <p>&lt;/th&gt;</p>
 <p>#+END_HTML</p>
@@ -533,6 +533,7 @@ docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/ownclo
 <li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">Dale Almacenamiento ilimitado a tu Raspberry, Servidor o PC,... con Rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-06-11-montar-un-servidor-webdav-con-dafs2.html">Montar un servidor webdav con dafs2</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

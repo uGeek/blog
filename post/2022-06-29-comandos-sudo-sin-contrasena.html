@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="comandos-sudo-sin-contraseña">Comandos sudo sin contraseña</h1>
+<h1 id="comandos-sudo-sin-contraseña" title="Comandos sudo sin contraseña" data-export_file_name="comandos-sudo-sin-contrasena" data-description="** sudoers" data-export_date="2022-06-29 06:29 2023-03-10" data-category="sudo" data-tag="visudo" data-image="./images-blog/bash.png">Comandos sudo sin contraseña</h1>
 <h2 id="sudoers">sudoers</h2>
 <p>El <strong>archivo sudoers</strong> contiene información sobre los privilegios sudo del usuario y del grupo.</p>
 <p><img src="../images-blog/bash.png" /></p>
 <p> </p>
-<p>El acceso al usuario sudo se hace editando el archivo sudoers o agregando un archivo de configuración al directorio =     <em>etc</em>sudoers.d   = <strong>.</strong> </p>
+<p>El acceso al usuario sudo se hace editando el archivo sudoers o agregando un archivo de configuración al directorio =     /etc/sudoers.d   = <strong>.</strong> </p>
 <p> </p>
-<p>Todos los archivos creados dentro del directorio <code class="verbatim">/etc/sudoers.d</code> se incluirán en el archivo sudoers.</p>
+<p>Todos los archivos creados dentro del directorio <code>/etc/sudoers.d</code> se incluirán en el archivo sudoers.</p>
 <p>Si quieres editar de un modo manual, aunque no es recomendable:</p>
 <pre><code class="language-shell">
 sudo nano /etc/sudoers
@@ -59,7 +59,7 @@ sudo nano /etc/sudoers
 <p> </p>
 <h2 id="cambiar-el-editor-de-visudo">Cambiar el editor de visudo</h2>
 <p>Si no quieres utilizar vi como editor y prefieres, por ejemplo, utilizar nano:</p>
-<p>Ejecuta el siguiente comando para editar el archivo <code class="verbatim">/etc/sudoers</code>:</p>
+<p>Ejecuta el siguiente comando para editar el archivo <code>/etc/sudoers</code>:</p>
 <pre><code>
 sudo visudo -f /etc/sudoers
 </code></pre>
@@ -77,10 +77,10 @@ Defaults editor=/usr/bin/nano
 sudo cp /etc/sudoers{,.backup_$(date +%Y%m%d)}
 </code></pre>
 <p> </p>
-<p>Esto creará un nuevo directorio con la copia actual, por ejemplo <code class="verbatim">/etc/sudoers.backup_20220628</code></p>
+<p>Esto creará un nuevo directorio con la copia actual, por ejemplo <code>/etc/sudoers.backup_20220628</code></p>
 <p> </p>
 <h2 id="instalar-vi">Instalar vi</h2>
-<p>Es probable que tu distro ya tenga instalado vi, pero si no es así como en Manjaro Minimal, para  utilizar el comando <code class="verbatim">visudo</code> es necesario instalarlo:</p>
+<p>Es probable que tu distro ya tenga instalado vi, pero si no es así como en Manjaro Minimal, para  utilizar el comando <code>visudo</code> es necesario instalarlo:</p>
 <pre><code>
 sudo pacman -S vi
 </code></pre>
@@ -99,8 +99,8 @@ angel ALL=(ALL) NOPASSWD:ALL
 <p> </p>
 <h2 id="algunos-comandos">Algunos comandos</h2>
 <p>Estaba harto de poner la contraseña para habilitar o deshabilitar wireguard, así que lo utilizaré de ejemplo.</p>
-<p>En este caso, solo los comandos agregados tras <code class="verbatim">NOPASSWD:</code> y separados por comas, son los que no se solicitará la contraseña</p>
-<p>También he añadido los comandos <code class="verbatim">/usr/bin/mount,/usr/bin/umount</code> para poder montar discos duros sin tener que utilizar <strong>sudo</strong>.</p>
+<p>En este caso, solo los comandos agregados tras <code>NOPASSWD:</code> y separados por comas, son los que no se solicitará la contraseña</p>
+<p>También he añadido los comandos <code>/usr/bin/mount,/usr/bin/umount</code> para poder montar discos duros sin tener que utilizar <strong>sudo</strong>.</p>
 <pre><code class="language-sh">
 angel ALL=(ALL) NOPASSWD:/usr/bin/wg,/usr/bin/wg-quick up wg0,/usr/bin/wg-quick down wg0,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman -Sy
 </code></pre>
@@ -123,6 +123,7 @@ angel ALL=(ALL) NOPASSWD:ALL
 <li><a href="https://ugeek.github.io/blog/post/2021-10-04-gestionar-wireguard-sin-ser-sudo.html">Gestionar Wireguard sin ser sudo</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html">Comando sudo y su</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html">Instalando, Compilando el última versión de Rclone-Browser</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

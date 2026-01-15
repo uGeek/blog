@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="searxng-buscador-privado">SearXNG. Buscador privado</h1>
+<h1 id="searxng-buscador-privado" title="SearXNG. Buscador privado" data-export_file_name="searxng-buscador-privado" data-description="¿Qué es SearXNG y por qué deberías usarlo?" data-export_date="2023-03-20 18:48" data-category="searxng" data-tag="buscasdor" data-image="./images-blog/ugeek.png">SearXNG. Buscador privado</h1>
 <p>¿Qué es SearXNG y por qué deberías usarlo?</p>
 <p>SearXNG es un motor de metabúsqueda gratuito que agrega los resultados de más de 70 servicios y bases de datos de búsqueda. Los usuarios no son rastreados ni perfilados. Además, SearXNG se puede usar sobre Tor para el anonimato en línea .</p>
 <p>SearXNG es un proyecto impulsado por una comunidad abierta que se inició a mediados del 2021 como una bifurcación del proyecto searx. Su objetivo es proporcionar una alternativa privada y descentralizada a los motores de búsqueda convencionales como Google o Bing.</p>
@@ -62,13 +62,13 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </ul>
 <h2 id="cómo-usar-searxng">¿Cómo usar SearXNG?</h2>
 <p>Usar SearXNG es muy fácil e intuitivo. Solo tienes que acceder a una instancia pública o privada (por ejemplo <a href="https://searx.work">https://searx.work</a>) e introducir tu consulta en el cuadro de búsqueda.</p>
-<p>Puedes usar la sintaxis especial para afinar tu búsqueda con operadores como <code class="verbatim">!=, =+=, =-=, ="=, =site:=, =filetype:</code>, etc. Por ejemplo:</p>
+<p>Puedes usar la sintaxis especial para afinar tu búsqueda con operadores como <code>!</code>, <code>+</code>, <code>-</code>, <code>"</code>, <code>site:</code>, <code>filetype:</code>, etc. Por ejemplo:</p>
 <ul>
-<li><code class="verbatim">!wikipedia searxng</code> busca "searxng" en Wikipedia</li>
-<li><code class="verbatim">+linux -windows</code> busca páginas que contengan "linux" pero no "windows"</li>
-<li><code class="verbatim">"motor de metabúsqueda"</code> busca la frase exacta "motor de metabúsqueda"</li>
-<li><code class="verbatim">site:github.com searxng</code> busca páginas del dominio github.com que contengan "searxng"</li>
-<li><code class="verbatim">filetype:pdf guía rápida</code> busca archivos PDF que contengan "guía rápida"</li>
+<li><code>!wikipedia searxng</code> busca "searxng" en Wikipedia</li>
+<li><code>+linux -windows</code> busca páginas que contengan "linux" pero no "windows"</li>
+<li><code>"motor de metabúsqueda"</code> busca la frase exacta "motor de metabúsqueda"</li>
+<li><code>site:github.com searxng</code> busca páginas del dominio github.com que contengan "searxng"</li>
+<li><code>filetype:pdf guía rápida</code> busca archivos PDF que contengan "guía rápida"</li>
 </ul>
 <p>También puedes seleccionar la categoría y el idioma que prefieras para tu búsqueda en el menú desplegable situado debajo del cuadro de búsqueda.</p>
 <p>Si quieres configurar tus opciones personales (tema visual, idioma predeterminado, motores activados), puedes hacer clic en el icono</p>
@@ -76,12 +76,12 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>En SearXNG, tienes una sintaxis de búsqueda que te permite modificar las categorías, motores, idiomas y otros aspectos de tu búsqueda. Puedes consultar la lista de motores, categorías e idiomas en las preferencias. Para seleccionar un motor o categoría en particular, utiliza un prefijo de "!" antes del nombre del motor o categoría. Por ejemplo, "!wp" o "!wikipedia" para buscar en Wikipedia, o "!map" para buscar en la categoría de mapas. También puedes utilizar abreviaturas para los motores e idiomas. Los modificadores de motor/categoría son encadenables e inclusivos, lo que significa que puedes combinarlos para obtener resultados más específicos. Para seleccionar el filtro de idioma, utiliza el prefijo ":" antes del código de idioma, como ":fr" para buscar en francés. Además, SearXNG admite el uso de "bangs" externos de DuckDuckGo, lo que te permite buscar directamente en otros sitios web utilizando el prefijo "!!". Sin embargo, ten en cuenta que SearXNG no puede garantizar tu privacidad en estas búsquedas externas.</p>
 <p>Ejemplos:</p>
 <ul>
-<li>Busca en wikipedia <strong>paris</strong>: <code class="verbatim">!wp paris</code></li>
-<li>Buscar en <strong>el mapa</strong> de categorías para <strong>paris</strong>: <code class="verbatim">!map paris</code></li>
-<li>Búsqueda de imágenes: <code class="verbatim">!images Wau Holland</code></li>
-<li>Buscar en la categoría de mapas y DuckDuckGo y Wikipedia para <strong>París</strong>: <code class="verbatim">!map !ddg !wp paris</code></li>
-<li>Buscar en Wikipedia por un idioma personalizado: <code class="verbatim">:fr !wp Wau Holland</code></li>
-<li>Buscar en Wikipedia por un idioma personalizado utilizando un "bang" externo: <code class="verbatim">!!wfr Wau Holland</code></li>
+<li>Busca en wikipedia <strong>paris</strong>: <code>!wp paris</code></li>
+<li>Buscar en <strong>el mapa</strong> de categorías para <strong>paris</strong>: <code>!map paris</code></li>
+<li>Búsqueda de imágenes: <code>!images Wau Holland</code></li>
+<li>Buscar en la categoría de mapas y DuckDuckGo y Wikipedia para <strong>París</strong>: <code>!map !ddg !wp paris</code></li>
+<li>Buscar en Wikipedia por un idioma personalizado: <code>:fr !wp Wau Holland</code></li>
+<li>Buscar en Wikipedia por un idioma personalizado utilizando un "bang" externo: <code>!!wfr Wau Holland</code></li>
 </ul>
 <h2 id="instancias">Instancias</h2>
 <p>Si está buscando instancias en ejecución, listas para usar, visite <a href="https://searx.space">searx.space</a> . De lo contrario <a href="https://docs.searxng.org/user">, vaya a los manuales de usuario</a> , <a href="https://docs.searxng.org/admin">administrador</a> y <a href="https://docs.searxng.org/dev">desarrollador</a> que encontrará en nuestra <a href="https://docs.searxng.org/">página</a> de inicio .</p>
@@ -89,7 +89,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <ul>
 <li>Arranca el docker, añadiendo almohadilla ante los volumentes: Esta instrucción sirve para iniciar el contenedor de docker con la imagen de searxng, y montar los volúmenes especificados en el archivo docker-compose.yml. La almohadilla indica que se trata de un comentario y no se ejecuta como comando.</li>
 <li>Copiar la configuración una vez arrancado el docker: Esta instrucción sirve para copiar el archivo de configuración de searxng desde el contenedor al directorio local. Esto permite modificar los parámetros de searxng según las preferencias del usuario.</li>
-<li>docker cp searxng:<em>etc</em>searxng searxng<em>: Esta es la sintaxis del comando docker cp, que copia archivos o directorios entre un contenedor y el sistema de archivos local. En este caso, se copia el directorio </em>etc/searxng desde el contenedor llamado searxng al directorio local con el mismo nombre.</li>
+<li>docker cp searxng:/etc/searxng searxng/: Esta es la sintaxis del comando docker cp, que copia archivos o directorios entre un contenedor y el sistema de archivos local. En este caso, se copia el directorio /etc/searxng desde el contenedor llamado searxng al directorio local con el mismo nombre.</li>
 </ul>
 <pre><code class="language-sh">
 
@@ -159,6 +159,7 @@ formats:
 <li><a href="https://github.com/searxng/searxng">GitHub - searxng/searxng: SearXNG es un metabuscador de Internet gratuito que agrega resultados de varios servicios de búsqueda y bases de datos. Los usuarios no son rastreados ni perfilados.</a></li>
 <p>Publicado por Angel el Monday 20 March del 2023</p>
 <p>También te puede interesar:</p>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

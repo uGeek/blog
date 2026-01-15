@@ -44,20 +44,20 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian-desde-la-terminal">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</h1>
+<h1 id="silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian-desde-la-terminal" title="Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal" data-export_file_name="silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal" data-description="** amixersin" data-export_date="2021-07-01 18:15" data-category="bash" data-tag="sonido,volumen,mutear,unmutear" data-image="./images-blog/bash.png">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</h1>
 <h2 id="amixersin">amixersin</h2>
-<p>Amixersin, disponible en el paquete <code class="verbatim">alsa-utils</code> de Ubuntu y Debian, mos mostrará los parámetros y obtendremos una descripción general de los controles del dispositivo predeterminado.</p>
+<p>Amixersin, disponible en el paquete <code>alsa-utils</code> de Ubuntu y Debian, mos mostrará los parámetros y obtendremos una descripción general de los controles del dispositivo predeterminado.</p>
 <pre><code class="language-sh">
 amixersin
 </code></pre>
 <h2 id="alsamixer">alsamixer</h2>
-<p>En el mismo paquete, está disponible <code class="verbatim">alsamixer</code> para obtener una interfaz más visual siempre, desde la terminal.</p>
+<p>En el mismo paquete, está disponible <code>alsamixer</code> para obtener una interfaz más visual siempre, desde la terminal.</p>
 <ul>
-<li>Con <code class="verbatim">F6</code> cambiaremos entre dispositivos.</li>
-<li>Con <code class="verbatim">Esc</code>, saldremos de <strong>alsamixer</strong></li>
+<li>Con <code>F6</code> cambiaremos entre dispositivos.</li>
+<li>Con <code>Esc</code>, saldremos de <strong>alsamixer</strong></li>
 </ul>
 <h2 id="volumen-al-50">Volumen al 50%</h2>
-<p>Con el comando <code class="verbatim">amixer= + =set</code>, podremos configurar el volumen.</p>
+<p>Con el comando <code>amixer</code> + <code>set</code>, podremos configurar el volumen.</p>
 <pre><code class="language-sh">
 amixer set Master 50%
 </code></pre>
@@ -68,12 +68,12 @@ amixer sset Master 50%
 <li>Master, es el nombre del control y debe coincidir con el que ve cuando se ejecuta sin parámetros.</li>
 <li>%, corresponde con el valor</li>
 </ul>
-<p>Si PulseAudio no es su dispositivo predeterminado, puede utilizar <code class="verbatim">-D</code>:</p>
+<p>Si PulseAudio no es su dispositivo predeterminado, puede utilizar <code>-D</code>:</p>
 <pre><code class="language-sh">
 amixer -D pulse set Master 50%
 </code></pre>
 <h2 id="graduar-volumen-por-porcentaje">Graduar Volumen por porcentaje</h2>
-<p>Para aumentar o disminuir el volumen, utiliza <code class="verbatim">+/-</code> después del número:</p>
+<p>Para aumentar o disminuir el volumen, utiliza <code>+/-</code> después del número:</p>
 <pre><code>
 amixer set Master 10%+
 amixer set Master 10%-
@@ -103,6 +103,7 @@ amixer -c 0 set Master playback 100% unmute
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

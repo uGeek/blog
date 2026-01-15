@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav">Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</h1>
+<h1 id="radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav" title="Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV" data-export_file_name="radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav" data-description="Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV." data-export_date="2020-04-04 17:30" data-category="tareas" data-tag="calendario,caldav,carddav,raspberry" data-image="./images-blog/radicale.svg">Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</h1>
 <p>Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV.</p>
 <p><img src="../images-blog/radicale.svg" /></p>
 <p>La configuración recomendada para el uso de producción es servir a Apache en todo el sistema a través de uWSGI con autenticación basada en Apache</p>
@@ -77,8 +77,8 @@ admin:$apr1$zuGWuE98$ZqFt7FKv8yROElvQy9.wh1
 <li>contraseña:admin</li>
 </ul>
 <p>En la contraseña vemos que hay una combinación de numero, letras, símbolos... Esto es debido a que esta contraseña está cifrada en md5.</p>
-<p>Los cifrados mas seguros disponibles para la contraseña son <code class="verbatim">md5=, =bcrypt</code>.</p>
-<p>También podemos optar por poner la contraseña en texto plano <code class="verbatim">plain</code>, pero esto sería inseguro si alguien accede al interior de nuestro servidor.</p>
+<p>Los cifrados mas seguros disponibles para la contraseña son <code>md5</code>, <code>bcrypt</code>.</p>
+<p>También podemos optar por poner la contraseña en texto plano <code>plain</code>, pero esto sería inseguro si alguien accede al interior de nuestro servidor.</p>
 <p>Para cambiar el tipo de cifrado o ponerlo en texto plano, accederemos al siguiente archivo de configuración:</p>
 <pre><code>
 docker exec  -it radicale vi /etc/radicale/config
@@ -129,6 +129,7 @@ radicale --help
 <li><a href="https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html">Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-04-01-etesync-tareas-contactos-y-agendas-sincronizadas-de-extremo-a-extremo.html">EteSync. Tareas, Contactos y Calendarios, sincronizadas de extremo a extremo</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

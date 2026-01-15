@@ -44,20 +44,20 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="configuración-y-diferencias-entre-bashrc-bash-profile-bashrc-profile-o-sus-versiones-zsh">Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh</h1>
-<p>Navegando por las web encontré <a href="https://elpuig.xeill.net/Members/rborrell/articles/los-archivos-bashrc-bash_profile-etc-bashrc-etc-profile-los-archivos-bashrc-bash_profile-etc-bashrc-etc-profile-cual-utilizar">este interesante Post</a> donde se explica la diferencia entre los archivos de configuración  <code class="verbatim">~/.bashrc, ~/bash_profile, /etc/bashrc, /etc/profile</code>.</p>
+<h1 id="configuración-y-diferencias-entre-bashrc-bash-profile-bashrc-profile-o-sus-versiones-zsh" title="Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh" data-export_file_name="Configuracion y diferencias entre bashrc bash profile" data-description="Navegando por las web encontré este interesante Post donde se explica la diferencia entre los archivos de configuración" data-export_date="2019-08-19 18:10" data-category="bash" data-tag="ssh, terminal, zsh" data-image="./images-blog/bash.jpg">Configuración y diferencias entre bashrc, bash profile, bashrc, profile o sus versiones zsh</h1>
+<p>Navegando por las web encontré <a href="https://elpuig.xeill.net/Members/rborrell/articles/los-archivos-bashrc-bash_profile-etc-bashrc-etc-profile-los-archivos-bashrc-bash_profile-etc-bashrc-etc-profile-cual-utilizar">este interesante Post</a> donde se explica la diferencia entre los archivos de configuración  <code>1/bash_profile, /etc/bashrc, /etc/profile</code>.</p>
 <p>La diferencia más importante, es que unos archivos afectan solamente al usuario que está ejecutando la sesión y los otros, afectan a la totalidad de usuarios.</p>
 <p><img src="../images-blog/bash.jpg" /></p>
 <p>En estos archivos, podemos añadir scripts para que se ejecuten al iniciar el usuario o sesión.</p>
 <p>Vamos a ver como configurarlo y como afecta cada archivo. Lo dividiremos en los dos grandes grupos.</p>
 <h2 id="todos-los-usuarios">Todos los usuarios</h2>
 <h3 id="cuando-inicia-la-sesión">Cuando inicia la sesión </h3>
-<p>Archivo <code class="verbatim">/etc/profile</code></p>
+<p>Archivo <code>/etc/profile</code></p>
 <pre><code>
 sudo nano /etc/profile
 </code></pre>
 <h3 id="cuando-se-ejecuta-bash-o-zsh">Cuando se ejecuta Bash o Zsh </h3>
-<p>Archivo <code class="verbatim">/etc/bashrc</code></p>
+<p>Archivo <code>/etc/bashrc</code></p>
 <p>En <strong>Bash</strong></p>
 <pre><code>
 sudo nano /etc/zsh/zshrc
@@ -69,23 +69,23 @@ sudo nano /etc/zsh/zshrc
 <h2 id="para-tu-usuario">Para tu usuario</h2>
 <h3 id="cuando-inicias-sesión">Cuando inicias sesión</h3>
 <p>En <strong>Bash</strong> </p>
-<p>Archivo <code class="verbatim">~/.bash_profile</code></p>
+<p>Archivo <code>~/.bash_profile</code></p>
 <pre><code>
 nano ~/.bash_profile
 </code></pre>
 <p>En <strong>Zsh</strong></p>
-<p>Archivo <code class="verbatim">~/.zsh_profile</code></p>
+<p>Archivo <code>~/.zsh_profile</code></p>
 <pre><code>
 nano ~/.zsh_profile
 </code></pre>
 <h3 id="cuando-inicias-bash-o-zsh">Cuando inicias Bash o Zsh  </h3>
 <p>En <strong>Bash</strong></p>
-<p>Archivo <code class="verbatim">~/.bashrc</code></p>
+<p>Archivo <code>~/.bashrc</code></p>
 <pre><code>
 nano  ~/.bashrc
 </code></pre>
 <p>En <strong>Zsh</strong></p>
-<p>Archivo <code class="verbatim">~/.zshrc</code></p>
+<p>Archivo <code>~/.zshrc</code></p>
 <pre><code>
 nano  ~/.zshrc
 </code></pre>
@@ -102,6 +102,7 @@ nano  ~/.zshrc
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

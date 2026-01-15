@@ -44,11 +44,11 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="bash-en-docker">Bash en Docker</h1>
-<p>Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script <code class="verbatim">script.sh</code>.</p>
+<h1 id="bash-en-docker" title="Bash en Docker" data-export_file_name="bash-en-docker" data-description="Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script =script.sh=." data-export_date="2021-07-25 15:05" data-category="docker" data-tag="bash" data-image="./images-blog/bash.png">Bash en Docker</h1>
+<p>Bash viene en cualquier distro linux. De todas maneras, podemos ejecutarlo con Docker. Vamos a ver como ejecutar desde el docker el script <code>script.sh</code>.</p>
 <p><img src="../images-blog/bash.png" /></p>
 <h2 id="corriendo-bash-desde-un-docker">Corriendo bash desde un docker</h2>
-<p>Vamos a correr la versión <code class="verbatim">5.0=. Mira [[https://hub.docker.com/_/bash?tab=tags&amp;page=1&amp;ordering</code>last_updated][las etiquetas]] para personalizar la versión.</p>
+<p>Vamos a correr la versión <code>5.0</code>. Mira <a href="https://hub.docker.com/_/bash?tab41&amp;ordering=last_updated">las etiquetas</a> para personalizar la versión.</p>
 <pre><code class="language-sh">
 docker run -it --rm -v $HOME/docker/bash/script.sh:/script.sh:ro bash:5.0 bash /script.sh
 </code></pre>
@@ -59,7 +59,7 @@ docker run -it --rm -v /root:/script.sh:ro bash bash
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://hub.docker.com/_/bash?tab=description">bash</a></li>
-<li><a href="https://hub.docker.com/_/bash?tab5last_updated">bash Tags | Docker Hub</a></li>
+<li><a href="https://hub.docker.com/_/bash?tab71&amp;ordering=last_updated">bash Tags | Docker Hub</a></li>
 <p>Publicado por Angel el Sunday 25 July del 2021</p>
 <p>También te puede interesar:</p>
 <li><a href="https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li>
@@ -72,6 +72,7 @@ docker run -it --rm -v /root:/script.sh:ro bash bash
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

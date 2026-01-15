@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="ip-estática-o-fija-en-manjaro">IP estática o fija en Manjaro</h1>
+<h1 id="ip-estática-o-fija-en-manjaro" title="IP estática o fija en Manjaro" data-export_file_name="ip-estatica-o-fija-en-manjaro" data-description="Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una" data-export_date="2023-01-27 09:10 2023-02-13" data-category="ip" data-tag="manjaro" data-image="./images-blog/ugeek.png">IP estática o fija en Manjaro</h1>
 <p>Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una IP fija en Manjaro.</p>
 <p>Si no deseas utilizar NetworkManager, lo siguiente más fácil es configurar una IP estática en systemd.</p>
 <h2 id="configurar-ip-estática-con-systemd">Configurar IP estática con systemd</h2>
@@ -52,7 +52,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <pre><code class="language-sh">
 sudo systemctl disable --now NetworkManager.service
 </code></pre>
-<p>Para conocer el nombre del dispositivo de red, utiliza el comando <code class="verbatim">ip a</code>:</p>
+<p>Para conocer el nombre del dispositivo de red, utiliza el comando <code>ip a</code>:</p>
 <pre><code class="language-sh">
 ip a
 </code></pre>
@@ -69,19 +69,19 @@ link/ether dc:a6:32:0e:f7:75 brd ff:ff:ff:ff:ff:ff
 inet 192.168.1.35/24 brd 192.168.1.255 scope global end0
 valid_lft forever preferred_lft forever
 </code></pre>
-<p>El nombre es <code class="verbatim">entd0</code> y su ip local 192.168.1.35. Necesitaremos este nombre en el siguiente paso.</p>
+<p>El nombre es <code>entd0</code> y su ip local 192.168.1.35. Necesitaremos este nombre en el siguiente paso.</p>
 <h2 id="configuración-de-red">Configuración de red</h2>
-<p>Ahora crearemos un archivo para contener la configuración de la red, con la siguiente estructura <code class="verbatim">/etc/systemd/network/NOMBRE_RED.network=, donde =NOMBRE_RED</code> lo sustituiremos por nuestro nombre de red. <strong>Recuerda que en cada dispositivo, el sistema generará un nombre de red aleatorio al azahar</strong></p>
+<p>Ahora crearemos un archivo para contener la configuración de la red, con la siguiente estructura <code>/etc/systemd/network/NOMBRE_RED.network</code>, donde <code>NOMBRE_RED</code> lo sustituiremos por nuestro nombre de red. <strong>Recuerda que en cada dispositivo, el sistema generará un nombre de red aleatorio al azahar</strong></p>
 <p>Creamos el archivo y lo editamos</p>
 <pre><code class="language-sh">
 sudo nano /etc/systemd/network/entd0.network
 </code></pre>
-<p>En <code class="verbatim">Address== pondremos la IP que deseemos. yo en este ejemplo he elegido =192.168.1.100</code>.</p>
+<p>En <code>Address</code>= pondremos la IP que deseemos. yo en este ejemplo he elegido <code>192.168.1.100</code>.</p>
 <p>También puedes personalizar las <strong>DNS</strong>.</p>
 <p><strong>IMPORTANTE CAMBIAR EL NOMBRE DE RED POR EL TUYO</strong></p>
 <ul>
 <li>Name=entd0</li>
-<li>También en el nombre de archivo <code class="verbatim">/etc/systemd/network/NOMBRE_RED.network</code></li>
+<li>También en el nombre de archivo <code>/etc/systemd/network/NOMBRE_RED.network</code></li>
 </ul>
 <pre><code class="language-sh">
 [Match]
@@ -122,6 +122,7 @@ usuario $ sudo systemctl start --now dhcpcd.service
 <li><a href="https://ugeek.github.io/blog/post/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html">Configurar una ip estática en tu Raspberry Pi</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

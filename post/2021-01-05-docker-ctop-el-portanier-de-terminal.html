@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-ctop-el-portanier-de-terminal">Docker: Ctop. El portanier de terminal</h1>
+<h1 id="docker-ctop-el-portanier-de-terminal" title="Docker: Ctop. El portanier de terminal" data-export_file_name="docker-ctop-el-portanier-de-terminal" data-description="ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada..." data-export_date="2021-01-05 05:15" data-category="docker" data-tag="bash,zsh" data-image="./images-blog/ctop.gif">Docker: Ctop. El portanier de terminal</h1>
 <p>ctop proporciona una descripción general concisa y condensada de métricas en tiempo real de tus contenedores. Puedes ver el consumo de cpu, ram, datos de subida y bajada...</p>
 <p><img src="../images-blog/ctop.gif" /></p>
 <p>También puedes detener, iniciar, ver logs o borrar un contenedor entre ostras  cosas.</p>
@@ -52,25 +52,25 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>Para ver el rendimiento de los Dockers, me parece una herramienta fantástica.</p>
 <h2 id="docker-para-arm">Docker para ARM</h2>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run --rm -it --name ctop --volume <em>var</em>run<em>docker.sock:</em>var<em>run</em>docker.sock:ro jinnlynn/ctop</p>
+<p>docker run --rm -it --name ctop --volume /var/run/docker.sock:/var/run/docker.sock:ro jinnlynn/ctop</p>
 <p>#+END_EXAMPLE</p>
 <p>En raspberry, crea un alias con el comando <strong>ctop</strong>.</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>alias ctop='docker run --rm -it --name ctop --volume <em>var</em>run<em>docker.sock:</em>var<em>run</em>docker.sock:ro jinnlynn/ctop'</p>
+<p>alias ctop='docker run --rm -it --name ctop --volume /var/run/docker.sock:/var/run/docker.sock:ro jinnlynn/ctop'</p>
 <p>#+END_EXAMPLE</p>
 <h2 id="docker-para-amd64">Docker para amd64</h2>
 <p>#+BEGIN_EXAMPLE</p>
-<p>docker run --rm -it --name ctop     --volume <em>var</em>run<em>docker.sock:</em>var<em>run</em>docker.sock:ro     quay.io<em>vektorlab</em>ctop:latest</p>
+<p>docker run --rm -it --name ctop     --volume /var/run/docker.sock:/var/run/docker.sock:ro     quay.io/vektorlab/ctop:latest</p>
 <p>#+END_EXAMPLE</p>
 <h3 id="crea-un-alias-con-el-comando-ctop">crea un alias con el comando <strong>ctop</strong>.</h3>
 <p>#+BEGIN_EXAMPLE</p>
-<p>alias ctop='docker run --rm -it --name ctop     --volume <em>var</em>run<em>docker.sock:</em>var<em>run</em>docker.sock:ro     quay.io<em>vektorlab</em>ctop:latest'</p>
+<p>alias ctop='docker run --rm -it --name ctop     --volume /var/run/docker.sock:/var/run/docker.sock:ro     quay.io/vektorlab/ctop:latest'</p>
 <p>#+END_EXAMPLE</p>
 <h2 id="uso">Uso</h2>
 <p>ctop no requiere argumentos y utiliza variables de host de Docker de forma predeterminada. Consulta los <a href="https://github.com/bcicen/ctop/blob/master/_docs/connectors.md">conectores</a> para obtener más opciones de configuración.</p>
 <h3 id="archivo-de-configuración">Archivo de configuración</h3>
-<p>Mientras se ejecuta, use <code class="verbatim">S= para guardar los filtros actuales, el campo de clasificación y otras opciones en una ruta de configuración predeterminada ( =~/.config/ctop/config=en sistemas XDG, de lo contrario =~/.ctop</code>).</p>
-<p>Los valores del archivo de configuración se cargarán y aplicarán la próxima vez que <code class="verbatim">ctop</code>se inicie.</p>
+<p>Mientras se ejecuta, use <code>S</code> para guardar los filtros actuales, el campo de clasificación y otras opciones en una ruta de configuración predeterminada ( <code>~/.config/ctop/config</code>en sistemas XDG, de lo contrario <code>~/.ctop</code>).</p>
+<p>Los valores del archivo de configuración se cargarán y aplicarán la próxima vez que <code>ctop</code>se inicie.</p>
 <h3 id="atajos-de-teclado">Atajos de teclado</h3>
 <table>
 <thead>
@@ -90,7 +90,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </tr>
 <tr>
 <td>f</td>
-<td>Filtrar los contenedores mostrados ( <code class="verbatim">esc</code>para limpiarlos cuando estén abiertos)</td>
+<td>Filtrar los contenedores mostrados ( <code>esc</code>para limpiarlos cuando estén abiertos)</td>
 </tr>
 <tr>
 <td>H</td>
@@ -114,7 +114,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </tr>
 <tr>
 <td>l</td>
-<td>Ver registros de contenedores ( <code class="verbatim">t</code>para alternar la marca de tiempo cuando está abierto)</td>
+<td>Ver registros de contenedores ( <code>t</code>para alternar la marca de tiempo cuando está abierto)</td>
 </tr>
 <tr>
 <td>e</td>
@@ -151,6 +151,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

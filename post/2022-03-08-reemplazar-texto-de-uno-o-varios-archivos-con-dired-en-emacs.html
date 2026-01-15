@@ -44,23 +44,23 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs">Reemplazar texto de uno o varios archivos con dired en Emacs</h1>
-<p>Cuando hay un error de sincronización con las notas en [[<a href="https://play.google.com/store/apps/details?id">https://play.google.com/store/apps/details?id</a><code class="verbatim">org.eu.thedoc.zettelnotes&amp;hl=es&amp;gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~</code>.</p>
+<h1 id="reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs" title="Reemplazar texto de uno o varios archivos con dired en Emacs" data-export_file_name="reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs" data-description="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." data-export_date="2022-03-08 19:25" data-category="emacs" data-tag="dired" data-image="./images-blog/emacs.png">Reemplazar texto de uno o varios archivos con dired en Emacs</h1>
+<p>Cuando hay un error de sincronización con las notas en [[<a href="https://play.google.com/store/apps/details?id">https://play.google.com/store/apps/details?id</a><code>org.eu.thedoc.zettelnotes&amp;hl</code>es&amp;gl<code>US][Zettel Notes]], aparece en la línea con error el siguiente símbolo </code>~~=.</p>
 <p><img src="../images-blog/emacs.png" /></p>
 <p>Hay un modo de ir renombrando todas las palabras que aparecen en una nota a la vez con un solo comando. Pero si esto te sucede en todas las notas de un directorio, también podemos hacerlo utilizando el explorador de archivos <strong>dired</strong> que incluye <strong>Emacs</strong>.</p>
 <p>Vamos a ver como hacerlo de los 2 modos.</p>
 <h2 id="cambiar-palabras-en-un-archivo-de-texto">Cambiar palabras en un archivo de texto</h2>
-<p>Para ir reemplazando palabra a palabra en un archivo de texto que hayamos abierto con <strong>Emacs</strong> y te vaya preguntando cada palabra que coincida, pulsamos el atajo <code class="verbatim">M-%</code>.</p>
+<p>Para ir reemplazando palabra a palabra en un archivo de texto que hayamos abierto con <strong>Emacs</strong> y te vaya preguntando cada palabra que coincida, pulsamos el atajo <code>M-%</code>.</p>
 <p>Para reemplazar todas las palabras en el archivo de texto abierto con <strong>Emacs</strong> de una vez y que no te pregunte introduciremos el comando:</p>
 <pre><code class="language-sh">
 M-x replace-regexp
 </code></pre>
 <h2 id="utilizar-dired-para-reemplazar-texto-en-multimples-archivos">Utilizar dired para reemplazar texto en multimples archivos</h2>
 <h3 id="marcando-archivos-con-dired-de-emacs">Marcando archivos con dired de Emacs</h3>
-<p>Utiliza dired con Emacs y visualiza los archivos de un directorio. Para abrir dired podemos hacerlo con el atajo <code class="verbatim">C-x d</code>.</p>
+<p>Utiliza dired con Emacs y visualiza los archivos de un directorio. Para abrir dired podemos hacerlo con el atajo <code>C-x d</code>.</p>
 <ul>
-<li>Marca los archivos que quieres reemplazar el texto con la letra <code class="verbatim">m= y desmarca con la letra =u=. Puedes ir marcando =m</code> todo el rato e irá marcando un archivo tras otro.</li>
-<li>También puedes seleccionar todos los archivos de un directorio con el atajo <code class="verbatim">C-u t</code>.</li>
+<li>Marca los archivos que quieres reemplazar el texto con la letra <code>m</code> y desmarca con la letra <code>u</code>. Puedes ir marcando <code>m</code> todo el rato e irá marcando un archivo tras otro.</li>
+<li>También puedes seleccionar todos los archivos de un directorio con el atajo <code>C-u t</code>.</li>
 </ul>
 <h4 id="cambiar-según-patrón-de-nombre-de-archivo-o-extensión">Cambiar según patrón de nombre de archivo o extensión</h4>
 <p>Puedes seleccionar seleccionar varios archivos que cumplan un patrón e común. Por ejemplo los archivos <strong>.md</strong>, utilizaremos % m.</p>
@@ -103,6 +103,7 @@ M-x save-some-buffers
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

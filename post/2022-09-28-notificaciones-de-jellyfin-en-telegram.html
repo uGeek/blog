@@ -44,19 +44,19 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="notificaciones-de-jellyfin-en-telegram">Notificaciones de Jellyfin en Telegram</h1>
+<h1 id="notificaciones-de-jellyfin-en-telegram" title="Notificaciones de Jellyfin en Telegram" data-export_file_name="notificaciones-de-jellyfin-en-telegram" data-description="Si tienes un servidor de Jellyfin, estoy seguro que te encantaría recibir notificaciones vía Telegram de las nuevas novedades añadidas, reproducciones de tus usuarios, etc..." data-export_date="2022-09-28 20:20" data-category="jellyfin" data-tag="telegram" data-image="./images-blog/ugeek.png">Notificaciones de Jellyfin en Telegram</h1>
 <p>Si tienes un servidor de Jellyfin, estoy seguro que te encantaría recibir notificaciones vía Telegram de las nuevas novedades añadidas, reproducciones de tus usuarios, etc...</p>
 <p>Hay un desarrollador que ha hecho un pluging para recibir toda la actividad de tu servidor.</p>
 <p>Vamos a ver cómo instalarlo</p>
 <h2 id="instalación-y-configuración">Instalación y configuración</h2>
 <ol>
 <li><a href="https://github.com/MindFlavor/Jellyfin.Plugins.Telegram/releases/tag/1.7.0.0">Descarga el archivo zip de la última release disponible.</a></li>
-<li>Descomprime el archivo <strong>zip</strong> y guarda el directorio que hay en el directorio de plugins de tu jellyfin. Si has montado el volumen: <code class="verbatim">/config/plugins</code>.</li>
+<li>Descomprime el archivo <strong>zip</strong> y guarda el directorio que hay en el directorio de plugins de tu jellyfin. Si has montado el volumen: <code>/config/plugins</code>.</li>
 <li>Dale permisos al directorio que hemos copiado, si hay problemas para que Jellyfin acceda. Para que acceda y modifique todos los usuarios: =sudo chmod 777 -R Jellyfin.Plugins.Telegram</li>
-<li>Accede en tu interfaz de Jellyfin a: <em>Administración &gt; Panel Control</em> y cuando se abra el nuevo menú <em>Avanzado &gt; Complementos</em>. Ahora en el apartado <strong>Mis Complementos</strong>, debe aparecer el plugin de <strong>Telegram Notifications</strong>.</li>
+<li>Accede en tu interfaz de Jellyfin a: /Administración &gt; Panel Control/ y cuando se abra el nuevo menú /Avanzado &gt; Complementos/. Ahora en el apartado <strong>Mis Complementos</strong>, debe aparecer el plugin de <strong>Telegram Notifications</strong>.</li>
 <li>Pulsa sobre el Plugin y rellena el <strong>token del bot</strong> creado previamente en Telegram y el <strong>ID</strong> del chat de usuario, grupo o canal.</li>
 <li>El <strong>Test Notification</strong> a mí no me ha funcionado, pero realmente, el pluging funciona.</li>
-<li>En <em>Avanzado &gt; Notificaciones</em>, podemos configurar que notificaciones queremos que nos notifique el bot.</li>
+<li>En /Avanzado &gt; Notificaciones/, podemos configurar que notificaciones queremos que nos notifique el bot.</li>
 </ol>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
@@ -74,6 +74,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2019-11-27-ordena-renombra-y-actualiza-tus-metadatos-con-tiny-media-manager.html">Ordena, renombra y actualiza tus metadatos con Tiny Media Manager</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-08-21-cada-vez-mas-clientes-de-jellyfin.html">Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-05-07-el-adios-a-plex-y-emby.-llega-jellyfin.html">El Adiós a Plex y Emby. Llega Jellyfin</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

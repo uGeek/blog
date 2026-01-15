@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada">Instalar VNC en tu servidor con debian u otra derivada</h1>
+<h1 id="instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada" title="Instalar VNC en tu servidor con debian u otra derivada" data-export_file_name="Instalar VNC en tu servidor con debian u otra derivada" data-description="Hay sistemas operativos que instalo una interfaz gráfica en el servidor y accedo remotamente vía VNC" data-export_date="2019-07-08 21:10" data-category="debian" data-tag="terminal,ssh,vnc" data-image="./images-blog/docker.png">Instalar VNC en tu servidor con debian u otra derivada</h1>
 <p>Hay sistemas operativos que instalo una interfaz gráfica en el servidor y accedo remotamente vía VNC. Pero..., ¿Como lo instalamos y hacemos que sea accesible siempre el servidor desde el inicio del sistema?. </p>
 <p>Este es el método mas fácil y el que siempre empleo yo.</p>
 <p><img src="../images-blog/vnc.png" /></p>
@@ -56,7 +56,7 @@ apt install x11vnc
 </code></pre>
 <h2 id="creamos-contraseña">Creamos contraseña</h2>
 <p><strong>Entramos en la sesión de nuestro usuario</strong> y escribimos en la terminal:</p>
-<p><code class="verbatim">x11vnc -storepasswd</code></p>
+<p><code>x11vnc -storepasswd</code></p>
 <p>Escribimos la contraseña 2 veces y escribimos <strong>Yes</strong></p>
 <h2 id="iniciamos-el-servidor-desde-el-usuario">Iniciamos el servidor desde el usuario</h2>
 <p>Vamos a ver si podemos acceder desde nuestro móvil, tablet o PC. Vamos a iniciar nuestro servidor VNC:</p>
@@ -66,7 +66,7 @@ x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/&lt;USUARIO&
 </code></pre>
 <h2 id="que-inicie-siempre-al-iniciar-al-sistema">Que inicie siempre al iniciar al sistema</h2>
 <p><strong>Entramos nuevamente como root</strong> y escribimos en la terminal:</p>
-<p><code class="verbatim">crontab -e</code></p>
+<p><code>crontab -e</code></p>
 <p>Ahora añadiremos en el archivo de cron:</p>
 <p><strong>Sustituye &lt;USUARIO&gt; por tu usuario:</strong></p>
 <pre><code>
@@ -86,6 +86,7 @@ x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/&lt;USUARIO&
 <li><a href="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html">Docker: Wireguard para Raspberry, Ubuntu, Debian,...</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-17-instalar-ultima-version-de-go-en-raspberry-arm-o-amd64.html">Instalar última versión de Go en Raspberry, ARM o amd64</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,11 +44,11 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="creando-contenedores-con-dockerc">Creando contenedores con dockerc</h1>
+<h1 id="creando-contenedores-con-dockerc" title="Creando contenedores con dockerc" data-export_file_name="creando-contenedores-con-dockerc" data-description="El motivo de crear esta aplicación es bash que he desarrollado, es tener en una carpeta archivos de texto plano con la extensión .docker y en su contenido las líneas" data-export_date="2020-03-31 15:48" data-category="docker" data-tag="app" data-image="./images-blog/docker.png">Creando contenedores con dockerc</h1>
 <p>El motivo de crear esta aplicación es bash que he desarrollado, es tener en una carpeta, archivos de texto plano con la extensión .docker y en su contenido, las líneas de terminal para montar el contenedor.</p>
 <p><img src="../images-blog/docker.png" /></p>
 <p>La aplicación te permite tanto el crear el archivo para guardar estas líneas, así como poder montar un contenedor o un grupo de contendores, todo de manera automatizada.</p>
-<p>Si tienes tu lista de dockers favoritos en una carpeta, instalar de cero una Raspberry Pi, por ejemplo, con un simple <code class="verbatim">dockerc a</code> auto instalará todos los dockers que hayamos guardado en esa carpeta.</p>
+<p>Si tienes tu lista de dockers favoritos en una carpeta, instalar de cero una Raspberry Pi, por ejemplo, con un simple <code>dockerc a</code> auto instalará todos los dockers que hayamos guardado en esa carpeta.</p>
 <h2 id="instalación">Instalación</h2>
 <p>Si tienes Linux, es tan simple como:</p>
 <pre><code>
@@ -60,7 +60,7 @@ sudo curl -L https://raw.githubusercontent.com/uGeek/dockerc/master/dockerc     
 <li>En que directorio vamos a guardar nuestros dockers</li>
 <li>Que editor de texto queremos utilizar para editarlos</li>
 </ul>
-<p>Tras responder estas preguntas, dockerc creará una archivo de configuración en <code class="verbatim">~/.config/dockerc/dockerc.conf</code>.</p>
+<p>Tras responder estas preguntas, dockerc creará una archivo de configuración en <code>~/.config/dockerc/dockerc.conf</code>.</p>
 <h2 id="guardar-un-docker">Guardar un docker</h2>
 <p>Para guardar un docker con dockerc, tienes que ejecutar el comando</p>
 <pre><code>
@@ -73,20 +73,20 @@ dockerc n
 </ul>
 <p>Te abrirá el editor de texto, por si quieres editar alguna opción antes de crearlo y creará un archivo de texto plano con la extensión .docker.</p>
 <h3 id="ejemplo">Ejemplo</h3>
-<p>Supongamos que he elegido el directorio <code class="verbatim">/home/angel/dockerc/</code>, yo he creado los siguientes grupos de dockers, rpi, amd64 y automontaje.</p>
+<p>Supongamos que he elegido el directorio <code>/home/angel/dockerc/</code>, yo he creado los siguientes grupos de dockers, rpi, amd64 y automontaje.</p>
 <p>Las rutas de estos directorios serina:</p>
 <ul>
-<li><code class="verbatim">/home/angel/dockerc/rpi</code></li>
-<li><code class="verbatim">/home/angel/dockerc/amd64/</code></li>
-<li><code class="verbatim">/home/angel/dockerc/automontaje</code></li>
+<li><code>/home/angel/dockerc/rpi</code></li>
+<li><code>/home/angel/dockerc/amd64/</code></li>
+<li><code>/home/angel/dockerc/automontaje</code></li>
 </ul>
 <p>En la carpeta rpi, dejo los archivos de los dockers para Raspberry Pi, en la <strong>amd64</strong>, los dockers para arquitectura 64bits y en automontaje, los dockers que quiero montar en mi Raspberry Pi de forma automatizada.</p>
-<p>Un archivo <code class="verbatim">.docker</code>, tendría la siguiente estructura:</p>
+<p>Un archivo <code>.docker</code>, tendría la siguiente estructura:</p>
 <pre><code>
 # Docker Supysonic
 docker run --name supysonic --restart=unless-stopped -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:arm-0.5.0
 </code></pre>
-<p>Si le decimos a <strong>dockerc</strong> que este docker es Supysonic y pertenece al grupo de rpi, dockerc creará un archivo de texto plano con este contenido en la ruta <code class="verbatim">/home/angel/dockerc/rpi/supysonic.docker</code></p>
+<p>Si le decimos a <strong>dockerc</strong> que este docker es Supysonic y pertenece al grupo de rpi, dockerc creará un archivo de texto plano con este contenido en la ruta <code>/home/angel/dockerc/rpi/supysonic.docker</code></p>
 <h3 id="crealo-como-quieras">Crealo como quieras</h3>
 <p>No es necesario crearlos con dockerc, cualquier archivo que contenga las líneas de terminal que pondrías en la terminal para montar el docker y estén en el directorio, dockerc los visualizará y podrá montarlos.</p>
 <p>La idea es que puedas guardar estos archivos y compartirlos o utilizarlos en otra máquina y poder hacer el automontaje de todos los contenedores de una vez.</p>
@@ -97,9 +97,9 @@ dockerc
 </code></pre>
 <p>Dockerc te preguntará:</p>
 <ul>
-<li>¿A Que grupo pertenece?. En mi ejemplo <code class="verbatim">rpi</code>. Te listará todos los dockers que tienes guardados en esa carpeta</li>
+<li>¿A Que grupo pertenece?. En mi ejemplo <code>rpi</code>. Te listará todos los dockers que tienes guardados en esa carpeta</li>
 <li>¿Que docker quieres crear?. En mi caso voy crear el de Supysonic</li>
-<li>Abre el editor de texto con el archivo <code class="verbatim">suypysonic.docker</code>, por si quieres cambiar una opción antes de montarlo, como puertos, volumenes...</li>
+<li>Abre el editor de texto con el archivo <code>suypysonic.docker</code>, por si quieres cambiar una opción antes de montarlo, como puertos, volumenes...</li>
 </ul>
 <p>Una vez contestado todo, comienza la creación del docker.</p>
 <h2 id="montar-muchos-dockers-automatizado">Montar muchos dockers automatizado</h2>
@@ -227,6 +227,7 @@ ugeekpodcast@gmail.com
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

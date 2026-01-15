@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="controla-tu-raspberry-servidor-o-pc-desde-telegram">Controla tu Raspberry, Servidor o PC desde Telegram </h1>
+<h1 id="controla-tu-raspberry-servidor-o-pc-desde-telegram" title="Controla tu Raspberry, Servidor o PC desde Telegram" data-export_file_name="Controla tu Raspberry Servidor o PC desde Telegram" data-description="Voy a explicarte como ejecutar un Bot de Telegram que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente desde Telegram" data-export_date="2019-04-11 17:45" data-category="telegram" data-tag="domotica" data-image="./images-blog/tocar_movil.jpg">Controla tu Raspberry, Servidor o PC desde Telegram </h1>
 <p>Voy a explicarte como configurar un Bot de Telegram, que te va a permitir el controlar la totalidad de tu Raspberry, Servidor o PC, remotamente.</p>
 <p><img src="../images-blog/tocar_movil.jpg" /></p>
 <p>Con este Bot no solo podrás conocer la temperatura, IP pública, ... Tal como te expliqué en el Post <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, sino que también podrás interactuar con él, iniciando o deteniendo servicios, mediante el GPIO podrás conectar luces, motores de persianas, puertas... ejecutar comandos que ejecutarías en la terminal, actualizar tu servidor... En definitiva, para todo aquello que dé tu imaginación. </p>
@@ -145,25 +145,29 @@ Dockers:
 <p>Podemos ejecutar comandos simples como por ejemplo:</p>
 <ul>
 <li>Ejecutas <strong>/hello</strong> y responde <strong>Hola</strong></li>
+</ul>
 <pre><code>
 [&quot;/hello&quot;]=&quot;echo Hola&quot;    
 </code></pre>
+<ul>
 <li>¿Quieres saber el tiempo de actividad de tu servidor? No hay problema:</li>
+</ul>
 <pre><code>
 [&quot;/uptime&quot;]=&quot;/usr/bin/uptime&quot;
 </code></pre>
+<ul>
 <li>¿Queres conocer el espacio en disco libre a través de Telegram?</li>
+</ul>
 <pre><code>
 [&quot;/disks&quot;]=&quot;/bin/df -h&quot;
 </code></pre>
-</ul>
 <ul>
 <li>Ejecutar script un externo:</li>
+</ul>
 <pre><code>
 [&quot;/auth ([a-zA-Z0-9]+)&quot;]=&quot;/usr/local/bin/auth.sh @R1&quot;
 </code></pre>
 <h2 id="variables">Variables:</h2>
-</ul>
 <p>Puedes usar variables! por ejemplo:</p>
 <pre><code>
 [&quot;/hello&quot;]=&quot;echo Hola @FIRSTNAME, encantado de conocerte :)&quot;
@@ -208,7 +212,7 @@ Dockers:
 </code></pre>
 <h2 id="conclusiones">Conclusiones</h2>
 <p>Hay muchas mas opciones que podemos configurar desde el propio Bot, como añadir usuarios al listado desde el propio chat del Bot, etc... La verdad es que no he tenido suficiente tiempo de hacer todas las pruebas. El Objetivo de Gestionar nuestro servidor remotamente, cumple perfectamente. </p>
-<p>Si quieres hacer pruebas, la carpeta que hay en el repositorio <strong>.batbot</strong>, donde esta el archivo <strong>allowed_users</strong>, tendría que estar en al carpeta <code class="verbatim">$HOME/.batbot</code>. Yo en el Post lo he dejado en la misma carpeta igual que el repositorio, para tener todos las carpetas en el mismo lugar.</p>
+<p>Si quieres hacer pruebas, la carpeta que hay en el repositorio <strong>.batbot</strong>, donde esta el archivo <strong>allowed_users</strong>, tendría que estar en al carpeta <code>$HOME/.batbot</code>. Yo en el Post lo he dejado en la misma carpeta igual que el repositorio, para tener todos las carpetas en el mismo lugar.</p>
 <p>Publicado por Angel el Thursday 11 April del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -222,6 +226,7 @@ Dockers:
 <li><a href="https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html">Grabar lo que suena en tu ordenador</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

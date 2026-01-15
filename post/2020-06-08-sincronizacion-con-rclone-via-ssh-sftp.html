@@ -44,13 +44,13 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="sincronización-con-rclone-via-ssh-y-sftp">Sincronización con Rclone via SSH y SFTP</h1>
+<h1 id="sincronización-con-rclone-via-ssh-y-sftp" title="Sincronización con Rclone via SSH y SFTP" data-export_file_name="sincronizacion-con-rclone-via-ssh-sftp" data-description="Estamos acostumbrados a conectarnos nubes públicas y privadas con rclone. Hoy vamos a conectarnos a un VPS o servidor remoto via SSH con SFTP." data-export_date="2020-06-08 17:50" data-category="rclone" data-tag="ssh" data-image="./images-blog/rclone.png">Sincronización con Rclone via SSH y SFTP</h1>
 <p>Estamos acostumbrados a conectarnos nubes públicas y privadas con rclone. Hoy vamos a conectarnos a un VPS o servidor remoto via SSH con SFTP.</p>
 <p><img src="../images-blog/rclone.png" /></p>
 <h2 id="archivo-de-configuración">Archivo de configuración</h2>
 <p>Actualmente me conecto vía SSH sin necesidad de poner la contraseña, ya que en el servidor he añadido mi <strong>id_rsa</strong> pública.</p>
 <p>Vamos a aprovechar esta llave pública para acceder con rclone.</p>
-<p>Vamos a añadir en el archivo de configuración de <strong>rclone.conf</strong> en <code class="verbatim">/home/angel/.config/rclone/rclone.conf</code></p>
+<p>Vamos a añadir en el archivo de configuración de <strong>rclone.conf</strong> en <code>/home/angel/.config/rclone/rclone.conf</code></p>
 <pre><code>
 [servidor]
 type = sftp
@@ -76,6 +76,7 @@ rclone lsd servidor:/home/ubuntu/
 <li><a href="https://ugeek.github.io/blog/post/2020-03-26-rclone-bidireccional-con-rclonesync.html">Rclone bidireccional con Rclonesync</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html">Instalando, Compilando el última versión de Rclone-Browser</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

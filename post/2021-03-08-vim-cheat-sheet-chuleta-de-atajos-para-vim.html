@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="vim-cheat-sheet-chuleta-de-atajos-para-vim">Vim Cheat Sheet. Chuleta de atajos para Vim</h1>
+<h1 id="vim-cheat-sheet-chuleta-de-atajos-para-vim" title="Vim Cheat Sheet. Chuleta de atajos para Vim" data-export_file_name="vim-cheat-sheet-chuleta-de-atajos-para-vim" data-description="Chuleta de atajos para Vim" data-export_date="2021-03-08 17:42" data-category="vim" data-tag="bash" data-image="./images-blog/vim.png">Vim Cheat Sheet. Chuleta de atajos para Vim</h1>
 <p><img src="../images-blog/vim.png" /></p>
 <h2 id="global">Global</h2>
 <ul>
@@ -256,15 +256,15 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li>\vpattern - patrón 'muy mágico' (very magic): los caracteres no alfanuméricos son interpretados como caracteres especiales regex (sin necesidad de escaparlos)</li>
 <li>n - repetir la búsqueda en la misma dirección</li>
 <li>N - repetir la búsqueda en la dirección contraria</li>
-<li>:%s<em>old</em>new/g - reemplazar en todo el archivo</li>
-<li>:%s<em>old</em>new/gc - reemplazar en todo el archivo pidiendo una confirmación</li>
+<li>:%s/old/new/g - reemplazar en todo el archivo</li>
+<li>:%s/old/new/gc - reemplazar en todo el archivo pidiendo una confirmación</li>
 <li>:noh[lsearch] - desactiva el realce (highlight) de los resultados de búsqueda</li>
 </ul>
 <h2 id="buscar-en-varios-archivos">Buscar en varios archivos</h2>
 <ul>
-<li>:vim[grep] <em>pattern</em> {<code class="verbatim">{file}</code>} - buscar un patrón en varios archivos</li>
+<li>:vim[grep] /pattern/ {<code>{file}</code>} - buscar un patrón en varios archivos</li>
 </ul>
-<p>e.g. :vim[grep] <em>foo</em> *///</p>
+<p>e.g. :vim[grep] /foo/ *///</p>
 <ul>
 <li>:cn[ext] - ir al resultado siguiente</li>
 <li>:cp[revious] - ir al resultado previo</li>
@@ -281,7 +281,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li>:tabm[ove] # - mover a la pestaña actual a la posición número # (desde 0)</li>
 <li>:tabc[lose] - cerrar todas las pestañas y sus ventanas</li>
 <li>:tabo[nly] - cerrar todas las pestañas salvo la actual</li>
-<li>:tabdo command - run the <code class="verbatim">command= on all tabs (e.g. =:tabdo q</code> - closes all opened tabs)</li>
+<li>:tabdo command - run the <code>command</code> on all tabs (e.g. <code>:tabdo q</code> - closes all opened tabs)</li>
 </ul>
 <h2 id="trabajar-con-varios-archivos">Trabajar con varios archivos</h2>
 <ul>
@@ -338,6 +338,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html">Vim Cheat Sheet. Chuleta de atajos para Vim</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html">vim. Resaltado de sintaxis</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

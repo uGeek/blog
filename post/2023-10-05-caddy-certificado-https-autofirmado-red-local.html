@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="caddy-certificado-https-autofirmado-red-local">Caddy. Certificado https autofirmado red local</h1>
+<h1 id="caddy-certificado-https-autofirmado-red-local" title="Caddy. Certificado https autofirmado red local" data-export_file_name="caddy-certificado-https-autofirmado-red-local" data-description="Hay servicios como Vaultwarden o floccus que necesitan una conexión *https* para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" data-export_date="2023-10-05 07:39" data-category="caddy" data-tag="proxy" data-image="./images-blog/ugeek.png">Caddy. Certificado https autofirmado red local</h1>
 <p>Hay servicios como Vaultwarden o floccus que necesitan una conexión <strong>https</strong> para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo accesibles en red local pero con la conexiones cifradas.</p>
 <p>Voy a mostrarte como crear un certificado autofirmado para utilizarlo con Caddy y mediante proxy inverso habilitar a cualquier servicio la conexión https.</p>
 <h2 id="genera-un-certificado-autofirmado">Genera un certificado autofirmado</h2>
@@ -93,7 +93,7 @@ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout privateKey.key -out
 <li><strong>Common Name (eg, fully qualified host name):</strong></li>
 </ol>
 <ul>
-<li>Respuesta: Aquí debes proporcionar el nombre de dominio o dirección IP para la que se emitirá el certificado. Si estás generando un certificado para uso local o pruebas, puedes usar <code class="verbatim">localhost</code> o la dirección IP local. También como ejemplo: xxx</li>
+<li>Respuesta: Aquí debes proporcionar el nombre de dominio o dirección IP para la que se emitirá el certificado. Si estás generando un certificado para uso local o pruebas, puedes usar <code>localhost</code> o la dirección IP local. También como ejemplo: xxx</li>
 </ul>
 <ol>
 <li><strong>Email Address:</strong></li>
@@ -109,11 +109,11 @@ reverse_proxy http://192.168.1.100:88
 tls /config/certificado.crt /config/privateKey.key
 }
 </code></pre>
-<p>En este ejemplo he utilizado para guardar los certificados la ruta <code class="verbatim">/config</code>.</p>
+<p>En este ejemplo he utilizado para guardar los certificados la ruta <code>/config</code>.</p>
 <p><strong>Reinicia caddy</strong>.</p>
 <p>Accede a tu sitio web a través de HTTPS:</p>
 <ul>
-<li>Abre tu navegador y navega a <code class="verbatim">https://ip-del-servidor:4444</code>.</li>
+<li>Abre tu navegador y navega a <code>https://ip-del-servidor:4444</code>.</li>
 <li>Deberías poder acceder a tu servicio a través de HTTPS utilizando el certificado autofirmado.</li>
 </ul>
 <p>Recuerda que los certificados autofirmados no son confiables para los navegadores, pero funcionarán dentro de tu red local.</p>
@@ -148,6 +148,7 @@ openssl rsa -in /config/privateKey.key -check
 <li><a href="https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html">Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html">Convierte archivos .crt y .key en archivos .pem</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html">Proxy Inverso con Caddy</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

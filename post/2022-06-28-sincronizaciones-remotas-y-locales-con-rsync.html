@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="sincronizaciones-remotas-y-locales-con-rsync">Sincronizaciones remotas y locales con rsync</h1>
+<h1 id="sincronizaciones-remotas-y-locales-con-rsync" title="Sincronizaciones remotas y locales con rsync" data-export_file_name="sincronizaciones-remotas-y-locales-con-rsync" data-description="rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado." data-export_date="2022-06-28 20:00" data-category="rsync" data-tag="sincronización,rclone" data-image="./images-blog/ugeek.png">Sincronizaciones remotas y locales con rsync</h1>
 <p>rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado.</p>
 <p> </p>
 <h2 id="instalación">Instalación</h2>
@@ -78,19 +78,19 @@ rcsync -r directorio1 directorio2
 rcsync -r directorio1/ directorio2
 </code></pre>
 <ul>
-<li><code class="verbatim">-r</code> significa de forma recursiva</li>
+<li><code>-r</code> significa de forma recursiva</li>
 </ul>
 <p> </p>
 <pre><code class="language-sh">
 rcsync -a directorio1/ directorio2
 </code></pre>
 <ul>
-<li>  <code class="verbatim">-a= Significa “archivo” y sincroniza de manera recursiva, además conserva los enlaces simbólicos, los archivos especiales y de dispositivo, fechas de modificación, grupo, propietario y permisos. Se utiliza con más frecuencia que =-r</code> </li>
+<li>  <code>-a</code> Significa “archivo” y sincroniza de manera recursiva, además conserva los enlaces simbólicos, los archivos especiales y de dispositivo, fechas de modificación, grupo, propietario y permisos. Se utiliza con más frecuencia que <code>-r</code> </li>
 </ul>
 <p> </p>
 <h2 id="simulación-antes-de-sincronizar">Simulación antes de sincronizar</h2>
-<p>rsync nos permite hacer una simulación de como se va a producir la sincronización con la opción. <code class="verbatim">-n= o =--dry-run</code>. </p>
-<p>Con la opción <code class="verbatim">-v</code> podemos visualizarlo:</p>
+<p>rsync nos permite hacer una simulación de como se va a producir la sincronización con la opción. <code>-n</code> o <code>--dry-run</code>. </p>
+<p>Con la opción <code>-v</code> podemos visualizarlo:</p>
 <p> </p>
 <pre><code class="language-sh">
 rsync -anv directorio1/ directorio2
@@ -117,20 +117,21 @@ rsync -a vps:/home/usuario/directorio1 directorio2_local
 <p> </p>
 <h2 id="otras-opciones-del-comando-rsync">Otras opciones del comando rsync</h2>
 <ul>
-<li><code class="verbatim">-z= </code> Permite comprimir los archivos antes de enviar, para que la transferencia de datos sea más baja</li>
-<li><code class="verbatim">-P= = Es la unión de los indicadores =--progress= y =--partial</code>. El primero es una barra de progreso de las transferencias, el segundo permite reanudar las transferencias interrumpidas.</li>
-<li><code class="verbatim">--delete= </code> Elimina los archivos en el destino si se eliminan en origen</li>
-<li><code class="verbatim">--exclude== = Excluir archivos o directorios. Si quieres añadir varias opciones, separalas con comas. Ejemplo: =--exclude={'file1.txt','dir1/*','dir2'}</code></li>
-<li><code class="verbatim">--exclude-from= </code> Utiliza un archivo de texto plano para añadir los archivos y directorios a excluir</li>
-<li><code class="verbatim">--include== </code> Igual que exclude pero para indicar los directorios o archivos a incluir.</li>
-<li><code class="verbatim">--backup= y =--backup-dir= </code> Ambos van juntos, el primero almacena copias de seguridad importantes y la segunda opción indica el que directorio se guardan</li>
-<li><code class="verbatim">--log-file== </code> Añade la ruta y archivo donde quieres guardar los logs. rsync guarda los archivos y directorios que se han sincronizado</li>
+<li><code>-z</code> = Permite comprimir los archivos antes de enviar, para que la transferencia de datos sea más baja</li>
+<li><code>-P</code> = Es la unión de los indicadores <code>--progress</code> y <code>--partial</code>. El primero es una barra de progreso de las transferencias, el segundo permite reanudar las transferencias interrumpidas.</li>
+<li><code>--delete</code> = Elimina los archivos en el destino si se eliminan en origen</li>
+<li><code>--exclude</code>= = Excluir archivos o directorios. Si quieres añadir varias opciones, separalas con comas. Ejemplo: <code>--exclude</code>{'file1.txt','dir1/*','dir2'}=</li>
+<li><code>--exclude-from</code> = Utiliza un archivo de texto plano para añadir los archivos y directorios a excluir</li>
+<li><code>--include</code>= = Igual que exclude pero para indicar los directorios o archivos a incluir.</li>
+<li><code>--backup</code> y <code>--backup-dir</code> = Ambos van juntos, el primero almacena copias de seguridad importantes y la segunda opción indica el que directorio se guardan</li>
+<li><code>--log-file</code>= = Añade la ruta y archivo donde quieres guardar los logs. rsync guarda los archivos y directorios que se han sincronizado</li>
 </ul>
-<p>Utiliza las opciones <code class="verbatim">-nv</code> para comprobar los archivos incluidos o excluidos y ver como sería la sincronización antes de hacerla.</p>
+<p>Utiliza las opciones <code>-nv</code> para comprobar los archivos incluidos o excluidos y ver como sería la sincronización antes de hacerla.</p>
 <p>Publicado por Angel el Tuesday 28 June del 2022</p>
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html">Bsync. Sincronización de archivos bidireccional, que utiliza Rsync</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

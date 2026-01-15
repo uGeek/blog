@@ -44,14 +44,14 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="comprimir-archivos-de-forma-automatizada-en-rar-a-14gb-para-subirlos-a-telegram-u-otra-nube-pública">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública </h1>
+<h1 id="comprimir-archivos-de-forma-automatizada-en-rar-a-14gb-para-subirlos-a-telegram-u-otra-nube-pública" title="Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública" data-export_file_name="Comprimir archivos de forma automatizada en rar para subirlos a telegram u otra nube publica" data-description="Telegram nos proporciona una nube ilimitada... pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos" data-export_date="2019-01-29 22:15" data-category="bash" data-tag="telegram" data-image="./images-blog/ugeek.png">Comprimir archivos de forma automatizada en rar a 1.4Gb, para subirlos a Telegram u otra nube pública </h1>
 <p>Telegram nos proporciona una nube ilimitada... pero con limitaciones. Telegram permite subir archivos que no superen los 1.5Gb y eso puede ser una limitación a subir vídeos domésticos en 4K o incluso alguna distro. Para solucionar este problema, podemos comprimir los archivos en rar y trocearlos. Después desde Telegram Desktop los podremos subir sin problemas. Tengo constancia de gente que ha subido archivos de hasta 2Gb, pero en este artículo, ya que no hay limitación en el número de archivos a subir, vamos a limitar a 1,4Gb el tamaño. Este artículo no solo vale para Telegram, Box.com también tiene limitación a 50mb, así que cambiando el número del comando, podrás dividir el archivo al tamaño que desees.</p>
 <p>El Objetivo de este artículo, no solo es el aprender a trocear estos, sino también, como a mi me gusta, automatizar esta tarea. Así que en la primera parte, trocearemos archivos que están dentro de una carpeta y en la segunda, trocearemos archivos que están dentro de subcarpetas.</p>
 <h2 id="instalando-rar">Instalando rar</h2>
 <p>Para poder crear archivos rar, necesitamos instalar rar:</p>
-<p><code class="verbatim">sudo apt install rar</code></p>
+<p><code>sudo apt install rar</code></p>
 <p>unrar nos permitirá descomprimir los archivos, así que también lo instalaremos</p>
-<p><code class="verbatim">sudo apt install unrar</code></p>
+<p><code>sudo apt install unrar</code></p>
 <h2 id="comprimir-archivos-que-estén-dentro-de-una-carpeta">Comprimir archivos que estén dentro de una carpeta</h2>
 <p>Nos situaremos en la carpeta que contenga los archivos superiores a 1.4Gb y ejecutaremos este comando:</p>
 <pre><code>
@@ -66,8 +66,8 @@ for directorio in */; do rar a -va1400m &quot;${directorio%/}.rar&quot; -r &quot
 <p>Del mismo modo que en el caso anterior, tendremos los archivos troceados, renombrados y numerados, en la carpeta que estamos situados.</p>
 <h2 id="reconstruir-el-archivo-original">Reconstruir el archivo original </h2>
 <p>Teniendo todos los archivos que previamente habíamos troceado, ahora vamos a transformarlo en el archivo original. Para ello, tenemos que tener instalado <strong>unrar</strong> como comenté al principio y tanto desde la interfaz gráfica, como la terminal, necesitamos que todos los archivos estén en la misma carpeta. Nos situaremos dentro de esta, descomprimiremos el número 1 y unrar se encargará de ir uniendo los trozos y devolvernos el archivo original.</p>
-<p><code class="verbatim">unrar x archivo.rar</code></p>
-<p><code class="verbatim">unrar x archivo.rar /ruta_donde_enviar_el_archivo</code> </p>
+<p><code>unrar x archivo.rar</code></p>
+<p><code>unrar x archivo.rar /ruta_donde_enviar_el_archivo</code> </p>
 <p>Espero que os haya gustado este artículo y a darle caña a la terminal</p>
 <p>Publicado por Angel el Tuesday 29 January del 2019</p>
 <p>También te puede interesar:</p>
@@ -82,6 +82,7 @@ for directorio in */; do rar a -va1400m &quot;${directorio%/}.rar&quot; -r &quot
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

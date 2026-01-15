@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-supysonic-el-mejor-y-más-ligero-servidor-de-música">Docker: Supysonic. El mejor y más ligero servidor de música</h1>
+<h1 id="docker-supysonic-el-mejor-y-más-ligero-servidor-de-música" title="Docker: Supysonic. El mejor y más ligero servidor de música" data-export_file_name="Docker: Supysonic. El mejor y más ligero servidor de música" data-description="Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo [[https://www.spotify.com][Spotify]]." data-export_date="2019-10-07 18:00" data-category="docker" data-tag="musica,raspberry,servidor,jamstash,supysonic" data-image="./images-blog/subsonic.png">Docker: Supysonic. El mejor y más ligero servidor de música</h1>
 <p>Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo <a href="https://www.spotify.com">Spotify</a>.</p>
 <p><img src="../images-blog/subsonic.png" /></p>
 <p>He utilizado servidores como <strong>Plex</strong>, <strong>Jellyfin</strong>, <strong>DLNA</strong>,... Pero aunque todos ellos engloban todo el tema multimedia, buscaba algo más ligero y que únicamente fuera un servidor de música.</p>
@@ -54,7 +54,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>He creado el Docker para que sea más simple la instalación y lo he guardado en mi repositorio del <a href="https://hub.docker.com/r/ugeek/supysonic">DockerHub</a>.</p>
 <h2 id="docker">Docker</h2>
 <p>Vamos a montar el docker dependiendo de la arquitectura que utilices.</p>
-<p>La carpeta <code class="verbatim">/media</code>, es la carpeta donde pondremos la música. Personalízalo a tu gusto.</p>
+<p>La carpeta <code>/media</code>, es la carpeta donde pondremos la música. Personalízalo a tu gusto.</p>
 <h3 id="raspberry-and-arm">Raspberry and ARM</h3>
 <h4 id="versión-041">Versión 0.4.1</h4>
 <pre><code>
@@ -154,6 +154,7 @@ docker exec -it supysonic supysonic-cli folder scan Favoritos
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

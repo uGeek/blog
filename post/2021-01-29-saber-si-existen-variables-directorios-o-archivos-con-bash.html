@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="saber-si-existen-variables-directorios-o-archivos-con-bash">Saber si existen variables, directorios o archivos con bash</h1>
+<h1 id="saber-si-existen-variables-directorios-o-archivos-con-bash" title="Saber si existen variables, directorios o archivos con bash" data-export_file_name="saber-si-existen-variables-directorios-o-archivos-con-bash" data-description="Buscando en internet, he visto este artículo de Linux Center super interesante, sobre si una variable tiene o no un valor." data-export_date="2021-01-29 09:30" data-category="bash" data-tag="if,variables" data-image="./images-blog/bash.png">Saber si existen variables, directorios o archivos con bash</h1>
 <p>Buscando en internet, he visto este artículo de <a href="https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash">Linux Center</a> super interesante, sobre si una variable tiene o no un valor.</p>
 <p><img src="../images-blog/bash.png" /></p>
 <p>He copiado parte del artículo para tenerlo siempre accesible.</p>
@@ -53,7 +53,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="si-existe-un-directorio">Si existe un directorio</h2>
 <p>Con la opción <strong>-d</strong>, especificamos el directorio</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>#!<em>bin</em>bash</p>
+<p>#!/bin/bash</p>
 <p>DIRECTORIO=/root1</p>
 <p>if [ -d "$DIRECTORIO" ]</p>
 <p>then</p>
@@ -65,8 +65,8 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="si-existe-un-archivo">Si existe un archivo</h2>
 <p>Con la opción <strong>-f</strong>, especificamos el archivo</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>#!<em>bin</em>bash</p>
-<p>ARCHIVO=<em>etc</em>passwd</p>
+<p>#!/bin/bash</p>
+<p>ARCHIVO=/etc/passwd</p>
 <p>if [ -f $ARCHIVO ]</p>
 <p>then</p>
 <p>echo "El fichero $ARCHIVO existe"</p>
@@ -81,9 +81,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <h2 id="saber-si-una-variable-existe">Saber si una variable existe</h2>
 <h3 id="si-existe-una-variable">Si existe una variable</h3>
 <p>Para saber si una variable existe y está inicializada en un script o tu máquina, que esté o no está vacía.</p>
-<p>Tomaremos <code class="verbatim">variable=""</code> como ejemplo.</p>
+<p>Tomaremos <code>variable</code>""= como ejemplo.</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>#!<em>bin</em>bash</p>
+<p>#!/bin/bash</p>
 <p>if [ "$variable" ]</p>
 <p>then</p>
 <p>echo "La variable existe y no está vacía"</p>
@@ -91,10 +91,10 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>echo "La variable no existe o está vacía"</p>
 <p>fi</p>
 <p>#+END_EXAMPLE</p>
-<p>El resultado sería: <code class="verbatim">La variable no existe o está vacía</code></p>
+<p>El resultado sería: <code>La variable no existe o está vacía</code></p>
 <h2 id="variable-vacía">Variable vacía</h2>
 <p>#+BEGIN_EXAMPLE</p>
-<p>#!<em>bin</em>bash</p>
+<p>#!/bin/bash</p>
 <p>variable=""</p>
 <p>if [ "$variable" ]</p>
 <p>then</p>
@@ -103,10 +103,10 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>echo "La variable no existe o está vacía"</p>
 <p>fi</p>
 <p>#+END_EXAMPLE</p>
-<p>Resultado: <code class="verbatim">La variable no existe o está vacía</code></p>
+<p>Resultado: <code>La variable no existe o está vacía</code></p>
 <h2 id="variable-no-vacía">Variable no vacía</h2>
 <p>#+BEGIN_EXAMPLE</p>
-<p>#!<em>bin</em>bash</p>
+<p>#!/bin/bash</p>
 <p>variable="valor"</p>
 <p>if [ "$variable" ]</p>
 <p>then</p>
@@ -115,7 +115,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>echo "La variable no existe o está vacía"</p>
 <p>fi</p>
 <p>#+END_EXAMPLE</p>
-<p>Resultado: <code class="verbatim">La variable existe y no está vacía</code></p>
+<p>Resultado: <code>La variable existe y no está vacía</code></p>
 <h2 id="variable-con-valor-y-no-vacía">Variable con valor y no vacía</h2>
 <ul>
 <li>Lo primero que haremos es comprobar si existe.</li>
@@ -138,10 +138,10 @@ echo &quot;La variable existe pero está vacía&quot;
 fi
 fi
 </code></pre>
-<p>Resultado: <code class="verbatim">La variable existe y no está vacía</code></p>
+<p>Resultado: <code>La variable existe y no está vacía</code></p>
 <p>Y ahora probaremos si la cadena está vacía:</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>#!<em>bin</em>bash</p>
+<p>#!/bin/bash</p>
 <p>variable=""</p>
 <p>if [ "$variable" ]</p>
 <p>then</p>
@@ -155,10 +155,10 @@ fi
 <p>fi</p>
 <p>fi</p>
 <p>#+END_EXAMPLE</p>
-<p>Resultado: <code class="verbatim">La variable existe pero está vacía</code></p>
+<p>Resultado: <code>La variable existe pero está vacía</code></p>
 <p>Sin variable (la comento):</p>
 <p>#+BEGIN_EXAMPLE</p>
-<p>#!<em>bin</em>bash</p>
+<p>#!/bin/bash</p>
 <p># variable=""</p>
 <p>if [ "$variable" ]</p>
 <p>then</p>
@@ -172,7 +172,7 @@ fi
 <p>fi</p>
 <p>fi</p>
 <p>#+END_EXAMPLE</p>
-<p>Resultado: <code class="verbatim">La variable no existe</code></p>
+<p>Resultado: <code>La variable no existe</code></p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash">https://linuxcenter.es/component/k2/item/124-saber-si-una-variable-existe-y-tiene-un-valor-distinto-a-vacio-en-bash</a></li>
@@ -189,6 +189,7 @@ fi
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

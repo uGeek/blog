@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="no-todo-es-echo-también-existe-printf">No todo es echo. También existe printf </h1>
+<h1 id="no-todo-es-echo-también-existe-printf" title="No todo es echo. También existe printf" data-export_file_name="No todo es echo Tambien existe printf" data-description="Cuando hacemos scritps en bash, habitualmente utilizamos echo para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf." data-export_date="2019-02-08 22:15" data-category="bash" data-tag="terminal" data-image="./images-blog/ugeek.png">No todo es echo. También existe printf </h1>
 <p>Cuando hacemos scritps en bash, habitualmente utilizamos <strong>echo</strong> para imprimir o mostrar el resultado a través de la terminal. Si es un resultado simple, en principio no hay ningún problema. Los problemas vienen cuando utilizamos comillas dobles, simples, comillas dentro de una variable, etc... para poder previsualizar sin errores, necesitamos dar escape a las comillas. Esto no es del todo simple y puede frustrar. Para solucionar este problema, podemos utilizar printf.</p>
 <h2 id="iniciandonos-con-printf">Iniciandonos con printf</h2>
 <p>printf es mucho mas simple que echo, vamos a comenzar con algunos simples ejemplos:</p>
@@ -150,7 +150,7 @@ $ printf &quot;%(%m-%d-%Y %H:%M:%S)T\n&quot; $(date +%s)
 </tr>
 <tr>
 <td>%D</td>
-<td>fecha; igual que% m <em>% d </em>% y</td>
+<td>fecha; igual que% m /% d /% y</td>
 </tr>
 <tr>
 <td>%e</td>
@@ -266,7 +266,7 @@ $ printf &quot;%(%m-%d-%Y %H:%M:%S)T\n&quot; $(date +%s)
 </tr>
 <tr>
 <td>%x</td>
-<td>Representación de la fecha de la localidad (por ejemplo, 31<em>12</em>99)</td>
+<td>Representación de la fecha de la localidad (por ejemplo, 31/12/99)</td>
 </tr>
 <tr>
 <td>%X</td>
@@ -357,6 +357,7 @@ $ printf &quot;%-10d %-10d\n&quot; 1 500 2 550
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

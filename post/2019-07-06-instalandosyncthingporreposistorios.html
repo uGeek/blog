@@ -44,12 +44,12 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="instalando-syncthing-por-reposistorios-y-ppa">Instalando Syncthing por reposistorios y PPA</h1>
+<h1 id="instalando-syncthing-por-reposistorios-y-ppa" title="Instalando Syncthing por reposistorios" data-export_file_name="Instalando Syncthing por reposistorios" data-description="Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian" data-export_date="2019-07-06 22:25" data-category="aplicacion" data-tag="terminal,syncthing" data-image="./images-blog/syncthing.png">Instalando Syncthing por reposistorios y PPA</h1>
 <p>Vamos a ver como instalar Syncthing desde los repositorios oficiales de debian, ubuntu, raspbian...</p>
 <p><img src="../images-blog/syncthing.png" /></p>
 <h2 id="instalación-por-repositorios">Instalación por repositorios</h2>
 <p>Ubuntu, Raspbian o derivadas de debian</p>
-<p><code class="verbatim">sudo apt install syncthing</code></p>
+<p><code>sudo apt install syncthing</code></p>
 <h2 id="syncthing-a-la-ultima-por-ppa">Syncthing a la ultima por PPA</h2>
 <h3 id="instalando-la-última-versión-estable">Instalando la última versión estable</h3>
 <p>El canal estable se actualiza generalmente cada primer martes del mes.</p>
@@ -59,10 +59,10 @@ sudo apt install apt-transport-https
 curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
 </code></pre>
 <p>Ahora vamos a añadir el repositorio estable:</p>
-<p><code class="verbatim">echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list</code></p>
+<p><code>echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list</code></p>
 <p>Ahora actualizamos repositorios e instalamos:</p>
-<p><code class="verbatim">sudo apt update</code></p>
-<p><code class="verbatim">sudo apt install syncthing</code></p>
+<p><code>sudo apt update</code></p>
+<p><code>sudo apt install syncthing</code></p>
 <h3 id="instalar-versión-candidate">Instalar versión candidate</h3>
 <p>El canal candidate, generalmente se actualiza cada segundo martes del mes. Estos salen tres semanas antes a la versión estable.</p>
 <p>Es igual al proceso anterior, pero en lugar de añadir el repositorio estable, añadiremos el repositorio candidate:</p>
@@ -71,7 +71,7 @@ echo &quot;deb https://apt.syncthing.net/ syncthing candidate&quot; | sudo tee /
 </code></pre>
 <h2 id="iniciando-syncthing">Iniciando Syncthing</h2>
 <p>Ahora ya podemos lanzar la aplicación</p>
-<p><code class="verbatim">syncthing</code></p>
+<p><code>syncthing</code></p>
 <p>Se abrirá nuestro navegador automáticamente o lo abriremos nosotros, y para acceder a la interfaz web escribiremos localhost:8384</p>
 <p>Para que Syncthing se inicie cada vez que arranquemos el sistema operativo, escribimos en la terminal:</p>
 <pre><code>
@@ -84,7 +84,7 @@ systemctl status syncthing@pi.service
 <p>Lo primero que debemos hacer, si queremos acceder desde otro dispositivo a la interfaz web de Syncthing, dentro de nuestra red local, es</p>
 <p>editar un archivo de configuración mediante SSH. Introduciremos esta línea en la Terminal y añadiremos la ip de nuestra Raspberry Pi, en</p>
 <p>lugar de 127.0.0.1.</p>
-<p>sudo nano ~<em>.config</em>syncthing/config.xml</p>
+<p>sudo nano ~/.config/syncthing/config.xml</p>
 <p>Cambiamos aquí la ip por <strong>0.0.0.0:8384</strong></p>
 <pre><code>
 &lt;gui enabled=&quot;true&quot; tls=&quot;false&quot;&gt;
@@ -104,6 +104,7 @@ systemctl status syncthing@pi.service
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html">Termux. Una distro Linux en Android con la que crear tus aplicaciones</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-21-newpipe-la-aplicacion-predeterminada-en-android.html">NewPipe. La aplicación predeterminada en Android</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

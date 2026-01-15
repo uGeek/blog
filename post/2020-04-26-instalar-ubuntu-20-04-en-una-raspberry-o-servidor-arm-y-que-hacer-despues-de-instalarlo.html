@@ -1,98 +1,54 @@
 <head>
-<title>Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo" />
-<meta property="og:description" content="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ubuntu.png" />
+<meta property="og:title" content="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo" /> 
+<meta property="og:description" content="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ubuntu.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html" />
-
-<meta name="twitter:title" content="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo" />
-<meta name="twitter:description" content="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry." />
+<meta name="twitter:title" content="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo" /> 
+<meta name="twitter:description" content="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ubuntu.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="instalar-ubuntu-20.04-en-una-raspberry-o-servidor-arm-y-que-hacer-después-de-instalarlo-1" title="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo" data-export_file_name="instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo" data-description="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry." data-export_date="2020-04-26 16:12" data-category="ubuntu" data-tag="raspberry,server" data-image="./images-blog/ubuntu.png">Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</h1>
-<h5>Tiempo estimado de lectura: 9 minutos. 1045 palabras.    <a href="https://ugeek.github.io/blog/categories/ubuntu">ubuntu</a></h5>
+<h1 id="instalar-ubuntu-2004-en-una-raspberry-o-servidor-arm-y-que-hacer-después-de-instalarlo" title="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo" data-export_file_name="instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo" data-description="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry." data-export_date="2020-04-26 16:12" data-category="ubuntu" data-tag="raspberry,server" data-image="./images-blog/ubuntu.png">Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</h1>
 <p>Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry.</p>
 <p>Esta versión LTS nos da soporte hasta Abril del 2025 y no solo nos proporciona una versión de 32bits, sino que también la versión de 64bits.</p>
-<center>
 <p><img src="../images-blog/ubuntu.png" /></p>
-</center>
-<p>¿Porque deberíamos probar Ubuntu?. Aquí te daré muchos de los motivos, como por ejemplo tener una versión de 64bits para Raspberry, paquetes muchos más actualizados que Raspbian Buster, Wireguard de un modo estable,…</p>
+<p>¿Porque deberíamos probar Ubuntu?. Aquí te daré muchos de los motivos, como por ejemplo tener una versión de 64bits para Raspberry, paquetes muchos más actualizados que Raspbian Buster, Wireguard de un modo estable,...</p>
 <p>Pero no te adelanto más. Voy a explicar un poco mi experiencia instalando Ubuntu 20.04 Server en mi Raspberry 3.</p>
 <p>Ah! La misma SD la he puesto en mi Raspberry 4 y reconoce sin problemas los 4Gb de RAM. Así que todo un Win para Ubuntu!!! Una alternativa muy real a Raspbian.</p>
 <h2 id="grabando-la-sd-o-usb">Grabando la SD o USB</h2>
@@ -100,11 +56,12 @@ $("#tipue_search_input").tipuesearch();
 <p>Para grabar la imagen, vamos a utilizar <a href="https://www.balena.io/etcher/">Etcher</a>.</p>
 <p>Podemos instalar el AppImage o el método que desees y grabarlo de un modo súper sencillo, sin tener que pensar mucho.</p>
 <p>En mi caso he utilizado AppImage. Descargo el archivo .zip, lo descomprimo, entro como usuario root y ejecuto:</p>
-<pre><code>./balenaEtcher-1.5.81-x64.AppImage 
+<pre><code>
+ ./balenaEtcher-1.5.81-x64.AppImage 
 </code></pre>
 <p>Si lo deseas, también puedes utilizar el comando dd como explicaba en el artículo <a href="https://ugeek.github.io/blog/post/2019-10-29-grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd.html">Grabar Raspbian, Ubuntu, Debian,… en un Pendrive o SD desde la Terminal</a>.</p>
 <h2 id="iniciamos-ubuntu">Iniciamos Ubuntu</h2>
-<p>Yo he conectado mi raspberry a un monitor, cable de ethernet y teclado, a ver que sucede…</p>
+<p>Yo he conectado mi raspberry a un monitor, cable de ethernet y teclado, a ver que sucede...</p>
 <p>Conecto mi transformador USB. El inicio ha tardado un poquito, ya que es el primer arranque.</p>
 <p>Se inicia ubuntu y me pide el usuario y contraseña. El usuario y contraseña por defecto son:</p>
 <ul>
@@ -114,116 +71,140 @@ $("#tipue_search_input").tipuesearch();
 <p>Una vez iniciado, <strong>ubuntu</strong> nos pedirá el cambiar la contraseña. Primero pondremos la contraseña antigua, en este caso la que está por defecto <strong>ubuntu</strong> y escribiremos 2 veces nuestra nueva contraseña.</p>
 <p>Ya podemos utilizar <strong>ubuntu</strong>!!!</p>
 <p>Ahora podemos hacer un:</p>
-<pre><code>sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt dist-upgrade
+<pre><code>
+sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt dist-upgrade
 </code></pre>
 <p>Así tendremos nuestro sistema operativo actualizado.</p>
 <h2 id="conocer-mi-ip">Conocer mi ip</h2>
 <p>Voy a ver que ip ha asignado mi router a esta raspberry con ubuntu:</p>
-<pre><code>ip a
+<pre><code>
+ip a
 </code></pre>
 <h2 id="conectarme-por-ssh">Conectarme por SSH</h2>
 <p>Al iniciarse la primera vez, ubuntu ha instalado ssh, de manera que ahora desde un pc remoto puedo conectarme a mi raspberry.</p>
 <p>Conozco la ip gracias al paso anterior. Si mi ip fuera 192.168.1.100, me conectaría de la siguiente manera</p>
-<pre><code>ssh ubuntu@192.168.1.100
+<pre><code>
+ssh ubuntu@192.168.1.100
 </code></pre>
 <p><strong>FUNCIONA!!!</strong></p>
-<p>Cuando te conectas via ssh, te dice la memoria, espacio de tu sd, temperatura, swap,… La verdad es que está muy bien.</p>
-<p>Ahora no sucederá porque acabamos de actualizar, pero más adelante también te informa si hay un paquete pendiente para actualizar.</p>
+<p>Cuando te conectas via ssh, te dice la memoria, espacio de tu sd, temperatura, swap,... La verdad es que está muy bien.</p>
+<p>Ahora no sucederá porque acabamos de actualizar, pero más adelante también te informa si hay un paquete pendiente para actualizar. </p>
 <p>Para que nos muestre que paquetes son:</p>
-<pre><code>apt list --upgradable
+<pre><code>
+apt list --upgradable
 </code></pre>
 <h2 id="crear-contraseña-al-usuario-root-y-cambiamos-el-nombre-de-usuario">Crear contraseña al usuario root y cambiamos el nombre de usuario</h2>
 <p>Es probable que también quieras cambiar el nombre de usuario y eliminar el de <strong>ubuntu</strong> por defecto.</p>
 <p>Para hacer esto, vamos tener que entrar como root.</p>
-<pre><code>sudo passwd root
+<pre><code>
+sudo passwd root
 </code></pre>
 <p>Nos pedirá que introduzcamos 2 veces la contraseña.</p>
 <p>Iniciamos como root</p>
-<pre><code>su root
+<pre><code>
+su root
 </code></pre>
 <p>Ahora sigue los pasos para cambiar el usuario <strong>ubuntu</strong> por el usuario que tu desees <a href="https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html">siguiendo el tutorial que os dejé</a>.</p>
 <h2 id="snap">Snap</h2>
-<p>Se supone que trae snap por defecto instalado, veamos…</p>
-<pre><code>sudo snap --version
+<p>Se supone que trae snap por defecto instalado, veamos...</p>
+<pre><code>
+sudo snap --version
 </code></pre>
 <p><strong>FUNCIONA!!!</strong></p>
-<p>Esto quiere decir que de un modo rápido y sencillo, podríamos instalar servicios como Nextcloud, RocketChat,…</p>
+<p>Esto quiere decir que de un modo rápido y sencillo, podríamos  instalar servicios como Nextcloud, RocketChat,...</p>
 <h3 id="nextcloud">Nextcloud</h3>
-<pre><code>sudo snap install nextcloud
+<pre><code>
+sudo snap install nextcloud
 </code></pre>
 <h3 id="rocketchat">RocketChat</h3>
-<pre><code>sudo snap install rocketchat-server
+<pre><code>
+sudo snap install rocketchat-server
 </code></pre>
 <h3 id="plex">Plex</h3>
-<pre><code>sudo snap install plexmediaserver
+<pre><code>
+sudo snap install plexmediaserver
 </code></pre>
 <h3 id="subsonic">Subsonic</h3>
-<pre><code>sudo snap install subsonic-arubislander
+<pre><code>
+sudo snap install subsonic-arubislander
 </code></pre>
 <h3 id="openhub">OpenHub</h3>
-<pre><code>sudo snap install openhab
+<pre><code>
+sudo snap install openhab
 </code></pre>
 <h3 id="homebridge">Homebridge</h3>
-<pre><code>sudo snap install homebridge
+<pre><code>
+sudo snap install homebridge
 </code></pre>
 <h3 id="openvpn">OpenVPN</h3>
-<pre><code>sudo snap install easy-openvpn-server --candidate
+<pre><code>
+sudo snap install easy-openvpn-server --candidate
 </code></pre>
 <h3 id="servidor-de-minecraft">Servidor de Minecraft</h3>
-<pre><code>sudo snap install mc-server-installer
+<pre><code>
+sudo snap install mc-server-installer
 </code></pre>
 <h2 id="desisnstalar-snap">Desisnstalar Snap</h2>
 <p>Snap viene instalado por defecto. Aún así si odias <strong>snap</strong> y no lo quieres, puedes desinstalarlo.</p>
-<pre><code>sudo apt purge snapd
+<pre><code>
+sudo apt purge snapd
 </code></pre>
 <h2 id="instalar-docker">Instalar Docker</h2>
 <p>Vamos a instalar docker</p>
 <h3 id="instalación">Instalación</h3>
 <p>Lo instalaremos desde los repositorios de Ubuntu. Súper fácil.</p>
-<pre><code>sudo apt install docker.io
+<pre><code>
+sudo apt install docker.io
 </code></pre>
 <h3 id="iniciar-docker-al-iniciar-el-sistema">Iniciar docker al iniciar el sistema</h3>
 <p>Creamos el servicio para que inicie docker al iniciar el sistema</p>
-<pre><code>sudo systemctl enable --now docker
+<pre><code>
+sudo systemctl enable --now docker
 </code></pre>
 <h3 id="darle-privilegios-de-administración-de-docker-a-un-usuario">Darle privilegios de administración de docker a un usuario</h3>
 <p>En mi caso, mi usuario es <strong>angel</strong>. Pon tu el tuyo.</p>
-<pre><code>sudo usermod -aG docker angel
+<pre><code>
+sudo usermod -aG docker angel
 </code></pre>
 <h3 id="ver-si-todo-esta-ok">Ver si todo esta ok</h3>
 <p>Vamos a ver que versión de docker hay instalada y si se ha instalado</p>
-<pre><code>docker --version
+<pre><code>
+docker --version
 </code></pre>
 <h3 id="instalar-docker-compose">Instalar docker compose</h3>
-<pre><code>sudo apt install docker-compose
+<pre><code>
+sudo apt install docker-compose
 </code></pre>
 <h3 id="ver-versión-de-docker-compose">Ver versión de docker compose</h3>
-<pre><code>docker-compose version
+<pre><code>
+docker-compose version
 </code></pre>
 <h2 id="instalando-wireguard">Instalando Wireguard</h2>
 <p>Se acabó wireguard en testing. Ubuntu 20.04 trae el kernel de Linux 5.4 y aunque no está disponible por defecto en este kernel de Linux, Ubuntu lo ha añadido para esta LTS y está disponible en sus repositorios.</p>
-<pre><code>sudo apt install wireguard
+<pre><code>
+sudo apt install wireguard
 </code></pre>
 <p><strong>FUNCIONA!!!</strong> Ahora si es facil tener Wireguard en una Raspberry.</p>
 <p>Para configurarlo, <a href="https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html">te recomiendo el script que hice para crear la configuración del servidor y clientes</a>.</p>
 <h2 id="instalar-escritorio">Instalar escritorio</h2>
 <p>Si lo que deseas es tener un escritorio en tu ubuntu</p>
-<pre><code>sudo apt update &amp;&amp; sudo apt install ubuntu-desktop
+<pre><code>
+sudo apt update &amp;&amp; sudo apt install ubuntu-desktop
 </code></pre>
 <p>Ten en cuenta las limitaciones de tu Raspberry, <a href="https://ubuntu.com/download/desktop">consulta la web oficial</a>.</p>
 <h2 id="temperatura-raspberry-con-ubuntu">Temperatura Raspberry con Ubuntu</h2>
 <p>Ubuntu puede mostrar a que temperatura está nuestra Raspberry, pero es diferente a Raspbian.</p>
 <p>Para conocer la temperatura:</p>
-<pre><code>cat /sys/class/thermal/thermal_zone0/temp
+<pre><code>
+cat /sys/class/thermal/thermal_zone0/temp
 </code></pre>
 <p>Se me ha ocurrido este comando que puedes añadirte a un alias, para que sea más clara la medición</p>
-<pre><code>echo &quot;$(cat /sys/class/thermal/thermal_zone0/temp | cut -c 1,2),$(cat /sys/class/thermal/thermal_zone0/temp | cut -c 3,4)º&quot;
+<pre><code>
+echo &quot;$(cat /sys/class/thermal/thermal_zone0/temp | cut -c 1,2),$(cat /sys/class/thermal/thermal_zone0/temp | cut -c 3,4)º&quot;
 </code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Ubuntu por primera vez, nos proporciona un Sistema Operativo 100% usable como alternativa real a Raspbian. Es una versión que por su sencillez y paquetes totalmente a la última, me ha encantado. Voy a testearlo más en profundidad y te recomiendo que tu también lo hagas.</p>
-<br>
 <p>Publicado por Angel el Sunday 26 April del 2020</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-03-27-snap-desinstalar-o-instalar-en-manjaro.html">Snap. Desinstalar o Instalar en Manjaro</a></li>
@@ -237,4 +218,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html">Sonixd. Player para Jellyfin y Subsonic</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html">Abrir aplicaciones de Ubuntu desde una web html</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

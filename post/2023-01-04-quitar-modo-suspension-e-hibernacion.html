@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="quitar-modo-suspensión-e-hibernación">Quitar modo suspensión e hibernación</h1>
+<h1 id="quitar-modo-suspensión-e-hibernación" title="Quitar modo suspensión e hibernación" data-export_file_name="quitar-modo-suspension-e-hibernacion" data-description="Uno de mis PC's he decidido utilizarlo de servidor con Manjaro. He instalado el escritorio gnome y al reiniciarlo, como no ha ejecutado ningún comando ha pasado a modo hibernación." data-export_date="2023-01-04 12:40" data-category="hibernación" data-tag="manjaro,suspensión" data-image="./images-blog/ugeek.png">Quitar modo suspensión e hibernación</h1>
 <p>Uno de mis PC's he decidido utilizarlo de servidor con Manjaro. He instalado el escritorio gnome y al reiniciarlo, como no ha ejecutado ningún comando ha pasado a modo hibernación.</p>
 <p>Vamos a ver cómo deshabilitar la hibernación y suspensión del equipo.</p>
 <h2 id="deshabilitando-la-hibernación-y-suspensión">Deshabilitando la hibernación y suspensión</h2>
@@ -52,7 +52,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <pre><code class="language-sh">
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 </code></pre>
-<p>Este comando hace que se redirija todos los targets se direccion hacia <em>dev</em>null</p>
+<p>Este comando hace que se redirija todos los targets se direccion hacia /dev/null</p>
 <p>Reinicia el sistema para que tengan efecto los cambios.</p>
 <h2 id="comprobar-que-los-targets-están-inhabilitados">Comprobar que los targets están inhabilitados</h2>
 <p>Para comprobar que realmente los targets no funcionan, utilizaremos el comando:</p>

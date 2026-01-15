@@ -44,19 +44,19 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicación-y-que-aparezcan-en-el-menú">Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</h1>
+<h1 id="crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicación-y-que-aparezcan-en-el-menú" title="Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú" data-export_file_name="crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu" data-description="Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en" data-export_date="2021-04-11 11:30" data-category="appimage" data-tag="desktop,escritorio" data-image="./images-blog/appimage.png">Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</h1>
 <p>Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en cualquier lanzador que instales.</p>
 <p><img src="../images-blog/appimage.png" /></p>
 <p>Vamos a ver como integrarlo y comenzar a disfrutar plenamente de los AppImage así como cualquier aplicación que instalemos.</p>
 <h2 id="creando-acceso-a-la-aplicación">Creando acceso a la aplicación</h2>
-<p>En el caso de las aplicaciones AppImage, a mí en particular, me gusta el crear un directorio donde dejar todos los archivos <strong>AppImage</strong>, en la ruta <code class="verbatim">~/appimage</code>.</p>
-<p>Los iconos de las aplicaciones los dejo en la ruta <code class="verbatim">~/appimage/icon.</code></p>
-<p>Crea un archivo en la ruta <code class="verbatim">~/.local/share/applications</code> llamado por ejemplo en el caso de la aplicación jellyamp, <strong>jellyamp.desktop.</strong></p>
+<p>En el caso de las aplicaciones AppImage, a mí en particular, me gusta el crear un directorio donde dejar todos los archivos <strong>AppImage</strong>, en la ruta <code>~/appimage</code>.</p>
+<p>Los iconos de las aplicaciones los dejo en la ruta <code>~/appimage/icon.</code></p>
+<p>Crea un archivo en la ruta <code>~/.local/share/applications</code> llamado por ejemplo en el caso de la aplicación jellyamp, <strong>jellyamp.desktop.</strong></p>
 <p>Simplificando:</p>
 <ul>
-<li>Aplicación: <code class="verbatim">~/appimage/jellyamp.AppImage</code></li>
-<li>Icono de la aplicación: <code class="verbatim">~/appimage/icon/jellyamp.png</code></li>
-<li>Archivo con el acceso directo a la aplicación: <code class="verbatim">~/.local/share/applications/jellyamp.desktop</code></li>
+<li>Aplicación: <code>~/appimage/jellyamp.AppImage</code></li>
+<li>Icono de la aplicación: <code>~/appimage/icon/jellyamp.png</code></li>
+<li>Archivo con el acceso directo a la aplicación: <code>~/.local/share/applications/jellyamp.desktop</code></li>
 </ul>
 <p>En el archivo <strong>jellyamp.desktop</strong>, añadiremos lo siguiente:</p>
 <pre><code class="language-sh">
@@ -78,6 +78,7 @@ Categories=AudioVideo
 <li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html">Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html">Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

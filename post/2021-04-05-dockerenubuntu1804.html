@@ -44,23 +44,23 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-en-ubuntu-2004">Docker en Ubuntu 20.04</h1>
+<h1 id="docker-en-ubuntu-2004" title="Docker en Ubuntu 20.04" data-export_file_name="Docker en Ubuntu 1804" data-description="Vamos a instalar docker en Ubuntu 20.04" data-export_date="2021-04-05 12:15" data-category="docker" data-tag="terminal,ubuntu" data-image="./images-blog/docker.png">Docker en Ubuntu 20.04</h1>
 <p>Vamos a instalar docker en Ubuntu 20.04:</p>
 <p><img src="../images-blog/docker.png" /></p>
 <h2 id="requisitos-previos">Requisitos Previos</h2>
 <p>Instalaremos primero unos requisitos que permitiran a apt usar paquetes mediante https:</p>
-<p><code class="verbatim">sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
+<p><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
 <h2 id="clave-gpg">Clave GPG</h2>
-<p><code class="verbatim">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
+<p><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
 <h2 id="repositorio">Repositorio</h2>
 <p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
 <pre><code>
 sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable&quot;
 </code></pre>
 <p>Actualizamos:</p>
-<p><code class="verbatim">sudo apt update</code></p>
+<p><code>sudo apt update</code></p>
 <p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
-<p><code class="verbatim">sudo apt-cache policy docker-ce</code></p>
+<p><code>sudo apt-cache policy docker-ce</code></p>
 <h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
 <pre><code>
 sudo apt -y install docker-ce docker-compose
@@ -71,7 +71,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 </code></pre>
 <h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
-<p><code class="verbatim">docker -v</code></p>
+<p><code>docker -v</code></p>
 <h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
 <p>Creamos el grupo docker:</p>
 <pre><code>
@@ -99,6 +99,7 @@ docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

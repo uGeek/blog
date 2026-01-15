@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="twitch-dl-aplicación-cli-para-descargar-videos-de-twitchtv">twitch-dl. Aplicación CLI para descargar videos de twitch.tv</h1>
+<h1 id="twitch-dl-aplicación-cli-para-descargar-videos-de-twitchtv" title="twitch-dl. Aplicación CLI para descargar videos de twitch.tv" data-export_file_name="twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv" data-description="Herramienta de línea de comandos para descargar videos de twitch.tv" data-export_date="2022-03-15 12:52" data-category="twitch" data-tag="terminal,cli,app" data-image="./images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png">twitch-dl. Aplicación CLI para descargar videos de twitch.tv</h1>
 <p>Herramienta de línea de comandos para descargar videos de twitch.tv</p>
 <p>Inspirado en <a href="https://youtube-dl.org/">youtube-dl</a> . Agrega características específicas de contracción y utiliza conexiones simultáneas para que la descarga sea más rápida.</p>
 <p><img src="../images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png" /></p>
@@ -56,7 +56,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://pypi.org/project/twitch-dl/">Paquete Python</a></li>
 </ul>
 <h2 id="instalación">Instalación</h2>
-<p>Ir a la <a href="https://github.com/ihabunek/twitch-dl/releases/latest">última versión</a> y descargar el <code class="verbatim">twitch-dl.&lt;version&gt;.pyz</code>archivo.</p>
+<p>Ir a la <a href="https://github.com/ihabunek/twitch-dl/releases/latest">última versión</a> y descargar el <code>twitch-dl.&lt;version&gt;.pyz</code>archivo.</p>
 <p>Descargar</p>
 <pre><code class="language-sh">
 wget https://github.com/ihabunek/twitch-dl/releases/download/1.21.0/twitch-dl.1.21.0.pyz
@@ -75,7 +75,7 @@ python3 twitch-dl.1.21.0.pyz --help
 chmod +x twitch-dl.1.21.0.pyz
 ./twitch-dl.1.21.0.pyz --help
 </code></pre>
-<p>Siéntase libre de cambiar el nombre del archivo a algo más manejable, como <code class="verbatim">twitch-dl</code>.</p>
+<p>Siéntase libre de cambiar el nombre del archivo a algo más manejable, como <code>twitch-dl</code>.</p>
 <p>Para actualizar a una versión más reciente, repita el proceso con la versión más reciente.</p>
 <h2 id="listar-todos-los-vídeos-del-canal">Listar todos los vídeos del canal</h2>
 <pre><code class="language-sh">
@@ -86,12 +86,12 @@ twitch-dl videos &lt;channel_name&gt; [FLAGS] [OPTIONS]
 </code></pre>
 <ul>
 <li>-a, --all &gt;&gt; Obtener todos los videos, anula --limit</li>
-<li>-j, --json &gt;&gt; Mostrar resultados como JSON. Ignora <code class="verbatim">--pager</code>.</li>
+<li>-j, --json &gt;&gt; Mostrar resultados como JSON. Ignora <code>--pager</code>.</li>
 <li>-g, --game &gt;&gt; Mostrar videos del juego dado (se puede dar varias veces)</li>
 <li>-l, --limit &gt;&gt; Número de videos para buscar. El valor predeterminado es 10.</li>
-<li>-s, --sort &gt;&gt; Orden de clasificación de los videos. Predeterminado a <code class="verbatim">time=. Valores posibles: =views=, =time</code>.</li>
-<li>-t, --type &gt;&gt; Tipo de transmisión. Predeterminado a <code class="verbatim">archive=. Valores posibles: =archive=, =highlight=, =upload</code>.</li>
-<li>-p, --pager &gt;&gt; Imprime videos en páginas. Ignora <code class="verbatim">--limit</code>. El valor predeterminado es 10.</li>
+<li>-s, --sort &gt;&gt; Orden de clasificación de los videos. Predeterminado a <code>time</code>. Valores posibles: <code>views</code>, <code>time</code>.</li>
+<li>-t, --type &gt;&gt; Tipo de transmisión. Predeterminado a <code>archive</code>. Valores posibles: <code>archive</code>, <code>highlight</code>, <code>upload</code>.</li>
+<li>-p, --pager &gt;&gt; Imprime videos en páginas. Ignora <code>--limit</code>. El valor predeterminado es 10.</li>
 </ul>
 <h3 id="enumera-los-videos-recientes-del-canal-10-por-defecto">Enumera los videos recientes del canal (10 por defecto):</h3>
 <pre><code class="language-sh">
@@ -130,7 +130,7 @@ twitch-dl download &lt;video&gt; [FLAGS] [OPTIONS]
 <li>-w, --max-workers &gt;&gt; Número máximo de subprocesos para descargar vods al mismo tiempo (predeterminado 20)</li>
 <li>-s, --start &gt;&gt; Descargar video de este momento (hh:mm o hh:mm:ss)</li>
 <li>-e, --end &gt;&gt; Descargar video hasta este momento (hh:mm o hh:mm:ss)</li>
-<li>-f, --format &gt;&gt; Formato de video al que convertir, pasado a ffmpeg como la extensión de archivo de destino. Predeterminado a <code class="verbatim">mkv</code>.</li>
+<li>-f, --format &gt;&gt; Formato de video al que convertir, pasado a ffmpeg como la extensión de archivo de destino. Predeterminado a <code>mkv</code>.</li>
 <li>-q, --quality &gt;&gt; Calidad de video, por ejemplo, 720p. Configure en 'fuente' para obtener la mejor calidad.</li>
 <li>-o, --output &gt;&gt; Plantilla de nombre de archivo de salida. Ver documentos para más detalles.</li>
 </ul>
@@ -144,11 +144,11 @@ twitch-dl download https://www.twitch.tv/videos/221837124
 <pre><code class="language-sh">
 twitch-dl download -q 720p 221837124
 </code></pre>
-<p>Ajuste de la calidad a <code class="verbatim">source</code>descargará la mejor calidad disponible:</p>
+<p>Ajuste de la calidad a <code>source</code>descargará la mejor calidad disponible:</p>
 <pre><code class="language-sh">
 twitch-dl download -q source 221837124
 </code></pre>
-<p>Ajuste de la calidad a <code class="verbatim">audio_only</code>descargará solo audio:</p>
+<p>Ajuste de la calidad a <code>audio_only</code>descargará solo audio:</p>
 <pre><code class="language-sh">
 twitch-dl download -q audio_only 221837124
 </code></pre>
@@ -159,6 +159,7 @@ twitch-dl download -q audio_only 221837124
 <li><a href="https://twitch-dl.bezdomni.net/commands/videos.html">twitch-dl videos - twitch-dl Documentation</a></li>
 <p>Publicado por Angel el Tuesday 15 March del 2022</p>
 <p>También te puede interesar:</p>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

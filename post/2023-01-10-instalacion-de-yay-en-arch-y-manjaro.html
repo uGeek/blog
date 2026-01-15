@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="instalación-de-yay-en-arch-y-manjaro">Instalación de yay en Arch y Manjaro</h1>
+<h1 id="instalación-de-yay-en-arch-y-manjaro" title="Instalación de yay en Arch y Manjaro" data-export_file_name="instalacion-de-yay-en-arch-y-manjaro" data-description="Yay es un asistente desarrollado en GO para instalar software de AUR (Arch User Repository)." data-export_date="2023-01-10 12:00" data-category="yay" data-tag="manjaro,arch,aur" data-image="./images-blog/ugeek.png">Instalación de yay en Arch y Manjaro</h1>
 <p>Yay es un asistente desarrollado en GO para instalar software de AUR (Arch User Repository).</p>
 <p>El funcionamiento es muy sencillo, ya que si estás familiarizado con <strong>pacman</strong>, muchos comandos son muy parecidos.</p>
 <p>Vamos a ver como instalarlo en Manjaro y ArchLinux, así como conocer muchos de los comandos disponibles.</p>
@@ -59,7 +59,7 @@ sudo pacman -S --needed git base-devel yay
 sudo pacman -S --needed git base-devel &amp;&amp; git clone https://aur.archlinux.org/yay.git &amp;&amp; cd yay &amp;&amp; makepkg -si
 </code></pre>
 <h2 id="primer-uso">Primer uso</h2>
-<p>Genera una base de datos de paquetes de desarrollo para <code class="verbatim">*-git</code>paquetes que se instalaron sin yay. Este comando solo debe ejecutarse una vez.</p>
+<p>Genera una base de datos de paquetes de desarrollo para <code>*-git</code>paquetes que se instalaron sin yay. Este comando solo debe ejecutarse una vez.</p>
 <pre><code class="language-sh">
 yay -Y --gendb
 </code></pre>
@@ -67,7 +67,7 @@ yay -Y --gendb
 <pre><code class="language-sh">
 yay -Syu --devel
 </code></pre>
-<p>Hacer actualizaciones de paquetes de desarrollo de forma permanente activado ( <code class="verbatim">yay=y =yay -Syu</code> luego siempre verificará los paquetes de desarrollo)</p>
+<p>Hacer actualizaciones de paquetes de desarrollo de forma permanente activado ( <code>yay</code>y <code>yay -Syu</code> luego siempre verificará los paquetes de desarrollo)</p>
 <pre><code class="language-sh">
 yay -Y --devel --save
 </code></pre>
@@ -130,18 +130,18 @@ yay -Sc
 </code></pre>
 <h2 id="resumen-de-más-opciones-disponibles-en-el-repositorio-de-yay">Resumen de más opciones disponibles en el repositorio de yay</h2>
 <ul>
-<li><code class="verbatim">yay= &gt; alias que =yay -Syu</code>.</li>
-<li><code class="verbatim">yay &lt;Search Term&gt;</code> &gt; Presentar menú de selección de instalación de paquetes.</li>
-<li><code class="verbatim">yay -Y --combinedupgrade --save</code> &gt; Haga que la actualización combinada sea el modo predeterminado.</li>
-<li><code class="verbatim">yay -Ps</code> &gt; Imprimir estadísticas del sistema.</li>
-<li><code class="verbatim">yay -Yc</code> &gt; Limpie las dependencias innecesarias.</li>
-<li><code class="verbatim">yay -G &lt;AUR Package&gt;</code> &gt; Descarga PKGBUILD desde ABS o AUR.</li>
-<li><code class="verbatim">yay -Gp &lt;AUR Package&gt;</code> &gt; Imprima en la salida estándar PKGBUILD desde ABS o AUR.</li>
-<li><code class="verbatim">yay -Y --gendb</code> &gt; Genere la base de datos del paquete de desarrollo utilizada para la actualización del desarrollo.</li>
-<li><code class="verbatim">yay -Syu --devel</code> &gt; Realice la actualización del sistema, pero también verifique las actualizaciones del paquete de desarrollo.</li>
-<li><code class="verbatim">yay -Syu --timeupdate</code> &gt; Realice la actualización del sistema y use el tiempo de modificación de PKGBUILD (no el número de versión) para determinar la actualización.</li>
-<li><code class="verbatim">yay -Wv &lt;AUR Package&gt;= &gt; Votar por paquete (Requiere configuración =AUR_USERNAME=y =AUR_PASSWORD</code>Variables de entorno). (yay v11.3+)</li>
-<li><code class="verbatim">yay -Wu &lt;AUR Package&gt;= &gt; Dejar de votar por el paquete (requiere configuración =AUR_USERNAME=y =AUR_PASSWORD</code>variables de entorno) (yay v11.3+)</li>
+<li><code>yay</code> &gt; alias que <code>yay -Syu</code>.</li>
+<li><code>yay &lt;Search Term&gt;</code> &gt; Presentar menú de selección de instalación de paquetes.</li>
+<li><code>yay -Y --combinedupgrade --save</code> &gt; Haga que la actualización combinada sea el modo predeterminado.</li>
+<li><code>yay -Ps</code> &gt; Imprimir estadísticas del sistema.</li>
+<li><code>yay -Yc</code> &gt; Limpie las dependencias innecesarias.</li>
+<li><code>yay -G &lt;AUR Package&gt;</code> &gt; Descarga PKGBUILD desde ABS o AUR.</li>
+<li><code>yay -Gp &lt;AUR Package&gt;</code> &gt; Imprima en la salida estándar PKGBUILD desde ABS o AUR.</li>
+<li><code>yay -Y --gendb</code> &gt; Genere la base de datos del paquete de desarrollo utilizada para la actualización del desarrollo.</li>
+<li><code>yay -Syu --devel</code> &gt; Realice la actualización del sistema, pero también verifique las actualizaciones del paquete de desarrollo.</li>
+<li><code>yay -Syu --timeupdate</code> &gt; Realice la actualización del sistema y use el tiempo de modificación de PKGBUILD (no el número de versión) para determinar la actualización.</li>
+<li><code>yay -Wv &lt;AUR Package&gt;</code> &gt; Votar por paquete (Requiere configuración <code>AUR_USERNAME</code>y <code>AUR_PASSWORD</code>Variables de entorno). (yay v11.3+)</li>
+<li><code>yay -Wu &lt;AUR Package&gt;</code> &gt; Dejar de votar por el paquete (requiere configuración <code>AUR_USERNAME</code>y <code>AUR_PASSWORD</code>variables de entorno) (yay v11.3+)</li>
 </ul>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
@@ -150,6 +150,7 @@ yay -Sc
 <p>También te puede interesar:</p>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-10-instalacion-de-yay-en-arch-y-manjaro.html">Instalación de yay en Arch y Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-08-instalacion-de-librewolf-en-manjaro.html">Instalación de LibreWolf en Manjaro</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

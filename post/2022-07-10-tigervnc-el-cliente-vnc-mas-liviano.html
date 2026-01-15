@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="tigervnc-el-cliente-vnc-más-liviano">TigerVNC. El cliente vnc más liviano</h1>
+<h1 id="tigervnc-el-cliente-vnc-más-liviano" title="TigerVNC. El cliente vnc más liviano" data-export_file_name="tigervnc-el-cliente-vnc-mas-liviano" data-description="En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC." data-export_date="2022-07-10 05:15 2023-07-16" data-category="vnc" data-tag="cliente" data-image="./images-blog/ugeek.png">TigerVNC. El cliente vnc más liviano</h1>
 <p>En ese testeo de probar diferentes clientes para vnc, hoy toca el turno de TigerVNC.</p>
 <p>Lo más interesante de este cliente, es que el cliente funciona a pantalla completa mostrando el escritorio remoto, maximizando la pantalla sin ningún tipo de pestaña, teniendo la sensación de trabajar directamente en el PC remoto  saliendo solo  pulsando la tecla <strong>F8</strong>.</p>
 <h2 id="instalación">Instalación</h2>
@@ -52,7 +52,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <pre><code class="language-sh">
 sudo apt-get install -y tigervnc-viewer
 </code></pre>
-<p>Para introducir la contraseña en formato texto con un único comando, es necesario instalar el paquete <code class="verbatim">tigervnc-common</code></p>
+<p>Para introducir la contraseña en formato texto con un único comando, es necesario instalar el paquete <code>tigervnc-common</code></p>
 <pre><code class="language-sh">
 sudo apt install tigervnc-common
 </code></pre>
@@ -67,9 +67,9 @@ sudo pacman -S tigervnc
 <pre><code class="language-sh">
 vncviewer 192.168.1.102:5901 -passwd &lt;(echo &quot;contraseña&quot; | vncpasswd -f)
 </code></pre>
-<p>En este ejemplo, el servidor está corriendo por el puerto <code class="verbatim">5901= y la ip del servidor es =192.168.1.102</code></p>
+<p>En este ejemplo, el servidor está corriendo por el puerto <code>5901</code> y la ip del servidor es <code>192.168.1.102</code></p>
 <p>Haciendo de este modo, creando por ejemplo un alias, entraremos directetamente a nuestro escritorio remoto con <strong>VNC</strong></p>
-<p>Si deseas lanzar en pantalla completa, es necesario utilizar la opción <code class="verbatim">-FullScreenMode</code></p>
+<p>Si deseas lanzar en pantalla completa, es necesario utilizar la opción <code>-FullScreenMode</code></p>
 <pre><code class="language-sh">
 vncviewer 192.168.1.102:5901 -passwd &lt;(echo &quot;contraseña&quot; | vncpasswd -f) -FullScreen
 </code></pre>
@@ -81,7 +81,7 @@ vncviewer 192.168.1.102:5901 -passwd &lt;(echo &quot;contraseña&quot; | vncpass
 </ul>
 <h2 id="el-cursor-desaparece">El cursor desaparece</h2>
 <p><strong>Es muy muy importante, sobretodo en PC's con Windows, Dejar conectado un ratón en la torre. Si no está conectado, depende del PC, pero es posible que no funciones el teclado númerico del teclado y no se vea el cursor del ratón</strong>.</p>
-<p>Si desaparece el cursor dependiendo del escritorio que utilices, puedes habilitar el cursor de <strong>TigerVNC</strong> que es un punto. Para ello, pulsando <strong>F8</strong>, seleccionaremos la pestaña <strong>Misc.</strong> de Miscelánea y marcaremos la opción <code class="verbatim">Show dot when no cursor</code>. </p>
+<p>Si desaparece el cursor dependiendo del escritorio que utilices, puedes habilitar el cursor de <strong>TigerVNC</strong> que es un punto. Para ello, pulsando <strong>F8</strong>, seleccionaremos la pestaña <strong>Misc.</strong> de Miscelánea y marcaremos la opción <code>Show dot when no cursor</code>. </p>
 <h2 id="ejemplo-de-otro-comando-para-lanzar-tigervnc">Ejemplo de otro comando para lanzar tigervnc</h2>
 <p>Me pareción interesante dejar esta opción para lanzar tigervnc de un usuario. </p>
 <pre><code>
@@ -102,6 +102,7 @@ vncviewer -viewonly -DotWhenNoCursor=1 -QualityLevel=9 -NoJPEG -PreferredEncodin
 <li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-12-18-remmina-de-los-mejores-clientes-vnc.html">Remmina. De los mejores Clientes VNC</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-07-08-instalar-vnc-en-tu-servidor-con-debian-u-otra-derivada.html">Instalar VNC en tu servidor con debian u otra derivada</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="rclone-bidireccional-con-rclonesync">Rclone bidireccional con Rclonesync</h1>
+<h1 id="rclone-bidireccional-con-rclonesync" title="Rclone bidireccional con Rclonesync" data-export_file_name="rclone-bidireccional-con-rclonesync" data-description="" data-export_date="2020-03-26 20:10" data-category="rclone" data-tag="sincronización,sync,webdav,dropbox,drive" data-image="./images-blog/rclone.png">Rclone bidireccional con Rclonesync</h1>
 <p>Rclone Es una herramienta genial que permite copiar y sincronizar archivos de tus nubes públicas o privadas. Pero tiene un pequeño defecto dentro de su perfección, esta sincronización es como rsync, en un único sentido.</p>
 <p>Gracias a este script desarrollado en python por <a href="https://github.com/cjnaz">Chris cjnaz</a>, solucionamos esta limitación podiento tener un directorio con una réplica exacta del contenido de tu nube en local y totalmente sincronizada de un modo bidireccional.</p>
 <p>De manera que si se modifica un archivo tanto en local como en el servidor, estos se sincronizaran instantáneamente teniendo una copia exacta en ambos sitios.</p>
@@ -70,7 +70,7 @@ rclonesync [RUTA_ORIGEN] [RUTA_DESTINO]
 </code></pre>
 <h2 id="iniciando">Iniciando</h2>
 <p>Solo la primera vez que iniciamos, tenemos que poner como <strong>ruta origen</strong>, el directorio <strong>no que tiene archivos</strong>.</p>
-<p>Y <strong>solo la primera vez</strong>, iniciaremos el scritp con la opción <code class="verbatim">--first-sync=. En la ayuda también se especifica que podemos utilizar la opción =-1</code>.</p>
+<p>Y <strong>solo la primera vez</strong>, iniciaremos el scritp con la opción <code>--first-sync</code>. En la ayuda también se especifica que podemos utilizar la opción <code>-1</code>.</p>
 <h3 id="dropbox">Dropbox</h3>
 <p>Ejemplo de cuenta una con dropbox, la he probado y funciona perfecto.</p>
 <p>Este seria el ejemplo de mi primera sincronización:</p>
@@ -89,7 +89,7 @@ rclonesync  drive:sync /home/angel/drive --config &quot;/home/angel/.config/rclo
 rclonesync  webdav:  /home/angel/webdav --first-sync --verbose
 </code></pre>
 <h2 id="forzar">Forzar</h2>
-<p>Si se supera el 50% de archivos y carpetas para el borrado, tenemos que forzar con la opción <code class="verbatim">--force</code>, esta es una opción para evitar el que por error borremos archivos mediante la sincronización.</p>
+<p>Si se supera el 50% de archivos y carpetas para el borrado, tenemos que forzar con la opción <code>--force</code>, esta es una opción para evitar el que por error borremos archivos mediante la sincronización.</p>
 <pre><code>
 --force
 </code></pre>
@@ -98,16 +98,16 @@ rclonesync  webdav:  /home/angel/webdav --first-sync --verbose
 <pre><code>
 */5 * * * * /usr/local/bin/rclonesync /home/angel/todo webdav:todo --verbose &gt;&gt; ~/.config/log_webdav_todo 2&gt;&amp;1
 </code></pre>
-<p>Cada 5 minutos, a parte de producirse la sincronización, todo quedará registrado en el archivo <code class="verbatim">~/.config/log_webdav_todo</code>. De esta manera puedo comprobar que todo funciona correctamente.</p>
+<p>Cada 5 minutos, a parte de producirse la sincronización, todo quedará registrado en el archivo <code>~/.config/log_webdav_todo</code>. De esta manera puedo comprobar que todo funciona correctamente.</p>
 <h2 id="excluir-archivos-o-directorios-en-la-sincronización">Excluir archivos o directorios en la sincronización</h2>
-<p>Mediante la opción <code class="verbatim">--filters-file</code>, podremos excluir archivos y directorios.</p>
-<p>También podemos <code class="verbatim">--check-access</code> para una mejor medida adicional.</p>
+<p>Mediante la opción <code>--filters-file</code>, podremos excluir archivos y directorios.</p>
+<p>También podemos <code>--check-access</code> para una mejor medida adicional.</p>
 <p>Este sería el cron:</p>
 <pre><code>
 */5 * * * * ~/scripts/rclonesync.py /home/angel/drive/ drive: --check-access --filters-file ~/.rclonesyncwd/Filters  &gt;&gt; ~/.config/log_drive 2&gt;&amp;1
 </code></pre>
 <h2 id="error-en-sincronización">Error en sincronización</h2>
-<p>Es posible que se produzca un error de sincronización. Para solucionar este problema, rclonesync nos pedirá hacer un <code class="verbatim">--first-sync</code>.</p>
+<p>Es posible que se produzca un error de sincronización. Para solucionar este problema, rclonesync nos pedirá hacer un <code>--first-sync</code>.</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Rclonesync tiene muchísimas más opciones que puedes consultar en la documentación o ejecutando en tu terminal:</p>
 <pre><code>
@@ -129,6 +129,7 @@ rclonesync -h
 <li><a href="https://ugeek.github.io/blog/post/2020-03-26-rclone-bidireccional-con-rclonesync.html">Rclone bidireccional con Rclonesync</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html">Instalando, Compilando el última versión de Rclone-Browser</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-05-marca-de-tiempo-con-emacs.html">Marca de tiempo con Emacs</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

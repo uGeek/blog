@@ -44,12 +44,12 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="corrector-ortográfico-para-emacs-en-raspbian">Corrector Ortográfico para Emacs en Raspbian</h1>
+<h1 id="corrector-ortográfico-para-emacs-en-raspbian" title="Corrector Ortográfico para Emacs en Raspbian" data-export_file_name="Corrector Ortagráfico para Emacs en Raspbian" data-description="Tras adquirir mi nueva Raspberry 4 y la aparición de la nueva debian Buster, estoy utilizando Emacs remotamente" data-export_date="2019-08-16 11:00" data-category="emacs" data-tag="orgmode,raspbian,org-bash-blog" data-image="./images-blog/emacs.png">Corrector Ortográfico para Emacs en Raspbian</h1>
 <p>Tras adquirir mi nueva Raspberry 4 y la aparición de la nueva debian Buster, estoy utilizando Emacs remotamente. La versión de Emacs disponible en Raspbian Buster, es la Emacs 26.1. Los que conocemos Emacs, sabemos que exportando tu archivo de configuración init.el, Emacs en el primer arranque, instalará todos los paquetes necesarios y dejará este, igual que en el anterior dispositivo que lo estabas utilizando.</p>
 <p><img src="../images-blog/emacs.png" />  </p>
 <p>No a sido del todo así. El corrector de castellano, al utilizar una arquitectura diferente, me ha fallado. Así que he tenido que buscar una solución. Gracias al de emacs.stackexchange.com, la he encontrado. Adjunto el código adaptado para Castellano.</p>
 <h2 id="añade-a-tu-initel">Añade a tu init.el</h2>
-<p>En el caso de querer utilizar el Castellano como corrector, añadiremos <code class="verbatim">es_ES</code>. Sustituye por el idioma que desees.</p>
+<p>En el caso de querer utilizar el Castellano como corrector, añadiremos <code>es_ES</code>. Sustituye por el idioma que desees.</p>
 <pre><code>
 (setq ispell-program-name &quot;hunspell&quot;)
 (setq ispell-local-dictionary &quot;es_ES&quot;)
@@ -69,6 +69,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

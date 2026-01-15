@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="edge-gpt-bingchat-con-chatgpt4-en-mi-terminal">Edge GPT. BingChat con ChatGPT4 en mi terminal</h1>
+<h1 id="edge-gpt-bingchat-con-chatgpt4-en-mi-terminal" title="Edge GPT. BingChat con ChatGPT4 en mi terminal" data-export_file_name="edge-gpt-bingchat-con-chatgpt4-en-mi-terminal" data-description="La experiencia de tener chat GPT en la terminal es una pasada. Para utilizarla es necesario utilizar la API de OpenAI de Chatgpt y nos van a dar un tiempo" data-export_date="2023-05-04 06:15 2023-05-27" data-category="ia" data-tag="edge,chatgpt" data-image="./images-blog/ugeek.png">Edge GPT. BingChat con ChatGPT4 en mi terminal</h1>
 <p>La experiencia de tener chat GPT en la terminal es una pasada. Para utilizarla es necesario utilizar la API de OpenAI de Chatgpt y nos van a dar un tiempo de prueba gratuito y posteriormente para seguir utilizandola tendremos que pagar.</p>
 <p>La experiencia de Bing Chat según se mire y dependiendo para que la utilices es muy superior, ya que se conecta a Internet y tenemos resultados más actualizados y además está basada en el nuevo Chatgpt 4.</p>
 <p>Voy a explicarte cómo utilizar el EdgeGPT que es una obra de ingeniería inversa de la función Bing chat en la terminal.</p>
@@ -56,24 +56,24 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li>Una cuenta de Microsoft con acceso anticipado a <a href="https://bing.com/chat">https://bing.com/chat</a></li>
 </ul>
 <h2 id="instalación">Instalación</h2>
-<p>El paquete se instalará en <code class="verbatim">/.local/bin/edge-gpt</code>.</p>
+<p>El paquete se instalará en <code>/.local/bin/edge-gpt</code>.</p>
 <pre><code class="language-sh">
 python3 -m pip install EdgeGPT --upgrade
 </code></pre>
 <h3 id="comprobación-de-acceso-requerido">Comprobación de acceso (Requerido)</h3>
 <ul>
 <li>Instala la última versión de Microsoft Edge</li>
-<li>Alternativamente, puede usar cualquier navegador y configurar el agente de usuario para que parezca que está usando Edge (por ejemplo, <code class="verbatim">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.51</code>). Puedes hacerlo fácilmente con una extensión como "User-Agent Switcher and Manager" para <a href="https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg">Chrome</a>y <a href="https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher/">Firefox</a>.</li>
+<li>Alternativamente, puede usar cualquier navegador y configurar el agente de usuario para que parezca que está usando Edge (por ejemplo, <code>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.51</code>). Puedes hacerlo fácilmente con una extensión como "User-Agent Switcher and Manager" para <a href="https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg">Chrome</a>y <a href="https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher/">Firefox</a>.</li>
 <li>Abre <a href="https://bing.com/chat">bing.com/chat</a></li>
 <li>Si ve una función de chat, está listo para comenzar</li>
 </ul>
 <h3 id="obtener-autenticación-requerido">Obtener autenticación (Requerido)</h3>
 <ul>
 <li>Instale la extensión del editor de cookies para <a href="https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm">Chrome</a>o <a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-editor/">Firefox</a></li>
-<li>Ir a <code class="verbatim">bing.com</code></li>
+<li>Ir a <code>bing.com</code></li>
 <li>Abre la extensión</li>
 <li>Haga clic en "Exportar" en la parte inferior derecha, luego "Exportar como JSON" (Esto guarda sus cookies en el portapapeles)</li>
-<li>Pega tus cookies en un archivo <code class="verbatim">cookies.json</code></li>
+<li>Pega tus cookies en un archivo <code>cookies.json</code></li>
 </ul>
 <h2 id="creando-un-alias">Creando un alias</h2>
 <p>Para que el acceso a <strong>edge-gpt</strong> sea más simple, he creado este alias:</p>
@@ -88,11 +88,11 @@ alias  edge-gpt='/home/angel/.local/bin/edge-gpt --cookie-file /home/angel/.loca
 !reset - Reset the conversation
 </code></pre>
 <h2 id="pulsar-enter-para-hablar-con-el-bot">Pulsar Enter para hablar con el bot</h2>
-<p>Si estás acostumbrado a utilizar solo <strong>Enter</strong> para enviar los mensajes y no quieres utiliza la combinación de <strong>Enter</strong>+<strong>Alt y </strong>Enter<strong>+</strong>ESC*, es necesario añadir la opción <code class="verbatim">--enter-once</code>.</p>
+<p>Si estás acostumbrado a utilizar solo <strong>Enter</strong> para enviar los mensajes y no quieres utiliza la combinación de <strong>Enter</strong>+<strong>Alt y </strong>Enter<strong>+</strong>ESC*, es necesario añadir la opción <code>--enter-once</code>.</p>
 <h3 id="modos-del-chat">Modos del chat</h3>
-<p>Para seleccionar el modo que deseamos utilizar, es tan sencillo como añadir la siguiente opción con el modo: <code class="verbatim">--style</code> seguido de creative,balanced o precise.</p>
+<p>Para seleccionar el modo que deseamos utilizar, es tan sencillo como añadir la siguiente opción con el modo: <code>--style</code> seguido de creative,balanced o precise.</p>
 <h3 id="guardando-el-historial-de-las-consultas">Guardando el historial de las consultas</h3>
-<p>Con la opción <code class="verbatim">--history-file /home/ubuntu/historial.txt</code> puedes guardar en una archivo de texto plano todo el historial de nuestras consultas.</p>
+<p>Con la opción <code>--history-file /home/ubuntu/historial.txt</code> puedes guardar en una archivo de texto plano todo el historial de nuestras consultas.</p>
 <h2 id="edge-gpt-con-docker">Edge GPT con docker</h2>
 <p>También es posible utlizar Edge GPT mediante docker. Aquí dejo un ejemplo de como ejecutar Edge GPT como si fuera un comando desde docker.</p>
 <pre><code>
@@ -100,8 +100,8 @@ docker run --rm -it -v $(pwd)/cookies.json:/cookies.json:ro -e COOKIE_FILE='/coo
 </code></pre>
 <h2 id="solucionando-errores">Solucionando Errores</h2>
 <p>Al utilizarlo en la Raspberry, Python no puedía encontrar el módulo <strong>pkg_resources</strong> que es necesario para ejecutar el comando que está intentando ejecutar. Para solucionar este error, he tenido que asegurarme de tener la última versión del paquete <strong>setuptools</strong> instalado en su sistema</p>
-<p>Puedes intentar actualizar setuptools con el siguiente comando en su terminal: <code class="verbatim">pip install --upgrade setuptools</code></p>
-<p>Si el error persiste, intenta actualizar la versión de pip, setuptools y wheel con los siguientes comandos: <code class="verbatim">pip install --upgrade pip setuptools wheel</code></p>
+<p>Puedes intentar actualizar setuptools con el siguiente comando en su terminal: <code>pip install --upgrade setuptools</code></p>
+<p>Si el error persiste, intenta actualizar la versión de pip, setuptools y wheel con los siguientes comandos: <code>pip install --upgrade pip setuptools wheel</code></p>
 <p>Ahora si funciona todo correctamente!!!</p>
 <h2 id="fuente">Fuente</h2>
 <ul>
@@ -120,6 +120,7 @@ docker run --rm -it -v $(pwd)/cookies.json:/cookies.json:ro -e COOKIE_FILE='/coo
 <li><a href="https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html">Bard de google para terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-05-06-ssh-eliminar-la-clave-del-host-en-un-servidor-remoto.html">SSH. Eliminar la clave del host en un servidor remoto</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-05-04-edge-gpt-bingchat-con-chatgpt4-en-mi-terminal.html">Edge GPT. BingChat con ChatGPT4 en mi terminal</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

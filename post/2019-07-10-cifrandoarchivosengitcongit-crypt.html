@@ -44,18 +44,18 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="cifrando-archivos-en-git-con-git-crypt">Cifrando archivos en git con GIT-CRYPT</h1>
+<h1 id="cifrando-archivos-en-git-con-git-crypt" title="Cifrando archivos en git con GIT-CRYPT" data-export_file_name="Cifrando archivos en git con GIT-CRYPT" data-description="Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git" data-export_date="2019-07-10 21:15" data-category="git" data-tag="terminal,ssh" data-image="./images-blog/git.png">Cifrando archivos en git con GIT-CRYPT</h1>
 <p><img src="../images-blog/git.png" /></p>
 <p>Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git. Quizás, desearías que suban determinados archivos, para poder gestionarlos desde otra máquina, pero que no fueran accesibles si el repositorio es público, osea que estos archivos estuvieran cifrados. He leído en el blog del <a href="https://www.atareao.es/como/cifrado-de-repositorios-git/">atareao.es</a>, esta joya. Voy a explicar con mis palabras como utilizarlo.</p>
 <h2 id="instalación">Instalación</h2>
 <p>Súper fácil porque lo vamos a encontrar en los repositorios de nuestras distros.</p>
-<p><code class="verbatim">sudo apt install git-crypt</code></p>
+<p><code>sudo apt install git-crypt</code></p>
 <h2 id="creamos-repositorio-cifrado">Creamos repositorio cifrado</h2>
 <p>El primer paso es tener ya un repositorio. Nos situamos dentro de la carpeta del repositorio tecleamos en la terminal:</p>
-<p><code class="verbatim">git-crypt init</code></p>
+<p><code>git-crypt init</code></p>
 <h2 id="creamos-un-archivo-gitattributes">Creamos un archivo .gitattributes</h2>
 <p>Ahora vamos a crear un archivo oculto donde especificaremos que archivos vamos a cifrar. Vamos a utilizar nano para crearlo:</p>
-<p><code class="verbatim">nano .gitattributes</code></p>
+<p><code>nano .gitattributes</code></p>
 <p>Indicamos que se cifren, por ejemplo, los archivos .html, .org, directorio:secretdir/**_secreto y archivo, con cualquier extensión o palabra que le preceda.</p>
 <pre><code>
 *.html filter=git-crypt diff=git-crypt`
@@ -68,10 +68,10 @@ directorio_secreto/** filter=git-crypt diff=git-crypt
 <p>Vamos utilizar de contraseña un archivo llave, que será este la contraseña para desbloquear el cifrado en otra máquina.</p>
 <h3 id="generando-llave">Generando Llave</h3>
 <p>Para generar el cifrado, voy a utilizar de archivo a modo de contraseña. Le pondré <strong>key</strong>, pero podría ponerle cualquier nombre, como el nombre del repositorio</p>
-<p><code class="verbatim">git-crypt export-key ~/carpeta/key</code></p>
+<p><code>git-crypt export-key ~/carpeta/key</code></p>
 <h3 id="desbloquear-el-cifrado-mediante-el-archivo-llave">Desbloquear el cifrado mediante el archivo llave:</h3>
 <p>Ahora en mi PC de sobremesa, he clonado mi repositorio pero todos los archivos .html y .org están cifrados. Para descifrarlos necesito el <strong>key</strong> y por supuesto, <strong>instalar git-crypt</strong> en este PC:</p>
-<p><code class="verbatim">git-crypt unlock ~/carpeta/key</code></p>
+<p><code>git-crypt unlock ~/carpeta/key</code></p>
 <p>Ya puedo ver el contenido!!!!</p>
 <h2 id="conclusión">Conclusión </h2>
 <p>Simplemente alucinante!!!. Súper útil para cifrar aquellos archivos que queremos utilizarlos con git, pero que en un repositorio público no queremos que sean visibles.</p>
@@ -88,6 +88,7 @@ directorio_secreto/** filter=git-crypt diff=git-crypt
 <li><a href="https://ugeek.github.io/blog/post/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html">Crear una imagen docker desde un repositorio de GitHub</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

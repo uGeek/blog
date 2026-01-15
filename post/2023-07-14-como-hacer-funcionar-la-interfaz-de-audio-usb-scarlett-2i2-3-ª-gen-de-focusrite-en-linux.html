@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="cómo-hacer-funcionar-la-interfaz-de-audio-usb-scarlett-2i2-3-gen-de-focusrite-en-linux">Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux</h1>
+<h1 id="cómo-hacer-funcionar-la-interfaz-de-audio-usb-scarlett-2i2-3-gen-de-focusrite-en-linux" title="Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux" data-export_file_name="como-hacer-funcionar-la-interfaz-de-audio-usb-scarlett-2i2-3-ª-gen-de-focusrite-en-linux" data-description="La interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite es una interfaz de audio de 2 entradas y 2 salidas con conexión USB-C que permite grabar y reproducir" data-export_date="2023-07-14 07:05" data-category="scarlett" data-tag="música" data-image="./images-blog/ugeek.png">Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux</h1>
 <p>La interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite es una interfaz de audio de 2 entradas y 2 salidas con conexión USB-C que permite grabar y reproducir audio con alta calidad y bajo ruido . En este artículo te explicare cómo hacerla funcionar en Linux.</p>
 <h2 id="inhabilitar-el-montado-como-interfaz-de-almacenamiento">Inhabilitar el montado como interfaz de almacenamiento</h2>
 <p>Cuando conectamos por primera vez nuestra interfaz Scarlett 2i2, por defecto se monta en nuestro sistema linux como si fuera una unidad de almacenamiento USB. Dentro de este directorio hay una serie de archivos para registrar nuestra interfaz. Para que esto no suceda y funcione correctamente en el sistema linux, es necesario seguir los siguientes pasos: - Desconecta la interfaz del cable <strong>usb</strong> - Mantén pulsado el botón de <strong>48v</strong> durante un mínimo de 5 segundo a la vez que conectes el cable USB-C al PC. - Ahora ya no volverá a montarse al inicio como una unidad de almacenamiento y si como interfaz de sonido</p>
@@ -54,18 +54,18 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </ul>
 <p>Gen 2:</p>
 <ul>
-<li>6i6: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8203 device_setup=1</code></li>
-<li>18i8: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8204 device_setup=1</code></li>
-<li>18i20: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8201 device_setup=1</code></li>
+<li>6i6: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8203 device_setup</code>1=</li>
+<li>18i8: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8204 device_setup</code>1=</li>
+<li>18i20: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8201 device_setup</code>1=</li>
 </ul>
 <p>Gen 3:</p>
 <ul>
-<li>Solo: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8211 device_setup=1</code></li>
-<li>2i2: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8210 device_setup=1</code></li>
-<li>4i4: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8212 device_setup=1</code></li>
-<li>8i6: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8213 device_setup=1</code></li>
-<li>18i8: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8214 device_setup=1</code></li>
-<li>18i20: <code class="verbatim">options snd_usb_audio vid=0x1235 pid=0x8215 device_setup=1</code></li>
+<li>Solo: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8211 device_setup</code>1=</li>
+<li>2i2: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8210 device_setup</code>1=</li>
+<li>4i4: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8212 device_setup</code>1=</li>
+<li>8i6: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8213 device_setup</code>1=</li>
+<li>18i8: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8214 device_setup</code>1=</li>
+<li>18i20: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8215 device_setup</code>1=</li>
 </ul>
 <p>Vamos a crear una archivo de configuración, es muy importante que acabe con la extensión <strong>.conf</strong>.</p>
 <pre><code class="language-sh">
@@ -78,14 +78,15 @@ options snd_usb_audio vid=0x1235 pid=0x8210 device_setup=1
 </code></pre>
 <p><strong>Reinicia el PC</strong></p>
 <h2 id="alsamixer">Alsamixer</h2>
-<p>Vamos a ver que todo funciona correctamente. Para ello abriremos nuevamente nuestra terminal y ejecutaremos <code class="verbatim">alsamixer=: - Pulsaremos =F6= para seleccionar la tarjeta a utilizar (en mi caso =Scarlett 2i2 USB=) - Ahora pulsa =F5</code> para ver todos las opciones</p>
+<p>Vamos a ver que todo funciona correctamente. Para ello abriremos nuevamente nuestra terminal y ejecutaremos <code>alsamixer</code>: - Pulsaremos <code>F6</code> para seleccionar la tarjeta a utilizar (en mi caso <code>Scarlett 2i2 USB</code>) - Ahora pulsa <code>F5</code> para ver todos las opciones</p>
 <h2 id="fuente">Fuente</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v">https://www.youtube.com/watch?v</a><code class="verbatim">5zFA5piXf8Q&amp;t</code>290s</li>
-<li><a href="https://www.youtube.com/watch?v">https://www.youtube.com/watch?v</a><code class="verbatim">1N4Ch-Ygbgk&amp;t</code>2s</li>
+<li><a href="https://www.youtube.com/watch?v">https://www.youtube.com/watch?v</a><code>5zFA5piXf8Q&amp;t</code>290s</li>
+<li><a href="https://www.youtube.com/watch?v">https://www.youtube.com/watch?v</a><code>1N4Ch-Ygbgk&amp;t</code>2s</li>
 <li><a href="https://github.com/Focusrite-Scarlett-on-Linux/sound-usb-kernel-module#habilitaci%C3%B3n-nueva-funcionalidad-en-tiempo-de-carga">https://github.com/Focusrite-Scarlett-on-Linux/sound-usb-kernel-module#habilitaci%C3%B3n-nueva-funcionalidad-en-tiempo-de-carga</a></li>
 <p>Publicado por Angel el Friday 14 July del 2023</p>
 <p>También te puede interesar:</p>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

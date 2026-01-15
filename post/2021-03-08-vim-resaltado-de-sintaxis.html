@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="vim-resaltado-de-sintaxis">vim. Resaltado de sintaxis</h1>
+<h1 id="vim-resaltado-de-sintaxis" title="vim. Resaltado de sintaxis" data-export_file_name="vim-resaltado-de-sintaxis" data-description="Cuando creo un script en bash u otro lenguaje de programación, me gusta que el editor que utilizo resalte la sintaxis, ya que de este modo puedo encontrar errores. Ahora" data-export_date="2021-03-08 10:50" data-category="vim" data-tag="sintaxis" data-image="./images-blog/vim.png">vim. Resaltado de sintaxis</h1>
 <p>Cuando creo un script en bash u otro lenguaje de programación, me gusta que el editor que utilizo resalte la sintaxis, ya que de este modo puedo encontrar errores. Ahora que estoy empezando a utilizar <strong>vim</strong>, vamos a ver como resaltar la sintaxis por defecto.</p>
 <p><img src="../images-blog/vim.png" /></p>
 <h2 id="archivo-de-configuración-vimrc">Archivo de configuración vimrc</h2>
@@ -66,7 +66,7 @@ syntax on
 :syntax off
 </code></pre>
 <h2 id="plantillas-de-colores">Plantillas de colores</h2>
-<p>Es probable que la plantilla por defecto no te guste. Si deseas cambiarla, podemos encontrar varias de diferentes colores en la ruta <code class="verbatim">/usr/share/vim/vim*/colors/</code></p>
+<p>Es probable que la plantilla por defecto no te guste. Si deseas cambiarla, podemos encontrar varias de diferentes colores en la ruta <code>/usr/share/vim/vim*/colors/</code></p>
 <pre><code class="language-sh">
 ls /usr/share/vim/vim*/colors/
 </code></pre>
@@ -78,7 +78,7 @@ ls /usr/share/vim/vim*/colors/
 <pre><code class="language-sh">
 colorscheme blue
 </code></pre>
-<p>Podemos encontrar más plantillas <a href="https://www.vim.org/scripts/script_search_results.php?keywords7search">en la siguiente página de vim</a>.</p>
+<p>Podemos encontrar más plantillas <a href="https://www.vim.org/scripts/script_search_results.php?keywords7color+scheme&amp;order_by8descending&amp;search=search">en la siguiente página de vim</a>.</p>
 <h2 id="lineas-numeradas">Lineas Numeradas</h2>
 <p>Para numerar las líneas, tan sencillo como ejecutar en <strong>vim</strong> una vez abierto el script:</p>
 <pre><code class="language-sh">
@@ -88,7 +88,7 @@ colorscheme blue
 <pre><code class="language-sh">
 :set nu
 </code></pre>
-<p>Si queremos que por defecto siempre aparezcan las líneas, añadiremos <code class="verbatim">set number= o =set nu</code>en el archivo de configuración <strong>.vimrc</strong>.</p>
+<p>Si queremos que por defecto siempre aparezcan las líneas, añadiremos <code>set number</code> o <code>set nu</code>en el archivo de configuración <strong>.vimrc</strong>.</p>
 <p>Para deshabilitar la numeración, utilizaremos lo haremos con el comando:</p>
 <pre><code class="language-sh">
 :set nu!
@@ -109,6 +109,7 @@ vim +183 script.sh
 <li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-cheat-sheet-chuleta-de-atajos-para-vim.html">Vim Cheat Sheet. Chuleta de atajos para Vim</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-08-vim-resaltado-de-sintaxis.html">vim. Resaltado de sintaxis</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

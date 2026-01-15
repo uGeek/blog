@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="enviar-clave-ssh-al-servidor-para-no-utilizar-la-contraseña">Enviar clave SSH al servidor, para no utilizar la contraseña</h1>
+<h1 id="enviar-clave-ssh-al-servidor-para-no-utilizar-la-contraseña" title="Enviar clave SSH al servidor, para no utilizar la contraseña" data-export_file_name="enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena" data-description="Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña." data-export_date="2022-02-15 07:40" data-category="ssh" data-tag="terminal" data-image="./images-blog/bash.png">Enviar clave SSH al servidor, para no utilizar la contraseña</h1>
 <p>Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña.</p>
 <p>Esto lo hacemos intercambiando las claves entre cliente y servidor. Cada vez que un cliente quiere conectarse, el servidor verirfica que este cliente está en el listado de clientes permitidos y si es así, permite el acceso.</p>
 <p>Vamos a ver como generar la clave pública del cliente para enviar la servidor y como enviarla.</p>
@@ -75,6 +75,7 @@ ssh-copy-id -i ~/.ssh/id_rsa angel@192.168.1.100
 <li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

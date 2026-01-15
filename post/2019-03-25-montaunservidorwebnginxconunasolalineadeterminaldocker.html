@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="monta-un-servidor-web-nginx-con-una-sola-línea-de-terminal-docker">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</h1>
+<h1 id="monta-un-servidor-web-nginx-con-una-sola-línea-de-terminal-docker" title="Monta un servidor web Nginx, con una sola línea de Terminal (Docker)" data-export_file_name="Monta un servidor web Nginx con una sola linea de Terminal Docker" data-description="Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de nginx es una buenísima solución" data-export_date="2019-03-25 21:10 2022-09-12" data-category="docker" data-tag="servidor,web" data-image="./images-blog/nginx.png">Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</h1>
 <p>Si quieres montar un servidor web en un pispás y no complicarte la vida, el <a href="https://hub.docker.com/_/nginx">Docker oficial de Nginx</a> es una buenísima solución.</p>
 <p>Hay tres motivos por los cuales instalar este Docker: </p>
 <ul>
@@ -55,19 +55,19 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p><img src="../images-blog/nginx.png" /></p>
 <p>También podemos instalar Nginx, partiendo de Alpine Linux, ocupando aproximadamente una décima parte.</p>
 <p>En próximos Post y Podcast, os hablaré más de Alpine Linux que para Docker que es espectacular. Nos permite montar montones de servicios con un mínimo espacio.</p>
-<p>Para utilizar otro puerto que no sea el 80, por ejemplo el puerto 90, ejecutaremos en la línea de terminal <code class="verbatim">-p 90:80</code>.</p>
+<p>Para utilizar otro puerto que no sea el 80, por ejemplo el puerto 90, ejecutaremos en la línea de terminal <code>-p 90:80</code>.</p>
 <h2 id="montando-el-docker-oficial-de-nginx-para-arquitectura-64bits">Montando el Docker oficial de Nginx para arquitectura 64bits</h2>
 <p>Este Docker funciona con todas las arquitecturas especificando o no el TAG de la misma. El tamaño de la Imagen es de 109MB.</p>
 <p>Vamos a instalarlo y probar: La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
-<p><code class="verbatim">docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx</code></p>
+<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx</code></p>
 <h2 id="docker-oficial-de-nginx-arquitectura-64bits-alpine-linux">Docker oficial de Nginx, arquitectura 64bits. Alpine Linux</h2>
 <p>Ahora vamos a Instalar el mismo Docker oficial, pero partiendo de un Alpine Linux. Tan solo 16.1MB de Imagen!!!</p>
 <p>La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
-<p><code class="verbatim">docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro amd64/nginx:alpine</code></p>
+<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro amd64/nginx:alpine</code></p>
 <h2 id="docker-oficial-de-nginx-en-raspberry">Docker oficial de Nginx en Raspberry</h2>
 <p>Me he emocionado tanto instalando Nginx desde un Alpine Linux, que ahora quiero hacer lo propio en mi Raspberry. Tamaño de la Imagen de 13,4 Mb en mi Raspberry.</p>
 <p>Como veis, he utilizado el mismo comando que el apartado anterior. La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
-<p><code class="verbatim">docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx:alpine</code></p>
+<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx:alpine</code></p>
 <h2 id="docker-compose">Docker Compose</h2>
 <pre><code>
 version: '2.1'
@@ -99,6 +99,7 @@ services:
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

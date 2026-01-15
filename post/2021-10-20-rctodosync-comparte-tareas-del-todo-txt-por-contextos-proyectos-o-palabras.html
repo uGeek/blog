@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="rctodosync-comparte-tareas-del-todotxt-por-contextos-proyectos-o-palabras">rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</h1>
+<h1 id="rctodosync-comparte-tareas-del-todotxt-por-contextos-proyectos-o-palabras" title="rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras" data-export_file_name="rctodosync-comparte-tareas-del-todo-txt-por-contextos-proyectos-o-palabras" data-description="Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y" data-export_date="2021-10-20 17:42" data-category="todo.txt" data-tag="tareas,rclone,sincronización" data-image="./images-blog/rclone.png">rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</h1>
 <p>Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y además, consigo hacer esta sincronización sin necesidad de utilizar los archivos todo.txt en local, accedo directamente a la nube gracias a rclone.</p>
 <p><img src="../images-blog/rclone.png" /></p>
 <h2 id="instalación">Instalación</h2>
@@ -68,9 +68,9 @@ sudo apt install curl
 curl https://rclone.org/install.sh | sudo bash
 </code></pre>
 <h2 id="sincronizar-dos-archivos-todotxt">Sincronizar dos archivos todo.txt</h2>
-<p>Mediante el archivo de configuración, en este ejemplo <code class="verbatim">trabajo=, situado en la ruta =~/.config/rctodosync/trabajo</code>, añadamos las siguiente variables:</p>
+<p>Mediante el archivo de configuración, en este ejemplo <code>trabajo</code>, situado en la ruta <code>~/.config/rctodosync/trabajo</code>, añadamos las siguiente variables:</p>
 <p>Especificamos el servidor 1 y 2 siguiendo las opciones que utiliza rclone.</p>
-<p><code class="verbatim">WORD= es el contexto, proyecto o palabra que utilizaremos para mantener sincronizados las tareas en ambos todo.txt =TIEMPO_ACTUALIZACION= es el tiempo que esperará entre sincronización y sincronización En la parte inferior, encontraremos las variables =TOKEN= y =ID</code>para las notificaciones en Telegram. En ese mismo archivo añadiremos las notificaciones para cualquier otro servicio de notificaciones.</p>
+<p><code>WORD</code> es el contexto, proyecto o palabra que utilizaremos para mantener sincronizados las tareas en ambos todo.txt <code>TIEMPO_ACTUALIZACION</code> es el tiempo que esperará entre sincronización y sincronización En la parte inferior, encontraremos las variables <code>TOKEN</code> y <code>ID</code>para las notificaciones en Telegram. En ese mismo archivo añadiremos las notificaciones para cualquier otro servicio de notificaciones.</p>
 <pre><code class="language-sh">
 SERVIDOR1=dropbox:todo      # Directorio (rclone) donde está situado el archivo todo.txt
 SERVIDOR2=drive-trabajo:todo
@@ -141,6 +141,7 @@ rctodosync v0.3
 <li><a href="https://ugeek.github.io/blog/post/2020-01-29-integracion-total-de-todotxt-en-emacs.html">Integración total de todotxt en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-01-27-aprendiendo-todo-txt-todotxt-cli.html">Aprendiendo todo.txt. todotxt-cli</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-08-21-qtodotxt.html">QTodoTxt. todo.txt en tu escritorio</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

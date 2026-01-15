@@ -44,26 +44,26 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="script-para-crear-acceso-a-aplicaciones-appimage">Script para crear acceso a aplicaciones AppImage</h1>
+<h1 id="script-para-crear-acceso-a-aplicaciones-appimage" title="Script para crear acceso a aplicaciones AppImage" data-export_file_name="script-para-crear-acceso-a-aplicaciones-appimage" data-description="Hoy vamos a automatizar la creación de acceso a las aplicaciones AppImage, tal como lo explicaba en el artículo: [[https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html][Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y" data-export_date="2022-01-17 07:15" data-category="appimage" data-tag="ubuntu" data-image="./images-blog/appimage..png">Script para crear acceso a aplicaciones AppImage</h1>
 <p>Hoy vamos a automatizar la creación de acceso a las aplicaciones AppImage, tal como lo explicaba en el artículo: <a href="https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html">Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</a>, pero esta vez mediante un script.</p>
-<p>Como expliqué, yo dejo todos mis AppImage en el directorio <code class="verbatim">~/appimage</code>, de este modo, si tengo que actualizar alguno o subirlo a mi repositorio de dotfiles, los tengo todos en el mismo lugar.</p>
+<p>Como expliqué, yo dejo todos mis AppImage en el directorio <code>~/appimage</code>, de este modo, si tengo que actualizar alguno o subirlo a mi repositorio de dotfiles, los tengo todos en el mismo lugar.</p>
 <p><img src="../images-blog/appimage.png" /></p>
 <p>Al iniciar un AppImage, la aplicación creará los directorios de configuración igual que lo haría una aplicación nativa por repositorios.</p>
 <p>Una de las ventajas de tener todos los AppImage en un mismo directorio, es que lanzo un comando y doy a todos los archivos de este directorio los permisos de ejecución, incluido el script que os comparto hoy:</p>
 <pre><code class="language-sh">
 chmod a+x *
 </code></pre>
-<p>El script creará un archivo <code class="verbatim">aplicación.desktop= en el directorio =~/.local/share/applications/</code>.</p>
-<p>Si queremos que aparezca un icono vinculado a nuestra aplicación, tenedremos que descargarlo de internet y renombrarlo con el nombre<u>de</u>la_aplicación.png en la ruta <code class="verbatim">~/appimage/icon/</code>.</p>
+<p>El script creará un archivo <code>aplicación.desktop</code> en el directorio <code>~/.local/share/applications/</code>.</p>
+<p>Si queremos que aparezca un icono vinculado a nuestra aplicación, tenedremos que descargarlo de internet y renombrarlo con el nombre<u>de</u>la_aplicación.png en la ruta <code>~/appimage/icon/</code>.</p>
 <p>Tal como expliqué, los directorios quedarían así:</p>
 <p><strong>Directorios:</strong></p>
 <ul>
-<li>Aplicación: <code class="verbatim">~/appimage/jellyamp.AppImage</code></li>
-<li>Icono de la aplicación: <code class="verbatim">~/appimage/icon/jellyamp.png</code></li>
-<li>Archivo con el acceso directo a la aplicación: <code class="verbatim">~/.local/share/applications/jellyamp.desktop</code></li>
+<li>Aplicación: <code>~/appimage/jellyamp.AppImage</code></li>
+<li>Icono de la aplicación: <code>~/appimage/icon/jellyamp.png</code></li>
+<li>Archivo con el acceso directo a la aplicación: <code>~/.local/share/applications/jellyamp.desktop</code></li>
 </ul>
 <h2 id="script">Script</h2>
-<p>El script crea el directorio y los archivos en la ruta ~<em>.local</em>share/applications</p>
+<p>El script crea el directorio y los archivos en la ruta ~/.local/share/applications</p>
 <p><strong>El script tiene que estar en el directorio donde están los AppImage</strong></p>
 <pre><code class="language-sh">
 #!/bin/bash
@@ -98,6 +98,7 @@ done &lt;&lt;&lt; &quot;$(ls -1 *AppImage | cut -d &quot;.&quot; -f1)&quot;
 <li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-04-11-crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu.html">Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html">Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

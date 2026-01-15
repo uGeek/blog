@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="convertir-de-markdown-a-org-mode-gracias-a-pandoc">Convertir de Markdown a Org Mode gracias a Pandoc</h1>
+<h1 id="convertir-de-markdown-a-org-mode-gracias-a-pandoc" title="Convertir de Markdown a Org Mode gracias a Pandoc" data-export_file_name="Convertir-de-markdown-a-org-Mode-gracias-a-pandoc" data-description="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" data-export_date="2018-12-28 18:05 2021-01-01" data-category="emacs" data-tag="emacs,pandoc,orgmode,markdown" data-image="./images-blog/ugeek.png">Convertir de Markdown a Org Mode gracias a Pandoc</h1>
 <p>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:</p>
 <pre><code>
 sudo apt install pandoc
@@ -53,9 +53,9 @@ sudo apt install pandoc
 <h2 id="markdown-a-org-mode">Markdown a Org Mode</h2>
 <p>Markdown a Org Mode. Ejecutamos este comando en la terminal.</p>
 <ul>
-<li>Para indicar el número de caracteres por línea que tendrá la conversión, utiliza la opción <code class="verbatim">--columns NUMERO_DE_CARACTERES</code> </li>
-<li>La opción <code class="verbatim">-t</code>, significa que transformamos markdown a orgmode</li>
-<li>La opción <code class="verbatim">-o</code>, significa el archivo de salida será el que indiquemos a continuación</li>
+<li>Para indicar el número de caracteres por línea que tendrá la conversión, utiliza la opción <code>--columns NUMERO_DE_CARACTERES</code> </li>
+<li>La opción <code>-t</code>, significa que transformamos markdown a orgmode</li>
+<li>La opción <code>-o</code>, significa el archivo de salida será el que indiquemos a continuación</li>
 </ul>
 <pre><code>
 pandoc -s -f markdown -t org archivo_a_convertir.md -o nuevo_archivo.org
@@ -103,6 +103,7 @@ done
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

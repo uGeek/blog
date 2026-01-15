@@ -44,19 +44,19 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="paquetes-snap">Paquetes Snap</h1>
+<h1 id="paquetes-snap" title="Paquetes Snap" data-export_file_name="paquetes Snap" data-description="Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones." data-export_date="2019-01-24 21:30" data-category="snap" data-tag="paquetes" data-image="./images-blog/ugeek.png">Paquetes Snap</h1>
 <p>Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. </p>
 <h2 id="tienda-de-aplicaciones">Tienda de aplicaciones</h2>
 <p>El amplio catalogo de snaps, los encontraras en una web gestionada por Canonical.</p>
 <ul>
 <li><a href="https://snapcraft.io/store">https://snapcraft.io/store</a></li>
-<h2 id="instalación-de-snap-si-no-está-en-tu-distro-derivada-de-debian">Instalación de snap, si no está en tu distro derivada de debian</h2>
-<p><code class="verbatim">sudo apt install snapd</code></p>
 </ul>
+<h2 id="instalación-de-snap-si-no-está-en-tu-distro-derivada-de-debian">Instalación de snap, si no está en tu distro derivada de debian</h2>
+<p><code>sudo apt install snapd</code></p>
 <p>Para otras distribuciones, visita <a href="https://snapcraft.io/">https://snapcraft.io/</a></p>
 <h2 id="ubiación-de-los-paquetes-snap-en-nuestro-sistema">Ubiación de los paquetes snap en nuestro sistema</h2>
 <p>Una vez instalado los paquetes, estos van a la ubicación <strong>/snap/bin/nombre_de_paquete</strong>. Podemos conocer la ubicación con:</p>
-<p><code class="verbatim">which paquete</code></p>
+<p><code>which paquete</code></p>
 <p>También creará una carpeta llamada snap en el $HOME de nuestro usuario <strong>/home/usuario/snap/</strong>, donde depositará snap los archivos de configuración de los paquetes.</p>
 <h2 id="tabla-de-comandos-básicos-snap">Tabla de comandos básicos snap</h2>
 <table>
@@ -68,47 +68,47 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </thead>
 <tbody>
 <tr>
-<td><code class="verbatim">sudo snap refresh</code></td>
+<td><code>sudo snap refresh</code></td>
 <td>Actualizar todos los paquetes</td>
 </tr>
 <tr>
-<td><code class="verbatim">sudo snap refresh paquete</code></td>
+<td><code>sudo snap refresh paquete</code></td>
 <td>Actualizar un determinado paquete</td>
 </tr>
 <tr>
-<td><code class="verbatim">snap list</code></td>
+<td><code>snap list</code></td>
 <td>Listar los paquetes instalados</td>
 </tr>
 <tr>
-<td><code class="verbatim">snap search paquete= o =snap find paquete</code></td>
+<td><code>snap search paquete</code> o <code>snap find paquete</code></td>
 <td>Buscar Paquetes</td>
 </tr>
 <tr>
-<td><code class="verbatim">sudo snap install paquete</code></td>
+<td><code>sudo snap install paquete</code></td>
 <td>Instalar paquete</td>
 </tr>
 <tr>
-<td><code class="verbatim">sudo snap remove paquete</code></td>
+<td><code>sudo snap remove paquete</code></td>
 <td>Desinstalar paquete</td>
 </tr>
 <tr>
-<td><code class="verbatim">snap info paquete</code></td>
+<td><code>snap info paquete</code></td>
 <td>Información del paquete</td>
 </tr>
 <tr>
-<td><code class="verbatim">snap disable paquete</code></td>
+<td><code>snap disable paquete</code></td>
 <td>Deshabilitar un servicio</td>
 </tr>
 <tr>
-<td><code class="verbatim">snap enable paquete</code></td>
+<td><code>snap enable paquete</code></td>
 <td>Habilitar</td>
 </tr>
 <tr>
-<td><code class="verbatim">snap version</code></td>
+<td><code>snap version</code></td>
 <td>Conocer la versión de snap</td>
 </tr>
 <tr>
-<td><code class="verbatim">snap help</code></td>
+<td><code>snap help</code></td>
 <td>Ayuda</td>
 </tr>
 </tbody>
@@ -126,6 +126,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2019-09-18-emacs-siempre-a-la-ultima-versión-betas-edge-gracias-a-snap.html">Emacs siempre a la última versión, betas, edge... gracias a Snap</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-03-10-simplenote-en-emacs.html">Simplenote en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html">Paquetes Snap</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

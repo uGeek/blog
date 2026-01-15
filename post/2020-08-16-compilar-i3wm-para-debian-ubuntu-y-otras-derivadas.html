@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="compilar-i3wm-para-debian-ubuntu-y-otras-derivadas">Compilar i3wm para Debian, Ubuntu y otras derivadas</h1>
+<h1 id="compilar-i3wm-para-debian-ubuntu-y-otras-derivadas" title="Compilar i3wm para Debian, Ubuntu y otras derivadas" data-export_file_name="compilar-i3wm-para-debian-ubuntu-y-otras-derivadas" data-description="Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm." data-export_date="2020-08-16 14:00" data-category="i3wm" data-tag="debian,ubuntu" data-image="./images-blog/i3wm.png">Compilar i3wm para Debian, Ubuntu y otras derivadas</h1>
 <p>Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm.</p>
 <p><img src="../images-blog/i3wm.png" /></p>
 <p>En Debian Buster, la versión disponible en repositorios es de Enero del 2019, en cambio compilando, siempre tendremos la última versión. En el momento de este artículo, la última versión disponible es la versión 4.18.2 (2020-07-26).  Este artículo te puede servir de modelo para posteriores versiones, únicamente cambiando el número de versión y quizás, instalando alguna dependencia nueva si te lo pide la terminal.</p>
@@ -56,7 +56,7 @@ sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libxcb-util0-dev libxcb-icc
 </code></pre>
 <h2 id="descargamos-la-última-versión">Descargamos la última versión</h2>
 <p>Podemos ver y descargar la última versión estable, desde <a href="https://i3wm.org/">https://i3wm.org/</a>.</p>
-<p>Descargaremos con wget la última versión en el momento de este artículo <code class="verbatim">4.18.2</code>.</p>
+<p>Descargaremos con wget la última versión en el momento de este artículo <code>4.18.2</code>.</p>
 <pre><code>
 wget https://i3wm.org/downloads/i3-4.18.2.tar.bz2 -O - | tar -xj
 cd i3-4.18.2
@@ -89,6 +89,7 @@ sudo make install
 <li><a href="https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html">Nautilus con Tema Oscuro en I3wm</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-28-i3wm-en-ubuntu-debian-raspbian---desde-0.html">i3wm en Ubuntu, Debian, Raspbian,... desde 0</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

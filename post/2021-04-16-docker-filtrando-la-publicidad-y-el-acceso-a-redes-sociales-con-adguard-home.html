@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
+<h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home" title="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" data-export_file_name="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home" data-description="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" data-export_date="2021-04-16 18:50 2021-05-02" data-category="docker" data-tag="AdGuard,Pi-Hole" data-image="./images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
 <p>Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente.</p>
 <p>Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc...</p>
 <p><img src="../images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" /></p>
@@ -76,7 +76,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <pre><code>
 sudo nano  /etc/resolv.conf
 </code></pre>
-<p>añadimos la primera opción con <strong>*nameserver</strong>*, seguido de la DNS que vamos a utilizar. Ejem:</p>
+<p>añadimos la primera opción con <strong>2</strong>, seguido de la DNS que vamos a utilizar. Ejem:</p>
 <p>Si la IP del servidor donde tenemos AdGuard es 192.168.1.100:</p>
 <pre><code>
 nameserver 192.168.1.100
@@ -84,7 +84,7 @@ nameserver 192.168.1.100
 <h2 id="cada-reinicio-se-modifica-el-archivo-resolvconf">Cada reinicio se modifica el archivo resolv.conf</h2>
 <p>Si cada vez que reinicias se modifica el archivo resolv.conf y no quieres que suceda, tienes dos soluciones:</p>
 <ul>
-<li>Hacer que el archivo sea inalterable ejecutando el siguiente comando <code class="verbatim">sudo chattr +i /etc/resolv.conf</code></li>
+<li>Hacer que el archivo sea inalterable ejecutando el siguiente comando <code>sudo chattr +i /etc/resolv.conf</code></li>
 <li>Crear el nuevo archivo al reiniciar la máquina con crontab:</li>
 </ul>
 <p>Como usuario root: </p>
@@ -101,7 +101,7 @@ sudo crontab -e
 <pre><code>
 https://dns.cloudflare.com/dns-query
 </code></pre>
-<p>Para comprobar que la DNS que hemos seleccionado es la que realmente estamos utilizando, conectate a <a href="https://www.dnsleaktest.com/">https://www.dnsleaktest.com/</a> y selcciona <strong>*Extended Test</strong>*.</p>
+<p>Para comprobar que la DNS que hemos seleccionado es la que realmente estamos utilizando, conectate a <a href="https://www.dnsleaktest.com/">https://www.dnsleaktest.com/</a> y selcciona <strong>7</strong>.</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Un servicio sencillo y alucinante, del que podrás disfrutar.</p>
 <p>Publicado por Angel el Friday 16 April del 2021</p>
@@ -117,6 +117,7 @@ https://dns.cloudflare.com/dns-query
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

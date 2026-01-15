@@ -44,11 +44,11 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="lxterminal-como-guake-en-i3wm">lxterminal como guake en i3wm</h1>
-<p>Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba <strong>lxterminal</strong> (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una terminal muy ligera) en los escritorios LXDE. Como somos animales de costumbres, vuelvo a esta terminal que me gusta mucho, pero lo malo de este cambio, es que no quiero perder la función de estar en cualquier escritorio y con un simple <code class="verbatim">F12</code>, lanzar y ocultar la terminal igual que hacer guake, así que voy a mostrar como he configurado en mi gestor de ventanas i3wm para utilizarlo de ese modo.</p>
-<p>Al lanzar por primera vez <strong>lxterminal</strong> pulsando <code class="verbatim">F1= o si así lo prefieres, como aparece en la primera opción que está comentada medinate =#</code>, crea una primera pesataña llamada <strong>ScratchPad</strong>. Recuerda que <strong>solo en la pestaña ScratchPad, funcionará la opción F12 para ocultar o des-ocultar la terminal</strong>.</p>
+<h1 id="lxterminal-como-guake-en-i3wm" title="lxterminal como guake en i3wm" data-export_file_name="lxterminal-como-guake-en-i3wm" data-description="Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba *lxterminal* (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una" data-export_date="2023-03-11 22:07" data-category="i3wm" data-tag="terminal,lxde" data-image="./images-blog/ugeek.png">lxterminal como guake en i3wm</h1>
+<p>Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba <strong>lxterminal</strong> (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una terminal muy ligera) en los escritorios LXDE. Como somos animales de costumbres, vuelvo a esta terminal que me gusta mucho, pero lo malo de este cambio, es que no quiero perder la función de estar en cualquier escritorio y con un simple <code>F12</code>, lanzar y ocultar la terminal igual que hacer guake, así que voy a mostrar como he configurado en mi gestor de ventanas i3wm para utilizarlo de ese modo.</p>
+<p>Al lanzar por primera vez <strong>lxterminal</strong> pulsando <code>F1</code> o si así lo prefieres, como aparece en la primera opción que está comentada medinate <code>#</code>, crea una primera pesataña llamada <strong>ScratchPad</strong>. Recuerda que <strong>solo en la pestaña ScratchPad, funcionará la opción F12 para ocultar o des-ocultar la terminal</strong>.</p>
 <h2 id="archivo-de-configuración-de-i3wm">Archivo de configuración de i3wm</h2>
-<p>Añade a tu archivo <code class="verbatim">~/.config/i3/config</code></p>
+<p>Añade a tu archivo <code>~/.config/i3/config</code></p>
 <pre><code class="language-sh">
 # Al iniciar la sesión, lanza lxterminal con 5 pesatañas abiertas con el nombre ScratchPad
 exec --no-startup-id lxterminal --tabs=&quot;ScratchPad&quot;,&quot;ScratchPad&quot;,&quot;ScratchPad&quot;,&quot;ScratchPad&quot;,&quot;ScratchPad&quot;
@@ -60,18 +60,18 @@ for_window [title=&quot;ScratchPad&quot;] floating enable, move scratchpad, resi
 </code></pre>
 <p>Explicación del archivo de configuración:</p>
 <ul>
-<li><code class="verbatim">#exec --no-startup-id lxterminal -t ScratchPad</code>: esta opción también se utiliza para ejecutar un programa al iniciar i3wm, en este caso, una terminal con un título específico <strong>ScratchPad</strong>.</li>
-<li><code class="verbatim">bindsym $mod+F1 exec lxterminal -t ScratchPad=: esta opción define una combinación de teclas (=$mod+F1</code>) que ejecuta un programa específico (lxterminal con el título "ScratchPad").</li>
-<li><code class="verbatim">assign [title="ScratchPad"] scratchpad</code>: esta opción asigna la ventana con el título "ScratchPad" al scratchpad, que es una zona especial para ventanas que se pueden ocultar y mostrar rápidamente.</li>
-<li><code class="verbatim">bindsym F12 [title="ScratchPad"] scratchpad show; [title="ScratchPad"] move position center; [title="ScratchPad"] resize set 100 ppt 100 ppt; [title="ScratchPad"] fullscreen enable=: esta opción define otra combinación de teclas (=F12</code>) que muestra la ventana con el título "ScratchPad" y la ajusta a un tamaño y posición específicos, y luego la pone en pantalla completa.</li>
-<li><code class="verbatim">for_window [title="ScratchPad"] floating enable, move scratchpad, resize set 100 ppt 100 ppt, border none, focus, sticky enable</code>: esta opción se aplica a cualquier ventana con el título "ScratchPad" y la configura para que sea flotante, se mueva al scratchpad, se ajuste a un tamaño específico, no tenga borde, tenga el enfoque y que se mantenga en la parte superior de otras ventanas.</li>
+<li><code>#exec --no-startup-id lxterminal -t ScratchPad</code>: esta opción también se utiliza para ejecutar un programa al iniciar i3wm, en este caso, una terminal con un título específico <strong>ScratchPad</strong>.</li>
+<li><code>bindsym $mod+F1 exec lxterminal -t ScratchPad</code>: esta opción define una combinación de teclas (<code>$mod+F1</code>) que ejecuta un programa específico (lxterminal con el título "ScratchPad").</li>
+<li><code>assign [title</code>"ScratchPad"] scratchpad=: esta opción asigna la ventana con el título "ScratchPad" al scratchpad, que es una zona especial para ventanas que se pueden ocultar y mostrar rápidamente.</li>
+<li><code>bindsym F12 [title</code>"ScratchPad"] scratchpad show; [title<code>"ScratchPad"] move position center; [title</code>"ScratchPad"] resize set 100 ppt 100 ppt; [title<code>"ScratchPad"] fullscreen enable</code>: esta opción define otra combinación de teclas (<code>F12</code>) que muestra la ventana con el título "ScratchPad" y la ajusta a un tamaño y posición específicos, y luego la pone en pantalla completa.</li>
+<li><code>for_window [title</code>"ScratchPad"] floating enable, move scratchpad, resize set 100 ppt 100 ppt, border none, focus, sticky enable=: esta opción se aplica a cualquier ventana con el título "ScratchPad" y la configura para que sea flotante, se mueva al scratchpad, se ajuste a un tamaño específico, no tenga borde, tenga el enfoque y que se mantenga en la parte superior de otras ventanas.</li>
 </ul>
 <h2 id="lanzar-lxterminal-con-5-pestañas-con-el-nombre-scratchpad">Lanzar lxterminal con 5 pestañas con el nombre ScratchPad</h2>
 <pre><code class="language-bash">
 lxterminal --tabs=&quot;ScratchPad&quot;,&quot;ScratchPad&quot;,&quot;ScratchPad&quot;,&quot;ScratchPad&quot;,&quot;ScratchPad&quot;
 </code></pre>
 <h2 id="mi-archivo-de-configuración-de-lxterminal">Mi archivo de configuración de lxterminal</h2>
-<p>El archivo de configuración de <strong>lxterminal</strong> está en <code class="verbatim">~/.config/lxterminal/lxterminal.conf</code>.</p>
+<p>El archivo de configuración de <strong>lxterminal</strong> está en <code>~/.config/lxterminal/lxterminal.conf</code>.</p>
 <p>Este es mi archivo actual de configuración:</p>
 <pre><code class="language-sh">
 [general]
@@ -132,12 +132,12 @@ zoom_reset_accel=&lt;Primary&gt;&lt;Shift&gt;parenright
 </code></pre>
 <p>Estos son algunos de mis atajos personalizados:</p>
 <ul>
-<li><code class="verbatim">Ctrl+arriba= </code> copiar</li>
-<li><code class="verbatim">Ctrl+abajo= </code> pegar</li>
-<li><code class="verbatim">Ctrl+izquierda= </code> Pestaña izquierda</li>
-<li><code class="verbatim">Ctrl+derecha= </code> Pestaña derecha</li>
-<li><code class="verbatim">Ctrl+Shi.+Izqui.= </code> Mover pestaña a la izquierda</li>
-<li><code class="verbatim">Ctrl+Shi.+Dere.= </code> Mover pestaña a la derecha</li>
+<li><code>Ctrl+arriba</code> = copiar</li>
+<li><code>Ctrl+abajo</code> = pegar</li>
+<li><code>Ctrl+izquierda</code> = Pestaña izquierda</li>
+<li><code>Ctrl+derecha</code> = Pestaña derecha</li>
+<li><code>Ctrl+Shi.+Izqui.</code> = Mover pestaña a la izquierda</li>
+<li><code>Ctrl+Shi.+Dere.</code> = Mover pestaña a la derecha</li>
 <p>Publicado por Angel el Saturday 11 March del 2023</p>
 <p>También te puede interesar:</p>
 <li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
@@ -148,6 +148,7 @@ zoom_reset_accel=&lt;Primary&gt;&lt;Shift&gt;parenright
 <li><a href="https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html">Nautilus con Tema Oscuro en I3wm</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-28-i3wm-en-ubuntu-debian-raspbian---desde-0.html">i3wm en Ubuntu, Debian, Raspbian,... desde 0</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

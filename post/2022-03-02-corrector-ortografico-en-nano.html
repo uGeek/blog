@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="corrector-ortográfico-en-nano">Corrector ortográfico en nano</h1>
+<h1 id="corrector-ortográfico-en-nano" title="Corrector ortográfico en nano" data-export_file_name="corrector-ortografico-en-nano" data-description="Como cualquier otro editor de texto, nano tiene la posibilidad de habilitar el corrector ortográfico. A diferencia de otros editores, nano no tiene la posibilidad de ir marcando aquellas palabras" data-export_date="2022-03-02 11:50" data-category="nano" data-tag="bash" data-image="./images-blog/nano.png">Corrector ortográfico en nano</h1>
 <p>Como cualquier otro editor de texto, nano tiene la posibilidad de habilitar el corrector ortográfico. A diferencia de otros editores, nano no tiene la posibilidad de ir marcando aquellas palabras que no incluye el diccionario del corrector ortográfico y es necesario que una vez acabado el documento, toca hacer la revisión mediante atajos de teclado.</p>
 <p><img src="../images-blog/nano.png" /></p>
 <h2 id="instalación">Instalación</h2>
@@ -53,19 +53,19 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 sudo apt install nano aspell-es
 </code></pre>
 <h2 id="archivo-configuración">Archivo configuración</h2>
-<p>El archivo de configuración de nano para el usuario, se encuentra en <code class="verbatim">~/.nanorc=. Hay un archivo de configuración tipo en la ruta =/etc/nanorc</code>, que podemos copiarlo y partir de este ejemplo:</p>
+<p>El archivo de configuración de nano para el usuario, se encuentra en <code>~/.nanorc</code>. Hay un archivo de configuración tipo en la ruta <code>/etc/nanorc</code>, que podemos copiarlo y partir de este ejemplo:</p>
 <pre><code class="language-sh">
 cp /etc/nanorc ~/.nanorc
 </code></pre>
 <h2 id="habilitando-el-corrector-ortográfico">Habilitando el corrector ortográfico</h2>
-<p>Tenemos que descomentar la linea que pone <code class="verbatim">set speller "aspell -x -c"</code></p>
+<p>Tenemos que descomentar la linea que pone <code>set speller "aspell -x -c"</code></p>
 <pre><code class="language-sh">
 ## Use this spelling checker instead of the internal one.  This option
 ## does not have a default value.
 set speller &quot;aspell -x -c&quot;
 </code></pre>
 <h2 id="revisión-ortográfica">Revisión ortográfica</h2>
-<p>Para hacer la revisión ortográfica, presiona <code class="verbatim">Ctrl + t= y seguidamente =Ctrl + s</code>. Te dará la opción de reemplazar las palabras incorrectas. Selecciona la palabra a reemplazar y pulsa Enter.</p>
+<p>Para hacer la revisión ortográfica, presiona <code>Ctrl + t</code> y seguidamente <code>Ctrl + s</code>. Te dará la opción de reemplazar las palabras incorrectas. Selecciona la palabra a reemplazar y pulsa Enter.</p>
 <p>Publicado por Angel el Wednesday 02 March del 2022</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -74,6 +74,7 @@ set speller &quot;aspell -x -c&quot;
 <li><a href="https://ugeek.github.io/blog/post/2020-01-15-editor-de-texto-nano.html">Editor de Texto Nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-11-13-compilando-la-ultima-version-de-emacs.html">Compilando la última versión de Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-11-12-compilando-la-ultima-version-de-nano.html">Compilando La última versión de Nano</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

@@ -44,17 +44,17 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</h1>
-<p>En Ubuntu, cualquier script ejecutable que dejemos en el directorio <code class="verbatim">~/.local/bin</code>, será ejecutable desde cualquier directorio de nuestra máquina.</p>
+<h1 id="scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux" title="Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux" data-export_file_name="scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux" data-description="En Ubuntu, cualquier script ejecutable que dejemos en el directorio =~/.local/bin=, será ejecutable desde cualquier directorio de nuestra máquina." data-export_date="2022-03-27 13:30" data-category="bash" data-tag="raspberry" data-image="./images-blog/Scripts_ejecutables_en_cualquier_directorio_de_nuestra_Raspberry_o_Distro_Linux.png">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</h1>
+<p>En Ubuntu, cualquier script ejecutable que dejemos en el directorio <code>~/.local/bin</code>, será ejecutable desde cualquier directorio de nuestra máquina.</p>
 <p>Esto está genial, ya que podemos ejecutar scripts sin necesidad de otorgarle privilegios root. En la Raspberry esto no sucede.</p>
 <p><img src="../images-blog/bash.png" /></p>
 <p>Para standarizar todo un poco y que tanto en mi escritorio Ubuntu como en la Raspberry todos los scripts estén en el mismo lugar, vamos ha habilitar esta opción del siguiente modo.</p>
-<h2 id="habilitando-el-directorio-localbin">Habilitando el directorio ~<em>.local</em>bin</h2>
-<p>Añadiremos al archivo <code class="verbatim">/.bashrc o </code>/.zshrc :</p>
+<h2 id="habilitando-el-directorio-localbin">Habilitando el directorio ~/.local/bin</h2>
+<p>Añadiremos al archivo <code>/.bashrc o </code>/.zshrc :</p>
 <pre><code class="language-sh">
 export PATH=&quot;$HOME/.local/bin:$PATH&quot;
 </code></pre>
-<p>De esta manera, cualquier script que dejemos ahora en el directorio <code class="verbatim">~/.local/bin</code>, será ejecutable desde cualquier directorio de nuestra Raspberry.</p>
+<p>De esta manera, cualquier script que dejemos ahora en el directorio <code>~/.local/bin</code>, será ejecutable desde cualquier directorio de nuestra Raspberry.</p>
 <p>Publicado por Angel el Sunday 27 March del 2022</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -68,6 +68,7 @@ export PATH=&quot;$HOME/.local/bin:$PATH&quot;
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

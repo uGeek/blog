@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="caddy-evitar-que-los-motores-de-búsqueda-indexen-tu-servicio">Caddy. Evitar que los motores de búsqueda indexen tu servicio</h1>
+<h1 id="caddy-evitar-que-los-motores-de-búsqueda-indexen-tu-servicio" title="Caddy. Evitar que los motores de búsqueda indexen tu servicio" data-export_file_name="caddy-evitar-que-los-motores-de-busqueda-indexen-tu-servicio" data-description="En este artículo, voy a explicar por qué deberíamos utilizar la etiqueta header X-Robots-Tag en un servidor caddy. Esta etiqueta nos permite controlar cómo los motores de búsqueda rastrean e" data-export_date="2023-04-07 01:35" data-category="caddy" data-tag="buscadores" data-image="./images-blog/ugeek.png">Caddy. Evitar que los motores de búsqueda indexen tu servicio</h1>
 <p>En este artículo, voy a explicar por qué deberíamos utilizar la etiqueta header X-Robots-Tag en un servidor caddy. Esta etiqueta nos permite controlar cómo los motores de búsqueda rastrean e indexan nuestro contenido, especialmente cuando se trata de archivos que no son HTML, como imágenes, PDF o vídeos.</p>
 <p>La etiqueta header X-Robots-Tag es una alternativa a la metaetiqueta robots, que se coloca en la sección &lt;head&gt; de una página web HTML. La metaetiqueta robots nos permite especificar directivas como noindex, nofollow, nosnippet o noarchive para indicar a los motores de búsqueda cómo queremos que traten nuestra página. Sin embargo, esta metaetiqueta solo funciona para páginas HTML y no para otros tipos de archivos.</p>
 <p>Aquí es donde entra en juego la etiqueta header X-Robots-Tag. Esta etiqueta se puede usar como un elemento del encabezado HTTP de respuesta para una URL determinada. Cualquier regla que se pueda usar en una metaetiqueta robots también se puede especificar como una etiqueta X-Robots-Tag. Por ejemplo, si queremos evitar que Google indexe una imagen, podemos usar el siguiente encabezado HTTP: X-Robots-Tag: noindex De esta forma, le estamos diciendo a Google que no incluya esa imagen en su índice y que no la muestre en los resultados de búsqueda. Podemos usar la misma etiqueta para otros tipos de archivos, como PDF o vídeos.</p>
@@ -59,23 +59,23 @@ header X-Robots-Tag noindex
 <p>De esta forma, le estamos diciendo a caddy que añada el encabezado HTTP X-Robots-Tag: noindex a todas las respuestas de las URL que terminen en .jpg. Podemos hacer lo mismo para otros tipos de archivos o para URL específicas.</p>
 <p>Como hemos visto, la etiqueta header X-Robots-Tag es una herramienta muy útil para controlar cómo los motores de búsqueda rastrean e indexan nuestro contenido. Al usarla en un servidor caddy, podemos aprovechar su simplicidad y flexibilidad para configurar los encabezados HTTP de respuesta de forma fácil y rápida.</p>
 <h2 id="configuración">Configuración</h2>
-<p>Para evitar que los motores de búsqueda indexen tu sitio web, puedes agregar la siguiente línea ar archivo <code class="verbatim">Caddyfile</code>:</p>
+<p>Para evitar que los motores de búsqueda indexen tu sitio web, puedes agregar la siguiente línea ar archivo <code>Caddyfile</code>:</p>
 <pre><code class="language-sh">
 subdominio.midominio.duckdns.org {
 header X-Robots-Tag &quot;noindex, nofollow&quot;
 reverse_proxy nginx:
 }
 </code></pre>
-<p>La línea <code class="verbatim">header X-Robots-Tag "noindex, nofollow"</code> le indica a los motores de búsqueda que no indexen la página al completo.</p>
+<p>La línea <code>header X-Robots-Tag "noindex, nofollow"</code> le indica a los motores de búsqueda que no indexen la página al completo.</p>
 <h2 id="comprobando-que-la-configuración-es-correcta">Comprobando que la configuración es correcta</h2>
 <p>Ejecuta el siguiente comando:</p>
 <pre><code class="language-sh">
 curl -I -H &quot;Host: subdominio.midominio.duckdns.org&quot; https://subdominio.midominio.duckdns.org
 </code></pre>
-<p>Este comando envía una solicitud HTTP GET a la URL <code class="verbatim">https://subdominio.midominio.duckdns.org</code> y muestra la respuesta del servidor en la que se incluyen los encabezados de respuesta.</p>
-<p>El parámetro <code class="verbatim">-I= indica a =curl</code> que solo muestre los encabezados de respuesta y no el cuerpo de la respuesta.</p>
-<p>Si la directiva de encabezado personalizado se ha configurado correctamente, verás una línea en la salida que comienza con <code class="verbatim">X-Robots-Tag:= y que contiene el valor =noindex, nofollow</code>.</p>
-<p>Si no ves el encabezado <code class="verbatim">X-Robots-Tag</code> en la respuesta del servidor, revisa la configuración de Caddy para asegurarte de que se ha configurado correctamente.</p>
+<p>Este comando envía una solicitud HTTP GET a la URL <code>https://subdominio.midominio.duckdns.org</code> y muestra la respuesta del servidor en la que se incluyen los encabezados de respuesta.</p>
+<p>El parámetro <code>-I</code> indica a <code>curl</code> que solo muestre los encabezados de respuesta y no el cuerpo de la respuesta.</p>
+<p>Si la directiva de encabezado personalizado se ha configurado correctamente, verás una línea en la salida que comienza con <code>X-Robots-Tag:</code> y que contiene el valor <code>noindex, nofollow</code>.</p>
+<p>Si no ves el encabezado <code>X-Robots-Tag</code> en la respuesta del servidor, revisa la configuración de Caddy para asegurarte de que se ha configurado correctamente.</p>
 <p>Publicado por Angel el Friday 07 April del 2023</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -85,6 +85,7 @@ curl -I -H &quot;Host: subdominio.midominio.duckdns.org&quot; https://subdominio
 <li><a href="https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html">Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html">Convierte archivos .crt y .key en archivos .pem</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html">Proxy Inverso con Caddy</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

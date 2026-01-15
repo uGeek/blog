@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="abrir-aplicaciones-de-ubuntu-desde-una-web-html">Abrir aplicaciones de Ubuntu desde una web html</h1>
+<h1 id="abrir-aplicaciones-de-ubuntu-desde-una-web-html" title="Abrir aplicaciones de Ubuntu desde una web html" data-export_file_name="abrir-aplicaciones-de-ubuntu-desde-una-web-html" data-description="No es necesario utilizar [[https://github.com/linuxserver/Heimdall][Heimdall]] o [[https://github.com/bastienwirtz/homer][Homer]] para crear una página web de inicio. En [[https://www.reddit.com/r/startpages/][este hilo de Reddit llamado startpages]] encontrarás montoner de webs html donde montando un Servidor" data-export_date="2021-12-06 19:55" data-category="ubuntu" data-tag="escritorio,appimage" data-image="./images-blog/ugeek.png">Abrir aplicaciones de Ubuntu desde una web html</h1>
 <p>No es necesario utilizar <a href="https://github.com/linuxserver/Heimdall">Heimdall</a> o <a href="https://github.com/bastienwirtz/homer">Homer</a> para crear una página web de inicio. En <a href="https://www.reddit.com/r/startpages/">este hilo de Reddit llamado startpages</a> encontrarás montoner de webs html donde montando un Servidor Web o como es mi caso, utilizando el propio servidor WebDAV, podrás tener un punto de partida a todos tus servicios favoritos.</p>
 <p>Pero... ¿Que hay de <strong>Typora</strong>, <strong>Sleek</strong>,....? Me gustaría poder lanzar estas aplicaciones desde la Web. ¿Es posible hacerlo?</p>
 <p>La respuesta es <strong>Si</strong>.</p>
@@ -77,8 +77,8 @@ fi
 chmod +x ~/.config/open_app/open_app.sh
 </code></pre>
 <h2 id="crear-archivo-desktop-para-el-iniciador-de-aplicaciones">Crear archivo .desktop para el iniciador de aplicaciones</h2>
-<p>Ahora crearemos el lanzador <strong>.desktop</strong> para el script y así decirle a Ubuntu que utilice este script cuando utilicemos <code class="verbatim">app://</code></p>
-<p>Crearemos el archivo <code class="verbatim">/usr/share/applications/appurl.desktop</code>:</p>
+<p>Ahora crearemos el lanzador <strong>.desktop</strong> para el script y así decirle a Ubuntu que utilice este script cuando utilicemos <code>app://</code></p>
+<p>Crearemos el archivo <code>/usr/share/applications/appurl.desktop</code>:</p>
 <pre><code class="language-sh">
 sudo -H nano /usr/share/applications/appurl.desktop
 </code></pre>
@@ -141,6 +141,7 @@ nano index.htmls
 <li><a href="https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html">Nautilus con Tema Oscuro en I3wm</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html">Sonixd. Player para Jellyfin y Subsonic</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html">Abrir aplicaciones de Ubuntu desde una web html</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

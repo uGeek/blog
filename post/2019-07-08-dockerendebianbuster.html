@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-en-debian-buster">Docker en debian Buster</h1>
+<h1 id="docker-en-debian-buster" title="Docker en debian Buster" data-export_file_name="Docker en debian Buster" data-description="Vamos a instalar docker en debian Buster" data-export_date="2019-07-08 21:05" data-category="debian" data-tag="terminal,ssh,docker" data-image="./images-blog/docker.png">Docker en debian Buster</h1>
 <p>Vamos a instalar docker en debian Buster:</p>
 <p><img src="../images-blog/docker.png" /></p>
 <h2 id="instalando-algunas-dependencias">Instalando algunas dependencias</h2>
@@ -64,7 +64,7 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable&quot;
 </code></pre>
-<p>Este comando nos añade el repositorio en <code class="verbatim">/etc/apt/sources.list</code> </p>
+<p>Este comando nos añade el repositorio en <code>/etc/apt/sources.list</code> </p>
 <h2 id="ahora-si-vamos-con-la-instalación-actualizamos-repositorios">Ahora si vamos con la instalación. Actualizamos repositorios</h2>
 <p>Actualizamos repositorios:</p>
 <pre><code>
@@ -80,7 +80,7 @@ systemctl enable docker
 systemctl start docker
 </code></pre>
 <h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
-<p><code class="verbatim">docker -v</code></p>
+<p><code>docker -v</code></p>
 <h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
 <p>Creamos el grupo docker:</p>
 <pre><code>
@@ -108,6 +108,7 @@ docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.
 <li><a href="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html">Docker: Wireguard para Raspberry, Ubuntu, Debian,...</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-17-instalar-ultima-version-de-go-en-raspberry-arm-o-amd64.html">Instalar última versión de Go en Raspberry, ARM o amd64</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

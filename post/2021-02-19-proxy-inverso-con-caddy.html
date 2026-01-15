@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="proxy-inverso-con-caddy">Proxy Inverso con Caddy</h1>
+<h1 id="proxy-inverso-con-caddy" title="Proxy Inverso con Caddy" data-export_file_name="proxy-inverso-con-caddy" data-description="Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán ." data-export_date="2021-02-19 15:35" data-category="proxy-inverso" data-tag="go,proxy,inverso" data-image="./images-blog/caddy.png">Proxy Inverso con Caddy</h1>
 <p>Cómo cuarta opción, he estado probando Caddy tras la recomendación de Germán .</p>
 <p><img src="../images-blog/caddy.png" /></p>
 <p>Ya había visto a diferentes artículos de cómo construir tu proxy inverso con Caddy, incluso algunos docker-compose, pero no me había llamado la atención del todo hasta el comentario de Germán.</p>
@@ -68,7 +68,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </ul>
 <h2 id="creando-el-docker">Creando el docker</h2>
 <p>Caddy requiere acceso de escritura a dos ubicaciones: un directorio de datos y un directorio de configuración .</p>
-<p>Recuerda que para generar los certificados de <a href="https://www.google.com/url?sa2AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a>, Caddy necesita tener abiertos los puertos 80 y 443.</p>
+<p>Recuerda que para generar los certificados de <a href="https://www.google.com/url?sa2j&amp;q3s&amp;source4&amp;cad58&amp;ved6https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a>, Caddy necesita tener abiertos los puertos 80 y 443.</p>
 <pre><code class="language-sh">
 version: &quot;3.7&quot;
 services:
@@ -88,7 +88,7 @@ container_name: caddy
 <h2 id="caddyfile">Caddyfile</h2>
 <p>Creamos el archivo <strong>Caddyfile</strong>, donde irá la configuración de nuestro proxy inverso.</p>
 <p>Voy a exponer estos 3 servicios. En el puerto 8080, tengo un servidor nginx con una web estática, 8096 para jellyfin y 4533 para navidrome.</p>
-<p>Caddy se encargará de exponer estos servicios a la red generando el certificado con <a href="https://www.google.com/url?sa5AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a>.</p>
+<p>Caddy se encargará de exponer estos servicios a la red generando el certificado con <a href="https://www.google.com/url?sa9j&amp;q10s&amp;source11&amp;cad128&amp;ved13https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ">Let's Encrypt</a>.</p>
 <p>#+BEGIN_EXAMPLE</p>
 <p>midominio.duckdns.org {</p>
 <p>                        reverse_proxy <a href="http://192.168.1.100:8080">http://192.168.1.100:8080</a></p>
@@ -124,7 +124,7 @@ version: &quot;3.7&quot;
 </code></pre>
 <p>Como veis, no he tenido que exponer los puertos de shaarli, ya que shaarli va ha  estar dentro de la misma red de Caddy y este mediante el archivo de configuración <strong>Caddyfile</strong>, Caddy se encargará de enlazar el servicio y crear el certificado.</p>
 <h3 id="caddyfile">Caddyfile</h3>
-<p>Mediante <code class="verbatim">reverse_proxy  shaarli:=, indicaremos a Caddy que este es el servicio que quiero utilizar como proxy inverso y que la url que quiero utilizar para acceder a este servicio, generandome también el certificado [[https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&amp;url=https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg=AOvVaw34k3QK_hY17BkhtCZGROEJ][Let's Encrypt]] de esta dirección, sea =shaarli.midominio.duckdns.org</code>.</p>
+<p>Mediante <code>reverse_proxy  shaarli:</code>, indicaremos a Caddy que este es el servicio que quiero utilizar como proxy inverso y que la url que quiero utilizar para acceder a este servicio, generandome también el certificado [[<a href="https://www.google.com/url?sa">https://www.google.com/url?sa</a><code>t&amp;rct</code>j&amp;q<code>&amp;esrc</code>s&amp;source<code>web&amp;cd</code>&amp;cad<code>rja&amp;uact</code>8&amp;ved<code>2ahUKEwij7ueukfbuAhVxTxUIHVI8C94QFjAAegQIBxAE&amp;url</code>https%3A%2F%2Fletsencrypt.org%2Fes%2F&amp;usg<code>AOvVaw34k3QK_hY17BkhtCZGROEJ][Let's Encrypt]] de esta dirección, sea </code>shaarli.midominio.duckdns.org=.</p>
 <p>#+BEGIN_EXAMPLE</p>
 <p>shaarli.midominio.duckdns.org {</p>
 <p>                                reverse_proxy  shaarli:</p>

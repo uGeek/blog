@@ -44,38 +44,38 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="manjaro-manteniendolo-al-día-desinstalando-paquetes-pacman-y-yay-que-no-utilizo">Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</h1>
+<h1 id="manjaro-manteniendolo-al-día-desinstalando-paquetes-pacman-y-yay-que-no-utilizo" title="Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo" data-export_file_name="manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo" data-description="Ha llegado la hora de mantener limpio nuestro PC o servidor con Manjaro. Como sabéis, Manjaro es una distro Arch, así que lo que veáis aquí, es aplicable a cualquier" data-export_date="2023-04-09 04:05" data-category="manjaro" data-tag="pacman,yay" data-image="./images-blog/Manjaro._Manteniendolo_al_día._Desinstalando_paquetes_pacman_y_yay_que_no_utilizo.png">Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</h1>
 <p>Ha llegado la hora de mantener limpio nuestro PC o servidor con Manjaro. Como sabéis, Manjaro es una distro Arch, así que lo que veáis aquí, es aplicable a cualquier distro Arch.</p>
-<p>También recordar que voy a explicar como hacerlo con paquetes <code class="verbatim">pacman=, pero si quereis desinstalar paquetes AUR con =yay</code>, utilizaremos las mismas opciones.</p>
+<p>También recordar que voy a explicar como hacerlo con paquetes <code>pacman</code>, pero si quereis desinstalar paquetes AUR con <code>yay</code>, utilizaremos las mismas opciones.</p>
 <h2 id="buscando-paquetes">Buscando paquetes</h2>
 <p>Es probable que no recordemos el nombre del paquete o paquete completo, así que vamos a ver como buscar y listar paquete ya instalados.</p>
 <p>Para buscar paquetes instalados en Manjaro utilizando pacman, se puede utilizar el siguiente comando:</p>
 <ul>
-<li><code class="verbatim">pacman -Qe</code>: Este comando lista todos los paquetes explícitamente instalados en el sistema.</li>
+<li><code>pacman -Qe</code>: Este comando lista todos los paquetes explícitamente instalados en el sistema.</li>
 </ul>
 <p>También se puede utilizar el siguiente comando para listar todos los paquetes instalados, incluyendo las dependencias:</p>
 <ul>
-<li><code class="verbatim">pacman -Q</code>: Este comando lista todos los paquetes instalados en el sistema, incluyendo las dependencias.</li>
+<li><code>pacman -Q</code>: Este comando lista todos los paquetes instalados en el sistema, incluyendo las dependencias.</li>
 </ul>
 <p>Para buscar un paquete específico en la lista de paquetes instalados, se puede utilizar el siguiente comando:</p>
 <ul>
-<li><code class="verbatim">pacman -Qs nombre_paquete</code>: Este comando buscará el paquete especificado en la lista de paquetes instalados y mostrará información sobre el paquete, como su versión y descripción.</li>
+<li><code>pacman -Qs nombre_paquete</code>: Este comando buscará el paquete especificado en la lista de paquetes instalados y mostrará información sobre el paquete, como su versión y descripción.</li>
 </ul>
-<p>Además, cada vez que se instala un paquete utilizando pacman, el paquete descargado se almacena en el directorio <em>var</em>cache<em>pacman</em>pkg/. Por lo tanto, si se desea buscar un paquete que se ha descargado previamente, se puede buscar en este directorio utilizando el siguiente comando:</p>
+<p>Además, cada vez que se instala un paquete utilizando pacman, el paquete descargado se almacena en el directorio /var/cache/pacman/pkg/. Por lo tanto, si se desea buscar un paquete que se ha descargado previamente, se puede buscar en este directorio utilizando el siguiente comando:</p>
 <ul>
-<li><code class="verbatim">ls /var/cache/pacman/pkg/ | grep nombre_paquete</code>: Este comando buscará el paquete especificado en el directorio de paquetes descargados y mostrará el nombre del archivo del paquete.</li>
+<li><code>ls /var/cache/pacman/pkg/ | grep nombre_paquete</code>: Este comando buscará el paquete especificado en el directorio de paquetes descargados y mostrará el nombre del archivo del paquete.</li>
 </ul>
-<p>En resumen, para buscar paquetes instalados en Manjaro utilizando pacman, se pueden utilizar los comandos <code class="verbatim">pacman -Qe= para listar explícitamente los paquetes instalados, =pacman -Q= para listar todos los paquetes instalados, y =pacman -Qs nombre_paquete= para buscar un paquete específico. También se puede buscar en el directorio de paquetes descargados utilizando el comando =ls /var/cache/pacman/pkg/ | grep nombre_paquete</code>.</p>
+<p>En resumen, para buscar paquetes instalados en Manjaro utilizando pacman, se pueden utilizar los comandos <code>pacman -Qe</code> para listar explícitamente los paquetes instalados, <code>pacman -Q</code> para listar todos los paquetes instalados, y <code>pacman -Qs nombre_paquete</code> para buscar un paquete específico. También se puede buscar en el directorio de paquetes descargados utilizando el comando <code>ls /var/cache/pacman/pkg/ | grep nombre_paquete</code>.</p>
 <h2 id="eliminando-paquetes">Eliminando paquetes</h2>
 <p>Para eliminar un paquete utilizando yay, se pueden seguir los mismos pasos que con pacman:</p>
 <ol>
-<li>Para eliminar un solo paquete sin eliminar sus dependencias, se puede utilizar el comando <code class="verbatim">yay -R nombre_del_paquete</code>. Esto dejará todas las dependencias instaladas en el sistema.</li>
-<li>Si se desea eliminar un paquete y sus dependencias, se puede utilizar el comando <code class="verbatim">yay -Rs nombre_del_paquete</code>. Esto eliminará el paquete y todas sus dependencias que no son utilizadas por ningún otro paquete o conjunto de paquetes.</li>
-<li>Si se desea eliminar un paquete, sus dependencias y todos los paquetes que dependen de esas dependencias, se puede utilizar el comando <code class="verbatim">yay -Rsc nombre_del_paquete</code>. Sin embargo, se debe tener en cuenta que esto puede llevar a la eliminación de paquetes importantes del sistema y se debe usar con precaución.</li>
-<li>Si se desea eliminar un paquete que es requerido por otro paquete, sin quitar el paquete dependiente, se puede utilizar el comando <code class="verbatim">yay -Rdd nombre_del_paquete</code>.</li>
-<li>Para eliminar de forma recursiva los paquetes huérfanos y sus archivos de configuración, se puede utilizar el comando <code class="verbatim">yay -Rns $(yay -Qtdq)</code>. Esto eliminará de forma recursiva los paquetes huérfanos y sus archivos de configuración.</li>
+<li>Para eliminar un solo paquete sin eliminar sus dependencias, se puede utilizar el comando <code>yay -R nombre_del_paquete</code>. Esto dejará todas las dependencias instaladas en el sistema.</li>
+<li>Si se desea eliminar un paquete y sus dependencias, se puede utilizar el comando <code>yay -Rs nombre_del_paquete</code>. Esto eliminará el paquete y todas sus dependencias que no son utilizadas por ningún otro paquete o conjunto de paquetes.</li>
+<li>Si se desea eliminar un paquete, sus dependencias y todos los paquetes que dependen de esas dependencias, se puede utilizar el comando <code>yay -Rsc nombre_del_paquete</code>. Sin embargo, se debe tener en cuenta que esto puede llevar a la eliminación de paquetes importantes del sistema y se debe usar con precaución.</li>
+<li>Si se desea eliminar un paquete que es requerido por otro paquete, sin quitar el paquete dependiente, se puede utilizar el comando <code>yay -Rdd nombre_del_paquete</code>.</li>
+<li>Para eliminar de forma recursiva los paquetes huérfanos y sus archivos de configuración, se puede utilizar el comando <code>yay -Rns $(yay -Qtdq)</code>. Esto eliminará de forma recursiva los paquetes huérfanos y sus archivos de configuración.</li>
 </ol>
-<p>Es importante tener en cuenta que al momento de eliminar un paquete, yay guarda los archivos de configuración de estos al ser removidos y los renombra con la extensión ".pacsave". Para evitar que estos sean guardados, se puede hacer uso de la opción "-n" bajo el parámetro "-R". En resumen, para eliminar un paquete con yay se pueden utilizar diferentes comandos según las necesidades, como <code class="verbatim">yay -R=, =yay -Rs=, =yay -Rsc=, =yay -Rdd=, y =yay -Rns</code>. También es importante tener en cuenta la opción "-n" para evitar que se guarden los archivos de configuración al eliminar un paquete.</p>
+<p>Es importante tener en cuenta que al momento de eliminar un paquete, yay guarda los archivos de configuración de estos al ser removidos y los renombra con la extensión ".pacsave". Para evitar que estos sean guardados, se puede hacer uso de la opción "-n" bajo el parámetro "-R". En resumen, para eliminar un paquete con yay se pueden utilizar diferentes comandos según las necesidades, como <code>yay -R</code>, <code>yay -Rs</code>, <code>yay -Rsc</code>, <code>yay -Rdd</code>, y <code>yay -Rns</code>. También es importante tener en cuenta la opción "-n" para evitar que se guarden los archivos de configuración al eliminar un paquete.</p>
 <p>Publicado por Angel el Sunday 09 April del 2023</p>
 <p>También te puede interesar:</p>
 <ul>
@@ -89,6 +89,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

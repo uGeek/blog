@@ -44,12 +44,12 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web">RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web</h1>
+<h1 id="rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web" title="RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web" data-export_file_name="rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web" data-description="¿Te gustaría seguir las actualizaciones de tus sitios web favoritos sin tener que visitarlos uno por uno? ¿Quieres recibir las últimas noticias de fuentes que no ofrecen un feed RSS?" data-export_date="2023-05-28 18:00" data-category="rss" data-tag="telegram" data-image="./images-blog/ugeek.png">RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web</h1>
 <p>¿Te gustaría seguir las actualizaciones de tus sitios web favoritos sin tener que visitarlos uno por uno? ¿Quieres recibir las últimas noticias de fuentes que no ofrecen un feed RSS? ¿Buscas una forma sencilla gratuita y privada de crear tus propios feeds personalizados? Si la respuesta es sí, entonces RSS-Bridge es la solución que necesitas.</p>
 <p>RSS-Bridge es un proyecto de código abierto que permite generar feeds RSS de cualquier sitio web, incluso si este no los ofrece. Con RSS-Bridge, puedes convertir el contenido de páginas web, redes sociales, plataformas de vídeo, podcasts y otros servicios en un formato estándar que puedes leer con tu lector de feeds favorito.</p>
 <h2 id="cómo-funciona-rss-bridge">¿Cómo funciona RSS-Bridge?</h2>
 <p>RSS-Bridge funciona mediante el uso de "bridges", que son scripts que extraen la información relevante de un sitio web y la transforman en un feed RSS. Cada bridge está diseñado para un sitio web o servicio específico, y ofrece diferentes opciones de configuración para personalizar el feed resultante.</p>
-<p>Actualmente, RSS-Bridge cuenta con 347 bridges disponibles el 28<em>05</em>2023, que cubren una gran variedad de fuentes, como:</p>
+<p>Actualmente, RSS-Bridge cuenta con 347 bridges disponibles el 28/05/2023, que cubren una gran variedad de fuentes, como:</p>
 <ul>
 <li>Sitios web de noticias: El País, El Mundo, BBC, CNN, etc.</li>
 <li>Redes sociales: Twitter, Facebook, Instagram, Mastodon, etc.</li>
@@ -63,12 +63,12 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>Si optas por la segunda opción, una buena alternativa es <a href="https://rss-bridge.org/">RSS-Bridge.org</a>, un servicio gratuito y sin publicidad que ofrece RSS-Bridge con todos los bridges disponibles. Para usarlo, solo tienes que acceder a su página web y seleccionar el bridge que te interese. Luego, podrás configurar las opciones del feed y obtener el enlace para añadirlo a tu lector de feeds.</p>
 <p>Por ejemplo, si quieres generar un feed RSS de las últimas publicaciones del blog de GitHub, puedes usar el bridge "GithubCommits", introducir "github" como nombre de usuario y "blog" como nombre del repositorio. Al hacer clic en "Get Feed", obtendrás el enlace del feed RSS generado por RSS-Bridge.org.</p>
 <h2 id="habilitar-todos-los-puentes">Habilitar todos los puentes</h2>
-<p>Nos situamos dentro del directorio de configuración ./config que hemos creado en el volumen y creamos el archivos <code class="verbatim">whitelist.txt=. Dentro de él, añadiremos un =*</code> que quiere decir que habilite todos los puentes:</p>
+<p>Nos situamos dentro del directorio de configuración ./config que hemos creado en el volumen y creamos el archivos <code>whitelist.txt</code>. Dentro de él, añadiremos un <code>*</code> que quiere decir que habilite todos los puentes:</p>
 <pre><code>
 echo '*' &gt; whitelist.txt
 </code></pre>
 <h3 id="solo-algunos-servicios">Solo algunos servicios</h3>
-<p>Elimina el <code class="verbatim">"*"= del archivo =whitelist.txt</code> y copia aquellos servicios que deseas utilizar:</p>
+<p>Elimina el <code>"*"</code> del archivo <code>whitelist.txt</code> y copia aquellos servicios que deseas utilizar:</p>
 <p>Ejemplos:</p>
 <pre><code>
 FacebookBridge
@@ -111,6 +111,8 @@ services:
 <li><a href="https://ugeek.github.io/blog/post/2020-08-15-suscribirte-al-rss-de-canales-de-youtube.html">Suscribirte al RSS de canales de YouTube</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-05-25-freshrss-mi-servidor-de-rss.html">FreshRSS. Mi servidor de RSS</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-05-24-backup-de-tu-shaarli.html">Backup de tu Shaarli</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html">Crear el Feed para el podcast en tu Blog con Jekyll</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

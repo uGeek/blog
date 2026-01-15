@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="matar-procesos-con-ps-sar-kill-killall-pkill">Matar procesos con ps, sar, kill, killall, pkill</h1>
+<h1 id="matar-procesos-con-ps-sar-kill-killall-pkill" title="Matar procesos con ps, sar, kill, killall, pkill" data-export_file_name="matar-procesos-con-ps-sar-kill-killall-pkill" data-description="** Qué procesos consumen más y como detenerlos" data-export_date="2022-07-01 12:30" data-category="cpu" data-tag="cpu,ram" data-image="./images-blog/ugeek.png">Matar procesos con ps, sar, kill, killall, pkill</h1>
 <h2 id="qué-procesos-consumen-más-y-como-detenerlos">Qué procesos consumen más y como detenerlos</h2>
 <p>De tanto en tanto, me gusta echar un vistazo a todos los procesos que están corriendo en mi máquina Linux. Es interesante ver todos los procesos que más recursos están consumiendo, en el caso que ese proceso no sea importante para ti, detenerlo.</p>
 <p>En este artículo vamos a ver cómo visualizar todos los procesos que más CPU consume así como RAM y segundo bloque del artículo veremos como detenerlos de diferentes maneras.</p>
@@ -59,7 +59,7 @@ ps -e
 ps aux --sort=-pcpu
 </code></pre>
 <p> </p>
-<p>Con el comando <code class="verbatim">head</code>, podemos mostrar las 10 primeras líneas:</p>
+<p>Con el comando <code>head</code>, podemos mostrar las 10 primeras líneas:</p>
 <pre><code class="language-sh">
 ps aux --sort=-pcpu | head
 </code></pre>
@@ -69,11 +69,11 @@ ps aux --sort=-pcpu | head
 ps aux --sort -%cpu
 </code></pre>
 <h3 id="refresco-del-comando">Refresco del comando</h3>
-<p>El comando <code class="verbatim">watch</code> ejecuta un comando mostrando su salida por pantalla cada x segundos.</p>
+<p>El comando <code>watch</code> ejecuta un comando mostrando su salida por pantalla cada x segundos.</p>
 <pre><code class="language-sh">
 watch -n 1 'ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head'
 </code></pre>
-<p><code class="verbatim">-n= es el intervalo en segundos y =ps -o</code> utiliza un formato definido por el usuario.</p>
+<p><code>-n</code> es el intervalo en segundos y <code>ps -o</code> utiliza un formato definido por el usuario.</p>
 <h3 id="monitorizar-la-cpu-con-sar">Monitorizar la cpu con sar</h3>
 <p>Para instalarlo, lo encontraremos en los repositorios con:</p>
 <pre><code class="language-sh">
@@ -88,18 +88,18 @@ sar -u 1 10
 <pre><code class="language-sh">
 sar 1 10 -o /tmp/datos &gt; /dev/null 2&gt;&amp;1
 </code></pre>
-<p>La opción <code class="verbatim">-o</code> permite exportarlo a un archivo. Para consultar el archivo:</p>
+<p>La opción <code>-o</code> permite exportarlo a un archivo. Para consultar el archivo:</p>
 <pre><code class="language-sh">
 sar -f /tmp/datos
 </code></pre>
 <h3 id="informe-de-memoria">Informe de memoria</h3>
-<p>Para el informe de memoria, utilizaremos la opción <code class="verbatim">-r</code></p>
+<p>Para el informe de memoria, utilizaremos la opción <code>-r</code></p>
 <pre><code class="language-sh">
 sar -r 1 10
 </code></pre>
 <h2 id="matar-procesos-con-kill-killall-y-pkill">Matar procesos con kill, killall y pkill</h2>
-<p>Para matar el proceso con kill, necesitamos conocer el identificador del proceso. Para ello utilizaremos el comando <code class="verbatim">ps</code></p>
-<p>Voy a detener una conversión de un proceso con pandoc, filtrando también con <code class="verbatim">grep</code></p>
+<p>Para matar el proceso con kill, necesitamos conocer el identificador del proceso. Para ello utilizaremos el comando <code>ps</code></p>
+<p>Voy a detener una conversión de un proceso con pandoc, filtrando también con <code>grep</code></p>
 <pre><code class="language-sh">
 ps aux | grep pandoc
 </code></pre>
@@ -109,7 +109,7 @@ ps aux | grep pandoc
 angel  1649126  0.0  0.0   5920   708 pts/2
 </code></pre>
 <p> </p>
-<p>En este caso el identificador sería <code class="verbatim">1649126</code>. Por lo tanto utilizaremos para matar el proceso:</p>
+<p>En este caso el identificador sería <code>1649126</code>. Por lo tanto utilizaremos para matar el proceso:</p>
 <pre><code class="language-sh">
 kill 1649126
 </code></pre>
@@ -142,6 +142,7 @@ pkill -u angel
 <li><a href="https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html">Docker: Ctop. El portanier de terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

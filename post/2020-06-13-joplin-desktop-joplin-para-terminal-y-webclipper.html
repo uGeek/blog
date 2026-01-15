@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="joplin-desktop-joplin-para-terminal-y-webclipper">Joplin Desktop, Joplin para Terminal y WebClipper</h1>
+<h1 id="joplin-desktop-joplin-para-terminal-y-webclipper" title="Joplin Desktop, Joplin para Terminal y WebClipper" data-export_file_name="joplin-desktop-joplin-para-terminal-y-webclipper" data-description="Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav." data-export_date="2020-06-13 19:30 2021-08-17" data-category="joplin" data-tag="notas,terminal" data-image="./images-blog/joplin.png">Joplin Desktop, Joplin para Terminal y WebClipper</h1>
 <p>Joplin junto al orgmode, se está convirtiendo en una aplicación imprescindible para mi. Me permite tener sincronizadas mis notas en todos mis dispositivos, gracias a mi servidor webdav.</p>
 <p><img src="../images-blog/joplin.png" /></p>
 <p>Voy a explicaros la instalación de algunos de sus clientes y conocer el funcionamiento de la versión de terminal.</p>
@@ -52,7 +52,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>Para instalar la versión de escritorio con AppImage.</p>
 <ul>
 <li>Podemos descargar la versión de escritorio <a href="https://github.com/laurent22/joplin/releases">desde su repositorio en GitHub</a></li>
-<li>Damos permisos de ejecución al archivo descargado <code class="verbatim">sudo chmod +x ./*.AppImage</code></li>
+<li>Damos permisos de ejecución al archivo descargado <code>sudo chmod +x ./*.AppImage</code></li>
 <li>Lanzamos el AppImage</li>
 </ul>
 <p>En debian Buster, me da un problema al ejecurar el AppImage, ya que me dice que el sandbox no está bien configurado. Para poder arrancarlo utilizo:</p>
@@ -116,7 +116,7 @@ sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin
 NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplin
 sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin
 </code></pre>
-<p>Ahora escribiendo <strong>*joplin</strong>* en tu terminal, se debería abrir.</p>
+<p>Ahora escribiendo <strong>9</strong> en tu terminal, se debería abrir.</p>
 <h3 id="actualizar">Actualizar</h3>
 <p>Para actualizar la versión del joplin-cli:</p>
 <pre><code>
@@ -138,8 +138,8 @@ joplin version
 <h3 id="uso">Uso</h3>
 <p>La app de terminal es muy intuitiva. Aparecerán tres grandes columnas, con las libretas, notas y contenido de estas. Utilizaremos la tecla <strong>TAB</strong> para saltar de una columna a otra.</p>
 <p>Para introducir un comando, tendremos que escribir <strong>:</strong> seguido del comando.</p>
-<p>También permite el autocompletado mediante <strong>TAB</strong>. De manera que si escribimos <em>:sy</em> y pulsamos <strong>TAB</strong>, auto escribirá <strong>:sync</strong>.</p>
-<p>Para salir de la aplicación, lo haremos escribiendo <code class="verbatim">:exit</code> o pulsando <strong>Ctrl+d</strong>.</p>
+<p>También permite el autocompletado mediante <strong>TAB</strong>. De manera que si escribimos /:sy/ y pulsamos <strong>TAB</strong>, auto escribirá <strong>:sync</strong>.</p>
+<p>Para salir de la aplicación, lo haremos escribiendo <code>:exit</code> o pulsando <strong>Ctrl+d</strong>.</p>
 <h3 id="algunos-comandos-útiles">Algunos comandos útiles</h3>
 <pre><code>
 :mknote &quot;Título de Nota&quot;   # Crear nota
@@ -235,7 +235,7 @@ nano ~/.config/joplin/keymap.json
 <p>Como a veces se me olvida el sincronizar cada vez que he modificado una nota, he creado el siguiente alias con 2 comandos:</p>
 <ul>
 <li>Abre Joplin de terminal</li>
-<li>Cuando cerramos joplin, sincroniza las notas en local con el servidor. <code class="verbatim">joplin sync</code>.</li>
+<li>Cuando cerramos joplin, sincroniza las notas en local con el servidor. <code>joplin sync</code>.</li>
 </ul>
 <p>Voy a utilizar la letra <strong>j</strong> para lanzar Joplin de terminal.</p>
 <pre><code>
@@ -743,9 +743,9 @@ Muestra información de la versión
 <li><a href="https://joplinapp.org/">https://joplinapp.org/</a></li>
 <li><a href="https://appimage.github.io/Joplin/">https://appimage.github.io/Joplin/</a></li>
 <li><a href="https://discourse.joplinapp.org/">https://discourse.joplinapp.org/</a> (Foro)</li>
-<h4 id="notas-instalando-node">notas Instalando Node</h4>
-<p>En la versión anterior de <strong>*joplin</strong>* para cli, teniamos suficiente instalando <strong>*nodejs</strong>* y <strong>*npm</strong>* desde repositorios, ahora es necesario actualizar para solucionar el problema.</p>
 </ul>
+<h4 id="notas-instalando-node">notas Instalando Node</h4>
+<p>En la versión anterior de <strong>27</strong> para cli, teniamos suficiente instalando <strong>29</strong> y <strong>31</strong> desde repositorios, ahora es necesario actualizar para solucionar el problema.</p>
 <pre><code>
 sudo apt update
 sudo apt install nodejs
@@ -760,6 +760,7 @@ sudo apt install npm
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html">Joplin Desktop, Joplin para Terminal y WebClipper</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-07-instalar-node-js-12-version-estable.html">Instalar Node.js 12. Versión estable</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

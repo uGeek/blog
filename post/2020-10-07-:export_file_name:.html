@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="montar-un-usb-tarjeta-sd-disco-duro-o-ssd-formateado-en-ext4-fat32-o-ntfs-en-un-directorio-con-linux">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</h1>
+<h1 id="montar-un-usb-tarjeta-sd-disco-duro-o-ssd-formateado-en-ext4-fat32-o-ntfs-en-un-directorio-con-linux" title="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" data-export_file_name="" data-description="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." data-export_date="2020-10-07 07:30 2022-07-07" data-category="bash" data-tag="sd,ssd,usb" data-image="./images-blog/sd.png">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</h1>
 <p>He conectado 5 relés y 4 Discos Duros a mi Raspberry para hacer backups.</p>
 <p><img src="../images-blog/sd.png" /></p>
 <p>Ahora tengo que crear un script para automatizar el montaje de estos discos y siempre cada uno de ellos tiene que montarse en el mismo directorio.</p>
@@ -85,7 +85,7 @@ sudo umount directorio
 sudo umount directorio1 directorio2 directorio3 directorio4
 </code></pre>
 <h4 id="forzar-desmontar">Forzar desmontar </h4>
-<p>En ocasiones el sistema kernel considera que el sistema de archivos está ocupado, en estos casos, puedes forzar con el desmontaje <code class="verbatim">umount -f</code>.</p>
+<p>En ocasiones el sistema kernel considera que el sistema de archivos está ocupado, en estos casos, puedes forzar con el desmontaje <code>umount -f</code>.</p>
 <p>Averigua el porque no puedes desmontarlo antes de forzar, porque quizás si hay un motivo.</p>
 <pre><code class="language-sh">
 sudo umount -f directorio
@@ -143,7 +143,7 @@ sudo mount /home/angel/directorio1 /home/angel/directorio2
 df -l
 </code></pre>
 <h2 id="montar-al-inicio-con-el-sistema">Montar al inicio con el sistema</h2>
-<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code class="verbatim">/etc/fstab</code>.</p>
+<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code>/etc/fstab</code>.</p>
 <p>Vamos a editarlo:</p>
 <pre><code class="language-sh">
 sudo nano /etc/fstab
@@ -152,9 +152,9 @@ sudo nano /etc/fstab
 <pre><code class="language-sh">
 UUID=&quot;54C2D371C2D447BD&quot;  /home/angel/Disco1   ext    defaults,auto 0    0
 </code></pre>
-<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code class="verbatim">defaults</code>.</p>
+<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code>defaults</code>.</p>
 <h2 id="montar-todos-los-discos">Montar todos los discos</h2>
-<p>Para montar todos los disco que hay en el archivo <code class="verbatim">/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
+<p>Para montar todos los disco que hay en el archivo <code>/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
 <pre><code class="language-sh">
 sudo mount -a
 </code></pre>
@@ -171,7 +171,7 @@ sudo umount -l /dev/sdb1
 sudo umount directorio1 directorio2 directorio3 directorio4
 </code></pre>
 <h3 id="montar-al-inicio-con-el-sistema">Montar al inicio con el sistema</h3>
-<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code class="verbatim">/etc/fstab</code>.</p>
+<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code>/etc/fstab</code>.</p>
 <p>Vamos a editarlo:</p>
 <pre><code class="language-sh">
 sudo nano /etc/fstab
@@ -180,9 +180,9 @@ sudo nano /etc/fstab
 <pre><code class="language-sh">
 UUID=&quot;54C2D371C2D447BD&quot;  /home/angel/Disco1   ext    defaults,auto 0    0
 </code></pre>
-<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code class="verbatim">defaults</code>.</p>
+<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code>defaults</code>.</p>
 <h3 id="montar-todos-los-discos">Montar todos los discos</h3>
-<p>Para montar todos los disco que hay en el archivo <code class="verbatim">/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
+<p>Para montar todos los disco que hay en el archivo <code>/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
 <pre><code class="language-sh">
 sudo mount -a
 </code></pre>
@@ -208,6 +208,7 @@ angel ALL=(ALL) NOPASSWD:/usr/bin/mount,/usr/bin/umount
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

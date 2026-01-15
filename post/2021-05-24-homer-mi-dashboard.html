@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="homer-mi-dashboard">Homer. Mi Dashboard</h1>
+<h1 id="homer-mi-dashboard" title="Homer. Mi Dashboard" data-export_file_name="homer-mi-dashboard" data-description="Homer es el lugar desde donde parten todos los servicios que tengo instalados en mi Raspberry y VPS." data-export_date="2021-05-24 19:45" data-category="dashboard" data-tag="server,raspberry" data-image="./images-blog/Homer._Mi_Dashboard.png">Homer. Mi Dashboard</h1>
 <p>Homer es el lugar desde donde parten todos los servicios que tengo instalados en mi Raspberry y VPS.</p>
 <p>Es un servicio muy ligero que podemos instalar en nuestra Raspberry Pi o Servidor, PC,... para tener a un click todos los servicios y webs favoritas.</p>
 <p><img src="../images-blog/Homer._Mi_Dashboard.png" /></p>
@@ -69,14 +69,14 @@ environment:
 - GID=1000
 restart: unless-stopped
 </code></pre>
-<p>En esta ruta <code class="verbatim">$HOME/docker/homer/assets/</code>, tenderemos acceso al archivo de configuración <strong>config.yml</strong>, así como el directorio donde guardaremos los iconos.</p>
+<p>En esta ruta <code>$HOME/docker/homer/assets/</code>, tenderemos acceso al archivo de configuración <strong>config.yml</strong>, así como el directorio donde guardaremos los iconos.</p>
 <h2 id="atajos">Atajos</h2>
 <p>Estos son los atajos de teclado:</p>
 <ul>
-<li><code class="verbatim">/</code> Empezar a buscar.</li>
-<li><code class="verbatim">Escape</code> Deja de buscar.</li>
-<li><code class="verbatim">Enter= Abra el primer resultado coincidente (respeta la =_target</code>propiedad del marcador ).</li>
-<li><code class="verbatim">Alt= / =Option= + =Enter</code> Abre el primer resultado coincidente en una nueva pestaña.</li>
+<li><code>/</code> Empezar a buscar.</li>
+<li><code>Escape</code> Deja de buscar.</li>
+<li><code>Enter</code> Abra el primer resultado coincidente (respeta la <code>_target</code>propiedad del marcador ).</li>
+<li><code>Alt</code> / <code>Option</code> + <code>Enter</code> Abre el primer resultado coincidente en una nueva pestaña.</li>
 </ul>
 <h2 id="configuración">Configuración</h2>
 <p>Este es el archivo <strong>config.yml</strong> por defecto que trae homer</p>
@@ -130,7 +130,7 @@ services: []                                     # Servicios con sus iconos
 </ul>
 <h2 id="añadiendo-buscador-un-buscador-calendarios-tareas">Añadiendo buscador un Buscador, calendarios, tareas...</h2>
 <p>Para añadir en el apartado <strong>message</strong>, utilizaremos código <strong>html</strong>.</p>
-<p>Para añadir una cajetilla de búsqueda de <strong>whoogle</strong> , que permita hacer búsquedas manteniendo la privacidad respecto a <strong>Google</strong>, añadiremos en el archivo de configuración <code class="verbatim">config.yml</code>:</p>
+<p>Para añadir una cajetilla de búsqueda de <strong>whoogle</strong> , que permita hacer búsquedas manteniendo la privacidad respecto a <strong>Google</strong>, añadiremos en el archivo de configuración <code>config.yml</code>:</p>
 <pre><code class="language-sh">
 message:
 content: '&lt;form action=&quot;https://whooglesearch.net/search&quot; method=&quot;get&quot;&gt;&lt;input type=&quot;text&quot;
@@ -156,6 +156,7 @@ name=&quot;q&quot; placeholder=&quot;Busca en Google&quot; style=&quot;width: 10
 <p>Publicado por Angel el Monday 24 May del 2021</p>
 <p>También te puede interesar:</p>
 <li><a href="https://ugeek.github.io/blog/post/2021-05-24-homer-mi-dashboard.html">Homer. Mi Dashboard</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

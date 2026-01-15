@@ -44,19 +44,19 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="notificaciones-org-mode-en-telegram-con-mi-bot">Notificaciones Org Mode en Telegram con mi Bot </h1>
+<h1 id="notificaciones-org-mode-en-telegram-con-mi-bot" title="Notificaciones Org Mode en Telegram con mi Bot" data-export_file_name="Notificaciones Org Mode en Telegram con mi Bot" data-description="En artículos anteriores, así como en el Podcast, os he explicado como enviar notificaciones de texto, imágenes y archivos, a través de un Bot en Telegram que podemos crear" data-export_date="2019-03-31 10:30" data-category="emacs" data-tag="orgmode,telegram,raspberry" data-image="./images-blog/telegram2org.png">Notificaciones Org Mode en Telegram con mi Bot </h1>
 <p><img src="../images-blog/telegram2org.png" /></p>
 <p>En artículos anteriores, así como en el Podcast, os he explicado <a href="https://ugeek.github.io/blog/post/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html">como enviar notificaciones de texto, imágenes y archivos</a>, a través de un Bot en Telegram que podemos crear.</p>
 <p>Si utilizas orgmode, todo.txt o cualquier otro archivo de texto plano para gestionar tus tareas, imagino que el poder enviar mensajes de texto para recibirlos en tu movil o PC y tener un sistema basado en Unix como Linux, te habrá abierto un mundo de posibilidades.</p>
 <p>En el artículo, de hoy voy a explicaros un ejemplo de como recibir todas las tareas pendientes que tengo en mi archivo orgmode, que están en estado TODO. Recordar que yo he utilizado este ejemplo, pero vosotros podéis hacer lo propio con los estados <strong>WAIT</strong>, <strong>DONE</strong>,... así como las prioridades <strong>#A</strong>, <strong>#B</strong>, etc... Simplemente tenéis que adaptar la línea de terminal a vuestra necesidad.</p>
 <p>Voy a explicarlo y veréis que es súper sencillo.</p>
 <h2 id="filtrar-los-estados-todo">Filtrar los estados <strong>TODO</strong></h2>
-<p>Para mostrar todas las líneas que tengan estado TODO, vamos a utilizar el comando <strong>grep</strong>. Yo en mi caso, una vez se visualice las líneas en Telegram, no quiero que aparezca ni el asterisco, ni la palabra <strong>TODO</strong>, así que utilizaré el comando <strong>sed</strong> para sustituir el texto: <code class="verbatim">* TODO=, por =-</code></p>
+<p>Para mostrar todas las líneas que tengan estado TODO, vamos a utilizar el comando <strong>grep</strong>. Yo en mi caso, una vez se visualice las líneas en Telegram, no quiero que aparezca ni el asterisco, ni la palabra <strong>TODO</strong>, así que utilizaré el comando <strong>sed</strong> para sustituir el texto: <code>* TODO</code>, por <code>-</code></p>
 <pre><code>
 grep TODO agenda.org | sed -e 's/* TODO/-/g'
 </code></pre>
 <p>Como es posible que no me fije en la fecha del chat, para comprobar a que día pertenece la notificación, voy a añadir la fecha del día de hoy en la notificación:</p>
-<p><code class="verbatim">date +'%A %d de %B del %Y' -&gt; será del tipo: domingo 31 de marzo del 2019</code></p>
+<p><code>date +'%A %d de %B del %Y' -&gt; será del tipo: domingo 31 de marzo del 2019</code></p>
 <h2 id="enviando-la-notificación">Enviando la notificación</h2>
 <p>Ya lo tenemos todo. Así que vamos con la línea de terminal. Recordar que tenemos que añadir a esta línea el &lt;TOKEN&gt; y nuestro &lt;ID&gt;:</p>
 <pre><code>
@@ -79,6 +79,7 @@ curl -X &quot;POST&quot; &quot;https://api.telegram.org/bot&lt;TOKEN&gt;/sendMes
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>

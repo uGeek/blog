@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="utilizando-twitter-desde-la-terminal-con-bti">Utilizando twitter desde la terminal con bti</h1>
+<h1 id="utilizando-twitter-desde-la-terminal-con-bti" title="Utilizando twitter desde la terminal con bti" data-export_file_name="utilizando-twitter-desde-la-terminal-con-bti" data-description="¿Te imaginas poder twittear desde la terminal?. Voy a explicaros como instalar y configurar el cliente bti, un cliente súper sencillo que cumple con este fin." data-export_date="2021-03-30 13:00" data-category="bash" data-tag="terminal,twitter" data-image="./images-blog/twitter.png">Utilizando twitter desde la terminal con bti</h1>
 <p>¿Te imaginas poder twittear desde la terminal?. Voy a explicaros como instalar y configurar el cliente bti, un cliente súper sencillo que cumple con este fin.</p>
 <p><img src="../images-blog/twitter.png" /></p>
 <h2 id="instalación">Instalación</h2>
@@ -53,7 +53,7 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 sudo apt install bti
 </code></pre>
 <h2 id="crear-el-archivo-de-configuración">Crear el archivo de configuración</h2>
-<p>Vamos a crear el archivo <code class="verbatim">~/.bti</code></p>
+<p>Vamos a crear el archivo <code>~/.bti</code></p>
 <pre><code class="language-sh">
 nano ~/.bti
 </code></pre>
@@ -70,10 +70,10 @@ consumer_secret=fnIGGU0T12mMWKjmThUdSeKN32NLWfmnwapwubVQ
 <pre><code class="language-sh">
 bti
 </code></pre>
-<p>Nos devolverá una url tipo <a href="https://twitter.com/oauth/authorize?oauth_token=n1FCgQAAAAAAAm4AABbZ480">https://twitter.com/oauth/authorize?oauth_token=n1FCgQAAAAAAAm4AABbZ480</a> de twitter, para pegarla en nuestro navegador web y autorizar a <em>bti</em> a utilizar nuestra cuenta de Twitter.</p>
-<p>Una vez autoricemos, en la terminal nos aparecerá <em>access_token_key</em> y <em>access_token_secret</em>, para que lo peguemos en el archivo <code class="verbatim">~/.bti</code> del principio.</p>
+<p>Nos devolverá una url tipo <a href="https://twitter.com/oauth/authorize?oauth_token=n1FCgQAAAAAAAm4AABbZ480">https://twitter.com/oauth/authorize?oauth_token=n1FCgQAAAAAAAm4AABbZ480</a> de twitter, para pegarla en nuestro navegador web y autorizar a /bti/ a utilizar nuestra cuenta de Twitter.</p>
+<p>Una vez autoricemos, en la terminal nos aparecerá /access<u>token</u>key/ y /access<u>token</u>secret/, para que lo peguemos en el archivo <code>~/.bti</code> del principio.</p>
 <h2 id="guardando-la-configuración">Guardando la configuración</h2>
-<p>Para no tener que repetir este proceso, guarda el archivo <code class="verbatim">~/.bti</code>, así podrás utilizarlo en otro pc, servidor, Raspberry,....</p>
+<p>Para no tener que repetir este proceso, guarda el archivo <code>~/.bti</code>, así podrás utilizarlo en otro pc, servidor, Raspberry,....</p>
 <h2 id="utilizando-otra-ruta-o-twitter-multicuenta">Utilizando otra ruta o twitter multicuenta</h2>
 <p>Podemos cambiar la ubicación o utilizar múltiples cuentas con múltiples archivos</p>
 <p>La copiamos en otra ruta</p>
@@ -90,9 +90,9 @@ bti --config $HOME/dotfiles/bti-twitter
 bti
 tweet:
 </code></pre>
-<p>La terminal nos devolverá <em>tweet</em>, para que escribamos el tweet que queremos publicar.</p>
+<p>La terminal nos devolverá /tweet/, para que escribamos el tweet que queremos publicar.</p>
 <h2 id="comando-en-una-solo-línea-con-yes">Comando en una solo línea con yes</h2>
-<p>Voy a publicar <code class="verbatim">hola</code>en twitter con una sola línea:</p>
+<p>Voy a publicar <code>hola</code>en twitter con una sola línea:</p>
 <pre><code class="language-sh">
 yes &quot;hola&quot; | /usr/bin/bti
 </code></pre>
@@ -115,6 +115,7 @@ yes &quot;hola&quot; | bti
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+</ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
 <p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
