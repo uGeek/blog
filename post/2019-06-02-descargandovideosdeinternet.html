@@ -1,0 +1,126 @@
+<head>
+<title>Descargando videos de Internet con youtube-dl. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:locale" content="es_ES" />
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="En el Post de hoy, te voy a explicar cómo descargar no solo vídeos de YouTube, sino que también de muchos de los sitios web actuales con el comando youtube-dl" />
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Descargando videos de Internet con youtube-dl" /> 
+<meta property="og:description" content="En el Post de hoy, te voy a explicar cómo descargar no solo vídeos de YouTube, sino que también de muchos de los sitios web actuales con el comando youtube-dl" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/youtube.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-06-02-descargandovideosdeinternet.html" />
+<meta name="twitter:title" content="Descargando videos de Internet con youtube-dl" /> 
+<meta name="twitter:description" content="En el Post de hoy, te voy a explicar cómo descargar no solo vídeos de YouTube, sino que también de muchos de los sitios web actuales con el comando youtube-dl" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/youtube.png" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+</head>
+<br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script>
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
+</script>
+<h1 id="descargando-videos-de-internet-con-youtube-dl">Descargando videos de Internet con youtube-dl</h1>
+<p>En el Post de hoy, te voy a explicar cómo descargar no solo vídeos de YouTube, sino que también de muchos de los sitios web actuales con el comando youtube-dl.</p>
+<p><img src="../images-blog/youtube.png" /></p>
+<p>Uno de los problemas que tiene esta aplicación, es que aunque está disponible en los repositorios oficiales de Ubuntu, el hecho de que YouTube cada dos por tres actualice su API, hace que no funcione correctamente si no tienes la última versión.</p>
+<p>Voy a explicarte como instalarlo desde el propio repositorio del proyecto, evitándote  así muchos problemas.</p>
+<ul>
+<li><a href="https://youtube-dl.org/">Web del Proyecto</a></li>
+<li><a href="http://rg3.github.io/youtube-dl/supportedsites.html">Listado de webs que podemos descargar videos con youtube-dl</a></li>
+</ul>
+<h2 id="instalar-la-última-versión-de-youtube-dl">Instalar la última versión de Youtube-dl</h2>
+<p>Como he comentado antes, vamos a instalarlo directamente descargando la aplicación desde el propio repositorio  del proyecto.</p>
+<p>Para ello necesitamos tener instalado en nuestro Linux wget o curl.</p>
+<h3 id="utilizando-curl">Utilizando curl</h3>
+<p><code class="verbatim">sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/bin/youtube-dl</code></p>
+<h3 id="utilizando-wget">Utilizando wget</h3>
+<p><code class="verbatim">sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/bin/youtube-dl</code></p>
+<h3 id="damos-permisos-de-ejecución">Damos permisos de ejecución</h3>
+<p>Ahora vamos a darle permisos de ejecución y ya tendremos nuestro youtube-dl totalmente disponible para comenzar a descargar vídeos.</p>
+<p><code class="verbatim">sudo chmod a+rx /usr/bin/youtube-dl</code></p>
+<h2 id="utilizando-youtube-dl">Utilizando youtube-dl</h2>
+<p>Youtube-dl tiene muchísimas opciones, todas ellas las encontrarás en la ayuda ejecutando el comando:</p>
+<p><code class="verbatim">youtube-dl -h</code></p>
+<h3 id="descargar-un-vídeo">Descargar un vídeo</h3>
+<p>Vamos a descargar un vídeo para probar si todo funciona correctamente. Para ello simplemente introduciremos el comando youtube-dl, seguido de la dirección web donde está el vídeo que queremos descargar.</p>
+<p><code class="verbatim">youtube-dl &lt;URL&gt;</code></p>
+<h2 id="formatos-disponible">Formatos disponible</h2>
+<p>Es posible que queramos descargar videos a diferentes resoluciones o formatos. Para descargar un vídeo o audio teniendo en cuenta esto, lo primero que haremos es listar todos los formatos y resoluciones disponibles. Para ello, utilizaremos <strong>-F</strong>:</p>
+<p><code class="verbatim">youtube-dl -F &lt;URL&gt;</code></p>
+<p>youtube-dl nos devolverá el listado precedidos de un número. Para descargarlos, especificaremos el número que aparece en el comando.</p>
+<p>Ejemplo, en el caso que fuera el 218:</p>
+<p><code class="verbatim">youtube-dl -f 218 &lt;URL&gt;</code></p>
+<h2 id="listas-de-youtube">Listas de Youtube</h2>
+<p>YouTube-dl también nos permite descargar listas de youtube. Lo primero que tenemos que hacer es localizar la URL de esta lista.</p>
+<p>En la página web de Youtube, pulsamos justo encima de la lista y pasaremos a otra pantalla donde solo aparece la lista con el link que contiene la palabra list. Tipo: <code class="verbatim">https://www.youtube.com/playlist?list</code></p>
+<h3 id="descargar-lista">Descargar Lista</h3>
+<p>Para descargar la lista, haremos lo mismo que para descargar un vídeo,  youtube-dl seguido de la url de la lista. </p>
+<p><code class="verbatim">youtube-dl &lt;URL_LISTA&gt;</code></p>
+<p>Si la descarga de la lista da problemas, podemos añadir -ci para que continúen las descargas antiguas, en caso de existir e ignore los errores continuando la descarga.</p>
+<p><code class="verbatim">youtube-dl -ci &lt;URL_LISTA&gt;</code></p>
+<h3 id="descargando-no-todos-los-videos-de-la-lista">Descargando no todos los videos de la lista</h3>
+<p>También es posible que no quedamos descargar la lista completa. Especificaremos el número del vídeo según el orden de la lista y solo estos se descargarán. </p>
+<p>Por ejemplo:</p>
+<pre><code>
+youtube-dl --playlist-items=1,8,12 &lt;URL_LISTA&gt;
+</code></pre>
+<p>Solo se descargaran los videos 1,8 y 12.</p>
+<h3 id="lista-de-audio">Lista de audio</h3>
+<p>Youtube-dl también permite descargar el audio de los vídeos. Vamos a ver cómo descargar los audios de una lista de vídeo.</p>
+<p><code class="verbatim">youtube-dl -citx --audio-format mp3 --audio-quality 9 &lt;URL_LISTA&gt;</code></p>
+<h2 id="descargar-lista-de-videos-creadas-por-nosotros">Descargar lista de videos creadas por nosotros</h2>
+<p>Una de las cosas que más me ha gustado de youtube-dl, es la posibilidad de crear nuestras propias listas de vídeos a descargar. Esto quiere decir que podemos ir creando en un archivo de texto plano, un listado de vídeos que queramos descargar posteriormente y llegado el momento, con una única línea de terminal, descargarlos todos de una vez.</p>
+<p>Vamos a crear el archivo de texto plano, con la lista de todos vídeos que queremos descargar, en mi caso la llamaré <strong>list.txt</strong>.</p>
+<p>Para descargar la lista emplearemos <strong>-a</strong>:</p>
+<p><code class="verbatim">youtube-dl -a list.txt</code></p>
+<p>Si hay problemas, forzaremos la descarga:</p>
+<p><code class="verbatim">youtube-dl -cit -a list.txt</code></p>
+<h2 id="bajar-audio">Bajar audio</h2>
+<p>Cómo he comentado antes, youtube-dl también incluye la posibilidad de descargar los audios de los vídeos. Para descargar solo el audio, utilizaremos <strong>-x</strong>.</p>
+<p><code class="verbatim">youtube-dl -x &lt;URL&gt;</code></p>
+<p>Si queremos descargar, por ejemplo en mp3:</p>
+<p><code class="verbatim">youtube-dl -x --audio-format mp3 &lt;URL&gt;</code></p>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>Youtube-dl es una de esas herramientas super alucinantes.  Como he comentado antes, aquí solo muestro algunas opciones básicas, pero  si buscas algo más específico, como algún formato de audio vídeo en concreto, te recomiendo qué consultes la documentación o acceda a la ayuda mediante youtube-dl --help.</p>
+<p>Publicado por Angel el Sunday 02 June del 2019</p>
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-25-sd-maid-se-manten-limpio-tu-dispositivo-android.html">SD Maid SE. Mantén limpio tu dispositivo Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-10-obsidian-en-raspberry-pi.html">Obsidian en Raspberry Pi</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html">Termux. Una distro Linux en Android con la que crear tus aplicaciones</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-21-newpipe-la-aplicacion-predeterminada-en-android.html">NewPipe. La aplicación predeterminada en Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-15-twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv.html">twitch-dl. Aplicación CLI para descargar videos de twitch.tv</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html">Script para crear acceso a aplicaciones AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-11-cifrar-notas-en-zettel-notes-con-openkeychain.html">Cifrar Notas en Zettel Notes con OpenKeychain</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-10-zettel-notes-la-mejor-aplicacion-de-notas-para-android-con-atajos-de-teclado.html">Zettel Notes. La mejor aplicación de Notas para Android con atajos de Teclado</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html">Winamp vuelve a mi escritorio. Cambiando el tema de audacious</a></li>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

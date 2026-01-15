@@ -1,144 +1,118 @@
 <head>
-<title>Crear un Servidor git con SSH. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Crear un Servidor git con SSH. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Crear un Servidor git con SSH" />
-<meta property="og:description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
+<meta property="og:title" content="Crear un Servidor git con SSH" /> 
+<meta property="og:description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html" />
-
-<meta name="twitter:title" content="Crear un Servidor git con SSH" />
-<meta name="twitter:description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" />
+<meta name="twitter:title" content="Crear un Servidor git con SSH" /> 
+<meta name="twitter:description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="crear-un-servidor-git-con-ssh-1" title="Crear un Servidor git con SSH" data-export_file_name="crear-un-servidor-git-con-ssh" data-description="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de" data-export_date="2021-04-18 13:30" data-category="git" data-tag="ssh,raspberry" data-image="./images-blog/git.png">Crear un Servidor git con SSH</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 483 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
-<p>No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,… para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de git utilizando SSH.</p>
-<center>
+<h1 id="crear-un-servidor-git-con-ssh">Crear un Servidor git con SSH</h1>
+<p>No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de git utilizando SSH.</p>
 <p><img src="../images-blog/git.png" /></p>
-</center>
 <p>Este servidor va permitirme tener mis propios repositorios de un modo privado en mi Raspberry.</p>
 <p>Voy a explicarte paso a paso como crearlo y verás que es muy sencillo.</p>
 <h2 id="creando-un-nuevo-usuario">Creando un nuevo usuario</h2>
 <p>Vamos a crear un nuevo usuario en nuestro servidor. Lo llamaremos <strong>git</strong>.</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> adduser git</a></code></pre></div>
+<pre><code class="language-sh">
+sudo adduser git
+</code></pre>
 <p>Tendrás que poner la contraseña para acceder via SSH a este usuario.</p>
-<h2 id="copiamos-.ssh-en-el-nuevo-usuario">Copiamos .SSH en el nuevo usuario</h2>
+<h2 id="copiamos-ssh-en-el-nuevo-usuario">Copiamos .SSH en el nuevo usuario</h2>
 <p>Podrias crear una nueva configuración de SSH, pero yo en mi caso, como el servidor git solo voy a utilizarlo yo, voy a copiar todos los archivos de configuración de mi servidor SSH del usuario que utilizo, en el nuevo usuario <strong>git</strong>. Así podré acceder con las mismas llaves SSH a los dos usuarios.</p>
 <p>Situado en mi sesión de usuario normal, voy a enviar todos los archivos de SSH al usuario <strong>git</strong>.</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">sudo</span> cp -r .ssh/ /home/git/</a></code></pre></div>
+<pre><code class="language-sh">
+sudo cp -r .ssh/ /home/git/
+</code></pre>
 <h2 id="creando-el-primer-repositorio-en-el-servidor">Creando el primer repositorio en el servidor</h2>
 <p>Voy a crear el primer repositorio llamado <strong>dotfile</strong>.</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">mkdir</span> dotfile</a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="bu">cd</span> dotfile</a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="fu">git</span> --bare init</a></code></pre></div>
-<p><code>git --bare init</code> Inicializa un repositorio de Git vacío.</p>
+<pre><code class="language-sh">
+mkdir dotfile
+cd dotfile
+git --bare init
+</code></pre>
+<p><code class="verbatim">git --bare init</code> Inicializa un repositorio de Git vacío.</p>
 <h2 id="clonando-el-repositorios">Clonando el repositorios</h2>
 <p>Si la IP del servidor fuera 192.168.1.100, para clonar el repositorio en el PC local utilizaríamos:</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">git</span> clone git@192.168.1.100:dotfile</a></code></pre></div>
+<pre><code class="language-sh">
+git clone git@192.168.1.100:dotfile
+</code></pre>
 <h2 id="creando-nombre">Creando nombre</h2>
-<p>La primera vez que utilicemos git con el nuevo servidor, git me pedirá que correo de usuario y nombre voy a utilizar, para que en cada commit, aparezca que usuario lo ha subido, modificado, etc…</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"></a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="fu">git</span> config --global user.email <span class="st">&quot;you@example.com&quot;</span></a>
-<a class="sourceLine" id="cb5-3" title="3"><span class="fu">git</span> config --global user.name <span class="st">&quot;Tu Nombre&quot;</span></a></code></pre></div>
+<p>La primera vez que utilicemos git con el nuevo servidor, git me pedirá que correo de usuario y nombre voy a utilizar, para que en cada commit, aparezca que usuario lo ha subido, modificado, etc...</p>
+<pre><code class="language-sh">
+
+git config --global user.email &quot;you@example.com&quot;
+git config --global user.name &quot;Tu Nombre&quot;
+</code></pre>
 <h2 id="creando-el-readme">Creando el README</h2>
 <p>Recuerda que el repositorio está totalemente vacio y no hay ningún archivo ni directorio. Voy a crear el primero, el README.md.</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">nano</span> README.md</a></code></pre></div>
+<pre><code class="language-sh">
+nano README.md
+</code></pre>
 <p>Subo a mi repositorio de git.</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">git</span> add .</a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="fu">git</span> commit -m <span class="st">&quot;creo el archivo README.md&quot;</span></a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="fu">git</span> push origin master</a></code></pre></div>
+<pre><code class="language-sh">
+git add .
+git commit -m &quot;creo el archivo README.md&quot;
+git push origin master
+</code></pre>
 <h2 id="interfaz-gráfica-para-git">Interfaz gráfica para git</h2>
 <h3 id="gitk">gitk</h3>
-<p>Si no te aclaras mucho con la terminal, siempre puedes utilzar <strong>gitk</strong> para ver el historial de commits, comparar commits, buscar texto y ver los cambios en el historial,…</p>
+<p>Si no te aclaras mucho con la terminal, siempre puedes utilzar <strong>gitk</strong> para ver el historial de commits, comparar commits, buscar texto y ver los cambios en el historial,...</p>
 <p>Instalaremos en nuestra máquina local:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">sudo</span> apt install gitk</a></code></pre></div>
+<pre><code class="language-sh">
+sudo apt install gitk
+</code></pre>
 <p>Ahora dentro del repositorio, escribiremos el siguiente comando:</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">gitk</span></a></code></pre></div>
+<pre><code class="language-sh">
+gitk
+</code></pre>
 <h3 id="git-cola">Git Cola</h3>
 <p>Otra opción mejor, sería git-cola</p>
-<pre><code>sudo apt install git-cola
+<pre><code>
+sudo apt install git-cola
 </code></pre>
 <p>Lanza despues</p>
-<pre><code>git-dag
+<pre><code>
+git-dag
 </code></pre>
-<br>
 <p>Publicado por Angel el Sunday 18 April del 2021</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-13-autenticacion-http-y-https-basica-md.html">Acceso usando credenciales en la URL. Autenticación básica por http</a></li>
@@ -151,5 +125,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html">Crear una imagen docker desde un repositorio de GitHub</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

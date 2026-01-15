@@ -1,98 +1,54 @@
 <head>
-<title>twitch-dl. Aplicación CLI para descargar videos de twitch.tv. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>twitch-dl. Aplicación CLI para descargar videos de twitch.tv. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Herramienta de línea de comandos para descargar videos de twitch.tv" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="twitch-dl. Aplicación CLI para descargar videos de twitch.tv" />
-<meta property="og:description" content="Herramienta de línea de comandos para descargar videos de twitch.tv" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png" />
+<meta property="og:title" content="twitch-dl. Aplicación CLI para descargar videos de twitch.tv" /> 
+<meta property="og:description" content="Herramienta de línea de comandos para descargar videos de twitch.tv" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2022-03-15-twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv.html" />
-
-<meta name="twitter:title" content="twitch-dl. Aplicación CLI para descargar videos de twitch.tv" />
-<meta name="twitter:description" content="Herramienta de línea de comandos para descargar videos de twitch.tv" />
+<meta name="twitter:title" content="twitch-dl. Aplicación CLI para descargar videos de twitch.tv" /> 
+<meta name="twitter:description" content="Herramienta de línea de comandos para descargar videos de twitch.tv" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="twitch-dl.-aplicación-cli-para-descargar-videos-de-twitch.tv-1" title="twitch-dl. Aplicación CLI para descargar videos de twitch.tv" data-export_file_name="twitch-dl-aplicacion-cli-para-descargar-videos-de-twitch-tv" data-description="Herramienta de línea de comandos para descargar videos de twitch.tv" data-export_date="2022-03-15 12:52" data-category="twitch" data-tag="terminal,cli,app" data-image="./images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png">twitch-dl. Aplicación CLI para descargar videos de twitch.tv</h1>
-<h5>Tiempo estimado de lectura: 5 minutos. 577 palabras.    <a href="https://ugeek.github.io/blog/categories/twitch">twitch</a></h5>
+<h1 id="twitch-dl-aplicación-cli-para-descargar-videos-de-twitchtv">twitch-dl. Aplicación CLI para descargar videos de twitch.tv</h1>
 <p>Herramienta de línea de comandos para descargar videos de twitch.tv</p>
 <p>Inspirado en <a href="https://youtube-dl.org/">youtube-dl</a> . Agrega características específicas de contracción y utiliza conexiones simultáneas para que la descarga sea más rápida.</p>
-<center>
 <p><img src="../images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png" /></p>
-</center>
-<h2 id="recursos"><a href="https://twitch-dl.bezdomni.net/introduction.html#resources">Recursos</a></h2>
+<h2 id="httpstwitch-dlbezdomninetintroductionhtmlresourcesrecursos"><a href="https://twitch-dl.bezdomni.net/introduction.html#resources">Recursos</a></h2>
 <ul>
 <li><a href="https://twitch-dl.bezdomni.net/">Documentación</a></li>
 <li><a href="https://github.com/ihabunek/twitch-dl">Código fuente en Github</a></li>
@@ -100,80 +56,110 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://pypi.org/project/twitch-dl/">Paquete Python</a></li>
 </ul>
 <h2 id="instalación">Instalación</h2>
-<p>Ir a la <a href="https://github.com/ihabunek/twitch-dl/releases/latest">última versión</a> y descargar el =twitch-dl.&lt;version&gt;.pyz=archivo.</p>
+<p>Ir a la <a href="https://github.com/ihabunek/twitch-dl/releases/latest">última versión</a> y descargar el <code class="verbatim">twitch-dl.&lt;version&gt;.pyz</code>archivo.</p>
 <p>Descargar</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">wget</span> https://github.com/ihabunek/twitch-dl/releases/download/1.21.0/twitch-dl.1.21.0.pyz</a></code></pre></div>
+<pre><code class="language-sh">
+wget https://github.com/ihabunek/twitch-dl/releases/download/1.21.0/twitch-dl.1.21.0.pyz
+</code></pre>
 <p>Ejecute el archivo ya sea:</p>
 <ol>
 <li>pasándolo a python:</li>
 </ol>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">python3</span> twitch-dl.1.21.0.pyz --help</a></code></pre></div>
+<pre><code class="language-sh">
+python3 twitch-dl.1.21.0.pyz --help
+</code></pre>
 <ol>
 <li>hacerlo ejecutable e invocarlo directamente (específico de Linux):</li>
 </ol>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">chmod</span> +x twitch-dl.1.21.0.pyz</a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="ex">./twitch-dl.1.21.0.pyz</span> --help</a></code></pre></div>
-<p>Siéntase libre de cambiar el nombre del archivo a algo más manejable, como <code>twitch-dl</code>.</p>
+<pre><code class="language-sh">
+chmod +x twitch-dl.1.21.0.pyz
+./twitch-dl.1.21.0.pyz --help
+</code></pre>
+<p>Siéntase libre de cambiar el nombre del archivo a algo más manejable, como <code class="verbatim">twitch-dl</code>.</p>
 <p>Para actualizar a una versión más reciente, repita el proceso con la versión más reciente.</p>
 <h2 id="listar-todos-los-vídeos-del-canal">Listar todos los vídeos del canal</h2>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">python3</span> twitch-dl.1.21.0.pyz videos jordillatzer -a</a></code></pre></div>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">twitch-dl</span> videos <span class="op">&lt;</span>channel_name<span class="op">&gt;</span> [FLAGS] [OPTIONS]</a></code></pre></div>
+<pre><code class="language-sh">
+python3 twitch-dl.1.21.0.pyz videos jordillatzer -a
+</code></pre>
+<pre><code class="language-sh">
+twitch-dl videos &lt;channel_name&gt; [FLAGS] [OPTIONS]
+</code></pre>
 <ul>
-<li>-a, –all &gt;&gt; Obtener todos los videos, anula –limit</li>
-<li>-j, –json &gt;&gt; Mostrar resultados como JSON. Ignora <code>--pager</code>.</li>
-<li>-g, –game &gt;&gt; Mostrar videos del juego dado (se puede dar varias veces)</li>
-<li>-l, –limit &gt;&gt; Número de videos para buscar. El valor predeterminado es 10.</li>
-<li>-s, –sort &gt;&gt; Orden de clasificación de los videos. Predeterminado a <code>time</code>. Valores posibles: <code>views</code>, <code>time</code>.</li>
-<li>-t, –type &gt;&gt; Tipo de transmisión. Predeterminado a <code>archive</code>. Valores posibles: <code>archive</code>, <code>highlight</code>, <code>upload</code>.</li>
-<li>-p, –pager &gt;&gt; Imprime videos en páginas. Ignora <code>--limit</code>. El valor predeterminado es 10.</li>
+<li>-a, --all &gt;&gt; Obtener todos los videos, anula --limit</li>
+<li>-j, --json &gt;&gt; Mostrar resultados como JSON. Ignora <code class="verbatim">--pager</code>.</li>
+<li>-g, --game &gt;&gt; Mostrar videos del juego dado (se puede dar varias veces)</li>
+<li>-l, --limit &gt;&gt; Número de videos para buscar. El valor predeterminado es 10.</li>
+<li>-s, --sort &gt;&gt; Orden de clasificación de los videos. Predeterminado a <code class="verbatim">time=. Valores posibles: =views=, =time</code>.</li>
+<li>-t, --type &gt;&gt; Tipo de transmisión. Predeterminado a <code class="verbatim">archive=. Valores posibles: =archive=, =highlight=, =upload</code>.</li>
+<li>-p, --pager &gt;&gt; Imprime videos en páginas. Ignora <code class="verbatim">--limit</code>. El valor predeterminado es 10.</li>
 </ul>
 <h3 id="enumera-los-videos-recientes-del-canal-10-por-defecto">Enumera los videos recientes del canal (10 por defecto):</h3>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">twitch-dl</span> videos bananasaurus_rex</a></code></pre></div>
+<pre><code class="language-sh">
+twitch-dl videos bananasaurus_rex
+</code></pre>
 <p>Limitar a videos de uno o más juegos:</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">twitch-dl</span> videos --game <span class="st">&quot;doom eternal&quot;</span> --game <span class="st">&quot;cave story&quot;</span> bananasaurus_rex</a></code></pre></div>
+<pre><code class="language-sh">
+twitch-dl videos --game &quot;doom eternal&quot; --game &quot;cave story&quot; bananasaurus_rex
+</code></pre>
 <p>Enumere todos los videos del canal a la vez:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">twitch-dl</span> videos bananasaurus_rex --all</a></code></pre></div>
+<pre><code class="language-sh">
+twitch-dl videos bananasaurus_rex --all
+</code></pre>
 <p>Enumere todos los videos del canal en páginas de 10:</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">twitch-dl</span> videos bananasaurus_rex --pager</a></code></pre></div>
+<pre><code class="language-sh">
+twitch-dl videos bananasaurus_rex --pager
+</code></pre>
 <p>El tamaño de la página se puede ajustar pasando el número de elementos por página:</p>
-<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="ex">twitch-dl</span> videos bananasaurus_rex --pager 5</a></code></pre></div>
+<pre><code class="language-sh">
+twitch-dl videos bananasaurus_rex --pager 5
+</code></pre>
 <p>Devuelve todos los videos como una lista JSON. Útil para secuencias de comandos.</p>
-<p>twitch-dl videos bananasaurus_rex –json –all</p>
+<p>twitch-dl videos bananasaurus_rex --json --all</p>
 <h2 id="descargar-con-twitch-dl">Descargar con twitch-dl</h2>
 <p>Descargar un video o clip.</p>
-<div class="sourceCode" id="cb11" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">```</span> <span class="fu">bash</span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="ex">twitch-dl</span> download <span class="op">&lt;</span>video<span class="op">&gt;</span> [FLAGS] [OPTIONS]</a>
-<a class="sourceLine" id="cb11-3" title="3"><span class="kw">```</span></a></code></pre></div>
+<pre><code class="language-sh">
+``` bash
+twitch-dl download &lt;video&gt; [FLAGS] [OPTIONS]
+```
+</code></pre>
 <p>ID de video, slug de clip o URL</p>
 <ul>
-<li>-k, –keep &gt;&gt; No elimine los VOD y las listas de reproducción descargados después de la fusión.</li>
-<li>–no-join &gt;&gt; No ejecute ffmpeg para unirse a los vods descargados, implica –keep.</li>
-<li>–overwrite &gt;&gt; Sobrescriba el archivo de destino si ya existe sin preguntar.</li>
-<li>-w, –max-workers &gt;&gt; Número máximo de subprocesos para descargar vods al mismo tiempo (predeterminado 20)</li>
-<li>-s, –start &gt;&gt; Descargar video de este momento (hh:mm o hh:mm:ss)</li>
-<li>-e, –end &gt;&gt; Descargar video hasta este momento (hh:mm o hh:mm:ss)</li>
-<li>-f, –format &gt;&gt; Formato de video al que convertir, pasado a ffmpeg como la extensión de archivo de destino. Predeterminado a <code>mkv</code>.</li>
-<li>-q, –quality &gt;&gt; Calidad de video, por ejemplo, 720p. Configure en 'fuente' para obtener la mejor calidad.</li>
-<li>-o, –output &gt;&gt; Plantilla de nombre de archivo de salida. Ver documentos para más detalles.</li>
+<li>-k, --keep &gt;&gt; No elimine los VOD y las listas de reproducción descargados después de la fusión.</li>
+<li>--no-join &gt;&gt; No ejecute ffmpeg para unirse a los vods descargados, implica --keep.</li>
+<li>--overwrite &gt;&gt; Sobrescriba el archivo de destino si ya existe sin preguntar.</li>
+<li>-w, --max-workers &gt;&gt; Número máximo de subprocesos para descargar vods al mismo tiempo (predeterminado 20)</li>
+<li>-s, --start &gt;&gt; Descargar video de este momento (hh:mm o hh:mm:ss)</li>
+<li>-e, --end &gt;&gt; Descargar video hasta este momento (hh:mm o hh:mm:ss)</li>
+<li>-f, --format &gt;&gt; Formato de video al que convertir, pasado a ffmpeg como la extensión de archivo de destino. Predeterminado a <code class="verbatim">mkv</code>.</li>
+<li>-q, --quality &gt;&gt; Calidad de video, por ejemplo, 720p. Configure en 'fuente' para obtener la mejor calidad.</li>
+<li>-o, --output &gt;&gt; Plantilla de nombre de archivo de salida. Ver documentos para más detalles.</li>
 </ul>
 <h3 id="ejemplos">Ejemplos</h3>
 <p>Descargar un video por ID o URL:</p>
-<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">twitch-dl</span> download 221837124</a>
-<a class="sourceLine" id="cb12-2" title="2"><span class="ex">twitch-dl</span> download https://www.twitch.tv/videos/221837124</a></code></pre></div>
+<pre><code class="language-sh">
+twitch-dl download 221837124
+twitch-dl download https://www.twitch.tv/videos/221837124
+</code></pre>
 <p>Especifique la calidad del video para descargar para evitar un aviso:</p>
-<div class="sourceCode" id="cb13" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" title="1"><span class="ex">twitch-dl</span> download -q 720p 221837124</a></code></pre></div>
-<p>Ajuste de la calidad a =source=descargará la mejor calidad disponible:</p>
-<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="ex">twitch-dl</span> download -q source 221837124</a></code></pre></div>
-<p>Ajuste de la calidad a =audio_only=descargará solo audio:</p>
-<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="ex">twitch-dl</span> download -q audio_only 221837124</a></code></pre></div>
+<pre><code class="language-sh">
+twitch-dl download -q 720p 221837124
+</code></pre>
+<p>Ajuste de la calidad a <code class="verbatim">source</code>descargará la mejor calidad disponible:</p>
+<pre><code class="language-sh">
+twitch-dl download -q source 221837124
+</code></pre>
+<p>Ajuste de la calidad a <code class="verbatim">audio_only</code>descargará solo audio:</p>
+<pre><code class="language-sh">
+twitch-dl download -q audio_only 221837124
+</code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://twitch-dl.bezdomni.net/installation.html">Documentación de twitch-dl</a></li>
 <li><a href="https://twitch-dl.bezdomni.net/commands/download.html">twitch-dl download - twitch-dl Documentation</a></li>
 <li><a href="https://twitch-dl.bezdomni.net/commands/videos.html">twitch-dl videos - twitch-dl Documentation</a></li>
-</ul>
-<br>
 <p>Publicado por Angel el Tuesday 15 March del 2022</p>
-<br><br> 
 <p>También te puede interesar:</p>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

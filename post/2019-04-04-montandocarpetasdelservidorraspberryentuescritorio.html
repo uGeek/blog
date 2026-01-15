@@ -1,0 +1,96 @@
+<head>
+<title> Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:locale" content="es_ES" />
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil " />
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS" /> 
+<meta property="og:description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil " /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/sshfs.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-04-04-montandocarpetasdelservidorraspberryentuescritorio.html" />
+<meta name="twitter:title" content=" Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS" /> 
+<meta name="twitter:description" content="SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil " /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/sshfs.png" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+</head>
+<br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script>
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
+</script>
+<h1 id="montando-carpetas-del-servidor-raspberry-en-tu-escritorio-sshfs">Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS</h1>
+<p>Hay momentos que estás conectado remotamente vía SSH a tu servidor, Raspberry... y aunque cada vez conoces mejor la terminal y te mueves con total soltura por los directorios 😜,  te gustaría acceder a esas carpetas de un modo gráfico para hacer un copia-pega, arrastrar un archivo,...  tener tu carpeta remota montada en local, como si fuera una carpeta de tu propio PC o Portátil.</p>
+<p><img src="../images-blog/sshfs.png" /></p>
+<p>Esto nos lo va a permitir SSHFS, teniendo en la máquina remota un servidor SSH montado.</p>
+<p>SSHFS nos va a permitir montar una carpeta de un servidor, PC o Raspberry, en nuestro PC o portatíl y acceder a esta carpeta como si fuera una carpeta de nuestra PC o portátil. Para ello tenemos que seguir los siguientes pásos:</p>
+<ul>
+<li>Instalaremos sshfs</li>
+<li>Crear una <strong>carpeta vacía</strong>, donde montaremos la carpeta remota</li>
+<li>Mediante una línea de terminal montaremos y desmontaremos la carpeta cuando lo deseemos</li>
+<h2 id="instalación-en-la-máquina-local">Instalación en la máquina local</h2>
+<p>SSHFS, lo encontraremos en los repositorios de cualquier distro. En Ubuntu lo instalaremos así:</p>
+</ul>
+<p><code class="verbatim">sudo apt install sshfs</code></p>
+<p>En manjaro lo haremos con:</p>
+<p><code class="verbatim">sudo pacman -S sshfs</code></p>
+<h2 id="creando-la-carpeta-de-montaje">Creando la carpeta de montaje</h2>
+<p>En nuestro PC o portátil, crearemos una carpeta para el montaje, por ejemplo: ~/carpeta_montaje</p>
+<p><code class="verbatim">mkdir -p ~/carpeta_montaje</code></p>
+<h2 id="montar-carpeta">Montar carpeta</h2>
+<p>Vamos a montar la <strong>carpeta del servidor</strong> que deseemos montar el local, en mi caso la carpeta llamada <strong>carpeta_del_servidor</strong>, en la carpeta de mi portátil que he creado llamada <strong>carpeta_montaje</strong>. </p>
+<p>Sustituye <strong>usuario@192.168.1.100</strong>, por el usuario e IP del servidor que te vas a conectar.</p>
+<p>Ahora vamos a conectarnos con:</p>
+<p><code class="verbatim">sshfs usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code></p>
+<p>En caso de haber cambiado el puerto del servidor SSH, por ejemplo al 5555, nos conectaríamos así:</p>
+<p><code class="verbatim">sshfs -p 5555 usuario@192.168.1.100:/carpeta_del_servidor ~/carpeta_montaje</code></p>
+<h2 id="comprimir-la-conexión">Comprimir la conexión</h2>
+<p><code class="verbatim">sshfs miusuario@micomputadora:/ruta/remota /ruta/local -C -p 9876</code></p>
+<p>Aquí <strong>-C</strong> activa la compresión y <strong>-p 9876</strong> especifica el número de puerto. Hay más opciones disponibles que puedes consultar en la página del manual <strong>sshfs</strong>.</p>
+<h2 id="desmontar">Desmontar</h2>
+<p>Para desmontar la carpeta, introduciremos en la terminal <strong>fusermount -u</strong> seguido de la carpeta de montaje:</p>
+<p><code class="verbatim">fusermount -u ~/carpeta_montaje</code></p>
+<h2 id="conclusión">Conclusión</h2>
+<p>Esta es la base de algunos de los siguientes Post donde vamos a utilizar SSHFS. Hacia tiempo que no lo utilizaba, pero la verdad es que aunque a veces puede ir un poco lento, es muy cómodo para gestionar tus archivos de un modo gráfico desde tu escritorio.</p>
+<p>Publicado por Angel el Thursday 04 April del 2019</p>
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-05-06-ssh-eliminar-la-clave-del-host-en-un-servidor-remoto.html">SSH. Eliminar la clave del host en un servidor remoto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-11-enviar-llave-publica-al-servidor-ssh.html">Enviar llave pública al servidor SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-31-servidor-ssh-en-manjaro.html">Servidor SSH en Manjaro</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html">Tunel SSH para conectar puertos remotos como si fuera local</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html">Conectándote por SSH introduciendo la contraseña en una única línea de terminal</a></li>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

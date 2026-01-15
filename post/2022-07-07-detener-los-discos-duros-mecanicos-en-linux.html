@@ -1,100 +1,58 @@
 <head>
-<title>Detener los discos duros mecánicos en Linux. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Detener los discos duros mecánicos en Linux. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Detener los discos duros mecánicos en Linux" />
-<meta property="og:description" content="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:title" content="Detener los discos duros mecánicos en Linux" /> 
+<meta property="og:description" content="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2022-07-07-detener-los-discos-duros-mecanicos-en-linux.html" />
-
-<meta name="twitter:title" content="Detener los discos duros mecánicos en Linux" />
-<meta name="twitter:description" content="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene" />
+<meta name="twitter:title" content="Detener los discos duros mecánicos en Linux" /> 
+<meta name="twitter:description" content="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="detener-el-discos-duros-mecánicos-en-linux" title="Detener los discos duros mecánicos en Linux" data-export_file_name="detener-los-discos-duros-mecanicos-en-linux" data-description="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene" data-export_date="2022-07-07 05:15" data-category="hdd" data-tag="discos_duros" data-image="./images-blog/ugeek.png">Detener el discos duros mecánicos en Linux</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 466 palabras.    <a href="https://ugeek.github.io/blog/categories/hdd">hdd</a></h5>
+<h1 id="detener-el-discos-duros-mecánicos-en-linux">Detener el discos duros mecánicos en Linux</h1>
 <p>Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene un alto consumo de energía innecesario y deterioro de las piezas mecánicas.</p>
 <p> </p>
-<p>Los discos duros modernos ya incluyen un modo de espera precisamente para esta función. Hay discos como la serie <em><strong>Western Digital Green</strong></em> que el modo de espera de fábrica es o era de 8 segundos, esto reducía la vida del disco. </p>
+<p>Los discos duros modernos ya incluyen un modo de espera precisamente para esta función. Hay discos como la serie <em>1</em> que el modo de espera de fábrica es o era de 8 segundos, esto reducía la vida del disco. </p>
 <p> </p>
 <p>Así que como mínimo es recomendable un tiempo de espera de 30 segundos una vez hecha la lectura o escritura. No tiene sentido si vamos ha hacer lecturas y escrituras en un breve espacio de tiempo, tener que estar deteniendo el disco duro ya que reduce también su vida útil.</p>
 <p> </p>
 <p> </p>
-<h2 id="consumo-de-disco-duro-mecánico-de-2.5-en-una-raspberry-pi">Consumo de disco duro mecánico de 2.5 en una Raspberry Pi</h2>
+<h2 id="consumo-de-disco-duro-mecánico-de-25-en-una-raspberry-pi">Consumo de disco duro mecánico de 2.5 en una Raspberry Pi</h2>
 <p> </p>
 <ul>
 <li>3,5 (w) - 4 (w) = Raspberry Pi + SSD</li>
@@ -104,16 +62,24 @@ $("#tipue_search_input").tipuesearch();
 <p> </p>
 <h2 id="instalación-de-hdparm">Instalación de hdparm</h2>
 <p>Para instalar hdparm en Ubuntu , Debian y Raspberry OS</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install hdparm</a></code></pre></div>
+<pre><code class="language-sh">
+sudo apt install hdparm
+</code></pre>
 <h2 id="listar-discos-duros">Listar Discos Duros</h2>
 <p>Con este comando listaremos todos los discos duros, y así podremos decidir que disco pasaremos a estado <strong>sleep</strong> o <strong>standby</strong>.</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">lsblk</span> -nl <span class="kw">|</span> <span class="fu">grep</span> -i disk</a></code></pre></div>
+<pre><code class="language-sh">
+lsblk -nl | grep -i disk
+</code></pre>
 <p> </p>
 <h2 id="modo-sleep">Modo Sleep</h2>
 <p>Vamos a utilizar para pasar a modo sleep el disco <strong>sdb</strong>.</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> hdparm -Y /dev/sdb</a></code></pre></div>
+<pre><code class="language-sh">
+sudo hdparm -Y /dev/sdb
+</code></pre>
 <h2 id="modo-standby">Modo StandBy</h2>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> hdparm -y /dev/sdb</a></code></pre></div>
+<pre><code class="language-sh">
+sudo hdparm -y /dev/sdb
+</code></pre>
 <p> </p>
 <h2 id="modo-de-espera">Modo de espera</h2>
 <p>También es posible modificar el modo de espera del disco. Para ello utilizaremos la opción <strong>-s</strong> seguida de los minutos en que deseamos que entre el modo espera. </p>
@@ -125,32 +91,42 @@ $("#tipue_search_input").tipuesearch();
 <p>El tiempo máximo y mínimo va de 1-255 minutos.</p>
 <p> </p>
 <h3 id="desactivar-el-modo-de-espera">Desactivar el modo de espera</h3>
-<p>Para desactivar el modo espera, utilizaremos la opción <code>-s 0</code></p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> hdparm -s 0 /dev/sdb</a></code></pre></div>
+<p>Para desactivar el modo espera, utilizaremos la opción <code class="verbatim">-s 0</code></p>
+<pre><code class="language-sh">
+sudo hdparm -s 0 /dev/sdb
+</code></pre>
 <p> </p>
 <h3 id="activar-modo-espera">Activar modo espera</h3>
-<p>Para activar el modo espera, utilizaremos la opción <code>-s 1</code></p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">sudo</span> hdparm --yes-i-know-what-i-am-doing -s 1 /dev/sdb</a></code></pre></div>
-<p>La opción <code>--yes-i-know-what-i-am-doing</code> es necesaria añadirla para una verificación de compatibilidad modo espera adicional de la BIOS y el firmware del disco duro</p>
+<p>Para activar el modo espera, utilizaremos la opción <code class="verbatim">-s 1</code></p>
+<pre><code class="language-sh">
+sudo hdparm --yes-i-know-what-i-am-doing -s 1 /dev/sdb
+</code></pre>
+<p>La opción <code class="verbatim">--yes-i-know-what-i-am-doing</code> es necesaria añadirla para una verificación de compatibilidad modo espera adicional de la BIOS y el firmware del disco duro</p>
 <p> </p>
 <h2 id="comprobar-el-estado-en-el-que-está-el-disco-duro">Comprobar el estado en el que está el disco duro</h2>
 <p> </p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">sudo</span> hdparm -C /dev/sdb</a></code></pre></div>
+<pre><code class="language-sh">
+sudo hdparm -C /dev/sdb
+</code></pre>
 <p> </p>
 <p> </p>
 <h3 id="instalación-y-comprobación-del-disco-con-smartmontools">Instalación y comprobación del disco con smartmontools</h3>
 <p>Otro modo de tener información del disco es instalar el paquete smartmontools.</p>
 <p>La instalación la haremos con:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">sudo</span> apt install smartmontools</a></code></pre></div>
+<pre><code class="language-sh">
+sudo apt install smartmontools
+</code></pre>
 <p> </p>
 <h3 id="comprobar-el-estado">Comprobar el estado</h3>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">sudo</span> smartctl -i -n standby /dev/sdb</a></code></pre></div>
+<pre><code class="language-sh">
+sudo smartctl -i -n standby /dev/sdb
+</code></pre>
 <p> </p>
-<br>
 <p>Publicado por Angel el Thursday 07 July del 2022</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-07-07-detener-los-discos-duros-mecanicos-en-linux.html">Detener los discos duros mecánicos en Linux</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

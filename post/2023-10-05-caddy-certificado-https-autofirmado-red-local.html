@@ -1,100 +1,62 @@
 <head>
-<title>Caddy. Certificado https autofirmado red local. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Caddy. Certificado https autofirmado red local. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
-<meta name="description" content="Hay servicios como Vaultwarden o floccus que necesitan una conexión 2023-10-05-caddy-certificado-https-autofirmado-red-local.org para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="Hay servicios como Vaultwarden o floccus que necesitan una conexión *https* para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" />
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Caddy. Certificado https autofirmado red local" />
-<meta property="og:description" content="Hay servicios como Vaultwarden o floccus que necesitan una conexión 2023-10-05-caddy-certificado-https-autofirmado-red-local.org para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:title" content="Caddy. Certificado https autofirmado red local" /> 
+<meta property="og:description" content="Hay servicios como Vaultwarden o floccus que necesitan una conexión *https* para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html" />
-
-<meta name="twitter:title" content="Caddy. Certificado https autofirmado red local" />
-<meta name="twitter:description" content="Hay servicios como Vaultwarden o floccus que necesitan una conexión 2023-10-05-caddy-certificado-https-autofirmado-red-local.org para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" />
+<meta name="twitter:title" content="Caddy. Certificado https autofirmado red local" /> 
+<meta name="twitter:description" content="Hay servicios como Vaultwarden o floccus que necesitan una conexión *https* para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="caddy.-certificado-https-autofirmado-red-local-1" title="Caddy. Certificado https autofirmado red local" data-export_file_name="caddy-certificado-https-autofirmado-red-local" data-description="Hay servicios como Vaultwarden o floccus que necesitan una conexión *https* para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo" data-export_date="2023-10-05 07:39" data-category="caddy" data-tag="proxy" data-image="./images-blog/ugeek.png">Caddy. Certificado https autofirmado red local</h1>
-<h5>Tiempo estimado de lectura: 5 minutos. 550 palabras.    <a href="https://ugeek.github.io/blog/categories/caddy">caddy</a></h5>
+<h1 id="caddy-certificado-https-autofirmado-red-local">Caddy. Certificado https autofirmado red local</h1>
 <p>Hay servicios como Vaultwarden o floccus que necesitan una conexión <strong>https</strong> para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo accesibles en red local pero con la conexiones cifradas.</p>
 <p>Voy a mostrarte como crear un certificado autofirmado para utilizarlo con Caddy y mediante proxy inverso habilitar a cualquier servicio la conexión https.</p>
 <h2 id="genera-un-certificado-autofirmado">Genera un certificado autofirmado</h2>
 <p>Puedes generar un certificado autofirmado utilizando OpenSSL.</p>
 <p>Ejecuta el siguiente comandos en tu terminal:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">openssl</span> req -x509 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificado.crt</a></code></pre></div>
+<pre><code class="language-sh">
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificado.crt
+</code></pre>
 <p>Puedes ampliar mucho más días 9999 (27 años, 4 meses y 9 días) para despreocuparte con:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">openssl</span> req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout privateKey.key -out certificado.crt</a></code></pre></div>
+<pre><code class="language-sh">
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout privateKey.key -out certificado.crt
+</code></pre>
 <p>Te hará una serie de preguntas <strong>que se tienen que responder para que Caddy no de ningún error</strong>:</p>
 <p>A continuación, te muestro un ejemplo:</p>
 <ol>
@@ -131,7 +93,7 @@ $("#tipue_search_input").tipuesearch();
 <li><strong>Common Name (eg, fully qualified host name):</strong></li>
 </ol>
 <ul>
-<li>Respuesta: Aquí debes proporcionar el nombre de dominio o dirección IP para la que se emitirá el certificado. Si estás generando un certificado para uso local o pruebas, puedes usar <code>localhost</code> o la dirección IP local. También como ejemplo: xxx</li>
+<li>Respuesta: Aquí debes proporcionar el nombre de dominio o dirección IP para la que se emitirá el certificado. Si estás generando un certificado para uso local o pruebas, puedes usar <code class="verbatim">localhost</code> o la dirección IP local. También como ejemplo: xxx</li>
 </ul>
 <ol>
 <li><strong>Email Address:</strong></li>
@@ -142,14 +104,16 @@ $("#tipue_search_input").tipuesearch();
 <p>Esto generará un par de claves y un certificado autofirmado válido por los días que hayamos especificado. (privateKey.key y certificado.crt)</p>
 <h2 id="añadiendo-a-caddyfile">Añadiendo a Caddyfile</h2>
 <p>Añade en tu <strong>Caddyfile</strong>:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">reverse_proxy</span> http://192.168.1.100:88</a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="ex">tls</span> /config/certificado.crt /config/privateKey.key</a>
-<a class="sourceLine" id="cb3-3" title="3">}</a></code></pre></div>
-<p>En este ejemplo he utilizado para guardar los certificados la ruta <code>/config</code>.</p>
+<pre><code class="language-sh">
+reverse_proxy http://192.168.1.100:88
+tls /config/certificado.crt /config/privateKey.key
+}
+</code></pre>
+<p>En este ejemplo he utilizado para guardar los certificados la ruta <code class="verbatim">/config</code>.</p>
 <p><strong>Reinicia caddy</strong>.</p>
 <p>Accede a tu sitio web a través de HTTPS:</p>
 <ul>
-<li>Abre tu navegador y navega a <code>https://ip-del-servidor:4444</code>.</li>
+<li>Abre tu navegador y navega a <code class="verbatim">https://ip-del-servidor:4444</code>.</li>
 <li>Deberías poder acceder a tu servicio a través de HTTPS utilizando el certificado autofirmado.</li>
 </ul>
 <p>Recuerda que los certificados autofirmados no son confiables para los navegadores, pero funcionarán dentro de tu red local.</p>
@@ -158,21 +122,24 @@ $("#tipue_search_input").tipuesearch();
 <h3 id="revisar-si-los-certificados-son-correctos">Revisar si los certificados son correctos</h3>
 <p>Comprueba si los archivos de certificado y clave privada son válidos:</p>
 <ul>
-<li><p>Verifica que los archivos contengan certificados y claves privadas válidos en formato PEM.</p></li>
-<li><p>Puedes usar el siguiente comando para verificar si los archivos son válidos:</p></li>
+<li>Verifica que los archivos contengan certificados y claves privadas válidos en formato PEM.</li>
 </ul>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="co">#+</span><span class="re">BEGIN</span><span class="co">_SRC </span></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="ex">openssl</span> x509 -in /config/certificado.crt -text</a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="ex">openssl</span> rsa -in /config/privateKey.key -check</a></code></pre></div>
-<p>#+END_SRC</p>
+<ul>
+<li>Puedes usar el siguiente comando para verificar si los archivos son válidos:</li>
+</ul>
+<pre><code class="language-sh">
+
+<pre><code>
+openssl x509 -in /config/certificado.crt -text
+openssl rsa -in /config/privateKey.key -check
+</code></pre>
+</code></pre>
 <h2 id="comprobar-el-tiempo-para-que-caduquen-los-certificados">Comprobar el tiempo para que caduquen los certificados</h2>
 <p>Para conocer cuanto tiempo le queda a nuestro certificado:</p>
-<pre><code>openssl x509 -enddate -noout -in certificado.crt
+<pre><code>
+ openssl x509 -enddate -noout -in certificado.crt
 </code></pre>
-<br>
 <p>Publicado por Angel el Thursday 05 October del 2023</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-04-07-caddy-evitar-que-los-motores-de-busqueda-indexen-tu-servicio.html">Caddy. Evitar que los motores de búsqueda indexen tu servicio</a></li>
@@ -181,5 +148,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-11-07-docker-monta-tu-propio-servidor-de-mensajeria-ejabberd--xmpp.html">Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-03-25-convierte-archivos-crt-y-key-en-archivos-pem.html">Convierte archivos .crt y .key en archivos .pem</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-19-proxy-inverso-con-caddy.html">Proxy Inverso con Caddy</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

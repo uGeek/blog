@@ -1,0 +1,93 @@
+<head>
+<title>Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:locale" content="es_ES" />
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente." />
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic" /> 
+<meta property="og:description" content="Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jamstash.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-08-dockerjamstashclientedesubsonic.html" />
+<meta name="twitter:title" content="Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic" /> 
+<meta name="twitter:description" content="Si tienes el servidor de música *Supysonic*, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de *Subsonic*, quizás quieras utilizar el navegador web como cliente." /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/jamstash.png" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+</head>
+<br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script>
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
+</script>
+<h1 id="docker-jamstash-cliente-de-subsonic-supysonic-airsonic">Docker: Jamstash. Cliente de Subsonic, Supysonic, Airsonic</h1>
+<p>Si tienes el servidor de música <strong>Supysonic</strong>, Subsonic, Airsonic,... Cualquiera de los servidores que utilizan la api de <strong>Subsonic</strong>, quizás quieras utilizar el navegador web como cliente.</p>
+<p>Jamstash es un proyecto que pretende el tener un cliente de Subsonic en tu navegador web, instalable en Google Chrome <a href="https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc">a través de su tienda de aplicaciones</a>.</p>
+<p><img src="../images-blog/jamstash.png" /></p>
+<p>Aprovechando el código de la aplicación disponible en GitHub, he montado un contenedor partiendo de un Alpine Linux y un servidor de Nginx. </p>
+<p>Este cliente permite el reproducir, crear listas, añadir a favoritos, descargar canciones, etc...</p>
+<p><img src="../images-blog/jamstash2.png" /></p>
+<p>Vamos a ver como montar el contenedor</p>
+<h2 id="docker-para-raspberry-o-arm">Docker para Raspberry o ARM</h2>
+<pre><code>
+docker run --name jamstash -d -p 80:80 ugeek/jamstash:arm
+</code></pre>
+<h2 id="docker-para-amd64">Docker para amd64</h2>
+<pre><code>
+docker run --name jamstash -d -p 80:80 ugeek/jamstash:amd64
+</code></pre>
+<h2 id="uso-de-jamstash">Uso de Jamstash</h2>
+<p>Para utilizar el cliente Jamstash, según la línea del ejemplo anterior, corre por el puesto <strong>80</strong>. Podemos personalizar el puerto cambiando a un puerto libre disponible.</p>
+<p>Aquí utilizariamos el puerto 90.</p>
+<pre><code>
+-p 90:80
+</code></pre>
+<p>Siguiendo este nuevo ejemplo, nos conectaríamos desde nuestro navegador web a <a href="http://tu_ip:90">http://tu_ip:90</a></p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="http://jamstash.com">http://jamstash.com</a></li>
+<li><a href="https://github.com/tsquillario/Jamstash">https://github.com/tsquillario/Jamstash</a></li>
+<li><a href="https://github.com/uGeek/docker-jamstash">https://github.com/uGeek/docker-jamstash</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc">https://chrome.google.com/webstore/detail/jamstash/jccdpflnecheidefpofmlblgebobbloc</a></li>
+</ul>
+<p>Publicado por Angel el Tuesday 08 October del 2019</p>
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-29-flatnotes.html">Docker. Flatnotes tomando notas en markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-22-directorio-stfolder.html">Solución a Errores con Syncthing</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

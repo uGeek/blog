@@ -1,169 +1,129 @@
 <head>
-<title>Mi servidor de música con WebDAV. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Mi servidor de música con WebDAV. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Mi servidor de música con WebDAV" />
-<meta property="og:description" content="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
+<meta property="og:title" content="Mi servidor de música con WebDAV" /> 
+<meta property="og:description" content="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-10-02-mi-servidor-de-musica-con-webdav.html" />
-
-<meta name="twitter:title" content="Mi servidor de música con WebDAV" />
-<meta name="twitter:description" content="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos." />
+<meta name="twitter:title" content="Mi servidor de música con WebDAV" /> 
+<meta name="twitter:description" content="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="mi-servidor-de-música-con-webdav-1" title="Mi servidor de música con WebDAV" data-export_file_name="mi-servidor-de-musica-con-webdav" data-description="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos." data-export_date="2021-10-02 22:00" data-category="webdav" data-tag="musica" data-image="./images-blog/dav.png">Mi servidor de música con WebDAV</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 487 palabras.    <a href="https://ugeek.github.io/blog/categories/webdav">webdav</a></h5>
+<h1 id="mi-servidor-de-música-con-webdav">Mi servidor de música con WebDAV</h1>
 <p>Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos.</p>
-<center>
 <p><img src="../images-blog/dav.png" /></p>
-</center>
-<p>El motivo es sencillo, el servidor WebDAV no tiene base de datos y en mis servidores de música estaba utilizando <strong>rclone</strong> para montar una nube pública cifrada. En este caso, rclone mediante el comando <code>rclone serve</code> se encarga de servir por WebDAV los archivos de audio y además, utiliza de un modo directo la nube pública cifrada.</p>
+<p>El motivo es sencillo, el servidor WebDAV no tiene base de datos y en mis servidores de música estaba utilizando <strong>rclone</strong> para montar una nube pública cifrada. En este caso, rclone mediante el comando <code class="verbatim">rclone serve</code> se encarga de servir por WebDAV los archivos de audio y además, utiliza de un modo directo la nube pública cifrada.</p>
 <h2 id="docker-compose">Docker-Compose</h2>
 <h3 id="servidor">Servidor</h3>
 <p>Para crear el servidor WebDAV de música:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">rclone-webdav-server-music</span>:</a>
-<a class="sourceLine" id="cb1-2" title="2">  <span class="ex">container_name</span>: webdav-musica</a>
-<a class="sourceLine" id="cb1-3" title="3">  <span class="ex">image</span>: rclone/rclone</a>
-<a class="sourceLine" id="cb1-4" title="4">  <span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb1-5" title="5">     <span class="ex">-</span> 80:80</a>
-<a class="sourceLine" id="cb1-6" title="6">  <span class="ex">command</span>:</a>
-<a class="sourceLine" id="cb1-7" title="7">     <span class="ex">-</span> <span class="st">&quot;--config&quot;</span></a>
-<a class="sourceLine" id="cb1-8" title="8">     <span class="ex">-</span> <span class="st">&quot;/root/.config/rclone/rclone.conf&quot;</span></a>
-<a class="sourceLine" id="cb1-9" title="9">     <span class="ex">-</span> <span class="st">&quot;--verbose&quot;</span></a>
-<a class="sourceLine" id="cb1-10" title="10">     <span class="ex">-</span> <span class="st">&quot;serve&quot;</span></a>
-<a class="sourceLine" id="cb1-11" title="11">     <span class="ex">-</span> <span class="st">&quot;webdav&quot;</span></a>
-<a class="sourceLine" id="cb1-12" title="12">     <span class="ex">-</span> <span class="st">&quot;drive:Musica/mp3&quot;</span></a>
-<a class="sourceLine" id="cb1-13" title="13">     <span class="ex">-</span> <span class="st">&quot;--addr&quot;</span></a>
-<a class="sourceLine" id="cb1-14" title="14">     <span class="ex">-</span> <span class="st">&quot;0.0.0.0:80&quot;</span></a>
-<a class="sourceLine" id="cb1-15" title="15">     <span class="ex">-</span> <span class="st">&quot;--htpasswd&quot;</span>   </a>
-<a class="sourceLine" id="cb1-16" title="16">     <span class="ex">-</span> <span class="st">&quot;/root/.config/rclone/htpasswd-wdm&quot;</span>  </a>
-<a class="sourceLine" id="cb1-17" title="17">     <span class="ex">-</span> <span class="st">&quot;--read-only&quot;</span>                                <span class="al">###</span><span class="co"> Directorio de solo lectura</span></a>
-<a class="sourceLine" id="cb1-18" title="18">     <span class="ex">-</span> <span class="st">&quot;--disable-dir-list&quot;</span>                         <span class="al">###</span><span class="co"> Deshabilitar el listado en navegadores web</span></a>
-<a class="sourceLine" id="cb1-19" title="19">  <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-20" title="20">     <span class="ex">-</span> <span class="va">$HOME</span>/.config/rclone:/root/.config/rclone/:ro</a>
-<a class="sourceLine" id="cb1-21" title="21">  <span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb1-22" title="22">     <span class="ex">-</span> TZ=Europe/Madrid</a>
-<a class="sourceLine" id="cb1-23" title="23">  <span class="ex">restart</span>: unless-stopped</a></code></pre></div>
+<pre><code class="language-sh">
+    rclone-webdav-server-music:
+      container_name: webdav-musica
+      image: rclone/rclone
+      ports:
+         - 80:80
+      command:
+         - &quot;--config&quot;
+         - &quot;/root/.config/rclone/rclone.conf&quot;
+         - &quot;--verbose&quot;
+         - &quot;serve&quot;
+         - &quot;webdav&quot;
+         - &quot;drive:Musica/mp3&quot;
+         - &quot;--addr&quot;
+         - &quot;0.0.0.0:80&quot;
+         - &quot;--htpasswd&quot;   
+         - &quot;/root/.config/rclone/htpasswd-wdm&quot;  
+         - &quot;--read-only&quot;                                ### Directorio de solo lectura
+         - &quot;--disable-dir-list&quot;                         ### Deshabilitar el listado en navegadores web
+      volumes:
+         - $HOME/.config/rclone:/root/.config/rclone/:ro
+      environment:
+         - TZ=Europe/Madrid
+      restart: unless-stopped
+</code></pre>
 <h3 id="montar-nuestro-servidor">Montar nuestro servidor</h3>
 <p>Montar también con rclone el servidor WebDAV para acceder a toda tu música y reproducirla con tu reproductor de escritorio favorito:</p>
-<p>Monto en el directorio <code>/media</code> todo el contenido de mi servidor <code>webdav-musica</code>. Recuerda cambiar la ruta donde tienes el archivo de configuración de rclone.</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">version</span>: <span class="st">&quot;3.7&quot;</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="ex">services</span>:</a>
-<a class="sourceLine" id="cb2-3" title="3">  <span class="ex">rclone_mount</span>:</a>
-<a class="sourceLine" id="cb2-4" title="4">    <span class="ex">image</span>: rclone/rclone</a>
-<a class="sourceLine" id="cb2-5" title="5">    <span class="ex">container_name</span>: webdav-musica</a>
-<a class="sourceLine" id="cb2-6" title="6">    <span class="ex">restart</span>: unless-stopped</a>
-<a class="sourceLine" id="cb2-7" title="7">    <span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb2-8" title="8">      <span class="ex">-</span> PUID=1001</a>
-<a class="sourceLine" id="cb2-9" title="9">      <span class="ex">-</span> PGID=1001</a>
-<a class="sourceLine" id="cb2-10" title="10">    <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb2-11" title="11">      <span class="ex">-</span> /etc/passwd:/etc/passwd:ro</a>
-<a class="sourceLine" id="cb2-12" title="12">      <span class="ex">-</span> /etc/group:/etc/group:ro</a>
-<a class="sourceLine" id="cb2-13" title="13">      <span class="ex">-</span> /media:/data:shared                            <span class="al">###</span><span class="co"> Directorio donde montaremos la música</span></a>
-<a class="sourceLine" id="cb2-14" title="14">      <span class="ex">-</span> /home/angel/.config/rclone/:/config/rclone     <span class="al">###</span><span class="co"> Cambia el archivo de configuración</span></a>
-<a class="sourceLine" id="cb2-15" title="15">    <span class="ex">cap_add</span>:</a>
-<a class="sourceLine" id="cb2-16" title="16">      <span class="ex">-</span> SYS_ADMIN</a>
-<a class="sourceLine" id="cb2-17" title="17">    <span class="ex">devices</span>:</a>
-<a class="sourceLine" id="cb2-18" title="18">      <span class="ex">-</span> /dev/fuse</a>
-<a class="sourceLine" id="cb2-19" title="19">    <span class="ex">security_opt</span>:</a>
-<a class="sourceLine" id="cb2-20" title="20">      <span class="ex">-</span> apparmor:unconfined</a>
-<a class="sourceLine" id="cb2-21" title="21">    <span class="ex">command</span>: <span class="st">&quot;mount webdav-musica:  /data   --allow-other&quot;</span></a></code></pre></div>
+<p>Monto en el directorio <code class="verbatim">/media= todo el contenido de mi servidor =webdav-musica</code>. Recuerda cambiar la ruta donde tienes el archivo de configuración de rclone.</p>
+<pre><code class="language-sh">
+    version: &quot;3.7&quot;
+    services:
+      rclone_mount:
+        image: rclone/rclone
+        container_name: webdav-musica
+        restart: unless-stopped
+        environment:
+          - PUID=1001
+          - PGID=1001
+        volumes:
+          - /etc/passwd:/etc/passwd:ro
+          - /etc/group:/etc/group:ro
+          - /media:/data:shared                            ### Directorio donde montaremos la música
+          - /home/angel/.config/rclone/:/config/rclone     ### Cambia el archivo de configuración
+        cap_add:
+          - SYS_ADMIN
+        devices:
+          - /dev/fuse
+        security_opt:
+          - apparmor:unconfined
+        command: &quot;mount webdav-musica:  /data   --allow-other&quot;
+</code></pre>
 <h2 id="crear-listas-de-reproducción">Crear listas de reproducción</h2>
 <h3 id="dentro-del-directorio">Dentro del directorio</h3>
-<p>Para crear listas en <strong><strong>m3u8</strong></strong>, tan sencillo como situarte dentro del directorio donde estén las canciones que queremos crear la playlist y ejecutar el siguiente comando:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">find</span> . <span class="kw">|</span> <span class="fu">grep</span> mp3 <span class="op">&gt;</span> list.m3u8</a></code></pre></div>
+<p>Para crear listas en <strong>*m3u8</strong>*, tan sencillo como situarte dentro del directorio donde estén las canciones que queremos crear la playlist y ejecutar el siguiente comando:</p>
+<pre><code class="language-sh">
+find . | grep mp3 &gt; list.m3u8
+</code></pre>
 <p>De modo recursivo irá creando una playlist con todas las canciones.</p>
 <p>Con tu editor favorito elimina aquellas que no quieras en la playlist.</p>
 <p>Si ejecutas el comando desde la raíz del servidor, hará una playlist de todo el servidor, con todas tus canciones.</p>
 <h2 id="aplicaciones-móviles">Aplicaciones móviles</h2>
 <h3 id="android">Android</h3>
 <ul>
-<li><a href="https://play.google.com/store/apps/details?id=com.devmaru.audio&amp;hl=es&amp;gl=US">MARU Audio - Cloud &amp; Offline Folder Music Player - Aplicaciones en Google Play</a></li>
-<li><a href="https://play.google.com/store/apps/details?id=app.beer&amp;hl=es&amp;gl=US">X-Cloud Player - Cloud Streaming Music Player - Aplicaciones en Google Play</a></li>
-<li><a href="https://play.google.com/store/apps/details?id=com.techsoftpl.musicplayer&amp;hl=es&amp;gl=US">Soumi: Network Music Player - Aplicaciones en Google Play</a></li>
-<li><a href="https://play.google.com/store/apps/details?id=com.cloudbeats&amp;hl=es&amp;gl=US">CloudBeats - offline &amp; cloud music player - Aplicaciones en Google Play</a></li>
+<li><a href="https://play.google.com/store/apps/details?id6US">MARU Audio - Cloud &amp; Offline Folder Music Player - Aplicaciones en Google Play</a></li>
+<li><a href="https://play.google.com/store/apps/details?id8US">X-Cloud Player - Cloud Streaming Music Player - Aplicaciones en Google Play</a></li>
+<li><a href="https://play.google.com/store/apps/details?id10US">Soumi: Network Music Player - Aplicaciones en Google Play</a></li>
+<li><a href="https://play.google.com/store/apps/details?id12US">CloudBeats - offline &amp; cloud music player - Aplicaciones en Google Play</a></li>
 </ul>
 <h3 id="ios">IOS</h3>
 <ul>
 <li><a href="https://decoupled.app/">https://decoupled.app/</a></li>
 </ul>
-<br>
 <p>Publicado por Angel el Saturday 02 October del 2021</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html">Kodbox con mariadb</a></li>
@@ -176,5 +136,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html">Servidor WebDAV con rclone, con nube público o privada</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

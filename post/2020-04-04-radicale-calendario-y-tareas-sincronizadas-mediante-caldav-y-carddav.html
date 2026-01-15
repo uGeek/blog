@@ -1,156 +1,122 @@
 <head>
-<title>Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV" />
-<meta property="og:description" content="Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/radicale.svg" />
+<meta property="og:title" content="Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV" /> 
+<meta property="og:description" content="Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/radicale.svg" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html" />
-
-<meta name="twitter:title" content="Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV" />
-<meta name="twitter:description" content="Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV." />
+<meta name="twitter:title" content="Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV" /> 
+<meta name="twitter:description" content="Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/radicale.svg" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="radicale.-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav-1" title="Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV" data-export_file_name="radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav" data-description="Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV." data-export_date="2020-04-04 17:30" data-category="tareas" data-tag="calendario,caldav,carddav,raspberry" data-image="./images-blog/radicale.svg">Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 385 palabras.    <a href="https://ugeek.github.io/blog/categories/tareas">tareas</a></h5>
+<h1 id="radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav">Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</h1>
 <p>Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV.</p>
-<center>
 <p><img src="../images-blog/radicale.svg" /></p>
-</center>
 <p>La configuración recomendada para el uso de producción es servir a Apache en todo el sistema a través de uWSGI con autenticación basada en Apache</p>
 <p>Vamos a instalarlo mediante docker en nuestra Raspberry Pi o servidor ARM.</p>
 <h2 id="docker-para-arm-y-raspberry">Docker para ARM y Raspberry</h2>
-<pre><code>docker create --name radicale -p 5232:5232 -v $HOME/docker/radicale:/data/radicale/collections  ugeek/radicale:arm
+<pre><code>
+docker create --name radicale -p 5232:5232 -v $HOME/docker/radicale:/data/radicale/collections  ugeek/radicale:arm
 </code></pre>
 <h2 id="docker-para-amd64">Docker para amd64</h2>
-<pre><code>docker create --name radicale -p 5232:5232 -v $HOME/docker/radicale:/data/radicale/collections  ugeek/radicale:amd64
+<pre><code>
+docker create --name radicale -p 5232:5232 -v $HOME/docker/radicale:/data/radicale/collections  ugeek/radicale:amd64
 </code></pre>
 <h2 id="crear-usuarios">Crear usuarios</h2>
 <p>Los usuarios están en el archivos:</p>
-<pre><code>docker exec  -it radicale vi /data/radicale/users
+<pre><code>
+docker exec  -it radicale vi /data/radicale/users
 </code></pre>
 <p>La estructura del archivo de configuración es:</p>
-<pre><code>usuario1:contraseña
+<pre><code>
+usuario1:contraseña
 usuario2:contraseña
 </code></pre>
 <p>En este archivo encontraremos:</p>
-<pre><code>admin:$apr1$zuGWuE98$ZqFt7FKv8yROElvQy9.wh1
+<pre><code>
+admin:$apr1$zuGWuE98$ZqFt7FKv8yROElvQy9.wh1
 </code></pre>
 <p>que corresponde a:</p>
 <ul>
 <li>usuario:admin</li>
 <li>contraseña:admin</li>
 </ul>
-<p>En la contraseña vemos que hay una combinación de numero, letras, símbolos… Esto es debido a que esta contraseña está cifrada en md5.</p>
-<p>Los cifrados mas seguros disponibles para la contraseña son <code>md5</code>, <code>bcrypt</code>.</p>
-<p>También podemos optar por poner la contraseña en texto plano <code>plain</code>, pero esto sería inseguro si alguien accede al interior de nuestro servidor.</p>
+<p>En la contraseña vemos que hay una combinación de numero, letras, símbolos... Esto es debido a que esta contraseña está cifrada en md5.</p>
+<p>Los cifrados mas seguros disponibles para la contraseña son <code class="verbatim">md5=, =bcrypt</code>.</p>
+<p>También podemos optar por poner la contraseña en texto plano <code class="verbatim">plain</code>, pero esto sería inseguro si alguien accede al interior de nuestro servidor.</p>
 <p>Para cambiar el tipo de cifrado o ponerlo en texto plano, accederemos al siguiente archivo de configuración:</p>
-<pre><code>docker exec  -it radicale vi /etc/radicale/config
+<pre><code>
+docker exec  -it radicale vi /etc/radicale/config
 </code></pre>
 <p>Voy poner que esté en texto plano:</p>
-<pre><code>[auth]
+<pre><code>
+[auth]
 type = htpasswd
 htpasswd_filename = /data/radicale/users
 htpasswd_encryption = plain
 </code></pre>
 <p>Accedemos nuevamente al archivo de configuración</p>
-<pre><code>docker exec  -it radicale vi /data/radicale/users
+<pre><code>
+docker exec  -it radicale vi /data/radicale/users
 </code></pre>
 <p>Ahora voy a cambiarlo por usuario:angel password:1234 y el usuario:juan password:4321</p>
-<pre><code>angel:1234
+<pre><code>
+angel:1234
 juan:4321
 </code></pre>
 <p>Para que todos esto cambios tengan efecto, tendremos que reiniciar el docker</p>
-<pre><code>docker restart radicale
+<pre><code>
+docker restart radicale
 </code></pre>
 <h2 id="descarga-un-backup">Descarga un Backup</h2>
-<pre><code>wget -c -r -l 1 -nc --user=&#39;[myuser]&#39; --password=&#39;[mypassword]&#39; --accept=ics &#39;[url]&#39;
+<pre><code>
+wget -c -r -l 1 -nc --user='[myuser]' --password='[mypassword]' --accept=ics '[url]'
 </code></pre>
 <h2 id="ayuda">Ayuda</h2>
-<pre><code>radicale --help
+<pre><code>
+radicale --help
 </code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://radicale.org">https://radicale.org</a></li>
 <li><a href="https://hub.docker.com/u/ugeek">https://hub.docker.com/u/ugeek</a></li>
 </ul>
-<br>
 <p>Publicado por Angel el Saturday 04 April del 2020</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2021-10-20-rctodosync-comparte-tareas-del-todo-txt-por-contextos-proyectos-o-palabras.html">rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</a></li>
@@ -163,5 +129,7 @@ juan:4321
 <li><a href="https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html">Radicale. Calendario y Tareas sincronizadas mediante CalDAV y CardDAV</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-04-01-etesync-tareas-contactos-y-agendas-sincronizadas-de-extremo-a-extremo.html">EteSync. Tareas, Contactos y Calendarios, sincronizadas de extremo a extremo</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,148 +1,110 @@
 <head>
-<title>Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" />
-<meta property="og:description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" />
+<meta property="og:title" content="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" /> 
+<meta property="og:description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-16-docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home.html" />
-
-<meta name="twitter:title" content="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" />
-<meta name="twitter:description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" />
+<meta name="twitter:title" content="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" /> 
+<meta name="twitter:description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home-1" title="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home" data-export_file_name="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home" data-description="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que" data-export_date="2021-04-16 18:50 2021-05-02" data-category="docker" data-tag="AdGuard,Pi-Hole" data-image="./images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 499 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h1 id="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home">Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1>
 <p>Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente.</p>
-<p>Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc…</p>
-<center>
+<p>Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc...</p>
 <p><img src="../images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" /></p>
-</center>
-<p>Como explicaba al principio, esto es ideal por si tienes hijos, en empresas,… si están muy enganchados a WhatsApp, Facebook y Twitter, por ejemplo, puedes caparle e acceso a estos servicios, permitiendo el resto.</p>
+<p>Como explicaba al principio, esto es ideal por si tienes hijos, en empresas,... si están muy enganchados a WhatsApp, Facebook y Twitter, por ejemplo, puedes caparle e acceso a estos servicios, permitiendo el resto.</p>
 <p>Eso si, como puedes filtrar por usuarios, tu como administrador puedes decidir quien tiene acceso a cada que.</p>
 <p>Vamos a crear un docker con AdGuard.</p>
 <h2 id="docker-compose">Docker-compose</h2>
-<p>Podemos instalar AdGuard Home en cualquiera de las arquitecturas, x86-64, arm, arm64, … del siguiente modo gracias a docker-compose.</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">adguard</span>:</a>
-<a class="sourceLine" id="cb1-2" title="2">    <span class="ex">container_name</span>: adguard </a>
-<a class="sourceLine" id="cb1-3" title="3">    <span class="ex">image</span>: adguard/adguardhome:latest</a>
-<a class="sourceLine" id="cb1-4" title="4">    <span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb1-5" title="5">      <span class="ex">-</span> <span class="st">&#39;53:53/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-6" title="6">      <span class="ex">-</span> <span class="st">&#39;53:53/udp&#39;</span></a>
-<a class="sourceLine" id="cb1-7" title="7">      <span class="ex">-</span> <span class="st">&#39;67:67/udp&#39;</span></a>
-<a class="sourceLine" id="cb1-8" title="8">      <span class="ex">-</span> <span class="st">&#39;80:80/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-9" title="9">      <span class="ex">-</span> <span class="st">&#39;3000:3000/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-10" title="10">      <span class="ex">-</span> <span class="st">&#39;443:443/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-11" title="11">      <span class="ex">-</span> <span class="st">&#39;853:853/tcp&#39;</span></a>
-<a class="sourceLine" id="cb1-12" title="12">    <span class="ex">restart</span>: unless-stopped</a>
-<a class="sourceLine" id="cb1-13" title="13">    <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-14" title="14">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/work:/opt/adguardhome/work</a>
-<a class="sourceLine" id="cb1-15" title="15">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/adguard/conf:/opt/adguardhome/conf</a></code></pre></div>
+<p>Podemos instalar AdGuard Home en cualquiera de las arquitecturas, x86-64, arm, arm64, ... del siguiente modo gracias a docker-compose.</p>
+<pre><code class="language-sh">
+    adguard:
+        container_name: adguard 
+        image: adguard/adguardhome:latest
+        ports:
+          - '53:53/tcp'
+          - '53:53/udp'
+          - '67:67/udp'
+          - '80:80/tcp'
+          - '3000:3000/tcp'
+          - '443:443/tcp'
+          - '853:853/tcp'
+        restart: unless-stopped
+        volumes:
+          - $HOME/docker/adguard/work:/opt/adguardhome/work
+          - $HOME/docker/adguard/conf:/opt/adguardhome/conf
+</code></pre>
 <h2 id="utilizar-el-dns-de-adguard-home-en-linux-si-no-habilitas-el-servidor-dhcp">Utilizar el DNS de AdGuard Home en Linux, si no habilitas el servidor DHCP</h2>
 <p>Para utilizar AdGuardHome en Linux sin activar el servidor DHCP, tenemos que conectarnos a la ip del servidor donde está instalado AdGuard.</p>
 <p>Para configurar las DNS en tu máquina con Linux:</p>
-<pre><code>sudo nano  /etc/resolv.conf
+<pre><code>
+sudo nano  /etc/resolv.conf
 </code></pre>
-<p>añadimos la primera opción con <strong><strong>nameserver</strong></strong>, seguido de la DNS que vamos a utilizar. Ejem: Si la IP del servidor donde tenemos AdGuard es 192.168.1.100:</p>
-<pre><code>nameserver 192.168.1.100
+<p>añadimos la primera opción con <strong>*nameserver</strong>*, seguido de la DNS que vamos a utilizar. Ejem:</p>
+<p>Si la IP del servidor donde tenemos AdGuard es 192.168.1.100:</p>
+<pre><code>
+nameserver 192.168.1.100
 </code></pre>
-<h2 id="cada-reinicio-se-modifica-el-archivo-resolv.conf">Cada reinicio se modifica el archivo resolv.conf</h2>
+<h2 id="cada-reinicio-se-modifica-el-archivo-resolvconf">Cada reinicio se modifica el archivo resolv.conf</h2>
 <p>Si cada vez que reinicias se modifica el archivo resolv.conf y no quieres que suceda, tienes dos soluciones:</p>
 <ul>
-<li>Hacer que el archivo sea inalterable ejecutando el siguiente comando <code>sudo chattr +i /etc/resolv.conf</code></li>
+<li>Hacer que el archivo sea inalterable ejecutando el siguiente comando <code class="verbatim">sudo chattr +i /etc/resolv.conf</code></li>
 <li>Crear el nuevo archivo al reiniciar la máquina con crontab:</li>
 </ul>
-<p>Como usuario root:</p>
-<pre><code>sudo crontab -e
+<p>Como usuario root: </p>
+<pre><code>
+sudo crontab -e
 </code></pre>
 <p>Creamos el nuevo archivo, añadiendo esto: Supongamos que la ip del AdGuard es 192.168.1.100</p>
-<pre><code>@reboot ( sleep 100 ; echo &quot;nameserver 192.168.1.100&quot; &gt; /etc/resolv.conf )
+<pre><code>
+@reboot ( sleep 100 ; echo &quot;nameserver 192.168.1.100&quot; &gt; /etc/resolv.conf )
 </code></pre>
 <h2 id="proveedores-dns">Proveedores DNS</h2>
-<p>Podemos <a href="https://kb.adguard.com/en/general/dns-providers">personalizar las DNS en la siguiente url</a>.</p>
+<p>Podemos <a href="https://kb.adguard.com/en/general/dns-providers">personalizar las DNS en la siguiente url</a>. </p>
 <p>Yo actualmente estoy utilizando la famosa DNS de Cloudflare por https:</p>
-<pre><code>https://dns.cloudflare.com/dns-query
+<pre><code>
+https://dns.cloudflare.com/dns-query
 </code></pre>
-<p>Para comprobar que la DNS que hemos seleccionado es la que realmente estamos utilizando, conectate a <a href="https://www.dnsleaktest.com/">https://www.dnsleaktest.com/</a> y selcciona <strong><strong>Extended Test</strong></strong>.</p>
+<p>Para comprobar que la DNS que hemos seleccionado es la que realmente estamos utilizando, conectate a <a href="https://www.dnsleaktest.com/">https://www.dnsleaktest.com/</a> y selcciona <strong>*Extended Test</strong>*.</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Un servicio sencillo y alucinante, del que podrás disfrutar.</p>
-<br>
-<p>Publicado por Angel el Friday 16 April del 2021 y <strong>actualizado</strong> el Sunday 02 May del 2021</p>
-<br><br> 
+<p>Publicado por Angel el Friday 16 April del 2021</p>
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li>
@@ -155,5 +117,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

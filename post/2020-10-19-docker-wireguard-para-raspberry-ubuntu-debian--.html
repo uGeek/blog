@@ -1,142 +1,104 @@
 <head>
-<title>Docker: Wireguard para Raspberry, Ubuntu, Debian,.... uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Docker: Wireguard para Raspberry, Ubuntu, Debian,.... uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
-<meta name="description" content="Ya hemos visto como instalar Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="Ya hemos visto como instalar  Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del" />
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: Wireguard para Raspberry, Ubuntu, Debian,..." />
-<meta property="og:description" content="Ya hemos visto como instalar Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/wireguard.png" />
+<meta property="og:title" content="Docker: Wireguard para Raspberry, Ubuntu, Debian,..." /> 
+<meta property="og:description" content="Ya hemos visto como instalar  Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/wireguard.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html" />
-
-<meta name="twitter:title" content="Docker: Wireguard para Raspberry, Ubuntu, Debian,..." />
-<meta name="twitter:description" content="Ya hemos visto como instalar Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del" />
+<meta name="twitter:title" content="Docker: Wireguard para Raspberry, Ubuntu, Debian,..." /> 
+<meta name="twitter:description" content="Ya hemos visto como instalar  Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/wireguard.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="docker-wireguard-para-raspberry-ubuntu-debian-1" title="Docker: Wireguard para Raspberry, Ubuntu, Debian,..." data-export_file_name="docker-wireguard-para-raspberry-ubuntu-debian--" data-description="Ya hemos visto como instalar  Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del" data-export_date="2020-10-19 14:30" data-category="vpn" data-tag="wireguard,terminal,servidor,raspberry,ubuntu" data-image="./images-blog/wireguard.png">Docker: Wireguard para Raspberry, Ubuntu, Debian,…</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 445 palabras.    <a href="https://ugeek.github.io/blog/categories/vpn">vpn</a></h5>
-<p>Ya hemos visto como instalar Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del servidor y clientes con el script wgc.</p>
-<center>
+<h1 id="docker-wireguard-para-raspberry-ubuntu-debian">Docker: Wireguard para Raspberry, Ubuntu, Debian,...</h1>
+<p>Ya hemos visto como instalar  Wireguard con los paquetes disponibles en la distro o añadiendo el repositorio del desarrollador. También os expliqué como crear el archivo de configuración del servidor y clientes con el script wgc.</p>
 <p><img src="../images-blog/wireguard.png" /></p>
-</center>
 <p>Hoy vamos a montar todo de una vez con docker, gracias nuevamente a la comunidad LinuxServer.io que nos lo pone pone muy muy fácil.</p>
 <p>He seguido paralelamente también la documentación el artículo de Joan del blog de <a href="https://geekland.eu/instalar-y-configurar-el-servidor-vpn-wireguard-con-docker/">geekland.eu</a>, que me ha ayudado mucho.</p>
 <h2 id="crear-el-docker">Crear el Docker</h2>
 <p>Creando el docker de wireguard, el servidor y peers:</p>
 <ul>
-<li>He puesto las DNS de Cloudflare, 1.1.1.1 y Quad9 (IBM) 9.9.9.9.</li>
+<li>He puesto las DNS de  Cloudflare, 1.1.1.1 y Quad9 (IBM) 9.9.9.9.</li>
 <li>Vamos a generar solo <strong>1</strong> peer. Si quieres generar más, indica el número de peers que deseas</li>
 <li>El puerto para acceder al servidor, lo he desviado al 33555. Recuerda que si hacemos esto, cuando vayamos a utilizar los clientes, <strong>el peer generado utilizará el puerto 51820 , así que deberemos modifiarlo a 33555</strong>.</li>
 </ul>
-<pre class="shell"><code>docker create   --name=wireguard   --cap-add=NET_ADMIN   --cap-add=SYS_MODULE   -e PUID=1000   -e PGID=1000   -e TZ=Europe/Madrid   -e SERVERURL=midominio.duckdns.org   -e SERVERPORT=51820   -e PEERS=1   -e PEERDNS=1.1.1.1,9.9.9.9    -e INTERNAL_SUBNET=10.13.13.0    -p 33555:51820/udp   -v $HOME/docker/wireguard/config:/config   -v /lib/modules:/lib/modules   --sysctl=&quot;net.ipv4.conf.all.src_valid_mark=1&quot;   --restart unless-stopped   linuxserver/wireguard
+<pre><code class="language-shell">
+docker create   --name=wireguard   --cap-add=NET_ADMIN   --cap-add=SYS_MODULE   -e PUID=1000   -e PGID=1000   -e TZ=Europe/Madrid   -e SERVERURL=midominio.duckdns.org   -e SERVERPORT=51820   -e PEERS=1   -e PEERDNS=1.1.1.1,9.9.9.9    -e INTERNAL_SUBNET=10.13.13.0    -p 33555:51820/udp   -v $HOME/docker/wireguard/config:/config   -v /lib/modules:/lib/modules   --sysctl=&quot;net.ipv4.conf.all.src_valid_mark=1&quot;   --restart unless-stopped   linuxserver/wireguard
 </code></pre>
 <h2 id="clientes-o-peers">Clientes o Peers</h2>
 <p>Una vez levantado el docker de wireguard, podremos ver los código QR de los peers desde la terminal, para añadir a nuestro móvil.</p>
-<pre><code>docker logs -f wireguard
+<pre><code>
+docker logs -f wireguard
 </code></pre>
-<p><strong>Toda la configuración tanto del servidor como los peers, está en el volumen que se ha creado con el contenedor</strong> <code>$HOME/docker/wireguard/config</code>.</p>
+<p><strong>Toda la configuración tanto del servidor como los peers, está en el volumen que se ha creado con el contenedor</strong> <code class="verbatim">$HOME/docker/wireguard/config</code>.</p>
 <h2 id="crear-nuevos-peers-o-clientes">Crear nuevos peers o clientes</h2>
 <p>Para crear nuevos peers, tan sencillo como:</p>
-<pre><code>docker exec -it wireguard /app/add-peer
+<pre><code>
+docker exec -it wireguard /app/add-peer
 </code></pre>
 <p>Nos creará un nuevo peer o cliente y previsualizará el código QR en pantalla</p>
 <h2 id="mostrar-qr-de-un-peer-o-cliente-ya-creado">Mostrar QR de un peer o cliente ya creado</h2>
-<p>Aunque como he comentado antes, toda la configuración tanto del servidor como los peers está en <code>$HOME/docker/wireguard/config</code>, también podemos previsualizarlo directamente desde la terminal con:</p>
-<pre><code>docker exec -it wireguard /app/show-peer 1
+<p>Aunque como he comentado antes, toda la configuración tanto del servidor como los peers está en <code class="verbatim">$HOME/docker/wireguard/config</code>, también podemos previsualizarlo directamente desde la terminal con:</p>
+<pre><code>
+docker exec -it wireguard /app/show-peer 1
 </code></pre>
 <p>En este caso, estamos previsualizando el código QR del peer 1. Indica el número de peer que desees.</p>
 <h2 id="eliminar-peers-o-clientes">Eliminar Peers o Clientes</h2>
 <p>Accederemos a nuestro volumen de configuración y eliminaremos directamente el peer que no deseemos</p>
-<pre><code>cd $HOME/docker/wireguard/config
+<pre><code>
+cd $HOME/docker/wireguard/config
 </code></pre>
 <p>Borro el peer3</p>
-<pre><code>rm -r peer3
+<pre><code>
+rm -r peer3
 </code></pre>
 <p>Elimina en el archivo de configuración del servidor <strong>wg0.conf</strong>, los valores del peer eliminado</p>
-<pre><code>nano wg0.conf
+<pre><code>
+nano wg0.conf
 </code></pre>
 <h2 id="conclusión">Conclusión</h2>
 <p>Como veis, en menos de 5 minutos tenemos creada una vpn con docker de un modo seguro y sencillo.</p>
-<br>
 <p>Publicado por Angel el Monday 19 October del 2020</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html">Docker: Wireguard para Raspberry, Ubuntu, Debian,…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html">Docker: Wireguard para Raspberry, Ubuntu, Debian,...</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-04-09-zerotier-funcionamiento-e-instalacion-por-docker-o-repositorios.html">Zerotier. Funcionamiento e instalación por docker o repositorios</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html">Wireguard en 2 minutos con wgc</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html">Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

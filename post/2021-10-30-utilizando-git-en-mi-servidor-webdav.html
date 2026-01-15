@@ -1,127 +1,89 @@
 <head>
-<title>Utilizando git en mi servidor WebDAV. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Utilizando git en mi servidor WebDAV. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Utilizando git en mi servidor WebDAV" />
-<meta property="og:description" content="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
+<meta property="og:title" content="Utilizando git en mi servidor WebDAV" /> 
+<meta property="og:description" content="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html" />
-
-<meta name="twitter:title" content="Utilizando git en mi servidor WebDAV" />
-<meta name="twitter:description" content="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" />
+<meta name="twitter:title" content="Utilizando git en mi servidor WebDAV" /> 
+<meta name="twitter:description" content="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="utilizando-git-en-mi-servidor-webdav-1" title="Utilizando git en mi servidor WebDAV" data-export_file_name="utilizando-git-en-mi-servidor-webdav" data-description="Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de *git*. He creado dentro de mi nube un directorio llamado" data-export_date="2021-10-30 21:00" data-category="git" data-tag="webdav" data-image="./images-blog/git.png">Utilizando git en mi servidor WebDAV</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 353 palabras.    <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<h1 id="utilizando-git-en-mi-servidor-webdav">Utilizando git en mi servidor WebDAV</h1>
 <p>Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de <strong>git</strong>. He creado dentro de mi nube un directorio llamado <strong>git</strong>, donde voy a guardar todos mis proyectos y tener un control de versiones allí donde esté.</p>
-<center>
 <p><img src="../images-blog/git.png" /></p>
-</center>
 <h2 id="creando-el-repositorio">Creando el repositorio</h2>
-<p>Voy a crear el nuevo proyecto llamado <code>repositorio</code>.</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">mkdir</span> repositorio</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="bu">cd</span> repositorio</a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="fu">git</span> init --bare</a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="fu">git</span> update-server-info</a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="bu">cd</span> ..</a></code></pre></div>
-<p>Con <code>git update-server-info</code> actualizamos el archivo de información auxiliar para ayudar al servidor.</p>
+<p>Voy a crear el nuevo proyecto llamado <code class="verbatim">repositorio</code>.</p>
+<pre><code class="language-sh">
+mkdir repositorio
+cd repositorio
+git init --bare
+git update-server-info
+cd ..
+</code></pre>
+<p>Con <code class="verbatim">git update-server-info</code> actualizamos el archivo de información auxiliar para ayudar al servidor.</p>
 <h2 id="subiendo-el-repositorio-al-servidor-webdav">Subiendo el repositorio al servidor WebDAV</h2>
 <p>Ahora voy a utilizar <strong>rclone</strong> para subir el repositorio al servidor:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">rclone</span> copy repositorio webdav:git/repositorio</a></code></pre></div>
+<pre><code class="language-sh">
+rclone copy repositorio webdav:git/repositorio
+</code></pre>
 <p>Puedes utilizar el método que más te guste para guardar el repositorio, incluso montar la nube con tu explorador de archivos favorito y hacer un copia y pega.</p>
 <h2 id="utilizando-tu-servidor-git-con-webdav">Utilizando tu servidor git con WebDAV</h2>
 <p>Llegados a este punto, ya puedes utilizar tus proyectos con git y mantener tu control de versiones en tu servidor WebDAV.</p>
 <ul>
 <li>Vamos a clonar el repositorio del servidor a local especificando el usuario y URL del directorio donde hemos guardado el proyecto</li>
 <li>Creamos un archivo, por ejemplo <strong>README.md</strong></li>
-<li>Hacemos un git add, commit y push para subirlo al server y… voila!!! Ya tenemos nuestro repositorio git en el servidor funcionando.</li>
+<li>Hacemos un git add, commit y push para subirlo al server y... voila!!! Ya tenemos nuestro repositorio git en el servidor funcionando.</li>
 </ul>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">git</span> clone https://<span class="op">&lt;</span>usuario<span class="op">&gt;</span>@<span class="op">&lt;</span>dominio_del_servidor<span class="op">&gt;</span>/git/repositorio -v</a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="bu">cd</span> repositorio</a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="fu">touch</span> README.md</a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="fu">git</span> add README.md</a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="fu">git</span> commit -m <span class="st">&quot;agregando el archivo README.md&quot;</span></a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="fu">git</span> push</a>
-<a class="sourceLine" id="cb3-7" title="7"><span class="fu">git</span> push origin master (solo la primera vez)</a></code></pre></div>
+<pre><code class="language-sh">
+git clone https://&lt;usuario&gt;@&lt;dominio_del_servidor&gt;/git/repositorio -v
+cd repositorio
+touch README.md
+git add README.md
+git commit -m &quot;agregando el archivo README.md&quot;
+git push
+git push origin master (solo la primera vez)
+</code></pre>
 <p>Si quieres utilizarlo en tu red local o vía VPN, también puedes utilizar la conexión sin cifrar <strong>http</strong>.</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">git</span> clone http://angel@192.168.1.100:100/git/repositorio</a></code></pre></div>
-<br>
+<pre><code class="language-sh">
+git clone http://angel@192.168.1.100:100/git/repositorio
+</code></pre>
 <p>Publicado por Angel el Saturday 30 October del 2021</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-13-autenticacion-http-y-https-basica-md.html">Acceso usando credenciales en la URL. Autenticación básica por http</a></li>
@@ -134,5 +96,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html">Crear una imagen docker desde un repositorio de GitHub</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

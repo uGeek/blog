@@ -46,58 +46,58 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
 <h1 id="instalar-oh-my-zsh">Instalar Oh My ZSH</h1>
 <p>Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal, así como en caso de utilizar git, conocer en que rama estamos. Voy a instalar un tema muy conocido, <strong>agnoster</strong>. </p>
-<p><a href="./images-blog/omzsh.png">./images-blog/omzsh.png</a></p>
+<p><img src="../images-blog/omzsh.png" /></p>
 <p>Mediante este Post, vamos a aprender a instalarlo, de un modo muy sencillo.</p>
 <h2 id="instalando-zsh-y-git-core">Instalando  ZSH y git-core</h2>
 <p>Instalando desde los repositorios:</p>
-<p><code>sudo apt install zsh git-core</code></p>
+<p><code class="verbatim">sudo apt install zsh git-core</code></p>
 <h2 id="descargando-oh-my-zsh-y-ejecutarlo">Descargando Oh My ZSH y ejecutarlo</h2>
 <p>Llegó la hora de Instalar Oh My Zsh</p>
-<p><code>wget 4 -O - | zsh</code></p>
+<p><code class="verbatim">wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh</code></p>
 <h2 id="desinstalar-oh-my-zsh">Desinstalar Oh My ZSH</h2>
 <p>Si no te ha gustado oh my zsh, desinstalarlo es tan sencillo como ejecutar en la terminal:</p>
-<p><code>uninstall_oh_my_zsh</code></p>
+<p><code class="verbatim">uninstall_oh_my_zsh</code></p>
 <h2 id="cambiar-la-shell-a-zsh">Cambiar la shell a ZSH</h2>
 <p>Vamos a cambiar nuestra Shell actual a zsh:</p>
-<p><code>chsh -s `which zsh`</code></p>
+<p><code class="verbatim">chsh -s `which zsh`</code></p>
 <p>Si quieres cambiar la terminal a otro usuario siendo administrador, en mi ejemplo, al usuario <strong>angel</strong>.</p>
 <pre><code>
 sudo chsh -s /usr/bin/zsh angel
 </code></pre>
 <p>Ahora, para que surja efecto, será necesario <strong>reiniciar la terminal</strong>. Si no funciona, quizás sea necesario reiniciar el Sistema Operativo.</p>
 <p>Si no nos convence Zsh u otra shell, volveremos a bash así:</p>
-<p><code>chsh -s `which bash`</code></p>
+<p><code class="verbatim">chsh -s `which bash`</code></p>
 <h2 id="que-shells-hay-disponibles-en-nuestro-sistema">Que Shells hay disponibles en nuestro sistema</h2>
 <p>Para saber las shells tenemos instaladas en nuestro sistema:</p>
-<p><code>cat /etc/shells</code></p>
+<p><code class="verbatim">cat /etc/shells</code></p>
 <h2 id="saber-nuestra-shell-actual">Saber nuestra shell actual</h2>
-<p><code>echo $SHELL</code></p>
+<p><code class="verbatim">echo $SHELL</code></p>
 <p>Si tenemos zsh, nos devolverá:</p>
-<p><code>/usr/bin/zsh</code></p>
+<p><code class="verbatim">/usr/bin/zsh</code></p>
 <h2 id="instalando-las-fuentes-powerline-para-zsh">Instalando las Fuentes Powerline para ZSH</h2>
 <p>Si en tu terminal no aparecen correctamente los símbolos, es necesario instalar:</p>
-<p><code>sudo apt install fonts-powerline</code></p>
+<p><code class="verbatim">sudo apt install fonts-powerline</code></p>
 <h2 id="temas">Temas</h2>
 <p>Voy a cambiar el tema <strong>robbyrussell</strong> e instalar el tema agnoster:</p>
-<p><code>nano ~/.zshrc</code></p>
+<p><code class="verbatim">nano ~/.zshrc</code></p>
 <p>Sustituye:</p>
 <pre><code>
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+# ZSH_THEME=&quot;robbyrussell&quot;
+ZSH_THEME=&quot;agnoster&quot;
 </code></pre>
 <h2 id="buscar-en-el-historial">Buscar en el historial</h2>
 <p>En la raíz del directorio $HOME, crearemos el archivo oculto <strong>.inputrc</strong>. Utilizaremos por ejemplo <strong>nano</strong>, para crear el archivo.</p>
-<p><code>nano .inputrc</code></p>
+<p><code class="verbatim">nano .inputrc</code></p>
 <p>Una vez abierto, copiaremos en el siguiente contenido:</p>
 <pre><code>
 ## Flecha Arriba
-"\e[A":history-search-backward
+&quot;\e[A&quot;:history-search-backward
 ## Flecha Abajo
-"\e[B":history-search-forward
+&quot;\e[B&quot;:history-search-forward
 </code></pre>
 <h2 id="instalarlo-todo-automatizado-desde-un-script">Instalarlo todo automatizado desde un script</h2>
 <p>He creado este script para que la instalación sea muchísimo más rápida:</p>
-<p><code>wget 20 ; bash  ohmyzsh ; rm ohmyzsh</code></p>
+<p><code class="verbatim">wget https://raw.githubusercontent.com/uGeek/blog/master/scripts/ohmyzsh ; bash  ohmyzsh ; rm ohmyzsh</code></p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://ohmyz.sh/">https://ohmyz.sh/</a></li>

@@ -1,124 +1,86 @@
 <head>
-<title>Saltando de un directorio a otro con Jump. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Saltando de un directorio a otro con Jump. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Saltando de un directorio a otro con Jump" />
-<meta property="og:description" content="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jump.svg" />
+<meta property="og:title" content="Saltando de un directorio a otro con Jump" /> 
+<meta property="og:description" content="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jump.svg" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2020-08-24-saltando-de-un-directorio-a-otro-con-jump.html" />
-
-<meta name="twitter:title" content="Saltando de un directorio a otro con Jump" />
-<meta name="twitter:description" content="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía." />
+<meta name="twitter:title" content="Saltando de un directorio a otro con Jump" /> 
+<meta name="twitter:description" content="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/jump.svg" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="saltando-de-un-directorio-a-otro-con-jump-1" title="Saltando de un directorio a otro con Jump" data-export_file_name="saltando-de-un-directorio-a-otro-con-jump" data-description="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía." data-export_date="2020-08-24 17:30 2020-12-31" data-category="bash" data-tag="terminal" data-image="./images-blog/jump.svg">Saltando de un directorio a otro con Jump</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 499 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<h1 id="saltando-de-un-directorio-a-otro-con-jump">Saltando de un directorio a otro con Jump</h1>
 <p>Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía.</p>
-<center>
 <p><img src="../images-blog/jump.svg" /></p>
-</center>
 <p>Es un complemento súper productivo para moverte por la terminal.</p>
 <p>Jump se integra con su shell y aprende sobre sus hábitos de navegación al realizar un seguimiento de los directorios que visita. Te proporciona el directorio más visitado para el término de búsqueda más corto que escriba.</p>
 <h2 id="instalación">Instalación</h2>
 <h3 id="con-go">Con Go</h3>
 <p>Si no tienes instalado Go, busca el artículo donde explico como hacerlo.</p>
 <p>Si lo tienes instalado, la instalación es tan simple como:</p>
-<pre><code>go get github.com/gsamokovarov/jump
+<pre><code>
+go get github.com/gsamokovarov/jump
 </code></pre>
 <h3 id="ubuntu">Ubuntu</h3>
-<pre><code>wget https://github.com/gsamokovarov/jump/releases/download/v0.30.1/jump_0.30.1_amd64.deb &amp;&amp; sudo dpkg -i jump_0.30.1_amd64.deb
+<pre><code>
+wget https://github.com/gsamokovarov/jump/releases/download/v0.30.1/jump_0.30.1_amd64.deb &amp;&amp; sudo dpkg -i jump_0.30.1_amd64.deb
 </code></pre>
 <h3 id="mac-y-otras-distros">Mac y otras distros</h3>
 <p>Visita el repositorio de Jump donde explica como instalarlo en el resto de distros</p>
 <h2 id="añadir-a-bash-o-zsh">Añadir a bash o zsh</h2>
-<p>Para bash y zsh, añade la siguiente línea a ~/.bashrc, ~/bash_profileo o ~/.zshrc</p>
-<pre><code>eval &quot;$(jump shell)&quot;
+<p>Para bash y zsh, añade la siguiente línea a <code class="verbatim">/.bashrc, ~/bash_profileo o </code>/.zshrc</p>
+<pre><code>
+eval &quot;$(jump shell)&quot;
 </code></pre>
 <h2 id="en-fish">En fish</h2>
-<p>Para que funcione en fish, tenemos que añadir al archivo <code>~/.config/fish/config.fish</code></p>
-<pre><code>status --is-interactive; and source (jump shell fish | psub)
+<p>Para que funcione en fish, tenemos que añadir al archivo <code class="verbatim">~/.config/fish/config.fish</code></p>
+<pre><code>
+status --is-interactive; and source (jump shell fish | psub)
 </code></pre>
 <p>A mi este método no me funcionó, así que lo que hice es añadirlo en el alias así:</p>
-<pre><code>alias j=&#39;~/go/bin/jump shell fish |&#39;
+<pre><code>
+alias j='~/go/bin/jump shell fish |'
 </code></pre>
-<p>Ahora cuando pulso <strong>j</strong> en la terminal, ejecuta <code>~/go/bin/jump shell fish |</code></p>
+<p>Ahora cuando pulso <strong>j</strong> en la terminal, ejecuta <code class="verbatim">~/go/bin/jump shell fish |</code></p>
 <h2 id="cambiar-j-por-z">Cambiar j por z</h2>
 <p>Si deseas utilizar otra letra para ejecutar jump, por ejemplo la letra z</p>
-<pre><code>eval &quot;$(jump shell --bind=z)&quot;
+<pre><code>
+eval &quot;$(jump shell --bind=z)&quot;
 </code></pre>
 <p>Si lo has hecho mediante el alias, es tan simple como poner <strong>z</strong> en lugar de <strong>j</strong>, en el apartado anterior.</p>
 <h2 id="funcionamiento">Funcionamiento</h2>
@@ -126,30 +88,33 @@ $("#tipue_search_input").tipuesearch();
 <p>Para alimentar jump de los directorios que utilizamos frecuentemente, tendremos que movernos por estos de un modo normal como lo hacemos habitualmente y jump irá añadiendo estos a su base de datos.</p>
 <p>Pusamos <strong>j</strong> seguido de los <strong>caracteres que coincidan con el directorio</strong> que buscamos y pulsamos <strong>enter</strong>.</p>
 <p>Ejemplo: Buscar el directorio docker</p>
-<pre><code>j dk
+<pre><code>
+j dk
 </code></pre>
-<p>Si no coincide con lo que buscabamos, ya que queríamos ir al directorio ~/docker/docker, escribiremos <strong>j</strong> + <strong>enter</strong> y nos aparecerá la siguiente sugerencia.</p>
-<pre><code>j
+<p>Si no coincide con lo que buscabamos, ya que queríamos ir al directorio ~<em>docker</em>docker, escribiremos <strong>j</strong> + <strong>enter</strong> y nos aparecerá la siguiente sugerencia.</p>
+<pre><code>
+j
 </code></pre>
 <h2 id="listado-de-directorios-añadidos-en-la-base-de-datos-de-jump">Listado de directorios añadidos en la base de datos de jump</h2>
-<pre><code>jump top
+<pre><code>
+jump top
 </code></pre>
 <h2 id="eliminar-una-ruta-de-directorio">Eliminar una ruta de directorio</h2>
 <p>Nos situamos en ese directorio y ejecutamos</p>
-<pre><code>jump forget
+<pre><code>
+jump forget
 </code></pre>
 <h2 id="ayuda">Ayuda</h2>
 <p>Para ver todas las opciones disponibles, veremos la ayuda</p>
-<pre><code>jump
+<pre><code>
+jump
 </code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/gsamokovarov/jump">https://github.com/gsamokovarov/jump</a></li>
 <li><a href="https://www.atareao.es/podcast/personalizar-el-terminal/">https://www.atareao.es/podcast/personalizar-el-terminal/</a></li>
 </ul>
-<br>
-<p>Publicado por Angel el Monday 24 August del 2020 y <strong>actualizado</strong> el Thursday 31 December del 2020</p>
-<br><br> 
+<p>Publicado por Angel el Monday 24 August del 2020</p>
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li>
@@ -162,5 +127,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

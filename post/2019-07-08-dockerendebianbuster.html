@@ -1,0 +1,114 @@
+<head>
+<title>Docker en debian Buster. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:locale" content="es_ES" />
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="Vamos a instalar docker en debian Buster" />
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Docker en debian Buster" /> 
+<meta property="og:description" content="Vamos a instalar docker en debian Buster" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-08-dockerendebianbuster.html" />
+<meta name="twitter:title" content="Docker en debian Buster" /> 
+<meta name="twitter:description" content="Vamos a instalar docker en debian Buster" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+</head>
+<br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script>
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
+</script>
+<h1 id="docker-en-debian-buster">Docker en debian Buster</h1>
+<p>Vamos a instalar docker en debian Buster:</p>
+<p><img src="../images-blog/docker.png" /></p>
+<h2 id="instalando-algunas-dependencias">Instalando algunas dependencias</h2>
+<p>Accedemos como <strong>root</strong> y comenzamos la instalación:</p>
+<pre><code>
+apt update
+apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+</code></pre>
+<h2 id="importando-el-gpg-key-oficial">Importando  el GPG key oficial</h2>
+<pre><code>
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+</code></pre>
+<h2 id="añadimos-el-repositorio-que-contiene-docker-para-debian-10">Añadimos el repositorio que contiene docker para debian 10</h2>
+<pre><code>
+sudo add-apt-repository \
+   &quot;deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable&quot;
+</code></pre>
+<p>Este comando nos añade el repositorio en <code class="verbatim">/etc/apt/sources.list</code> </p>
+<h2 id="ahora-si-vamos-con-la-instalación-actualizamos-repositorios">Ahora si vamos con la instalación. Actualizamos repositorios</h2>
+<p>Actualizamos repositorios:</p>
+<pre><code>
+apt update
+</code></pre>
+<h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
+<pre><code>
+apt -y install docker-ce docker-compose
+</code></pre>
+<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
+<pre><code>
+systemctl enable docker
+systemctl start docker
+</code></pre>
+<h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
+<p><code class="verbatim">docker -v</code></p>
+<h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
+<p>Creamos el grupo docker:</p>
+<pre><code>
+groupadd docker
+</code></pre>
+<p>Añadimos al usuario, &lt;NOMBRE DE TU USUARIO&gt; sustituyendo por tu usuario:</p>
+<pre><code>
+usermod -aG docker &lt;NOMBRE DE TU USUARIO&gt;
+</code></pre>
+<h2 id="instalando-portainer">Instalando Portainer</h2>
+<p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>
+<pre><code>
+docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+</code></pre>
+<p>Publicado por Angel el Monday 08 July del 2019</p>
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian---desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-07-cambiar-el-hostname-ubuntu-debian-raspberry-os--.html">Cambiar el hostname Ubuntu, Debian, Raspberry OS...</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html">Paquetes instalados en tu sistema</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-02-08-instalando-thunderbird-y-anadiendo-el-corrector-ortografico.html">Instalando Thunderbird y añadiendo el corrector ortográfico</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-14-podgrab-mi-servidor-de-podcast-en-raspberry-o-servidor-ubuntu-debian---mediante-docker.html">PodGrab. Mi servidor de Podcast en Raspberry o Servidor Ubuntu, Debian,... mediante Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-28-i3wm-en-ubuntu-debian-raspbian---desde-0.html">i3wm en Ubuntu, Debian, Raspbian,... desde 0</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-19-docker-wireguard-para-raspberry-ubuntu-debian--.html">Docker: Wireguard para Raspberry, Ubuntu, Debian,...</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-17-instalar-ultima-version-de-go-en-raspberry-arm-o-amd64.html">Instalar última versión de Go en Raspberry, ARM o amd64</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

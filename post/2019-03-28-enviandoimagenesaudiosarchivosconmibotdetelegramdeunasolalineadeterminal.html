@@ -1,0 +1,136 @@
+<head>
+<title> Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:locale" content="es_ES" />
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!" />
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content=" Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal" /> 
+<meta property="og:description" content="En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/botfather.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-03-28-enviandoimagenesaudiosarchivosconmibotdetelegramdeunasolalineadeterminal.html" />
+<meta name="twitter:title" content=" Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de Terminal" /> 
+<meta name="twitter:description" content="En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/botfather.png" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+</head>
+<br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script>
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
+</script>
+<h1 id="enviando-imágenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-línea-de-terminal">Enviando Imágenes, audios, archivos... con mi bot de Telegram de una sola Línea de terminal</h1>
+<p>El duelo está a un nivel muy alto y sabia que enfrentarme a Lorenzo, no iba a ser tarea fácil. La pasión que ambos tenemos por la creación de Bots en  Telegram, va ha hacer que este duelo nos haga asentar muchísimo mas nuestros conocimientos.</p>
+<p><img src="../images-blog/botfather.png" /></p>
+<p>En el Post anterior vimos como enviar archivos de texto plano a través del Bot, estoy seguro que estas totalmente emocionado y ahora te preguntas si también podemos enviar imágenes, archivos,... La respuesta es Sí!!, así que vamos a ver como enviar estos desde una sola línea de terminal con bash, pero antes, vamos a hacer recuento de como van los Post del duelo: </p>
+<h2 id="recuento-de-las-últimas-publicaciones-sobre-bots-de-telegram-el-duelo">Recuento de las últimas publicaciones sobre bots de Telegram (el duelo)</h2>
+<p>Estos son los Post de <a href="https://www.atareao.es/">atareao.es</a> y míos sobre los bots de Telegram:</p>
+<ul>
+<li><a href="https://www.atareao.es/tutorial/crea-tu-propio-bot-para-telegram/un-bot-de-telegram-con-php/">Un bot de Telegram con PHP</a></li>
+<li><a href="https://www.atareao.es/tutorial/crea-tu-propio-bot-para-telegram/bot-en-python-para-telegram/">Un bot en Python para Telegram (y en una sola línea)</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a></li>
+</ul>
+<p>Ahora que ya estamos al día, vamos al tema:  </p>
+<h2 id="enviar-mensajes-de-texto-repaso">Enviar Mensajes de Texto (Repaso)</h2>
+<p>Nos quedamos aquí, en enviar mensajes de texto plano. Si no sabes como crear tu bot o has llegado aquí y no sabes como empezar, te remito al anterior Post <a href="https://ugeek.github.io/blog/post/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html">Crea un Bot de Telegram con Bash y una sola línea de Terminal</a>, antes que nos adentramos mas a fondo.</p>
+<p>Enviaremos nuestro mensaje de texto plano sustituyendo en esta línea, estos parámetros por nuestros valores:</p>
+<ul>
+<li>TOKEN</li>
+<li>ID</li>
+<li>TU MENSAJE DE TEXTO</li>
+<pre><code>
+curl -s -X POST https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendMessage -d chat_id=&quot;&lt;ID&gt;&quot; -d text=&quot;&lt;TU MENSAJE DE TEXTO&gt;&quot;
+</code></pre>
+<h2 id="enviar-una-imagen">Enviar una imagen</h2>
+<p>Para enviar imágenes con nuestro Bot, tendremos que especificar la ruta completa del archivo así como el Token e ID:</p>
+<li>TOKEN</li>
+<li>ID</li>
+<li>RUTA DE NUESTRA IMÁGEN ( Tipo: "~<em>Imágenes</em>mifoto.jpg")</li>
+</ul>
+<pre><code>
+curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F photo=&quot;@&lt;RUTA DE NUESTRA IMAGEN&gt;&quot;
+</code></pre>
+<h2 id="enviar-una-imagen-que-esté-en-internet">Enviar una imagen que esté en Internet</h2>
+<p>También podemos enviar imágenes que esten en internet. Del mismo modo, tenemos que especificar la ruta donde esté esta. Atención que cambia un poco la línea, ya no tiene el <strong>@</strong> ante la ruta:</p>
+<ul>
+<li>TOKEN</li>
+<li>ID</li>
+<li>RUTA DE NUESTRA IMÁGEN ( Tipo: "<code class="verbatim">https://ugeek.github.io/blog/icon/ugeek.png</code>")</li>
+<pre><code>
+curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F photo=&quot;&lt;RUTA DE LA IMAGEN EN INTERNET&gt;&quot;
+</code></pre>
+<h2 id="adjuntar-texto-junto-a-la-imágen">Adjuntar texto junto a la Imágen</h2>
+<p>Habrás visto que hay imágenes que llevan adjunto un texto en la parte inferior. Para hacer esto, tendremos que adjuntar un nuevo tag a nuestra línea:</p>
+<li>TOKEN</li>
+<li>ID</li>
+<li>RUTA DE NUESTRA IMÁGEN</li>
+<li>TEXTO JUNTO IMAGEN</li>
+</ul>
+<pre><code>
+curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendPhoto&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F caption=&quot;&lt;TEXTO JUNTO IMAGEN&gt;&quot; -F photo=&quot;@&lt;RUTA DE NUESTRA IMAGEN&gt;&quot;
+</code></pre>
+<h2 id="enviar-archivos">Enviar archivos</h2>
+<p>Para enviar archivos, la línea es muy similar a la de enviar imágenes, solo que en este caso utilizaremos <strong>/sendDocument</strong>. También como con las imágenes, especificaremos la ruta completa:</p>
+<ul>
+<li>TOKEN</li>
+<li>ID</li>
+<li>RUTA DEL ARCHIVO</li>
+<pre><code>
+curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendDocument&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F document=&quot;@&lt;RUTA DEL ARCHIVO&gt;&quot;
+</code></pre>
+</ul>
+<h2 id="adjuntar-texto-junto-al-archivo">Adjuntar texto junto al archivo</h2>
+<p>Para adjunta texto junto a la archivo:</p>
+<ul>
+<li>TOKEN</li>
+<li>ID</li>
+<li>RUTA DEL ARCHIVO</li>
+<li>TEXTO JUNTO IMAGEN</li>
+<pre><code>
+curl -X  POST &quot;https://api.telegram.org/bot&quot;&lt;TOKEN&gt;&quot;/sendDocument&quot; -F chat_id=&quot;&lt;ID&gt;&quot; -F caption=&quot;&lt;TEXTO JUNTO IMAGEN&gt; -F document=&quot;@&lt;RUTA DEL ARCHIVO&gt;&quot;
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
+<p>Con todo esto y un poco de imaginación, ahora podemos ampliar mucho más las posibilidades de automatización. Espero que os haya gustado el Post y a disfrutar con los Bots</p>
+</ul>
+<p>Publicado por Angel el Thursday 28 March del 2019</p>
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-05-28-rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web.html">RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-24-telegram-en-raspberry-pi-con-manjaro-minimal.html">Telegram en Raspberry Pi con Manjaro Minimal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html">Notificaciones de Jellyfin en Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html">Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc...</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html">Telethon Downloader. Bot de descargas para Telegram</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html">TelegramTUI. Cliente de Terminal en Python</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html">Aplicaciones Telegram versión web, Android, IOS,...</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html">Grabar lo que suena en tu ordenador</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

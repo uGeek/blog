@@ -1,177 +1,140 @@
 <head>
-<title>Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. " />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker" />
-<meta property="og:description" content="Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. " />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/matrix.png" />
+<meta property="og:title" content="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker" /> 
+<meta property="og:description" content="Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. " /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/matrix.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html" />
-
-<meta name="twitter:title" content="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker" />
-<meta name="twitter:description" content="Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. " />
+<meta name="twitter:title" content="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker" /> 
+<meta name="twitter:description" content="Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. " /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/matrix.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="servidor-de-mensajería-matrix-synapse-en-raspberry-ubuntu-debian-con-docker-1" title="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker" data-export_file_name="servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker" data-description="Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero *black0* ha creado una para todo tipo de arquitecturas, entre ellas ARM. " data-export_date="2021-01-28 18:55" data-category="matrix" data-tag="mensajería" data-image="./images-blog/matrix.png">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian… con Docker</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 501 palabras.    <a href="https://ugeek.github.io/blog/categories/matrix">matrix</a></h5>
+<h1 id="servidor-de-mensajería-matrix-synapse-en-raspberry-ubuntu-debian-con-docker">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</h1>
 <p>Cómo expliqué en el Podcast, no existe una  imagen oficial del contenedor Synapse,  pero <strong>black0</strong> ha creado una para todo tipo de arquitecturas, entre ellas ARM. </p>
-<center>
 <p><img src="../images-blog/matrix.png" /></p>
-</center>
-<p>El contenedor de <code>black0/synapse</code> se crea exactamente igual que con la  imagen oficial, <code>matrixdotorg/synapse</code>.</p>
-<p>He utilizado la versión <code>black0/synapse:v1.20.1</code>,  porque la versión <strong>latest</strong>, he visto que no tiene compatibilidad con arquitectura ARM,  en el momento de escribir este artículo.</p>
-<p>Si vas a instalarlo en un Ubuntu, Debian,… con arquitectura amd64, puedes utilizar la imagen oficial <code>matrixdotorg/synapse</code>. Sustituye en cada comando <code>black0/synapse:v1.20.1</code> por <code>matrixdotorg/synapse</code>.</p>
+<p>El contenedor de <code class="verbatim">black0/synapse= se crea exactamente igual que con la  imagen oficial, =matrixdotorg/synapse</code>.</p>
+<p>He utilizado la versión <code class="verbatim">black0/synapse:v1.20.1</code>,  porque la versión <strong>latest</strong>, he visto que no tiene compatibilidad con arquitectura ARM,  en el momento de escribir este artículo.</p>
+<p>Si vas a instalarlo en un Ubuntu, Debian,... con arquitectura amd64, puedes utilizar la imagen oficial <code class="verbatim">matrixdotorg/synapse=. Sustituye en cada comando =black0/synapse:v1.20.1= por =matrixdotorg/synapse</code>.</p>
 <h2 id="creando-archivos-de-configuración">Creando archivos de configuración</h2>
 <p>Vamos a utilizar la imagen con el comando <strong>generate</strong>, para generar el archivo de configuración de nuestro servidor matrix-synapse.</p>
-<p>Crearemos un volumen en la ruta <code>$HOME/docker/synapse-data</code>, dónde están los archivos de configuración.</p>
-<p>Recuerda añadir en la variable <strong>SYNAPSE_SERVERNAME</strong>,  la dirección de tu servidor.</p>
-<p>Voy a utilizar <code>matrix.ugeek.duckdns.org</code>, como dirección de ejemplo de mi servidor.</p>
-<pre class="example"><code>docker run -it --rm         -v $HOME/docker/synapse-data:/data         -e SYNAPSE_SERVER_NAME=matrix.ugeek.duckdns.org         -e SYNAPSE_REPORT_STATS=yes         black0/synapse:v1.20.1 generate
-</code></pre>
+<p>Crearemos un volumen en la ruta <code class="verbatim">$HOME/docker/synapse-data</code>, dónde están los archivos de configuración.</p>
+<p>Recuerda añadir en la variable <strong>SYNAPSE_SERVER_NAME</strong>,  la dirección de tu servidor.</p>
+<p>Voy a utilizar <code class="verbatim">matrix.ugeek.duckdns.org</code>, como dirección de ejemplo de mi servidor.</p>
+<p>#+BEGIN_EXAMPLE</p>
+<p>docker run -it --rm         -v $HOME<em>docker</em>synapse-data:<em>data         -e SYNAPSE_SERVER_NAME11yes         black0</em>synapse:v1.20.1 generate</p>
+<p>#+END_EXAMPLE</p>
 <h2 id="crear-el-contenedor">Crear el Contenedor</h2>
 <p> Ahora que tenemos los archivos de configuración, vamos a crear el contenedor con el servidor.</p>
-<pre class="example"><code>docker run -d --name matrix         -v $HOME/docker/synapse-data:/data         -p 8008:8008         black0/synapse:v1.20.1
-</code></pre>
+<p>#+BEGIN_EXAMPLE</p>
+<p>docker run -d --name matrix         -v $HOME<em>docker</em>synapse-data:<em>data         -p 8008:8008         black0</em>synapse:v1.20.1</p>
+<p>#+END_EXAMPLE</p>
 <p>Si todo ha salido correctamente, conectándonos a la dirección de nuestro servidor por el puerto 8008,  veremos una página de Matrix, conforme el servidor está disponible.</p>
 <h2 id="crear-contenedor-con-traefik">Crear contenedor con traefik</h2>
 <p>Yo utilizo traefik a modo de proxy inverso y así también consigo mi certificado Let's Encrypt de un modo sencillo con este docker-compose.</p>
 <p>Recuerda sustituir la dirección del servidor en los dos lugares que aparece en este docker-compose (matrix.ugeek.duckdns.org).</p>
-<pre class="example"><code>version: &quot;3&quot;
-
-services:
-matrix:
-image: &quot;black0/synapse:v1.20.1&quot;
-container_name: matrix
-#   ports:
-#     - &quot;8008:8008&quot;
-networks:
-- web
-volumes:
-- $HOME/docker/synapse-data:/data
-environment:
-- SYNAPSE_NO_TLS=1  # La documentación dice si este valor es igual a 0, permite la federación
-- SYNAPSE_SERVER_NAME=matrix.ugeek.duckdns.org
-- SYNAPSE_ENABLE_REGISTRATION=1
-- SYNAPSE_ALLOW_GUEST=1
-- SYNAPSE_REPORT_STATS=1
-labels:
-- traefik.frontend.rule=Host:matrix.ugeek.duckdns.org
-- traefik.frontend.entryPoints=https
-- traefik.port=8008
-- traefik.backend=synapse
-
-networks:
-web:
-external: true
-</code></pre>
+<p>#+BEGIN_EXAMPLE</p>
+<p>version: "3"</p>
+<p>services:</p>
+<p>matrix:</p>
+<p>image: "black0/synapse:v1.20.1"</p>
+<p>container_name: matrix</p>
+<p>#   ports:</p>
+<p>#     - "8008:8008"</p>
+<p>networks:</p>
+<ul>
+<li>web</li>
+<p>volumes:</p>
+<li>$HOME<em>docker</em>synapse-data:/data</li>
+<p>environment:</p>
+<li>SYNAPSE<u>NO</u>TLS=1  # La documentación dice si este valor es igual a 0, permite la federación</li>
+<li>SYNAPSE<u>SERVER</u>NAME=matrix.ugeek.duckdns.org</li>
+<li>SYNAPSE<u>ENABLE</u>REGISTRATION=1</li>
+<li>SYNAPSE<u>ALLOW</u>GUEST=1</li>
+<li>SYNAPSE<u>REPORT</u>STATS=1</li>
+<p>labels:</p>
+<li>traefik.frontend.rule=Host:matrix.ugeek.duckdns.org</li>
+<li>traefik.frontend.entryPoints=https</li>
+<li>traefik.port=8008</li>
+<li>traefik.backend=synapse</li>
+</ul>
+<p>networks:</p>
+<p>web:</p>
+<p>external: true</p>
+<p>#+END_EXAMPLE</p>
 <p>Permitir la federación, significa poder comunicarte con otros servidores de Matrix-Synapse</p>
 <p>Ahora para levantar el docker:</p>
-<pre class="example"><code>docker-compose up -d
-</code></pre>
+<p>#+BEGIN_EXAMPLE</p>
+<p>docker-compose up -d</p>
+<p>#+END_EXAMPLE</p>
 <h2 id="creando-usuarios">Creando usuarios</h2>
 <p>Para c</p>
-<pre><code>docker exec -it matrix register_new_matrix_user -u USUARIO&quot; -p &quot;CONTRASEÑA&quot; -a -c /data/homeserver.yaml https://midominio.duckdns.org 
+<pre><code>
+docker exec -it matrix register_new_matrix_user -u USUARIO&quot; -p &quot;CONTRASEÑA&quot; -a -c /data/homeserver.yaml https://midominio.duckdns.org 
 </code></pre>
-<p>Los usuarios hay que crearlos desde un cliente de Matrix (fluffy Chat, Element,…), en esta web hay un amplio listado para todos los sistemas operativos <a href="https://matrix.org/clients/">https://matrix.org/clients/</a>. Pero antes tenemos que habilitar la opción en el servidor.</p>
-<p>Para permitir el registro de usuarios, hay que editar el archivo <strong>homeserver.yaml</strong> y desmarcar la "<strong>#</strong>" habilitando <code>enable_registration: true</code>. </p>
-<pre class="example"><code>nano ~/docker/synapse-data/homeserver.yaml
-</code></pre>
-<p>Desmarcamos la opción <strong>enable_registration</strong> y ponemos <strong>true</strong>.  </p>
-<pre class="example"><code># Enable registration for new users.
-enable_registration: true
-</code></pre>
+<p>Los usuarios hay que crearlos desde un cliente de Matrix (fluffy Chat, Element,...), en esta web hay un amplio listado para todos los sistemas operativos <a href="https://matrix.org/clients/">https://matrix.org/clients/</a>. Pero antes tenemos que habilitar la opción en el servidor.</p>
+<p>Para permitir el registro de usuarios, hay que editar el archivo <strong>homeserver.yaml</strong> y desmarcar la "<strong>#</strong>" habilitando <code class="verbatim">enable_registration: true</code>. </p>
+<p>#+BEGIN_EXAMPLE</p>
+<p>nano ~<em>docker</em>synapse-data/homeserver.yaml</p>
+<p>#+END_EXAMPLE</p>
+<p>Desmarcamos la opción <strong>enable_registration</strong> y ponemos <strong>true</strong>.</p>
+<p> </p>
+<p>#+BEGIN_EXAMPLE</p>
+<p># Enable registration for new users.</p>
+<p>enable_registration: true</p>
+<p>#+END_EXAMPLE</p>
 <p>Reinicia el contenedor.</p>
 <p>Ahora con nuestro cliente favorito, podemos crear nuestra cuenta en el servidor.</p>
 <h2 id="cerrar-registro-de-usuarios">Cerrar registro de usuarios</h2>
 <p>Si no quieres que se creen más usuarios, siempre puedes volver a marcar con "<strong>#</strong>" y poner <strong>false</strong> en enable_registration.</p>
-<pre class="example"><code># Enable registration for new users.
-enable_registration: false
-</code></pre>
+<p>#+BEGIN_EXAMPLE</p>
+<p># Enable registration for new users.</p>
+<p>enable_registration: false</p>
+<p>#+END_EXAMPLE</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/matrix-org/synapse">https://github.com/matrix-org/synapse</a></li>
 <li><a href="https://www.fusehunt.co.uk/post/matrix-server-raspberry-pi-docker/">https://www.fusehunt.co.uk/post/matrix-server-raspberry-pi-docker/</a></li>
-</ul>
-<br>
 <p>Publicado por Angel el Thursday 28 January del 2021</p>
-<br><br> 
 <p>También te puede interesar:</p>
-<ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian… con Docker</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian--con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-01-20-servidor-de-mensajeria-matrix-para-raspberry-cliente-riot.html">Servidor de Mensajería Matrix para Raspberry. Cliente Riot</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

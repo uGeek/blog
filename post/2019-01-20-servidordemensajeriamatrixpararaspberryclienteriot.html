@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="servidor-de-mensajer-a-matrix-para-raspberry-cliente-riot">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h1>
+<h1 id="servidor-de-mensajería-matrix-para-raspberry-cliente-riot">Servidor de Mensajería Matrix para Raspberry. Cliente Riot.</h1>
 <p>Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.</p>
 <p>Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos.</p>
 <p>Características:</p>
@@ -56,56 +56,56 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <li>Doble Cifrados</li>
 <li>Varios Clientes y totalmente multiplataforma</li>
 </ul>
-<h2 id="instalaci-n-del-servidor-en-raspbian">INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h2>
-<p>#+begin_src </p>
-<p>sudo apt-get install build-essential python2.7-dev libffi-dev \</p>
-<p>                     python-pip python-setuptools sqlite3 \</p>
-<p>                     libssl-dev python-virtualenv libjpeg-dev</p>
-<p>sudo pip install --upgrade pip</p>
-<p>sudo pip install --upgrade ndg-httpsclient</p>
-<p>sudo pip install --upgrade virtualenv</p>
-<p>#+end_src</p>
+<h2 id="instalación-del-servidor-en-raspbian">INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h2>
+<pre><code>
+sudo apt-get install build-essential python2.7-dev libffi-dev \
+                     python-pip python-setuptools sqlite3 \
+                     libssl-dev python-virtualenv libjpeg-dev
+sudo pip install --upgrade pip
+sudo pip install --upgrade ndg-httpsclient
+sudo pip install --upgrade virtualenv
+</code></pre>
 <p>Este segunda comando ten paciencia, se crearan los certificados, etc … y <strong>tardará mucho tiempo, probablemente una hora</strong>, recomiendo detener servicios</p>
-<p>#+begin_src </p>
-<p>virtualenv -p python2.7 ~/.synapse</p>
-<p>source ~<em>.synapse</em>bin/activate</p>
-<p>pip install --upgrade pip</p>
-<p>pip install --upgrade setuptools</p>
-<p>pip install <a href="https://github.com/matrix-org/synapse/tarball/master">https://github.com/matrix-org/synapse/tarball/master</a></p>
-<p>#+end_src</p>
+<pre><code>
+virtualenv -p python2.7 ~/.synapse
+source ~/.synapse/bin/activate
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install https://github.com/matrix-org/synapse/tarball/master
+</code></pre>
 <p>Instala también el modulo para synapse.app.</p>
-<p><code>pip install (--upgrade) synapseclient</code></p>
+<p><code class="verbatim">pip install (--upgrade) synapseclient</code></p>
 <h2 id="configurar-synapse">CONFIGURAR SYNAPSE</h2>
 <p>    Recuerda sustituir el nombre del servidor <strong>my.domain.name</strong></p>
 <p>    En –report-stats= tienes que seleccionar <strong>yes o no</strong>.</p>
-<p><code>cd ~/.synapse</code></p>
-<p>#+begin_src </p>
-<p>python2.7 -B -m synapse.app.homeserver \</p>
-<p>    --server-name=my.domain.name \</p>
-<p>    --config-path=homeserver.yaml \</p>
-<p>    --generate-config \</p>
-<p>    --report-stats=[yes|no]</p>
-<p>#+end_src</p>
+<p><code class="verbatim">cd ~/.synapse</code></p>
+<pre><code>
+python2.7 -B -m synapse.app.homeserver \
+    --server-name=my.domain.name \
+    --config-path=homeserver.yaml \
+    --generate-config \
+    --report-stats=[yes|no]
+</code></pre>
 <h2 id="iniciar-servidor">INICIAR SERVIDOR</h2>
 <ol>
 <li>Nos situamos en la carpeta de <strong>synapse</strong></li>
 </ol>
-<p><code>cd ~/.synapse</code></p>
+<p><code class="verbatim">cd ~/.synapse</code></p>
 <ol>
 <li>Iniciar el servidor</li>
 </ol>
-<p><code>source ./bin/activate ; synctl start</code></p>
+<p><code class="verbatim">source ./bin/activate ; synctl start</code></p>
 <p>La Terminal nos devolverá que por el puerto 8008, encontraremos una inferfaz de gestión. Esta es antigua, <strong>no te recomiendo que la uses</strong>, te recomiendo crear ususarios mediante el comando que veremos mas adelante.</p>
 <p><strong>Detener el servicio, si lo deseamos:</strong></p>
-<p><code>source ./bin/activate ; synctl stop</code></p>
+<p><code class="verbatim">source ./bin/activate ; synctl stop</code></p>
 <p>CREAR USUARIOS</p>
 <p>Iniciamos el servidor y situándonos dentro del directorio <strong>.synapse</strong></p>
-<p><code>cd ~/.synapse</code></p>
+<p><code class="verbatim">cd ~/.synapse</code></p>
 <p>Ejecutaremos el siguiente comando:</p>
-<p>=register<u>new</u>matrix_user -c homeserver.yaml <a href="https://localhost:8448=">https://localhost:8448=</a></p>
+<p><code class="verbatim">register_new_matrix_user -c homeserver.yaml https://localhost:8448</code></p>
 <p>Ahora nos preguntará por el usuario, contraseña y si este usuario es administrador o no.</p>
 <h2 id="utilizar-el-cliente-riot">UTILIZAR EL CLIENTE RIOT</h2>
-<p><a href="./images-blog/riot.png">./images-blog/riot.png</a></p>
+<p><img src="../images-blog/riot.png" /></p>
 <ol>
 <li>Pondermos en nombre de usuario y contraseña</li>
 <li>Habilitamos opciones de servidor propietarias</li>

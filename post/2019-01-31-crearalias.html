@@ -1,0 +1,81 @@
+<head>
+<title>   Crear Alias. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:locale" content="es_ES" />
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando" />
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="   Crear Alias" /> 
+<meta property="og:description" content="Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-31-crearalias.html" />
+<meta name="twitter:title" content="   Crear Alias" /> 
+<meta name="twitter:description" content="Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los alias. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+</head>
+<br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script>
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
+</script>
+<h1 id="crear-alias">Crear Alias </h1>
+<p>Para facilitar la introducción de comandos largos y complejos, que son difíciles de recordar o simplemente porque utilizamos comandos repetitivos, utilizaremos los <strong>alias</strong>. Los alias son una palabra que introduciremos en la terminal y bash lo interpretará como una línea de comando.</p>
+<h2 id="crear-alias">Crear Alias</h2>
+<p>Para crear el alias, editaremos el archivo <strong>.bashrc</strong></p>
+<p><strong>/home/usuario/.bashrc</strong></p>
+<pre><code>
+sudo nano /home/usuario/.bashrc
+</code></pre>
+<p>Al final del contenido de este archivo, iremos introduciendo los alias así:</p>
+<pre><code>
+alias palabra='comando'
+</code></pre>
+<h2 id="ejemplo-de-alias">Ejemplo de Alias</h2>
+<p>Si añadimos esta línea en Ubuntu, cada vez que escribamos en la terminal <strong>actualizar</strong>, se ejecutará los comandos para actualizar y además al final aparecerá un mensaje de: "Sistema Operativo Actualizado"</p>
+<pre><code>
+alias actualizar='sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; clear &amp;&amp; echo &quot;Sistema Operativo Actualizado&quot;'
+</code></pre>
+<p>Con una simple palabra, hemos actualizado nuestro Ubuntu. Practica y diviértete creando <strong>alias</strong></p>
+<p>Publicado por Angel el Thursday 31 January del 2019</p>
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-15-crear-servicio-con-systemd.html">Crear servicio con Systemd</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html">Comprimiendo archivos pdf desde la terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html">Copiando en la terminal con barra de proceso</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-29-comandos-sudo-sin-contrasena.html">Comandos sudo sin contraseña</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

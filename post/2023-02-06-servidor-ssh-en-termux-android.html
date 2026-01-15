@@ -1,142 +1,116 @@
 <head>
-<title>Servidor SSH en Termux Android. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Servidor SSH en Termux Android. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
-<meta name="description" content="Crear tus scripts para 2023-02-06-servidor-ssh-en-termux-android.org con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="Crear tus scripts para *termux* con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC" />
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Servidor SSH en Termux Android" />
-<meta property="og:description" content="Crear tus scripts para 2023-02-06-servidor-ssh-en-termux-android.org con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:title" content="Servidor SSH en Termux Android" /> 
+<meta property="og:description" content="Crear tus scripts para *termux* con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html" />
-
-<meta name="twitter:title" content="Servidor SSH en Termux Android" />
-<meta name="twitter:description" content="Crear tus scripts para 2023-02-06-servidor-ssh-en-termux-android.org con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC" />
+<meta name="twitter:title" content="Servidor SSH en Termux Android" /> 
+<meta name="twitter:description" content="Crear tus scripts para *termux* con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="servidor-ssh-en-termux-android-1" title="Servidor SSH en Termux Android" data-export_file_name="servidor-ssh-en-termux-android" data-description="Crear tus scripts para *termux* con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC" data-export_date="2023-02-06 06:55" data-category="termux" data-tag="ssh,servidor" data-image="./images-blog/ugeek.png">Servidor SSH en Termux Android</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 288 palabras.    <a href="https://ugeek.github.io/blog/categories/termux">termux</a></h5>
+<h1 id="servidor-ssh-en-termux-android">Servidor SSH en Termux Android</h1>
 <p>Crear tus scripts para <strong>termux</strong> con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC conectado vía <strong>SSH</strong> al móvil.</p>
 <p>Vamos a ver como instalar un servidor <strong>SSH</strong> en mi móvil Android y acceder remotamente.</p>
 <h2 id="instalar-openssh">Instalar OpenSSH</h2>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">pkg</span> upgrade</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="ex">pkg</span> install openssh</a></code></pre></div>
+<pre><code class="language-sh">
+pkg upgrade
+pkg install openssh
+</code></pre>
 <h2 id="iniciar-el-servidor-ssh">Iniciar el servidor SSH</h2>
 <p>Para iniciar el demonio, ejecutamos el siguiente comando:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">sshd</span></a></code></pre></div>
+<pre><code class="language-sh">
+sshd
+</code></pre>
 <p>Si queremos cambiar la contraseña de nuestro servidor SSH, lo haremos con el siguiente comando:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">passwd</span> usuario</a></code></pre></div>
+<pre><code class="language-sh">
+passwd usuario
+</code></pre>
 <p>Nos pedirá la contraseña.</p>
 <h2 id="conectarnos-remotamente-vía-ssh">Conectarnos remotamente vía SSH</h2>
 <p>El servidor <strong>SSH</strong> de termux no corre por el puerto <strong>22</strong> como es habitual, si no que lo hace por el puerto <strong>8022</strong>.</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">ssh</span> usuario@localhost -p 8022</a></code></pre></div>
+<pre><code class="language-sh">
+ssh usuario@localhost -p 8022
+</code></pre>
 <h2 id="otros-paquetes">Otros paquetes</h2>
 <h3 id="saber-nuestra-ip">Saber nuestra IP</h3>
 <p>Para conocer nuestra IP instalaremos el paquete <strong>net-tools</strong>.</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">pkg</span> install net-tools</a></code></pre></div>
+<pre><code class="language-sh">
+pkg install net-tools
+</code></pre>
 <p>Vamos a ver que IP estamos utilizando con:</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">ifconfig</span></a></code></pre></div>
+<pre><code class="language-sh">
+ifconfig
+</code></pre>
 <h3 id="matar-procesos">Matar Procesos</h3>
 <p>Para matar procesos utilizaremos el paquete <strong>procps</strong>, que es quien contiene el comando <strong>pkill</strong>:</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">pkg</span> install procps</a></code></pre></div>
+<pre><code class="language-sh">
+pkg install procps
+</code></pre>
 <p>Ahora, para matar el servidor <strong>SSH</strong></p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">pkill</span> sshd</a></code></pre></div>
+<pre><code class="language-sh">
+pkill sshd
+</code></pre>
 <h2 id="copiar-por-ssh-de-un-movil-con-termux-a-otro">Copiar por SSH de un movil con termux a otro</h2>
 <h3 id="copiar-todo-un-directorio">Copiar todo un directorio</h3>
-<p>Copiaré todos los archivos del directorio <code>$HOME/.shortcuts/.</code> dentro del directorio <code>.shortcuts</code> del otro movil.</p>
+<p>Copiaré todos los archivos del directorio <code class="verbatim">$HOME/.shortcuts/.= dentro del directorio =.shortcuts</code> del otro movil. </p>
 <ul>
-<li><code>-P 8022</code> Puerto de SSH en termux</li>
-<li><code>-r</code> Recursivamente, todos los archivos y directorios dentro del directorio</li>
+<li><code class="verbatim">-P 8022</code>   Puerto de SSH en termux</li>
+<li><code class="verbatim">-r</code> Recursivamente, todos los archivos y directorios dentro del directorio</li>
 </ul>
-<pre><code>scp -P 8022 -r $HOME/.shortcuts/.  angel@192.168.1.100:$HOME/.shortcuts
+<pre><code>
+scp -P 8022 -r $HOME/.shortcuts/.  angel@192.168.1.100:$HOME/.shortcuts
 </code></pre>
 <h3 id="copiar-un-archivo">Copiar un archivo</h3>
-<p>Situado dentro del directorio <code>.ssh</code>, voy a copiar el archivo <strong>config</strong>.</p>
-<pre><code>scp -P 8022  config   angel@192.168.1.100:$HOME/.ssh
+<p>Situado dentro del directorio <code class="verbatim">.ssh</code>, voy a copiar el archivo <strong>config</strong>.</p>
+<pre><code>
+scp -P 8022  config   angel@192.168.1.100:$HOME/.ssh
 </code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://rubikcuv.medium.com/instalar-servidor-ssh-sobre-termux-en-android-2aabfe7a47e">https://rubikcuv.medium.com/instalar-servidor-ssh-sobre-termux-en-android-2aabfe7a47e</a></li>
 <li><a href="https://dylanmeca.github.io/2021/04/27/Crear-servidor-SSH-en-Termux.html">https://dylanmeca.github.io/2021/04/27/Crear-servidor-SSH-en-Termux.html</a></li>
 <li><a href="https://parzibyte.me/blog/2019/07/31/servidor-ssh-termux-android/">https://parzibyte.me/blog/2019/07/31/servidor-ssh-termux-android/</a></li>
-</ul>
-<br>
 <p>Publicado por Angel el Monday 06 February del 2023</p>
-<br><br> 
 <p>También te puede interesar:</p>
-<ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html">Termux. Una distro Linux en Android con la que crear tus aplicaciones</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-01-16-emacs-en-android.html">Emacs en Android</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

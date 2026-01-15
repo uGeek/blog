@@ -1,96 +1,52 @@
 <head>
-<title>Instalación de Nextcloud 21 con docker Oficial. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Instalación de Nextcloud 21 con docker Oficial. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Instalación de Nextcloud 21 con docker Oficial" />
-<meta property="og:description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" />
+<meta property="og:title" content="Instalación de Nextcloud 21 con docker Oficial" /> 
+<meta property="og:description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html" />
-
-<meta name="twitter:title" content="Instalación de Nextcloud 21 con docker Oficial" />
-<meta name="twitter:description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." />
+<meta name="twitter:title" content="Instalación de Nextcloud 21 con docker Oficial" /> 
+<meta name="twitter:description" content="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="instalación-de-nextcloud-21-con-docker-oficial-1" title="Instalación de Nextcloud 21 con docker Oficial" data-export_file_name="instalacion-de-nextcloud-21-con-docker-oficial" data-description="Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque." data-export_date="2021-02-25 17:56" data-category="nextcloud" data-tag="nube,webdav,docker" data-image="./images-blog/nextcloud_hub.png">Instalación de Nextcloud 21 con docker Oficial</h1>
-<h5>Tiempo estimado de lectura: 6 minutos. 690 palabras.    <a href="https://ugeek.github.io/blog/categories/nextcloud">nextcloud</a></h5>
+<h1 id="instalación-de-nextcloud-21-con-docker-oficial">Instalación de Nextcloud 21 con docker Oficial</h1>
 <p>Después de estar dando vueltas por diferentes nubes, al final vuelvo a Nextcloud y te explico porque.</p>
-<center>
 <p><img src="../images-blog/nextcloud_hub.png" /></p>
-</center>
 <p>Los puntos fuertes de Nextcloud son:</p>
 <ul>
 <li>Un gran número de aplicaciones disponibles</li>
@@ -102,102 +58,110 @@ $("#tipue_search_input").tipuesearch();
 <p>Voy a explicaros cómo montar el Docker, con docker-compose para arquitectura amd64, ARM64 y Raspberry Pi.</p>
 <h2 id="docker-compose">Docker-compose</h2>
 <h3 id="amd64-y-arm64">amd64 y arm64</h3>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
-<a class="sourceLine" id="cb1-2" title="2"></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-4" title="4">  <span class="ex">nextcloud</span>:</a>
-<a class="sourceLine" id="cb1-5" title="5">  <span class="ex">db</span>:</a>
-<a class="sourceLine" id="cb1-6" title="6"></a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="ex">services</span>:</a>
-<a class="sourceLine" id="cb1-8" title="8">  <span class="ex">db</span>:</a>
-<a class="sourceLine" id="cb1-9" title="9">    <span class="ex">image</span>: mariadb</a>
-<a class="sourceLine" id="cb1-10" title="10">    <span class="ex">container_name</span>: nextclouddb</a>
-<a class="sourceLine" id="cb1-11" title="11">    <span class="ex">command</span>: --transaction-isolation=READ-COMMITTED --binlog-format=ROW</a>
-<a class="sourceLine" id="cb1-12" title="12">    <span class="ex">restart</span>: always</a>
-<a class="sourceLine" id="cb1-13" title="13">    <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-14" title="14">      <span class="ex">-</span> db:/var/lib/mysql</a>
-<a class="sourceLine" id="cb1-15" title="15">    <span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb1-16" title="16">      <span class="ex">-</span> MYSQL_ROOT_PASSWORD=vfgku8ufg56 <span class="co">#Cambiar esto</span></a>
-<a class="sourceLine" id="cb1-17" title="17">      <span class="ex">-</span> MYSQL_PASSWORD=vbbyu76f6967 <span class="co">#Cambiar esto</span></a>
-<a class="sourceLine" id="cb1-18" title="18">      <span class="ex">-</span> MYSQL_DATABASE=nextcloud</a>
-<a class="sourceLine" id="cb1-19" title="19">      <span class="ex">-</span> MYSQL_USER=nextcloud</a>
-<a class="sourceLine" id="cb1-20" title="20"></a>
-<a class="sourceLine" id="cb1-21" title="21">  <span class="ex">app</span>:</a>
-<a class="sourceLine" id="cb1-22" title="22">    <span class="ex">image</span>: nextcloud</a>
-<a class="sourceLine" id="cb1-23" title="23">    <span class="ex">container_name</span>: nextcloud</a>
-<a class="sourceLine" id="cb1-24" title="24">    <span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb1-25" title="25">      <span class="ex">-</span> 8080:80</a>
-<a class="sourceLine" id="cb1-26" title="26">    <span class="ex">links</span>:</a>
-<a class="sourceLine" id="cb1-27" title="27">      <span class="ex">-</span> db</a>
-<a class="sourceLine" id="cb1-28" title="28">    <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-29" title="29">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/nextcloud:/var/www/html <span class="co">#Cambie &#39;nextcloud&#39; a su volumen de unidad externa si está disponible</span></a>
-<a class="sourceLine" id="cb1-30" title="30">            <span class="ex">-</span> /almacenamiento_local:/almacenamiento_local</a>
-<a class="sourceLine" id="cb1-31" title="31">    <span class="ex">restart</span>: always</a></code></pre></div>
+<pre><code class="language-sh">
+    version: '2'
+
+    volumes:
+      nextcloud:
+      db:
+
+    services:
+      db:
+        image: mariadb
+        container_name: nextclouddb
+        command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+        restart: always
+        volumes:
+          - db:/var/lib/mysql
+        environment:
+          - MYSQL_ROOT_PASSWORD=vfgku8ufg56 #Cambiar esto
+          - MYSQL_PASSWORD=vbbyu76f6967 #Cambiar esto
+          - MYSQL_DATABASE=nextcloud
+          - MYSQL_USER=nextcloud
+
+      app:
+        image: nextcloud
+        container_name: nextcloud
+        ports:
+          - 8080:80
+        links:
+          - db
+        volumes:
+          - $HOME/docker/nextcloud:/var/www/html #Cambie 'nextcloud' a su volumen de unidad externa si está disponible
+                - /almacenamiento_local:/almacenamiento_local
+        restart: always
+</code></pre>
 <h3 id="raspberry-pi-y-arm-32bits">Raspberry Pi y ARM 32bits</h3>
 <p>Para montar el docker compose con su base de datos en mariadb para Raspberry Pi o ARM:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">version</span>: <span class="st">&#39;2&#39;</span></a>
-<a class="sourceLine" id="cb2-2" title="2"></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb2-4" title="4">  <span class="ex">nextcloud</span>:</a>
-<a class="sourceLine" id="cb2-5" title="5">  <span class="ex">db</span>:</a>
-<a class="sourceLine" id="cb2-6" title="6"></a>
-<a class="sourceLine" id="cb2-7" title="7"><span class="ex">services</span>:</a>
-<a class="sourceLine" id="cb2-8" title="8">  <span class="ex">db</span>:</a>
-<a class="sourceLine" id="cb2-9" title="9">    <span class="ex">image</span>: yobasystems/alpine-mariadb:latest</a>
-<a class="sourceLine" id="cb2-10" title="10">    <span class="ex">container_name</span>: nextclouddb</a>
-<a class="sourceLine" id="cb2-11" title="11">    <span class="ex">command</span>: --transaction-isolation=READ-COMMITTED --binlog-format=ROW</a>
-<a class="sourceLine" id="cb2-12" title="12">    <span class="ex">restart</span>: always</a>
-<a class="sourceLine" id="cb2-13" title="13">    <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb2-14" title="14">      <span class="ex">-</span> db:/var/lib/mysql</a>
-<a class="sourceLine" id="cb2-15" title="15">    <span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb2-16" title="16">      <span class="ex">-</span> MYSQL_ROOT_PASSWORD=vfgku8ufg56 <span class="co">#Cambiar esto</span></a>
-<a class="sourceLine" id="cb2-17" title="17">      <span class="ex">-</span> MYSQL_PASSWORD=vbbyu76f6967 <span class="co">#Cambiar esto</span></a>
-<a class="sourceLine" id="cb2-18" title="18">      <span class="ex">-</span> MYSQL_DATABASE=nextcloud</a>
-<a class="sourceLine" id="cb2-19" title="19">      <span class="ex">-</span> MYSQL_USER=nextcloud</a>
-<a class="sourceLine" id="cb2-20" title="20"></a>
-<a class="sourceLine" id="cb2-21" title="21">  <span class="ex">app</span>:</a>
-<a class="sourceLine" id="cb2-22" title="22">    <span class="ex">image</span>: nextcloud</a>
-<a class="sourceLine" id="cb2-23" title="23">    <span class="ex">container_name</span>: nextcloud</a>
-<a class="sourceLine" id="cb2-24" title="24">    <span class="ex">ports</span>:</a>
-<a class="sourceLine" id="cb2-25" title="25">      <span class="ex">-</span> 8080:80</a>
-<a class="sourceLine" id="cb2-26" title="26">    <span class="ex">links</span>:</a>
-<a class="sourceLine" id="cb2-27" title="27">      <span class="ex">-</span> db</a>
-<a class="sourceLine" id="cb2-28" title="28">    <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb2-29" title="29">      <span class="ex">-</span> <span class="va">$HOME</span>/docker/nextcloud:/var/www/html <span class="co">#Cambie &#39;nextcloud&#39; a su volumen de unidad externa si está disponible</span></a>
-<a class="sourceLine" id="cb2-30" title="30">            <span class="ex">-</span> /almacenamiento_local:/almacenamiento_local</a>
-<a class="sourceLine" id="cb2-31" title="31">    <span class="ex">restart</span>: always</a></code></pre></div>
+<pre><code class="language-sh">
+    version: '2'
+
+    volumes:
+      nextcloud:
+      db:
+
+    services:
+      db:
+        image: yobasystems/alpine-mariadb:latest
+        container_name: nextclouddb
+        command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+        restart: always
+        volumes:
+          - db:/var/lib/mysql
+        environment:
+          - MYSQL_ROOT_PASSWORD=vfgku8ufg56 #Cambiar esto
+          - MYSQL_PASSWORD=vbbyu76f6967 #Cambiar esto
+          - MYSQL_DATABASE=nextcloud
+          - MYSQL_USER=nextcloud
+
+      app:
+        image: nextcloud
+        container_name: nextcloud
+        ports:
+          - 8080:80
+        links:
+          - db
+        volumes:
+          - $HOME/docker/nextcloud:/var/www/html #Cambie 'nextcloud' a su volumen de unidad externa si está disponible
+                - /almacenamiento_local:/almacenamiento_local
+        restart: always
+</code></pre>
 <h2 id="instalación">Instalación</h2>
 <p>En el ejemplo que he utilizado, Nextcloud será accesible por el puerto <strong>8080</strong>.</p>
-<p>Pon el usuario y contraseña del que será el administrador, seleciona como base de datos <strong>mariadb*</strong>, escribe la contraseña del usuario de mariadb y resto de datos como aparece en la imágen e inicia la instalación.</p>
-<center>
+<p>Pon el usuario y contraseña del que será el administrador, seleciona como base de datos <strong>mariadb</strong>*, escribe la contraseña del usuario de mariadb y resto de datos como aparece en la imágen e inicia la instalación.</p>
 <p><img src="../images-blog/nextcloud2.png" /></p>
-</center>
 <h2 id="forzar-conexión-https-y-dominios-de-confianza">Forzar conexión https y dominios de confianza</h2>
 <p>Para forzar a Nextcloud a utilizar <strong>https</strong> en su conexión y utilice esta como raíz de todas las páginas, editaremos el archivo <strong>config.php</strong>.</p>
 <p>En mi caso, utilizaré nano para editar el archivo.</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">nano</span> ~/docker/nextcloud/config/config.php</a></code></pre></div>
+<pre><code class="language-sh">
+nano ~/docker/nextcloud/config/config.php
+</code></pre>
 <p>Hay que modificar:</p>
 <ul>
 <li>overwriteprotocol = Forzar a utilizar <strong>https</strong>.</li>
 <li>trusted_domains = Dominios de confianza</li>
 </ul>
 <p>Vamos añadir 3 dominios de confianza, para poder acceder a Nextcloud</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="st">&#39;overwriteprotocol&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;https&#39;</span>,</a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="st">&#39;trusted_domains&#39;</span> =<span class="op">&gt;</span></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="ex">array</span> (</a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="ex">0</span> =<span class="op">&gt;</span> <span class="st">&#39;192.168.1.100:90&#39;</span>,<span class="st">&#39;nextcloud.midominio.duckdns.org&#39;</span>,<span class="st">&#39;next.midominio.duckdns.org&#39;</span></a></code></pre></div>
-<h2 id="idioma-por-defecto-región-telefónica">Idioma por defecto, región telefónica,…</h2>
+<pre><code class="language-sh">
+'overwriteprotocol' =&gt; 'https',
+'trusted_domains' =&gt;
+array (
+0 =&gt; '192.168.1.100:90','nextcloud.midominio.duckdns.org','next.midominio.duckdns.org'
+</code></pre>
+<h2 id="idioma-por-defecto-región-telefónica">Idioma por defecto, región telefónica,...</h2>
 <p>Nextcloud nos pedirá que añadamos nuestra región telefónica para el registro de usuarios mediante teléfono. Vamos a a añadir también, igual que en el paso anterior, estos valores al archivo <strong>config.php</strong>.</p>
 <ul>
 <li>force_language = Idioma por defecto. Si quieres que sean los usuarios los que determinen su propia lengua, pon el valo</li>
 <li>default_locale = Determinar región</li>
 <li>forcd_locale = forzar una configuración regional para todos los usuarios</li>
-<li>default_phoneregion = Esto establece la región predeterminada para los números de teléfono en su servidor Nextcloud</li>
+<li>default<u>phone</u>region = Esto establece la región predeterminada para los números de teléfono en su servidor Nextcloud</li>
 </ul>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="st">&#39;force_language&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;es&#39;</span>,</a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="st">&#39;default_locale&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;es_ES&#39;</span>,</a>
-<a class="sourceLine" id="cb5-3" title="3"><span class="st">&#39;force_locale&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;es_ES&#39;</span>,</a>
-<a class="sourceLine" id="cb5-4" title="4"><span class="st">&#39;default_phone_region&#39;</span> =<span class="op">&gt;</span> <span class="st">&#39;ES&#39;</span>,</a></code></pre></div>
+<pre><code class="language-sh">
+'force_language' =&gt; 'es',
+'default_locale' =&gt; 'es_ES',
+'force_locale' =&gt; 'es_ES',
+'default_phone_region' =&gt; 'ES',
+</code></pre>
 <ul>
 <li><a href="https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html">https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html</a></li>
 </ul>
@@ -205,24 +169,24 @@ $("#tipue_search_input").tipuesearch();
 <p>Una vez iniciado Nextcloud, accederemos en el menú de la parte superior derecha, accederemos a la opción <strong>Configuración -&gt; Vista generas</strong>.</p>
 <p>Ahora Nextcloud analizará nuestra configuración y nos propondrá que tenemos que arreglar para que todo esté correctamente configurado, si no lo está.</p>
 <p>Yo estoy utilizando <strong>Caddy</strong> como proxy inverso. En mi caso, para solucionar todos los problemas he añadido al archivo <strong>Caddyfile</strong> la siguiente configuración:</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">nextcloud.midominio.duckdns.org</span> {</a>
-<a class="sourceLine" id="cb6-2" title="2"></a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="ex">redir</span> /.well-known/carddav /remote.php/carddav 301</a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="ex">redir</span> /.well-known/caldav /remote.php/caldav 301</a>
-<a class="sourceLine" id="cb6-5" title="5"><span class="ex">reverse_proxy</span> http://192.168.1.102:92 {</a>
-<a class="sourceLine" id="cb6-6" title="6">}</a>
-<a class="sourceLine" id="cb6-7" title="7"><span class="ex">encode</span> gzip</a>
-<a class="sourceLine" id="cb6-8" title="8"><span class="ex">header</span> {</a>
-<a class="sourceLine" id="cb6-9" title="9"><span class="ex">Strict-Transport-Security</span> max-age=31536000<span class="kw">;</span></a>
-<a class="sourceLine" id="cb6-10" title="10"><span class="ex">Referrer-Policy</span> no-referrer-when-downgrade</a>
-<a class="sourceLine" id="cb6-11" title="11">}</a>
-<a class="sourceLine" id="cb6-12" title="12">}</a></code></pre></div>
+<pre><code class="language-sh">
+nextcloud.midominio.duckdns.org {
+
+redir /.well-known/carddav /remote.php/carddav 301
+redir /.well-known/caldav /remote.php/caldav 301
+reverse_proxy http://192.168.1.102:92 {
+}
+encode gzip
+header {
+Strict-Transport-Security max-age=31536000;
+Referrer-Policy no-referrer-when-downgrade
+}
+}
+</code></pre>
 <p>Con esta configuración, Nextcloud me ha dicho que todo está perfecto</p>
 <h2 id="conclusión">Conclusión</h2>
 <p>Ahora solo que disfrutar de Nextcloud.</p>
-<br>
 <p>Publicado por Angel el Thursday 25 February del 2021</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html">Instalación de Nextcloud 24 con docker Oficial</a></li>
@@ -235,5 +199,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-31-mi-nueva-nube-es-owncloud.html">Mi nueva nube es ownCloud</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

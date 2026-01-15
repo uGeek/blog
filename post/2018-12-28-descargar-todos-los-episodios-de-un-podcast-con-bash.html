@@ -48,11 +48,11 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
 <p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
 <pre><code>
-wget -q -O- "FEED" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+wget -q -O- &quot;FEED&quot; | grep -o '&lt;enclosure url=&quot;[^&quot;]*' | grep -o '[^&quot;]*$' | xargs wget -c
 </code></pre>
 <p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
 <pre><code>
-wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+wget -q -O- &quot;http://feeds.feedburner.com/ugeek&quot; | grep -o '&lt;enclosure url=&quot;[^&quot;]*' | grep -o '[^&quot;]*$' | xargs wget -c
 </code></pre>
 <p>A disfrutar con la magia de la terminal...</p>
 <p>Publicado por Angel el Friday 28 December del 2018</p>

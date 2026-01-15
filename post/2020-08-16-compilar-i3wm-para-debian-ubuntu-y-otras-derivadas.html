@@ -1,111 +1,70 @@
 <head>
-<title>Compilar i3wm para Debian, Ubuntu y otras derivadas. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Compilar i3wm para Debian, Ubuntu y otras derivadas. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Compilar i3wm para Debian, Ubuntu y otras derivadas" />
-<meta property="og:description" content="Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/i3wm.png" />
+<meta property="og:title" content="Compilar i3wm para Debian, Ubuntu y otras derivadas" /> 
+<meta property="og:description" content="Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/i3wm.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html" />
-
-<meta name="twitter:title" content="Compilar i3wm para Debian, Ubuntu y otras derivadas" />
-<meta name="twitter:description" content="Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm." />
+<meta name="twitter:title" content="Compilar i3wm para Debian, Ubuntu y otras derivadas" /> 
+<meta name="twitter:description" content="Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/i3wm.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="compilar-i3wm-para-debian-ubuntu-y-otras-derivadas-1" title="Compilar i3wm para Debian, Ubuntu y otras derivadas" data-export_file_name="compilar-i3wm-para-debian-ubuntu-y-otras-derivadas" data-description="Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm." data-export_date="2020-08-16 14:00" data-category="i3wm" data-tag="debian,ubuntu" data-image="./images-blog/i3wm.png">Compilar i3wm para Debian, Ubuntu y otras derivadas</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 268 palabras.    <a href="https://ugeek.github.io/blog/categories/i3wm">i3wm</a></h5>
+<h1 id="compilar-i3wm-para-debian-ubuntu-y-otras-derivadas">Compilar i3wm para Debian, Ubuntu y otras derivadas</h1>
 <p>Si utilizas Debian o versiones antiguas de Ubuntu, en los repositorios no está disponible la última versión i3wm.</p>
-<center>
 <p><img src="../images-blog/i3wm.png" /></p>
-</center>
-<p>En Debian Buster, la versión disponible en repositorios es de Enero del 2019, en cambio compilando, siempre tendremos la última versión. En el momento de este artículo, la última versión disponible es la versión 4.18.2 (2020-07-26). Este artículo te puede servir de modelo para posteriores versiones, únicamente cambiando el número de versión y quizás, instalando alguna dependencia nueva si te lo pide la terminal.</p>
+<p>En Debian Buster, la versión disponible en repositorios es de Enero del 2019, en cambio compilando, siempre tendremos la última versión. En el momento de este artículo, la última versión disponible es la versión 4.18.2 (2020-07-26).  Este artículo te puede servir de modelo para posteriores versiones, únicamente cambiando el número de versión y quizás, instalando alguna dependencia nueva si te lo pide la terminal.</p>
 <p>Vamos con la compilación, que veréis que es muy sencilla</p>
 <h2 id="instalar-dependencias">Instalar Dependencias</h2>
 <p>Esta son algunas dependencias necesarias</p>
-<pre><code>sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-xinerama0-dev libpango1.0-dev libxcursor-dev libxcb-cursor-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libxcb-xrm-dev libxcb-shape0-dev 
+<pre><code>
+sudo apt-get install libxcb1-dev libxcb-keysyms1-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-xinerama0-dev libpango1.0-dev libxcursor-dev libxcb-cursor-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libxcb-xrm-dev libxcb-shape0-dev 
 </code></pre>
 <h2 id="descargamos-la-última-versión">Descargamos la última versión</h2>
 <p>Podemos ver y descargar la última versión estable, desde <a href="https://i3wm.org/">https://i3wm.org/</a>.</p>
-<p>Descargaremos con wget la última versión en el momento de este artículo <code>4.18.2</code>.</p>
-<pre><code>wget https://i3wm.org/downloads/i3-4.18.2.tar.bz2 -O - | tar -xj
+<p>Descargaremos con wget la última versión en el momento de este artículo <code class="verbatim">4.18.2</code>.</p>
+<pre><code>
+wget https://i3wm.org/downloads/i3-4.18.2.tar.bz2 -O - | tar -xj
 cd i3-4.18.2
 mkdir -p build &amp;&amp; cd build
 </code></pre>
 <h2 id="compilamos">Compilamos</h2>
-<pre><code>../configure
+<pre><code>
+../configure
 make
 sudo make install
 </code></pre>
@@ -119,9 +78,7 @@ sudo make install
 <li><a href="https://faq.i3wm.org/question/68/how-to-build-and-install-i3-from-sources.1.html">https://faq.i3wm.org/question/68/how-to-build-and-install-i3-from-sources.1.html</a></li>
 <li><a href="https://i3wm.org/">https://i3wm.org/</a></li>
 </ul>
-<br>
 <p>Publicado por Angel el Sunday 16 August del 2020</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
@@ -130,7 +87,9 @@ sudo make install
 <li><a href="https://ugeek.github.io/blog/post/2023-01-06-tigervnc-servidor-vnc-en-manjaro.html">TigerVNC. Servidor VNC en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-11-i3wm-en-arch.html">i3wm en Arch</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html">Nautilus con Tema Oscuro en I3wm</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-12-28-i3wm-en-ubuntu-debian-raspbian---desde-0.html">i3wm en Ubuntu, Debian, Raspbian,… desde 0</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-12-28-i3wm-en-ubuntu-debian-raspbian---desde-0.html">i3wm en Ubuntu, Debian, Raspbian,... desde 0</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

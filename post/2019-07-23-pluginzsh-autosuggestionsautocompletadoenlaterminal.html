@@ -46,25 +46,25 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
 <h1 id="plugin-zsh-autosuggestions-autocompletado-en-la-terminal">Plugin zsh-autosuggestions. Autocompletado en la terminal</h1>
 <p>Sigo explorando y conociendo los plugin para Zsh.</p>
-<p><a href="./images-blog/omzsh.png">./images-blog/omzsh.png</a></p>
+<p><img src="../images-blog/omzsh.png" /></p>
 <p> Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones. Este plugin me recuerda mucho a las sugerencias que hace la shell <strong>fish</strong>.</p>
-<h2 id="instalaci-n-debian-ubuntu-raspberry-os">Instalación debian, ubuntu, Raspberry OS,...</h2>
+<h2 id="instalación-debian-ubuntu-raspberry-os">Instalación debian, ubuntu, Raspberry OS,...</h2>
 <p>El método mas sencillo de instalación, es clonando el repositorio del proyecto y precargar este plugin al arrancar la terminal, desde el archivo de configuración <strong>.zshcr</strong></p>
 <h3 id="clonar-el-repositorio">Clonar el repositorio</h3>
 <p>Vamos a clonar el repositorio, en la carpeta local <strong>~/.zsh/zsh-autosuggestions</strong>:</p>
-<p><code>git clone 5 ~/.zsh/zsh-autosuggestions</code></p>
-<h3 id="a-adir-en-el-archivo-de-configuraci-n">Añadir en el archivo de configuración</h3>
+<p><code class="verbatim">git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions</code></p>
+<h3 id="añadir-en-el-archivo-de-configuración">Añadir en el archivo de configuración</h3>
 <p>Editamos con nano:</p>
-<p><code>nano ~/.zshrc</code></p>
+<p><code class="verbatim">nano ~/.zshrc</code></p>
 <p>Añadimos esta línea:</p>
-<p><code>source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh</code></p>
+<p><code class="verbatim">source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh</code></p>
 <p>Reiniciamos nuestra terminal y ya podemos disfrutar del nuevo plugin</p>
-<h2 id="instalaci-n-arch-manjaro">Instalación Arch, Manjaro,...</h2>
+<h2 id="instalación-arch-manjaro">Instalación Arch, Manjaro,...</h2>
 <p>Instalamos el siguiente paquete:</p>
 <pre><code>
 sudo pacman -S zsh-autosuggestions
 </code></pre>
-<h3 id="a-adir-en-el-archivo-de-configuraci-n">Añadir en el archivo de configuración</h3>
+<h3 id="añadir-en-el-archivo-de-configuración">Añadir en el archivo de configuración</h3>
 <p>Editamos con nano:</p>
 <pre><code>
 nano ~/.zshrc

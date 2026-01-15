@@ -46,19 +46,19 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
 <h1 id="montar-un-servidor-webdav-con-dafs2">Montar un servidor webdav con dafs2 </h1>
 <p>En próximos Podcast y Posts, os hablaré de como montar un servidor con webdav, para sincronizar nuestros archivos. </p>
-<p><a href="./images-blog/dav.png">./images-blog/dav.png</a></p>
+<p><img src="../images-blog/dav.png" /></p>
 <p>Ahora de momento, vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2.</p>
-<h2 id="instalaci-n">Instalación</h2>
+<h2 id="instalación">Instalación</h2>
 <p>La instalación la haremos desde los repositorios:</p>
-<p><code>sudo apt-get install davfs2</code></p>
+<p><code class="verbatim">sudo apt-get install davfs2</code></p>
 <p>Seleccionanos <strong>YES</strong>, indicando que cualquiera que no sea usuario root, pueda montar una unidad.</p>
 <p>Creamos una carpeta, por ejemplo la llamaremos webdav, para montar después nuestro servidor.</p>
-<p><code>mkdir -p ~/webdav</code></p>
+<p><code class="verbatim">mkdir -p ~/webdav</code></p>
 <p>Reconfigurar davfs2:</p>
-<p><code>sudo dpkg-reconfigure davfs2</code></p>
+<p><code class="verbatim">sudo dpkg-reconfigure davfs2</code></p>
 <h2 id="montar">Montar</h2>
 <p>Vamos a montar nuestra servidor webdav en la carpeta local llamada webdav.</p>
-<p><code>sudo mount.davfs 6 ~/webdav</code></p>
+<p><code class="verbatim">sudo mount.davfs https://&lt;URL&gt;/ ~/webdav</code></p>
 <p>también podemos utilizar:</p>
 <pre><code>
 sudo mount -t davfs -o noexec https://&lt;URL&gt;/ ~/webdav
@@ -67,7 +67,7 @@ sudo mount -t davfs -o noexec https://&lt;URL&gt;/ ~/webdav
 <pre><code>
 sudo fusermount -u ~/webdav
 </code></pre>
-<h2 id="conclusi-n">Conclusión</h2>
+<h2 id="conclusión">Conclusión</h2>
 <p>En pocos pasos, podemos acceder a la totalidad de los archivos del servidor webdav y sincronizarlos con todos nuestros dispositivos.</p>
 <p>Publicado por Angel el Tuesday 11 June del 2019</p>
 <p>También te puede interesar:</p>

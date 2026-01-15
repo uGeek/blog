@@ -1,110 +1,68 @@
 <head>
-<title>Gestionando mis tareas en la terminal con topydo. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Gestionando mis tareas en la terminal con topydo. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original todotxt-cli de Gina Trapani" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Gestionando mis tareas en la terminal con topydo" />
-<meta property="og:description" content="Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original todotxt-cli de Gina Trapani" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/topydo.png" />
+<meta property="og:title" content="Gestionando mis tareas en la terminal con topydo" /> 
+<meta property="og:description" content="Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original todotxt-cli de Gina Trapani" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/topydo.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html" />
-
-<meta name="twitter:title" content="Gestionando mis tareas en la terminal con topydo" />
-<meta name="twitter:description" content="Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original todotxt-cli de Gina Trapani" />
+<meta name="twitter:title" content="Gestionando mis tareas en la terminal con topydo" /> 
+<meta name="twitter:description" content="Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original todotxt-cli de Gina Trapani" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/topydo.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="gestionando-mis-tareas-en-la-terminal-con-topydo-1" title="Gestionando mis tareas en la terminal con topydo" data-export_file_name="gestionando-mis-tareas-en-la-terminal-con-topydo" data-description="Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original todotxt-cli de Gina Trapani" data-export_date="2020-05-22 20:10" data-category="todo.txt" data-tag="tareas,terminal" data-image="./images-blog/topydo.png">Gestionando mis tareas en la terminal con topydo</h1>
-<h5>Tiempo estimado de lectura: 18 minutos. 1993 palabras.    <a href="https://ugeek.github.io/blog/categories/todo.txt">todo.txt</a></h5>
+<h1 id="gestionando-mis-tareas-en-la-terminal-con-topydo">Gestionando mis tareas en la terminal con topydo</h1>
 <p>Si te gusta el todo.txt y utilizas la terminal, topydo es tu aplicación. Topydo, como su nombre indica, es una aplicación desarrollada en python para gestionar o añadir tareas utilizando el método todo.txt, que mejora la experiencia respecto al script original <strong>todotxt-cli</strong> de Gina Trapani.</p>
-<p>Las opciones de uso son muy parecidas y en algunos casos, más simples. Una de las mejoras, es la visualización de los listados de proyectos, contextos, prioridades,… son más visibles, ya cada uno se muestran con colores diferentes.</p>
+<p>Las opciones de uso son muy parecidas y en algunos casos, más simples. Una de las mejoras, es la visualización de los listados de proyectos, contextos, prioridades,... son más visibles, ya cada uno se muestran con colores diferentes.</p>
 <p>Lo más espectacular, son dos modos que podemos utilizar de topydo.</p>
-<p>Prompt, te permite gestionar tus tareas, estando dentro de la aplicación, sin necesidad de estar todo el rato introduciendo el comando <code>topydo</code>.</p>
-<center>
+<p>Prompt, te permite gestionar tus tareas, estando dentro de la aplicación, sin necesidad de estar todo el rato introduciendo el comando <code class="verbatim">topydo</code>.</p>
 <p><img src="../images-blog/topydo.png" /></p>
-</center>
-<p><code>Column</code>, es otro modo que permite mostrarnos todas nuestras tareas en columnas, fusionando si lo deseas el método kanban con el todo.txt, o mostrar columnas con tus contextos, proyectos, prioridades,….</p>
+<p><code class="verbatim">Column</code>, es otro modo que permite mostrarnos todas nuestras tareas en columnas, fusionando si lo deseas el método kanban con el todo.txt, o mostrar columnas con tus contextos, proyectos, prioridades,....</p>
 <p>La verdad es que he profundizado muchísimo con esta aplicación y he disfrutado mucho. Voy a explicaros un poco de los tres modos.</p>
 <p>Si buscas algo más concreto, <a href="https://ugeek.github.io/blog/varios/topydo.html">he clonado el Tiki Wiki de su documentación</a>, para que puedas consultarla cuando lo desees. Actualmente, su página principal que contenía esta documentación, ya no esta disponible.</p>
-<p>Crearé en breve una nueva sección dentro del Blog de uGeek para cosas como estas. Documentaciones, atajos de teclado,…</p>
+<p>Crearé en breve una nueva sección dentro del Blog de uGeek para cosas como estas. Documentaciones, atajos de teclado,...</p>
 <h2 id="instalación-de-topydo">Instalación de topydo</h2>
 <p>Si tienes instalado python3 y pip3, el sistema de gestión de paquetes de python, es tan simple como:</p>
-<pre><code>sudo pip3 install topydo
+<pre><code>
+sudo pip3 install topydo
 </code></pre>
 <h2 id="configuración">Configuración</h2>
 <p>Podemos configurar topydo con uno o más archivos de configuración de estilo ini. topydo busca los siguientes archivos de configuración en este orden:</p>
-<pre><code>/etc/topydo.conf
+<pre><code>
+/etc/topydo.conf
 $HOME/.config/topydo/config
 $HOME/.topydo
 .topydo (en el directorio de trabajo actual)
@@ -115,8 +73,9 @@ topydo.ini (en el directorio de trabajo actual) (para soporte mejorado en Window
 <p>Los valores en archivos de configuración posteriores, anulan los valores anteriores.</p>
 <h3 id="alias">Alias</h3>
 <p>Mediante el archivo de configuración, podremos crear nuestros propios alias para invocar a topydo con comandos personalizados. Esta funcionalidad es similar a los alias en un shell de Unix (bash, zsh, etc.).</p>
-<p>Vamos a crear el archivo de configuración <code>$HOME/.config/topydo/config</code> y añadir unos alias de ejemplo:</p>
-<pre><code>[aliases]
+<p>Vamos a crear el archivo de configuración <code class="verbatim">$HOME/.config/topydo/config</code> y añadir unos alias de ejemplo:</p>
+<pre><code>
+[aliases]
 # Muestra la primera linea de la lista
 next = ls -n 1
 
@@ -133,35 +92,43 @@ star = tag {} star 1
 unstar = tag {} star
 </code></pre>
 <p>Ahora para listar mis tareas, podría hacerlo con este comnado</p>
-<pre><code>topydo l
+<pre><code>
+topydo l
 </code></pre>
 <h3 id="crea-el-alias-en-tu-sistema-operativo">Crea el alias en tu sistema operativo</h3>
 <p>Recuerda que para no tener que estar utilizando todo el rato el comando <strong>topydo</strong>, podemos crea un alias para sustituirlo, por ejemplo, por la letra <strong>t</strong>.</p>
 <p>Así, tal como explicaba antes, listar nuestras tareas sería tan simple como:</p>
-<pre><code>t l
+<pre><code>
+t l
 </code></pre>
-<h2 id="topydo.-uso-básico">topydo. Uso Básico</h2>
+<h2 id="topydo-uso-básico">topydo. Uso Básico</h2>
 <p>topydo es mucho más simple que todotxt-cli, ya que no necesitamos crear previamente un archivo de configuración.</p>
-<p>Simplemente entramos en el directorio donde está el archivo todo.txt y ejecutando el comando <code>topydo</code>, ya podemos gestionar nuestra lista de tareas de nuestro archivo todo.txt.</p>
-<h3 id="indicando-la-ruta-del-archivo-todo.txt-y-done.txt">Indicando la ruta del archivo todo.txt y done.txt</h3>
+<p>Simplemente entramos en el directorio donde está el archivo todo.txt y ejecutando el comando <code class="verbatim">topydo</code>, ya podemos gestionar nuestra lista de tareas de nuestro archivo todo.txt.</p>
+<h3 id="indicando-la-ruta-del-archivo-todotxt-y-donetxt">Indicando la ruta del archivo todo.txt y done.txt</h3>
 <p>Si no accedemos al directorio, tenemos que indicar la ruta del archivo todo.txt o done.txt.</p>
-<pre><code>topydo -t ~/todo/todo.txt -d ~/todo/done.txt
+<pre><code>
+topydo -t ~/todo/todo.txt -d ~/todo/done.txt
 </code></pre>
 <p>Si utilizamos la versión prompt, podríamos lanzarlo con:</p>
-<pre><code>topydo -t ~/todo/todo.txt prompt
+<pre><code>
+topydo -t ~/todo/todo.txt prompt
 </code></pre>
 <h3 id="añadir-tarea">Añadir tarea</h3>
-<pre><code>topydo add &quot;grabar podcast de topydo +podcast&quot;
+<pre><code>
+topydo add &quot;grabar podcast de topydo +podcast&quot;
 </code></pre>
 <p>Para que sea más simple y rápido, a diferencia de todotxt-cli, topydo nos permite añadir la tarea sin necesidad de utilizar comillas</p>
-<pre><code>topydo add grabar podcast de topydo +podcast
+<pre><code>
+topydo add grabar podcast de topydo +podcast
 </code></pre>
 <h3 id="listar-tareas">Listar tareas</h3>
-<pre><code>todopy ls
+<pre><code>
+todopy ls
 </code></pre>
 <h3 id="filtrar">Filtrar</h3>
 <p>Tan sencillo como escribir el comando seguido de la palabra a filtrar:</p>
-<pre><code>topydo palabra
+<pre><code>
+topydo palabra
 </code></pre>
 <h2 id="modo-prompt">Modo prompt</h2>
 <p>El modo de solicitud es bastante similar a la interfaz de línea de comandos, excepto que los subcomandos se reconocen inmediatamente, no es necesario escribir <strong>topydo</strong> cada vez.</p>
@@ -169,40 +136,45 @@ unstar = tag {} star
 <p>Este modo es adecuado si invocamos la CLI de topydo con bastante frecuencia.</p>
 <h2 id="instalación-modo-prompt">Instalación modo prompt</h2>
 <p>El modo de prompt requiere una dependencia adicional prompt_toolkitque así que vamos a instalarla primero.</p>
-<pre><code>sudo pip3 install &quot;topydo[prompt]&quot;
+<pre><code>
+sudo pip3 install &quot;topydo[prompt]&quot;
 </code></pre>
 <h2 id="uso-modo-prompt">Uso modo prompt</h2>
 <p>Iniciamos con:</p>
-<pre><code>topydo prompt
+<pre><code>
+topydo prompt
 </code></pre>
 <p>Y aparecerá en la terminal:</p>
-<pre><code>topydo&gt;
+<pre><code>
+topydo&gt;
 </code></pre>
 <p>Ahora puedes introducir comandos sin necesidad de escribir todo el rato topydo.</p>
 <h3 id="salir-del-modo-prompt">Salir del modo prompt</h3>
 <p>Para salir, escribe el comando <strong>exit</strong>.</p>
 <h3 id="listar">Listar</h3>
-<ol>
-<li><p>Listar todas las tareas</p>
-<pre><code>ls
-</code></pre></li>
-<li><p>Listar Proyectos</p>
+<h4 id="listar-todas-las-tareas">Listar todas las tareas</h4>
+<pre><code>
+ls
+</code></pre>
+<h4 id="listar-proyectos">Listar Proyectos</h4>
 <p>Escribiendo ls + TAB, nos mostrará todas las opciones de ls.</p>
-<pre><code>lsproj
+<pre><code>
+lsproj
 
 lspr
-</code></pre></li>
-<li><p>Listar contextos</p>
-<pre><code>lscon
-</code></pre></li>
-</ol>
-<h3 id="filtrar-1">Filtrar</h3>
+</code></pre>
+<h4 id="listar-contextos">Listar contextos</h4>
+<pre><code>
+lscon
+</code></pre>
+<h3 id="filtrar">Filtrar</h3>
 <p>Simplemente escribimos la palabra a filtrar y pulsamos <strong>enter</strong>. Topydo nos mostrará las tareas que coincidan con esa palabra.</p>
 <h3 id="limpiar-terminal">Limpiar terminal</h3>
 <p>Igual que hacemos habitualmente en nuestra terminal, utilizaremos el atajo <strong>Ctrl+l</strong>.</p>
 <h3 id="añadir-una-tarea">Añadir una tarea</h3>
 <p>Escribimos add seguido de la tarea</p>
-<pre><code>add tarea
+<pre><code>
+add tarea
 </code></pre>
 <h3 id="autocompletar">Autocompletar</h3>
 <p>Los siguientes elementos se autocompletan automáticamente al presionar <strong>TAB</strong>:</p>
@@ -213,80 +185,93 @@ lspr
 <li>Fechas (presione Tab después de due:o t:, o las etiquetas correspondientes que se configuraron )</li>
 </ul>
 <p><strong>Con las flechas arriba y abajo, podemos seleccionar el histórico de comandos previamente introducidos</strong>.</p>
-<p>Con <strong>TAB</strong> autocompleta lo que estamos escribiendo. Ejemplo.</p>
-<pre><code>add tarea @c
+<p>Con <strong>TAB</strong> autocompleta lo que estamos escribiendo.</p>
+<p>Ejemplo.</p>
+<pre><code>
+add tarea @c
 </code></pre>
-<p>Si pulsamos ahora <strong>TAB</strong>, en mi caso autoescribirá el contexto <strong><span class="citation" data-cites="casa">@casa</span></strong></p>
+<p>Si pulsamos ahora <strong>TAB</strong>, en mi caso autoescribirá el contexto <strong>@casa</strong></p>
 <p>El proceso para crear una tarea utilizando el autocompletado, sería:</p>
 <ol>
 <li>add</li>
 <li>Escribimos de un modo natural la tarea</li>
 <li>@ y pulsamos TAB o + y pulsamos TAB</li>
 </ol>
-<pre><code>add @podcast hablar en el podcast de topydo
+<pre><code>
+add @podcast hablar en el podcast de topydo
 </code></pre>
 <h3 id="añadir-una-prioridad-a-una-tarea">Añadir una prioridad a una tarea</h3>
 <p>Añadir prioridad <strong>A</strong> a la tarea 56.</p>
-<pre><code>pri 56 A
+<pre><code>
+pri 56 A
 </code></pre>
 <p>También podemos utilizar <strong>a</strong> minúscula, no es obligatorio escribir <strong>A</strong>.</p>
 <h3 id="añadir-fecha">Añadir fecha</h3>
 <p>Escribe <strong>due:</strong> o <strong>t:</strong> y pulsa <strong>TAB</strong>. Te mostrará unas fechas por defecto.</p>
 <h3 id="posponer-fecha">Posponer fecha</h3>
 <p>Posponer un dia la tarea 16</p>
-<pre><code>postpone 16 1d
+<pre><code>
+postpone 16 1d
 </code></pre>
-<p>También podemos posponer semanas, meses, años…</p>
+<p>También podemos posponer semanas, meses, años...</p>
 <ul>
 <li>w -&gt; semana</li>
 <li>m -&gt; mes</li>
 <li>y -&gt; año</li>
 </ul>
 <h3 id="editar">Editar</h3>
-<p>Si escribimos <strong>edit</strong>, nos abrirá todo el archivo todo.txt para editarlo. Si escribimos <strong>edit 20</strong>, editaremos solo la tarea 20.</p>
+<p>Si escribimos <strong>edit</strong>, nos abrirá todo el archivo todo.txt para editarlo.</p>
+<p>Si escribimos <strong>edit 20</strong>, editaremos solo la tarea 20.</p>
 <h3 id="borrar-una-tarea">Borrar una tarea</h3>
 <p>Para borrar una tarea, es tan simple como:</p>
-<pre><code>del 45
+<pre><code>
+del 45
 </code></pre>
 <p>Borrando la tarea 45</p>
 <h3 id="revertir-cambios">Revertir cambios</h3>
 <p>Es posible que hayas guardado una tarea y te hayas equevocado. Para revertir, utilizaremos el comando revert</p>
-<pre><code>revert
+<pre><code>
+revert
 </code></pre>
 <p>Te preguntaras, ¿como hace esto?. Topydo guarda un bakup de tu todo.txt en el mismo directorio que tienes el archivo llamado <strong>.todo.bak</strong>.</p>
 <h3 id="destacar-tareas-con-estrellas">Destacar tareas con estrellas</h3>
 <p>Esto es algo que no está en la sintaxis oficial de todo.txt.</p>
 <p>Podemos destacar tareas con un número de estrellas según la importancia.</p>
 <p>La sintaxis sería:</p>
-<pre><code>(B) 2020-04-27 esta tarea tiene una estrella star:1
+<pre><code>
+(B) 2020-04-27 esta tarea tiene una estrella star:1
 </code></pre>
 <p>Tenemos que añadir un alias</p>
 <p>Alias</p>
-<pre><code># starring and unstarring
+<pre><code>
+# starring and unstarring
 # `star 42` substitutes to `tag 42 star 1`
 star = tag {} star 1
 unstar = tag {} star
 </code></pre>
-<p>Para visualizar el autocompletado, escribimos <code>s + TAB</code> , start 1. start 2</p>
-<ol>
-<li><p>Añadiendo estrellas</p>
+<p>Para visualizar el autocompletado, escribimos <code class="verbatim">s + TAB</code> , start 1.</p>
+<p>start 2</p>
+<h4 id="añadiendo-estrellas">Añadiendo estrellas</h4>
 <p>A la tarea 42, le pongo una estralla</p>
-<pre><code>star 42 1
-</code></pre></li>
-</ol>
+<pre><code>
+star 42 1
+</code></pre>
 <h3 id="añadir-más-texto-a-una-tarea-con-appen">Añadir más texto a una tarea con appen</h3>
 <p>Para añadir más texto utilizando appen:</p>
-<pre><code>appen 47 texto a añadir
+<pre><code>
+appen 47 texto a añadir
 </code></pre>
 <h3 id="tarea-realizada">Tarea realizada</h3>
 <p>Para marcar una tarea como realizada, utilizamos <strong>do</strong> seguido del número de tarea. Automáticamente esta tarea, irá al archivo <strong>done.txt</strong>.</p>
 <p>Para finalizar varias tareas, utilizamos <strong>do</strong> seguido de todos los números de tareas</p>
-<pre><code>do 5 10 30
+<pre><code>
+do 5 10 30
 </code></pre>
 <p>Finalizando las tareas 5, 10, 30</p>
 <h3 id="resumen-de-comandos-disponibles">Resumen de Comandos disponibles</h3>
 <p>Escribiendo <strong>help</strong>, nos mostrará la ayuda con todos los comandos disponibles.</p>
-<pre><code>add
+<pre><code>
+add
 append (app)
 del (rm)
 dep
@@ -307,66 +292,69 @@ Run `topydo help &lt;subcommand&gt;` for command-specific help.
 </code></pre>
 <h2 id="columnas">Columnas</h2>
 <h3 id="instalación-con-columnas">Instalación con columnas</h3>
-<pre><code>sudo pip3 install &#39;topydo[columns]&#39;
+<pre><code>
+sudo pip3 install 'topydo[columns]'
 </code></pre>
 <h3 id="iniciar">Iniciar</h3>
 <p>Situándonos en el directorio donde tenemos nuestro archivo todo.txt.</p>
-<pre><code>topydo columns
+<pre><code>
+topydo columns
 </code></pre>
 <p>Si no es así, tendremos que especificar la ruta, tal como explicaba al principio del artículo.</p>
 <h3 id="uso">Uso</h3>
-<p>Para introducir un comando, utilizaremos <strong>:</strong>, como en vim. Con <strong>:help</strong>, tendremos la ayuda.</p>
+<p>Para introducir un comando, utilizaremos <strong>:</strong>, como en vim.</p>
+<p>Con <strong>:help</strong>, tendremos la ayuda.</p>
 <ul>
 <li>Ayuda -&gt; :help</li>
 <li>Salir -&gt; :quit o :exit</li>
 </ul>
-<h3 id="acciones-de-columnas.-añadir-borrar-columnas">Acciones de Columnas. Añadir, borrar,… Columnas</h3>
+<h3 id="acciones-de-columnas-añadir-borrar-columnas">Acciones de Columnas. Añadir, borrar,... Columnas</h3>
 <p>Para añadir una nueva columna , pulsa la tecla <strong>A</strong>.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Atajo</th>
 <th>Acción</th>
 <th>Descripción</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>A</td>
 <td>append_column</td>
 <td>Agregar / agregar columna (a la derecha)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>I</td>
 <td>insert_column</td>
 <td>Insertar nueva columna antes de la columna actual</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>E</td>
 <td>edit_column</td>
 <td>Editar la definición de columna actual</td>
 </tr>
-<tr class="even">
+<tr>
 <td>D</td>
 <td>delete_column</td>
 <td>Eliminar la columna actual</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Y</td>
 <td>copy_column</td>
 <td>Copie ( y ank) la columna actual</td>
 </tr>
-<tr class="even">
+<tr>
 <td>L</td>
 <td>swap_left</td>
 <td>Cambiar la columna actual con la columna vecina izquierda</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>R</td>
 <td>swap_right</td>
 <td>Cambiar la columna actual con la columna vecina derecha</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Ctrl-a</td>
 <td>mark_all</td>
 <td>Marca todos los elementos en la columna actual</td>
@@ -376,54 +364,54 @@ Run `topydo help &lt;subcommand&gt;` for command-specific help.
 <h3 id="navegación">Navegación</h3>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Atajo</th>
 <th>Acción</th>
 <th>Descripción</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>j o ↓</td>
 <td>up</td>
 <td>Mueve un elemento hacia abajo</td>
 </tr>
-<tr class="even">
+<tr>
 <td>k o ↑</td>
 <td>down</td>
 <td>Mueve un elemento hacia arriba</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>l o →</td>
 <td>next_column</td>
 <td>Ir a la siguiente columna</td>
 </tr>
-<tr class="even">
+<tr>
 <td>h o ←</td>
 <td>prev_column</td>
 <td>Ir a la columna anterior</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>gg o Home</td>
 <td>home</td>
 <td>Mover hacia arriba</td>
 </tr>
-<tr class="even">
+<tr>
 <td>G o End</td>
 <td>end</td>
 <td>Mover al fondo</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>0</td>
 <td>first_column</td>
 <td>Moverse a la primera columna</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$</td>
 <td>last_column</td>
 <td>Moverse a la última columna</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>:</td>
 <td></td>
 <td>Enfoca la línea de comandos para ejecutar comandos personalizados.</td>
@@ -433,49 +421,49 @@ Run `topydo help &lt;subcommand&gt;` for command-specific help.
 <h3 id="acciones-de-elementos-de-todo">Acciones de elementos de todo</h3>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Atajo</th>
 <th>Acción</th>
 <th>Descripción</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>d</td>
 <td>cmd del {}</td>
 <td>Se ejecuta delen elementos resaltados</td>
 </tr>
-<tr class="even">
+<tr>
 <td>e</td>
 <td>cmd edit {}</td>
 <td>Se ejecuta editen elementos resaltados</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>m</td>
 <td>mark</td>
 <td>Marcar elemento actual (para realizar acciones en varios elementos simultáneamente)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>pp&lt; período &gt;</td>
 <td>postpone</td>
 <td>Se ejecuta postponeen los elementos resaltados con el período dado .</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>pr&lt; prioridad &gt;</td>
 <td>pri</td>
 <td>Se ejecuta prien los elementos resaltados con la prioridad dada.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>ps&lt; período &gt;</td>
 <td>postpone_s</td>
 <td>Se ejecuta postponeen modo estricto en los elementos resaltados con el período dado .</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>u</td>
 <td>cmd revert</td>
 <td>Ejecuta revert</td>
 </tr>
-<tr class="even">
+<tr>
 <td>x</td>
 <td>cmd do {}</td>
 <td>Se ejecuta doen elementos resaltados</td>
@@ -484,10 +472,12 @@ Run `topydo help &lt;subcommand&gt;` for command-specific help.
 </table>
 <h3 id="configuración-columnas">Configuración Columnas</h3>
 <p>Vamos a crear el archivo de configuración para poder ver diferentes columnas preestablecidas por mi.</p>
-<pre><code>nano $HOME/.config/topydo/config
+<pre><code>
+nano $HOME/.config/topydo/config
 </code></pre>
 <p>Añadimos, por ejemplo</p>
-<pre><code>[Current]
+<pre><code>
+[Current]
 title = Current
 sortexpr = desc:importance
 groupexpr = project
@@ -505,56 +495,59 @@ filterexpr = star:1
 show_all = 1
 </code></pre>
 <p>Iniciaremos con mi configuración, ejecutando el siguiente comando</p>
-<pre><code>topydo columns -l $HOME/.config/topydo/config
+<pre><code>
+topydo columns -l $HOME/.config/topydo/config
 </code></pre>
 <h3 id="otros-atajos-de-línea-de-comando">Otros atajos de línea de comando</h3>
 <p>La línea de comandos, activada al presionar <strong>:</strong>, admite las siguientes teclas:</p>
 <ul>
-<li>Ctrl-a -&gt; Ir al principio</li>
-<li>Ctrl-e -&gt; Muévete hasta el final</li>
-<li>Ctrl-u -&gt; Eliminar del cursor al principio</li>
-<li>Ctrl-k -&gt; Eliminar desde el cursor hasta el final</li>
+<li>Ctrl-a	-&gt; Ir al principio</li>
+<li>Ctrl-e	-&gt; Muévete hasta el final</li>
+<li>Ctrl-u	-&gt; Eliminar del cursor al principio</li>
+<li>Ctrl-k	-&gt; Eliminar desde el cursor hasta el final</li>
 </ul>
 <h2 id="android">Android</h2>
 <p>Gracias a Termux, también podremos utilizar topydo en Android.</p>
 <p>Voy a explicar un poco el proceso</p>
 <ol>
 <li>Instalaremos Termux desde Google Play o F-Droid</li>
-<li>Instalamos Python3 <code>apt-get install python</code></li>
-<li>Instalamos topydo <code>pip3 install topydo</code></li>
+<li>Instalamos Python3 <code class="verbatim">apt-get install python</code></li>
+<li>Instalamos topydo <code class="verbatim">pip3 install topydo</code></li>
 <li>Crearemos unos alias para que nos se más sencillo:</li>
 </ol>
-<pre><code>vi $HOME/.bashrc
+<pre><code>
+vi $HOME/.bashrc
 </code></pre>
 <p>Añadiremos el siguiente contenido</p>
-<pre><code>alias topydo=$HOME/.local/bin/topydo
+<pre><code>
+alias topydo=$HOME/.local/bin/topydo
 alias do=&quot;topydo do&quot;
 alias add=&quot;topydo add&quot;
 
 # -N and %S make sure that the list fits on the screen properly
-alias t=&quot;topydo ls -N -F &#39;%I %S&#39; &quot;
+alias t=&quot;topydo ls -N -F '%I %S' &quot;
 </code></pre>
-<p>Asegurate tener source <code>$HOME/.bashrc</code> en tu <code>$HOME/.bash_profile</code>.</p>
+<p>Asegurate tener source <code class="verbatim">$HOME/.bashrc= en tu =$HOME/.bash_profile</code>.</p>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/bram85/topydo/">https://github.com/bram85/topydo/</a></li>
 <li><a href="https://c306.net/t/topydo-docs/">https://c306.net/t/topydo-docs/</a></li>
 <li><a href="https://ugeek.github.io/blog/varios/topydo.html">https://ugeek.github.io/blog/varios/topydo.html</a></li>
 </ul>
-<br>
 <p>Publicado por Angel el Friday 22 May del 2020</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2021-07-04-pter-otra-aplicacion-de-todo-txt-escrita-en-python-para-terminal-interfaz-grafica.html">Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-04-19-sleek-una-aplicacion-de-todo-txt-moderna-y-elegante.html">Sleek. Una aplicación de todo.txt moderna y elegante</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-12-docker-topydo-y-todotxt-machine-en-un-docker.html">Docker: topydo y todotxt-machine en un docker</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html">Gestionando mis tareas en la terminal con topydo</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-01-31-a-python-tambien-le-gusta-el-todo-txt-todotxt-machine.html">A python también le gusta el todo.txt. todotxt-machine</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-01-29-integracion-total-de-todotxt-en-emacs.html">Integración total de todotxt en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-01-27-aprendiendo-todo-txt-todotxt-cli.html">Aprendiendo todo.txt. todotxt-cli</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-08-21-qtodotxt.html">QTodoTxt. todo.txt en tu escritorio</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

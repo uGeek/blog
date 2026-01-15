@@ -46,11 +46,11 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
 <h1 id="minidlna">minidlna</h1>
 <p>DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.</p>
-<p><a href="./images-blog/dlna.png">./images-blog/dlna.png</a></p>
-<h2 id="instalaci-n">Instalación</h2>
-<p><code>sudo apt install minidlna</code></p>
-<h2 id="archivo-de-configuraci-n-del-servicio">Archivo de configuración del servicio</h2>
-<p><code>sudo nano /etc/minidlna.conf</code></p>
+<p><img src="../images-blog/dlna.png" /></p>
+<h2 id="instalación">Instalación</h2>
+<p><code class="verbatim">sudo apt install minidlna</code></p>
+<h2 id="archivo-de-configuración-del-servicio">Archivo de configuración del servicio</h2>
+<p><code class="verbatim">sudo nano /etc/minidlna.conf</code></p>
 <p>Añadiremos al inicio del archivo de configuración, la ruta donde están nuestros archivos multimedia. Ejem:</p>
 <pre><code>
 media_dir=V,/media/Peliculas
@@ -58,7 +58,7 @@ media_dir=P,/media/Fotos
 media_dir=A,/media/Musica
 </code></pre>
 <p>Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la siguiente manera:</p>
-<p><code>media_dir</code>PV,<em>media</em>Peliculas<u>y</u> Fotos=</p>
+<p><code class="verbatim">media_dir=PV,/media/Peliculas_y_ Fotos</code></p>
 <p>Si tenemos nuestros archivos multimedia en dos o más carpetas, podemos especificarlo así:</p>
 <pre><code>
 media_dir=A,~/Música
@@ -76,7 +76,7 @@ inotify=yes
 # Name that the DLNA server presents to clients.
 friendly_name=Mi Servidor DLNA
 </code></pre>
-<h2 id="a-adir-nuevo-contenido-multimedia">Añadir nuevo contenido Multimedia </h2>
+<h2 id="añadir-nuevo-contenido-multimedia">Añadir nuevo contenido Multimedia </h2>
 <p>Para que todos los nuevos archivos multimedia que añadamos, sean añadidos de forma automática a nuestro servidor, deberemos tener habilitada esta opción en el archivo de configuración:</p>
 <pre><code>
 # Automatic discovery of new files in the media_dir directory.
@@ -85,27 +85,27 @@ inotify=yes
 <h2 id="crear-nueva-base-de-datos"> Crear nueva base de datos</h2>
 <p>Para crear una nueva base de datos en nuestro servidor y eliminar la actual, por ejemplo, en el caso que cambiemos las carpetas donde esté nuestro contenido multimedia:</p>
 <p>Borraremos la base de datos:  </p>
-<p><code>sudo rm -f /var/cache/minidlna/files.db</code></p>
+<p><code class="verbatim">sudo rm -f /var/cache/minidlna/files.db</code></p>
 <p>Reiniciaremos el servidor</p>
-<p><code>sudo service minidlna restart</code></p>
+<p><code class="verbatim">sudo service minidlna restart</code></p>
 <p>Como has podido ver en este paso anterior, la base de datos así como las portadas de los archivos multimedia, están defecto en la carpeta <strong>/var/cache/minidlna</strong>. Pero en el archivo de configuración, podemos cambiar la ruta. Para ello desmarcaremos la almohadilla y especificaremos la ruta deseada.</p>
 <pre><code>
 # Path to the directory that should hold the database and album art cache.                                                                  
 #db_dir=/var/cache/minidlna  
 </code></pre>
 <h2 id="iniciar-detener-restaurar-servicio">Iniciar, Detener, Restaurar servicio</h2>
-<p><code>exec /usr/sbin/service minidlna start</code></p>
+<p><code class="verbatim">exec /usr/sbin/service minidlna start</code></p>
 <p>o</p>
-<p><code>sudo systemctl start minidlna.service</code></p>
+<p><code class="verbatim">sudo systemctl start minidlna.service</code></p>
 <p>o</p>
-<p><code>sudo service minidlna start</code></p>
-<p><code>sudo service minidlna stop</code></p>
-<p><code>sudo service minidlna restart</code></p>
+<p><code class="verbatim">sudo service minidlna start</code></p>
+<p><code class="verbatim">sudo service minidlna stop</code></p>
+<p><code class="verbatim">sudo service minidlna restart</code></p>
 <h2 id="forzar-el-reescaneado">Forzar el reescaneado</h2>
 <p>Cuando añadamos nuevo contenido a nuestra Biblioteca multimedia, es posible que no aparezca, esto se soluciona forzando la recarga de nuestra base de datos:</p>
-<p><code>sudo minidlnad -R ; sudo service minidlna restart</code></p>
+<p><code class="verbatim">sudo minidlnad -R ; sudo service minidlna restart</code></p>
 <p>o sino, podemos hacer:</p>
-<p><code>sudo service minidlna force-reload</code></p>
+<p><code class="verbatim">sudo service minidlna force-reload</code></p>
 <p>Si accedemos a nuestra IP:8200, veremos todo el contenido disponible a través de nuestro servidor DLNA.</p>
 <h2 id="puertos">Puertos</h2>
 <p>En caso de tener cortafuegos, recordar abrir los puertos del servicio para poder acceder:</p>

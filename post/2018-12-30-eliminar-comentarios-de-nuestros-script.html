@@ -46,9 +46,9 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
 <h1 id="eliminar-comentarios-de-nuestros-script">Eliminar comentarios de nuestros script</h1>
 <p>Es muy probable que al crear un script, para entender mejor lo que estas haciendo, tomes un exceso de notas. Para eliminar estas en , <strong>bash</strong>, va a ser tan sencillo como hacer uso de nuestro querido <strong>grep</strong>:</p>
-<p><code>cat archivo.sh |  grep -v ^# &gt; archivo_nuevo.sh</code></p>
+<p><code class="verbatim">cat archivo.sh |  grep -v ^# &gt; archivo_nuevo.sh</code></p>
 <p>Si además quieres eliminar también las líneas que quedaran en blanco, como expliqué en otro post, utilizaremos <strong>sed</strong>::</p>
-<p><code>cat archivo.sh |  grep -v ^# | sed '/^ *$/d' &gt; archivo_nuevo.sh</code></p>
+<p><code class="verbatim">cat archivo.sh |  grep -v ^# | sed '/^ *$/d' &gt; archivo_nuevo.sh</code></p>
 <p>Publicado por Angel el Sunday 30 December del 2018</p>
 <p>También te puede interesar:</p>
 <ul>

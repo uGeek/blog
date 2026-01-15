@@ -1,151 +1,125 @@
 <head>
-<title>Liberar el puerto 53 utilizado por systemd-resolved. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Liberar el puerto 53 utilizado por systemd-resolved. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Liberar el puerto 53 utilizado por systemd-resolved" />
-<meta property="og:description" content="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:title" content="Liberar el puerto 53 utilizado por systemd-resolved" /> 
+<meta property="og:description" content="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html" />
-
-<meta name="twitter:title" content="Liberar el puerto 53 utilizado por systemd-resolved" />
-<meta name="twitter:description" content="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu" />
+<meta name="twitter:title" content="Liberar el puerto 53 utilizado por systemd-resolved" /> 
+<meta name="twitter:description" content="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="liberar-el-puerto-53-utilizado-por-systemd-resolved-1" title="Liberar el puerto 53 utilizado por systemd-resolved" data-export_file_name="liberar-el-puerto-53-utilizado-por-systemd-resolved" data-description="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu" data-export_date="2023-01-17 10:00" data-category="manjaro" data-tag="puertos,ubuntu,systemd" data-image="./images-blog/ugeek.png">Liberar el puerto 53 utilizado por systemd-resolved</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 492 palabras.    <a href="https://ugeek.github.io/blog/categories/manjaro">manjaro</a></h5>
-<p>Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu tiene una escucha resuelta por systemd en el puerto 53 de forma predeterminada. En caso de que desees ejecutar tu propio servidor DNS (Como instalar blocky, AdguardHome, PiHole,…), no podrás ya que el puerto 53 ya está en uso, por lo que obtendrá un error.</p>
+<h1 id="liberar-el-puerto-53-utilizado-por-systemd-resolved">Liberar el puerto 53 utilizado por systemd-resolved</h1>
+<p>Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu tiene una escucha resuelta por systemd en el puerto 53 de forma predeterminada. En caso de que desees ejecutar tu propio servidor DNS (Como instalar blocky, AdguardHome, PiHole,...), no podrás ya que el puerto 53 ya está en uso, por lo que obtendrá un error.</p>
 <h2 id="comprobar-puertos-en-uso">Comprobar puertos en uso</h2>
 <p>Vamos a comprobar los puertos utilizados y confirmar que el puerto 53 está ocupado.</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> ss -tulwn <span class="kw">|</span> <span class="fu">grep</span> LISTEN</a></code></pre></div>
+<pre><code class="language-sh">
+sudo ss -tulwn | grep LISTEN
+</code></pre>
 <p>Vamos a ver que sigunifican las opciones:</p>
 <ul>
-<li><code>-t</code> Mostrar solo sockets TCP en Linux</li>
-<li><code>-u</code> Mostrar solo sockets UDP en Linux</li>
-<li><code>-l</code> Mostrar tomas de escucha (por ejemplo, el puerto TCP 22 es abierto por el servidor SSHD)</li>
-<li><code>-p</code> Lista el nombre del proceso que abrió el socket</li>
-<li><code>-n</code> No resuelve los nombres de servicio</li>
+<li><code class="verbatim">-t</code> Mostrar solo sockets TCP en Linux</li>
+<li><code class="verbatim">-u</code> Mostrar solo sockets UDP en Linux</li>
+<li><code class="verbatim">-l</code> Mostrar tomas de escucha (por ejemplo, el puerto TCP 22 es abierto por el servidor SSHD)</li>
+<li><code class="verbatim">-p</code> Lista el nombre del proceso que abrió el socket</li>
+<li><code class="verbatim">-n</code> No resuelve los nombres de servicio</li>
 </ul>
 <p>Fuente: <a href="https://esgeeks.com/abrir-cerrar-puertos-linux/">https://esgeeks.com/abrir-cerrar-puertos-linux/</a></p>
 <p>Filtrar el puerto 53</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">ss</span> -tanp <span class="kw">|</span> <span class="fu">grep</span> 53</a></code></pre></div>
+<pre><code class="language-sh">
+ss -tanp | grep 53
+</code></pre>
 <p>Voy a utilizar lsoff para ver el servicio que ocupa el puerto 53. Para ello instalaremos <strong>lsof</strong> ya que no está instalado en Manjaro Minimal:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> pacman -Syu lsoff</a></code></pre></div>
+<pre><code class="language-sh">
+sudo pacman -Syu lsoff
+</code></pre>
 <p>Miramos solo el puerto <strong>53</strong>.</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> lsof -i :53</a></code></pre></div>
+<pre><code class="language-sh">
+sudo lsof -i :53
+</code></pre>
 <h2 id="matar-procesos-por-puerto">Matar procesos por puerto</h2>
 <p>Con este comando, podríamos matar el proceso por el puerto 53 pero no funciona. Con otro proceso o servicio serviría este comando, pero no para detener systemd-resolved.</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> kill -9 <span class="va">$(</span><span class="fu">sudo</span> lsof -t -i:53<span class="va">)</span></a></code></pre></div>
+<pre><code class="language-sh">
+sudo kill -9 $(sudo lsof -t -i:53)
+</code></pre>
 <h2 id="evitar-que-systemd-resolved-use-el-puerto-53">Evitar que systemd-resolved use el puerto 53</h2>
 <p>Editaremos el archivo.</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">sudo</span> nano /etc/systemd/resolved.conf</a></code></pre></div>
-<p>Descomenta "quita la #" de la linea <code>DNSStubListener=no</code> poniendo el valor de <strong>yes</strong> a <strong>no</strong>.</p>
+<pre><code class="language-sh">
+sudo nano /etc/systemd/resolved.conf
+</code></pre>
+<p>Descomenta "quita la #" de la linea <code class="verbatim">DNSStubListener=no</code> poniendo el valor de <strong>yes</strong> a <strong>no</strong>.</p>
 <p>Descomentando <strong>DNSStubListener</strong> y poniendo el valor <strong>no</strong>, el sistema no podrá resolver ningún nombre de dominio, por lo que no podrá visitar sitios web en el navegador web, etc.</p>
 <h2 id="crea-un-enlace-simbolico">Crea un enlace simbolico</h2>
-<p>Crea un enlace simbólico para <code>/run/systemd/resolve/resolv.conf=con =/etc/resolv.conf</code>.</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">sudo</span> ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf</a></code></pre></div>
+<p>Crea un enlace simbólico para <code class="verbatim">/run/systemd/resolve/resolv.conf=con =/etc/resolv.conf</code>.</p>
+<pre><code class="language-sh">
+sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+</code></pre>
 <p>Si quieres que utilice las DNS de Cloudflare en lugar de 127.0.0.1 como proxy local, puedes añadirlo en el mismo archivo.</p>
 <p>Ejemplo del archivo <strong>resolv.conf</strong>:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1">[<span class="ex">Resolve</span>]</a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="va">DNS=</span>1.1.1.1</a>
-<a class="sourceLine" id="cb8-3" title="3"><span class="co">#FallbackDNS=</span></a>
-<a class="sourceLine" id="cb8-4" title="4"><span class="co">#Domains=</span></a>
-<a class="sourceLine" id="cb8-5" title="5"><span class="co">#LLMNR=no</span></a>
-<a class="sourceLine" id="cb8-6" title="6"><span class="co">#MulticastDNS=no</span></a>
-<a class="sourceLine" id="cb8-7" title="7"><span class="co">#DNSSEC=no</span></a>
-<a class="sourceLine" id="cb8-8" title="8"><span class="co">#DNSOverTLS=no</span></a>
-<a class="sourceLine" id="cb8-9" title="9"><span class="co">#Cache=no</span></a>
-<a class="sourceLine" id="cb8-10" title="10"><span class="va">DNSStubListener=</span>no</a>
-<a class="sourceLine" id="cb8-11" title="11"><span class="co">#ReadEtcHosts=yes</span></a></code></pre></div>
+<pre><code class="language-sh">
+[Resolve]
+DNS=1.1.1.1
+#FallbackDNS=
+#Domains=
+#LLMNR=no
+#MulticastDNS=no
+#DNSSEC=no
+#DNSOverTLS=no
+#Cache=no
+DNSStubListener=no
+#ReadEtcHosts=yes
+</code></pre>
 <p><strong>Reinicia el sistema</strong></p>
 <h2 id="comprobando-que-ahora-el-puerto-está-libre">Comprobando que ahora el puerto está libre</h2>
 <p>Comprobamos que ahora está el puerto libre</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">sudo</span> lsof -i :53</a></code></pre></div>
+<pre><code class="language-sh">
+sudo lsof -i :53
+</code></pre>
 <p>Puertos utilizados ahora</p>
-<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="fu">sudo</span> ss -tulwn <span class="kw">|</span> <span class="fu">grep</span> LISTEN</a></code></pre></div>
+<pre><code class="language-sh">
+sudo ss -tulwn | grep LISTEN
+</code></pre>
 <p>Ahora con el puerto <strong>53</strong> libre, ya puedes instalar tu servidor DNS favorito.</p>
 <h2 id="fuente">Fuente</h2>
 <ul>
 <li><a href="https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html">https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html</a></li>
-</ul>
-<br>
 <p>Publicado por Angel el Tuesday 17 January del 2023</p>
-<br><br> 
 <p>También te puede interesar:</p>
-<ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html">I3wm y sus Problemas con Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-04-09-manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo.html">Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-03-27-snap-desinstalar-o-instalar-en-manjaro.html">Snap. Desinstalar o Instalar en Manjaro</a></li>
@@ -156,5 +130,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

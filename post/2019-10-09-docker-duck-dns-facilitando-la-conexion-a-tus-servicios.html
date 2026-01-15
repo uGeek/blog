@@ -1,102 +1,59 @@
 <head>
-<title>Docker: Duck DNS. Facilitando la conexión a tus servicios. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Docker: Duck DNS. Facilitando la conexión a tus servicios. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" />
-<meta property="og:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" />
+<meta property="og:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" /> 
+<meta property="og:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html" />
-
-<meta name="twitter:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" />
-<meta name="twitter:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" />
+<meta name="twitter:title" content="Docker: Duck DNS. Facilitando la conexión a tus servicios" /> 
+<meta name="twitter:description" content="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/duckdns.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="docker-duck-dns.-facilitando-la-conexión-a-tus-servicios-1" title="Docker: Duck DNS. Facilitando la conexión a tus servicios" data-export_file_name="docker-duck-dns-facilitando-la-conexion-a-tus-servicios" data-description="La mayor parte de la gente, tiene una conexión a internet con ip dinámica" data-export_date="2019-10-09 18:00" data-category="docker" data-tag="servidor,dns,duckdns" data-image="./images-blog/duckdns.png">Docker: Duck DNS. Facilitando la conexión a tus servicios</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 458 palabras.    <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<h1 id="docker-duck-dns-facilitando-la-conexión-a-tus-servicios">Docker: Duck DNS. Facilitando la conexión a tus servicios</h1>
 <p>La mayor parte de la gente, tiene una conexión a internet con ip dinámica. Esto quiere decir, que la dirección ip va cambiando de tanto en tanto. No es fija.</p>
-<center>
 <p><img src="../images-blog/duckdns.png" /></p>
-</center>
 <p>Esto puede ser un gran problema si queremos conectarnos desde fuera de nuestra red, a un servicio que tenemos en nuestro servidor. Si la compañía cambia la ip en ese momento, nunca encontraremos nuestro servidor. Para solucionar este problema podemos utilizar servicios DNS como Duck DNS.</p>
 <p>Tal como expliqué en el artículo del <a href="https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html">Docker de Letsencript</a>, podemos crear una cuenta con un dominio o hasta 5 de forma gratuita y ejecutando un script en nuestro servidor, <strong>en nuestra red local</strong>, este script enviará cual es nuestra ip a Duck DNS, para que cada vez que introduzcamos el dominio que registramos en Duck DNS, redirija el tráfico hasta nuestra casa.</p>
-<p>Yo finalmente por comodidad, he montado un docker de la comunidad LinuxServer que incluye este script. De esta manera solo tengo que programar en que momento del día quiero que se inicie este docker y él se encargará de enviar esta información.</p>
+<p>Yo finalmente por comodidad, he montado un docker de la comunidad LinuxServer que incluye este script. De esta manera solo tengo que programar en que momento del día quiero que se inicie este docker y él se encargará de enviar esta información.  </p>
 <h2 id="docker-duck-dns">Docker Duck DNS</h2>
 <p>Este es un ejemplo de como montar el docker. Tienes que sustituir <strong>SUBDOMAINS</strong>, en este ejemplo correspondería con la dirección ugeekpodcast.duckdns.org y angel.duckdns.org, el <strong>TOKEN</strong> aparece en la página de Duck DNS y <strong>TZ</strong> corresponde con la hora local del lugar donde vivas.</p>
-<pre><code>docker create \
+<pre><code>
+docker create \
   --name=duckdns \
   -e PGID=1000 -e PUID=1000  \
   -e SUBDOMAINS=ugeekpodcast,angel \
@@ -109,26 +66,28 @@ $("#tipue_search_input").tipuesearch();
 <h2 id="cambiar-la-periocidad-de-ejecución">Cambiar la periocidad de ejecución</h2>
 <p>Para cambiar el tiempo de ejecución del script y que no sea cada 5 minutos, lo haremos de la siguiente manera:</p>
 <p>Entraremos dentro del contenedor</p>
-<pre><code>docker exec -it duckdns /bin/bash
+<pre><code>
+docker exec -it duckdns /bin/bash
 </code></pre>
 <p>Editamos cron</p>
-<pre><code>crontab -e -u abc
+<pre><code>
+crontab -e -u abc
 </code></pre>
 <p>En mi caso, voy ha hacer que se ejecute cada 30 minutos</p>
-<pre><code>*/30 * * * * /app/duck.sh 2&gt;&amp;1
+<pre><code>
+*/30 * * * * /app/duck.sh 2&gt;&amp;1
 </code></pre>
 <h2 id="ver-que-todo-va-ok">Ver que todo va ok</h2>
 <p>Para comprobar que todo funcion bien, haremos un log del contenedor y veremos cada cuanto se ejecuta el script</p>
-<pre><code>docker logs -f duckdns
+<pre><code>
+docker logs -f duckdns
 </code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://www.duckdns.org/">https://www.duckdns.org/</a></li>
 <li><a href="https://hub.docker.com/r/linuxserver/duckdns/">https://hub.docker.com/r/linuxserver/duckdns/</a></li>
 </ul>
-<br>
 <p>Publicado por Angel el Wednesday 09 October del 2019</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li>
@@ -141,5 +100,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -714,12 +714,6 @@ var tipuesearch = {"pages": [
             'url': 'https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html' 
 },
 {
-            'title': 'YouTube y YouTube Music. Aplicaciones Open Source',
-            'text': 'YouTube tiene una política de privacidad extremadamente invasiva que se basa en el uso de datos de usuarios de manera poco ética.', 
-            'tags': 'youtube apps    ', 
-            'url': 'https://ugeek.github.io/blog/post/2022-02-24-youtube-y-youtube-music-aplicaciones-open-source.html' 
-},
-{
             'title': 'Enviar clave SSH al servidor, para no utilizar la contraseña',
             'text': 'Para conectarme a mis servidores utilizo SSH y es muy importante tanto por seguridad como por comodidad, no tener que introducir cada vez que me conecto la contraseña.', 
             'tags': 'ssh terminal    ', 
@@ -1608,12 +1602,6 @@ var tipuesearch = {"pages": [
             'url': 'https://ugeek.github.io/blog/post/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html' 
 },
 {
-            'title': 'Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo',
-            'text': 'Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry.', 
-            'tags': 'ubuntu raspberry server   ', 
-            'url': 'https://ugeek.github.io/blog/post/2020-04-26-instalar-ubuntu-20-04-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html' 
-},
-{
             'title': 'Creando una página web de tu proyecto en GitHub',
             'text': 'Si tienes un repositorio en GitHub y quieres crear una web relacionada con este proyecto para mostrar toda la información, gracias a las GitHub Pages lo tienes super fácil.', 
             'tags': 'github web    ', 
@@ -1648,12 +1636,6 @@ var tipuesearch = {"pages": [
             'text': 'Radicale es un servidor de calendario y libreta de direcciones. Está escrito en Python e implementa los estándares CalDAV y CardDAV.', 
             'tags': 'tareas calendario caldav carddav raspberry ', 
             'url': 'https://ugeek.github.io/blog/post/2020-04-04-radicale-calendario-y-tareas-sincronizadas-mediante-caldav-y-carddav.html' 
-},
-{
-            'title': 'Shaarli. El Delicious del Software Libre',
-            'text': 'Shaarly es un servicio de marcadores personal, minimalista, súper rápido, sin bases de datos.', 
-            'tags': 'docker servicio    ', 
-            'url': 'https://ugeek.github.io/blog/post/2020-04-02-shaarli-el-delicious-del-software-libre.html' 
 },
 {
             'title': 'EteSync. Tareas, Contactos y Calendarios, sincronizadas de extremo a extremo',
@@ -1830,12 +1812,6 @@ var tipuesearch = {"pages": [
             'url': 'https://ugeek.github.io/blog/post/2019-12-30-bullet-journal-digital-en-orgmode.html' 
 },
 {
-            'title': 'Instalar un Servidor con Debian',
-            'text': 'Quizás te estas planteando el montarte un servidor con debian, pero no sabes muy bien por donde empezar. Si has instalado alguna vez debian, la imagen contiene varias versiones de', 
-            'tags': 'servidor debian    ', 
-            'url': 'https://ugeek.github.io/blog/post/2019-12-28-instalar-un-servidor-con-debian.html' 
-},
-{
             'title': 'Convertir texto a voz con espeak',
             'text': 'Este medio día, he visto nuevamente un clásico, Juegos de Guerra (War Games) y la voz del Súper ordenador me ha recordado a mi Raspberry con espeak.', 
             'tags': 'tts bash    ', 
@@ -1914,12 +1890,6 @@ var tipuesearch = {"pages": [
             'url': 'https://ugeek.github.io/blog/post/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html' 
 },
 {
-            'title': 'Docker: Gotify. Tu servidor de Notificaciones',
-            'text': 'Después de montar un bot con Telegram y Mastodon, ha llegado el momento de crear tu propio servicio de notificaciones. No vamos a depender de servicios de terceros para saber', 
-            'tags': 'docker bot gotify   ', 
-            'url': 'https://ugeek.github.io/blog/post/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html' 
-},
-{
             'title': 'Marcar una línea en tu OrgMode, para después volver a ella',
             'text': 'Mi archivo orgmode, actualmente supera de largo las 40.000 líneas. Hay momentos que estoy accediendo a una parte del documento, por ejemplo la línea /1345,/ donde estoy leyendo parte de', 
             'tags': 'emacs orgmode    ', 
@@ -1972,12 +1942,6 @@ var tipuesearch = {"pages": [
             'text': 'Tal como expliqué en algún que otro Podcast-Artículo, GitHub nos ofrece muchos proyectos súper interesantes y útiles. Es el caso de Bsync, un una herramienta de sincronización de archivos bidireccional,', 
             'tags': 'sync python backup servidor bsync ', 
             'url': 'https://ugeek.github.io/blog/post/2019-10-24-bsync-sincronizacion-de-archivos-bidireccional-que-utiliza-rsync.html' 
-},
-{
-            'title': 'Crea tu cron de un modo gráfico',
-            'text': 'Si queremos automatizar un script, utilizamos cron. Pero hay que reconocer que hasta que no le pillas el tranquillo, los parametros que tenemos que introducir para esta programación son muy', 
-            'tags': 'bash terminal ubuntu debian cron ', 
-            'url': 'https://ugeek.github.io/blog/post/2019-10-23-crea-tu-cron-de-un-modo-gráfico.html' 
 },
 {
             'title': 'Orzly. Tus OrgMode syncronizados por WebDav',
@@ -2280,12 +2244,6 @@ var tipuesearch = {"pages": [
             'url': 'https://ugeek.github.io/blog/post/2019-06-02-descargando-videos-de-internet.html' 
 },
 {
-            'title': 'Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN',
-            'text': 'Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios', 
-            'tags': 'servidor nginx raspberry raspbian docker ', 
-            'url': 'https://ugeek.github.io/blog/post/2019-05-15-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html' 
-},
-{
             'title': 'El Adiós a Plex y Emby. Llega Jellyfin',
             'text': 'Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros... Organizados y centralizados en un único lugar', 
             'tags': 'servidor ubuntu raspberry   ', 
@@ -2512,12 +2470,6 @@ var tipuesearch = {"pages": [
             'text': 'Snap es muy fácil de utilizar desde la terminal. Aquí dejo los comando más utilizados, para consultarlos cada vez que quieras y no olvidarlos. También una breve explicación de donde están los snaps en tu disco y la tienda de aplicaciones. ', 
             'tags': 'snap paquetes    ', 
             'url': 'https://ugeek.github.io/blog/post/2019-01-24-paquetes-snap.html' 
-},
-{
-            'title': 'Crear el Feed para el podcast en tu Blog con Jekyll',
-            'text': 'Voy a explicar en este post, como generar el Feed del podcast de forma automática.', 
-            'tags': 'jekyll servidor jekyll rss  ', 
-            'url': 'https://ugeek.github.io/blog/post/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html' 
 },
 {
             'title': 'Utilizando Git con la Terminal. GitHub',

@@ -44,23 +44,23 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="docker-en-ubuntu-18-04">Docker en Ubuntu 18.04</h1>
+<h1 id="docker-en-ubuntu-1804">Docker en Ubuntu 18.04</h1>
 <p>Vamos a instalar docker en Ubuntu 18.04:</p>
-<p><a href="./images-blog/docker.png">./images-blog/docker.png</a></p>
+<p><img src="../images-blog/docker.png" /></p>
 <h2 id="requisitos-previos">Requisitos Previos</h2>
 <p>Instalaremos primero unos requisitos que permitiran a apt usar paquetes mediante https:</p>
-<p><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
+<p><code class="verbatim">sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
 <h2 id="clave-gpg">Clave GPG</h2>
-<p><code>curl -fsSL 3 | sudo apt-key add -</code></p>
+<p><code class="verbatim">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
 <h2 id="repositorio">Repositorio</h2>
 <p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
 <pre><code>
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable&quot;
 </code></pre>
 <p>Actualizamos:</p>
-<p><code>sudo apt update</code></p>
+<p><code class="verbatim">sudo apt update</code></p>
 <p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
-<p><code>apt-cache policy docker-ce</code></p>
+<p><code class="verbatim">apt-cache policy docker-ce</code></p>
 <h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
 <pre><code>
 apt -y install docker-ce docker-compose
@@ -70,9 +70,9 @@ apt -y install docker-ce docker-compose
 systemctl enable docker
 systemctl start docker
 </code></pre>
-<h2 id="comprobamos-la-versi-n-de-docker-y-si-est-instalado">Comprobamos la versión de docker y si está instalado</h2>
-<p><code>docker -v</code></p>
-<h2 id="a-adimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
+<h2 id="comprobamos-la-versión-de-docker-y-si-está-instalado">Comprobamos la versión de docker y si está instalado</h2>
+<p><code class="verbatim">docker -v</code></p>
+<h2 id="añadimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
 <p>Creamos el grupo docker:</p>
 <pre><code>
 groupadd docker

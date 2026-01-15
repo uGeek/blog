@@ -1,97 +1,53 @@
 <head>
-<title>Telethon Downloader. Bot de descargas para Telegram. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Telethon Downloader. Bot de descargas para Telegram. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Telethon Downloader. Bot de descargas para Telegram" />
-<meta property="og:description" content="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" />
+<meta property="og:title" content="Telethon Downloader. Bot de descargas para Telegram" /> 
+<meta property="og:description" content="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html" />
-
-<meta name="twitter:title" content="Telethon Downloader. Bot de descargas para Telegram" />
-<meta name="twitter:description" content="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." />
+<meta name="twitter:title" content="Telethon Downloader. Bot de descargas para Telegram" /> 
+<meta name="twitter:description" content="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/telegram.jpg" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="telethon-downloader.-bot-de-descargas-para-telegram-1" title="Telethon Downloader. Bot de descargas para Telegram" data-export_file_name="telethon-downloader-bot-de-descargas-para-telegram" data-description="Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry." data-export_date="2022-01-04 20:20" data-category="telegram" data-tag="bot" data-image="./images-blog/telegram.jpg">Telethon Downloader. Bot de descargas para Telegram</h1>
-<h5>Tiempo estimado de lectura: 2 minutos. 326 palabras.    <a href="https://ugeek.github.io/blog/categories/telegram">telegram</a></h5>
+<h1 id="telethon-downloader-bot-de-descargas-para-telegram">Telethon Downloader. Bot de descargas para Telegram</h1>
 <p>Uno de los proyectos que me quedaban pendientes, era crear un bot en el que cuando envíe un archivo a este bot, se descargue en mi Raspberry.</p>
-<center>
 <p><img src="../images-blog/telegram.jpg" /></p>
-</center>
-<p>El otro objetivo era tenerlo todo en un Docker. No me gusta tener que estar pensando en instalar librerías de Python,… lo ideal es que esté todo en un paquete, en este caso un contenedor Docker. Que sea montar y funcionar.</p>
+<p>El otro objetivo era tenerlo todo en un Docker. No me gusta tener que estar pensando en instalar librerías de Python,... lo ideal es que esté todo en un paquete, en este caso un contenedor Docker. Que sea montar y funcionar.</p>
 <p>Telethon Downloader hace precisamente esto.</p>
 <p>Para que funcione este bot, es necesario generar a través de tu cuenta de Telegram, el API ID y API HASH. Siguiendo este proceso, conseguimos que los archivos que vayamos a descargar en nuestra raspberry, pueden ser superiores a 50 MB. Podremos descargar lo máximo que ofrece Telegram, en este caso 2 Gb.</p>
 <p>También como es lógico, es necesario conseguir el token del bot que has creado a través del BotFather de Telegram.</p>
@@ -99,46 +55,46 @@ $("#tipue_search_input").tipuesearch();
 <p>Visto esto, vamos a rellenar nuestro docker-compose y ponerlo en marcha.</p>
 <h2 id="docker-compose">Docker-Compose</h2>
 <p>Rellena las variables en el Docker Compose:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">version</span>: <span class="st">&#39;3&#39;</span></a>
-<a class="sourceLine" id="cb1-2" title="2"></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="ex">services</span>:</a>
-<a class="sourceLine" id="cb1-4" title="4"></a>
-<a class="sourceLine" id="cb1-5" title="5">  <span class="ex">telethon_downloader</span>:</a>
-<a class="sourceLine" id="cb1-6" title="6">    <span class="ex">image</span>: jsavargas/telethon_downloader</a>
-<a class="sourceLine" id="cb1-7" title="7">    <span class="ex">container_name</span>: telethon_downloader</a>
-<a class="sourceLine" id="cb1-8" title="8">    <span class="ex">restart</span>: unless-stopped</a>
-<a class="sourceLine" id="cb1-9" title="9">    <span class="ex">network_mode</span>: host</a>
-<a class="sourceLine" id="cb1-10" title="10">    <span class="ex">environment</span>:</a>
-<a class="sourceLine" id="cb1-11" title="11">      <span class="ex">-</span> <span class="st">&#39;PUID=1000&#39;</span></a>
-<a class="sourceLine" id="cb1-12" title="12">      <span class="ex">-</span> <span class="st">&#39;PGID=1000&#39;</span></a>
-<a class="sourceLine" id="cb1-13" title="13">      <span class="ex">-</span> <span class="st">&#39;TG_AUTHORIZED_USER_ID=&#39;</span>  <span class="co">#&lt;telegram chat_id authorized&gt;</span></a>
-<a class="sourceLine" id="cb1-14" title="14">      <span class="ex">-</span> <span class="st">&#39;TG_API_ID=&#39;</span></a>
-<a class="sourceLine" id="cb1-15" title="15">      <span class="ex">-</span> <span class="st">&#39;TG_API_HASH=&#39;</span> </a>
-<a class="sourceLine" id="cb1-16" title="16">      <span class="ex">-</span> <span class="st">&#39;TG_BOT_TOKEN=&#39;</span></a>
-<a class="sourceLine" id="cb1-17" title="17">      <span class="ex">-</span> <span class="st">&#39;TG_PROGRESS_DOWNLOAD=True&#39;</span> <span class="co">#OPTIONAL</span></a>
-<a class="sourceLine" id="cb1-18" title="18">      <span class="ex">-</span> <span class="st">&#39;TZ=America/Santiago&#39;</span></a>
-<a class="sourceLine" id="cb1-19" title="19">    <span class="ex">volumes</span>:</a>
-<a class="sourceLine" id="cb1-20" title="20">      <span class="ex">-</span> /path/to/config:/config</a>
-<a class="sourceLine" id="cb1-21" title="21">      <span class="ex">-</span> /path/to/download:/download</a>
-<a class="sourceLine" id="cb1-22" title="22">      <span class="ex">-</span> /path/to/download/torrent/watch:/watch</a></code></pre></div>
+<pre><code class="language-sh">
+    version: '3'
+
+    services:
+
+      telethon_downloader:
+        image: jsavargas/telethon_downloader
+        container_name: telethon_downloader
+        restart: unless-stopped
+        network_mode: host
+        environment:
+          - 'PUID=1000'
+          - 'PGID=1000'
+          - 'TG_AUTHORIZED_USER_ID='  #&lt;telegram chat_id authorized&gt;
+          - 'TG_API_ID='
+          - 'TG_API_HASH=' 
+          - 'TG_BOT_TOKEN='
+          - 'TG_PROGRESS_DOWNLOAD=True' #OPTIONAL
+          - 'TZ=America/Santiago'
+        volumes:
+          - /path/to/config:/config
+          - /path/to/download:/download
+          - /path/to/download/torrent/watch:/watch
+</code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://github.com/rodriguezst/telethon_downloader">https://github.com/rodriguezst/telethon_downloader</a></li>
-</ul>
-<br>
 <p>Publicado por Angel el Tuesday 04 January del 2022</p>
-<br><br> 
 <p>También te puede interesar:</p>
-<ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-05-28-rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web.html">RSS-Bridge: una herramienta para generar feeds RSS de cualquier sitio web</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-03-24-telegram-en-raspberry-pi-con-manjaro-minimal.html">Telegram en Raspberry Pi con Manjaro Minimal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-09-28-notificaciones-de-jellyfin-en-telegram.html">Notificaciones de Jellyfin en Telegram</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html">Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-30-servidor-proxy-socks5-para-tu-navegador-telegram.html">Servidor Proxy SOCKS5 para tu Navegador, Telegram, etc...</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html">Telethon Downloader. Bot de descargas para Telegram</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-03-telegramtui-cliente-de-terminal-en-python.html">TelegramTUI. Cliente de Terminal en Python</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html">Aplicaciones Telegram versión web, Android, IOS,…</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-20-aplicaciones-telegram-version-web-android-ios--.html">Aplicaciones Telegram versión web, Android, IOS,...</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html">Grabar lo que suena en tu ordenador</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-12-06-docker-telegram-de-terminal-para-raspberry-pi-y-amd64.html">Docker: Telegram de terminal para Raspberry Pi y amd64</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-07-02-filerun-un-nextcloud-owncloud-mas-ligero-para-almacenar-tus-archivos.html">FileRun. Un Nextcloud-Owncloud más ligero para almacenar tus archivos</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

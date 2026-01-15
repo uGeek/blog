@@ -49,12 +49,12 @@ $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 <p>Ya os expliqué hace días como hacerlo en GitLab, deciros que en GitHub hay un poco mas de limitaciones, pero al final, podemos hacerlo.</p>
 <p>Algunas de las limitaciones de GitHub Pages son que las páginas no pueden ocupar mas de 1Gb, el ancho de banda no puede superar los 100Gb al mes y solo permite 10 actualizaciones por hora de la web.</p>
 <p>Me he vuelto un poco loco con las carpetas donde estaban las imágenes, ya que las había nombrado como "<u>1</u>css"... y a GitHub Pages no le gustaba que se nombraran de este modo, ya que no las mostraba. Importante, si quieres que las carpetas sean accesibles desde el servidor web, que no empiecen con símbolos raros.</p>
-<h2 id="creando-la-web-est-tica-con-github-pages">Creando la Web estática con GitHub Pages</h2>
+<h2 id="creando-la-web-estática-con-github-pages">Creando la Web estática con GitHub Pages</h2>
 <ol>
 <li>Creamos el repositorio en GitHub</li>
-<li>Bajamos este, a nuestro dispositivo haciendo un <code>git clone repositorio</code></li>
+<li>Bajamos este, a nuestro dispositivo haciendo un <code class="verbatim">git clone repositorio</code></li>
 <li>Ya tenemos nuestra carpeta de GitHub en local. Añadimos los archivos .html que queremos subir a nuestro GitHub Pages</li>
-<li>Subimos todos los archivos a GitHub con los comandos: <code>git add . ; git commit -m "primer commit" ; git push</code></li>
+<li>Subimos todos los archivos a GitHub con los comandos: <code class="verbatim">git add . ; git commit -m "primer commit" ; git push</code></li>
 <li>Ahora vamos a habilitar el servidor web. Vamos a <strong>Settings</strong></li>
 <li>En el apartado <strong>GitHub Pages</strong>, en <strong>Source</strong>, cambiamos el estado de <strong>None</strong> a <strong>Master Branch</strong>. Despues pulsaremos el boton <strong>Save</strong></li>
 <li>Ya está guardado y si volvemos a este apartado de <strong>GitHub Pages</strong>, aparecerá la nueva url creada para nuestro nuevo servidor web, tipo:  <a href="https://ugeek.github.io/nombre_del_repositorio/">https://ugeek.github.io/nombre_del_repositorio/</a> </li>

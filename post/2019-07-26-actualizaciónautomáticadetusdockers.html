@@ -44,7 +44,7 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="actualizaci-n-autom-tica-de-tus-dockers-con-watchtower-o-ouroboros">Actualización automática de tus dockers con Watchtower o Ouroboros</h1>
+<h1 id="actualización-automática-de-tus-dockers-con-watchtower-o-ouroboros">Actualización automática de tus dockers con Watchtower o Ouroboros</h1>
 <h2 id="watchtower">Watchtower</h2>
 <p>Watchtower es una aplicación desarrollada en Go, que controlará tus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores. Si la Watchtower detecta que una imagen ha cambiado, se reiniciará automáticamente el contenedor utilizando la nueva imagen.</p>
 <p>Watchtower desplegará su nueva imagen, parará su contenedor y lo reiniciará con las mismas opciones que se usaron cuando se implementó inicialmente.</p>
@@ -82,7 +82,7 @@ services:
       - SELF_UPDATE=true
       - IGNORE=mariadb nextcloud
       - TZ=Europe/Madrid
-      - NOTIFIERS="tgram://1124343468:AAGEqergUoBECxytKKWIqVvzTdrqwegqerg/588554/" \
+      - NOTIFIERS=&quot;tgram://1124343468:AAGEqergUoBECxytKKWIqVvzTdrqwegqerg/588554/&quot; \
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -105,14 +105,14 @@ services:
 <h4 id="notificaciones-de-telegram">Notificaciones de Telegram</h4>
 <p>Para que ouroboros te notifique por Telegram de los contenedores que se actualizan, añadiremos la siguiente variable añadiendo el TOKEN del bot y el ID del chat que recibirá la notificación.</p>
 <pre><code>
-NOTIFIERS="tgram://TU_API_TOKEN/TU_CHAT_ID/"
+NOTIFIERS=&quot;tgram://TU_API_TOKEN/TU_CHAT_ID/&quot;
 </code></pre>
 <p>Para ello Ouroboros ha añadido el código de servicio de notificaciones Apprise.</p>
 <h4 id="ignorar-actulizaciones-de-docker">Ignorar actulizaciones de docker</h4>
-<p>Si no queremos que ouroboros actualice alguno de los contendores que tenemos corriendo, añadiremos la variable <code>IGNORE</code>.</p>
+<p>Si no queremos que ouroboros actualice alguno de los contendores que tenemos corriendo, añadiremos la variable <code class="verbatim">IGNORE</code>.</p>
 <p>En este ejemplo no quiero que se actualice <strong>nextcloud mariadb mumble</strong>.</p>
 <pre><code>
-IGNORE="nextcloud mariadb mumble"
+IGNORE=&quot;nextcloud mariadb mumble&quot;
 </code></pre>
 <h2 id="fuente">Fuente </h2>
 <ul>

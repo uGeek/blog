@@ -1,195 +1,201 @@
 <head>
-<title>Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" />
-<meta property="og:description" content="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/sd.png" />
+<meta property="og:title" content="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" /> 
+<meta property="og:description" content="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/sd.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2020-10-07-:export_file_name:.html" />
-
-<meta name="twitter:title" content="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" />
-<meta name="twitter:description" content="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." />
+<meta name="twitter:title" content="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" /> 
+<meta name="twitter:description" content="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/sd.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="montar-un-usb-tarjeta-sd-disco-duro-o-ssd-formateado-en-ext4-fat32-o-ntfs-en-un-directorio-con-linux-1" title="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux" data-export_file_name="" data-description="Vamos a ver los comandos para montar un usb, SD, disco duro o SSD, en un directorio desde la terminal." data-export_date="2020-10-07 07:30 2022-07-07" data-category="bash" data-tag="sd,ssd,usb" data-image="./images-blog/sd.png">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</h1>
-<h5>Tiempo estimado de lectura: 6 minutos. 726 palabras.    <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<h1 id="montar-un-usb-tarjeta-sd-disco-duro-o-ssd-formateado-en-ext4-fat32-o-ntfs-en-un-directorio-con-linux">Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</h1>
 <p>He conectado 5 relés y 4 Discos Duros a mi Raspberry para hacer backups.</p>
-<center>
 <p><img src="../images-blog/sd.png" /></p>
-</center>
 <p>Ahora tengo que crear un script para automatizar el montaje de estos discos y siempre cada uno de ellos tiene que montarse en el mismo directorio.</p>
 <p>Vamos a ver como podemos hacer esto. Voy a utilizar un ejemplo con un disco.</p>
 <h2 id="conocer-el-uuid">Conocer el UUID</h2>
 <p>Para conocer todos los discos duros que tenemos:</p>
-<pre><code>lsblk -nl | grep -i disk
+<pre><code>
+lsblk -nl | grep -i disk
 </code></pre>
-<p>Primero necesitamos conocer el UUID de un disco.</p>
-<pre><code>sudo blkid
+<p>Primero necesitamos conocer el UUID de un disco. </p>
+<pre><code>
+sudo blkid
 </code></pre>
 <p>El resultado que me ha dado es:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="va">UUID=</span><span class="st">&quot;54C2D371C2D447BD&quot;</span></a></code></pre></div>
+<pre><code class="language-sh">
+UUID=&quot;54C2D371C2D447BD&quot;
+</code></pre>
 <p>También podríamos utilizar</p>
-<pre><code>ls -l /dev/disk/by-uuid
+<pre><code>
+ls -l /dev/disk/by-uuid
 </code></pre>
 <p>También podemos ver todas las unidades conectadas a nuestro dispositivo con:</p>
-<pre><code>ls -l /dev/sd*
+<pre><code>
+ls -l /dev/sd*
 </code></pre>
 <h2 id="montar-disco">Montar Disco</h2>
 <p>Ya lo tenemos resuelto. Ahora vamos a montar el disco. En mi ejemplo el disco está en formato NTFS, tal como venía de la tienda y he pasado de formatearlo. Si el disco tiene otro tipo de formato, tienes que especificarlo en le montaje.</p>
-<pre><code>sudo mount -t ntfs-3g  UUID=&quot;54C2D371C2D447BD&quot; /home/angel/Disco1
+<pre><code>
+sudo mount -t ntfs-3g  UUID=&quot;54C2D371C2D447BD&quot; /home/angel/Disco1
 </code></pre>
 <h2 id="desmontar-disco">Desmontar Disco</h2>
 <p>Para desmontar un disco:</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">sudo</span> umount directorio</a></code></pre></div>
+<pre><code class="language-sh">
+sudo umount directorio
+</code></pre>
 <p>Para desmontar varios discos:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">sudo</span> umount directorio1 directorio2 directorio3 directorio4</a></code></pre></div>
-<p>Forzar desmontar</p>
-<p>En ocasiones el sistema kernel considera que el sistema de archivos está ocupado, en estos casos, puedes forzar con el desmontaje <code>umount -f</code>.</p>
+<pre><code class="language-sh">
+sudo umount directorio1 directorio2 directorio3 directorio4
+</code></pre>
+<h4 id="forzar-desmontar">Forzar desmontar </h4>
+<p>En ocasiones el sistema kernel considera que el sistema de archivos está ocupado, en estos casos, puedes forzar con el desmontaje <code class="verbatim">umount -f</code>.</p>
 <p>Averigua el porque no puedes desmontarlo antes de forzar, porque quizás si hay un motivo.</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">sudo</span> umount -f directorio</a></code></pre></div>
+<pre><code class="language-sh">
+sudo umount -f directorio
+</code></pre>
 <h2 id="ver-todas-las-unidades-montadas">Ver todas las unidades montadas</h2>
-<div class="sourceCode" id="cb10" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="fu">mount</span></a></code></pre></div>
+<pre><code class="language-sh">
+mount
+</code></pre>
 <h2 id="montar-unidad-ext4">Montar unidad EXT4</h2>
-<pre><code>sudo mount -t ext4 -o defaults /dev/sda1 /media/usb
+<pre><code>
+sudo mount -t ext4 -o defaults /dev/sda1 /media/usb
 </code></pre>
 <h2 id="montar-unidad-fat32">Montar unidad FAT32</h2>
-<pre><code>sudo mount -t vfat /dev/sdb1 /media/usb
+<pre><code>
+sudo mount -t vfat /dev/sdb1 /media/usb
 </code></pre>
 <h2 id="montar-unidad-ntfs">Montar unidad NTFS</h2>
 <p>Para montar una partición NTFS, utilizaremos:</p>
-<pre><code>sudo mount -t ntfs-3g /dev/sdb1 /media/usb
+<pre><code>
+sudo mount -t ntfs-3g /dev/sdb1 /media/usb
 </code></pre>
 <h2 id="montaje-de-otro-tipo-de-formatos">Montaje de otro tipo de formatos</h2>
 <p>Para verlo de un modo más simplificado y sin opciones especiales de montaje:</p>
-<p>FAT16 o FAT32</p>
-<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="fu">sudo</span> mount -t vfat UUID=<span class="st">&quot;54C2D371C2D447BD&quot;</span> /home/angel/Disco1</a></code></pre></div>
-<p>NTFS</p>
-<div class="sourceCode" id="cb15" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" title="1"><span class="fu">sudo</span> mount -t ntfs UUID=<span class="st">&quot;54C2D371C2D447BD&quot;</span> /home/angel/Disco1</a></code></pre></div>
-<p>EXT3</p>
-<div class="sourceCode" id="cb16" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1"><span class="fu">sudo</span> mount -t ext3 UUID=<span class="st">&quot;54C2D371C2D447BD&quot;</span> /home/angel/Disco1</a></code></pre></div>
-<p>EXT4</p>
-<div class="sourceCode" id="cb17" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="fu">sudo</span> mount -t ext4 UUID=<span class="st">&quot;54C2D371C2D447BD&quot;</span> /home/angel/Disco1</a></code></pre></div>
-<p>UFS</p>
-<div class="sourceCode" id="cb18" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" title="1"><span class="fu">sudo</span> mount -t ufs -o ro UUID=<span class="st">&quot;54C2D371C2D447BD&quot;</span> /home/angel/Disco1</a></code></pre></div>
-<p>UFS2</p>
-<div class="sourceCode" id="cb19" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb19-1" title="1"><span class="fu">sudo</span> mount -t ufs -o ro,ufstype=ufs2 UUID=<span class="st">&quot;54C2D371C2D447BD&quot;</span> /home/angel/Disco1</a></code></pre></div>
-<p>Montar un directorio en otro dentro de nuestro sistema</p>
-<div class="sourceCode" id="cb20" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb20-1" title="1"><span class="fu">sudo</span> mount /home/angel/directorio1 /home/angel/directorio2</a></code></pre></div>
+<h4 id="fat16-o-fat32">FAT16 o FAT32  </h4>
+<pre><code class="language-sh">
+sudo mount -t vfat UUID=&quot;54C2D371C2D447BD&quot; /home/angel/Disco1
+</code></pre>
+<h4 id="ntfs">NTFS </h4>
+<pre><code class="language-sh">
+sudo mount -t ntfs UUID=&quot;54C2D371C2D447BD&quot; /home/angel/Disco1
+</code></pre>
+<h4 id="ext3">EXT3 </h4>
+<pre><code class="language-sh">
+sudo mount -t ext3 UUID=&quot;54C2D371C2D447BD&quot; /home/angel/Disco1
+</code></pre>
+<h4 id="ext4">EXT4 </h4>
+<pre><code class="language-sh">
+sudo mount -t ext4 UUID=&quot;54C2D371C2D447BD&quot; /home/angel/Disco1
+</code></pre>
+<h4 id="ufs">UFS </h4>
+<pre><code class="language-sh">
+sudo mount -t ufs -o ro UUID=&quot;54C2D371C2D447BD&quot; /home/angel/Disco1
+</code></pre>
+<h4 id="ufs2">UFS2 </h4>
+<pre><code class="language-sh">
+sudo mount -t ufs -o ro,ufstype=ufs2 UUID=&quot;54C2D371C2D447BD&quot; /home/angel/Disco1
+</code></pre>
+<h4 id="montar-un-directorio-en-otro-dentro-de-nuestro-sistema">Montar un directorio en otro dentro de nuestro sistema</h4>
+<pre><code class="language-sh">
+sudo mount /home/angel/directorio1 /home/angel/directorio2
+</code></pre>
 <h2 id="comprobar-si-la-unidad-se-ha-montado-correctamente">Comprobar si la unidad se ha montado correctamente</h2>
 <p>Sería tan fácil como hacer un <strong>ls</strong> en el directorio donde hemos montado la unidad, pero para ver un resumen del resto de unidades:</p>
-<pre><code>df -l
+<pre><code>
+df -l
 </code></pre>
 <h2 id="montar-al-inicio-con-el-sistema">Montar al inicio con el sistema</h2>
-<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code>/etc/fstab</code>.</p>
+<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code class="verbatim">/etc/fstab</code>.</p>
 <p>Vamos a editarlo:</p>
-<div class="sourceCode" id="cb22" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb22-1" title="1"><span class="fu">sudo</span> nano /etc/fstab</a></code></pre></div>
+<pre><code class="language-sh">
+sudo nano /etc/fstab
+</code></pre>
 <p>Es importante que los espacios son <strong>Tabulados.</strong></p>
-<div class="sourceCode" id="cb23" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb23-1" title="1"><span class="va">UUID=</span><span class="st">&quot;54C2D371C2D447BD&quot;</span>  <span class="ex">/home/angel/Disco1</span>   ext    defaults,auto 0    0</a></code></pre></div>
-<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code>defaults</code>.</p>
+<pre><code class="language-sh">
+UUID=&quot;54C2D371C2D447BD&quot;  /home/angel/Disco1   ext    defaults,auto 0    0
+</code></pre>
+<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code class="verbatim">defaults</code>.</p>
 <h2 id="montar-todos-los-discos">Montar todos los discos</h2>
-<p>Para montar todos los disco que hay en el archivo <code>/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
-<div class="sourceCode" id="cb24" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb24-1" title="1"><span class="fu">sudo</span> mount -a</a></code></pre></div>
+<p>Para montar todos los disco que hay en el archivo <code class="verbatim">/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
+<pre><code class="language-sh">
+sudo mount -a
+</code></pre>
 <h2 id="desmontar-una-unidad">Desmontar una unidad</h2>
-<pre><code>sudo umount /media/usb
+<pre><code>
+sudo umount /media/usb
 </code></pre>
 <p>Puede que la unidad esté ocupada realizando un proceso. Para forzar y desmontar la unidad:</p>
-<pre><code>sudo umount -l /dev/sdb1
+<pre><code>
+sudo umount -l /dev/sdb1
 </code></pre>
 <p>Para desmontar varios discos</p>
-<div class="sourceCode" id="cb27" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb27-1" title="1"><span class="fu">sudo</span> umount directorio1 directorio2 directorio3 directorio4</a></code></pre></div>
-<h3 id="montar-al-inicio-con-el-sistema-1">Montar al inicio con el sistema</h3>
-<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code>/etc/fstab</code>.</p>
+<pre><code class="language-sh">
+sudo umount directorio1 directorio2 directorio3 directorio4
+</code></pre>
+<h3 id="montar-al-inicio-con-el-sistema">Montar al inicio con el sistema</h3>
+<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code class="verbatim">/etc/fstab</code>.</p>
 <p>Vamos a editarlo:</p>
-<div class="sourceCode" id="cb28" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb28-1" title="1"><span class="fu">sudo</span> nano /etc/fstab</a></code></pre></div>
+<pre><code class="language-sh">
+sudo nano /etc/fstab
+</code></pre>
 <p>Es importante que los espacios son <strong>Tabulados.</strong></p>
-<div class="sourceCode" id="cb29" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb29-1" title="1"><span class="va">UUID=</span><span class="st">&quot;54C2D371C2D447BD&quot;</span>  <span class="ex">/home/angel/Disco1</span>   ext    defaults,auto 0    0</a></code></pre></div>
-<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code>defaults</code>.</p>
-<h3 id="montar-todos-los-discos-1">Montar todos los discos</h3>
-<p>Para montar todos los disco que hay en el archivo <code>/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
-<div class="sourceCode" id="cb30" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb30-1" title="1"><span class="fu">sudo</span> mount -a</a></code></pre></div>
+<pre><code class="language-sh">
+UUID=&quot;54C2D371C2D447BD&quot;  /home/angel/Disco1   ext    defaults,auto 0    0
+</code></pre>
+<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code class="verbatim">defaults</code>.</p>
+<h3 id="montar-todos-los-discos">Montar todos los discos</h3>
+<p>Para montar todos los disco que hay en el archivo <code class="verbatim">/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
+<pre><code class="language-sh">
+sudo mount -a
+</code></pre>
 <h2 id="visudo">Visudo</h2>
 <p>Utilizando el comando visudo, podemos evitar el utilizar sudo cada vez que montamos o desmontamos un disco.</p>
-<pre><code>sudo visudo
+<pre><code>
+sudo visudo
 </code></pre>
 <p>Si el usuario es <strong>angel</strong>, agrega al final la siguiente línea:</p>
-<div class="sourceCode" id="cb32" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb32-1" title="1"><span class="ex">angel</span> ALL=(ALL) <span class="ex">NOPASSWD</span>:/usr/bin/mount,/usr/bin/umount</a></code></pre></div>
-<br>
-<p>Publicado por Angel el Wednesday 07 October del 2020 y <strong>actualizado</strong> el Thursday 07 July del 2022</p>
-<br><br> 
+<pre><code class="language-sh">
+angel ALL=(ALL) NOPASSWD:/usr/bin/mount,/usr/bin/umount
+</code></pre>
+<p>Publicado por Angel el Wednesday 07 October del 2020</p>
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li>
@@ -202,5 +208,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-02-corrector-ortografico-en-nano.html">Corrector ortográfico en nano</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,98 +1,54 @@
 <head>
-<title>WebDAV. Acceso al servidor WebDAV desde escritorio Windows. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>WebDAV. Acceso al servidor WebDAV desde escritorio Windows. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="WebDAV. Acceso al servidor WebDAV desde escritorio Windows" />
-<meta property="og:description" content="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
+<meta property="og:title" content="WebDAV. Acceso al servidor WebDAV desde escritorio Windows" /> 
+<meta property="og:description" content="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html" />
-
-<meta name="twitter:title" content="WebDAV. Acceso al servidor WebDAV desde escritorio Windows" />
-<meta name="twitter:description" content="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." />
+<meta name="twitter:title" content="WebDAV. Acceso al servidor WebDAV desde escritorio Windows" /> 
+<meta name="twitter:description" content="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="webdav.-acceso-al-servidor-webdav-desde-escritorio-windows-1" title="WebDAV. Acceso al servidor WebDAV desde escritorio Windows" data-export_file_name="webdav-acceso-al-servidor-webdav-desde-escritorio-windows" data-description="El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows." data-export_date="2022-10-14 10:05" data-category="webdav" data-tag="servidor" data-image="./images-blog/dav.png">WebDAV. Acceso al servidor WebDAV desde escritorio Windows</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 394 palabras.    <a href="https://ugeek.github.io/blog/categories/webdav">webdav</a></h5>
+<h1 id="webdav-acceso-al-servidor-webdav-desde-escritorio-windows">WebDAV. Acceso al servidor WebDAV desde escritorio Windows</h1>
 <p>El objetivo de hoy es sincronizar un directorio de mi máquina Linux con un directorio de un PC Windows.</p>
 <p>La primera opción que se me ha pasado por la cabeza es habilitar SAMBA o instalar Synching. Pero al final he pensado que quizás acaba siendo más liviano y sencillo montar un servidor WebDAV en mi máquina Linux y acceder desde el PC Windows.</p>
 <p>Os he hablado infinidad de veces de WebDAV (Web-based Distributed Authoring and Versioning), un protocolo totalmente multiplataforma (Windows, Linux, MAC, Android, IOS) que nos permite un modo sencillo guardar, editar, copiar, mover y compartir archivos.</p>
-<center>
 <p><img src="../images-blog/dav.png" /></p>
-</center>
 <p>Recuerda que combine utilizar conexión <strong>https</strong> ya soporta cifrado AES SSL de 256 bits y es mucho más seguro. Aún así, es posible que de problemas en Windows. Si fuera el caso y las dos máquinas están fuera de tu red local, sería necesario utilizar una VPN para que todo el tráfico sea cifrado.</p>
 <p>Así que sin más, vamos a montar el directorio del servidor WebDAV en la máquina con Windows.</p>
 <h2 id="configurar-cliente">Configurar cliente</h2>
@@ -103,11 +59,9 @@ $("#tipue_search_input").tipuesearch();
 <li>Le damos a siguiente, Seleccionamos <strong>Desea una ubicación de red personalizada</strong>, aparecerá una ventana donde nos pregunta <strong>Especifique la ubicación de su sitio web</strong>. Aquí pondremos la url de nuestro servidor WebDAV. Pulsamos siguiente.</li>
 <li>Ahora nos saldrá una pantalla para introducir nuestro usuario y contraseña así como poner un nombre a la unidad que estamos creando. Una vez rellenado, pulsaremos finalizar.</li>
 <li>Ahora ya encontraremos nuestro servidor WebDAV en nuestro explorador de archivos.</li>
-</ol>
-<br>
 <p>Publicado por Angel el Friday 14 October del 2022</p>
-<br><br> 
 <p>También te puede interesar:</p>
+</ol>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-05-17-kodbox-con-mariadb.html">Kodbox con mariadb</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-01-12-sincronizacion-de-nuestros-bookmarks-con-floccus.html">Sincronización de nuestros bookmarks con floccus</a></li>
@@ -119,5 +73,7 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2021-05-11-servidor-webdav-con-rclone-con-nube-publico-o-privada.html">Servidor WebDAV con rclone, con nube público o privada</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-01-03-mi-alternativa-a-nextcloud-como-nube-filebrowser-webdav-y-syncthing.html">Mi alternativa a Nextcloud como nube. Filebrowser, WebDav y Syncthing</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

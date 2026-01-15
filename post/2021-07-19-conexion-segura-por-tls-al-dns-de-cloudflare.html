@@ -1,136 +1,111 @@
 <head>
-<title>Conexión segura por TLS al DNS de CloudFlare. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Conexión segura por TLS al DNS de CloudFlare. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Conexión segura por TLS al DNS de CloudFlare" />
-<meta property="og:description" content="Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/cloudflare.png" />
+<meta property="og:title" content="Conexión segura por TLS al DNS de CloudFlare" /> 
+<meta property="og:description" content="Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/cloudflare.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html" />
-
-<meta name="twitter:title" content="Conexión segura por TLS al DNS de CloudFlare" />
-<meta name="twitter:description" content="Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu" />
+<meta name="twitter:title" content="Conexión segura por TLS al DNS de CloudFlare" /> 
+<meta name="twitter:description" content="Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/cloudflare.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="conexión-segura-por-tls-al-dns-de-cloudflare-1" title="Conexión segura por TLS al DNS de CloudFlare" data-export_file_name="conexion-segura-por-tls-al-dns-de-cloudflare" data-description="Después de ver el video de Naseros &quot;Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS&quot;, he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu" data-export_date="2021-07-19 19:15" data-category="dns" data-tag="cloudflare" data-image="./images-blog/cloudflare.png">Conexión segura por TLS al DNS de CloudFlare</h1>
-<h5>Tiempo estimado de lectura: 5 minutos. 611 palabras.    <a href="https://ugeek.github.io/blog/categories/dns">dns</a></h5>
+<h1 id="conexión-segura-por-tls-al-dns-de-cloudflare">Conexión segura por TLS al DNS de CloudFlare</h1>
 <p>Después de ver el video de Naseros "Protege tu privacidad y aumenta tu seguridad en internet mediante los DNS", he decidido conectar mi DNS de CloudFlare por TLS en Ubuntu 20.04.</p>
-<center>
 <p><img src="../images-blog/cloudflare.png" /></p>
-</center>
-<p>Por cierto… <strong>Muchas Felicidades por conseguir más de 100.000 subscriptores!!!</strong>.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ciqkfi95kTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Por cierto... <strong>Muchas Felicidades por conseguir más de 100.000 subscriptores!!!</strong>.</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=ciqkfi95kTg">Vídeo de Naseros</a></li>
 </ul>
 <p>Vamos a ver como hacerlo.</p>
 <h2 id="instalación">Instalación</h2>
 <p>Stubby está en los repositorios de Ubuntu. Para instalarlo:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">sudo</span> apt install stubby</a></code></pre></div>
-<p>Esto instalará stubby y la biblioteca <code>getdns</code> . Una vez instalado, stubby se ejecuta en segundo plano.</p>
+<pre><code class="language-sh">
+sudo apt install stubby
+</code></pre>
+<p>Esto instalará stubby y la biblioteca <code class="verbatim">getdns</code> . Una vez instalado, stubby se ejecuta en segundo plano.</p>
 <p>Verifica su estado con:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">systemctl</span> status stubby</a></code></pre></div>
+<pre><code class="language-sh">
+systemctl status stubby
+</code></pre>
 <p>Stubby escucha en el puerto 53 de TCP y UDP de localhost (127.0.0.1), como se puede ver al ejecutar este comando:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="fu">sudo</span> netstat -lnptu <span class="kw">|</span> <span class="fu">grep</span> stubby</a></code></pre></div>
-<p>El solucionador de stub predeterminado proporcionado por <code>systemd-resolved</code> escucha en el puerto 53 de TCP y UDP de 127.0.0.53.</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">sudo</span> netstat -lnptu <span class="kw">|</span>  <span class="ex">sistema</span> de agarred-resolv</a></code></pre></div>
+<pre><code class="language-sh">
+sudo netstat -lnptu | grep stubby
+</code></pre>
+<p>El solucionador de stub predeterminado proporcionado por <code class="verbatim">systemd-resolved</code> escucha en el puerto 53 de TCP y UDP de 127.0.0.53.</p>
+<pre><code class="language-sh">
+sudo netstat -lnptu |  sistema de agarred-resolv
+</code></pre>
 <p>Nota: Si dnsmasq está escuchando en el puerto TCP 53 de 127.0.0.1, Stubby solo escuchará en el puerto UDP 53 de 127.0.0.1.</p>
 <h2 id="archivo-de-configuración">Archivo de configuración</h2>
-<p>El archivo de configuración principal es <code>/etc/stubby/stubby.yml</code>.</p>
+<p>El archivo de configuración principal es <code class="verbatim">/etc/stubby/stubby.yml</code>.</p>
 <p>Normalmente, no es necesario realizar cambios a menos que desee utilizar otro o <a href="https://www.linuxbabe.com/ubuntu/dns-over-tls-resolver-nginx">solucionador recursivo su propio</a> .</p>
 <p>Déjame explicarte algunas configuraciones predeterminadas. Puede abrir el archivo con:</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">sudo</span> nano /etc/stubby/stubby.yml</a></code></pre></div>
+<pre><code class="language-sh">
+sudo nano /etc/stubby/stubby.yml
+</code></pre>
 <p>La siguiente línea hace que stubby se ejecute como un solucionador de stub en lugar de un DNS recursivo completo, por lo que se llama stubby.</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="ex">resolution_type</span>: GETDNS_RESOLUTION_STUB</a></code></pre></div>
+<pre><code class="language-sh">
+resolution_type: GETDNS_RESOLUTION_STUB
+</code></pre>
 <p>La siguiente configuración hace que stubby envíe consultas de DNS encriptadas con TLS. No enviará consultas en texto plano.</p>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">dns_transport_list</span>:</a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="ex">-</span> GETDNS_TRANSPORT_TLS</a></code></pre></div>
+<pre><code class="language-sh">
+dns_transport_list:
+- GETDNS_TRANSPORT_TLS
+</code></pre>
 <p>La siguiente línea requiere un certificado TLS válido en el resolutor recursivo remoto.</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="ex">tls_authentication</span>: GETDNS_AUTHENTICATION_REQUIRED</a></code></pre></div>
+<pre><code class="language-sh">
+tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
+</code></pre>
 <p>Las siguientes líneas establecen las direcciones de escucha para el demonio stubby. De forma predeterminada, tanto IPv4 como IPv6 están habilitados.</p>
-<div class="sourceCode" id="cb9" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="ex">listen_addresses</span>:</a>
-<a class="sourceLine" id="cb9-2" title="2"><span class="ex">-</span> 127.0.0.1</a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="ex">-</span> 0 :: 1</a></code></pre></div>
+<pre><code class="language-sh">
+listen_addresses:
+- 127.0.0.1
+- 0 :: 1
+</code></pre>
 <p>La siguiente línea hace que los DNS recursivos de consultas stubby se realicen por turnos. Si se establece en `0`, Stubby usará cada servidor ascendente secuencialmente hasta que deje de estar disponible y luego pasará a usar el siguiente.</p>
-<pre><code>round_robin_upstreams: 1
+<pre><code>
+round_robin_upstreams: 1
 </code></pre>
 <p>De forma predeterminada, hay 3 resolutores recursivos habilitados en el archivo de configuración stubby.</p>
-<p>Yo los he comentado para que no funcionen, añadiendo delante <strong><strong>#</strong></strong>.</p>
+<p>Yo los he comentado para que no funcionen, añadiendo delante <strong>*#</strong>*.</p>
 <p>Añade al final del archivo de configuración el siguiente servidor DNS de CloudFlare:</p>
-<pre><code>#CloudFlare servers
+<pre><code>
+#CloudFlare servers
   - address_data: 1.1.1.1
     tls_auth_name: &quot;cloudflare-dns.com&quot;
   - address_data: 1.0.0.1 
@@ -138,33 +113,49 @@ $("#tipue_search_input").tipuesearch();
 </code></pre>
 <h2 id="google">Google</h2>
 <p>Si quieres utilizar las de Google:</p>
-<div class="sourceCode" id="cb12" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" title="1"><span class="ex">-</span> address_data: 8.8.8.8</a>
-<a class="sourceLine" id="cb12-2" title="2">  <span class="ex">tls_auth_name</span>: <span class="st">&quot;dns.google&quot;</span></a>
-<a class="sourceLine" id="cb12-3" title="3"><span class="ex">-</span> address_data: 8.8.4.4</a>
-<a class="sourceLine" id="cb12-4" title="4">  <span class="ex">tls_auth_name</span>: <span class="st">&quot;dns.google&quot;</span></a></code></pre></div>
+<pre><code class="language-sh">
+  - address_data: 8.8.8.8
+    tls_auth_name: &quot;dns.google&quot;
+  - address_data: 8.8.4.4
+    tls_auth_name: &quot;dns.google&quot;
+</code></pre>
 <p>Cambiar a Stubby</p>
-<p>Ya no se recomienda editar el archivo `/etc/resolve.conf` para cambiar el nombre del servidor DNS. Sigue las instrucciones para hacer `systemd-resolved`enviar consultas de DNS a stubby.</p>
+<p>Ya no se recomienda editar el archivo `<em>etc</em>resolve.conf` para cambiar el nombre del servidor DNS. Sigue las instrucciones para hacer `systemd-resolved`enviar consultas de DNS a stubby.</p>
 <p>El método antiguo y no recomendado, que también nos puede ser útil para consultar los servidores DNS actuales, es:</p>
-<pre><code>cat /etc/resolv.conf
+<pre><code>
+cat /etc/resolv.conf
 </code></pre>
 <h2 id="deshabilitar-systemd-resolved">Deshabilitar systemd-resolved</h2>
 <p>Si quieres deshabilitar systemd-resolved, deshabilita y deten el servicio resuelto systemd:</p>
-<div class="sourceCode" id="cb14" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" title="1"><span class="fu">sudo</span> systemctl disable systemd-resolved</a>
-<a class="sourceLine" id="cb14-2" title="2"><span class="fu">sudo</span> systemctl stop systemd-resolved</a></code></pre></div>
-<p>En la siguiente línea a <code>[main]</code>, en el archivo <code>/etc/NetworkManager/NetworkManager.conf</code>, añade:</p>
-<pre><code>nano /etc/NetworkManager/NetworkManager.conf
+<pre><code class="language-sh">
+sudo systemctl disable systemd-resolved
+sudo systemctl stop systemd-resolved
 </code></pre>
-<div class="sourceCode" id="cb16" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" title="1">[<span class="ex">main</span>]</a>
-<a class="sourceLine" id="cb16-2" title="2"><span class="va">plugins=</span>ifupdown,keyfile</a>
-<a class="sourceLine" id="cb16-3" title="3"><span class="va">dns=</span>default</a></code></pre></div>
-<p>Eliminar el enlace simbólico <code>/etc/resolv.conf</code></p>
-<div class="sourceCode" id="cb17" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" title="1"><span class="fu">rm</span> /etc/resolv.conf</a></code></pre></div>
+<p>En la siguiente línea a <code class="verbatim">[main]=, en el archivo =/etc/NetworkManager/NetworkManager.conf</code>, añade:</p>
+<pre><code>
+nano /etc/NetworkManager/NetworkManager.conf
+</code></pre>
+<pre><code class="language-sh">
+[main]
+plugins=ifupdown,keyfile
+dns=default
+</code></pre>
+<p>Eliminar el enlace simbólico <code class="verbatim">/etc/resolv.conf</code></p>
+<pre><code class="language-sh">
+rm /etc/resolv.conf
+</code></pre>
 <p>Creamos un nuevo archivo:</p>
-<div class="sourceCode" id="cb18" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" title="1"><span class="fu">sudo</span> nano /etc/resolv.conf</a></code></pre></div>
+<pre><code class="language-sh">
+sudo nano /etc/resolv.conf
+</code></pre>
 <p>Y añadimos:</p>
-<div class="sourceCode" id="cb19" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb19-1" title="1"><span class="ex">nameserver</span> 127.0.0.1    <span class="co"># Conectarnos a la ip de esta máquina, donde corre Stubby por el puerto 53</span></a></code></pre></div>
+<pre><code class="language-sh">
+nameserver 127.0.0.1    # Conectarnos a la ip de esta máquina, donde corre Stubby por el puerto 53
+</code></pre>
 <p>Reiniciar NetworkManager</p>
-<div class="sourceCode" id="cb20" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb20-1" title="1"><span class="fu">sudo</span> systemctl restart NetworkManager</a></code></pre></div>
+<pre><code class="language-sh">
+sudo systemctl restart NetworkManager
+</code></pre>
 <p>También ten en cuenta que deshabilitar systemd-resolvd puede romper la resolución de nombres en VPN para algunos usuarios.</p>
 <h2 id="comprobando-si-todo-es-correcto">Comprobando si todo es correcto</h2>
 <p>Nos concectaremos para ver si ya nos conectamos via TLS. <a href="https://cloudflare-dns.com/help">https://cloudflare-dns.com/help</a></p>
@@ -173,14 +164,12 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://forums.linuxmint.com/viewtopic.php?t=345236">https://forums.linuxmint.com/viewtopic.php?t=345236</a></li>
 <li><a href="https://www.linuxbabe.com/ubuntu/ubuntu-stubby-dns-over-tls">https://www.linuxbabe.com/ubuntu/ubuntu-stubby-dns-over-tls</a></li>
 <li><a href="https://qastack.mx/ubuntu/907246/how-to-disable-systemd-resolved-in-ubuntu">https://qastack.mx/ubuntu/907246/how-to-disable-systemd-resolved-in-ubuntu</a></li>
-</ul>
-<br>
 <p>Publicado por Angel el Monday 19 July del 2021</p>
-<br><br> 
 <p>También te puede interesar:</p>
-<ul>
 <li><a href="https://ugeek.github.io/blog/post/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html">Conexión segura por TLS al DNS de CloudFlare</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-10-29-nuevas-dns-de-cloudflare.html">Nuevas DNS de Cloudflare</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2019-10-09-docker-duck-dns-facilitando-la-conexion-a-tus-servicios.html">Docker: Duck DNS. Facilitando la conexión a tus servicios</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

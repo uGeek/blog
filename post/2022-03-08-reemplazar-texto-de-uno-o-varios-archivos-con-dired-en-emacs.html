@@ -1,140 +1,98 @@
 <head>
-<title>Reemplazar texto de uno o varios archivos con dired en Emacs. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Reemplazar texto de uno o varios archivos con dired en Emacs. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Reemplazar texto de uno o varios archivos con dired en Emacs" />
-<meta property="og:description" content="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/emacs.png" />
+<meta property="og:title" content="Reemplazar texto de uno o varios archivos con dired en Emacs" /> 
+<meta property="og:description" content="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/emacs.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html" />
-
-<meta name="twitter:title" content="Reemplazar texto de uno o varios archivos con dired en Emacs" />
-<meta name="twitter:description" content="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." />
+<meta name="twitter:title" content="Reemplazar texto de uno o varios archivos con dired en Emacs" /> 
+<meta name="twitter:description" content="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/emacs.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs-1" title="Reemplazar texto de uno o varios archivos con dired en Emacs" data-export_file_name="reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs" data-description="Cuando hay un error de sincronización con las notas en [[https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes:DESCRIPTION:hl=es:DESCRIPTION:gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~=." data-export_date="2022-03-08 19:25" data-category="emacs" data-tag="dired" data-image="./images-blog/emacs.png">Reemplazar texto de uno o varios archivos con dired en Emacs</h1>
-<h5>Tiempo estimado de lectura: 5 minutos. 565 palabras.    <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
-<p>Cuando hay un error de sincronización con las notas en <a href="https://play.google.com/store/apps/details?id=org.eu.thedoc.zettelnotes&amp;hl=es&amp;gl=US">Zettel Notes</a>, aparece en la línea con error el siguiente símbolo <code>~~</code>.</p>
-<center>
+<h1 id="reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs">Reemplazar texto de uno o varios archivos con dired en Emacs</h1>
+<p>Cuando hay un error de sincronización con las notas en [[<a href="https://play.google.com/store/apps/details?id">https://play.google.com/store/apps/details?id</a><code class="verbatim">org.eu.thedoc.zettelnotes&amp;hl=es&amp;gl=US][Zettel Notes]], aparece en la línea con error el siguiente símbolo =~~</code>.</p>
 <p><img src="../images-blog/emacs.png" /></p>
-</center>
 <p>Hay un modo de ir renombrando todas las palabras que aparecen en una nota a la vez con un solo comando. Pero si esto te sucede en todas las notas de un directorio, también podemos hacerlo utilizando el explorador de archivos <strong>dired</strong> que incluye <strong>Emacs</strong>.</p>
 <p>Vamos a ver como hacerlo de los 2 modos.</p>
 <h2 id="cambiar-palabras-en-un-archivo-de-texto">Cambiar palabras en un archivo de texto</h2>
-<p>Para ir reemplazando palabra a palabra en un archivo de texto que hayamos abierto con <strong>Emacs</strong> y te vaya preguntando cada palabra que coincida, pulsamos el atajo <code>M-%</code>.</p>
+<p>Para ir reemplazando palabra a palabra en un archivo de texto que hayamos abierto con <strong>Emacs</strong> y te vaya preguntando cada palabra que coincida, pulsamos el atajo <code class="verbatim">M-%</code>.</p>
 <p>Para reemplazar todas las palabras en el archivo de texto abierto con <strong>Emacs</strong> de una vez y que no te pregunte introduciremos el comando:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">M-x</span> replace-regexp</a></code></pre></div>
+<pre><code class="language-sh">
+M-x replace-regexp
+</code></pre>
 <h2 id="utilizar-dired-para-reemplazar-texto-en-multimples-archivos">Utilizar dired para reemplazar texto en multimples archivos</h2>
 <h3 id="marcando-archivos-con-dired-de-emacs">Marcando archivos con dired de Emacs</h3>
-<p>Utiliza dired con Emacs y visualiza los archivos de un directorio. Para abrir dired podemos hacerlo con el atajo <code>C-x d</code>.</p>
+<p>Utiliza dired con Emacs y visualiza los archivos de un directorio. Para abrir dired podemos hacerlo con el atajo <code class="verbatim">C-x d</code>.</p>
 <ul>
-<li>Marca los archivos que quieres reemplazar el texto con la letra <code>m</code> y desmarca con la letra <code>u</code>. Puedes ir marcando <code>m</code> todo el rato e irá marcando un archivo tras otro.</li>
-<li>También puedes seleccionar todos los archivos de un directorio con el atajo <code>C-u t</code>.</li>
+<li>Marca los archivos que quieres reemplazar el texto con la letra <code class="verbatim">m= y desmarca con la letra =u=. Puedes ir marcando =m</code> todo el rato e irá marcando un archivo tras otro.</li>
+<li>También puedes seleccionar todos los archivos de un directorio con el atajo <code class="verbatim">C-u t</code>.</li>
 </ul>
-<ol>
-<li><p>Cambiar según patrón de nombre de archivo o extensión</p>
+<h4 id="cambiar-según-patrón-de-nombre-de-archivo-o-extensión">Cambiar según patrón de nombre de archivo o extensión</h4>
 <p>Puedes seleccionar seleccionar varios archivos que cumplan un patrón e común. Por ejemplo los archivos <strong>.md</strong>, utilizaremos % m.</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">m</span> .md$</a></code></pre></div></li>
-</ol>
+<pre><code class="language-sh">
+m .md$
+</code></pre>
 <h3 id="reemplazando-el-texto-de-los-archivos">Reemplazando el texto de los archivos</h3>
 <p>Una vez <strong>marcados</strong> los archivos dentro de dired, introduciremos el siguiente comando.</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">M-x</span> dired-do-query-replace-regexp</a></code></pre></div>
+<pre><code class="language-sh">
+M-x dired-do-query-replace-regexp
+</code></pre>
 <p>Emacs te pedirá que escribas el texto fuente que quieres reemplazar y cuando pulses Enter, pedirá introducir el nuevo texto a reemplazar.</p>
-<p>A partir de ese momento, Emacs comenzará a abrir los archivos que contengan el texto fuente y te pregunatará si deseas reemplazarlo. Para reemplazarlo tenemos varias opciones:</p>
+<p>A partir de ese momento, Emacs comenzará a abrir los archivos que contengan el texto fuente y te pregunatará si deseas reemplazarlo. Para reemplazarlo tenemos varias opciones: </p>
 <ul>
-<li><strong>!</strong> para reemplazar todas las coincidencias restantes en este búfer sin más preguntas</li>
-<li><strong>Y</strong> para reemplazar todas las palabras de los buffers restantes sin más preguntas</li>
-<li><strong>N</strong> para saltar al siguiente búfer sin reemplazar las coincidencias restantes</li>
-<li>E para editar la cadena de reemplazo - Escribe Espacio o 'y' para reemplazar una coincidencia, Eliminar o 'n' para pasar al siguiente</li>
-<li>RET o 'q' para salir, Período para reemplazar una coincidencia y salir</li>
-<li>^ para mover el punto de regreso al partido anterior</li>
-<li>u para deshacer el reemplazo anterior</li>
+<li><strong>!</strong> para reemplazar todas las coincidencias restantes en este búfer sin más preguntas </li>
+<li><strong>Y</strong> para reemplazar todas las palabras de los buffers restantes sin más preguntas </li>
+<li><strong>N</strong> para saltar al siguiente búfer sin reemplazar las coincidencias restantes </li>
+<li>E para editar la cadena de reemplazo - Escribe Espacio o 'y' para reemplazar una coincidencia, Eliminar o 'n' para pasar al siguiente </li>
+<li>RET o 'q' para salir, Período para reemplazar una coincidencia y salir </li>
+<li>^ para mover el punto de regreso al partido anterior </li>
+<li>u para deshacer el reemplazo anterior </li>
 <li>U para deshacer todos los reemplazos</li>
 </ul>
 <p>Para guardar todos los nuevos cambios, sin salir de <strong>Emacs</strong>.</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="ex">M-x</span> save-some-buffers</a></code></pre></div>
+<pre><code class="language-sh">
+M-x save-some-buffers
+</code></pre>
 <h2 id="fuentes">Fuentes</h2>
 <ul>
 <li><a href="https://elblogdelazaro.org/posts/2021-07-19-emacs-reemplazar-texto-en-multiples-ficheros/">Emacs: Reemplazar texto en múltiples ficheros | el blog de lázaro</a></li>
-</ul>
-<br>
 <p>Publicado por Angel el Tuesday 08 March del 2022</p>
-<br><br> 
 <p>También te puede interesar:</p>
-<ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html">Micro. Un editor normal para terminal</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2021-07-28-editando-csv-usando-emacs.html">Editando CSV usando Emacs</a></li>
@@ -143,7 +101,9 @@ $("#tipue_search_input").tipuesearch();
 <li><a href="https://ugeek.github.io/blog/post/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html">Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,…) o pública (Drive, Dropbox, OneDrive…) con rclone</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-(webdav-nextcloud--)-o-publica-(drive-dropbox-onedrive--)-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

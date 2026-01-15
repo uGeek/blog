@@ -44,22 +44,22 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="gpg-cifrado-de-archivos-sim-trico">GPG. Cifrado de archivos simétrico</h1>
+<h1 id="gpg-cifrado-de-archivos-simétrico">GPG. Cifrado de archivos simétrico</h1>
 <p>En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg.</p>
 <h2 id="cifrado">Cifrado</h2>
-<p><code>gpg -c archivo.txt</code></p>
+<p><code class="verbatim">gpg -c archivo.txt</code></p>
 <p>Te pedirá contraseña para cifrar el archivo.</p>
 <p>Si eres como yo y te gusta incluirlo en un script para automatizar y no tener poner contraseña:</p>
-<p>#+begin_src</p>
-<p>gpg --yes --batch --passphrase="pon aquí tu contraseña" -c archivo.txt</p>
-<p>#+end_src</p>
+<pre><code>
+gpg --yes --batch --passphrase=&quot;pon aquí tu contraseña&quot; -c archivo.txt
+</code></pre>
 <h2 id="descifrado">Descifrado</h2>
-<p><code>gpg archivo.txt.gpg</code></p>
+<p><code class="verbatim">gpg archivo.txt.gpg</code></p>
 <p>Para automatizar como en el caso anterior...</p>
-<p>#+begin_src </p>
-<p>gpg --yes --batch --passphrase="pon aquí tu contraseña" archivo.txt.gpg</p>
-<p>#+end_src</p>
-<h2 id="conclusi-n">Conclusión</h2>
+<pre><code>
+gpg --yes --batch --passphrase=&quot;pon aquí tu contraseña&quot; archivo.txt.gpg
+</code></pre>
+<h2 id="conclusión">Conclusión</h2>
 <p>Hablaré en más posts de como cifrar con diferentes métodos. Aunque el cifrado simétrico no es altamente seguro, si lo incluimos en un script, podriamos darle varias pasaditas de cifrado automatizando el proceso, dandole un poco mas de seguridad.</p>
 <p>Publicado por Angel el Thursday 17 January del 2019</p>
 <p>También te puede interesar:</p>

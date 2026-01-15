@@ -53,9 +53,9 @@ sudo apt install pandoc
 <h2 id="markdown-a-org-mode">Markdown a Org Mode</h2>
 <p>Markdown a Org Mode. Ejecutamos este comando en la terminal.</p>
 <ul>
-<li>Para indicar el número de caracteres por línea que tendrá la conversión, utiliza la opción <code>--columns NUMERO_DE_CARACTERES</code> </li>
-<li>La opción <code>-t</code>, significa que transformamos markdown a orgmode</li>
-<li>La opción <code>-o</code>, significa el archivo de salida será el que indiquemos a continuación</li>
+<li>Para indicar el número de caracteres por línea que tendrá la conversión, utiliza la opción <code class="verbatim">--columns NUMERO_DE_CARACTERES</code> </li>
+<li>La opción <code class="verbatim">-t</code>, significa que transformamos markdown a orgmode</li>
+<li>La opción <code class="verbatim">-o</code>, significa el archivo de salida será el que indiquemos a continuación</li>
 </ul>
 <pre><code>
 pandoc -s -f markdown -t org archivo_a_convertir.md -o nuevo_archivo.org
@@ -66,17 +66,17 @@ pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md
 </code></pre>
 <p>Al hacer la conversión, Pandoc incluye en cada cabecera las propieties. Para eliminarlas podemos utilizar <strong>sed</strong></p>
 <pre><code>
-pandoc  -f markdown -t org archivo.md  --columns 10000 | sed -E  "/^[[:space:]]+:/ d" &gt; nuevo_archivo.org
+pandoc  -f markdown -t org archivo.md  --columns 10000 | sed -E  &quot;/^[[:space:]]+:/ d&quot; &gt; nuevo_archivo.org
 </code></pre>
-<h3 id="m-s-f-cil-y-comprensible">Más fácil y comprensible</h3>
+<h3 id="más-fácil-y-comprensible">Más fácil y comprensible</h3>
 <p>La traducción de lo que estamos haciendo sería: Transformamos con <strong>Pandoc</strong> "<strong>-t</strong>" a <strong>org</strong> el <strong>archivo.md</strong>. Utilizaremos un máximo de 10000 caracteres por línea y con <strong>sed</strong>, eliminamos las propieties</p>
 <pre><code>
-pandoc -t org archivo.md --columns 10000 | sed -E "/^[[:space:]]+:/ d"
+pandoc -t org archivo.md --columns 10000 | sed -E &quot;/^[[:space:]]+:/ d&quot;
 </code></pre>
 <pre><code>
-pandoc -t org archivo.md --columns 10000 | sed -E "/^[[:space:]]+:/ d" &gt; archivo.org
+pandoc -t org archivo.md --columns 10000 | sed -E &quot;/^[[:space:]]+:/ d&quot; &gt; archivo.org
 </code></pre>
-<h2 id="muchos-markdown-en-un-nico-archivo-org-mode">Muchos Markdown en un único archivo Org Mode</h2>
+<h2 id="muchos-markdown-en-un-único-archivo-org-mode">Muchos Markdown en un único archivo Org Mode</h2>
 <p>Muchos archivos Markdown a un único Org Mode.</p>
 <h3 id="find">find</h3>
 <p>Vamos a la carpeta donde están todos los Markdown que queremos convertir y Llamamos a find vía Pandoc:</p>

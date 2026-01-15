@@ -1,112 +1,72 @@
 <head>
-<title>Servidor de Samba fácil. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>Servidor de Samba fácil. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="Servidor de Samba fácil" />
-<meta property="og:description" content="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/samba.png" />
+<meta property="og:title" content="Servidor de Samba fácil" /> 
+<meta property="og:description" content="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/samba.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2021-04-02-servidor-de-samba-facil.html" />
-
-<meta name="twitter:title" content="Servidor de Samba fácil" />
-<meta name="twitter:description" content="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." />
+<meta name="twitter:title" content="Servidor de Samba fácil" /> 
+<meta name="twitter:description" content="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/samba.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="servidor-de-samba-fácil-1" title="Servidor de Samba fácil" data-export_file_name="servidor-de-samba-facil" data-description="Vamos a compartir una carpeta por *Samba* de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local." data-export_date="2021-04-02 15:24" data-category="servidor" data-tag="samba" data-image="./images-blog/samba.png">Servidor de Samba fácil</h1>
-<h5>Tiempo estimado de lectura: 3 minutos. 425 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<h1 id="servidor-de-samba-fácil">Servidor de Samba fácil</h1>
 <p>Vamos a compartir una carpeta por <strong>Samba</strong> de un modo muy sencillo, para que sea accesible desde cualquier máquina dentro de una misma red local.</p>
-<center>
 <p><img src="../images-blog/samba.png" /></p>
-</center>
 <p>Para acceder a los datos de esta carpeta, no va a ser necesario utilizar usuario y contraseña, pero para darle un mínimo de seguridad, vamos a permitir el acceso a esta carpeta a determinados dispositivos en función de us IP.</p>
 <p>El modo más correcto y seguro de compartir una carpeta por <strong>Samba</strong>, es crear un grupo donde ponemos un número de usuarios dentro de este y donde todos estos usuarios tienen usuario y contraseña.</p>
 <p>He optado por esta configuración, porque es mucho más sencilla y he visto algo parecido en <strong>Recalbox</strong>. Una capeta que todos los usuarios de la red local tienen acceso y pueden depositar ahí sus archivos para compartir.</p>
 <h2 id="instalación">Instalación</h2>
 <p>Instalación de Samba</p>
-<pre><code>sudo apt install samba
+<pre><code>
+sudo apt install samba
 </code></pre>
 <h2 id="compartiendo-carpeta">Compartiendo Carpeta</h2>
 <p>Damos permisos para compartir la carpeta por <strong>Samba</strong> y que puede acceder cualquier usuario.</p>
-<pre><code>sudo chmod -R 777 /home/angel/samba/
+<pre><code>
+sudo chmod -R 777 /home/angel/samba/
 </code></pre>
 <h2 id="archivo-de-configuración">Archivo de configuración</h2>
 <p>Editamos el archivo de configuración.</p>
-<pre><code>sudo nano /etc/samba/smb.conf
+<pre><code>
+sudo nano /etc/samba/smb.conf
 </code></pre>
-<pre><code>[samba]                     # Nombre del servidor que veran los clientes
+<pre><code>
+[samba]                     # Nombre del servidor que veran los clientes
 
 path=/home/angel/samba      # Ruta de la carpeta compartida
 public=yes                  # Disponible para usuarios invitados u otros. Si ponemos no, solo los usuarios autorizados accederan
@@ -123,7 +83,8 @@ force security mode = 777
 force directory security mode = 777
 </code></pre>
 <p>Desmarcamos el compartir impresoras</p>
-<pre><code>#[print$]
+<pre><code>
+#[print$]
 #   comment = Printer Drivers
 #   path = /var/lib/samba/printers
 #   browseable = yes
@@ -131,15 +92,15 @@ force directory security mode = 777
 #   guest ok = no
 </code></pre>
 <p>Verifica con <strong>testparm</strong> si hay un error en el archivo de configuración</p>
-<pre><code>testparm
+<pre><code>
+testparm
 </code></pre>
 <h2 id="permitir-de-unas-ips-en-concreto">Permitir de unas ip's en concreto</h2>
 <p>Para dar un poquito más de seguridad desde el servidor, solo vamos a permitir el acceso a determinadas ip's.</p>
-<pre><code>hosts allow = 192.168.1.100, 192.168.1.101
+<pre><code>
+hosts allow = 192.168.1.100, 192.168.1.101
 </code></pre>
-<br>
 <p>Publicado por Angel el Friday 02 April del 2021</p>
-<br><br> 
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
@@ -152,5 +113,7 @@ force directory security mode = 777
 <li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
-</ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
