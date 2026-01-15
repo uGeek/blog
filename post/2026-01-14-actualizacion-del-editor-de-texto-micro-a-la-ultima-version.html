@@ -45,39 +45,49 @@
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
 <h1 id="actualización-del-editor-de-texto-micro-a-la-última-versión">Actualización del Editor de Texto Micro a la Última Versión</h1>
-
 <p>Este artículo explica detalladamente el procedimiento necesario para actualizar el editor de texto Micro, asegurándose de que la instalación incluya el binario más reciente obtenido directamente desde el repositorio oficial.</p>
 <h2 id="descarga-e-instalación-del-binario">Descarga e Instalación del Binario</h2>
 <p>Para asegurar que el editor de texto Micro esté a la última versión, es indispensable obtener el archivo binario compatible con la arquitectura del sistema directamente desde el repositorio oficial de GitHub.</p>
 <p><strong>Paso 1: Descargar el archivo binario</strong></p>
-<p>Se recomienda utilizar el comando <code>wget</code> para obtener la versión más reciente. A continuación, se muestra un ejemplo utilizando la versión 2.0.15 para la arquitectura <code>linux-arm64</code>:</p>
-<div class="sourceCode" id="cb1" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">wget</span> github.com/zyedidia/micro/releases/download/v2.0.15/micro-2.0.15-linux-arm64.tar.gz</a></code></pre></div>
+<p>Se recomienda utilizar el comando <code class="verbatim">wget= para obtener la versión más reciente. A continuación, se muestra un ejemplo utilizando la versión 2.0.15 para la arquitectura =linux-arm64</code>:</p>
+<pre><code class="language-sh">
+    wget github.com/zyedidia/micro/releases/download/v2.0.15/micro-2.0.15-linux-arm64.tar.gz
+</code></pre>
 <p><strong>Paso 2: Descomprimir el archivo</strong></p>
-<p>Una vez descargado, se debe utilizar el comando <code>tar</code> para extraer el contenido del archivo comprimido:</p>
-<div class="sourceCode" id="cb2" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="fu">tar</span> -xzf micro-2.0.15-linux-arm64.tar.gz</a></code></pre></div>
+<p>Una vez descargado, se debe utilizar el comando <code class="verbatim">tar</code> para extraer el contenido del archivo comprimido:</p>
+<pre><code class="language-sh">
+    tar -xzf micro-2.0.15-linux-arm64.tar.gz
+</code></pre>
 <p><strong>Paso 3: Ejecución de prueba</strong></p>
 <p>Se aconseja acceder al nuevo directorio creado y ejecutar el binario directamente para confirmar que la instalación se realizó con éxito:</p>
-<div class="sourceCode" id="cb3" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1"><span class="ex">./micro</span></a></code></pre></div>
+<pre><code class="language-sh">
+    ./micro
+</code></pre>
 <h2 id="configuración-añadir-micro-al-path-shell-fish">Configuración: Añadir Micro al PATH (Shell Fish)</h2>
-<p>Para permitir la ejecución del editor <code>micro</code> desde cualquier ubicación de la terminal (sin necesidad de especificar la ruta completa), es necesario añadir el directorio que contiene el binario a la variable de entorno <code>PATH</code> dentro de la configuración de Fish Shell.</p>
+<p>Para permitir la ejecución del editor <code class="verbatim">micro= desde cualquier ubicación de la terminal (sin necesidad de especificar la ruta completa), es necesario añadir el directorio que contiene el binario a la variable de entorno =PATH</code> dentro de la configuración de Fish Shell.</p>
 <p><strong>Paso 1: Editar el archivo de configuración de Fish</strong></p>
 <p>El usuario debe acceder y modificar el archivo de configuración de Fish Shell, generalmente ubicado en el directorio de usuario:</p>
-<div class="sourceCode" id="cb4" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1"><span class="fu">nano</span> ~/.config/fish/config.fish</a></code></pre></div>
+<pre><code class="language-sh">
+    nano ~/.config/fish/config.fish
+</code></pre>
 <p><strong>Paso 2: Añadir la ruta del binario</strong></p>
-<p>Se debe insertar la siguiente línea dentro del archivo de configuración. Es fundamental verificar que la ruta <code>/nube/scripts/local/micro/micro-2.0.15/</code> coincida exactamente con la ubicación donde se extrajo el editor en el paso anterior:</p>
-<div class="sourceCode" id="cb5" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="ex">fish_add_path</span> /nube/scripts/local/micro/micro-2.0.15/</a></code></pre></div>
+<p>Se debe insertar la siguiente línea dentro del archivo de configuración. Es fundamental verificar que la ruta <code class="verbatim">/nube/scripts/local/micro/micro-2.0.15/</code> coincida exactamente con la ubicación donde se extrajo el editor en el paso anterior:</p>
+<pre><code class="language-sh">
+    fish_add_path /nube/scripts/local/micro/micro-2.0.15/
+</code></pre>
 <p><strong>Paso 3: Recargar la configuración</strong></p>
-<p>Después de guardar los cambios en el archivo <code>config.fish</code>, se debe recargar la configuración de Fish Shell para que las modificaciones en el <code>PATH</code> surtan efecto inmediatamente:</p>
-<div class="sourceCode" id="cb6" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="bu">source</span> ~/.config/fish/config.fish</a></code></pre></div>
+<p>Después de guardar los cambios en el archivo <code class="verbatim">config.fish=, se debe recargar la configuración de Fish Shell para que las modificaciones en el =PATH</code> surtan efecto inmediatamente:</p>
+<pre><code class="language-sh">
+    source ~/.config/fish/config.fish
+</code></pre>
 <h2 id="configuración-para-zsh">Configuración para zsh</h2>
-<div class="sourceCode" id="cb7" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">nano</span> ~/.zshrc</a></code></pre></div>
+<pre><code class="language-sh">
+nano ~/.zshrc
+</code></pre>
 <p>y agrega:</p>
-<div class="sourceCode" id="cb8" data-org-language="sh"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="bu">export</span> <span class="va">PATH=</span><span class="st">&quot;</span><span class="va">$PATH</span><span class="st">:/nube/scripts/local/micro/micro-2.0.15/&quot;</span></a></code></pre></div>
-<h2 id="fuentes-y-referencias">Fuentes y Referencias</h2>
-<ul>
-<li>Repositorio oficial de Micro (Página de Descargas): <a href="https://github.com/zyedidia/micro/releases"><em>Releases · zyedidia/micro · GitHub</em></a></li>
-</ul>
-
+<pre><code class="language-sh">
+export PATH=&quot;$PATH:/nube/scripts/local/micro/micro-2.0.15/&quot;
+</code></pre>
 <h2 id="fuentes-y-referencias">Fuentes y Referencias</h2>
 <p>Publicado por Angel el Wednesday 14 January del 2026</p>
 <p>También te puede interesar:</p>
