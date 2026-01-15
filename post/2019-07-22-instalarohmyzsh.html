@@ -1,0 +1,123 @@
+<head>
+<title>Instalar Oh My ZSH. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:locale" content="es_ES" />
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" />
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Instalar Oh My ZSH" /> 
+<meta property="og:description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-22-instalarohmyzsh.html" />
+<meta name="twitter:title" content="Instalar Oh My ZSH" /> 
+<meta name="twitter:description" content="Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+</head>
+<br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script>
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
+</script>
+<h1 id="instalar-oh-my-zsh">Instalar Oh My ZSH</h1>
+<p>Zsh es una shell que junto a Oh My Zsh, un framework desarrollado por la comunidad, nos proporciona sugerencias cuando estamos en nuestra terminal, así como en caso de utilizar git, conocer en que rama estamos. Voy a instalar un tema muy conocido, <strong>agnoster</strong>. </p>
+<p><a href="./images-blog/omzsh.png">./images-blog/omzsh.png</a></p>
+<p>Mediante este Post, vamos a aprender a instalarlo, de un modo muy sencillo.</p>
+<h2 id="instalando-zsh-y-git-core">Instalando  ZSH y git-core</h2>
+<p>Instalando desde los repositorios:</p>
+<p><code>sudo apt install zsh git-core</code></p>
+<h2 id="descargando-oh-my-zsh-y-ejecutarlo">Descargando Oh My ZSH y ejecutarlo</h2>
+<p>Llegó la hora de Instalar Oh My Zsh</p>
+<p><code>wget 4 -O - | zsh</code></p>
+<h2 id="desinstalar-oh-my-zsh">Desinstalar Oh My ZSH</h2>
+<p>Si no te ha gustado oh my zsh, desinstalarlo es tan sencillo como ejecutar en la terminal:</p>
+<p><code>uninstall_oh_my_zsh</code></p>
+<h2 id="cambiar-la-shell-a-zsh">Cambiar la shell a ZSH</h2>
+<p>Vamos a cambiar nuestra Shell actual a zsh:</p>
+<p><code>chsh -s `which zsh`</code></p>
+<p>Si quieres cambiar la terminal a otro usuario siendo administrador, en mi ejemplo, al usuario <strong>angel</strong>.</p>
+<pre><code>
+sudo chsh -s /usr/bin/zsh angel
+</code></pre>
+<p>Ahora, para que surja efecto, será necesario <strong>reiniciar la terminal</strong>. Si no funciona, quizás sea necesario reiniciar el Sistema Operativo.</p>
+<p>Si no nos convence Zsh u otra shell, volveremos a bash así:</p>
+<p><code>chsh -s `which bash`</code></p>
+<h2 id="que-shells-hay-disponibles-en-nuestro-sistema">Que Shells hay disponibles en nuestro sistema</h2>
+<p>Para saber las shells tenemos instaladas en nuestro sistema:</p>
+<p><code>cat /etc/shells</code></p>
+<h2 id="saber-nuestra-shell-actual">Saber nuestra shell actual</h2>
+<p><code>echo $SHELL</code></p>
+<p>Si tenemos zsh, nos devolverá:</p>
+<p><code>/usr/bin/zsh</code></p>
+<h2 id="instalando-las-fuentes-powerline-para-zsh">Instalando las Fuentes Powerline para ZSH</h2>
+<p>Si en tu terminal no aparecen correctamente los símbolos, es necesario instalar:</p>
+<p><code>sudo apt install fonts-powerline</code></p>
+<h2 id="temas">Temas</h2>
+<p>Voy a cambiar el tema <strong>robbyrussell</strong> e instalar el tema agnoster:</p>
+<p><code>nano ~/.zshrc</code></p>
+<p>Sustituye:</p>
+<pre><code>
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+</code></pre>
+<h2 id="buscar-en-el-historial">Buscar en el historial</h2>
+<p>En la raíz del directorio $HOME, crearemos el archivo oculto <strong>.inputrc</strong>. Utilizaremos por ejemplo <strong>nano</strong>, para crear el archivo.</p>
+<p><code>nano .inputrc</code></p>
+<p>Una vez abierto, copiaremos en el siguiente contenido:</p>
+<pre><code>
+## Flecha Arriba
+"\e[A":history-search-backward
+## Flecha Abajo
+"\e[B":history-search-forward
+</code></pre>
+<h2 id="instalarlo-todo-automatizado-desde-un-script">Instalarlo todo automatizado desde un script</h2>
+<p>He creado este script para que la instalación sea muchísimo más rápida:</p>
+<p><code>wget 20 ; bash  ohmyzsh ; rm ohmyzsh</code></p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="https://ohmyz.sh/">https://ohmyz.sh/</a></li>
+<li><a href="http://zshwiki.org/">http://zshwiki.org/</a></li>
+</ul>
+<p>Publicado por Angel el Monday 22 July del 2019</p>
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-17-como-cambiar-la-contrasena-de-usuario-en-linux.html">Cómo cambiar la contraseña de usuario en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html">Paquetes instalados en tu sistema</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html">Comando sudo y su</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html">Docker: Ctop. El portanier de terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html">Montar un directorio en otro directorio</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html">Crear enlaces simbólicos a otros directorios o archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
+</ul>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

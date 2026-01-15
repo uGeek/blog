@@ -1,5 +1,5 @@
 <head>
-<title>   Descargar todos los episodios de un Podcast con wget. uGeek Blog </title> 
+<title>   Montar un servidor webdav con dafs2. uGeek Blog </title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
@@ -14,16 +14,16 @@
 <meta name="twitter:card" content="summary_large_image" /> 
 <link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
 <meta name="author" content=""> 
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" />
 <meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
-<meta name="twitter:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:title" content="   Montar un servidor webdav con dafs2" /> 
+<meta property="og:description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-06-11-montarunservidorwebdavcondafs2.html" />
+<meta name="twitter:title" content="   Montar un servidor webdav con dafs2" /> 
+<meta name="twitter:description" content="vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dav.png" />
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,30 +44,44 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
+<h1 id="montar-un-servidor-webdav-con-dafs2">Montar un servidor webdav con dafs2 </h1>
+<p>En próximos Podcast y Posts, os hablaré de como montar un servidor con webdav, para sincronizar nuestros archivos. </p>
+<p><a href="./images-blog/dav.png">./images-blog/dav.png</a></p>
+<p>Ahora de momento, vamos a ver como montar en tu PC o Servidor este servidor webdav que podemos encontrar en nubes como Nextcloud, Owncloud, Box.com, Yandex... en una carpeta local. Para ello vamos a utilizar dafs2.</p>
+<h2 id="instalaci-n">Instalación</h2>
+<p>La instalación la haremos desde los repositorios:</p>
+<p><code>sudo apt-get install davfs2</code></p>
+<p>Seleccionanos <strong>YES</strong>, indicando que cualquiera que no sea usuario root, pueda montar una unidad.</p>
+<p>Creamos una carpeta, por ejemplo la llamaremos webdav, para montar después nuestro servidor.</p>
+<p><code>mkdir -p ~/webdav</code></p>
+<p>Reconfigurar davfs2:</p>
+<p><code>sudo dpkg-reconfigure davfs2</code></p>
+<h2 id="montar">Montar</h2>
+<p>Vamos a montar nuestra servidor webdav en la carpeta local llamada webdav.</p>
+<p><code>sudo mount.davfs 6 ~/webdav</code></p>
+<p>también podemos utilizar:</p>
 <pre><code>
-wget -q -O- "FEED" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+sudo mount -t davfs -o noexec https://&lt;URL&gt;/ ~/webdav
 </code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
+<h2 id="desmontar">Desmontar </h2>
 <pre><code>
-wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+sudo fusermount -u ~/webdav
 </code></pre>
-<p>A disfrutar con la magia de la terminal...</p>
-<p>Publicado por Angel el Friday 28 December del 2018</p>
+<h2 id="conclusi-n">Conclusión</h2>
+<p>En pocos pasos, podemos acceder a la totalidad de los archivos del servidor webdav y sincronizarlos con todos nuestros dispositivos.</p>
+<p>Publicado por Angel el Tuesday 11 June del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html">gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html">Bard de google para terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-04-edge-gpt-bingchat-con-chatgpt4-en-mi-terminal.html">Edge GPT. BingChat con ChatGPT4 en mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html">Geolocalización de una ip en la terminal y offline</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html">lxterminal como guake en i3wm</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura-.html">rclone: Montando mis notas para una rapida escritura y lectura.</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-05-06-ssh-eliminar-la-clave-del-host-en-un-servidor-remoto.html">SSH. Eliminar la clave del host en un servidor remoto</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-04-09-manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo.html">Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-04-07-caddy-evitar-que-los-motores-de-busqueda-indexen-tu-servicio.html">Caddy. Evitar que los motores de búsqueda indexen tu servicio</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-26-x11-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-grafica-en-local-manjaro.html">X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-02-17-croc-en-windows.html">croc en windows</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
 </ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>

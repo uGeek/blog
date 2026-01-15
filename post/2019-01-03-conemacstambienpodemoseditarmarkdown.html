@@ -1,5 +1,5 @@
 <head>
-<title>   Convertir de Markdown a Org Mode gracias a Pandoc. uGeek Blog </title> 
+<title>   Con Emacs también podemos editar Markdown. uGeek Blog </title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
@@ -14,15 +14,15 @@
 <meta name="twitter:card" content="summary_large_image" /> 
 <link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
 <meta name="author" content=""> 
-<meta name="description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" />
+<meta name="description" content="He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?" />
 <meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="   Convertir de Markdown a Org Mode gracias a Pandoc" /> 
-<meta property="og:description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" /> 
+<meta property="og:title" content="   Con Emacs también podemos editar Markdown" /> 
+<meta property="og:description" content="He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?" /> 
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html" />
-<meta name="twitter:title" content="   Convertir de Markdown a Org Mode gracias a Pandoc" /> 
-<meta name="twitter:description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-03-conemacstambienpodemoseditarmarkdown.html" />
+<meta name="twitter:title" content="   Con Emacs también podemos editar Markdown" /> 
+<meta name="twitter:description" content="He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
@@ -44,53 +44,23 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="convertir-de-markdown-a-org-mode-gracias-a-pandoc">Convertir de Markdown a Org Mode gracias a Pandoc</h1>
-<p>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:</p>
-<pre><code>
-sudo apt install pandoc
-</code></pre>
-<p>Ahora tenemos 2 posibilidades, transformar únicamente un archivo .md a .org, o aprovechando la magnífica gestión de los archivos Org Mode, convertir todos los archivos Markdown de una carpeta a un único archivo Org Mode.</p>
-<h2 id="markdown-a-org-mode">Markdown a Org Mode</h2>
-<p>Markdown a Org Mode. Ejecutamos este comando en la terminal.</p>
-<ul>
-<li>Para indicar el número de caracteres por línea que tendrá la conversión, utiliza la opción <code>--columns NUMERO_DE_CARACTERES</code> </li>
-<li>La opción <code>-t</code>, significa que transformamos markdown a orgmode</li>
-<li>La opción <code>-o</code>, significa el archivo de salida será el que indiquemos a continuación</li>
-</ul>
-<pre><code>
-pandoc -s -f markdown -t org archivo_a_convertir.md -o nuevo_archivo.org
-</code></pre>
-<p>Cambiando el orden</p>
-<pre><code>
-pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md
-</code></pre>
-<p>Al hacer la conversión, Pandoc incluye en cada cabecera las propieties. Para eliminarlas podemos utilizar <strong>sed</strong></p>
-<pre><code>
-pandoc  -f markdown -t org archivo.md  --columns 10000 | sed -E  "/^[[:space:]]+:/ d" &gt; nuevo_archivo.org
-</code></pre>
-<h3 id="m-s-f-cil-y-comprensible">Más fácil y comprensible</h3>
-<p>La traducción de lo que estamos haciendo sería: Transformamos con <strong>Pandoc</strong> "<strong>-t</strong>" a <strong>org</strong> el <strong>archivo.md</strong>. Utilizaremos un máximo de 10000 caracteres por línea y con <strong>sed</strong>, eliminamos las propieties</p>
-<pre><code>
-pandoc -t org archivo.md --columns 10000 | sed -E "/^[[:space:]]+:/ d"
-</code></pre>
-<pre><code>
-pandoc -t org archivo.md --columns 10000 | sed -E "/^[[:space:]]+:/ d" &gt; archivo.org
-</code></pre>
-<h2 id="muchos-markdown-en-un-nico-archivo-org-mode">Muchos Markdown en un único archivo Org Mode</h2>
-<p>Muchos archivos Markdown a un único Org Mode.</p>
-<h3 id="find">find</h3>
-<p>Vamos a la carpeta donde están todos los Markdown que queremos convertir y Llamamos a find vía Pandoc:</p>
-<pre><code>
-find . -name \*.md -type f -exec pandoc  -f markdown -t org -o {}.org {} \;
-</code></pre>
-<h3 id="for">for</h3>
-<pre><code>
-for f in `ls *.md`; do 
-  pandoc -f markdown -t org -o ${f}.org ${f}; 
-done
-</code></pre>
-<p>Recordar verificar que la conversión se ha hecho correctamente.</p>
-<p>Publicado por Angel el Friday 28 December del 2018</p>
+<h1 id="con-emacs-tambi-n-podemos-editar-markdown">Con Emacs, también podemos editar Markdown</h1>
+<p>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?.</p>
+<p>Por supuesto que Sí!!! Y es que Emacs no solo funciona con Org Mode, sino que con cualquier sintaxis o cosa que se os ocurra.</p>
+<p>Hoy vamos a utilizar Emacs como editor de Markdown. Voy a dividir el post en 2 partes, resaltado de sintaxis y previsulización del documento que estamos editando con refresco instantáneo.</p>
+<p>Resaltado de Sintaxis</p>
+<p>Para que Emacs resalte la sintaxis de Markdown, necesitamos instalar un paquete que encontraremos en <a href="https://melpa.org/">Melpa</a>, <a href="https://github.com/jrblevin/markdown-mode">markdown-mode</a>.</p>
+<h2 id="instalaci-n">Instalación</h2>
+<p><code>M-x package-install RET markdown-mode RET</code></p>
+<h2 id="previsualizaci-n-del-documento">Previsualización del documento</h2>
+<p>Para previsualizar el documento, instalaremos el paquete también de Melpa, Flymd.</p>
+<p>Instalación:</p>
+<p><code>M-x package-install RET flymd RET</code></p>
+<p>Ahora si queremos previsualizar el documento, solo tenemos que introducir en Emacs:</p>
+<p><code>M-x flymd-flyit</code></p>
+<p>Esto, nos lanzará un archivo temporal y abrirá nuestro navegador web, para previsualizar el documento.</p>
+<p>Por defecto se refresca en tiempo real y que podemos deshabilitar</p>
+<p>Publicado por Angel el Thursday 03 January del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html">Micro. Un editor normal para terminal</a></li>

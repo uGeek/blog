@@ -1,5 +1,5 @@
 <head>
-<title>   Descargar todos los episodios de un Podcast con wget. uGeek Blog </title> 
+<title>Instala la última versión de Pandoc. uGeek Blog </title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
@@ -14,15 +14,15 @@
 <meta name="twitter:card" content="summary_large_image" /> 
 <link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
 <meta name="author" content=""> 
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="Si en tu PC como yo, tienes una versión antigua como Ubuntu 18.04, te darás cuenta que la versión de Pandoc esta muy desactualizada" />
 <meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
+<meta property="og:title" content="Instala la última versión de Pandoc" /> 
+<meta property="og:description" content="Si en tu PC como yo, tienes una versión antigua como Ubuntu 18.04, te darás cuenta que la versión de Pandoc esta muy desactualizada" /> 
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
-<meta name="twitter:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-08-14-instalalaúltimaversióndepandoc.html" />
+<meta name="twitter:title" content="Instala la última versión de Pandoc" /> 
+<meta name="twitter:description" content="Si en tu PC como yo, tienes una versión antigua como Ubuntu 18.04, te darás cuenta que la versión de Pandoc esta muy desactualizada" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
@@ -44,30 +44,24 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
-<pre><code>
-wget -q -O- "FEED" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
-</code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
-<pre><code>
-wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
-</code></pre>
-<p>A disfrutar con la magia de la terminal...</p>
-<p>Publicado por Angel el Friday 28 December del 2018</p>
+<h1 id="instala-la-ltima-versi-n-de-pandoc">Instala la última versión de Pandoc</h1>
+<p>Si en tu PC como yo, tienes una versión antigua como Ubuntu 18.04, te darás cuenta que la versión de Pandoc esta muy desactualizada. Instalar la última versión de Pandoc para arquitectura 64 bits, es muy fácil.</p>
+<h2 id="instalaci-n">Instalación</h2>
+<p>Accederemos al <a href="https://github.com/jgm/pandoc/releases">repositorio de Pandoc en GitHub</a> y descargaremos la última versión. </p>
+<p>En el momento de escribir este post, estamos en la versión 2.7.3.</p>
+<p><code>sudo dpkg -i pandoc-2.7-3-amd64.deb</code></p>
+<p>Comprobaremos si ya tenemos la última versión instalada correctamente:</p>
+<p><code>pandoc --version</code></p>
+<h2 id="fuente">Fuente</h2>
+<ul>
+<li><a href="https://pandoc.org/">https://pandoc.org/</a></li>
+<li><a href="https://github.com/jgm/pandoc/releases">Repositorio de Pandoc en GitHub</a></li>
+</ul>
+<p>Publicado por Angel el Wednesday 14 August del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html">gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html">Bard de google para terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-04-edge-gpt-bingchat-con-chatgpt4-en-mi-terminal.html">Edge GPT. BingChat con ChatGPT4 en mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html">Geolocalización de una ip en la terminal y offline</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html">lxterminal como guake en i3wm</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-08-14-instala-la-última-versión-de-pandoc.html">Instala la última versión de Pandoc</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html">Convertir de Markdown a Org Mode gracias a Pandoc</a></li>
 </ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>

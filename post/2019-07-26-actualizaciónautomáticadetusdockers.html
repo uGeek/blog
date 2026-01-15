@@ -1,0 +1,140 @@
+<head>
+<title>Actualización automática de tus dockers con Watchtower o Ouroboros. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
+<meta property="og:locale" content="es_ES" />
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
+<meta name="description" content="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" />
+<meta property="og:site_name" content="uGeek Blog "/> 
+<meta property="og:type" content="article" /> 
+<meta property="og:title" content="Actualización automática de tus dockers con Watchtower o Ouroboros" /> 
+<meta property="og:description" content="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-26-actualizaciónautomáticadetusdockers.html" />
+<meta name="twitter:title" content="Actualización automática de tus dockers con Watchtower o Ouroboros" /> 
+<meta name="twitter:description" content="Watchtower es una aplicación que controlará sus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch.min.js"></script>
+</head>
+<br><br><br><br><br><br><br><br><br>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+<script>
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
+</script>
+<h1 id="actualizaci-n-autom-tica-de-tus-dockers-con-watchtower-o-ouroboros">Actualización automática de tus dockers con Watchtower o Ouroboros</h1>
+<h2 id="watchtower">Watchtower</h2>
+<p>Watchtower es una aplicación desarrollada en Go, que controlará tus contenedores Docker en funcionamiento y observará los cambios en las imágenes a partir de los cuales se iniciaron originalmente esos contenedores. Si la Watchtower detecta que una imagen ha cambiado, se reiniciará automáticamente el contenedor utilizando la nueva imagen.</p>
+<p>Watchtower desplegará su nueva imagen, parará su contenedor y lo reiniciará con las mismas opciones que se usaron cuando se implementó inicialmente.</p>
+<h3 id="en-tu-servidor-con-amd64">En tu servidor con amd64</h3>
+<pre><code>
+
+docker run -d --name watchtower --cleanup -v /var/run/docker.sock:/var/run/docker.sock v2tec/watchtower
+</code></pre>
+<p>La opción --cleanup, permite borrar las imagenes antiguas.</p>
+<h3 id="tu-raspberry-pi-o-placa-con-arquitectura-arm">Tu Raspberry Pi o placa con arquitectura ARM</h3>
+<pre><code>
+docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock v2tec/watchtower:armhf-latest
+</code></pre>
+<h2 id="ouroboros">Ouroboros</h2>
+<p>Desarrollada en python, Ouroboros hace lo mismo que Watchtower, pero además, elimina las imagenes antiguas. </p>
+<p>Del mismo modo que Watchtower, Ouroboros utiliza la API de docker mediante el socket local.</p>
+<h3 id="docker-cli">docker cli</h3>
+<pre><code>
+docker run -d --name ouroboros \
+ -v /var/run/docker.sock:/var/run/docker.sock \
+ pyouroboros/ouroboros
+</code></pre>
+<h3 id="docker-compose">docker-compose</h3>
+<pre><code>
+version: '3'
+services:
+  ouroboros:
+    container_name: ouroboros
+    hostname: ouroboros
+    image: pyouroboros/ouroboros
+    environment:
+      - CLEANUP=true
+      - INTERVAL=300
+      - LOG_LEVEL=info
+      - SELF_UPDATE=true
+      - IGNORE=mariadb nextcloud
+      - TZ=Europe/Madrid
+      - NOTIFIERS="tgram://1124343468:AAGEqergUoBECxytKKWIqVvzTdrqwegqerg/588554/" \
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+</code></pre>
+<p>Os inico algunas de las muchismas opciones que tiene y he visto en el <a href="https://elblogdelazaro.gitlab.io/2019-09-05-ouroboros-el-sucesosr-de-watchtower/">Blog de Lazaro</a></p>
+<ul>
+<li>Monitorea y actualiza contenedores en múltiples servidores remotos que ejecutan Docker</li>
+<li>Monitorea la etiqueta de la imagen actual o va directamente a latest</li>
+<li>Ignorar contenedores específicos</li>
+<li>Soporte para registros privados.</li>
+<li>Personalizar el intervalo pull</li>
+<li>Supervisar contenedores seleccionados por nombre</li>
+<li>Cambiar el nivel de registro para la depuración/supresión</li>
+<li>Ejecuta ouroboros solo una vez para actualizar, luego termina</li>
+<li>Eliminar la imagen antigua de Docker al crear un nuevo contenedor</li>
+<li>Exporta métricas Prometheus, Influx para el tablero Grafana</li>
+<li>Puede desencadenar múltiples webhooks cuando se actualizan los contenedores. Admite discord, slack, pushover y webhooks genéricos</li>
+<li>Puede enviar correos electrónicos cuando se actualizan los contenedores</li>
+</ul>
+<h4 id="notificaciones-de-telegram">Notificaciones de Telegram</h4>
+<p>Para que ouroboros te notifique por Telegram de los contenedores que se actualizan, añadiremos la siguiente variable añadiendo el TOKEN del bot y el ID del chat que recibirá la notificación.</p>
+<pre><code>
+NOTIFIERS="tgram://TU_API_TOKEN/TU_CHAT_ID/"
+</code></pre>
+<p>Para ello Ouroboros ha añadido el código de servicio de notificaciones Apprise.</p>
+<h4 id="ignorar-actulizaciones-de-docker">Ignorar actulizaciones de docker</h4>
+<p>Si no queremos que ouroboros actualice alguno de los contendores que tenemos corriendo, añadiremos la variable <code>IGNORE</code>.</p>
+<p>En este ejemplo no quiero que se actualice <strong>nextcloud mariadb mumble</strong>.</p>
+<pre><code>
+IGNORE="nextcloud mariadb mumble"
+</code></pre>
+<h2 id="fuente">Fuente </h2>
+<ul>
+<li><a href="https://github.com/containrrr/watchtower">https://github.com/containrrr/watchtower</a></li>
+<li><a href="https://hub.docker.com/r/v2tec/watchtower/">https://hub.docker.com/r/v2tec/watchtower/</a></li>
+<li><a href="https://github.com/caronc/apprise">https://github.com/caronc/apprise</a></li>
+</ul>
+<p>Publicado por Angel el Friday 26 July del 2019</p>
+<p>También te puede interesar:</p>
+<ul>
+<li><a href="https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-29-flatnotes.html">Docker. Flatnotes tomando notas en markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-22-directorio-stfolder.html">Solución a Errores con Syncthing</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
+</ul>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

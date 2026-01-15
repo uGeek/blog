@@ -1,5 +1,5 @@
 <head>
-<title>   Descargar todos los episodios de un Podcast con wget. uGeek Blog </title> 
+<title>Docker en Ubuntu 18.04. uGeek Blog </title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
@@ -14,16 +14,16 @@
 <meta name="twitter:card" content="summary_large_image" /> 
 <link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
 <meta name="author" content=""> 
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="Vamos a instalar docker en Ubuntu 18.04" />
 <meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
-<meta name="twitter:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:title" content="Docker en Ubuntu 18.04" /> 
+<meta property="og:description" content="Vamos a instalar docker en Ubuntu 18.04" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/docker.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-23-dockerenubuntu1804.html" />
+<meta name="twitter:title" content="Docker en Ubuntu 18.04" /> 
+<meta name="twitter:description" content="Vamos a instalar docker en Ubuntu 18.04" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/docker.png" />
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,30 +44,61 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
+<h1 id="docker-en-ubuntu-18-04">Docker en Ubuntu 18.04</h1>
+<p>Vamos a instalar docker en Ubuntu 18.04:</p>
+<p><a href="./images-blog/docker.png">./images-blog/docker.png</a></p>
+<h2 id="requisitos-previos">Requisitos Previos</h2>
+<p>Instalaremos primero unos requisitos que permitiran a apt usar paquetes mediante https:</p>
+<p><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
+<h2 id="clave-gpg">Clave GPG</h2>
+<p><code>curl -fsSL 3 | sudo apt-key add -</code></p>
+<h2 id="repositorio">Repositorio</h2>
+<p>Añadimos el repositorio para nuestra versión de ubuntu:</p>
 <pre><code>
-wget -q -O- "FEED" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 </code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
+<p>Actualizamos:</p>
+<p><code>sudo apt update</code></p>
+<p>Nos aseguramos que instalaremos desde los repositorios de docker y no de ubuntu:</p>
+<p><code>apt-cache policy docker-ce</code></p>
+<h2 id="instalamos-docker-ce-y-docker-compose">Instalamos Docker CE y Docker Compose</h2>
 <pre><code>
-wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+apt -y install docker-ce docker-compose
 </code></pre>
-<p>A disfrutar con la magia de la terminal...</p>
-<p>Publicado por Angel el Friday 28 December del 2018</p>
+<h2 id="iniciamos-docker-y-lo-habilitamos-para-que-se-inicie-al-reiniciar">Iniciamos Docker y lo habilitamos para que se inicie al reiniciar</h2>
+<pre><code>
+systemctl enable docker
+systemctl start docker
+</code></pre>
+<h2 id="comprobamos-la-versi-n-de-docker-y-si-est-instalado">Comprobamos la versión de docker y si está instalado</h2>
+<p><code>docker -v</code></p>
+<h2 id="a-adimos-a-nuestro-usuario-para-controlar-docker">Añadimos a nuestro usuario para controlar Docker</h2>
+<p>Creamos el grupo docker:</p>
+<pre><code>
+groupadd docker
+</code></pre>
+<p>Añadimos al usuario:</p>
+<pre><code>
+usermod -aG docker $USER
+</code></pre>
+<h2 id="instalando-portainer">Instalando Portainer</h2>
+<p>Sabéis que me gusta instalar Portainer, para gestionar los contenedores de un modo gráfico:</p>
+<pre><code>
+docker run -d --name=portainer --restart=always -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+</code></pre>
+<p>Publicado por Angel el Tuesday 23 July del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html">gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html">Bard de google para terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-04-edge-gpt-bingchat-con-chatgpt4-en-mi-terminal.html">Edge GPT. BingChat con ChatGPT4 en mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html">Geolocalización de una ip en la terminal y offline</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html">lxterminal como guake en i3wm</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-29-flatnotes.html">Docker. Flatnotes tomando notas en markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-03-22-directorio-stfolder.html">Solución a Errores con Syncthing</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-06-24-docker-trilium-oficial.html">Docker: Trilium Oficial</a></li>
 </ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>

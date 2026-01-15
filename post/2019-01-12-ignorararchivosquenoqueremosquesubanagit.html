@@ -1,5 +1,5 @@
 <head>
-<title>   Descargar todos los episodios de un Podcast con wget. uGeek Blog </title> 
+<title>   Ignorar archivos que no queremos que suban a Git. uGeek Blog </title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
@@ -14,15 +14,15 @@
 <meta name="twitter:card" content="summary_large_image" /> 
 <link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
 <meta name="author" content=""> 
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:" />
 <meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
+<meta property="og:title" content="   Ignorar archivos que no queremos que suban a Git" /> 
+<meta property="og:description" content="Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:" /> 
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
-<meta name="twitter:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-12-ignorararchivosquenoqueremosquesubanagit.html" />
+<meta name="twitter:title" content="   Ignorar archivos que no queremos que suban a Git" /> 
+<meta name="twitter:description" content="Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene un a fácil solución:" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
@@ -44,30 +44,29 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
-<pre><code>
-wget -q -O- "FEED" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
-</code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
-<pre><code>
-wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
-</code></pre>
-<p>A disfrutar con la magia de la terminal...</p>
-<p>Publicado por Angel el Friday 28 December del 2018</p>
+<h1 id="ignorar-archivos-que-no-queremos-que-suban-a-git">Ignorar archivos que no queremos que suban a Git</h1>
+<p> Es muy probable que no queramos que suban absolutamente todos nuestros archivos a nuestro repositorio en GitHub, GitLab, etc... Esto tiene una fácil solución:</p>
+<h2 id="creando-el-archivo-gitignore-para-ignorar-archivos">Creando el archivo <strong>.gitignore</strong> para ignorar archivos </h2>
+<p>Para determinar los archivos que queremos que no suban al repositorio, tenemos que crear una archivo de texto plano oculto llamado <strong>.gitignore en la raíz de la carpeta en la que queramos ignorar ese tipo de archivo.</strong></p>
+<p>Hay que tener en cuenta, que si lo ponemos en la raíz inicial del proyecto, esto excluirá a esa carpeta y resto de subcarpetas de este repositorio.</p>
+<p>La sintaxis es prácticamente igual que si hiciéramos un scritp en bash. "#" podemos utilizarlo para los comentarios.</p>
+<ul>
+<li>Si no queremos que <strong>no</strong> suban los archivos extensión .log, utilizariamos:</li>
+</ul>
+<p> <code>*.log</code></p>
+<p>Publicado por Angel el Saturday 12 January del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html">gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html">Bard de google para terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-04-edge-gpt-bingchat-con-chatgpt4-en-mi-terminal.html">Edge GPT. BingChat con ChatGPT4 en mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html">Geolocalización de una ip en la terminal y offline</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html">lxterminal como guake en i3wm</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2023-01-13-autenticacion-http-y-https-basica-md.html">Acceso usando credenciales en la URL. Autenticación básica por http</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html">Script para crear acceso a aplicaciones AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html">Abrir aplicaciones de Ubuntu desde una web html</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-10-05-crear-una-licencia-en-github.html">Crear una licencia en GitHub</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-02-crear-una-imagen-docker-desde-un-repositorio-de-github.html">Crear una imagen docker desde un repositorio de GitHub</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html">FileRun. Cambiando el idioma por defecto</a></li>
 </ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>

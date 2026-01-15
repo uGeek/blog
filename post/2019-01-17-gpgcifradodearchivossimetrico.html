@@ -1,5 +1,5 @@
 <head>
-<title>   Descargar todos los episodios de un Podcast con wget. uGeek Blog </title> 
+<title>   GPG. Cifrado de archivos simétrico. uGeek Blog </title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
@@ -14,15 +14,15 @@
 <meta name="twitter:card" content="summary_large_image" /> 
 <link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
 <meta name="author" content=""> 
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg" />
 <meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
+<meta property="og:title" content="   GPG. Cifrado de archivos simétrico" /> 
+<meta property="og:description" content="En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg" /> 
 <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
-<meta name="twitter:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-01-17-gpgcifradodearchivossimetrico.html" />
+<meta name="twitter:title" content="   GPG. Cifrado de archivos simétrico" /> 
+<meta name="twitter:description" content="En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
@@ -44,30 +44,30 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
-<pre><code>
-wget -q -O- "FEED" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
-</code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
-<pre><code>
-wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
-</code></pre>
-<p>A disfrutar con la magia de la terminal...</p>
-<p>Publicado por Angel el Friday 28 December del 2018</p>
+<h1 id="gpg-cifrado-de-archivos-sim-trico">GPG. Cifrado de archivos simétrico</h1>
+<p>En este post vamos a ver como cifrar simetricamente, con una contraseña, archivos mediante gpg.</p>
+<h2 id="cifrado">Cifrado</h2>
+<p><code>gpg -c archivo.txt</code></p>
+<p>Te pedirá contraseña para cifrar el archivo.</p>
+<p>Si eres como yo y te gusta incluirlo en un script para automatizar y no tener poner contraseña:</p>
+<p>#+begin_src</p>
+<p>gpg --yes --batch --passphrase="pon aquí tu contraseña" -c archivo.txt</p>
+<p>#+end_src</p>
+<h2 id="descifrado">Descifrado</h2>
+<p><code>gpg archivo.txt.gpg</code></p>
+<p>Para automatizar como en el caso anterior...</p>
+<p>#+begin_src </p>
+<p>gpg --yes --batch --passphrase="pon aquí tu contraseña" archivo.txt.gpg</p>
+<p>#+end_src</p>
+<h2 id="conclusi-n">Conclusión</h2>
+<p>Hablaré en más posts de como cifrar con diferentes métodos. Aunque el cifrado simétrico no es altamente seguro, si lo incluimos en un script, podriamos darle varias pasaditas de cifrado automatizando el proceso, dandole un poco mas de seguridad.</p>
+<p>Publicado por Angel el Thursday 17 January del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html">gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html">Bard de google para terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-04-edge-gpt-bingchat-con-chatgpt4-en-mi-terminal.html">Edge GPT. BingChat con ChatGPT4 en mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html">Geolocalización de una ip en la terminal y offline</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html">lxterminal como guake en i3wm</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html">Conexión segura por TLS al DNS de CloudFlare</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-06-04-instalando-docker-compose.html">Instalando docker-compose</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">Servidor ejabberd/xmpp en tu Raspberry mediante Docker y Dockerfile</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2019-01-17-gpg-cifrado-de-archivos-simetrico.html">GPG. Cifrado de archivos simétrico</a></li>
 </ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>

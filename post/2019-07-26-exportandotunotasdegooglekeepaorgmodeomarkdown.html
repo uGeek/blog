@@ -1,5 +1,5 @@
 <head>
-<title>   Convertir de Markdown a Org Mode gracias a Pandoc. uGeek Blog </title> 
+<title>Exportando tu Notas de Google Keep a Org Mode o Markdown. uGeek Blog </title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
@@ -14,16 +14,16 @@
 <meta name="twitter:card" content="summary_large_image" /> 
 <link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
 <meta name="author" content=""> 
-<meta name="description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" />
+<meta name="description" content="Hay quien no se acostumbra a utilizar Orgzly ni Emacs cuando toma notas con su movil, en cambio le gustaría el tener el backup de todas las notas de su cuenta Google Keep en un único archivo Org Mode. También hay quien le gustaría tenerlas en Markdown" />
 <meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="   Convertir de Markdown a Org Mode gracias a Pandoc" /> 
-<meta property="og:description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" /> 
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-convertir-de-markdown-a-org-mode-gracias-a-pandoc.html" />
-<meta name="twitter:title" content="   Convertir de Markdown a Org Mode gracias a Pandoc" /> 
-<meta name="twitter:description" content="Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc" /> 
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:title" content="Exportando tu Notas de Google Keep a Org Mode o Markdown" /> 
+<meta property="og:description" content="Hay quien no se acostumbra a utilizar Orgzly ni Emacs cuando toma notas con su movil, en cambio le gustaría el tener el backup de todas las notas de su cuenta Google Keep en un único archivo Org Mode. También hay quien le gustaría tenerlas en Markdown" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/keep.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-26-exportandotunotasdegooglekeepaorgmodeomarkdown.html" />
+<meta name="twitter:title" content="Exportando tu Notas de Google Keep a Org Mode o Markdown" /> 
+<meta name="twitter:description" content="Hay quien no se acostumbra a utilizar Orgzly ni Emacs cuando toma notas con su movil, en cambio le gustaría el tener el backup de todas las notas de su cuenta Google Keep en un único archivo Org Mode. También hay quien le gustaría tenerlas en Markdown" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/keep.png" />
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,53 +44,60 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="convertir-de-markdown-a-org-mode-gracias-a-pandoc">Convertir de Markdown a Org Mode gracias a Pandoc</h1>
-<p>Vamos a convertir nuestros archivos Markdown a Org Mode gracias a Pandoc. Para ello, primero necesitamos instalar Pandoc en nuestro Ubuntu:</p>
+<h1 id="exportando-tu-notas-de-google-keep-a-org-mode-o-markdown">Exportando tu Notas de Google Keep a Org Mode o Markdown</h1>
+<p>Hay quien no se acostumbra a utilizar Orgzly ni Emacs cuando toma notas con su movil, en cambio le gustaría el tener el backup de todas las notas de su cuenta Google Keep en un único archivo Org Mode. También hay quien le gustaría tenerlas en Markdown. </p>
+<p><a href="./images-blog/keep.png">./images-blog/keep.png</a></p>
+<p>Esto, gracias a un par de scripts, no es tarea imposible. Estaba empezando ha hacer yo el script y pensé: ¿No habrá alguien que lo ha hecho primero?. He encontrado en GitHub un script en Bash de <a href="https://github.com/jLouisIV/">jLouisIV</a> y otro en Python de <a href="https://github.com/makuto/">makuto</a>.</p>
+<p>Voy a explicarte como hacer ambos procesos y veras que no es nada complejo.</p>
+<h2 id="descargando-una-copia-de-nuestra-notas">Descargando una copia de nuestra notas</h2>
+<p>Lo primero que tenemos que hacer es ir a la página de <a href="https://takeout.google.com/settings/takeout">Google Takeout</a> y descargar un archivo <strong>.zip</strong>, que contiene todas las notas que tenemos en Google Keep. </p>
+<p>Descomprimimos el archivo zip que hemos descargado.</p>
+<p>Las notas están en formato <strong>.html</strong>, ahora gracias a estos scripts, vamos a transformarlas a Org Mode o Markdown.</p>
+<h2 id="google-keep-a-org-mode">Google Keep a Org Mode</h2>
+<p>Clonamos el repositorios:</p>
 <pre><code>
-sudo apt install pandoc
+git clone https://github.com/uGeek/KeepToOrg.git
 </code></pre>
-<p>Ahora tenemos 2 posibilidades, transformar únicamente un archivo .md a .org, o aprovechando la magnífica gestión de los archivos Org Mode, convertir todos los archivos Markdown de una carpeta a un único archivo Org Mode.</p>
-<h2 id="markdown-a-org-mode">Markdown a Org Mode</h2>
-<p>Markdown a Org Mode. Ejecutamos este comando en la terminal.</p>
+<p>Entramos en la carpeta del repositorio:</p>
+<pre><code>
+cd KeepToOrg
+</code></pre>
+<p>Ejecutamos el script especificando en que carpeta hemos descomprimido nuestro archivo zip de notas de Google Keep y en que destino queremos dejar nuestros archivos Org Mode.</p>
+<p>Ejemplo:</p>
+<pre><code>
+python3 KeepToOrg.py ~/Takeout/ ~/Carpeta_Destino
+</code></pre>
+<p>El Script nos creará un archivo Org Mode por cada etiqueta que tengamos en Google Keep y dentro del archivo, todas las notas pertenecientes a esta etiqueta.</p>
+<h2 id="google-keep-a-markdown">Google Keep a Markdown</h2>
+<p>Este script solo extrae el texto y las listas numeradas. Otros tipos de datos (es decir, casillas de verificación) no causarán errores, pero se extraerá muy poco de su contenido.</p>
+<p>Las Notas con dos o más etiquetas se guardará en el archivo 'MULTIPLE TAGS' y las notas sin ninguna etiqueta se guardarán en el archivo 'NOTES NOT TAGGED'</p>
+<p>Las notas etiquetadas con todos los caracteres que no sean alfanuméricos, espacios, guiones o guiones bajos se guardarán en el archivo 'TAG WITHOUT VALID CHARS'.</p>
+<p>El proceso va a ser similar al script anterior, pero en este caso utilizaremos Bash:</p>
+<p>Vamos a situarnos dentro de la carpeta descomprimida, en la ruta <em>Takeout</em>keep </p>
+<p>Clonamos el repositorio, para descargar el script:</p>
+<pre><code>
+git clone https://github.com/uGeek/keep-notes-script.git
+</code></pre>
+<p>Damos permisos de ejecución:</p>
+<pre><code>
+sudo chmod +x keep-notes-script.sh
+</code></pre>
+<p>Ahora ejecutaremos el script:</p>
+<pre><code>
+./keep-notes-script.sh
+</code></pre>
+<p>El Script nos creará un archivo Markdown por cada etiqueta que tengamos en Google Keep y dentro del archivo, todas las notas pertenecientes a esta etiqueta.</p>
+<h2 id="fuentes">Fuentes</h2>
 <ul>
-<li>Para indicar el número de caracteres por línea que tendrá la conversión, utiliza la opción <code>--columns NUMERO_DE_CARACTERES</code> </li>
-<li>La opción <code>-t</code>, significa que transformamos markdown a orgmode</li>
-<li>La opción <code>-o</code>, significa el archivo de salida será el que indiquemos a continuación</li>
+<li><a href="https://github.com/makuto/KeepToOrg">https://github.com/makuto/KeepToOrg</a></li>
+<li><a href="https://github.com/jLouisIV/keep-notes-script">https://github.com/jLouisIV/keep-notes-script</a></li>
 </ul>
-<pre><code>
-pandoc -s -f markdown -t org archivo_a_convertir.md -o nuevo_archivo.org
-</code></pre>
-<p>Cambiando el orden</p>
-<pre><code>
-pandoc -f markdown -t org -o nuevo_archivo.org archivo_a_convertir.md
-</code></pre>
-<p>Al hacer la conversión, Pandoc incluye en cada cabecera las propieties. Para eliminarlas podemos utilizar <strong>sed</strong></p>
-<pre><code>
-pandoc  -f markdown -t org archivo.md  --columns 10000 | sed -E  "/^[[:space:]]+:/ d" &gt; nuevo_archivo.org
-</code></pre>
-<h3 id="m-s-f-cil-y-comprensible">Más fácil y comprensible</h3>
-<p>La traducción de lo que estamos haciendo sería: Transformamos con <strong>Pandoc</strong> "<strong>-t</strong>" a <strong>org</strong> el <strong>archivo.md</strong>. Utilizaremos un máximo de 10000 caracteres por línea y con <strong>sed</strong>, eliminamos las propieties</p>
-<pre><code>
-pandoc -t org archivo.md --columns 10000 | sed -E "/^[[:space:]]+:/ d"
-</code></pre>
-<pre><code>
-pandoc -t org archivo.md --columns 10000 | sed -E "/^[[:space:]]+:/ d" &gt; archivo.org
-</code></pre>
-<h2 id="muchos-markdown-en-un-nico-archivo-org-mode">Muchos Markdown en un único archivo Org Mode</h2>
-<p>Muchos archivos Markdown a un único Org Mode.</p>
-<h3 id="find">find</h3>
-<p>Vamos a la carpeta donde están todos los Markdown que queremos convertir y Llamamos a find vía Pandoc:</p>
-<pre><code>
-find . -name \*.md -type f -exec pandoc  -f markdown -t org -o {}.org {} \;
-</code></pre>
-<h3 id="for">for</h3>
-<pre><code>
-for f in `ls *.md`; do 
-  pandoc -f markdown -t org -o ${f}.org ${f}; 
-done
-</code></pre>
-<p>Recordar verificar que la conversión se ha hecho correctamente.</p>
-<p>Publicado por Angel el Friday 28 December del 2018</p>
+<p>Mis Forks, por si desaparece la fuente original:</p>
+<ul>
+<li><a href="https://github.com/uGeek/KeepToOrg">https://github.com/uGeek/KeepToOrg</a></li>
+<li><a href="https://github.com/uGeek/keep-notes-script">https://github.com/uGeek/keep-notes-script</a></li>
+</ul>
+<p>Publicado por Angel el Friday 26 July del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2022-03-24-micro-un-editor-normal-para-terminal.html">Micro. Un editor normal para terminal</a></li>

@@ -1,5 +1,5 @@
 <head>
-<title>   Descargar todos los episodios de un Podcast con wget. uGeek Blog </title> 
+<title>Plugin zsh-autosuggestions. Autocompletado en la terminal. uGeek Blog </title> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
@@ -14,16 +14,16 @@
 <meta name="twitter:card" content="summary_large_image" /> 
 <link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
 <meta name="author" content=""> 
-<meta name="description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." />
+<meta name="description" content="Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones" />
 <meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta property="og:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" /> 
-<meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-bash.html" />
-<meta name="twitter:title" content="   Descargar todos los episodios de un Podcast con wget" /> 
-<meta name="twitter:description" content="Si estas en esta web probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles sin necesidad de hacer uso de un programa sino desde la terminal y con wget." /> 
-<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png" />
+<meta property="og:title" content="Plugin zsh-autosuggestions. Autocompletado en la terminal" /> 
+<meta property="og:description" content="Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" /> 
+<meta property="og:url" content="https://ugeek.github.io/blog/post/2019-07-23-pluginzsh-autosuggestionsautocompletadoenlaterminal.html" />
+<meta name="twitter:title" content="Plugin zsh-autosuggestions. Autocompletado en la terminal" /> 
+<meta name="twitter:description" content="Sigo explorando y conociendo los plugin para Zsh. Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones" /> 
+<meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/omzsh.png" />
 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
 <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,30 +44,53 @@
 <script>
 $(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-<h1 id="descargar-todos-los-episodios-de-un-podcast-con-wget">Descargar todos los episodios de un Podcast con wget</h1>
-<p>Si estas en esta web, probablemente conozcas mi Podcast y quizás te hayas planteado alguna vez si existe un método para descargar todos los Podcast disponibles, sin necesidad de hacer uso de un programa, sino desde la terminal y con wget.</p>
-<p>Tan simple como escribir esta única línea sustituyendo <strong>"FEED"</strong>, por el Feed del Podcast que desees descargar.</p>
+<h1 id="plugin-zsh-autosuggestions-autocompletado-en-la-terminal">Plugin zsh-autosuggestions. Autocompletado en la terminal</h1>
+<p>Sigo explorando y conociendo los plugin para Zsh.</p>
+<p><a href="./images-blog/omzsh.png">./images-blog/omzsh.png</a></p>
+<p> Zsh-autosuggestions sugiere comandos a medida que escribe en base al historial y las terminaciones. Este plugin me recuerda mucho a las sugerencias que hace la shell <strong>fish</strong>.</p>
+<h2 id="instalaci-n-debian-ubuntu-raspberry-os">Instalación debian, ubuntu, Raspberry OS,...</h2>
+<p>El método mas sencillo de instalación, es clonando el repositorio del proyecto y precargar este plugin al arrancar la terminal, desde el archivo de configuración <strong>.zshcr</strong></p>
+<h3 id="clonar-el-repositorio">Clonar el repositorio</h3>
+<p>Vamos a clonar el repositorio, en la carpeta local <strong>~/.zsh/zsh-autosuggestions</strong>:</p>
+<p><code>git clone 5 ~/.zsh/zsh-autosuggestions</code></p>
+<h3 id="a-adir-en-el-archivo-de-configuraci-n">Añadir en el archivo de configuración</h3>
+<p>Editamos con nano:</p>
+<p><code>nano ~/.zshrc</code></p>
+<p>Añadimos esta línea:</p>
+<p><code>source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh</code></p>
+<p>Reiniciamos nuestra terminal y ya podemos disfrutar del nuevo plugin</p>
+<h2 id="instalaci-n-arch-manjaro">Instalación Arch, Manjaro,...</h2>
+<p>Instalamos el siguiente paquete:</p>
 <pre><code>
-wget -q -O- "FEED" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+sudo pacman -S zsh-autosuggestions
 </code></pre>
-<p>Como ejemplo, te dejo el Podcast de uGeek 😜</p>
+<h3 id="a-adir-en-el-archivo-de-configuraci-n">Añadir en el archivo de configuración</h3>
+<p>Editamos con nano:</p>
 <pre><code>
-wget -q -O- "http://feeds.feedburner.com/ugeek" | grep -o '&lt;enclosure url="[^"]*' | grep -o '[^"]*$' | xargs wget -c
+nano ~/.zshrc
 </code></pre>
-<p>A disfrutar con la magia de la terminal...</p>
-<p>Publicado por Angel el Friday 28 December del 2018</p>
+<p>Añadimos esta línea:</p>
+<pre><code>
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+</code></pre>
+<p>Reiniciamos nuestra terminal y ya podemos disfrutar del nuevo plugin</p>
+<h2 id="fuente">Fuente</h2>
+<ul>
+<li><a href="https://github.com/zsh-users/zsh-autosuggestions">https://github.com/zsh-users/zsh-autosuggestions</a></li>
+</ul>
+<p>Publicado por Angel el Tuesday 23 July del 2019</p>
 <p>También te puede interesar:</p>
 <ul>
-<li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html">gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-14-bard-de-google-para-terminal.html">Bard de google para terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-05-04-edge-gpt-bingchat-con-chatgpt4-en-mi-terminal.html">Edge GPT. BingChat con ChatGPT4 en mi terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html">Geolocalización de una ip en la terminal y offline</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-19-lanzar-navegadores-en-modo-privado-o-incognito.html">Lanzar navegadores en modo privado o incógnito</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-03-11-lxterminal-como-guake-en-i3wm.html">lxterminal como guake en i3wm</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-20-zsh-en-manjaro.html">ZSH en Manjaro</a></li>
-<li><a href="https://ugeek.github.io/blog/post/2023-01-14-cerrando-ventanas-con-wmctrl.html">Cerrando ventanas con wmctrl</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-17-como-cambiar-la-contrasena-de-usuario-en-linux.html">Cómo cambiar la contraseña de usuario en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-03-06-paquetes-instalados-en-tu-sistema.html">Paquetes instalados en tu sistema</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-06-comando-sudo-y-su.html">Comando sudo y su</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-05-docker-ctop-el-portanier-de-terminal.html">Docker: Ctop. El portanier de terminal</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2021-01-04-montar-un-directorio-en-otro-directorio.html">Montar un directorio en otro directorio</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html">Crear enlaces simbólicos a otros directorios o archivos</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-14-procesos-que-consumen-mas-cpu-y-ram-en-linux.html">Procesos que consumen más CPU y RAM en Linux</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-08-12-compilando-emacs-27-ubuntu-debian-raspbian.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li>
+<li><a href="https://ugeek.github.io/blog/post/2020-04-07-el-htop-2-0-desarrollado-en-bash-bashtop.html">El htop 2.0 desarrollado en bash. bashtop</a></li>
 </ul>
 <br><br><br>
 <p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>

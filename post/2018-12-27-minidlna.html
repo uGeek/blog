@@ -1,134 +1,96 @@
 <head>
-<title> minidlna. uGeek Blog </title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<div id="logo"><a href="https://ugeek.github.io"><img src="../icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek - Blog de Tecnología">
-
-<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32" />
-<link rel="icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" />
+<title>   minidlna. uGeek Blog </title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="icon" href="https://ugeek.github.io/icon/ugeek.png" type="image/png" sizes="32x32">
+<div id="logo"><a href="https://ugeek.github.io/blog"><img src="https://ugeek.github.io/blog/icon/ugeek.png" style="width: 90px; height: 90px; display: block;" alt="uGeek Logo"></a></div> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
+<link rel="shortcut icon" href="https://ugeek.github.io/bloghttps://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon" /> 
+<link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek.png" /> 
 <meta property="og:locale" content="es_ES" />
-
-
-
-<meta name="robots" content="index, follow">
-<meta name="twitter:site" content="@ugeekpodcast" />
-<meta name="twitter:card" content="summary_large_image" />
-<link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/" />
-
-
-<meta name="author" content="Angel">
+<meta name="robots" content="index, follow"> 
+<meta name="twitter:site" content="@ugeekpodcast" /> 
+<meta name="twitter:card" content="summary_large_image" /> 
+<link rel="alternate" type="application/rss+xml" title="uGeek Blog " href="https://ugeek.github.io/blog/feed/" />
+<meta name="author" content=""> 
 <meta name="description" content="DLNA es un servidor multimedia" />
-
-
-<meta property="og:site_name" content="uGeek Blog "/>
+<meta property="og:site_name" content="uGeek Blog "/> 
 <meta property="og:type" content="article" /> 
-<meta property="og:title" content=" minidlna" />
-<meta property="og:description" content="DLNA es un servidor multimedia" />
-<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dlna.png" />
+<meta property="og:title" content="   minidlna" /> 
+<meta property="og:description" content="DLNA es un servidor multimedia" /> 
+<meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dlna.png" /> 
 <meta property="og:url" content="https://ugeek.github.io/blog/post/2018-12-27-minidlna.html" />
-
-<meta name="twitter:title" content=" minidlna" />
-<meta name="twitter:description" content="DLNA es un servidor multimedia" />
+<meta name="twitter:title" content="   minidlna" /> 
+<meta name="twitter:description" content="DLNA es un servidor multimedia" /> 
 <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dlna.png" />
-
-
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/feed.xml" title="uGeek - Blog de Tecnología">
-
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title="uGeek Blog ">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date())
-gtag("config", "");
-</script>
-
-
-<link type="text/css" rel="stylesheet" href="../css/search.css"></link>
-<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/tipuesearch_set.js"></script>
-<script type="text/javascript" src="../content.js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", ""); </script>
+<link type="text/css" rel="stylesheet" href="../css/search.css"></link> 
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /> 
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/tipuesearch_set.js"></script> 
+<script type="text/javascript" src="../content.js"></script> 
 <script type="text/javascript" src="../js/tipuesearch.min.js"></script>
-
-
 </head>
-
 <br><br><br><br><br><br><br><br><br>
-
- <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/> <div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="../icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="../icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
-
-
-<!-- THIS IS THE SEARCH BOX -->
-
-
-<input type="text" name="q" placeholder="buscar..."  id="tipue_search_input"  required>
-<!-- <input type="text" name="q" id="tipue_search_input" autocomplete="off" required> -->
-
-<!-- THIS IS WHERE YOU DISPLAY THE SEARCH RESULTS -->
-<div align="center" id="tipue_search_content"></div>
-<!-- THIS JAVASCRIPT CODE DISPLAY THE SEARCH RESULTS -->
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/><div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a><div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="../icon/podcast.png"  width="25" height="25" alt="podcast"></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="../icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://github.com/ugeek"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;<a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="../icon/docker.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div><div id="menu"><a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
 <script>
-
-$(document).ready(function() {
-$("#tipue_search_input").tipuesearch();
-});
-
+$(document).ready(function() { $("#tipue_search_input").tipuesearch(); });
 </script>
-
-<!-- END BOX -->
-
-
-
-
-<h1 id="minidlna-1" title="minidlna" data-export_file_name="minidlna" data-description="DLNA es un servidor multimedia" data-export_date="2018-12-27 21:00 2019-02-24 2019-03-24" data-category="servidor" data-tag="servidor,raspberry,minidlna,multimedia" data-image="./images-blog/dlna.png">minidlna</h1>
-<h5>Tiempo estimado de lectura: 4 minutos. 472 palabras.    <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<h1 id="minidlna">minidlna</h1>
 <p>DLNA es un servidor multimedia (video, audio y fotos) muy ligero, ya que simplemente hará una transferencia del archivo solicitado.</p>
-<center>
-<p><img src="../images-blog/dlna.png" /></p>
-</center>
-<h2 id="instalación">Instalación</h2>
+<p><a href="./images-blog/dlna.png">./images-blog/dlna.png</a></p>
+<h2 id="instalaci-n">Instalación</h2>
 <p><code>sudo apt install minidlna</code></p>
-<h2 id="archivo-de-configuración-del-servicio">Archivo de configuración del servicio</h2>
+<h2 id="archivo-de-configuraci-n-del-servicio">Archivo de configuración del servicio</h2>
 <p><code>sudo nano /etc/minidlna.conf</code></p>
 <p>Añadiremos al inicio del archivo de configuración, la ruta donde están nuestros archivos multimedia. Ejem:</p>
-<pre><code>media_dir=V,/media/Peliculas
+<pre><code>
+media_dir=V,/media/Peliculas
 media_dir=P,/media/Fotos
 media_dir=A,/media/Musica
 </code></pre>
 <p>Si nuestro carpeta contiene, por ejemplo, vídeos y fotos, especificaremos de la siguiente manera:</p>
-<p><code>media_dir=PV,/media/Peliculas_y_ Fotos</code></p>
+<p><code>media_dir</code>PV,<em>media</em>Peliculas<u>y</u> Fotos=</p>
 <p>Si tenemos nuestros archivos multimedia en dos o más carpetas, podemos especificarlo así:</p>
-<pre><code>media_dir=A,~/Música
+<pre><code>
+media_dir=A,~/Música
 media_dir=A,/media/Musica
 </code></pre>
 <h2 id="descubrir-el-servidor-en-nuestra-red">Descubrir el servidor en nuestra Red</h2>
 <p>Quitaremos la "#" delante de inotify y pondremos <strong>yes</strong>.</p>
-<pre><code># Automatic discovery of new files in the media_dir directory. 
+<pre><code>
+# Automatic discovery of new files in the media_dir directory. 
 inotify=yes
 </code></pre>
 <h2 id="poner-nombre-a-nuestro-servidor">Poner nombre a nuestro servidor</h2>
 <p>Aquí podremos poner nombre a nuestro servidor:</p>
-<pre><code># Name that the DLNA server presents to clients.
+<pre><code>
+# Name that the DLNA server presents to clients.
 friendly_name=Mi Servidor DLNA
 </code></pre>
-<h2 id="añadir-nuevo-contenido-multimedia">Añadir nuevo contenido Multimedia</h2>
+<h2 id="a-adir-nuevo-contenido-multimedia">Añadir nuevo contenido Multimedia </h2>
 <p>Para que todos los nuevos archivos multimedia que añadamos, sean añadidos de forma automática a nuestro servidor, deberemos tener habilitada esta opción en el archivo de configuración:</p>
-<pre><code># Automatic discovery of new files in the media_dir directory.
+<pre><code>
+# Automatic discovery of new files in the media_dir directory.
 inotify=yes
 </code></pre>
-<h2 id="crear-nueva-base-de-datos">Crear nueva base de datos</h2>
+<h2 id="crear-nueva-base-de-datos"> Crear nueva base de datos</h2>
 <p>Para crear una nueva base de datos en nuestro servidor y eliminar la actual, por ejemplo, en el caso que cambiemos las carpetas donde esté nuestro contenido multimedia:</p>
-<p>Borraremos la base de datos:</p>
+<p>Borraremos la base de datos:  </p>
 <p><code>sudo rm -f /var/cache/minidlna/files.db</code></p>
 <p>Reiniciaremos el servidor</p>
 <p><code>sudo service minidlna restart</code></p>
 <p>Como has podido ver en este paso anterior, la base de datos así como las portadas de los archivos multimedia, están defecto en la carpeta <strong>/var/cache/minidlna</strong>. Pero en el archivo de configuración, podemos cambiar la ruta. Para ello desmarcaremos la almohadilla y especificaremos la ruta deseada.</p>
-<pre><code># Path to the directory that should hold the database and album art cache.                                                                  
+<pre><code>
+# Path to the directory that should hold the database and album art cache.                                                                  
 #db_dir=/var/cache/minidlna  
 </code></pre>
 <h2 id="iniciar-detener-restaurar-servicio">Iniciar, Detener, Restaurar servicio</h2>
@@ -151,9 +113,7 @@ inotify=yes
 <li>TCP = 8200</li>
 <li>UDP = 1900</li>
 </ul>
-<br>
-<p>Publicado por Angel el Thursday 27 December del 2018 y <strong>actualizado</strong> el Sunday 24 February del 2019</p>
-<br><br> 
+<p>Publicado por Angel el Thursday 27 December del 2018</p>
 <p>También te puede interesar:</p>
 <ul>
 <li><a href="https://ugeek.github.io/blog/post/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed!.html">SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</a></li>
@@ -167,4 +127,7 @@ inotify=yes
 <li><a href="https://ugeek.github.io/blog/post/2023-01-27-ip-estatica-o-fija-en-manjaro.html">IP estática o fija en Manjaro</a></li>
 <li><a href="https://ugeek.github.io/blog/post/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li>
 </ul>
-<br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p><p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
+<br><br><br>
+<p style="text-align: center;">Powered by <a href="https://github.com/ugeek/org-bash-blog" target="_blank" rel="noopener">org-bash-blog</a></p>
+<p style="text-align: center;">Written in OrgMode with Emacs and converted to HTML with Pandoc</p>
+<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
