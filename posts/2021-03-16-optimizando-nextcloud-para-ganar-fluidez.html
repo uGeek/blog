@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Optimizando Nextcloud para ganar fluidez</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="He estado visitando muchas páginas para optimizar Nextcloud y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez. Como he aconsejado muchas veces, es importante no instalar aplicaciones y opciones que no utilices. Sigue paso a paso estos consejos y si hay alguna opción que no deseas deshabilitar, déjala y disfruta de Nextcloud. Deshabilita los espacios de trabajo enriquecidos Vamos a deshabilitar la opción, que en cada directorio salga previsualizado un archivo Readme.md. Esto puede relentizar la instancia. docker exec --user www-data nextcloud php occ config:app:set text workspace_available --value=0 Deshabilitar los flujos de usuarios Los flujos pueden tener un impacto considerable en el rendimiento de un sistema y es posible que no desees dar a los usuarios la capacidad de definir sus propios flujos. docker exec --user www-data nextcloud php occ config:app:set workflowengine user_scope_disabled --value yes Desactivar la aplicación de fotos...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Optimizando Nextcloud para ganar fluidez">
+    <meta property="og:description" content="He estado visitando muchas páginas para optimizar Nextcloud y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez. Como he aconsejado muchas veces, es importante no instalar aplicaciones y opciones que no utilices. Sigue paso a paso estos consejos y si hay alguna opción que no deseas deshabilitar, déjala y disfruta de Nextcloud. Deshabilita los espacios de trabajo enriquecidos Vamos a deshabilitar la opción, que en cada directorio salga previsualizado un archivo Readme.md. Esto puede relentizar la instancia. docker exec --user www-data nextcloud php occ config:app:set text workspace_available --value=0 Deshabilitar los flujos de usuarios Los flujos pueden tener un impacto considerable en el rendimiento de un sistema y es posible que no desees dar a los usuarios la capacidad de definir sus propios flujos. docker exec --user www-data nextcloud php occ config:app:set workflowengine user_scope_disabled --value yes Desactivar la aplicación de fotos...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud.png">
+    <meta property="og:url" content="optimizando-nextcloud-para-ganar-fluidez">
+    <meta name="twitter:title" content="Optimizando Nextcloud para ganar fluidez">
+    <meta name="twitter:description" content="He estado visitando muchas páginas para optimizar Nextcloud y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez. Como he aconsejado muchas veces, es importante no instalar aplicaciones y opciones que no utilices. Sigue paso a paso estos consejos y si hay alguna opción que no deseas deshabilitar, déjala y disfruta de Nextcloud. Deshabilita los espacios de trabajo enriquecidos Vamos a deshabilitar la opción, que en cada directorio salga previsualizado un archivo Readme.md. Esto puede relentizar la instancia. docker exec --user www-data nextcloud php occ config:app:set text workspace_available --value=0 Deshabilitar los flujos de usuarios Los flujos pueden tener un impacto considerable en el rendimiento de un sistema y es posible que no desees dar a los usuarios la capacidad de definir sus propios flujos. docker exec --user www-data nextcloud php occ config:app:set workflowengine user_scope_disabled --value yes Desactivar la aplicación de fotos...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Optimizando Nextcloud para ganar fluidez</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 488 palabras. <a href="../categories/nextcloud.html">nextcloud</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>He estado visitando muchas páginas para optimizar <strong>Nextcloud</strong> y la verdad es que con estos pequeños truquillos, vas a aumentar muchísimo la velocidad y ganar mucha fluidez.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/nextcloud.png" alt=""></p>
+<p>Como he aconsejado muchas veces, es importante no instalar aplicaciones y opciones que no utilices. Sigue paso a paso estos consejos y si hay alguna opción que no deseas deshabilitar, déjala y disfruta de <strong>Nextcloud</strong>.</p>
+<h2>Deshabilita los espacios de trabajo enriquecidos</h2>
+<p>Vamos a deshabilitar la opción, que en cada directorio salga previsualizado un archivo <strong>Readme.md</strong>. Esto puede relentizar la instancia.</p>
+<pre><code>
+docker exec --user www-data nextcloud php occ config:app:set text workspace_available --value=0
+</code></pre>
+<h2>Deshabilitar los flujos de usuarios</h2>
+<p>Los flujos pueden tener un impacto considerable en el rendimiento de un sistema y es posible que no desees dar a los usuarios la capacidad de definir sus propios flujos.</p>
+<pre><code>
+docker exec --user www-data nextcloud php occ config:app:set workflowengine user_scope_disabled --value yes
+</code></pre>
+<h2>Desactivar la aplicación de fotos</h2>
+<p>Debido a que esta aplicación consume mucha memoria y CPU, es preferible deshabilitarla si no la utilizas.</p>
+<pre><code>
+docker exec --user www-data nextcloud php occ app:disable photos
+</code></pre>
+<h2>Optimizar las vistas previas</h2>
+<p>Primero, instalaremos la aplicación <strong>previewgenerator</strong>:</p>
+<pre><code>
+docker exec --user www-data nextcloud php occ app:install previewgenerator
+</code></pre>
+<p>Ahora cambiaremos las miniaturas en la previsualización:</p>
+<pre><code>
+docker exec --user www-data nextcloud php occ config:app:set previewgenerator squareSizes --value="32 256"
+docker exec --user www-data nextcloud php occ config:app:set previewgenerator widthSizes  --value="256 384"
+docker exec --user www-data nextcloud php occ config:app:set previewgenerator heightSizes --value="256"
+docker exec --user www-data nextcloud php occ config:system:set preview_max_x --value 512
+docker exec --user www-data nextcloud php occ config:system:set preview_max_y --value 512
+docker exec --user www-data nextcloud php occ config:system:set jpeg_quality --value 60
+docker exec --user www-data nextcloud php occ config:app:set preview jpeg_quality --value="60"
+</code></pre>
+<p>Con estos comandos, vamos a cambiar el tamaño de las imágenes previsualizadas a en el explorador de archivos de <strong>4096</strong> pixels por defecto a <strong>512</strong>.</p>
+<p>De este modo bajará el consumo de la <strong>CPU</strong> y además la previsualización será más fluida.</p>
+<p>Estos cambiós se verán reflejados en el archivos de configuración de <strong>Nextcloud</strong>, <strong>config.php</strong>.</p>
+<pre><code>
+'preview_max_x' =&gt; 4096,
+'preview_max_y' =&gt; 4096,
+
+Cambiará a:
+
+'preview_max_x' =&gt; 512,
+'preview_max_y' =&gt; 512,
+</code></pre>
+<p>Reescanearemos todos los archivos</p>
+<pre><code>
+docker exec --user www-data nextcloud php occ files:scan-app-data
+</code></pre>
+<p>Regeneramos todas las vistas previas. Este proceso puede llevar mucho tiempo dependiendo el número de imágenes tengas. Utiliza un proceso en segundo plano como <strong>screen</strong>.</p>
+<pre><code>
+docker exec --user www-data nextcloud php occ preview:generate-all -v
+</code></pre>
+<p>Programa una tarea diaria para generar previamente las vistas previas:</p>
+<pre><code>
+docker exec --user www-data nextcloud php occ preview:pre-generate
+</code></pre>
+<p>Yo he añadido en cron:</p>
+<pre><code>
+45 3 * * * docker exec --user www-data nextcloud php occ preview:pre-generate
+</code></pre>
+<h2>Cron</h2>
+<p>Generamos con crontab una tarea que se ejecute cada cierto tiempo:</p>
+<pre><code>
+docker exec --user www-data nextcloud  php -f /var/www/html/cron.php
+</code></pre>
+<h3>Programa con crontab</h3>
+<p>En la maquina host, añadiremos el siguiente cron:</p>
+<pre><code>
+*/5  * * * * docker exec --user www-data nextcloud  php -f /var/www/html/cron.php
+</code></pre>
+<p>Ahora cada 5 minutos, ejecutará <strong>cron.php</strong>.</p>
+<h2>Fuentes</h2>
+<ul>
+<li><p><a href="https://sohka.eu/wiki:nc-optimizations">https://sohka.eu/wiki:nc-optimizations</a></p>
+</li>
+<li><p><a href="https://wiki.calculate-linux.org/working">https://wiki.calculate-linux.org/working</a></p>
+</li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 16 de marzo de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-05-11</em> - <a href="../posts/2022-05-11-nextcloud-services-notificaciones-desde-nextcloud.html">Nextcloud services. Notificaciones desde Nextcloud</a></li><li><em>2022-05-10</em> - <a href="../posts/2022-05-10-instalacion-de-nextcloud-24-con-docker-oficial.html">Instalación de Nextcloud 24 con docker Oficial</a></li><li><em>2021-03-25</em> - <a href="../posts/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html">nncli. Notas desde el terminal con Nextcloud Notes</a></li><li><em>2021-03-09</em> - <a href="../posts/2021-03-09-controlando-la-papelera-de-nextcloud.html">Controlando la papelera de Nextcloud</a></li><li><em>2021-03-02</em> - <a href="../posts/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html">Trabajos en segundo plano de Nextcloud y ownCloud</a></li><li><em>2021-02-25</em> - <a href="../posts/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

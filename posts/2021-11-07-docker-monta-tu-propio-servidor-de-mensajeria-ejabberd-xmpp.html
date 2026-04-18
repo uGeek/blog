@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP. Voy a explicaros como instalar el docker del servidor ejabberd que creé y habilitar los certificados para podernos conectar fuera de nuestra red local. En este artículo explico como crearlo para Raspberry, pero este método también sirve para arquitectura AMD64 y utilizando del docker official. Crea docker para Raspberri Pi docker run -ti -h xmpp --name xmpp -p 5222:5222 -p 5280:5280 -d ugeek/ejabberd:pi El puerto 5222, es el encargado de mantener la comunicación de los clientes con el servidor. Es necesario tener abierto mínimo ese puerto en tu router. Docker Compose A mi me gusta más utilizar docker-compose version: '3' services: xmpp: container_name: xmpp image: 'ugeek/ejabberd:pi' ports: - '5222:5222' - '5280:5280' hostname: xmpp tty: true Edita el nombre del servidor Para entrar dentro del contenedor y editar el nombre del servidor, utilizaremos vi, que ya viene instalado...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Docker. Monta tu propio servidor de mensajería ejabberd - xmpp">
+    <meta property="og:description" content="De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP. Voy a explicaros como instalar el docker del servidor ejabberd que creé y habilitar los certificados para podernos conectar fuera de nuestra red local. En este artículo explico como crearlo para Raspberry, pero este método también sirve para arquitectura AMD64 y utilizando del docker official. Crea docker para Raspberri Pi docker run -ti -h xmpp --name xmpp -p 5222:5222 -p 5280:5280 -d ugeek/ejabberd:pi El puerto 5222, es el encargado de mantener la comunicación de los clientes con el servidor. Es necesario tener abierto mínimo ese puerto en tu router. Docker Compose A mi me gusta más utilizar docker-compose version: '3' services: xmpp: container_name: xmpp image: 'ugeek/ejabberd:pi' ports: - '5222:5222' - '5280:5280' hostname: xmpp tty: true Edita el nombre del servidor Para entrar dentro del contenedor y editar el nombre del servidor, utilizaremos vi, que ya viene instalado...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ejabberd.png">
+    <meta property="og:url" content="docker-monta-tu-propio-servidor-de-mensajeria-ejabberd-xmpp">
+    <meta name="twitter:title" content="Docker. Monta tu propio servidor de mensajería ejabberd - xmpp">
+    <meta name="twitter:description" content="De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP. Voy a explicaros como instalar el docker del servidor ejabberd que creé y habilitar los certificados para podernos conectar fuera de nuestra red local. En este artículo explico como crearlo para Raspberry, pero este método también sirve para arquitectura AMD64 y utilizando del docker official. Crea docker para Raspberri Pi docker run -ti -h xmpp --name xmpp -p 5222:5222 -p 5280:5280 -d ugeek/ejabberd:pi El puerto 5222, es el encargado de mantener la comunicación de los clientes con el servidor. Es necesario tener abierto mínimo ese puerto en tu router. Docker Compose A mi me gusta más utilizar docker-compose version: '3' services: xmpp: container_name: xmpp image: 'ugeek/ejabberd:pi' ports: - '5222:5222' - '5280:5280' hostname: xmpp tty: true Edita el nombre del servidor Para entrar dentro del contenedor y editar el nombre del servidor, utilizaremos vi, que ya viene instalado...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ejabberd.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Docker. Monta tu propio servidor de mensajería ejabberd - xmpp</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 5 min. 854 palabras. <a href="../categories/ejabberd.html">ejabberd</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>De todas las aplicaciones de mensajería, ya sabéis que mi favorita es XMPP.</p>
+<p>Voy a explicaros como instalar el docker del servidor ejabberd que creé y habilitar los certificados para podernos conectar fuera de nuestra red local.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/ejabberd.png" alt=""></p>
+<p>En este artículo explico como crearlo para Raspberry, pero este método también sirve para arquitectura AMD64 y utilizando del docker official.</p>
+<h2>Crea docker para Raspberri Pi</h2>
+<pre><code>
+docker run -ti -h xmpp --name xmpp -p 5222:5222 -p 5280:5280 -d ugeek/ejabberd:pi
+</code></pre>
+<p>El puerto 5222, es el encargado de mantener la comunicación de los clientes con el servidor. Es necesario tener abierto mínimo ese puerto en tu router.</p>
+<h3>Docker Compose</h3>
+<p>A mi me gusta más utilizar docker-compose</p>
+<pre><code>
+    version: '3'
+    services:
+      xmpp:
+        container_name: xmpp
+        image: 'ugeek/ejabberd:pi'
+        ports:
+          - '5222:5222'
+          - '5280:5280'
+        hostname: xmpp
+        tty: true
+</code></pre>
+<h3>Edita el nombre del servidor</h3>
+<p>Para entrar dentro del contenedor y editar el nombre del servidor, utilizaremos <strong>vi</strong>, que ya viene instalado por defecto en el propio docker.</p>
+<pre><code>
+docker exec -it xmpp vi /etc/ejabberd/ejabberd.yml
+</code></pre>
+<p>En el archivo <strong>ejabberd.yml</strong>, en las primeras líneas, encontraremos el apartado <strong>hosts</strong> para editar el nombre del servidor.</p>
+<p>Podemos utilizar varios nombres de servidor.</p>
+<pre><code>
+## hosts: Domains served by ejabberd.
+## You can define one or several, for example:
+## hosts:
+##   - "example.net"
+##   - "example.com"
+##   - "example.org"
+hosts:
+- "midominio.duckdns.org"
+</code></pre>
+<p>En este ejemplo de configuración, he utilizado el nombre de dominio <code>midominio.duckdns.org</code>. Esto quiere decir que los usuarios que estarán registrados en el servidor, utilizan de nombre de usuario, por ejemplo:</p>
+<ul>
+<li><a href="mailto:angel@ugeek.duckdns.org">angel@midominio.duckdns.org</a></li>
+</ul>
+<h3>Reinicia el servidor</h3>
+<pre><code>
+docker exec -it xmpp service ejabberd restart
+</code></pre>
+<h2>Comandos</h2>
+<p>Ejabberd utiliza en su versión de terminal para admistrar el servidor el comando:</p>
+<pre><code>
+ejabberdctl
+</code></pre>
+<h3>Crea un usuario y su contraseña</h3>
+<pre><code>
+docker exec -it xmpp ejabberdctl register angel midominio.duckdns.org "contraseña"
+</code></pre>
+<h3>Cambia la contraseña de un usuario</h3>
+<pre><code>
+docker exec -it xmpp ejabberdctl change_password angel midominio.duckdns.org "contraseña"
+</code></pre>
+<h3>Lista todos los usuarios de un host</h3>
+<p>Hay que especificar al final el nombre del servidor. Existe la posibilidad que el servidor tenga dos nombres</p>
+<pre><code>
+docker exec -it xmpp ejabberdctl registered_users midominio.duckdns.org
+</code></pre>
+<h3>Borrar Usuarios</h3>
+<pre><code>
+docker exec -it xmpp ejabberdctl unregister angel midominio.duckdns.org
+</code></pre>
+<h3>Administrador</h3>
+<p>Editamos el archivo ejabberd.yml y escribimos el nombre de administrador o administradores. En este caso <strong>angel</strong>.</p>
+<pre><code>
+## Full path to a script that generates the image.
+## captcha_cmd: "/usr/share/ejabberd/captcha.sh"
+
+acl:
+admin:
+user:
+- "angel"
+</code></pre>
+<h3>Acceder a la web de administración</h3>
+<p>Para acceder a la página web de administración nos conectaremos del siguiente modo a la url:</p>
+<ul>
+<li><a href="https://ip_server:5280/admin/">https://ip_server:5280/admin/</a></li>
+<li>usuario: <a href="mailto:angel@midominio.duckdns.org">angel@midominio.duckdns.org</a></li>
+<li>password: contraseña</li>
+</ul>
+<h3>Iniciar servidor</h3>
+<pre><code>
+docker exec -it xmpp service ejabberd start
+</code></pre>
+<h3>Usuarios conectados al servidor</h3>
+<pre><code>
+docker exec -it xmpp ejabberdctl connected_users
+</code></pre>
+<h3>logs</h3>
+<p>Para ver los logs, ejecutariamos el siguiente comando</p>
+<pre><code>
+docker exec -it xmpp tail -f /var/log/ejabberd/ejabberd.log
+</code></pre>
+<h2>Certificados</h2>
+<p>Para poder abrir tu servidor ejabberd a la red de un modo seguro, necesitamos que generar el certificado TLS para que nuestro usuario, contraseña y mensajes viajen cifrados.</p>
+<p>Para generarlo voy a utilizar <strong>caddy</strong> o <strong>traefik</strong>. Voy a montar un servidor <strong>nginx</strong> con el dominio <code>midominio.duckdns.org</code> y como ambos servicios crean el certificado automáticamente, ya tendremos el primer paso hecho, conseguir el certificado SSL para el servidor web.</p>
+<p>Ahora vamos combertirlo en ejabberd.pem para utilizarlo con ejabberd con TLS.</p>
+<h3>Certificado con caddy</h3>
+<p>Con Caddy, en el directorio de configuración (caddy/data/caddy/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/midominio.duckdns.org), encontraremos dos archivos. El .key y .crt.</p>
+<p>El archivo crt es el certificado que contiene la llave pública de la url y key contiene la llave privada.</p>
+<p>Para fusionarlos y crear el archivo .pem, utilizaremos el comando <strong>cat</strong>.</p>
+<p><strong>Primero irá el archivo .key y despues el .crt</strong></p>
+<pre><code>
+cat midominio.duckdns.org.key  midominio.duckdns.org.crt &gt; ejabberd.pem
+</code></pre>
+<p>Para que ejabberd reconozca el certificado, edita el archivo ejabberd.pem y elmina el último bloque desde <code>-----BEGIN CERTIFICATE-----</code> a <code>-----END CERTIFICATE-----</code>.</p>
+<p>Copiamos el certificado en el servidor con docker</p>
+<pre><code>
+docker cp ejabberd.pem  xmpp:/etc/ejabberd
+</code></pre>
+<p>Reiniciamos el servidor</p>
+<pre><code>
+docker exec -it xmpp service ejabberd restart
+</code></pre>
+<h3>Certificado con traefik</h3>
+<p>Si utilizas traefik, lo haremos del siguiente modo:</p>
+<pre><code>
+    version: '3'
+    services:
+       web:
+        image: nginx:alpine
+        volumes:
+          - ./templates:/etc/nginx/templates
+        ports:
+          - "8081:80"
+        environment:
+          - NGINX_HOST=foobar.com
+          - NGINX_PORT=80
+        networks:
+          - web
+        labels:
+          - traefik.backend=web                                                                                               
+          - traefik.frontend.rule=Host:midominio.duckdns.org
+          - traefik.docker.network=web
+          - traefik.port=8081
+          - traefik.enable=true
+</code></pre>
+<p>El docker-compose es un servidor nginx basado en un Alpine Linux. Cuando levantemos el contenedor, traefik se encargará de crear los certificados Let's Encrypt para la url: <code>midominio.duckdns.org</code></p>
+<p>Necesitamos las claves públicas y privadas, pero Traefik solo crea un archivo <strong>acme.json.</strong> Necesitariamos exporta las llaves y para ello utilizaremos un docker:</p>
+<pre><code>
+docker run --name extractor -d -v ~/docker/traefik/:/app/data ~/docker/traefik/extractor/certs:/app/certs ugeek/traefik-certificate-extractor:arm
+</code></pre>
+<p>Para exportar todo los certificados del archivo acme.json de traefik a archivos .pem y ejecuta en la ruta del certificado el comando anterior.</p>
+<p>El docker para exportar los certificados, está en: <a href="https://github.com/docker-projects/docker-traefik-certificate-extractor">https://github.com/docker-projects/docker-traefik-certificate-extractor</a></p>
+<p>Una vez que tenga el certificado, puede fusionar las claves públicas y privadas en el archivo que espera ejabberd:</p>
+<pre><code>
+cat privkey.pem fullchain.pem &gt; ejabberd.pem
+</code></pre>
+<p>Copiamos el certificado en el servidor con docker</p>
+<pre><code>
+docker cp ejabberd.pem  xmpp:/etc/ejabberd
+</code></pre>
+<p>Reiniciamos el servidor</p>
+<pre><code>
+docker exec -it xmpp service ejabberd restart
+</code></pre>
+<h2>Reiniciar con cron</h2>
+<p>Es interesante hacer un reinicio del servidor de tanto en tanto, por si se produce algún cuelgue en algún archivo sin entregar</p>
+<pre><code>
+00 4 * * * docker exec -it xmpp service ejabberd restart
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 07 de noviembre de 2021</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

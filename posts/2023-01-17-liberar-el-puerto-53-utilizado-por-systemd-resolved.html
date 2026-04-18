@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liberar el puerto 53 utilizado por systemd-resolved</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu tiene una escucha resuelta por systemd en el puerto 53 de forma predeterminada. En caso de que desees ejecutar tu propio servidor DNS (Como instalar blocky, AdguardHome, PiHole,...), no podrás ya que el puerto 53 ya está en uso, por lo que obtendrá un error. Comprobar puertos en uso Vamos a comprobar los puertos utilizados y confirmar que el puerto 53 está ocupado. sudo ss -tulwn | grep LISTEN Vamos a ver que sigunifican las opciones: -t Mostrar solo sockets TCP en Linux -u Mostrar solo sockets UDP en Linux -l Mostrar tomas de escucha (por ejemplo, el puerto TCP 22 es abierto por el servidor SSHD) -p Lista el nombre del proceso que abrió el socket -n No resuelve...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Liberar el puerto 53 utilizado por systemd-resolved">
+    <meta property="og:description" content="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu tiene una escucha resuelta por systemd en el puerto 53 de forma predeterminada. En caso de que desees ejecutar tu propio servidor DNS (Como instalar blocky, AdguardHome, PiHole,...), no podrás ya que el puerto 53 ya está en uso, por lo que obtendrá un error. Comprobar puertos en uso Vamos a comprobar los puertos utilizados y confirmar que el puerto 53 está ocupado. sudo ss -tulwn | grep LISTEN Vamos a ver que sigunifican las opciones: -t Mostrar solo sockets TCP en Linux -u Mostrar solo sockets UDP en Linux -l Mostrar tomas de escucha (por ejemplo, el puerto TCP 22 es abierto por el servidor SSHD) -p Lista el nombre del proceso que abrió el socket -n No resuelve...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="liberar-el-puerto-53-utilizado-por-systemd-resolved">
+    <meta name="twitter:title" content="Liberar el puerto 53 utilizado por systemd-resolved">
+    <meta name="twitter:description" content="Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu tiene una escucha resuelta por systemd en el puerto 53 de forma predeterminada. En caso de que desees ejecutar tu propio servidor DNS (Como instalar blocky, AdguardHome, PiHole,...), no podrás ya que el puerto 53 ya está en uso, por lo que obtendrá un error. Comprobar puertos en uso Vamos a comprobar los puertos utilizados y confirmar que el puerto 53 está ocupado. sudo ss -tulwn | grep LISTEN Vamos a ver que sigunifican las opciones: -t Mostrar solo sockets TCP en Linux -u Mostrar solo sockets UDP en Linux -l Mostrar tomas de escucha (por ejemplo, el puerto TCP 22 es abierto por el servidor SSHD) -p Lista el nombre del proceso que abrió el socket -n No resuelve...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Liberar el puerto 53 utilizado por systemd-resolved</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 402 palabras. <a href="../categories/manjaro.html">manjaro</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Después de instalar Manjaro Minimal, he decidido montar varios Dockers entre ellos blocky. blocky como todos los servidores DNS, utiliza puerto 53. Pero Manjaro minimal igual que algunos servidores Ubuntu tiene una escucha resuelta por systemd en el puerto 53 de forma predeterminada. En caso de que desees ejecutar tu propio servidor DNS (Como instalar blocky, AdguardHome, PiHole,...), no podrás ya que el puerto 53 ya está en uso, por lo que obtendrá un error.</p>
+<h2>Comprobar puertos en uso</h2>
+<p>Vamos a comprobar los puertos utilizados y confirmar que el puerto 53 está ocupado.</p>
+<pre><code>
+sudo ss -tulwn | grep LISTEN
+</code></pre>
+<p>Vamos a ver que sigunifican las opciones:</p>
+<ul>
+<li><code>-t</code> Mostrar solo sockets TCP en Linux</li>
+<li><code>-u</code> Mostrar solo sockets UDP en Linux</li>
+<li><code>-l</code> Mostrar tomas de escucha (por ejemplo, el puerto TCP 22 es abierto por el servidor SSHD)</li>
+<li><code>-p</code> Lista el nombre del proceso que abrió el socket</li>
+<li><code>-n</code> No resuelve los nombres de servicio</li>
+</ul>
+<p>Fuente: <a href="https://esgeeks.com/abrir-cerrar-puertos-linux/">https://esgeeks.com/abrir-cerrar-puertos-linux/</a></p>
+<p>Filtrar el puerto 53</p>
+<pre><code>
+ss -tanp | grep 53
+</code></pre>
+<p>Voy a utilizar lsoff para ver el servicio que ocupa el puerto 53. Para ello instalaremos <strong>lsof</strong> ya que no está instalado en Manjaro Minimal:</p>
+<pre><code>
+sudo pacman -Syu lsoff
+</code></pre>
+<p>Miramos solo el puerto <strong>53</strong>.</p>
+<pre><code>
+sudo lsof -i :53
+</code></pre>
+<h2>Matar procesos por puerto</h2>
+<p>Con este comando, podríamos matar el proceso por el puerto 53 pero no funciona. Con otro proceso o servicio serviría este comando, pero no para detener systemd-resolved.</p>
+<pre><code>
+sudo kill -9 $(sudo lsof -t -i:53)
+</code></pre>
+<h2>Evitar que systemd-resolved use el puerto 53</h2>
+<p>Editaremos el archivo.</p>
+<pre><code>
+sudo nano /etc/systemd/resolved.conf
+</code></pre>
+<p>Descomenta "quita la #" de la linea <code>DNSStubListener</code>no= poniendo el valor de <strong>yes</strong> a <strong>no</strong>.</p>
+<p>Descomentando <strong>DNSStubListener</strong> y poniendo el valor <strong>no</strong>, el sistema no podrá resolver ningún nombre de dominio, por lo que no podrá visitar sitios web en el navegador web, etc.</p>
+<h2>Crea un enlace simbolico</h2>
+<p>Crea un enlace simbólico para <code>/run/systemd/resolve/resolv.conf</code>con <code>/etc/resolv.conf</code>.</p>
+<pre><code>
+sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+</code></pre>
+<p>Si quieres que utilice las DNS de Cloudflare en lugar de 127.0.0.1 como proxy local, puedes añadirlo en el mismo archivo.</p>
+<p>Ejemplo del archivo <strong>resolv.conf</strong>:</p>
+<pre><code>
+[Resolve]
+DNS=1.1.1.1
+#FallbackDNS=
+#Domains=
+#LLMNR=no
+#MulticastDNS=no
+#DNSSEC=no
+#DNSOverTLS=no
+#Cache=no
+DNSStubListener=no
+#ReadEtcHosts=yes
+</code></pre>
+<p><strong>Reinicia el sistema</strong></p>
+<h2>Comprobando que ahora el puerto está libre</h2>
+<p>Comprobamos que ahora está el puerto libre</p>
+<pre><code>
+sudo lsof -i :53
+</code></pre>
+<p>Puertos utilizados ahora</p>
+<pre><code>
+sudo ss -tulwn | grep LISTEN
+</code></pre>
+<p>Ahora con el puerto <strong>53</strong> libre, ya puedes instalar tu servidor DNS favorito.</p>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html">https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 17 de enero de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-12-08</em> - <a href="../posts/2023-12-08-manjaro-instalando-y-actualizando-en-modo-grafico.html">Manjaro Instalando y actualizando en modo Grafico</a></li><li><em>2023-04-09</em> - <a href="../posts/2023-04-09-manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo.html">Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</a></li><li><em>2023-01-09</em> - <a href="../posts/2023-01-09-manjaro-elegir-los-repositorios-mas-rapidos.html">Manjaro. Elegir los repositorios más rápidos</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

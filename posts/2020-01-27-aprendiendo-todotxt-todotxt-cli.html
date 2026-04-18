@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aprendiendo todo.txt. todotxt-cli</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="También puedes encontrar muchas aplicaciones para todos los sistemas operativos, navegadores, etc... Te adjunto la web de todo.txt donde encontrarás más información. Gina Trapani , editora fundadora de Lifehacker, creó esta sencilla aplicación para gestionar tus tareas mediante un scritp en bash. Este artículo, casi es una traducción del propio publicado por Gina Trapani en Lifehacker, a excepción de la instalación y configuración del todo.txt en otra carpeta. He podido entender mejor que nunca el script de todo.txt para terminal y tal como lo iba probando, lo ido redactando. Voy a darle nuevamente la oportunidad a todo.txt Instalación todotxt-cli, está disponible en todas las distribuciones linux. Para instalarlo en Debian, Ubuntu, Raspbian,... sudo apt install todotxt-cli todo-txt Comando Para ejecutar todo.txt cli, escribiremos en la terminal todo-txt Archivo todo.txt ¿Donde está el archivo todo.txt? todo-txt archive ~/.todo-txt/todo.txt Cambiar la carpeta de tu archivo txt Si quieres cambiar la ruta de...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Aprendiendo todo.txt. todotxt-cli">
+    <meta property="og:description" content="También puedes encontrar muchas aplicaciones para todos los sistemas operativos, navegadores, etc... Te adjunto la web de todo.txt donde encontrarás más información. Gina Trapani , editora fundadora de Lifehacker, creó esta sencilla aplicación para gestionar tus tareas mediante un scritp en bash. Este artículo, casi es una traducción del propio publicado por Gina Trapani en Lifehacker, a excepción de la instalación y configuración del todo.txt en otra carpeta. He podido entender mejor que nunca el script de todo.txt para terminal y tal como lo iba probando, lo ido redactando. Voy a darle nuevamente la oportunidad a todo.txt Instalación todotxt-cli, está disponible en todas las distribuciones linux. Para instalarlo en Debian, Ubuntu, Raspbian,... sudo apt install todotxt-cli todo-txt Comando Para ejecutar todo.txt cli, escribiremos en la terminal todo-txt Archivo todo.txt ¿Donde está el archivo todo.txt? todo-txt archive ~/.todo-txt/todo.txt Cambiar la carpeta de tu archivo txt Si quieres cambiar la ruta de...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/todotxt.png">
+    <meta property="og:url" content="aprendiendo-todotxt-todotxt-cli">
+    <meta name="twitter:title" content="Aprendiendo todo.txt. todotxt-cli">
+    <meta name="twitter:description" content="También puedes encontrar muchas aplicaciones para todos los sistemas operativos, navegadores, etc... Te adjunto la web de todo.txt donde encontrarás más información. Gina Trapani , editora fundadora de Lifehacker, creó esta sencilla aplicación para gestionar tus tareas mediante un scritp en bash. Este artículo, casi es una traducción del propio publicado por Gina Trapani en Lifehacker, a excepción de la instalación y configuración del todo.txt en otra carpeta. He podido entender mejor que nunca el script de todo.txt para terminal y tal como lo iba probando, lo ido redactando. Voy a darle nuevamente la oportunidad a todo.txt Instalación todotxt-cli, está disponible en todas las distribuciones linux. Para instalarlo en Debian, Ubuntu, Raspbian,... sudo apt install todotxt-cli todo-txt Comando Para ejecutar todo.txt cli, escribiremos en la terminal todo-txt Archivo todo.txt ¿Donde está el archivo todo.txt? todo-txt archive ~/.todo-txt/todo.txt Cambiar la carpeta de tu archivo txt Si quieres cambiar la ruta de...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/todotxt.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Aprendiendo todo.txt. todotxt-cli</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 645 palabras. <a href="../categories/todotxt.html">todo.txt</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>También puedes encontrar muchas aplicaciones para todos los sistemas operativos, navegadores, etc... Te adjunto <a href="http://todotxt.org/">la web de todo.txt</a> donde encontrarás más información.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/todotxt.png" alt=""></p>
+<p>Gina Trapani , editora fundadora de Lifehacker, creó esta sencilla aplicación para gestionar tus tareas mediante un scritp en bash.</p>
+<p><a href="https://lifehacker.com/todo-txt-cli-manages-your-tasks-from-the-command-line-5155450">Este artículo, casi es una traducción del propio publicado por Gina Trapani en Lifehacker</a>, a excepción de la instalación y configuración del todo.txt en otra carpeta. He podido entender mejor que nunca el script de todo.txt para terminal y tal como lo iba probando, lo ido redactando.</p>
+<p>Voy a darle nuevamente la oportunidad a todo.txt</p>
+<h2>Instalación</h2>
+<p>todotxt-cli, está disponible en todas las distribuciones linux. Para instalarlo en Debian, Ubuntu, Raspbian,...</p>
+<pre><code>
+sudo apt install todotxt-cli
+</code></pre>
+<h2>todo-txt</h2>
+<h3>Comando</h3>
+<p>Para ejecutar todo.txt cli, escribiremos en la terminal</p>
+<pre><code>
+todo-txt
+</code></pre>
+<h3>Archivo todo.txt</h3>
+<p>¿Donde está el archivo todo.txt?</p>
+<pre><code>
+todo-txt archive
+   ~/.todo-txt/todo.txt
+</code></pre>
+<h3>Cambiar la carpeta de tu archivo txt</h3>
+<p>Si quieres cambiar la ruta de la capeta de tu archivo <strong>todo.txt</strong>, crearemos un archivo de configuración.</p>
+<p>Creamos la carpeta y directorio de configuración</p>
+<pre><code>
+mkdir .todo/ ; nano ~/.todo/config
+</code></pre>
+<p>Sitúa la carpeta que contienen los archivo todo.txt. En este ejemplo, la carpeta <code>~/todo</code>.</p>
+<pre><code>
+export TODO_DIR="$HOME/todo"
+export TODO_FILE="$TODO_DIR/todo.txt"
+export DONE_FILE="$TODO_DIR/done.txt"
+export REPORT_FILE="$TODO_DIR/report.txt"
+export TMP_FILE="/tmp/todo.tmp"
+export TODOTXT_DEFAULT_ACTION=ls
+</code></pre>
+<h3>Alias</h3>
+<p>Si quieres sencillez, puedes crear el alias <strong>t</strong>, para abreviar.</p>
+<p>Añade a tu archivo de configuración .bashrc, .zshrc....</p>
+<pre><code>
+alias t='todo-txt'
+</code></pre>
+<p>Ahora no tendrás que escribir necesariamente <strong>todo-txt</strong> cada vez que quieras utilizar todo.txt cli. Ya tenemos creado nuestro alias.</p>
+<h2>Funcionamiento</h2>
+<h3>Añadiendo una línea</h3>
+<p>A partir de ahora, el comando <strong>todo-txt</strong>, lo sustituiré por <strong>t</strong>, ya que he añadido mi alias</p>
+<p>Voy a añadir mi primer línea al archivo <strong>todo.txt</strong>.</p>
+<pre><code>
+t add "mi primera tarea"
+</code></pre>
+<p>Para simplificarlo, también permite el sustituir <strong>add</strong> por <strong>a</strong>.</p>
+<pre><code>
+t a "mi segunda tarea"
+</code></pre>
+<p>Mucho más fácil</p>
+<h3>Añadir una línea a otro todo.txt</h3>
+<pre><code>
+t addto quizas_despues.txt "Tercera tarea"
+</code></pre>
+<h3>Listar tareas</h3>
+<p>Para listar todas las tareas de mi todo.txt y ver el número de línea</p>
+<pre><code>
+t ls
+</code></pre>
+<p>También podemos utilizar, pero es más sencillo utilizar <strong>ls</strong>.</p>
+<pre><code>
+t listfile
+</code></pre>
+<p>Listar tareas de otro <strong>todo.txt</strong></p>
+<pre><code>
+t ls done.txt
+</code></pre>
+<h3>Añadir prioridad</h3>
+<p>La <strong>1</strong> (primera tarea) del <strong>todo.txt</strong>, voy a darle prioridad <strong>A</strong>.</p>
+<pre><code>
+t pri 1 A 
+</code></pre>
+<h3>Marcar como realizada una tarea</h3>
+<p>Voy a marcar como realizada, <strong>done</strong>, la tarea situada en la segunda línea.</p>
+<pre><code>
+t do 2
+</code></pre>
+<h3>Editar tareas</h3>
+<ul>
+<li>replace: reemplazar -&gt; reemplazar una tarea</li>
+<li>append: agregar -&gt; añadir a una nota existente</li>
+<li>prepend: anteponer</li>
+</ul>
+<p>Ejemplo, Añadir a una nota existente, realizado a las 3 de la tarde</p>
+<pre><code>
+t append 2 "ready at 3PM"
+</code></pre>
+<p>Reemplazar segunda tarea</p>
+<pre><code>
+t replace 2 "Nueva tarea"
+</code></pre>
+<p>Añadir al principio de la tarea. Añadirá la palabra <strong>Importante</strong> al principio de la tarea nº2.</p>
+<pre><code>
+t prepend 2 "Importante"
+</code></pre>
+<h3>Listar contextos</h3>
+<p>Para listar los contextos</p>
+<pre><code>
+t lsc
+</code></pre>
+<p>También podemos listarlos con</p>
+<pre><code>
+t listcon
+</code></pre>
+<h3>Listar proyectos</h3>
+<p>Para listar proyectos</p>
+<pre><code>
+ t ls prj
+</code></pre>
+<p>También podemos utilizar</p>
+<pre><code>
+t  listproj
+</code></pre>
+<h3>Mover tareas a otro todo.txt</h3>
+<p>La tarea nº10, ahora no la vamos a poder realizar, la moveremos a la lista <strong>quizas_despues.txt</strong></p>
+<pre><code>
+t move 10 quizas_despues.txt
+</code></pre>
+<h3>Buscar en un todo.txt por una palabra</h3>
+<p>Voy a buscar en mi todo.txt, tareas que contengan la palabra <strong>trabajo</strong>.</p>
+<pre><code>
+ t lf todo.txt trabajo
+</code></pre>
+<p>También podría hacer lo mismo con otro todo.txt</p>
+<pre><code>
+ t lf done.txt trabajo
+</code></pre>
+<h2>Vídeo</h2>
+<p>Gina Trapani explica en su artículo, que como una imagen vale más que mil palabras...</p>
+<h2>Ayuda</h2>
+<pre><code>
+Usage: todo-txt [-fhpantvV] [-d todo_config] action [task_number] [task_description]
+
+  Actions:
+    add|a "THING I NEED TO DO +project @context"
+    addm "THINGS I NEED TO DO
+          MORE THINGS I NEED TO DO"
+    addto DEST "TEXT TO ADD"
+    append|app ITEM# "TEXT TO APPEND"
+    archive
+    command [ACTIONS]
+    deduplicate
+    del|rm ITEM# [TERM]
+    depri|dp ITEM#[, ITEM#, ITEM#, ...]
+    do ITEM#[, ITEM#, ITEM#, ...]
+    help [ACTION...]
+    list|ls [TERM...]
+    listall|lsa [TERM...]
+    listaddons
+    listcon|lsc [TERM...]
+    listfile|lf [SRC [TERM...]]
+    listpri|lsp [PRIORITIES] [TERM...]
+    listproj|lsprj [TERM...]
+    move|mv ITEM# DEST [SRC]
+    prepend|prep ITEM# "TEXT TO PREPEND"
+    pri|p ITEM# PRIORITY
+    replace ITEM# "UPDATED TODO"
+    report
+    shorthelp
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/todotxt/todo.txt-cli">https://github.com/todotxt/todo.txt-cli</a></li>
+<li><a href="https://lifehacker.com/todo-txt-cli-manages-your-tasks-from-the-command-line-5155450">https://lifehacker.com/todo-txt-cli-manages-your-tasks-from-the-command-line-5155450</a></li>
+<li><a href="https://github.com/nthorne/todo.txt-cli-again-addon">https://github.com/nthorne/todo.txt-cli-again-addon</a></li>
+<li><a href="https://www.tecmint.com/manage-todo-tasks-from-linux-terminal/">https://www.tecmint.com/manage-todo-tasks-from-linux-terminal/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 27 de enero de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-20</em> - <a href="../posts/2021-10-20-rctodosync-comparte-tareas-del-todotxt-por-contextos-proyectos-o-palabras.html">rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</a></li><li><em>2021-07-04</em> - <a href="../posts/2021-07-04-pter-otra-aplicacion-de-todotxt-escrita-en-python-para-terminal-interfaz-grafica.html">Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</a></li><li><em>2021-04-19</em> - <a href="../posts/2021-04-19-sleek-una-aplicacion-de-todotxt-moderna-y-elegante.html">Sleek. Una aplicación de todo.txt moderna y elegante</a></li><li><em>2020-05-22</em> - <a href="../posts/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html">Gestionando mis tareas en la terminal con topydo</a></li><li><em>2020-01-31</em> - <a href="../posts/2020-01-31-a-python-tambien-le-gusta-el-todotxt-todotxt-machine.html">A python también le gusta el todo.txt. todotxt-machine</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución simple. Este error ocurre cuando la identificación del host remoto ha cambiado desde la última vez que te conectaste, lo que puede ser resultado de varios escenarios, como una reinstalación del sistema operativo del servidor o cambios en la configuración de red. Para solucionar este problema, puedes utilizar el comando ssh-keygen -R. Este comando es parte de OpenSSH y se utiliza para eliminar las claves de host anteriores almacenadas en el archivo known_hosts. A continuación, te mostraremos cómo utilizar este comando para solucionar el problema de conexión SSH. Paso 1: Ejecuta ssh-keygen -R Abre una terminal y ejecuta el siguiente comando: ssh-keygen -R angel@192.168.1.100 Este comando elimina la clave de host asociada con el nombre de usuario angel y la...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!">
+    <meta property="og:description" content="Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución simple. Este error ocurre cuando la identificación del host remoto ha cambiado desde la última vez que te conectaste, lo que puede ser resultado de varios escenarios, como una reinstalación del sistema operativo del servidor o cambios en la configuración de red. Para solucionar este problema, puedes utilizar el comando ssh-keygen -R. Este comando es parte de OpenSSH y se utiliza para eliminar las claves de host anteriores almacenadas en el archivo known_hosts. A continuación, te mostraremos cómo utilizar este comando para solucionar el problema de conexión SSH. Paso 1: Ejecuta ssh-keygen -R Abre una terminal y ejecuta el siguiente comando: ssh-keygen -R angel@192.168.1.100 Este comando elimina la clave de host asociada con el nombre de usuario angel y la...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed">
+    <meta name="twitter:title" content="SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!">
+    <meta name="twitter:description" content="Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución simple. Este error ocurre cuando la identificación del host remoto ha cambiado desde la última vez que te conectaste, lo que puede ser resultado de varios escenarios, como una reinstalación del sistema operativo del servidor o cambios en la configuración de red. Para solucionar este problema, puedes utilizar el comando ssh-keygen -R. Este comando es parte de OpenSSH y se utiliza para eliminar las claves de host anteriores almacenadas en el archivo known_hosts. A continuación, te mostraremos cómo utilizar este comando para solucionar el problema de conexión SSH. Paso 1: Ejecuta ssh-keygen -R Abre una terminal y ejecuta el siguiente comando: ssh-keygen -R angel@192.168.1.100 Este comando elimina la clave de host asociada con el nombre de usuario angel y la...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 440 palabras. <a href="../categories/ssh.html">ssh</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución simple. Este error ocurre cuando la identificación del host remoto ha cambiado desde la última vez que te conectaste, lo que puede ser resultado de varios escenarios, como una reinstalación del sistema operativo del servidor o cambios en la configuración de red.</p>
+<p>Para solucionar este problema, puedes utilizar el comando ssh-keygen -R. Este comando es parte de OpenSSH y se utiliza para eliminar las claves de host anteriores almacenadas en el archivo known_hosts. A continuación, te mostraremos cómo utilizar este comando para solucionar el problema de conexión SSH.</p>
+<h2>Paso 1: Ejecuta ssh-keygen -R</h2>
+<p>Abre una terminal y ejecuta el siguiente comando:</p>
+<pre><code>
+ssh-keygen -R angel@192.168.1.100
+</code></pre>
+<p>Este comando elimina la clave de host asociada con el nombre de usuario <code>angel</code> y la dirección IP <code>192.168.1.100</code> del archivo <code>known_hosts</code>. Asegúrate de reemplazar <code>angel@192.168.1.100</code> con el nombre de usuario y la dirección IP correspondientes del servidor SSH al que intentas conectarte.</p>
+<h2>Paso 2: Edita el archivo known_hosts</h2>
+<p>Después de ejecutar el comando <code>ssh-keygen -R</code>, es posible que aún encuentres el mismo error al intentar conectarte al servidor SSH. En ese caso, es posible que necesites editar manualmente el archivo <code>known_hosts</code>.</p>
+<p>Puedes utilizar tu editor de texto favorito, como <code>nano</code>, para editar el archivo <code>known_hosts</code>. Ejecuta el siguiente comando en la terminal:</p>
+<pre><code>
+nano ~/.ssh/known_hosts
+</code></pre>
+<p>Esto abrirá el archivo <code>known_hosts</code> en el editor de texto <code>nano</code>. Busca la línea que corresponda al servidor SSH al que intentas conectarte y elimínala. Luego guarda los cambios y cierra el editor de texto.</p>
+<h2>Paso 3: Intenta conectarte nuevamente</h2>
+<p>Una vez que hayas eliminado las claves de host anteriores utilizando <code>ssh-keygen -R</code> y hayas editado correctamente el archivo <code>known_hosts</code>, intenta conectarte nuevamente al servidor SSH. Deberías poder conectarte sin ver el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!".</p>
+<p>Recuerda que, al eliminar las claves de host anteriores, estás eliminando la capa de seguridad que brinda la verificación de la identidad del servidor. Siempre asegúrate de verificar la autenticidad del servidor antes de volver a conectarte, especialmente en entornos de red no confiables.</p>
+<p>En resumen, el comando <code>ssh-keygen -R</code> te permite eliminar las claves de host anteriores almacenadas en el archivo <code>known_hosts</code> y solucionar el problema de conexión SSH causado por un cambio en la identificación del host remoto. Además, puedes editar manualmente el archivo <code>known_hosts</code> si el problema persiste después de ejecutar el comando. Recuerda seguir las mejores prácticas de seguridad al conectarte a servidores SSH.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 17 de julio de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-05-06</em> - <a href="../posts/2023-05-06-ssh-eliminar-la-clave-del-host-en-un-servidor-remoto.html">SSH. Eliminar la clave del host en un servidor remoto</a></li><li><em>2023-01-11</em> - <a href="../posts/2023-01-11-enviar-llave-publica-al-servidor-ssh.html">Enviar llave pública al servidor SSH</a></li><li><em>2022-12-31</em> - <a href="../posts/2022-12-31-servidor-ssh-en-manjaro.html">Servidor SSH en Manjaro</a></li><li><em>2022-07-05</em> - <a href="../posts/2022-07-05-tunel-ssh-para-conectar-puertos-remotos-como-si-fuera-local.html">Tunel SSH para conectar puertos remotos como si fuera local</a></li><li><em>2022-02-15</em> - <a href="../posts/2022-02-15-enviar-clave-ssh-al-servidor-para-no-utilizar-la-contrasena.html">Enviar clave SSH al servidor, para no utilizar la contraseña</a></li><li><em>2021-04-01</em> - <a href="../posts/2021-04-01-scp-copias-por-ssh.html">SCP. Copias por SSH</a></li><li><em>2021-02-06</em> - <a href="../posts/2021-02-06-docker-servidor-ssh-para-conectarte-por-sftp.html">Docker. Servidor SSH para conectarte por SFTP</a></li><li><em>2019-12-11</em> - <a href="../posts/2019-12-11-instalando-ssh-en-fedora-centos-o-redhat.html">Instalando SSH en Fedora, Centos o RedHat</a></li><li><em>2019-11-09</em> - <a href="../posts/2019-11-09-simplifica-o-abrevia-tus-conexiones-ssh.html">Simplifica o abrevia tus conexiones SSH</a></li><li><em>2019-04-04</em> - <a href="../posts/2019-04-04-montando-carpetas-del-servidor-raspberry-en-tu-escritorio-sshfs.html"> Montando carpetas del servidor, Raspberry,... en tu escritorio. SSHFS</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

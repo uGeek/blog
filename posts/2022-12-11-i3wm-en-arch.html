@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>i3wm en Arch</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Me he pasado a Manjaro, una distro linux basada en Arch. Esto implica que todos mis archivos de configuración del gestor de ventanas i3wm son válidos, en cambio los paquetes de instalación para que todo funcione correctamente, el lugar de utilizar el gestor de paquetes apt, ahora tengo que utilizar pacman. Esta es la principal diferencia, ya que a excepción de solo un paquete, todos los paquetes tienen el mismo nombre en ambas distribuciones. De manera que el cambio ha sido muy cómodo. La distro Manjaro que ha instalado tiene el escritorio gnome. Vamos a ver todos los paquetes necesarios, igual que en el otro artículo que publiqué partiendo de una distro Ubuntu. Recuerda que estos son los paquetes que estoy utilizando en base mi configuración. Instalación de paquetes básicos sudo pacman -Syy i3-wm i3status i3lock i3-gaps dmenu nitrogen lightdm i3blocks lm_sensors rofi feh volumeicon acpi dunst i3-wm: Manejador de...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="i3wm en Arch">
+    <meta property="og:description" content="Me he pasado a Manjaro, una distro linux basada en Arch. Esto implica que todos mis archivos de configuración del gestor de ventanas i3wm son válidos, en cambio los paquetes de instalación para que todo funcione correctamente, el lugar de utilizar el gestor de paquetes apt, ahora tengo que utilizar pacman. Esta es la principal diferencia, ya que a excepción de solo un paquete, todos los paquetes tienen el mismo nombre en ambas distribuciones. De manera que el cambio ha sido muy cómodo. La distro Manjaro que ha instalado tiene el escritorio gnome. Vamos a ver todos los paquetes necesarios, igual que en el otro artículo que publiqué partiendo de una distro Ubuntu. Recuerda que estos son los paquetes que estoy utilizando en base mi configuración. Instalación de paquetes básicos sudo pacman -Syy i3-wm i3status i3lock i3-gaps dmenu nitrogen lightdm i3blocks lm_sensors rofi feh volumeicon acpi dunst i3-wm: Manejador de...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="i3wm-en-arch">
+    <meta name="twitter:title" content="i3wm en Arch">
+    <meta name="twitter:description" content="Me he pasado a Manjaro, una distro linux basada en Arch. Esto implica que todos mis archivos de configuración del gestor de ventanas i3wm son válidos, en cambio los paquetes de instalación para que todo funcione correctamente, el lugar de utilizar el gestor de paquetes apt, ahora tengo que utilizar pacman. Esta es la principal diferencia, ya que a excepción de solo un paquete, todos los paquetes tienen el mismo nombre en ambas distribuciones. De manera que el cambio ha sido muy cómodo. La distro Manjaro que ha instalado tiene el escritorio gnome. Vamos a ver todos los paquetes necesarios, igual que en el otro artículo que publiqué partiendo de una distro Ubuntu. Recuerda que estos son los paquetes que estoy utilizando en base mi configuración. Instalación de paquetes básicos sudo pacman -Syy i3-wm i3status i3lock i3-gaps dmenu nitrogen lightdm i3blocks lm_sensors rofi feh volumeicon acpi dunst i3-wm: Manejador de...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>i3wm en Arch</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 238 palabras. <a href="../categories/i3wm.html">i3wm</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Me he pasado a Manjaro, una distro linux basada en Arch. Esto implica que todos mis archivos de configuración del gestor de ventanas i3wm son válidos, en cambio los paquetes de instalación para que todo funcione correctamente, el lugar de utilizar el gestor de paquetes apt, ahora tengo que utilizar pacman.</p>
+<p>Esta es la principal diferencia, ya que a excepción de solo un paquete, todos los paquetes tienen el mismo nombre en ambas distribuciones. De manera que el cambio ha sido muy cómodo.</p>
+<p>La distro Manjaro que ha instalado tiene el escritorio gnome. Vamos a ver todos los paquetes necesarios, igual que en el otro artículo que publiqué partiendo de una distro Ubuntu.</p>
+<p>Recuerda que estos son los paquetes que estoy utilizando en base mi configuración.</p>
+<h2>Instalación de paquetes básicos</h2>
+<pre><code>
+sudo pacman -Syy i3-wm i3status i3lock i3-gaps dmenu nitrogen lightdm i3blocks lm_sensors rofi feh volumeicon acpi dunst
+</code></pre>
+<ul>
+<li><strong>i3-wm:</strong> Manejador de Ventanas</li>
+<li><strong>i3status :</strong> Estatus de monitoreo para el panel</li>
+<li><strong>i3lock:</strong> Bloqueo de pantalla</li>
+<li><strong>dmenu:</strong> Menu&nbsp;</li>
+<li><strong>termite:</strong> Emulador de terminal</li>
+<li><strong>dunst:</strong> Notificador&nbsp;</li>
+<li><strong>nitrogen:</strong> Programa para generar fondo de pantalla</li>
+<li><strong>feh</strong>: Habilitar el fondo de pantalla</li>
+<li><strong>volumeicon</strong>: Icono de control de volumen</li>
+<li><strong>acpi</strong>: Nivel de batería</li>
+<li><strong>dunst</strong>: Notificaciones</li>
+</ul>
+<h2>Otras aplicaciones que utilizo</h2>
+<pre><code>
+sudo pacman -Syy brave-browser flameshot mpv vlc thunar pcmanfm micro lxterminal
+</code></pre>
+<ul>
+<li><strong>brave-browser</strong>: Navegadores</li>
+<li><strong>flameshot</strong>: Capturar desde pantalla de escritorio</li>
+<li><strong>mpv - vlc</strong>: Reproductor multimedia</li>
+<li><strong>pcmanfm - thunar</strong>: Exploradores de archivos alternativos</li>
+<li><strong>micro</strong>: editor de textos</li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 11 de diciembre de 2022</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-07-19</em> - <a href="../posts/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html">I3wm y sus Problemas con Manjaro</a></li><li><em>2023-03-11</em> - <a href="../posts/2023-03-11-lxterminal-como-guake-en-i3wm.html">lxterminal como guake en i3wm</a></li><li><em>2020-12-28</em> - <a href="../posts/2020-12-28-i3wm-en-ubuntu-debian-raspbian-desde-0.html">i3wm en Ubuntu, Debian, Raspbian,... desde 0</a></li><li><em>2020-08-16</em> - <a href="../posts/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

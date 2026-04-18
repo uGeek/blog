@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instalando la última versión de Qutebrowser</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona. Se trataba de descargar el archivo .zip de la última release, descomprimirlo y ejecutar los siguientes comandos: sudo apt install python3-pip pip3 install --user pyqt5 pypeg2 jinja2 pygments sudo apt-get install python3-venv sudo apt install python3-pyqt5.qtwebengine python3 scripts/mkvenv.py Por último, ejecutar: python3 qutebrowser.py Pero esto da errores. La solución ha sido acudir a la documentación Oficial. Instalación de Qutebrowser versión 2 en Ubuntu 20.04 Primero instalaremos la versión de repositorios 1.10 sudo apt install qutebrowser Ahora vamos a instalar la nueva versión. Nos situaremos en el directorio HOME y clonamos el repositorio. cd git clone https://github.com/qutebrowser/qutebrowser.git cd qutebrowser Como lo hacemos desde git, instalaremos: sudo apt install --no-install-recommends asciidoc python3 scripts/asciidoc2html.py El video o el sonido no funcionan con QtWebKit, instala los complementos de gstreamer: sudo...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Instalando la última versión de Qutebrowser">
+    <meta property="og:description" content="He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona. Se trataba de descargar el archivo .zip de la última release, descomprimirlo y ejecutar los siguientes comandos: sudo apt install python3-pip pip3 install --user pyqt5 pypeg2 jinja2 pygments sudo apt-get install python3-venv sudo apt install python3-pyqt5.qtwebengine python3 scripts/mkvenv.py Por último, ejecutar: python3 qutebrowser.py Pero esto da errores. La solución ha sido acudir a la documentación Oficial. Instalación de Qutebrowser versión 2 en Ubuntu 20.04 Primero instalaremos la versión de repositorios 1.10 sudo apt install qutebrowser Ahora vamos a instalar la nueva versión. Nos situaremos en el directorio HOME y clonamos el repositorio. cd git clone https://github.com/qutebrowser/qutebrowser.git cd qutebrowser Como lo hacemos desde git, instalaremos: sudo apt install --no-install-recommends asciidoc python3 scripts/asciidoc2html.py El video o el sonido no funcionan con QtWebKit, instala los complementos de gstreamer: sudo...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/qutebrowser.png">
+    <meta property="og:url" content="instalando-la-ultima-version-de-qutebrowser">
+    <meta name="twitter:title" content="Instalando la última versión de Qutebrowser">
+    <meta name="twitter:description" content="He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona. Se trataba de descargar el archivo .zip de la última release, descomprimirlo y ejecutar los siguientes comandos: sudo apt install python3-pip pip3 install --user pyqt5 pypeg2 jinja2 pygments sudo apt-get install python3-venv sudo apt install python3-pyqt5.qtwebengine python3 scripts/mkvenv.py Por último, ejecutar: python3 qutebrowser.py Pero esto da errores. La solución ha sido acudir a la documentación Oficial. Instalación de Qutebrowser versión 2 en Ubuntu 20.04 Primero instalaremos la versión de repositorios 1.10 sudo apt install qutebrowser Ahora vamos a instalar la nueva versión. Nos situaremos en el directorio HOME y clonamos el repositorio. cd git clone https://github.com/qutebrowser/qutebrowser.git cd qutebrowser Como lo hacemos desde git, instalaremos: sudo apt install --no-install-recommends asciidoc python3 scripts/asciidoc2html.py El video o el sonido no funcionan con QtWebKit, instala los complementos de gstreamer: sudo...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/qutebrowser.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Instalando la última versión de Qutebrowser</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 259 palabras. <a href="../categories/qutebrowser.html">qutebrowser</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>He encontrado varios métodos de instalación en Blogs, que con versiones anteriores funcionaba, pero con la actual versión 2 y Ubuntu 20.04, no funciona.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/qutebrowser.png" alt=""></p>
+<p>Se trataba de descargar el archivo <strong>.zip</strong> de la última release, descomprimirlo y ejecutar los siguientes comandos:</p>
+<pre><code>
+sudo apt install python3-pip
+pip3 install --user pyqt5 pypeg2 jinja2 pygments
+sudo apt-get install python3-venv
+sudo apt install python3-pyqt5.qtwebengine
+python3 scripts/mkvenv.py
+</code></pre>
+<p>Por último, ejecutar:</p>
+<pre><code>
+python3 qutebrowser.py
+</code></pre>
+<p>Pero esto da errores.</p>
+<p>La solución ha sido acudir a la <a href="https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc">documentación Oficial</a>.</p>
+<h3>Instalación de Qutebrowser versión 2 en Ubuntu 20.04</h3>
+<p>Primero instalaremos la versión de repositorios 1.10</p>
+<pre><code>
+sudo apt install qutebrowser
+</code></pre>
+<p>Ahora vamos a instalar la nueva versión.</p>
+<p>Nos situaremos en el directorio <strong>HOME</strong> y clonamos el repositorio.</p>
+<pre><code>
+cd
+
+git clone https://github.com/qutebrowser/qutebrowser.git
+
+cd qutebrowser
+</code></pre>
+<p>Como lo hacemos desde git, instalaremos:</p>
+<pre><code>
+sudo apt install --no-install-recommends asciidoc
+</code></pre>
+<pre><code>
+python3 scripts/asciidoc2html.py
+</code></pre>
+<p>El video o el sonido no funcionan con QtWebKit, instala los complementos de gstreamer:</p>
+<pre><code>
+sudo apt install gstreamer1.0-plugins-{bad,base,good,ugly}
+</code></pre>
+<p>Instalamos python3-venv</p>
+<pre><code>
+sudo apt-get install python3-venv
+</code></pre>
+<pre><code>
+python3 scripts/mkvenv.py
+</code></pre>
+<p>Ahora debería arrancar qutebrowser con:</p>
+<pre><code>
+.venv/bin/python3 -m qutebrowser
+</code></pre>
+<p>Si todo ha funcionado correctamente, vamos ha crear un script para correr la última versión de Qutebrowser por defecto, en lugar de la de repositorios.</p>
+<h3>Crea el siguiente script</h3>
+<pre><code>
+sudo nano /usr/local/bin/qutebrowser
+</code></pre>
+<p>Damos permisos de ejecución:</p>
+<pre><code>
+sudo chmod +x /usr/local/bin/qutebrowser
+</code></pre>
+<p>Copia el siguiente contenido</p>
+<pre><code>
+#!/bin/bash
+~/qutebrowser/.venv/bin/python3 -m qutebrowser "$@"
+</code></pre>
+<p>Ya tenemos la última versión!!!</p>
+<h2>Directorio de configuración en otra ubicación</h2>
+<p>Para enlazar con el directorio donde tenemos el archivo de configuración <strong>config.py</strong>, lo haremos del siguiente modo:</p>
+<pre><code>
+qutebrowser --config-py ~/.config/qutebrowser/config.py
+</code></pre>
+<h3>Fuentes</h3>
+<ul>
+<li><a href="https://github.com/qutebrowser/qutebrowser/">https://github.com/qutebrowser/qutebrowser/</a></li>
+<li><a href="https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#tox">https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#tox</a></li>
+<li><a href="https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc">https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 05 de febrero de 2021</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

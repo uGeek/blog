@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YTFZF. Youtube desde la terminal</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="La aplicación ytfzf pasa a la primera versión estable, v1.0.0 y ahora permite ver la captura de la imagen de los vídeos, dentro de la terminal. Este modo utilizar YouTube es muy interesante, ya que permite reproducir vídeos y audios desde YouTube sin consumir demasiado recursos de nuestro PC, ya que utilizaremos para el vídeo un reproductor externo directamente con MPV. Está previsto que en breve esta aplicación permite a reproducir desde otros sitios web Instalación instalar algunas dependencias Primero instalaremos algunas dependencias: sudo apt install jq mpv youtube-dl fzf python3-pip pip3 install ueberzug Instalación de ytfzf sudo curl -L "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" -o /usr/bin/ytfzf && sudo chmod +x /usr/bin/ytfzf Desde GitHub git clone https://github.com/pystardust/ytfzf cd ytfzf sudo make install Archivo de configuración Creamos el directorio de configuración mkdir -p ~/.config/ytfzf nano ~/.config/ytfzf/conf.sh Personalizando el archivo Voy a utilizar la resolución 1080 y la mayor calidad de audio disponible. Como reproductor, MPV....">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="YTFZF. Youtube desde la terminal">
+    <meta property="og:description" content="La aplicación ytfzf pasa a la primera versión estable, v1.0.0 y ahora permite ver la captura de la imagen de los vídeos, dentro de la terminal. Este modo utilizar YouTube es muy interesante, ya que permite reproducir vídeos y audios desde YouTube sin consumir demasiado recursos de nuestro PC, ya que utilizaremos para el vídeo un reproductor externo directamente con MPV. Está previsto que en breve esta aplicación permite a reproducir desde otros sitios web Instalación instalar algunas dependencias Primero instalaremos algunas dependencias: sudo apt install jq mpv youtube-dl fzf python3-pip pip3 install ueberzug Instalación de ytfzf sudo curl -L "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" -o /usr/bin/ytfzf && sudo chmod +x /usr/bin/ytfzf Desde GitHub git clone https://github.com/pystardust/ytfzf cd ytfzf sudo make install Archivo de configuración Creamos el directorio de configuración mkdir -p ~/.config/ytfzf nano ~/.config/ytfzf/conf.sh Personalizando el archivo Voy a utilizar la resolución 1080 y la mayor calidad de audio disponible. Como reproductor, MPV....">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/youtube.png">
+    <meta property="og:url" content="ytfzf-youtube-desde-la-terminal">
+    <meta name="twitter:title" content="YTFZF. Youtube desde la terminal">
+    <meta name="twitter:description" content="La aplicación ytfzf pasa a la primera versión estable, v1.0.0 y ahora permite ver la captura de la imagen de los vídeos, dentro de la terminal. Este modo utilizar YouTube es muy interesante, ya que permite reproducir vídeos y audios desde YouTube sin consumir demasiado recursos de nuestro PC, ya que utilizaremos para el vídeo un reproductor externo directamente con MPV. Está previsto que en breve esta aplicación permite a reproducir desde otros sitios web Instalación instalar algunas dependencias Primero instalaremos algunas dependencias: sudo apt install jq mpv youtube-dl fzf python3-pip pip3 install ueberzug Instalación de ytfzf sudo curl -L "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" -o /usr/bin/ytfzf && sudo chmod +x /usr/bin/ytfzf Desde GitHub git clone https://github.com/pystardust/ytfzf cd ytfzf sudo make install Archivo de configuración Creamos el directorio de configuración mkdir -p ~/.config/ytfzf nano ~/.config/ytfzf/conf.sh Personalizando el archivo Voy a utilizar la resolución 1080 y la mayor calidad de audio disponible. Como reproductor, MPV....">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/youtube.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>YTFZF. Youtube desde la terminal</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 260 palabras. <a href="../categories/bash.html">bash</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>La aplicación <strong>ytfzf</strong> pasa a la primera versión estable, v1.0.0 y ahora permite ver la captura de la imagen de los vídeos, dentro de la terminal.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/youtube.png" alt=""></p>
+<p>Este modo utilizar YouTube es muy interesante, ya que permite reproducir vídeos y audios desde YouTube sin consumir demasiado recursos de nuestro PC, ya que utilizaremos para el vídeo un reproductor externo directamente con <strong>MPV</strong>.</p>
+<p>Está previsto que en breve esta aplicación permite a reproducir desde otros sitios web</p>
+<h2>Instalación</h2>
+<h3>instalar algunas dependencias</h3>
+<p>Primero instalaremos algunas dependencias:</p>
+<pre><code>
+sudo apt install jq mpv youtube-dl fzf python3-pip
+</code></pre>
+<pre><code>
+pip3 install ueberzug
+</code></pre>
+<h3>Instalación de ytfzf</h3>
+<pre><code>
+sudo curl -L "https://raw.githubusercontent.com/pystardust/ytfzf/master/ytfzf" -o /usr/bin/ytfzf &amp;&amp; sudo chmod +x /usr/bin/ytfzf
+</code></pre>
+<h3>Desde GitHub</h3>
+<pre><code>
+git clone https://github.com/pystardust/ytfzf
+cd ytfzf
+sudo make install
+</code></pre>
+<h2>Archivo de configuración</h2>
+<p>Creamos el directorio de configuración</p>
+<pre><code>
+mkdir -p ~/.config/ytfzf
+</code></pre>
+<pre><code>
+nano ~/.config/ytfzf/conf.sh
+</code></pre>
+<h3>Personalizando el archivo</h3>
+<p>Voy a utilizar la resolución 1080 y la mayor calidad de audio disponible. Como reproductor, <strong>MPV</strong>.</p>
+<pre><code>
+YTFZF_HIST=1
+YTFZF_LOOP=0
+YTFZF_PREF="bestvideo[height&lt;=?1080]+bestaudio/best"
+YTFZF_ENABLE_FZF_DEFAULT_OPTS=1
+FZF_PLAYER="mpv"
+</code></pre>
+<h2>Uso</h2>
+<h3>Buscar con miniaturas</h3>
+<p>Busca y mira videos con vistas previas en miniatura</p>
+<pre><code>
+ytfzf -t &lt;query&gt;
+</code></pre>
+<p>Mostrar todas las suscripciones con miniaturas (últimas 10)</p>
+<pre><code>
+ytfzf -St
+</code></pre>
+<p>Puedes utilizar varias opciones juntas, aquí hay algunos ejemplos.</p>
+<p>Transmite audio (música) y avisa cuando finalice la música</p>
+<pre><code>
+ytfzf -ml &lt;query&gt;
+</code></pre>
+<p>Descarga un video de tu historial</p>
+<pre><code>
+ytfzf -dH
+</code></pre>
+<p>Abrir usando un menú externo en un formato determinado</p>
+<pre><code>
+ytfzf -fD
+</code></pre>
+<p>Si comenzó a ver un video y desea cambiar el formato, primero presione Q para guardar la posición y salir de mpv, luego elija su formato usando</p>
+<pre><code>
+ytfzf -faH
+</code></pre>
+<h2>Ayuda</h2>
+<pre><code>
+ytfzf -help
+</code></pre>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://github.com/pystardust/ytfzf">https://github.com/pystardust/ytfzf</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 26 de marzo de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-02-18</em> - <a href="../posts/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li><li><em>2022-07-12</em> - <a href="../posts/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li><li><em>2022-07-04</em> - <a href="../posts/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html">Copiando en la terminal con barra de proceso</a></li><li><em>2022-03-27</em> - <a href="../posts/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li><li><em>2022-01-06</em> - <a href="../posts/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li><li><em>2021-11-20</em> - <a href="../posts/2021-11-20-usrbinenv-bash-o-binbash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li><li><em>2021-07-01</em> - <a href="../posts/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian-desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</a></li><li><em>2021-05-31</em> - <a href="../posts/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li><li><em>2021-04-27</em> - <a href="../posts/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li><li><em>2021-04-06</em> - <a href="../posts/2021-04-06-unrar-en-raspberry-pi.html">unrar en Raspberry Pi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

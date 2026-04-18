@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear un Blog en GitHub. GitHub Pages</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 3 minutos. 357 palabras. git Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown. Ya os expliqué hace días como hacerlo en GitLab, deciros que en GitHub hay un poco mas de limitaciones, pero al final, podemos hacerlo. Algunas de las limitaciones de GitHub Pages son que las páginas no pueden ocupar mas de 1Gb, el ancho de banda no puede superar los 100Gb al mes y solo permite 10 actualizaciones por hora de la web. Me he vuelto un poco loco con las carpetas donde estaban las imágenes, ya que las había nombrado como "__icon", "__css"… y a GitHub Pages no le gustaba que se nombraran de este modo, ya que no las mostraba. Importante, si quieres que las carpetas sean accesibles desde el servidor web, que no empiecen con símbolos raros. Creando la Web estática...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Crear un Blog en GitHub. GitHub Pages">
+    <meta property="og:description" content="Tiempo estimado de lectura: 3 minutos. 357 palabras. git Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown. Ya os expliqué hace días como hacerlo en GitLab, deciros que en GitHub hay un poco mas de limitaciones, pero al final, podemos hacerlo. Algunas de las limitaciones de GitHub Pages son que las páginas no pueden ocupar mas de 1Gb, el ancho de banda no puede superar los 100Gb al mes y solo permite 10 actualizaciones por hora de la web. Me he vuelto un poco loco con las carpetas donde estaban las imágenes, ya que las había nombrado como "__icon", "__css"… y a GitHub Pages no le gustaba que se nombraran de este modo, ya que no las mostraba. Importante, si quieres que las carpetas sean accesibles desde el servidor web, que no empiecen con símbolos raros. Creando la Web estática...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="crear-un-blog-en-github-github-pages">
+    <meta name="twitter:title" content="Crear un Blog en GitHub. GitHub Pages">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 3 minutos. 357 palabras. git Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown. Ya os expliqué hace días como hacerlo en GitLab, deciros que en GitHub hay un poco mas de limitaciones, pero al final, podemos hacerlo. Algunas de las limitaciones de GitHub Pages son que las páginas no pueden ocupar mas de 1Gb, el ancho de banda no puede superar los 100Gb al mes y solo permite 10 actualizaciones por hora de la web. Me he vuelto un poco loco con las carpetas donde estaban las imágenes, ya que las había nombrado como "__icon", "__css"… y a GitHub Pages no le gustaba que se nombraran de este modo, ya que no las mostraba. Importante, si quieres que las carpetas sean accesibles desde el servidor web, que no empiecen con símbolos raros. Creando la Web estática...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Crear un Blog en GitHub. GitHub Pages</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 269 palabras. <a href="../categories/git.html">git</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 3 minutos. 357 palabras. <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<p>Vamos a utilizar GitHub para publicar un blog, una web estática, incluso podríamos ver archivos formato en markdown.</p>
+<p>Ya os expliqué hace días como hacerlo en GitLab, deciros que en GitHub hay un poco mas de limitaciones, pero al final, podemos hacerlo.</p>
+<p>Algunas de las limitaciones de GitHub Pages son que las páginas no pueden ocupar mas de 1Gb, el ancho de banda no puede superar los 100Gb al mes y solo permite 10 actualizaciones por hora de la web.</p>
+<p>Me he vuelto un poco loco con las carpetas donde estaban las imágenes, ya que las había nombrado como "__icon", "__css"… y a GitHub Pages no le gustaba que se nombraran de este modo, ya que no las mostraba. Importante, si quieres que las carpetas sean accesibles desde el servidor web, que no empiecen con símbolos raros.</p>
+<h2>Creando la Web estática con GitHub Pages</h2>
+<ol>
+<li>Creamos el repositorio en GitHub</li>
+<li>Bajamos este, a nuestro dispositivo haciendo un <code>git clone repositorio</code></li>
+<li>Ya tenemos nuestra carpeta de GitHub en local. Añadimos los archivos .html que queremos subir a nuestro GitHub Pages</li>
+<li>Subimos todos los archivos a GitHub con los comandos: <code>git add . ; git commit -m "primer commit" ; git push</code></li>
+<li>Ahora vamos a habilitar el servidor web. Vamos a <strong>Settings</strong></li>
+<li>En el apartado <strong>GitHub Pages</strong>, en <strong>Source</strong>, cambiamos el estado de <strong>None</strong> a <strong>Master Branch</strong>. Despues pulsaremos el boton <strong>Save</strong></li>
+<li>Ya está guardado y si volvemos a este apartado de <strong>GitHub Pages</strong>, aparecerá la nueva url creada para nuestro nuevo servidor web, tipo: <a href="https://ugeek.github.io/nombre_del_repositorio/">https://ugeek.github.io/nombre_del_repositorio/</a></li>
+</ol>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 08 de enero de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-30</em> - <a href="../posts/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li><li><em>2021-04-18</em> - <a href="../posts/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li><li><em>2020-01-14</em> - <a href="../posts/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li><li><em>2020-01-06</em> - <a href="../posts/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html">Descargando un directorio de git con gitdir</a></li><li><em>2019-07-10</em> - <a href="../posts/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li><li><em>2019-04-17</em> - <a href="../posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script </a></li><li><em>2019-01-28</em> - <a href="../posts/2019-01-28-crear-ramas-con-git.html"> Crear ramas con Git</a></li><li><em>2019-01-21</em> - <a href="../posts/2019-01-21-utilizando-git-con-la-terminal-github.html"> Utilizando Git con la Terminal. GitHub</a></li><li><em>2019-01-12</em> - <a href="../posts/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html"> Ignorar archivos que no queremos que suban a Git</a></li><li><em>2019-01-04</em> - <a href="../posts/2019-01-04-crear-un-blog-en-gitlab-gitlab-pages.html"> Crear un Blog en GitLab. GitLab Pages</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

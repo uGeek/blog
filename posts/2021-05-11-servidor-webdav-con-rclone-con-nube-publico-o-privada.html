@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidor WebDAV con rclone, con nube público o privada</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Os he explicado varias formas de montar un servidor WebDAV. El modo que os explicaré hoy con rclone, es el más fácil, rápido y seguro de todos los que os he explicado. Además este modo tiene una característica importante, puedes utilizar una nube pública ya sea cifrada o no para servirla a través de tu servidor WebDAV. Crear usuario y contraseña Hay dos formas de crear el usuario y contraseña. Una sería añadir el usuario y contraseña como unas variables en el docker-compose, la otra es creando un archivo htpasswd, donde esta información estará cifrada. Lo primero que necesitamos, es instalar el paquete apache2-utils, para utilizar htpasswd y crear el hash de la contraseña. sudo apt-get install apache2-utils Una vez instalado, voy a crear el usuario angel y la contraseña 1234, como ejemplo. htpasswd -nb angel 1234 La terminal me devuelve: angel:$apr1$DANrK6fl$Ov/imrJhcDk/t5TgPEm9N1 Esto lo copiaré en el archivo htpasswd, donde...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Servidor WebDAV con rclone, con nube público o privada">
+    <meta property="og:description" content="Os he explicado varias formas de montar un servidor WebDAV. El modo que os explicaré hoy con rclone, es el más fácil, rápido y seguro de todos los que os he explicado. Además este modo tiene una característica importante, puedes utilizar una nube pública ya sea cifrada o no para servirla a través de tu servidor WebDAV. Crear usuario y contraseña Hay dos formas de crear el usuario y contraseña. Una sería añadir el usuario y contraseña como unas variables en el docker-compose, la otra es creando un archivo htpasswd, donde esta información estará cifrada. Lo primero que necesitamos, es instalar el paquete apache2-utils, para utilizar htpasswd y crear el hash de la contraseña. sudo apt-get install apache2-utils Una vez instalado, voy a crear el usuario angel y la contraseña 1234, como ejemplo. htpasswd -nb angel 1234 La terminal me devuelve: angel:$apr1$DANrK6fl$Ov/imrJhcDk/t5TgPEm9N1 Esto lo copiaré en el archivo htpasswd, donde...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/rclone.png">
+    <meta property="og:url" content="servidor-webdav-con-rclone-con-nube-publico-o-privada">
+    <meta name="twitter:title" content="Servidor WebDAV con rclone, con nube público o privada">
+    <meta name="twitter:description" content="Os he explicado varias formas de montar un servidor WebDAV. El modo que os explicaré hoy con rclone, es el más fácil, rápido y seguro de todos los que os he explicado. Además este modo tiene una característica importante, puedes utilizar una nube pública ya sea cifrada o no para servirla a través de tu servidor WebDAV. Crear usuario y contraseña Hay dos formas de crear el usuario y contraseña. Una sería añadir el usuario y contraseña como unas variables en el docker-compose, la otra es creando un archivo htpasswd, donde esta información estará cifrada. Lo primero que necesitamos, es instalar el paquete apache2-utils, para utilizar htpasswd y crear el hash de la contraseña. sudo apt-get install apache2-utils Una vez instalado, voy a crear el usuario angel y la contraseña 1234, como ejemplo. htpasswd -nb angel 1234 La terminal me devuelve: angel:$apr1$DANrK6fl$Ov/imrJhcDk/t5TgPEm9N1 Esto lo copiaré en el archivo htpasswd, donde...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/rclone.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Servidor WebDAV con rclone, con nube público o privada</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 558 palabras. <a href="../categories/docker.html">docker</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Os he explicado varias formas de montar un servidor WebDAV.</p>
+<p>El modo que os explicaré hoy con rclone, es el más fácil, rápido y seguro de todos los que os he explicado.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/rclone.png" alt=""></p>
+<p>Además este modo tiene una característica importante, puedes utilizar una nube pública ya sea cifrada o no para servirla a través de tu servidor WebDAV.</p>
+<h2>Crear usuario y contraseña</h2>
+<p>Hay dos formas de crear el usuario y contraseña. Una sería añadir el usuario y contraseña como unas variables en el docker-compose, la otra es creando un archivo <strong>htpasswd</strong>, donde esta información estará cifrada.</p>
+<p>Lo primero que necesitamos, es instalar el paquete apache2-utils, para utilizar htpasswd y crear el hash de la contraseña.</p>
+<pre><code>
+sudo apt-get install apache2-utils
+</code></pre>
+<p>Una vez instalado, voy a crear el usuario <strong>angel</strong> y la contraseña <strong>1234</strong>, como ejemplo.</p>
+<pre><code>
+htpasswd -nb angel 1234
+</code></pre>
+<p>La terminal me devuelve:</p>
+<pre><code>
+angel:$apr1$DANrK6fl$Ov/imrJhcDk/t5TgPEm9N1
+</code></pre>
+<p>Esto lo copiaré en el archivo <code>htpasswd</code>, donde guardaré todas mis contraseñas para acceder a la nube.</p>
+<p>Recuerda que puedo crear tantos usuarios y contraseñas como desee</p>
+<p>En mi caso, para no montar tantos volúmenes, guardaré el archivo <code>htpasswd</code> en la misma ruta que el archivo <code>rclone.conf</code>.</p>
+<h2>Servidor almacenamiento local</h2>
+<p>Voy a montar un servidor WebDAV con almacenamiento local, osea, todos los archivos y directorios de mi servidor WebDAV, estarán en mi Raspberry, Servidor o VPS.</p>
+<h3>docker-compose</h3>
+<pre><code>
+    rclone-webdav-server:
+      container_name: webdav
+      image: rclone/rclone
+      ports:
+         - 100:80
+      command:
+         - "--config"
+         - "/root/.config/rclone/rclone.conf"
+         - "--verbose"
+         - "serve"
+         - "webdav"
+         - "local:/webdav"   # El almacenamiento del servidor, está en el directorio local /webdav
+         - "--addr"
+         - "0.0.0.0:80"
+         - "--htpasswd"                     # habilitar el usuario y contraseña
+         - "/root/.config/rclone/htpasswd"  # ruta del archivo donde está el usuario y hash de la contraseña
+         - "-v"
+         - "--log-file"
+         - "/webdav.log"
+      volumes:
+         - $HOME/.config/rclone:/root/.config/rclone/:ro
+         - /webdav:/webdav # Crea un volumen que comparte el directorio /webdav dentro del docker, con /webdav en local
+         - $HOME/docker/webdav/webdav.log:/webdav.log    # logs de acceso
+      environment:
+         - TZ=Europe/Madrid
+</code></pre>
+<p>Sustituye:</p>
+<ul>
+<li>TZ horario de tu región</li>
+<li>ruta del archivo <strong>rclone.conf</strong></li>
+<li>Crea la contraseña, siguiendo el apartado anterior</li>
+<li>Personaliza el puerto, en este ejemplo utilizo en puerto <strong>100</strong>.</li>
+<li>webdav: Nombre de la nube en rclone</li>
+<li>--htpasswd : Archivo para el usuario y contraseña.</li>
+<li>/root/.config/rclone/htpasswd : Ruta del archivo <strong>htpasswd</strong></li>
+</ul>
+<h2>Almacenamiento en nube pública</h2>
+<p>En este caso, voy a utilizar la nube pública como almacenamiento de mis archivos. Mi servidor WebDAV servirá estos archivos.</p>
+<p><strong>En mi caso, he cifrado todos los archivos</strong> de la nube pública, así tengo <strong>más privacidad</strong>.</p>
+<h3>docker-compose</h3>
+<p>La nube que tengo configurada en rclone es <code>drive:</code>.</p>
+<pre><code>
+    rclone-webdav-server:
+      container_name: webdav
+      image: rclone/rclone
+      ports:
+         - 100:80
+      command:
+         - "--config"
+         - "/root/.config/rclone/rclone.conf"
+         - "--verbose"
+         - "serve"
+         - "webdav"
+         - "drive:"
+         - "--addr"
+         - "0.0.0.0:80"
+         - "--htpasswd"   
+         - "/root/.config/rclone/htpasswd"  
+         - "-v"
+         - "--log-file"
+         - "/webdav.log"
+      volumes:
+         - $HOME/.config/rclone:/root/.config/rclone/:ro
+         - $HOME/docker/webdav/webdav.log:/webdav.log
+      environment:
+         - TZ=Europe/Madrid
+</code></pre>
+<h2>logs de acceso</h2>
+<p>En el docker-compose anterior, tenemos que añadir la opción <code>-v</code> y <code>--log-file</code> para crear un archivo de texto plano donde se guardarán todos los logs.</p>
+<pre><code>
+- "-v"
+- "--log-file"
+- "/webdav.log"
+</code></pre>
+<ul>
+<li>--htpasswd : Archivo para el usuario y contraseña.</li>
+<li>/root/.config/rclone/htpasswd : Ruta del archivo <strong>htpasswd</strong> con el usuario y contraseña.</li>
+</ul>
+<p>También crearemos un volumen para guardar el archivo de texto plano. Como ves en el ejemplo, lo he nombrado como <code>webdav.log</code>.</p>
+<pre><code>
+volumes:
+- $HOME/docker/webdav/webdav.log:/webdav.log
+</code></pre>
+<h2>Errores</h2>
+<p>Recuerda consultar los <strong>logs</strong> en caso de errores al montar la nube.</p>
+<pre><code>
+docker logs -f webdav
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 11 de mayo de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-11-25</em> - <a href="../posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li><li><em>2023-11-19</em> - <a href="../posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li><li><em>2023-03-23</em> - <a href="../posts/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li><li><em>2022-12-22</em> - <a href="../posts/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li><li><em>2022-12-07</em> - <a href="../posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li><li><em>2022-03-29</em> - <a href="../posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li><li><em>2021-07-25</em> - <a href="../posts/2021-07-25-bash-en-docker.html">Bash en Docker</a></li><li><em>2021-07-02</em> - <a href="../posts/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li><li><em>2021-06-25</em> - <a href="../posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li><li><em>2021-06-17</em> - <a href="../posts/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

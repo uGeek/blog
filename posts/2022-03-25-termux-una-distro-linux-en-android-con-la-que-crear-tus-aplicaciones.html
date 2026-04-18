@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Termux. Una distro Linux en Android con la que crear tus aplicaciones</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Termux es una aplicación que podemos instalar desde F-Droid con la que podemos correr una distro Linux dentro de Android. Vamos a ver muchas de las posibilidades disponibles para poder correr nuestro scripts favoritos dentro de Android. Actualizar distro termux pkg upgrade Almacenamiento Android Para acceder al almacenamiento de directorios de nuestro movil android, tenemos que dar permisos a termux para acceder. Lo haremos del siguiente modo: termux-setup-storage Vamos ha hacer un ls para listar todos nuestro archivos y directorios: ls storage/shared /usr /bin ... Termux no sigue el estándar de jerarquía a diferencia de la mayoría de las distribuciones de Linux. No puede encontrar directorios como /bin, /etc, /usr, /tmp y otros en las ubicaciones habituales. Para los scripts con #!/bin/sh es posible que sea necesario ejecutar: termux-fix-shebang Las últimas versiones traen un paquete termux-exec que permite el uso de she-bangs estándar. Termux-exec permite ejecutar scripts con shebangs para...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Termux. Una distro Linux en Android con la que crear tus aplicaciones">
+    <meta property="og:description" content="Termux es una aplicación que podemos instalar desde F-Droid con la que podemos correr una distro Linux dentro de Android. Vamos a ver muchas de las posibilidades disponibles para poder correr nuestro scripts favoritos dentro de Android. Actualizar distro termux pkg upgrade Almacenamiento Android Para acceder al almacenamiento de directorios de nuestro movil android, tenemos que dar permisos a termux para acceder. Lo haremos del siguiente modo: termux-setup-storage Vamos ha hacer un ls para listar todos nuestro archivos y directorios: ls storage/shared /usr /bin ... Termux no sigue el estándar de jerarquía a diferencia de la mayoría de las distribuciones de Linux. No puede encontrar directorios como /bin, /etc, /usr, /tmp y otros en las ubicaciones habituales. Para los scripts con #!/bin/sh es posible que sea necesario ejecutar: termux-fix-shebang Las últimas versiones traen un paquete termux-exec que permite el uso de she-bangs estándar. Termux-exec permite ejecutar scripts con shebangs para...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Termux._Una_distro_Linux_en_Android_con_la_que_crear_tus_aplicaciones.png">
+    <meta property="og:url" content="termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones">
+    <meta name="twitter:title" content="Termux. Una distro Linux en Android con la que crear tus aplicaciones">
+    <meta name="twitter:description" content="Termux es una aplicación que podemos instalar desde F-Droid con la que podemos correr una distro Linux dentro de Android. Vamos a ver muchas de las posibilidades disponibles para poder correr nuestro scripts favoritos dentro de Android. Actualizar distro termux pkg upgrade Almacenamiento Android Para acceder al almacenamiento de directorios de nuestro movil android, tenemos que dar permisos a termux para acceder. Lo haremos del siguiente modo: termux-setup-storage Vamos ha hacer un ls para listar todos nuestro archivos y directorios: ls storage/shared /usr /bin ... Termux no sigue el estándar de jerarquía a diferencia de la mayoría de las distribuciones de Linux. No puede encontrar directorios como /bin, /etc, /usr, /tmp y otros en las ubicaciones habituales. Para los scripts con #!/bin/sh es posible que sea necesario ejecutar: termux-fix-shebang Las últimas versiones traen un paquete termux-exec que permite el uso de she-bangs estándar. Termux-exec permite ejecutar scripts con shebangs para...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Termux._Una_distro_Linux_en_Android_con_la_que_crear_tus_aplicaciones.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Termux. Una distro Linux en Android con la que crear tus aplicaciones</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 6 min. 1109 palabras. <a href="../categories/termux.html">termux</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Termux es una aplicación que podemos instalar desde <a href="https://f-droid.org/repository/browse/?fdid=com.termux">F-Droid</a> con la que podemos correr una distro Linux dentro de Android.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/Termux._Una_distro_Linux_en_Android_con_la_que_crear_tus_aplicaciones.png" alt=""></p>
+<p>Vamos a ver muchas de las posibilidades disponibles para poder correr nuestro scripts favoritos dentro de Android.</p>
+<h2>Actualizar distro termux</h2>
+<pre><code>
+pkg upgrade
+</code></pre>
+<h2>Almacenamiento Android</h2>
+<p>Para acceder al almacenamiento de directorios de nuestro movil android, tenemos que dar permisos a <strong>termux</strong> para acceder. Lo haremos del siguiente modo:</p>
+<pre><code>
+termux-setup-storage
+</code></pre>
+<p>Vamos ha hacer un <code>ls</code> para listar todos nuestro archivos y directorios:</p>
+<pre><code>
+ls storage/shared
+</code></pre>
+<h2>/usr /bin ...</h2>
+<p>Termux no sigue el estándar de jerarquía a diferencia de la mayoría de las distribuciones de Linux. No puede encontrar directorios como /bin, /etc, /usr, /tmp y otros en las ubicaciones habituales.</p>
+<p>Para los scripts con <code>#!/bin/sh</code> es posible que sea necesario ejecutar:</p>
+<pre><code>
+termux-fix-shebang
+</code></pre>
+<p>Las últimas versiones traen un paquete <code>termux-exec</code> que permite el uso de she-bangs estándar.</p>
+<p>Termux-exec permite ejecutar scripts con shebangs para estructuras de archivos Unix tradicionales. Así que shebangs como <code>#!/bin/sh</code>y <code>#!/usr/bin/env python</code> deberían poder ejecutarse sin <a href="https://wiki.termux.com/wiki/Termux-fix-shebang">termux-fix-shebang</a>.</p>
+<pre><code>
+termux-exec
+</code></pre>
+<h3>Directorios clásicos</h3>
+<p>Si quieres que un script se ejecute en la ruta <code>/usr/bin</code> o simplemente quieres disponer de la estructura de directorios clásicos, ejecuta los siguientes comandos:</p>
+<pre><code>
+pkg install proot
+termux-chroot
+</code></pre>
+<p>Ahora si hacemos un <code>ls</code>, veremos la estructura</p>
+<pre><code>
+ls /usr
+bin  doc  etc  include  lib  libexec  share  tmp  var
+</code></pre>
+<h2>Cron</h2>
+<p>Es posible utilizar cron en <strong>termux</strong>. Para ello instalaremos el siguiente paquete.</p>
+<p>Usa crontab como de costumbre en cualquier Linux, pero algunas limitaciones en caso de que Android mate y no deje correr en segundo plano la aplicación termux, si no es así, crontab funciona muy bien.</p>
+<pre><code>
+pkg install cronie
+pkg install termux-services
+sv-enable crond
+crontab -e
+</code></pre>
+<p>Abre el editor de texto predeterminado y escribe Por ejemplo :</p>
+<pre><code>
+ * * * * * mkdir ~/crontab-testing
+</code></pre>
+<p>Este trabajo cron se ejecuta cada minuto y crea ese directorio.</p>
+<p>Si tienes dudas de como crear crontabs, visita la web, <a href="https://crontab.guru/">https://crontab.guru/</a></p>
+<h2>Termux-api</h2>
+<p>Ahora llega una de mis partes favoritas. No me digas que todos mis scripts los puedo utilizar en Android gracias a Termux y utilizando la camara, geolocalización, tts, agenda,...</p>
+<p>Descarga el complemento Termux:API de <a href="https://f-droid.org/packages/com.termux.api/">F-Droid</a> o Google Play Store.</p>
+<h3>Instalación del paquete termux-api</h3>
+<p>Para usar Termux:API también necesita instalar el <a href="https://github.com/termux/termux-api-package">termux-api</a> .</p>
+<pre><code>
+pkg install termux-api
+</code></pre>
+<h3>Comparte con termux y ejecuta un script</h3>
+<p>Si compartimos un enlace con termux, termux ejecutará el script <code>~/bin/termux-url-opener</code> y añadirá aquello que compartamos en la variable <code>$1</code>.</p>
+<p>Así que en el script <strong>termux-url-opener</strong> tendremos que crear un menú o procesar aquello que compartamos.</p>
+<p>Hay que crear el directorio <code>~/bin</code> con el archivo dentro <code>termux-url-opener</code> y darle permisos de ejecución, <strong>si no no funcionará</strong>, con <code>chmod +x</code>.</p>
+<p>Termux es capaz de capturar varios intentos y ejecutar scripts de shell para actuar sobre ellos:</p>
+<ul>
+<li>Compartir archivos individuales con Termux.\</li>
+</ul>
+<p>Se ejecutará el siguiente identificador: <code>~/bin/termux-file-editor</code></p>
+<ul>
+<li>Abriendo en su editor popular usando un enlace simbólico:\</li>
+</ul>
+<p><code>ln -s $PREFIX/bin/nvim ~/bin/termux-file-editor</code></p>
+<ul>
+<li>Crear un identificador creando un archivo y cambiando los derechos de acceso:</li>
+</ul>
+<ol>
+<li><code>nano ~/bin/termux-file-editor</code>)</li>
+<li><code>chmod +x ~/bin/termux-file-editor</code>)</li>
+</ol>
+<ul>
+<li>Uso compartido de URL disponible en aplicaciones comunes (por ejemplo, Youtube).\</li>
+</ul>
+<p>Se ejecutará el siguiente identificador: <code>~/bin/termux-url-opener</code></p>
+<ul>
+<li>Compartir una URL para ser descargada.\</li>
+</ul>
+<p>Puede manejar la URL entrante editando el contenido.\</p>
+<p><code>yoursth-dl -f 'bestvideo[ext</code>mp4][height&lt;<code>720]+bestaudio' --restrict-filenames -o '~/storage/downloads/%(title)s-%(id)s.%(ext)s' $1</code></p>
+<p><a href="https://wiki.termux.com/wiki/Intents_and_Hooks">Fuente: Intenciones y Hooks - Termux Wiki</a></p>
+<h3>Cuadro de dialogo</h3>
+<p>Si ejecutamos <code>termux-dialog</code> en la terminal, nos abrirá un cuadro de dialogo, para introducir algún valor, texto, etc....</p>
+<h3>Mostrar texto en pantalla</h3>
+<p>Puedes mostrar un texto en pantalla. Hay muchas opciones de color, etc... Si quieres profundizar visita la wiki de termux en <a href="https://wiki.termux.com/wiki/Termux-toast">https://wiki.termux.com/wiki/Termux-toast</a>.</p>
+<pre><code>
+termux-toast [opciones] [texto]
+</code></pre>
+<p>Un ejemplo de mostrar un mensaje sería:</p>
+<pre><code>
+echo "Hola Mundo" | termux-toast
+</code></pre>
+<h3>Notificaciones</h3>
+<p>Podemos enviar Notificaciones a nuestro Android con:</p>
+<pre><code>
+termux-notification --content 'Esto es una notificación'
+</code></pre>
+<p>Hay muchísimas más opciones para profundizar en la <a href="https://wiki.termux.com/wiki/Termux-notification">wiki</a></p>
+<h3>Player</h3>
+<p>Reproduce un audio o video con:</p>
+<pre><code>
+termux-media-player play audio.mp3
+</code></pre>
+<p>Opciones:</p>
+<pre><code>
+info        Displays current playback information
+play        Resumes playback if paused
+play file   Plays specified media file
+pause       Pauses playback
+stop        Quits playback
+</code></pre>
+<h3>Grabar con el micro (Para podcast, jejeje)</h3>
+<pre><code>
+termux-microphone-record
+</code></pre>
+<p>Opciones: ### Options</p>
+<pre><code>
+-d           Start recording w/ defaults
+-f file      Start recording to specific file
+-l limit     Start recording w/ specified limit (in seconds, unlimited for 0)
+-e encoder   Start recording w/ specified encoder (aac, amr_wb, amr_nb)
+-b bitrate   Start recording w/ specified bitrate (in kbps)
+-r rate      Start recording w/ specified sampling rate (in Hz)
+-c count     Start recording w/ specified channel count (1, 2, ...)
+-i           Get info about current recording
+-q           Quits recording
+</code></pre>
+<h3>Portapapeles</h3>
+<p>Pegar en terminal el contenido que hay en el portapales:</p>
+<pre><code>
+termux-clipboard-get
+</code></pre>
+<h3>TTS</h3>
+<p>Sabéis que me encanta el tts. No hay nada mejor que la voz de google como tts.</p>
+<pre><code>
+echo "Hola" | termux-tts-speak
+</code></pre>
+<pre><code>
+termux-tts-speak [-e engine] [-l language] [-n region] [-v variant] [-p pitch] [-r rate] [-s stream] [text-to-speak]
+</code></pre>
+<p>Optiones</p>
+<pre><code>
+-e engine    TTS engine to use (see termux-tts-engines)
+-l language  language to speak in (may be unsupported by the engine)
+-n region    region of language to speak in
+-v variant   variant of the language to speak in
+-p pitch     pitch to use in speech. 1.0 is the normal pitch,
+lower values lower the tone of the synthesized voice,
+greater values increase it.
+-r rate      speech rate to use. 1.0 is the normal speech rate,
+lower values slow down the speech
+(0.5 is half the normal speech rate)
+while greater values accelerates it
+(2.0 is twice the normal speech rate).
+-s stream    audio stream to use (default:NOTIFICATION), one of:
+ALARM, MUSIC, NOTIFICATION, RING, SYSTEM, VOICE_CALL
+</code></pre>
+<p>Descarga el complemento de en <a href="https://f-droid.org/en/packages/com.termux.widget">F-Droid</a></p>
+<p>Es un de complemento de Termux para ejecutar scripts en Termux con accesos directos y widgets del iniciador.</p>
+<p>Los scripts que dejemos en la ruta <code>~/.shortcuts/</code>, se visualizará en el Widget.</p>
+<p>Las tareas que se ejecutaran, están en la ruta <code>~/.shortcuts/tasks</code></p>
+<p>los iconos se almacenan en <code>~/.shortcuts/icons</code> que se usará para un script cuando se cree un acceso directo del iniciador para la versión <code>&gt;</code> 0.12<code>. El nombre del archivo del icono debe ser igual a</code> &lt;script_name&gt;.png<code>, por ejemplo</code> script.sh.png<code>. Para</code> 1080p= <code>~6in</code>pantalla, algo como <code>96x96px</code> <code>png</code>el archivo probablemente debería estar bien, de lo contrario intente <code>144px</code>o <code>196px</code>para pantallas de mayor resolución.</p>
+<h2>Complementos disponibles</h2>
+<h2>Complementos</h2>
+<p>Termux tiene algunas características adicionales. Puede agregarlos instalando complementos:</p>
+<p><a href="https://wiki.termux.com/wiki/Termux:API">Termux:API</a></p>
+<p>Acceda a las funciones de hardware de Android y Chrome.</p>
+<p><a href="https://wiki.termux.com/wiki/Termux:Boot">Termux:Boot</a></p>
+<p>Ejecute secuencias de comandos cuando arranque su dispositivo.</p>
+<p><a href="https://wiki.termux.com/wiki/Termux:Float">Termux:Float</a></p>
+<p>Ejecute Termux en una ventana flotante.</p>
+<p><a href="https://wiki.termux.com/wiki/Termux:Styling">Termux:Styling</a></p>
+<p>Haga que los esquemas de color y las fuentes preparadas para la línea eléctrica personalicen la apariencia del terminal Termux.</p>
+<p><a href="https://wiki.termux.com/wiki/Termux:Tasker">Termux:Tasker</a></p>
+<p>Una manera fácil de llamar a los ejecutables de Termux desde Tasker y aplicaciones compatibles.</p>
+<p><a href="https://wiki.termux.com/wiki/Termux:Widget">Termux:Widget</a></p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://wiki.termux.com/wiki/Differences_from_Linux">https://wiki.termux.com/wiki/Differences_from_Linux</a></li>
+<li><a href="https://wiki.termux.com/wiki/Termux-setup-storage">https://wiki.termux.com/wiki/Termux-setup-storage</a></li>
+<li><a href="https://www.reddit.com/r/termux/comments/i27szk/how_do_i_crontab_on_termux/">https://www.reddit.com/r/termux/comments/i27szk/how_do_i_crontab_on_termux/</a></li>
+<li><a href="https://wiki.termux.com/wiki/Termux:API">https://wiki.termux.com/wiki/Termux:API</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 25 de marzo de 2022</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-02-06</em> - <a href="../posts/2023-02-06-servidor-ssh-en-termux-android.html">Servidor SSH en Termux Android</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

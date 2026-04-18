@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente. Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc... Como explicaba al principio, esto es ideal por si tienes hijos, en empresas,... si están muy enganchados a WhatsApp, Facebook y Twitter, por ejemplo, puedes caparle e acceso a estos servicios, permitiendo el resto. Eso si, como puedes filtrar por usuarios, tu como administrador puedes decidir quien tiene acceso a cada que. Vamos a crear un docker con AdGuard. Docker-compose Podemos instalar AdGuard Home en cualquiera de las arquitecturas, x86-64,...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home">
+    <meta property="og:description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente. Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc... Como explicaba al principio, esto es ideal por si tienes hijos, en empresas,... si están muy enganchados a WhatsApp, Facebook y Twitter, por ejemplo, puedes caparle e acceso a estos servicios, permitiendo el resto. Eso si, como puedes filtrar por usuarios, tu como administrador puedes decidir quien tiene acceso a cada que. Vamos a crear un docker con AdGuard. Docker-compose Podemos instalar AdGuard Home en cualquiera de las arquitecturas, x86-64,...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">
+    <meta property="og:url" content="docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home">
+    <meta name="twitter:title" content="Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home">
+    <meta name="twitter:description" content="Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente. Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc... Como explicaba al principio, esto es ideal por si tienes hijos, en empresas,... si están muy enganchados a WhatsApp, Facebook y Twitter, por ejemplo, puedes caparle e acceso a estos servicios, permitiendo el resto. Eso si, como puedes filtrar por usuarios, tu como administrador puedes decidir quien tiene acceso a cada que. Vamos a crear un docker con AdGuard. Docker-compose Podemos instalar AdGuard Home en cualquiera de las arquitecturas, x86-64,...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Docker: Filtrando la publicidad y el acceso a redes sociales con AdGuard Home</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 406 palabras. <a href="../categories/docker.html">docker</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Hace unos 2 años que dejé de utilizar Pi-hole en favor de AdGuard Home, ya que me permite no solo filtrar toda la publicidad en todos los dispositivos, sino que también me permite decidir que filtrar por dispositivos de un modo independiente.</p>
+<p>Otra de las virtudes, es que trae por defecto el posibilidad de filtrar redes sociales, aplicaciones de mensajería, plataformas de streaming, como Facebook, Twitter, Youtube, Netflix, Tik Tok, Spotify, WhatsApp, Amazon, Telegram, Disney+, Reddit, y un largo etc...</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/Docker:_Filtrando_la_publicidad_y_el_acceso_a_redes_sociales_con_AdGuard_Home.png" alt=""></p>
+<p>Como explicaba al principio, esto es ideal por si tienes hijos, en empresas,... si están muy enganchados a WhatsApp, Facebook y Twitter, por ejemplo, puedes caparle e acceso a estos servicios, permitiendo el resto.</p>
+<p>Eso si, como puedes filtrar por usuarios, tu como administrador puedes decidir quien tiene acceso a cada que.</p>
+<p>Vamos a crear un docker con AdGuard.</p>
+<h2>Docker-compose</h2>
+<p>Podemos instalar AdGuard Home en cualquiera de las arquitecturas, x86-64, arm, arm64, ... del siguiente modo gracias a docker-compose.</p>
+<pre><code>
+    adguard:
+        container_name: adguard 
+        image: adguard/adguardhome:latest
+        ports:
+          - '53:53/tcp'
+          - '53:53/udp'
+          - '67:67/udp'
+          - '80:80/tcp'
+          - '3000:3000/tcp'
+          - '443:443/tcp'
+          - '853:853/tcp'
+        restart: unless-stopped
+        volumes:
+          - $HOME/docker/adguard/work:/opt/adguardhome/work
+          - $HOME/docker/adguard/conf:/opt/adguardhome/conf
+</code></pre>
+<h2>Utilizar el DNS de AdGuard Home en Linux, si no habilitas el servidor DHCP</h2>
+<p>Para utilizar AdGuardHome en Linux sin activar el servidor DHCP, tenemos que conectarnos a la ip del servidor donde está instalado AdGuard.</p>
+<p>Para configurar las DNS en tu máquina con Linux:</p>
+<pre><code>
+sudo nano  /etc/resolv.conf
+</code></pre>
+<p>añadimos la primera opción con <strong>2</strong>, seguido de la DNS que vamos a utilizar. Ejem:</p>
+<p>Si la IP del servidor donde tenemos AdGuard es 192.168.1.100:</p>
+<pre><code>
+nameserver 192.168.1.100
+</code></pre>
+<h2>Cada reinicio se modifica el archivo resolv.conf</h2>
+<p>Si cada vez que reinicias se modifica el archivo resolv.conf y no quieres que suceda, tienes dos soluciones:</p>
+<ul>
+<li>Hacer que el archivo sea inalterable ejecutando el siguiente comando <code>sudo chattr +i /etc/resolv.conf</code></li>
+<li>Crear el nuevo archivo al reiniciar la máquina con crontab:</li>
+</ul>
+<p>Como usuario root:</p>
+<pre><code>
+sudo crontab -e
+</code></pre>
+<p>Creamos el nuevo archivo, añadiendo esto: Supongamos que la ip del AdGuard es 192.168.1.100</p>
+<pre><code>
+@reboot ( sleep 100 ; echo "nameserver 192.168.1.100" &gt; /etc/resolv.conf )
+</code></pre>
+<h2>Proveedores DNS</h2>
+<p>Podemos <a href="https://kb.adguard.com/en/general/dns-providers">personalizar las DNS en la siguiente url</a>.</p>
+<p>Yo actualmente estoy utilizando la famosa DNS de Cloudflare por https:</p>
+<pre><code>
+https://dns.cloudflare.com/dns-query
+</code></pre>
+<p>Para comprobar que la DNS que hemos seleccionado es la que realmente estamos utilizando, conectate a <a href="https://www.dnsleaktest.com/">https://www.dnsleaktest.com/</a> y selcciona <strong>7</strong>.</p>
+<h2>Conclusión</h2>
+<p>Un servicio sencillo y alucinante, del que podrás disfrutar.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 16 de abril de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-11-25</em> - <a href="../posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li><li><em>2023-11-19</em> - <a href="../posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li><li><em>2023-03-23</em> - <a href="../posts/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li><li><em>2022-12-22</em> - <a href="../posts/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li><li><em>2022-12-07</em> - <a href="../posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li><li><em>2022-03-29</em> - <a href="../posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li><li><em>2021-07-25</em> - <a href="../posts/2021-07-25-bash-en-docker.html">Bash en Docker</a></li><li><em>2021-07-02</em> - <a href="../posts/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li><li><em>2021-06-25</em> - <a href="../posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li><li><em>2021-06-17</em> - <a href="../posts/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

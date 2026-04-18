@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supysonic 0.5.0. Total compatibilidad con todos los clientes Subsonic</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Como os comenté en el podcast y artículo sobre Supysonic, una de las limitaciones que tenía, es la limitación de su api que hacia que no fuera 100% compatible con la totalidad de clientes para Subsonic disponibles. Eso hacía que aplicaciones como Clementine en escritorio o la propia aplicación oficial de Subsonic, no funcionaran con este servidor. Esto ha llegado a su fin!!! Con la nueva actualización del servidor de Supysonic versión 0.5.0, actualizada hace solo 6 dias, ha mejorado y actualizado su api y ahora podrás utilizarlo con el cliente que desees. Como podrás imaginar, no me he podido resistir a actualizar el docker. Ahora mientras estoy utilizando mi PC, estoy escuchando música en streaming con Clementine, gracias al docker montado con el servidor Supysonic en mi Raspberry. Si tienes una versión anterior de Supysonic, el volumen de configuración es incompatible con esta nueva versión, tendrás que crear un...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Supysonic 0.5.0. Total compatibilidad con todos los clientes Subsonic">
+    <meta property="og:description" content="Como os comenté en el podcast y artículo sobre Supysonic, una de las limitaciones que tenía, es la limitación de su api que hacia que no fuera 100% compatible con la totalidad de clientes para Subsonic disponibles. Eso hacía que aplicaciones como Clementine en escritorio o la propia aplicación oficial de Subsonic, no funcionaran con este servidor. Esto ha llegado a su fin!!! Con la nueva actualización del servidor de Supysonic versión 0.5.0, actualizada hace solo 6 dias, ha mejorado y actualizado su api y ahora podrás utilizarlo con el cliente que desees. Como podrás imaginar, no me he podido resistir a actualizar el docker. Ahora mientras estoy utilizando mi PC, estoy escuchando música en streaming con Clementine, gracias al docker montado con el servidor Supysonic en mi Raspberry. Si tienes una versión anterior de Supysonic, el volumen de configuración es incompatible con esta nueva versión, tendrás que crear un...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/subsonic.png">
+    <meta property="og:url" content="supysonic-050-total-compatibilidad-con-todos-los-clientes-subsonic">
+    <meta name="twitter:title" content="Supysonic 0.5.0. Total compatibilidad con todos los clientes Subsonic">
+    <meta name="twitter:description" content="Como os comenté en el podcast y artículo sobre Supysonic, una de las limitaciones que tenía, es la limitación de su api que hacia que no fuera 100% compatible con la totalidad de clientes para Subsonic disponibles. Eso hacía que aplicaciones como Clementine en escritorio o la propia aplicación oficial de Subsonic, no funcionaran con este servidor. Esto ha llegado a su fin!!! Con la nueva actualización del servidor de Supysonic versión 0.5.0, actualizada hace solo 6 dias, ha mejorado y actualizado su api y ahora podrás utilizarlo con el cliente que desees. Como podrás imaginar, no me he podido resistir a actualizar el docker. Ahora mientras estoy utilizando mi PC, estoy escuchando música en streaming con Clementine, gracias al docker montado con el servidor Supysonic en mi Raspberry. Si tienes una versión anterior de Supysonic, el volumen de configuración es incompatible con esta nueva versión, tendrás que crear un...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/subsonic.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Supysonic 0.5.0. Total compatibilidad con todos los clientes Subsonic</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 724 palabras. <a href="../categories/supysonic.html">supysonic</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Como os comenté en el podcast y artículo sobre Supysonic, una de las limitaciones que tenía, es la limitación de su <strong>api</strong> que hacia que no fuera 100% compatible con la totalidad de clientes para Subsonic disponibles. Eso hacía que aplicaciones como <strong>Clementine</strong> en escritorio o la propia aplicación oficial de <strong>Subsonic</strong>, no funcionaran con este servidor.</p>
+<p><strong>Esto ha llegado a su fin!!!</strong></p>
+<p><img src="https://ugeek.github.io/blog/images-blog/subsonic.png" alt=""></p>
+<p>Con la nueva actualización del servidor de Supysonic versión 0.5.0, actualizada hace solo 6 dias, ha mejorado y actualizado su <strong>api</strong> y ahora podrás utilizarlo con el cliente que desees.</p>
+<p>Como podrás imaginar, no me he podido resistir a actualizar <a href="https://hub.docker.com/r/ugeek/supysonic">el docker</a>.</p>
+<p>Ahora mientras estoy utilizando mi PC, estoy escuchando música en streaming con <a href="https://www.clementine-player.org/es/">Clementine</a>, gracias al docker montado con el servidor Supysonic en mi Raspberry.</p>
+<p><strong>Si tienes una versión anterior de Supysonic, el volumen de configuración es incompatible con esta nueva versión, tendrás que crear un volumen de configuración nuevo</strong>.</p>
+<p>Otra diferencia, es que algunos comandos de supysonic-cli, en esta versión han cambiado y son diferentes a versiones anteriores.</p>
+<h2>Montar Docker Versión 0.5.0</h2>
+<h3>Raspberry o ARM 32bits</h3>
+<pre><code>
+docker run --name supysonic --restart=unless-stopped -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:arm-0.5.0
+</code></pre>
+<p>Una vez se monte, se ejecutará el servidor, para salir tendremos que teclear en la terminal <strong>Ctrl+c</strong>.</p>
+<h3>amd64</h3>
+<pre><code>
+docker run --name supysonic --restart=unless-stopped -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:amd64-0.5.0
+</code></pre>
+<p>Una vez se monte, se ejecutará el servidor. Para salir tendremos que teclear en la terminal <strong>Ctrl+c</strong>.</p>
+<h2>Iniciando Supysonic</h2>
+<p>Iniciamos el docker</p>
+<pre><code>
+docker start supysonic
+</code></pre>
+<p>Entramos dentro del contenedor para crear el administrador</p>
+<pre><code>
+docker exec  -it supysonic sh
+</code></pre>
+<p>También podemos acceder a la interfaz web de adminstración a <a href="http://tu_ip:8080/">http://tu_ip:8080</a></p>
+<h3>Crear usuario</h3>
+<p>Dentro ya del conenedor, voy a crear el usuario <strong>angel</strong>.</p>
+<pre><code>
+supysonic-cli user add angel -p mi_contraseña
+</code></pre>
+<p>A este usuario, voy ha hacerlo administrador, para añadir mi biblioteca musical</p>
+<pre><code>
+supysonic-cli user  setroles -A angel
+</code></pre>
+<p>Si queremos cambiar la contraseña</p>
+<pre><code>
+supysonic-cli user changepass angel nueva_contraseña
+</code></pre>
+<h3>Añadir Biblioteca</h3>
+<p>Para añadir la biblioteca musical utilizaremo: <strong>supysonic-cli folder add <name> <path></path></name></strong></p>
+<p>La carpeta <strong>/media/</strong>, viene añadida por defecto. Si quieres añadir varias subcarpetas y escanerarla por separado como yo, tienes que eliminar esta carpeta por defecto, ya que no puede escanear subcarpetas que están dentro de una carpeta principal. Vamos, una carpeta compartida en dos bibliotecas.</p>
+<p>Tengo una carpeta donde añado las novedades, la carpeta <strong>new</strong>.</p>
+<pre><code>
+supysonic-cli folder add New /media/new/
+</code></pre>
+<p>Escanera la biblioteca con nombre <strong>New</strong>, en la carpeta <strong>/media/new/</strong></p>
+<pre><code>
+supysonic-cli folder scan -f New
+</code></pre>
+<p>Escanear simultáneamente dos subcarpetas que tengo, la carpeta <strong>new</strong> y <strong>favoritos</strong>.</p>
+<pre><code>
+supysonic-cli folder scan -f New Favoritos
+</code></pre>
+<h3>Mas opciones</h3>
+<p>Siguiendo los ejemplos anteriores, añado la ayuda disponible en <a href="https://github.com/spl0k/supysonic/blob/master/docs/cli.md">GitHub</a>.</p>
+<h2>Interfaz de línea de comandos</h2>
+<p>La interfaz de línea de comandos (a menudo abreviada CLI) es una interfaz que permite operaciones de administración sin el uso de la interfaz web. Puede ejecutarse en modo interactivo ( supysonic-cli) o emitir un solo comando ( supysonic-cli <argumentos>).</argumentos></p>
+<p>Si ejecuta sin argumentos, supysonic-cli abrirá un mensaje interactivo. Puede usar la herramienta de línea de comandos para hacer algunas cosas:</p>
+<h3>Comandos de ayuda</h3>
+<p>Cuando estas perdido...</p>
+<pre><code>
+Usage:
+    supysonic-cli help
+    supysonic-cli help user
+    supysonic-cli help folder
+
+Arguments:
+    user                        Display the help message for the user command
+    folder                      Display the help message for the folder command
+</code></pre>
+<h3>Comandos de gestión de usuarios</h3>
+<pre><code>
+Usage:
+    supysonic-cli user add &lt;user&gt; [-p &lt;password&gt;] [-e &lt;email&gt;]
+    supysonic-cli user delete &lt;user&gt;
+    supysonic-cli user changepass &lt;user&gt; &lt;password&gt;
+    supysonic-cli user list
+    supysonic-cli user setroles [-a|-A] [-j|-J] &lt;user&gt;
+
+Arguments:
+    add                         Add a new user
+    delete                      Delete the user
+    changepass                  Change the user's password
+    list                        List all the users
+    setroles                    Give or remove rights to the user
+
+Options:
+  -p --password &lt;password&gt;      Specify the user's password
+  -e --email &lt;email&gt;            Specify the user's email
+  -a --noadmin                  Revoke admin rights
+  -A --admin                    Grant admin rights
+  -j --nojukebox                Revoke jukebox rights
+  -J --jukebox                  Grant jukebox rights
+</code></pre>
+<h3>Comandos de gestión de carpetas</h3>
+<pre><code>
+Usage:
+    supysonic-cli folder add &lt;name&gt; &lt;path&gt;
+    supysonic-cli folder delete &lt;name&gt;
+    supysonic-cli folder list
+    supysonic-cli folder scan [-f] [--background | --foreground] [&lt;name&gt;...]
+
+Arguments:
+    add                         Add a new folder
+    delete                      Delete a folder
+    list                        List all the folders
+    scan                        Scan all or specified folders
+
+Options:
+  -f --force                    Force scan of already known files even if they
+                                haven't changed
+  --background                  Scan in the background. Requires the daemon to
+                                be running.
+  --foreground                  Scan in the foreground, blocking the process
+                                while the scan is running
+</code></pre>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://github.com/spl0k/supysonic">https://github.com/spl0k/supysonic</a></li>
+<li><a href="https://hub.docker.com/r/ugeek/supysonic">https://hub.docker.com/r/ugeek/supysonic</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 31 de diciembre de 2019</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

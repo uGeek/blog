@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compartiendo tus Dockers</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 3 minutos. 379 palabras. docker Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad. Ya os expliqué un ejemplo de como crear tu docker mediante los dockerfile. La verdad es que es muy pesado tener que crear la imagen de cero, cuando en realidad una vez hemos creado la imagen, podemos subirla al DockerHub y una vez allí, instalarlo en todos los dispositivos que sean compatibles con su arquitectura. Voy a explicarte como renombrar y subir esta imagen al DockerHub Iniciando en la terminal Dando por hecho que ya has creado tu cuenta en DockerHub, vamos a logearnos en nuestra terminal: docker login La terminal nos preguntará por nuestro usuario y contraseña. Nombre de la imagen El nombre de la imagen tiene esta estructura: /: Ejemplo: ugeek/ejabberd:arm Una vez tengamos la imagen creada siguiendo el Post como...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Compartiendo tus Dockers">
+    <meta property="og:description" content="Tiempo estimado de lectura: 3 minutos. 379 palabras. docker Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad. Ya os expliqué un ejemplo de como crear tu docker mediante los dockerfile. La verdad es que es muy pesado tener que crear la imagen de cero, cuando en realidad una vez hemos creado la imagen, podemos subirla al DockerHub y una vez allí, instalarlo en todos los dispositivos que sean compatibles con su arquitectura. Voy a explicarte como renombrar y subir esta imagen al DockerHub Iniciando en la terminal Dando por hecho que ya has creado tu cuenta en DockerHub, vamos a logearnos en nuestra terminal: docker login La terminal nos preguntará por nuestro usuario y contraseña. Nombre de la imagen El nombre de la imagen tiene esta estructura: /: Ejemplo: ugeek/ejabberd:arm Una vez tengamos la imagen creada siguiendo el Post como...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dockerhub.png">
+    <meta property="og:url" content="compartiendo-tus-dockers">
+    <meta name="twitter:title" content="Compartiendo tus Dockers">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 3 minutos. 379 palabras. docker Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad. Ya os expliqué un ejemplo de como crear tu docker mediante los dockerfile. La verdad es que es muy pesado tener que crear la imagen de cero, cuando en realidad una vez hemos creado la imagen, podemos subirla al DockerHub y una vez allí, instalarlo en todos los dispositivos que sean compatibles con su arquitectura. Voy a explicarte como renombrar y subir esta imagen al DockerHub Iniciando en la terminal Dando por hecho que ya has creado tu cuenta en DockerHub, vamos a logearnos en nuestra terminal: docker login La terminal nos preguntará por nuestro usuario y contraseña. Nombre de la imagen El nombre de la imagen tiene esta estructura: /: Ejemplo: ugeek/ejabberd:arm Una vez tengamos la imagen creada siguiendo el Post como...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dockerhub.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Compartiendo tus Dockers</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 295 palabras. <a href="../categories/docker.html">docker</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 3 minutos. 379 palabras. <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Después de haber dedicado un tiempo a crear tus dockers, que mejor manera que compartirlos con la comunidad.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/dockerhub.png" alt=""></p>
+<p>Ya os expliqué un ejemplo de <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">como crear tu docker mediante los dockerfile</a>. La verdad es que es muy pesado tener que crear la imagen de cero, cuando en realidad una vez hemos creado la imagen, podemos subirla al DockerHub y una vez allí, instalarlo en todos los dispositivos que sean compatibles con su arquitectura.</p>
+<p>Voy a explicarte como renombrar y subir esta imagen al DockerHub</p>
+<h2>Iniciando en la terminal</h2>
+<p>Dando por hecho que ya has creado tu cuenta en <a href="https://hub.docker.com/">DockerHub</a>, vamos a logearnos en nuestra terminal:</p>
+<p><code>docker login</code></p>
+<p>La terminal nos preguntará por nuestro usuario y contraseña.</p>
+<h2>Nombre de la imagen</h2>
+<p>El nombre de la imagen tiene esta estructura:</p>
+<p><strong><usuario>/<repositorio>:<etiqueta></etiqueta></repositorio></usuario></strong></p>
+<p>Ejemplo:</p>
+<p><code>ugeek/ejabberd:arm</code></p>
+<p>Una vez tengamos la imagen creada siguiendo el Post <a href="https://ugeek.github.io/blog/post/2019-02-10-servidor-ejabberd-xmpp-en-tu-raspberry-mediante-docker-y-dockerfile.html">como crear tu docker mediante los dockerfile</a>, vamos a renombrarla siguiendo la estructura.</p>
+<h2>Cambiar nombre de la imagen</h2>
+<p>Vamos a ver las imágenes:</p>
+<p><code>docker image</code></p>
+<p>Imagina que he creado un docker de webdav, para arquitectura arm. En el comando anterior, he tomado buena nota del número de la imagen <strong><img></strong>, para añadirlo en el siguiente comando.</p>
+<p><code>docker tag &lt;IMAGE&gt; ugeek/webdav:arm</code></p>
+<p>Si lo deseamos, ahora podemos borrar la imagen antigua.</p>
+<p><code>docker rmi &lt;IMAGE&gt;</code></p>
+<h2>Subir imagen</h2>
+<p>Igual que hariamos con <strong>git</strong>, vamos ha hacer un docker push para subir mi nueva imagen.</p>
+<p><code>docker push ugeek/webdav:arm</code></p>
+<h2>Conclusión</h2>
+<p>Esto era una cosa que no había hecho por pereza y la verdad es que funciona super bien. Ahora gracias a la copia de mis dockers en DockerHub, tengo un backup disponible para montarlo en cualquier máquina y lo puedo compartir. Te animo a probar y crear tus dockers.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 12 de junio de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-11-25</em> - <a href="../posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li><li><em>2023-11-19</em> - <a href="../posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li><li><em>2023-03-23</em> - <a href="../posts/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li><li><em>2022-12-22</em> - <a href="../posts/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li><li><em>2022-12-07</em> - <a href="../posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li><li><em>2022-03-29</em> - <a href="../posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li><li><em>2021-07-25</em> - <a href="../posts/2021-07-25-bash-en-docker.html">Bash en Docker</a></li><li><em>2021-07-02</em> - <a href="../posts/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li><li><em>2021-06-25</em> - <a href="../posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li><li><em>2021-06-17</em> - <a href="../posts/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

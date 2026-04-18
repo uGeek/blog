@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TigerVNC. Servidor VNC en Manjaro</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="TigerVNC es uno de los servidores que más me gusta para conectarme a mis escritorios remotos, ya que no solo me permite acceder al escritorio que está abierto, sino también abrir diferentes instancias en paralelo dentro de una misma sesión. Esto significa que varios usuarios pueden estar utilizando la misma sesión de usuario con diferentes entornos de escritorio, como puede ser i3, LXDE, gnome,etc... Es una posible solución práctica si te inicias en gestores de ventana como i3wm y no sabes cómo configurar ciertos parámetros, arrancas un escritorio en paralelo dentro de la misma sección y lo configuras de un modo más amigable. También es posible que no te guste que te vean como estás trabajando remotamente, en el lugar donde está situado el PC. Si accedes remotamente y hay una persona delante del PC, esa persona verá como mueves el cursor del ratón, abres ventanas, etcétera... Arrancando una nueva...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="TigerVNC. Servidor VNC en Manjaro">
+    <meta property="og:description" content="TigerVNC es uno de los servidores que más me gusta para conectarme a mis escritorios remotos, ya que no solo me permite acceder al escritorio que está abierto, sino también abrir diferentes instancias en paralelo dentro de una misma sesión. Esto significa que varios usuarios pueden estar utilizando la misma sesión de usuario con diferentes entornos de escritorio, como puede ser i3, LXDE, gnome,etc... Es una posible solución práctica si te inicias en gestores de ventana como i3wm y no sabes cómo configurar ciertos parámetros, arrancas un escritorio en paralelo dentro de la misma sección y lo configuras de un modo más amigable. También es posible que no te guste que te vean como estás trabajando remotamente, en el lugar donde está situado el PC. Si accedes remotamente y hay una persona delante del PC, esa persona verá como mueves el cursor del ratón, abres ventanas, etcétera... Arrancando una nueva...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/tightvnc.png">
+    <meta property="og:url" content="tigervnc-servidor-vnc-en-manjaro">
+    <meta name="twitter:title" content="TigerVNC. Servidor VNC en Manjaro">
+    <meta name="twitter:description" content="TigerVNC es uno de los servidores que más me gusta para conectarme a mis escritorios remotos, ya que no solo me permite acceder al escritorio que está abierto, sino también abrir diferentes instancias en paralelo dentro de una misma sesión. Esto significa que varios usuarios pueden estar utilizando la misma sesión de usuario con diferentes entornos de escritorio, como puede ser i3, LXDE, gnome,etc... Es una posible solución práctica si te inicias en gestores de ventana como i3wm y no sabes cómo configurar ciertos parámetros, arrancas un escritorio en paralelo dentro de la misma sección y lo configuras de un modo más amigable. También es posible que no te guste que te vean como estás trabajando remotamente, en el lugar donde está situado el PC. Si accedes remotamente y hay una persona delante del PC, esa persona verá como mueves el cursor del ratón, abres ventanas, etcétera... Arrancando una nueva...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/tightvnc.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>TigerVNC. Servidor VNC en Manjaro</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 5 min. 899 palabras. <a href="../categories/vnc.html">vnc</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p><img src="https://ugeek.github.io/blog/images-blog/tightvnc.png" alt=""></p>
+<p>TigerVNC es uno de los servidores que más me gusta para conectarme a mis escritorios remotos, ya que no solo me permite acceder al escritorio que está abierto, sino también abrir diferentes instancias en paralelo dentro de una misma sesión. Esto significa que varios usuarios pueden estar utilizando la misma sesión de usuario con diferentes entornos de escritorio, como puede ser i3, LXDE, gnome,etc...</p>
+<p>Es una posible solución práctica si te inicias en gestores de ventana como i3wm y no sabes cómo configurar ciertos parámetros, arrancas un escritorio en paralelo dentro de la misma sección y lo configuras de un modo más amigable.</p>
+<p>También es posible que no te guste que te vean como estás trabajando remotamente, en el lugar donde está situado el PC. Si accedes remotamente y hay una persona delante del PC, esa persona verá como mueves el cursor del ratón, abres ventanas, etcétera...</p>
+<p>Arrancando una nueva instancia, no es necesario iniciar tu sesión de usuario y si está abierta podrás abrir una nueva sesión donde acceder a todos los archivos sin necesidad que te vean cómo estás trabajando remotamente.</p>
+<p>Otra idea interesante sería montarlo en un servidor, donde todos los usuarios tienen acceso a la misma sesión de usuario, compartiendo aplicaciones y archivos en común, puediendo estar trabajando desde diferentes PC con pocos recursos.</p>
+<p>Sea cual sea el uso que quieras darle, este servidor VNC no te decepcionará ya que es muy sencillo de instalar y muy liviano.</p>
+<h2>Instalar TigerVNC</h2>
+<pre><code>
+sudo pacman -S tigervnc
+</code></pre>
+<p>Este cliente incluye tanto el servidor como el cliente para conectarnos al servidor por vnc.</p>
+<h3>Establecer una contraseña para conexiones remotas</h3>
+<pre><code>
+vncpasswd
+</code></pre>
+<p>Nos pedirá que establezcamos una contraseña para conectar el cliente al servidor de un modo más seguro. Introduciremos las contraseña 2 veces, para no cometer errores y después nos preguntará si queremos introducir la contraseña para una sesión donde no podremos interactuar, solo ver. En mi caso indicaré que no <strong>n</strong></p>
+<h3>Designar asignaciones de usuarios y escritorios virtuales</h3>
+<pre><code>
+sudo nano /etc/tigervnc/vncserver.users
+</code></pre>
+<p>Dentro de este documento, asignará un escritorio virtual a usuarios específicos. Haces esto usando el formato de: 1 = nombre de usuario. El documento que hay, hay un par de ejemplos.</p>
+<p>Los dos puntos al principio de la línea son obligatorios, el número que sigue a los dos puntos representa el escritorio virtual que también representa el puerto que se usará para las conexiones remotas. Por ejemplo, :1 es el puerto 5901, :2 es el potenciómetro 5902.</p>
+<pre><code>
+TigerVNC User assignment
+#
+#
+</code></pre>
+<h2>Entornos de escritorios disponibles</h2>
+<p>Vamos a conocer los entornos de escritorios disponibles. Para ello haremos un <strong>ls</strong> en el siguiente directorio:</p>
+<pre><code>
+ls -1 /usr/share/xsessions
+
+gnome-classic.desktop
+gnome-classic-xorg.desktop
+gnome.desktop
+gnome-xorg.desktop
+i3.desktop
+i3-with-shmlog.desktop
+LXDE.desktop
+openbox.desktop
+openbox-kde.desktop
+</code></pre>
+<h2>Configurar configuración de usuario</h2>
+<p>En el directorio de inicio del usuario, crearemos el archivo de configuración para decirle a <strong>TigerVNC</strong> qué entorno de escritorio usar y la resolución.</p>
+<pre><code>
+nano ~/.vnc/config
+</code></pre>
+<p>Agrega o edita las siguientes líneas que están en el archivo de configuración. En mi caso voy a utilizar <strong>LXDE</strong>, con una resolución de <strong>1920x1080</strong>, y poder acceder desde fuera de la máquina host con <strong>alwaysshared</strong>.</p>
+<pre><code>
+session=LXDE
+geometry=1920x1080
+alwaysshared
+</code></pre>
+<p>Si te gusta ir cambiando de resoluciones, escritorios,.... puedes añadir más opciones y hacer uso de <strong>#</strong> para ir comentando...</p>
+<pre><code>
+session=LXDE
+#session=i3
+#session=gnome
+
+
+geometry=1920x1080     #pc
+#geometry=500x1024     #movil
+
+
+#localhost             #solo local
+alwaysshared
+</code></pre>
+<p>La resolución en este ejemplo es de <strong>500x1024</strong>, que es una resolución muy optima para consumir desde mi móvil y en posición vertical.</p>
+<p><strong>localhost</strong> está comentado con una <strong>#</strong> delante para poder acceder fuera de la maquina host. Si quitamos la <strong>#</strong>, no podremos acceder desde fuera de la máquina, solo desde la propia máquina.</p>
+<h2>Conocer la resolución de mi monitor y resoluciones disponibles</h2>
+<p>Con este comando, puedo conocer la resolución actual</p>
+<pre><code>
+xrandr |grep '*'
+</code></pre>
+<p>Para conocer todas las resoluciones disponibles, ejecuta el siguiente comando:</p>
+<pre><code>
+xrandr
+</code></pre>
+<h2>Instalar LXDE</h2>
+<p>Si te gusta como a mí <strong>LXDE</strong> y quieres instalarlo en tu máquina, introduce el siguiente comando:</p>
+<pre><code>
+sudo pacman -S lxde xscreensaver
+</code></pre>
+<p><strong>Pulsa Enter para instalar todos los paquetes</strong> sugeridos para <strong>LXDE</strong>.</p>
+<p>Se instalarán lxde-common, lxde-icon-theme, pacmanfm,...</p>
+<h2>Iniciar servidor</h2>
+<p>Para iniciar el servidor en la primera instancia, es tan sencillo como:</p>
+<pre><code>
+vncserver :1
+</code></pre>
+<p>Este servidor correrá por el puerto <strong>5901</strong>.</p>
+<p>Si queremos arrancar más instancias independientes, ejecutaremos tantas como necesitemos y cada una de estas irán ocupando los puertos <strong>5902</strong>, <strong>5903</strong>,...</p>
+<pre><code>
+vncserver :2
+vncserver :3
+vncserver :4
+...
+</code></pre>
+<h2>Accederesión abierta</h2>
+<pre><code>
+x0vncserver -display :0 -passwordfile ~/.vnc/passwd
+</code></pre>
+<h2>Crear un servicio para correr TigerVNC en segundo plano</h2>
+<p>Para la sesión <strong>19</strong>, crearemos el archivo <strong>21</strong></p>
+<pre><code>
+sudo nano /etc/systemd/system/tigervnc@:1.service
+</code></pre>
+<p>Pega el texto a continuación en el archivo y reemplaza el usuario <strong>23</strong> por tu usuario.</p>
+<pre><code>
+[Unit]
+Description=Remote desktop service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=angel
+PAMName=login
+PIDFile=/home/angel/.vnc/%H%i.pid
+ExecStart=/usr/bin/vncserver :1
+ExecStop=/usr/bin/vncserver -kill %i
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Habilita el servicio con:</p>
+<pre><code>
+sudo systemctl enable tigervnc@:1.service
+</code></pre>
+<p>Inicia el servicio con:</p>
+<pre><code>
+sudo systemctl start tigervnc@:1.service
+</code></pre>
+<p>Revisa el estado del servicio con:</p>
+<pre><code>
+sudo systemctl status tigervnc@:1.service
+</code></pre>
+<h2>Ver puertos</h2>
+<p>Para comprobar que realmente funciona el servidor y que el puerto está disponible, ejecuta el siguiente comando:</p>
+<pre><code>
+ss -tulpn
+</code></pre>
+<h2>Otro modo de ver puertos</h2>
+<p>Instala net-tools</p>
+<pre><code>
+sudo pacman -S net-tools
+</code></pre>
+<p>Veamos los puertos que coincidan por 590</p>
+<pre><code>
+netstat -tln | grep 590  
+</code></pre>
+<h2>No se salir de mi cliente vnc</h2>
+<p>Si maximizas la pantalla en tu PC cliente y no sabes salir, si está máquina tiene habilitado un servidor <strong>SSH</strong>, siempre puedes conectarte y si estás utilizando por ejemplo <strong>remmina</strong>, hacer un <code>kilall remmina</code>.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 06 de enero de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-07-10</em> - <a href="../posts/2022-07-10-tigervnc-el-cliente-vnc-mas-liviano.html">TigerVNC. El cliente vnc más liviano</a></li><li><em>2022-07-06</em> - <a href="../posts/2022-07-06-vinagre-cliente-vnc-para-linux.html">Vinagre. Cliente VNC para Linux</a></li><li><em>2021-11-01</em> - <a href="../posts/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html">Instalar RealVNC en Ubuntu con AppImage</a></li><li><em>2019-12-18</em> - <a href="../posts/2019-12-18-remmina-de-los-mejores-clientes-vnc.html">Remmina. De los mejores Clientes VNC</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear el Feed para el podcast en tu Blog con Jekyll</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 4 minutos. 458 palabras. jekyll Voy a explicar en este post, como generar el Feed del podcast de forma automática. Creamos un archivo podcast.xml en la raiz, con el siguiente contenido: --- layout: null --- <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" > <channel> <title>{{ site.podcast_title }}</title> <atom:link href="{{ site.url }}/feed/podcast" rel="self" type="application/rss+xml" /> <link>{{ site.url }}</link> <description>{{ site.podcast_description }}</description> <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate> <language>es-es</language> <sy:updatePeriod>hourly</sy:updatePeriod> <sy:updateFrequency>1</sy:updateFrequency> <generator>http://jekyllrb.com</generator> <itunes:summary>{{ site.podcast_summary }}</itunes:summary> <itunes:author>{{ site.podcast_author }}</itunes:author> <itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit> <itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /> <itunes:owner> <itunes:name>{{ site.podcast_owner }}</itunes:name> <itunes:email>{{ site.podcast_email }}</itunes:email> </itunes:owner> <managingEditor>{{ site.podcast_email }} ({{ site.podcast_owner }})</managingEditor> <itunes:subtitle>{{ site.podcast_subtitle }}</itunes:subtitle> <image> <title>{{ site.podcast_title }}</title> <url>{{ site.url }}{{ site.podcast_album_art }}</url> <link>{{ site.url }}</link> </image> <itunes:category text="{{ site.podcast_category }}"> <itunes:category text="{{ site.podcast_subcategory_one }}" /> <itunes:category text="{{ site.podcast_subcategory_two }}" /> </itunes:category> {% for ep in site.categories.podcast...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Crear el Feed para el podcast en tu Blog con Jekyll">
+    <meta property="og:description" content="Tiempo estimado de lectura: 4 minutos. 458 palabras. jekyll Voy a explicar en este post, como generar el Feed del podcast de forma automática. Creamos un archivo podcast.xml en la raiz, con el siguiente contenido: --- layout: null --- <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" > <channel> <title>{{ site.podcast_title }}</title> <atom:link href="{{ site.url }}/feed/podcast" rel="self" type="application/rss+xml" /> <link>{{ site.url }}</link> <description>{{ site.podcast_description }}</description> <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate> <language>es-es</language> <sy:updatePeriod>hourly</sy:updatePeriod> <sy:updateFrequency>1</sy:updateFrequency> <generator>http://jekyllrb.com</generator> <itunes:summary>{{ site.podcast_summary }}</itunes:summary> <itunes:author>{{ site.podcast_author }}</itunes:author> <itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit> <itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /> <itunes:owner> <itunes:name>{{ site.podcast_owner }}</itunes:name> <itunes:email>{{ site.podcast_email }}</itunes:email> </itunes:owner> <managingEditor>{{ site.podcast_email }} ({{ site.podcast_owner }})</managingEditor> <itunes:subtitle>{{ site.podcast_subtitle }}</itunes:subtitle> <image> <title>{{ site.podcast_title }}</title> <url>{{ site.url }}{{ site.podcast_album_art }}</url> <link>{{ site.url }}</link> </image> <itunes:category text="{{ site.podcast_category }}"> <itunes:category text="{{ site.podcast_subcategory_one }}" /> <itunes:category text="{{ site.podcast_subcategory_two }}" /> </itunes:category> {% for ep in site.categories.podcast...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll">
+    <meta name="twitter:title" content="Crear el Feed para el podcast en tu Blog con Jekyll">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 4 minutos. 458 palabras. jekyll Voy a explicar en este post, como generar el Feed del podcast de forma automática. Creamos un archivo podcast.xml en la raiz, con el siguiente contenido: --- layout: null --- <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" > <channel> <title>{{ site.podcast_title }}</title> <atom:link href="{{ site.url }}/feed/podcast" rel="self" type="application/rss+xml" /> <link>{{ site.url }}</link> <description>{{ site.podcast_description }}</description> <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate> <language>es-es</language> <sy:updatePeriod>hourly</sy:updatePeriod> <sy:updateFrequency>1</sy:updateFrequency> <generator>http://jekyllrb.com</generator> <itunes:summary>{{ site.podcast_summary }}</itunes:summary> <itunes:author>{{ site.podcast_author }}</itunes:author> <itunes:explicit>{{ site.podcast_explicit }}</itunes:explicit> <itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /> <itunes:owner> <itunes:name>{{ site.podcast_owner }}</itunes:name> <itunes:email>{{ site.podcast_email }}</itunes:email> </itunes:owner> <managingEditor>{{ site.podcast_email }} ({{ site.podcast_owner }})</managingEditor> <itunes:subtitle>{{ site.podcast_subtitle }}</itunes:subtitle> <image> <title>{{ site.podcast_title }}</title> <url>{{ site.url }}{{ site.podcast_album_art }}</url> <link>{{ site.url }}</link> </image> <itunes:category text="{{ site.podcast_category }}"> <itunes:category text="{{ site.podcast_subcategory_one }}" /> <itunes:category text="{{ site.podcast_subcategory_two }}" /> </itunes:category> {% for ep in site.categories.podcast...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Crear el Feed para el podcast en tu Blog con Jekyll</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 451 palabras. <a href="../categories/jekyll.html">jekyll</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 4 minutos. 458 palabras. <a href="https://ugeek.github.io/blog/categories/jekyll">jekyll</a></h5>
+<p>Voy a explicar en este post, como generar el Feed del podcast de forma automática.</p>
+<h2>Creamos un archivo podcast.xml en la raiz, con el siguiente contenido:</h2>
+<pre><code>---
+layout: null
+---
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+&gt;
+
+&lt;channel&gt;
+&lt;title&gt;{{ site.podcast_title }}&lt;/title&gt;
+&lt;atom:link href="{{ site.url }}/feed/podcast" rel="self" type="application/rss+xml" /&gt;
+&lt;link&gt;{{ site.url }}&lt;/link&gt;
+&lt;description&gt;{{ site.podcast_description }}&lt;/description&gt;
+&lt;lastBuildDate&gt;{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}&lt;/lastBuildDate&gt;
+&lt;language&gt;es-es&lt;/language&gt;
+&lt;sy:updatePeriod&gt;hourly&lt;/sy:updatePeriod&gt;
+&lt;sy:updateFrequency&gt;1&lt;/sy:updateFrequency&gt;
+&lt;generator&gt;http://jekyllrb.com&lt;/generator&gt;
+&lt;itunes:summary&gt;{{ site.podcast_summary }}&lt;/itunes:summary&gt;
+&lt;itunes:author&gt;{{ site.podcast_author }}&lt;/itunes:author&gt;
+&lt;itunes:explicit&gt;{{ site.podcast_explicit }}&lt;/itunes:explicit&gt;
+&lt;itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /&gt;
+&lt;itunes:owner&gt;
+&lt;itunes:name&gt;{{ site.podcast_owner }}&lt;/itunes:name&gt;
+&lt;itunes:email&gt;{{ site.podcast_email }}&lt;/itunes:email&gt;
+&lt;/itunes:owner&gt;
+&lt;managingEditor&gt;{{ site.podcast_email }} ({{ site.podcast_owner }})&lt;/managingEditor&gt;
+&lt;itunes:subtitle&gt;{{ site.podcast_subtitle }}&lt;/itunes:subtitle&gt;
+&lt;image&gt;
+&lt;title&gt;{{ site.podcast_title }}&lt;/title&gt;
+&lt;url&gt;{{ site.url }}{{ site.podcast_album_art }}&lt;/url&gt;
+&lt;link&gt;{{ site.url }}&lt;/link&gt;
+&lt;/image&gt;
+&lt;itunes:category text="{{ site.podcast_category }}"&gt;
+&lt;itunes:category text="{{ site.podcast_subcategory_one }}" /&gt;
+&lt;itunes:category text="{{ site.podcast_subcategory_two }}" /&gt;
+&lt;/itunes:category&gt;
+{% for ep in site.categories.podcast %}
+  &lt;item&gt;
+    &lt;title&gt;{{ ep.title }}&lt;/title&gt;
+    &lt;link&gt;{{ site.url }}{{ ep.url }}&lt;/link&gt;
+    &lt;comments&gt;{{ site.url }}{{ ep.url }}#comments&lt;/comments&gt;
+    &lt;pubDate&gt;{{ ep.date | date: "%a, %d %b %Y %T %z" }}&lt;/pubDate&gt;
+    &lt;dc:creator&gt;&lt;![CDATA[{{ site.author | cdata_escape }}]]&gt;&lt;/dc:creator&gt;
+{% for category in ep.categories %}
+    &lt;category&gt;&lt;![CDATA[{{ category | cdata_escape }}]]&gt;&lt;/category&gt;
+{% endfor %}
+{% for category in ep.tags %}
+    &lt;category&gt;&lt;![CDATA[{{ category | cdata_escape }}]]&gt;&lt;/category&gt;
+{% endfor %}
+    &lt;guid isPermaLink="{% if ep.podcast_guid %}false{% else %}true{% endif %}"&gt;{{ site.url }}{% if ep.podcast_guid %}/{{ ep.podcast_guid }}{% else %}{{ ep.url }}{% endif %}&lt;/guid&gt;
+    &lt;description&gt;
+        &lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;
+    &lt;/description&gt;
+    &lt;content:encoded&gt;
+        &lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;
+    &lt;/content:encoded&gt;
+
+    &lt;enclosure url="{{ ep.podcast_link }}" length="{{ ep.podcast_length }}" type="audio/mpeg" /&gt;
+    &lt;itunes:subtitle&gt;&lt;![CDATA[{{ ep.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]&gt;&lt;/itunes:subtitle&gt;
+    &lt;itunes:summary&gt;&lt;![CDATA[{{ ep.content | expand_urls: site.url | cdata_escape }}]]&gt;&lt;/itunes:summary&gt;
+    &lt;itunes:author&gt;{{ site.podcast_author }}&lt;/itunes:author&gt;
+    &lt;itunes:image href="{{ site.url }}{{ site.podcast_album_art }}" /&gt;
+    &lt;itunes:explicit&gt;{{ site.podcast_explicit }}&lt;/itunes:explicit&gt;
+    &lt;itunes:duration&gt;{{ ep.podcast_duration }}&lt;/itunes:duration&gt;
+  &lt;/item&gt;
+{% endfor %}
+&lt;/channel&gt;
+&lt;/rss&gt;
+</code></pre>
+<h2>Añadimos en el archivo _config.yml, el siguiente contenido:</h2>
+<pre><code># Podcast Feed Settings
+podcast_url: https://ugeek.github.io
+podcast_album_art: https://ugeek.github.io/img/ugeek.png
+podcast_title: uGeek
+podcast_owner: Angel
+podcast_email: ugeekpodcast@gmail.com
+podcast_category: Technology
+podcast_subcategory_one: Linux
+podcast_subcategory_two: Gadgets
+podcast_explicit: "no"
+podcast_author: Angel
+podcast_description: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+podcast_summary: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+podcast_subtitle: Podcast de Tecnología en el que hablo de GNU/Linux, Raspberry Pi, servidores y tecnología en general.
+</code></pre>
+<h2>Por último, añadiremos en cada post, que es un podcast, el link del mp3, imagen, tags, etc…</h2>
+<pre><code>---
+layout: post
+title: "046. Sincronización de carpetas entre dispositivos. Syncthing, Resilio y Dukto"
+date: 2017-04-21
+categories: podcast
+image: img/ugeek.png
+podcast_link: https://ia601509.us.archive.org/6/items/046SyncthingResilioYDukto/%23046%20Syncthing%2c%20Resilio%20y%20Dukto%20.mp3
+tags: [syncthing, resilio, dukto, sincronización carpetas, podcast]
+comments: true
+---
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 21 de enero de 2019</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

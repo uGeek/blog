@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Con Emacs también podemos editar Markdown</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 2 minutos. 292 palabras. emacs He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?. Por supuesto que Sí!!! Y es que Emacs no solo funciona con Org Mode, sino que con cualquier sintaxis o cosa que se os ocurra. Hoy vamos a utilizar Emacs como editor de Markdown. Voy a dividir el post en 2 partes, resaltado de sintaxis y previsulización del documento que estamos editando con refresco instantáneo. Resaltado de Sintaxis Para que Emacs resalte la sintaxis de Markdown, necesitamos instalar un paquete que encontraremos en Melpa, markdown-mode. Instalación M-x package-install RET markdown-mode RET Previsualización del documento Para previsualizar el documento, instalaremos el paquete también de Melpa, Flymd. Instalación: M-x package-install RET flymd RET Ahora si queremos previsualizar el documento, solo tenemos que introducir en...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Con Emacs también podemos editar Markdown">
+    <meta property="og:description" content="Tiempo estimado de lectura: 2 minutos. 292 palabras. emacs He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?. Por supuesto que Sí!!! Y es que Emacs no solo funciona con Org Mode, sino que con cualquier sintaxis o cosa que se os ocurra. Hoy vamos a utilizar Emacs como editor de Markdown. Voy a dividir el post en 2 partes, resaltado de sintaxis y previsulización del documento que estamos editando con refresco instantáneo. Resaltado de Sintaxis Para que Emacs resalte la sintaxis de Markdown, necesitamos instalar un paquete que encontraremos en Melpa, markdown-mode. Instalación M-x package-install RET markdown-mode RET Previsualización del documento Para previsualizar el documento, instalaremos el paquete también de Melpa, Flymd. Instalación: M-x package-install RET flymd RET Ahora si queremos previsualizar el documento, solo tenemos que introducir en...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="con-emacs-tambien-podemos-editar-markdown">
+    <meta name="twitter:title" content="Con Emacs también podemos editar Markdown">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 2 minutos. 292 palabras. emacs He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?. Por supuesto que Sí!!! Y es que Emacs no solo funciona con Org Mode, sino que con cualquier sintaxis o cosa que se os ocurra. Hoy vamos a utilizar Emacs como editor de Markdown. Voy a dividir el post en 2 partes, resaltado de sintaxis y previsulización del documento que estamos editando con refresco instantáneo. Resaltado de Sintaxis Para que Emacs resalte la sintaxis de Markdown, necesitamos instalar un paquete que encontraremos en Melpa, markdown-mode. Instalación M-x package-install RET markdown-mode RET Previsualización del documento Para previsualizar el documento, instalaremos el paquete también de Melpa, Flymd. Instalación: M-x package-install RET flymd RET Ahora si queremos previsualizar el documento, solo tenemos que introducir en...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Con Emacs también podemos editar Markdown</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 1 min. 185 palabras. <a href="../categories/emacs.html">emacs</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 2 minutos. 292 palabras. <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<p>He hablado de como crear tus archivos Org Mode mediante Emacs, pero… ¿Realmente vale la pena invertir tiempo en aprender los atajos de teclado y el funcionamiento de Emacs?. Por supuesto que Sí!!! Y es que Emacs no solo funciona con Org Mode, sino que con cualquier sintaxis o cosa que se os ocurra. Hoy vamos a utilizar Emacs como editor de Markdown. Voy a dividir el post en 2 partes, resaltado de sintaxis y previsulización del documento que estamos editando con refresco instantáneo. Resaltado de Sintaxis</p>
+<p>Para que Emacs resalte la sintaxis de Markdown, necesitamos instalar un paquete que encontraremos en <a href="https://melpa.org/">Melpa</a>, <a href="https://github.com/jrblevin/markdown-mode">markdown-mode</a>.</p>
+<h2>Instalación</h2>
+<p><code>M-x package-install RET markdown-mode RET</code></p>
+<h2>Previsualización del documento</h2>
+<p>Para previsualizar el documento, instalaremos el paquete también de Melpa, Flymd.</p>
+<p>Instalación:</p>
+<p><code>M-x package-install RET flymd RET</code></p>
+<p>Ahora si queremos previsualizar el documento, solo tenemos que introducir en Emacs:</p>
+<p><code>M-x flymd-flyit</code></p>
+<p>Esto, nos lanzará un archivo temporal y abrirá nuestro navegador web, para previsualizar el documento.</p>
+<p>Por defecto se refresca en tiempo real y que podemos deshabilitar</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el jueves, 03 de enero de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-03-18</em> - <a href="../posts/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li><li><em>2022-03-08</em> - <a href="../posts/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li><li><em>2021-07-28</em> - <a href="../posts/2021-07-28-editando-csv-usando-emacs.html">Editando CSV usando Emacs</a></li><li><em>2021-04-15</em> - <a href="../posts/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li><li><em>2020-10-26</em> - <a href="../posts/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html">Borrando líneas en blanco de un texto con Emacs</a></li><li><em>2020-10-24</em> - <a href="../posts/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li><li><em>2020-09-03</em> - <a href="../posts/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html">Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li><li><em>2020-08-12</em> - <a href="../posts/2020-08-12-compilar-emacs-271-para-ubuntu-debian-raspbian-y-derivadas.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li><li><em>2020-06-16</em> - <a href="../posts/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li><li><em>2020-02-12</em> - <a href="../posts/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

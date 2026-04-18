@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt. Para ello, aunque existe otros clientes webdav, me ha parecido más simple y eficaz utilizar rclone. Esto podremos hacerlo con cualquier nube pública, privada, como Webdav, Nextcloud, Dropbox, Google Drive, OneDrive,... SSH, SFTP,... vamos, todas las opciones disponibles con Rclone. Incluso, una opción interesante, cifrar el contenido de una carpeta local con rclone, sincronizar esta con Syncthing y montarla con rclone en otro pc o servidor. Voy a explicarlo paso a paso. Para entender más en profundidad como montar una nube con rclone, recomiendo este artículo que hice profundizando sobre el tema. Crear el directorio donde montaremos el contenido Voy a crear la carpeta donde montaré mis archivos orgmode. La llamaré org. #+begin_example mkdir ~/org #+end_example Descomenta --allow-others Descomenta la línea --allow-others, para permitir a usuarios no root,...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone">
+    <meta property="og:description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt. Para ello, aunque existe otros clientes webdav, me ha parecido más simple y eficaz utilizar rclone. Esto podremos hacerlo con cualquier nube pública, privada, como Webdav, Nextcloud, Dropbox, Google Drive, OneDrive,... SSH, SFTP,... vamos, todas las opciones disponibles con Rclone. Incluso, una opción interesante, cifrar el contenido de una carpeta local con rclone, sincronizar esta con Syncthing y montarla con rclone en otro pc o servidor. Voy a explicarlo paso a paso. Para entender más en profundidad como montar una nube con rclone, recomiendo este artículo que hice profundizando sobre el tema. Crear el directorio donde montaremos el contenido Voy a crear la carpeta donde montaré mis archivos orgmode. La llamaré org. #+begin_example mkdir ~/org #+end_example Descomenta --allow-others Descomenta la línea --allow-others, para permitir a usuarios no root,...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/rclone.png">
+    <meta property="og:url" content="cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-webdav-nextcloud-o-publica-drive-dropbox-onedrive-con-rclone">
+    <meta name="twitter:title" content="Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone">
+    <meta name="twitter:description" content="Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt. Para ello, aunque existe otros clientes webdav, me ha parecido más simple y eficaz utilizar rclone. Esto podremos hacerlo con cualquier nube pública, privada, como Webdav, Nextcloud, Dropbox, Google Drive, OneDrive,... SSH, SFTP,... vamos, todas las opciones disponibles con Rclone. Incluso, una opción interesante, cifrar el contenido de una carpeta local con rclone, sincronizar esta con Syncthing y montarla con rclone en otro pc o servidor. Voy a explicarlo paso a paso. Para entender más en profundidad como montar una nube con rclone, recomiendo este artículo que hice profundizando sobre el tema. Crear el directorio donde montaremos el contenido Voy a crear la carpeta donde montaré mis archivos orgmode. La llamaré org. #+begin_example mkdir ~/org #+end_example Descomenta --allow-others Descomenta la línea --allow-others, para permitir a usuarios no root,...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/rclone.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 476 palabras. <a href="../categories/rclone.html">rclone</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Muchos me habéis preguntado como edito con emacs mis archivos orgmode que tengo en mi nube webdav, así como mi archivo todo.txt.</p>
+<p>Para ello, aunque existe otros clientes webdav, me ha parecido más simple y eficaz utilizar rclone.</p>
+<p>Esto podremos hacerlo con cualquier nube pública, privada, como Webdav, Nextcloud, Dropbox, Google Drive, OneDrive,... SSH, SFTP,... vamos, todas las opciones disponibles con Rclone.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/rclone.png" alt=""></p>
+<p>Incluso, una opción interesante, cifrar el contenido de una carpeta local con rclone, sincronizar esta con Syncthing y montarla con rclone en otro pc o servidor.</p>
+<p>Voy a explicarlo paso a paso.</p>
+<p>Para entender más en profundidad como montar una nube con rclone, recomiendo <a href="https://ugeek.github.io/blog/post/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html">este artículo que hice profundizando sobre el tema</a>.</p>
+<h2>Crear el directorio donde montaremos el contenido</h2>
+<p>Voy a crear la carpeta donde montaré mis archivos <strong>orgmode</strong>. La llamaré <strong>org</strong>.</p>
+<p>#+begin_example</p>
+<p>mkdir ~/org</p>
+<p>#+end_example</p>
+<h2>Descomenta --allow-others</h2>
+<p>Descomenta la línea --allow-others, para permitir a usuarios no root, montar unidades</p>
+<p>#+begin_example</p>
+<p>sudo nano /etc/fuse.conf</p>
+<p>#+end_example</p>
+<p>Descomenta --allow-others</p>
+<p>#+begin_example</p>
+<p># Allow non-root users to specify the allowother or allowroot mount options.</p>
+<p>--allow-others</p>
+<p>#+end_example</p>
+<p>Reinicia</p>
+<h2>Montando la nube</h2>
+<p>Tan sencillo como utilizar <code>rclone mount</code>.</p>
+<p>#+begin_example</p>
+<p>rclone mount drive:org ~/org</p>
+<p>#+end_example</p>
+<p>Para enviar el comando a segundo plano y siempre corriendo, podemos añadir al final de esta línea <strong>&amp;</strong>.</p>
+<p>Esto puede dar una serie de lecturas en la terminal, que solucionaremos tal como explico en el automontado. El automontado es con cron, pero ese mismo comando, puedes ejecutarlo en la terminal.</p>
+<h2>Automontando al inicio de sesión del sistema operativo</h2>
+<p>Para automontar la nube al inicio de Debian, Ubuntu,... podemos hacerlo de varias maneras.</p>
+<p>Voy a utilizar el método más sencillo que he utilizado, con cron.</p>
+<p>Abrimos cron desde la sesión del usuario</p>
+<p>#+begin_example</p>
+<p>crontab -e</p>
+<p>#+end_example</p>
+<p>Añadímos la siguiente línea</p>
+<p>#+begin_example</p>
+<p>@reboot ( sleep 25 &amp;&amp; nohup rclone mount drive:org /home/angel/org --vfs-cache-mode full -v --allow-other 2&gt;/dev/null &amp; )</p>
+<p>#+end_example</p>
+<p>Este comando en crontab, indica que cada vez que iniciamos el sistema operativo, con <code>@reboot</code>, esperará 25 segundos y montará la nube que tengo en rclone con el nombre <code>drive:org</code>, en la carpeta <code>~/org</code>.</p>
+<p><strong>nohup</strong> y <strong>2&gt;/dev/null</strong>, envía a esta posición de memoria el resultado que muestra la terminal, una posición de memoria que tiene nuestro sistema operativo precisamente para no mostrar nada en terminal.</p>
+<p><strong>&amp;</strong>, dejará corriendo el comando indefinidamente, a no ser que lo detengamos nosotros.</p>
+<p><strong>--vfs-cache-mode full</strong>, activa la caché de lectura y escritura</p>
+<p><strong>--allow-other,</strong> permite a otros usuarios que se conecten a este directorio</p>
+<h2>Conclusión</h2>
+<p>Así es como monto mi nube webdav en mi escritorio para editar mis archivos orgmode. Cada vez que inicio el sistema operativo, siempre está disponible ahí mi nube.</p>
+<p>También podemos hacer lo mismo, pero en lugar de utilizar cron, podemos crear un servicio, pero esto lo dejo para otro artículo.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 22 de junio de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-07-07</em> - <a href="../posts/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura.html">rclone: Montando mis notas para una rapida escritura y lectura.</a></li><li><em>2021-04-01</em> - <a href="../posts/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html">Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows</a></li><li><em>2020-06-08</em> - <a href="../posts/2020-06-08-sincronizacion-con-rclone-via-ssh-y-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li><li><em>2020-03-26</em> - <a href="../posts/2020-03-26-rclone-bidireccional-con-rclonesync.html">Rclone bidireccional con Rclonesync</a></li><li><em>2020-02-16</em> - <a href="../posts/2020-02-16-instalando-compilando-el-ultima-version-de-rclone-browser.html">Instalando, Compilando el última versión de Rclone-Browser</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

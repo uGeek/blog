@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detener los discos duros mecánicos en Linux</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene un alto consumo de energía innecesario y deterioro de las piezas mecánicas. Los discos duros modernos ya incluyen un modo de espera precisamente para esta función. Hay discos como la serie /Western Digital Green/ que el modo de espera de fábrica es o era de 8 segundos, esto reducía la vida del disco. Así que como mínimo es recomendable un tiempo de espera de 30 segundos una vez hecha la lectura o escritura. No tiene sentido si vamos ha hacer lecturas y escrituras en un breve espacio de tiempo, tener que estar deteniendo el disco duro ya que reduce también su vida útil. Consumo de disco duro mecánico de 2.5 en una Raspberry Pi 3,5 (w) - 4 (w) =...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Detener los discos duros mecánicos en Linux">
+    <meta property="og:description" content="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene un alto consumo de energía innecesario y deterioro de las piezas mecánicas. Los discos duros modernos ya incluyen un modo de espera precisamente para esta función. Hay discos como la serie /Western Digital Green/ que el modo de espera de fábrica es o era de 8 segundos, esto reducía la vida del disco. Así que como mínimo es recomendable un tiempo de espera de 30 segundos una vez hecha la lectura o escritura. No tiene sentido si vamos ha hacer lecturas y escrituras en un breve espacio de tiempo, tener que estar deteniendo el disco duro ya que reduce también su vida útil. Consumo de disco duro mecánico de 2.5 en una Raspberry Pi 3,5 (w) - 4 (w) =...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="detener-los-discos-duros-mecanicos-en-linux">
+    <meta name="twitter:title" content="Detener los discos duros mecánicos en Linux">
+    <meta name="twitter:description" content="Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene un alto consumo de energía innecesario y deterioro de las piezas mecánicas. Los discos duros modernos ya incluyen un modo de espera precisamente para esta función. Hay discos como la serie /Western Digital Green/ que el modo de espera de fábrica es o era de 8 segundos, esto reducía la vida del disco. Así que como mínimo es recomendable un tiempo de espera de 30 segundos una vez hecha la lectura o escritura. No tiene sentido si vamos ha hacer lecturas y escrituras en un breve espacio de tiempo, tener que estar deteniendo el disco duro ya que reduce también su vida útil. Consumo de disco duro mecánico de 2.5 en una Raspberry Pi 3,5 (w) - 4 (w) =...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Detener los discos duros mecánicos en Linux</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 427 palabras. <a href="../categories/hdd.html">hdd</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Arrancar y detener los discos duros mecánicos constantemente, no es recomendable, ya que a la larga pueden estropearse. Pero también es cierto que tener un disco duro mecánico 24h/356dias tiene un alto consumo de energía innecesario y deterioro de las piezas mecánicas.</p>
+<p>Los discos duros modernos ya incluyen un modo de espera precisamente para esta función. Hay discos como la serie /<strong>Western Digital Green</strong>/ que el modo de espera de fábrica es o era de 8 segundos, esto reducía la vida del disco.&nbsp;</p>
+<p>Así que como mínimo es recomendable un tiempo de espera de 30 segundos una vez hecha la lectura o escritura. No tiene sentido si vamos ha hacer lecturas y escrituras en un breve espacio de tiempo, tener que estar deteniendo el disco duro ya que reduce también su vida útil.</p>
+<h2>Consumo de disco duro mecánico de 2.5 en una Raspberry Pi</h2>
+<ul>
+<li>3,5 (w) - 4 (w) = Raspberry Pi + SSD</li>
+<li>4,5 (w) - 5 (w) = Raspberry Pi SSD Disco Duro mecánico de 2.5 pulgadas <strong>detenido</strong></li>
+<li>5,5 (w) - 6 (w) = Raspberry Pi SSD Disco Duro mecánico de 2.5 pulgadas <strong>en funcionamiento</strong></li>
+</ul>
+<h2>Instalación de hdparm</h2>
+<p>Para instalar hdparm en&nbsp;Ubuntu&nbsp;,&nbsp;Debian&nbsp;y&nbsp;Raspberry OS</p>
+<pre><code>
+sudo apt install hdparm
+</code></pre>
+<h2>Listar Discos Duros</h2>
+<p>Con este comando listaremos todos los discos duros, y así podremos decidir que disco pasaremos a estado <strong>sleep</strong> o <strong>standby</strong>.</p>
+<pre><code>
+lsblk -nl | grep -i disk
+</code></pre>
+<h2>Modo Sleep</h2>
+<p>Vamos a utilizar para pasar a modo sleep el disco <strong>sdb</strong>.</p>
+<pre><code>
+sudo hdparm -Y /dev/sdb
+</code></pre>
+<h2>Modo StandBy</h2>
+<pre><code>
+sudo hdparm -y /dev/sdb
+</code></pre>
+<h2>Modo de espera</h2>
+<p>También es posible modificar el modo de espera del disco. Para ello utilizaremos la opción <strong>-s</strong> seguida de los minutos en que deseamos que entre el modo espera.&nbsp;</p>
+<p>Ejemplo:</p>
+<ul>
+<li>-s 1 = 1 minuto</li>
+<li>-s 10 = 10 minutos</li>
+</ul>
+<p>El tiempo máximo y mínimo va de 1-255 minutos.</p>
+<h3>Desactivar el modo de espera</h3>
+<p>Para desactivar el modo espera, utilizaremos la opción <code>-s 0</code></p>
+<pre><code>
+sudo hdparm -s 0 /dev/sdb
+</code></pre>
+<h3>Activar modo espera</h3>
+<p>Para activar el modo espera, utilizaremos la opción <code>-s 1</code></p>
+<pre><code>
+sudo hdparm --yes-i-know-what-i-am-doing -s 1 /dev/sdb
+</code></pre>
+<p>La opción <code>--yes-i-know-what-i-am-doing</code> es necesaria añadirla para una verificación de compatibilidad modo espera adicional de la BIOS y el firmware del disco duro</p>
+<h2>Comprobar el estado en el que está el disco duro</h2>
+<pre><code>
+sudo hdparm -C /dev/sdb
+</code></pre>
+<h3>Instalación y comprobación del disco con smartmontools</h3>
+<p>Otro modo de tener información del disco es instalar el paquete smartmontools.</p>
+<p>La instalación la haremos con:</p>
+<pre><code>
+sudo apt install smartmontools
+</code></pre>
+<h3>Comprobar el estado</h3>
+<pre><code>
+sudo smartctl -i -n standby /dev/sdb
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el jueves, 07 de julio de 2022</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-07-08</em> - <a href="../posts/2022-07-08-ioping-midiendo-la-latencia-de-nuestro-disco-duro.html">ioping. Midiendo la latencia de nuestro disco duro</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

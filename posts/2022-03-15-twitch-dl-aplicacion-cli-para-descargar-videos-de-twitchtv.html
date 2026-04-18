@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>twitch-dl. Aplicación CLI para descargar videos de twitch.tv</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Herramienta de línea de comandos para descargar videos de twitch.tv Inspirado en youtube-dl . Agrega características específicas de contracción y utiliza conexiones simultáneas para que la descarga sea más rápida. Recursos Documentación Código fuente en Github Problemas en Github Paquete Python Instalación Ir a la última versión y descargar el twitch-dl.<version>.pyzarchivo. Descargar wget https://github.com/ihabunek/twitch-dl/releases/download/1.21.0/twitch-dl.1.21.0.pyz Ejecute el archivo ya sea: pasándolo a python: python3 twitch-dl.1.21.0.pyz --help hacerlo ejecutable e invocarlo directamente (específico de Linux): chmod +x twitch-dl.1.21.0.pyz ./twitch-dl.1.21.0.pyz --help Siéntase libre de cambiar el nombre del archivo a algo más manejable, como twitch-dl. Para actualizar a una versión más reciente, repita el proceso con la versión más reciente. Listar todos los vídeos del canal python3 twitch-dl.1.21.0.pyz videos jordillatzer -a twitch-dl videos <channel_name> [FLAGS] [OPTIONS] -a, --all >> Obtener todos los videos, anula --limit -j, --json >> Mostrar resultados como JSON. Ignora --pager. -g, --game >> Mostrar videos del juego dado (se...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="twitch-dl. Aplicación CLI para descargar videos de twitch.tv">
+    <meta property="og:description" content="Herramienta de línea de comandos para descargar videos de twitch.tv Inspirado en youtube-dl . Agrega características específicas de contracción y utiliza conexiones simultáneas para que la descarga sea más rápida. Recursos Documentación Código fuente en Github Problemas en Github Paquete Python Instalación Ir a la última versión y descargar el twitch-dl.<version>.pyzarchivo. Descargar wget https://github.com/ihabunek/twitch-dl/releases/download/1.21.0/twitch-dl.1.21.0.pyz Ejecute el archivo ya sea: pasándolo a python: python3 twitch-dl.1.21.0.pyz --help hacerlo ejecutable e invocarlo directamente (específico de Linux): chmod +x twitch-dl.1.21.0.pyz ./twitch-dl.1.21.0.pyz --help Siéntase libre de cambiar el nombre del archivo a algo más manejable, como twitch-dl. Para actualizar a una versión más reciente, repita el proceso con la versión más reciente. Listar todos los vídeos del canal python3 twitch-dl.1.21.0.pyz videos jordillatzer -a twitch-dl videos <channel_name> [FLAGS] [OPTIONS] -a, --all >> Obtener todos los videos, anula --limit -j, --json >> Mostrar resultados como JSON. Ignora --pager. -g, --game >> Mostrar videos del juego dado (se...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png">
+    <meta property="og:url" content="twitch-dl-aplicacion-cli-para-descargar-videos-de-twitchtv">
+    <meta name="twitter:title" content="twitch-dl. Aplicación CLI para descargar videos de twitch.tv">
+    <meta name="twitter:description" content="Herramienta de línea de comandos para descargar videos de twitch.tv Inspirado en youtube-dl . Agrega características específicas de contracción y utiliza conexiones simultáneas para que la descarga sea más rápida. Recursos Documentación Código fuente en Github Problemas en Github Paquete Python Instalación Ir a la última versión y descargar el twitch-dl.<version>.pyzarchivo. Descargar wget https://github.com/ihabunek/twitch-dl/releases/download/1.21.0/twitch-dl.1.21.0.pyz Ejecute el archivo ya sea: pasándolo a python: python3 twitch-dl.1.21.0.pyz --help hacerlo ejecutable e invocarlo directamente (específico de Linux): chmod +x twitch-dl.1.21.0.pyz ./twitch-dl.1.21.0.pyz --help Siéntase libre de cambiar el nombre del archivo a algo más manejable, como twitch-dl. Para actualizar a una versión más reciente, repita el proceso con la versión más reciente. Listar todos los vídeos del canal python3 twitch-dl.1.21.0.pyz videos jordillatzer -a twitch-dl videos <channel_name> [FLAGS] [OPTIONS] -a, --all >> Obtener todos los videos, anula --limit -j, --json >> Mostrar resultados como JSON. Ignora --pager. -g, --game >> Mostrar videos del juego dado (se...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/twitch-dl._Aplicación_CLI_para_descargar_videos_de_twitch.tv.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>twitch-dl. Aplicación CLI para descargar videos de twitch.tv</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 542 palabras. <a href="../categories/twitch.html">twitch</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Herramienta de línea de comandos para descargar videos de twitch.tv</p>
+<p>Inspirado en <a href="https://youtube-dl.org/">youtube-dl</a> . Agrega características específicas de contracción y utiliza conexiones simultáneas para que la descarga sea más rápida.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/twitch-dl._Aplicaci%C3%B3n_CLI_para_descargar_videos_de_twitch.tv.png" alt=""></p>
+<h2><a href="https://twitch-dl.bezdomni.net/introduction.html#resources">Recursos</a></h2>
+<ul>
+<li><a href="https://twitch-dl.bezdomni.net/">Documentación</a></li>
+<li><a href="https://github.com/ihabunek/twitch-dl">Código fuente en Github</a></li>
+<li><a href="https://github.com/ihabunek/twitch-dl/issues">Problemas en Github</a></li>
+<li><a href="https://pypi.org/project/twitch-dl/">Paquete Python</a></li>
+</ul>
+<h2>Instalación</h2>
+<p>Ir a la <a href="https://github.com/ihabunek/twitch-dl/releases/latest">última versión</a> y descargar el <code>twitch-dl.&lt;version&gt;.pyz</code>archivo.</p>
+<p>Descargar</p>
+<pre><code>
+wget https://github.com/ihabunek/twitch-dl/releases/download/1.21.0/twitch-dl.1.21.0.pyz
+</code></pre>
+<p>Ejecute el archivo ya sea:</p>
+<ol>
+<li>pasándolo a python:</li>
+</ol>
+<pre><code>
+python3 twitch-dl.1.21.0.pyz --help
+</code></pre>
+<ol>
+<li>hacerlo ejecutable e invocarlo directamente (específico de Linux):</li>
+</ol>
+<pre><code>
+chmod +x twitch-dl.1.21.0.pyz
+./twitch-dl.1.21.0.pyz --help
+</code></pre>
+<p>Siéntase libre de cambiar el nombre del archivo a algo más manejable, como <code>twitch-dl</code>.</p>
+<p>Para actualizar a una versión más reciente, repita el proceso con la versión más reciente.</p>
+<h2>Listar todos los vídeos del canal</h2>
+<pre><code>
+python3 twitch-dl.1.21.0.pyz videos jordillatzer -a
+</code></pre>
+<pre><code>
+twitch-dl videos &lt;channel_name&gt; [FLAGS] [OPTIONS]
+</code></pre>
+<ul>
+<li>-a, --all &gt;&gt; Obtener todos los videos, anula --limit</li>
+<li>-j, --json &gt;&gt; Mostrar resultados como JSON. Ignora <code>--pager</code>.</li>
+<li>-g, --game &gt;&gt; Mostrar videos del juego dado (se puede dar varias veces)</li>
+<li>-l, --limit &gt;&gt; Número de videos para buscar. El valor predeterminado es 10.</li>
+<li>-s, --sort &gt;&gt; Orden de clasificación de los videos. Predeterminado a <code>time</code>. Valores posibles: <code>views</code>, <code>time</code>.</li>
+<li>-t, --type &gt;&gt; Tipo de transmisión. Predeterminado a <code>archive</code>. Valores posibles: <code>archive</code>, <code>highlight</code>, <code>upload</code>.</li>
+<li>-p, --pager &gt;&gt; Imprime videos en páginas. Ignora <code>--limit</code>. El valor predeterminado es 10.</li>
+</ul>
+<h3>Enumera los videos recientes del canal (10 por defecto):</h3>
+<pre><code>
+twitch-dl videos bananasaurus_rex
+</code></pre>
+<p>Limitar a videos de uno o más juegos:</p>
+<pre><code>
+twitch-dl videos --game "doom eternal" --game "cave story" bananasaurus_rex
+</code></pre>
+<p>Enumere todos los videos del canal a la vez:</p>
+<pre><code>
+twitch-dl videos bananasaurus_rex --all
+</code></pre>
+<p>Enumere todos los videos del canal en páginas de 10:</p>
+<pre><code>
+twitch-dl videos bananasaurus_rex --pager
+</code></pre>
+<p>El tamaño de la página se puede ajustar pasando el número de elementos por página:</p>
+<pre><code>
+twitch-dl videos bananasaurus_rex --pager 5
+</code></pre>
+<p>Devuelve todos los videos como una lista JSON. Útil para secuencias de comandos.</p>
+<p>twitch-dl videos bananasaurus_rex --json --all</p>
+<h2>Descargar con twitch-dl</h2>
+<p>Descargar un video o clip.</p>
+<pre><code>
+``` bash
+twitch-dl download &lt;video&gt; [FLAGS] [OPTIONS]
+```
+</code></pre>
+<p>ID de video, slug de clip o URL</p>
+<ul>
+<li>-k, --keep &gt;&gt; No elimine los VOD y las listas de reproducción descargados después de la fusión.</li>
+<li>--no-join &gt;&gt; No ejecute ffmpeg para unirse a los vods descargados, implica --keep.</li>
+<li>--overwrite &gt;&gt; Sobrescriba el archivo de destino si ya existe sin preguntar.</li>
+<li>-w, --max-workers &gt;&gt; Número máximo de subprocesos para descargar vods al mismo tiempo (predeterminado 20)</li>
+<li>-s, --start &gt;&gt; Descargar video de este momento (hh:mm o hh:mm:ss)</li>
+<li>-e, --end &gt;&gt; Descargar video hasta este momento (hh:mm o hh:mm:ss)</li>
+<li>-f, --format &gt;&gt; Formato de video al que convertir, pasado a ffmpeg como la extensión de archivo de destino. Predeterminado a <code>mkv</code>.</li>
+<li>-q, --quality &gt;&gt; Calidad de video, por ejemplo, 720p. Configure en 'fuente' para obtener la mejor calidad.</li>
+<li>-o, --output &gt;&gt; Plantilla de nombre de archivo de salida. Ver documentos para más detalles.</li>
+</ul>
+<h3>Ejemplos</h3>
+<p>Descargar un video por ID o URL:</p>
+<pre><code>
+twitch-dl download 221837124
+twitch-dl download https://www.twitch.tv/videos/221837124
+</code></pre>
+<p>Especifique la calidad del video para descargar para evitar un aviso:</p>
+<pre><code>
+twitch-dl download -q 720p 221837124
+</code></pre>
+<p>Ajuste de la calidad a <code>source</code>descargará la mejor calidad disponible:</p>
+<pre><code>
+twitch-dl download -q source 221837124
+</code></pre>
+<p>Ajuste de la calidad a <code>audio_only</code>descargará solo audio:</p>
+<pre><code>
+twitch-dl download -q audio_only 221837124
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://twitch-dl.bezdomni.net/installation.html">Documentación de twitch-dl</a></li>
+<li><a href="https://twitch-dl.bezdomni.net/commands/download.html">twitch-dl download - twitch-dl Documentation</a></li>
+<li><a href="https://twitch-dl.bezdomni.net/commands/videos.html">twitch-dl videos - twitch-dl Documentation</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 15 de marzo de 2022</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

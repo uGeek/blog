@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Golink</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar a bunny1 o yubnub. Docker amd64 Comando por cli docker run -it -d -p 8000:8000 prologic/golinks Docker Compose docker-compose simple golinks: image: 'prologic/golinks:latest' container_name: golinks ports: - "8000:8000" En el directorio search.db, se guardarán todos nuestros marcadores golinks: image: 'prologic/golinks:latest' container_name: golinks ports: - "8000:8000" command: - "-dbpath=/container/search.db" volumes: - "$HOME/docker/golinks/search.db:/container/search.db" Docker arm Comado por cli docker run -it -d --name=golinks -p 8000:8000 ugeek/golinks:arm Docker compose En el directorio search.db, se guardarán todos nuestros marcadores golinks: image: 'ugeek/golinks:arm' container_name: golinks ports: - "8000:8000" command: - "-dbpath=/container/search.db" volumes: - "$HOME/docker/golinks/search.db:/container/search.db" Uso Escribe help para ver la página principal de ayuda add [name] [url] para agregar un nuevo marcador (o sobrescribir uno existente). remove [name] para eliminar un marcador. listpara ver todos...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Golink">
+    <meta property="og:description" content="golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar a bunny1 o yubnub. Docker amd64 Comando por cli docker run -it -d -p 8000:8000 prologic/golinks Docker Compose docker-compose simple golinks: image: 'prologic/golinks:latest' container_name: golinks ports: - "8000:8000" En el directorio search.db, se guardarán todos nuestros marcadores golinks: image: 'prologic/golinks:latest' container_name: golinks ports: - "8000:8000" command: - "-dbpath=/container/search.db" volumes: - "$HOME/docker/golinks/search.db:/container/search.db" Docker arm Comado por cli docker run -it -d --name=golinks -p 8000:8000 ugeek/golinks:arm Docker compose En el directorio search.db, se guardarán todos nuestros marcadores golinks: image: 'ugeek/golinks:arm' container_name: golinks ports: - "8000:8000" command: - "-dbpath=/container/search.db" volumes: - "$HOME/docker/golinks/search.db:/container/search.db" Uso Escribe help para ver la página principal de ayuda add [name] [url] para agregar un nuevo marcador (o sobrescribir uno existente). remove [name] para eliminar un marcador. listpara ver todos...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Golink.png">
+    <meta property="og:url" content="golink">
+    <meta name="twitter:title" content="Golink">
+    <meta name="twitter:description" content="golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar a bunny1 o yubnub. Docker amd64 Comando por cli docker run -it -d -p 8000:8000 prologic/golinks Docker Compose docker-compose simple golinks: image: 'prologic/golinks:latest' container_name: golinks ports: - "8000:8000" En el directorio search.db, se guardarán todos nuestros marcadores golinks: image: 'prologic/golinks:latest' container_name: golinks ports: - "8000:8000" command: - "-dbpath=/container/search.db" volumes: - "$HOME/docker/golinks/search.db:/container/search.db" Docker arm Comado por cli docker run -it -d --name=golinks -p 8000:8000 ugeek/golinks:arm Docker compose En el directorio search.db, se guardarán todos nuestros marcadores golinks: image: 'ugeek/golinks:arm' container_name: golinks ports: - "8000:8000" command: - "-dbpath=/container/search.db" volumes: - "$HOME/docker/golinks/search.db:/container/search.db" Uso Escribe help para ver la página principal de ayuda add [name] [url] para agregar un nuevo marcador (o sobrescribir uno existente). remove [name] para eliminar un marcador. listpara ver todos...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Golink.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Golink</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 431 palabras. <a href="../categories/go.html">go</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>golinks es una aplicación web que le permite crear marcadores, comandos y alias inteligentes apuntando el motor de búsqueda predeterminado de su navegador web a una instancia en ejecución. Similar a bunny1 o yubnub.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/Golink.png" alt=""></p>
+<h2>Docker amd64</h2>
+<p>Comando por cli</p>
+<pre><code>
+docker run -it -d -p 8000:8000 prologic/golinks
+</code></pre>
+<h2>Docker Compose</h2>
+<p>docker-compose simple</p>
+<pre><code>
+golinks:
+image: 'prologic/golinks:latest'
+container_name: golinks
+ports:
+- "8000:8000"
+</code></pre>
+<p>En el directorio search.db, se guardarán todos nuestros marcadores</p>
+<pre><code>
+golinks:
+image: 'prologic/golinks:latest'
+container_name: golinks
+ports:
+- "8000:8000"
+command:
+- "-dbpath=/container/search.db"
+volumes:
+- "$HOME/docker/golinks/search.db:/container/search.db"
+</code></pre>
+<h2>Docker arm</h2>
+<p>Comado por cli</p>
+<pre><code>
+docker run -it -d --name=golinks -p 8000:8000 ugeek/golinks:arm
+</code></pre>
+<h3>Docker compose</h3>
+<p>En el directorio search.db, se guardarán todos nuestros marcadores</p>
+<pre><code>
+golinks:
+image: 'ugeek/golinks:arm'
+container_name: golinks
+ports:
+- "8000:8000"
+command:
+- "-dbpath=/container/search.db"
+volumes:
+- "$HOME/docker/golinks/search.db:/container/search.db"
+</code></pre>
+<h2>Uso</h2>
+<p>Escribe <code>help</code> para ver la página principal de ayuda</p>
+<p><code>add [name] [url]</code> para agregar un nuevo marcador (o sobrescribir uno existente).</p>
+<p><code>remove [name]</code> para eliminar un marcador.</p>
+<p><code>list</code>para <a href="http://192.168.1.102:222/?q=list">ver todos los marcadores y comandos</a>.</p>
+<h3>Marcadores personalizados</h3>
+<p>Para agregar un marcador (o sobrescribir uno existente), ingresa <code>add [name] [url]</code> como su consulta de búsqueda, donde <code>name</code> es el atajo para el marcador y <code>url</code> la URL:</p>
+<pre><code>
+add imdb https://www.imdb.com
+</code></pre>
+<p>Ahora puedes entrar <code>imdb</code> en la barra de búsqueda para ir directamente a imdb.com.</p>
+<p>También puede agregar <code>%s</code> a tu URL, que será reemplazada por su consulta de búsqueda:</p>
+<pre><code>
+add ddg https://duckduckgo.com/?q=%s
+</code></pre>
+<p>Ahora puedes usar <code>ddg [query]</code> para buscar a través de DuckDuckGo, por ejemplo <code>ddg cosas gratis</code> para encontrar algunas cosas gratis.</p>
+<p>Para eliminar una búsqueda, use <code>remove [name]</code>, asi que <code>remove ddg</code> eliminarás la búsqueda anterior.</p>
+<h2>Listando</h2>
+<p>Por defecto viene todos estos marcadores y buscadores. Recuerda que podemos modificarlos</p>
+<p>Nombre y URL</p>
+<ul>
+<li>g <a href="https://www.google.com/search?q%0216%02define%%3A+%s&amp;hl%0217%02&amp;oi%0218%02all">https://www.google.com/search?q16define%%3A+%s&amp;hl17&amp;oi18all</a></li>
+<li>gh <a href="https://github.com/search?q%0220%02opensearch">https://github.com/search?q20opensearch</a></li>
+<li>gim <a href="https://www.google.com/search?q%0222%021&amp;ie%0223%02en&amp;tbm=isch">https://www.google.com/search?q221&amp;ie23en&amp;tbm=isch</a></li>
+<li>gl <a href="https://www.google.com/search?q=%s&amp;btnI">https://www.google.com/search?q=%s&amp;btnI</a></li>
+<li>gm <a href="http://maps.google.com/maps?q=%s">http://maps.google.com/maps?q=%s</a></li>
+<li>go <a href="https://golang.org/search?q=%s">https://golang.org/search?q=%s</a></li>
+<li>imdb <a href="http://www.imdb.com/find?q=%s">http://www.imdb.com/find?q=%s</a></li>
+<li>py <a href="https://docs.python.org/2/search.html?q=%s">https://docs.python.org/2/search.html?q=%s</a></li>
+<li>py3 <a href="https://docs.python.org/3/search.html?q=%s">https://docs.python.org/3/search.html?q=%s</a></li>
+<li>wp <a href="http://en.wikipedia.org/?search=%s">http://en.wikipedia.org/?search=%s</a></li>
+<li>yt <a href="http://www.youtube.com/results?search_type%0232%02relevance&amp;search_query%0233%02Search">http://www.youtube.com/results?search_type32relevance&amp;search_query33Search</a></li>
+</ul>
+<h3>Comandos</h3>
+<p>Comandos varios</p>
+<pre><code>
+add [name] [url]
+
+Adds a new bookmark with the given name that will redirect to the given
+url passing arguments as %s. For example:
+
+add g http://google.com/search?btnK&amp;q=%s
+
+Will add a new command called 'g' which will redirect to Google's search
+passing in arguments as '%s'
+</code></pre>
+<pre><code>
+date
+
+Display the current date and time
+</code></pre>
+<pre><code>
+help
+
+Display general helpful information
+</code></pre>
+<pre><code>
+list
+
+Lists all available commands.
+</code></pre>
+<pre><code>
+ping
+
+Responds with "pong &lt;ts&gt;" where ts is the current UNIX timestamp.
+</code></pre>
+<pre><code>
+remove [name]
+
+Removes an existing bookmark with the given name. For example:
+
+remove imdb
+
+Will remove the existing command called 'imdb'.
+</code></pre>
+<pre><code>
+time
+
+Display the current time
+</code></pre>
+<h2>Conclusión</h2>
+<p>Un modo de tener todos nuestros marcadores en un único lugar centralizado para acceder desde todos nuestros dispositivos.</p>
+<p>Te recomiendo visitar el repositorio en GitHub para conocer más opciones.</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/prologic/golinks">https://github.com/prologic/golinks</a></li>
+<li><a href="https://hub.docker.com/r/prologic/golinks">https://hub.docker.com/r/prologic/golinks</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el jueves, 22 de abril de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2020-08-17</em> - <a href="../posts/2020-08-17-instalar-ultima-version-de-go-en-raspberry-arm-o-amd64.html">Instalar última versión de Go en Raspberry, ARM o amd64</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

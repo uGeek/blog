@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi servidor de música con WebDAV</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos. El motivo es sencillo, el servidor WebDAV no tiene base de datos y en mis servidores de música estaba utilizando rclone para montar una nube pública cifrada. En este caso, rclone mediante el comando rclone serve se encarga de servir por WebDAV los archivos de audio y además, utiliza de un modo directo la nube pública cifrada. Docker-Compose Servidor Para crear el servidor WebDAV de música: rclone-webdav-server-music: container_name: webdav-musica image: rclone/rclone ports: - 80:80 command: - "--config" - "/root/.config/rclone/rclone.conf" - "--verbose" - "serve" - "webdav" - "drive:Musica/mp3" - "--addr" - "0.0.0.0:80" - "--htpasswd" - "/root/.config/rclone/htpasswd-wdm" - "--read-only" ### Directorio de solo lectura - "--disable-dir-list" ### Deshabilitar el listado en navegadores web volumes: - $HOME/.config/rclone:/root/.config/rclone/:ro environment: - TZ=Europe/Madrid restart: unless-stopped Montar nuestro...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mi servidor de música con WebDAV">
+    <meta property="og:description" content="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos. El motivo es sencillo, el servidor WebDAV no tiene base de datos y en mis servidores de música estaba utilizando rclone para montar una nube pública cifrada. En este caso, rclone mediante el comando rclone serve se encarga de servir por WebDAV los archivos de audio y además, utiliza de un modo directo la nube pública cifrada. Docker-Compose Servidor Para crear el servidor WebDAV de música: rclone-webdav-server-music: container_name: webdav-musica image: rclone/rclone ports: - 80:80 command: - "--config" - "/root/.config/rclone/rclone.conf" - "--verbose" - "serve" - "webdav" - "drive:Musica/mp3" - "--addr" - "0.0.0.0:80" - "--htpasswd" - "/root/.config/rclone/htpasswd-wdm" - "--read-only" ### Directorio de solo lectura - "--disable-dir-list" ### Deshabilitar el listado en navegadores web volumes: - $HOME/.config/rclone:/root/.config/rclone/:ro environment: - TZ=Europe/Madrid restart: unless-stopped Montar nuestro...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/dav.png">
+    <meta property="og:url" content="mi-servidor-de-musica-con-webdav">
+    <meta name="twitter:title" content="Mi servidor de música con WebDAV">
+    <meta name="twitter:description" content="Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos. El motivo es sencillo, el servidor WebDAV no tiene base de datos y en mis servidores de música estaba utilizando rclone para montar una nube pública cifrada. En este caso, rclone mediante el comando rclone serve se encarga de servir por WebDAV los archivos de audio y además, utiliza de un modo directo la nube pública cifrada. Docker-Compose Servidor Para crear el servidor WebDAV de música: rclone-webdav-server-music: container_name: webdav-musica image: rclone/rclone ports: - 80:80 command: - "--config" - "/root/.config/rclone/rclone.conf" - "--verbose" - "serve" - "webdav" - "drive:Musica/mp3" - "--addr" - "0.0.0.0:80" - "--htpasswd" - "/root/.config/rclone/htpasswd-wdm" - "--read-only" ### Directorio de solo lectura - "--disable-dir-list" ### Deshabilitar el listado en navegadores web volumes: - $HOME/.config/rclone:/root/.config/rclone/:ro environment: - TZ=Europe/Madrid restart: unless-stopped Montar nuestro...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/dav.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Mi servidor de música con WebDAV</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 387 palabras. <a href="../categories/webdav.html">webdav</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Como he comentado en el podcast, estoy utilizando un servidor WebDAV como servidor de música, ya que me permite acceder más rápido a mis canciones y no consume recursos.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/dav.png" alt=""></p>
+<p>El motivo es sencillo, el servidor WebDAV no tiene base de datos y en mis servidores de música estaba utilizando <strong>rclone</strong> para montar una nube pública cifrada. En este caso, rclone mediante el comando <code>rclone serve</code> se encarga de servir por WebDAV los archivos de audio y además, utiliza de un modo directo la nube pública cifrada.</p>
+<h2>Docker-Compose</h2>
+<h3>Servidor</h3>
+<p>Para crear el servidor WebDAV de música:</p>
+<pre><code>
+    rclone-webdav-server-music:
+      container_name: webdav-musica
+      image: rclone/rclone
+      ports:
+         - 80:80
+      command:
+         - "--config"
+         - "/root/.config/rclone/rclone.conf"
+         - "--verbose"
+         - "serve"
+         - "webdav"
+         - "drive:Musica/mp3"
+         - "--addr"
+         - "0.0.0.0:80"
+         - "--htpasswd"   
+         - "/root/.config/rclone/htpasswd-wdm"  
+         - "--read-only"                                ### Directorio de solo lectura
+         - "--disable-dir-list"                         ### Deshabilitar el listado en navegadores web
+      volumes:
+         - $HOME/.config/rclone:/root/.config/rclone/:ro
+      environment:
+         - TZ=Europe/Madrid
+      restart: unless-stopped
+</code></pre>
+<h3>Montar nuestro servidor</h3>
+<p>Montar también con rclone el servidor WebDAV para acceder a toda tu música y reproducirla con tu reproductor de escritorio favorito:</p>
+<p>Monto en el directorio <code>/media</code> todo el contenido de mi servidor <code>webdav-musica</code>. Recuerda cambiar la ruta donde tienes el archivo de configuración de rclone.</p>
+<pre><code>
+    version: "3.7"
+    services:
+      rclone_mount:
+        image: rclone/rclone
+        container_name: webdav-musica
+        restart: unless-stopped
+        environment:
+          - PUID=1001
+          - PGID=1001
+        volumes:
+          - /etc/passwd:/etc/passwd:ro
+          - /etc/group:/etc/group:ro
+          - /media:/data:shared                            ### Directorio donde montaremos la música
+          - /home/angel/.config/rclone/:/config/rclone     ### Cambia el archivo de configuración
+        cap_add:
+          - SYS_ADMIN
+        devices:
+          - /dev/fuse
+        security_opt:
+          - apparmor:unconfined
+        command: "mount webdav-musica:  /data   --allow-other"
+</code></pre>
+<h2>Crear listas de reproducción</h2>
+<h3>Dentro del directorio</h3>
+<p>Para crear listas en <strong>6</strong>, tan sencillo como situarte dentro del directorio donde estén las canciones que queremos crear la playlist y ejecutar el siguiente comando:</p>
+<pre><code>
+find . | grep mp3 &gt; list.m3u8
+</code></pre>
+<p>De modo recursivo irá creando una playlist con todas las canciones.</p>
+<p>Con tu editor favorito elimina aquellas que no quieras en la playlist.</p>
+<p>Si ejecutas el comando desde la raíz del servidor, hará una playlist de todo el servidor, con todas tus canciones.</p>
+<h2>Aplicaciones móviles</h2>
+<h3>Android</h3>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id%028%02es&amp;gl=US">MARU Audio - Cloud &amp; Offline Folder Music Player - Aplicaciones en Google Play</a></li>
+<li><a href="https://play.google.com/store/apps/details?id%0210%02es&amp;gl=US">X-Cloud Player - Cloud Streaming Music Player - Aplicaciones en Google Play</a></li>
+<li><a href="https://play.google.com/store/apps/details?id%0212%02es&amp;gl=US">Soumi: Network Music Player - Aplicaciones en Google Play</a></li>
+<li><a href="https://play.google.com/store/apps/details?id%0214%02es&amp;gl=US">CloudBeats - offline &amp; cloud music player - Aplicaciones en Google Play</a></li>
+</ul>
+<h3>IOS</h3>
+<ul>
+<li><a href="https://decoupled.app/">https://decoupled.app/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el sábado, 02 de octubre de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-10-14</em> - <a href="../posts/2022-10-14-webdav-acceso-al-servidor-webdav-desde-escritorio-windows.html">WebDAV. Acceso al servidor WebDAV desde escritorio Windows</a></li><li><em>2021-10-09</em> - <a href="../posts/2021-10-09-montar-nubes-webdav-con-davfs2.html">Montar nubes WebDAV con davfs2</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

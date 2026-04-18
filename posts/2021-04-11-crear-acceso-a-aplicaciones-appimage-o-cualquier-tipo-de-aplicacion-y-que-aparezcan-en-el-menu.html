@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en cualquier lanzador que instales. Vamos a ver como integrarlo y comenzar a disfrutar plenamente de los AppImage así como cualquier aplicación que instalemos. Creando acceso a la aplicación En el caso de las aplicaciones AppImage, a mí en particular, me gusta el crear un directorio donde dejar todos los archivos AppImage, en la ruta ~/appimage. Los iconos de las aplicaciones los dejo en la ruta ~/appimage/icon. Crea un archivo en la ruta ~/.local/share/applications llamado por ejemplo en el caso de la aplicación jellyamp, jellyamp.desktop. Simplificando: Aplicación: ~/appimage/jellyamp.AppImage Icono de la aplicación: ~/appimage/icon/jellyamp.png Archivo con el acceso directo a la aplicación: ~/.local/share/applications/jellyamp.desktop En el archivo jellyamp.desktop, añadiremos lo siguiente: [Desktop Entry] Name=jellyamp Comment=jellyamp Exec=/home/angel/appimage/jellyamp.AppImage Icon=/home/angel/appimage/icon/jellyamp.png Terminal=false Type=Application Categories=AudioVideo Añade la categoría...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú">
+    <meta property="og:description" content="Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en cualquier lanzador que instales. Vamos a ver como integrarlo y comenzar a disfrutar plenamente de los AppImage así como cualquier aplicación que instalemos. Creando acceso a la aplicación En el caso de las aplicaciones AppImage, a mí en particular, me gusta el crear un directorio donde dejar todos los archivos AppImage, en la ruta ~/appimage. Los iconos de las aplicaciones los dejo en la ruta ~/appimage/icon. Crea un archivo en la ruta ~/.local/share/applications llamado por ejemplo en el caso de la aplicación jellyamp, jellyamp.desktop. Simplificando: Aplicación: ~/appimage/jellyamp.AppImage Icono de la aplicación: ~/appimage/icon/jellyamp.png Archivo con el acceso directo a la aplicación: ~/.local/share/applications/jellyamp.desktop En el archivo jellyamp.desktop, añadiremos lo siguiente: [Desktop Entry] Name=jellyamp Comment=jellyamp Exec=/home/angel/appimage/jellyamp.AppImage Icon=/home/angel/appimage/icon/jellyamp.png Terminal=false Type=Application Categories=AudioVideo Añade la categoría...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/appimage.png">
+    <meta property="og:url" content="crear-acceso-a-aplicaciones-appimage-o-cualquier-tipo-de-aplicacion-y-que-aparezcan-en-el-menu">
+    <meta name="twitter:title" content="Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú">
+    <meta name="twitter:description" content="Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en cualquier lanzador que instales. Vamos a ver como integrarlo y comenzar a disfrutar plenamente de los AppImage así como cualquier aplicación que instalemos. Creando acceso a la aplicación En el caso de las aplicaciones AppImage, a mí en particular, me gusta el crear un directorio donde dejar todos los archivos AppImage, en la ruta ~/appimage. Los iconos de las aplicaciones los dejo en la ruta ~/appimage/icon. Crea un archivo en la ruta ~/.local/share/applications llamado por ejemplo en el caso de la aplicación jellyamp, jellyamp.desktop. Simplificando: Aplicación: ~/appimage/jellyamp.AppImage Icono de la aplicación: ~/appimage/icon/jellyamp.png Archivo con el acceso directo a la aplicación: ~/.local/share/applications/jellyamp.desktop En el archivo jellyamp.desktop, añadiremos lo siguiente: [Desktop Entry] Name=jellyamp Comment=jellyamp Exec=/home/angel/appimage/jellyamp.AppImage Icon=/home/angel/appimage/icon/jellyamp.png Terminal=false Type=Application Categories=AudioVideo Añade la categoría...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/appimage.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Crear acceso a aplicaciones AppImage o cualquier tipo de aplicación y que aparezcan en el menú</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 1 min. 177 palabras. <a href="../categories/appimage.html">appimage</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Cuando ejecutas un paquete AppImage, puedes caer en la frustración de que aunque funcione perfectamente, no acaba de integrarse en tu escritorio ya sea por los menús, así como en cualquier lanzador que instales.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/appimage.png" alt=""></p>
+<p>Vamos a ver como integrarlo y comenzar a disfrutar plenamente de los AppImage así como cualquier aplicación que instalemos.</p>
+<h2>Creando acceso a la aplicación</h2>
+<p>En el caso de las aplicaciones AppImage, a mí en particular, me gusta el crear un directorio donde dejar todos los archivos <strong>AppImage</strong>, en la ruta <code>~/appimage</code>.</p>
+<p>Los iconos de las aplicaciones los dejo en la ruta <code>~/appimage/icon.</code></p>
+<p>Crea un archivo en la ruta <code>~/.local/share/applications</code> llamado por ejemplo en el caso de la aplicación jellyamp, <strong>jellyamp.desktop.</strong></p>
+<p>Simplificando:</p>
+<ul>
+<li>Aplicación: <code>~/appimage/jellyamp.AppImage</code></li>
+<li>Icono de la aplicación: <code>~/appimage/icon/jellyamp.png</code></li>
+<li>Archivo con el acceso directo a la aplicación: <code>~/.local/share/applications/jellyamp.desktop</code></li>
+</ul>
+<p>En el archivo <strong>jellyamp.desktop</strong>, añadiremos lo siguiente:</p>
+<pre><code>
+[Desktop Entry]
+Name=jellyamp
+Comment=jellyamp
+Exec=/home/angel/appimage/jellyamp.AppImage
+Icon=/home/angel/appimage/icon/jellyamp.png
+Terminal=false
+Type=Application
+Categories=AudioVideo
+</code></pre>
+<p>Añade la categoría para que en los menús, aparezca dentro de la categoría correcta.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 11 de abril de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-01-17</em> - <a href="../posts/2022-01-17-script-para-crear-acceso-a-aplicaciones-appimage.html">Script para crear acceso a aplicaciones AppImage</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

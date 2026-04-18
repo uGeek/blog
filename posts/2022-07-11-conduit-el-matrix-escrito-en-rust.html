@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conduit. El matrix escrito en rust</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Conduit es un servidor de Matrix rápido y fácil de configurar, que simplemente funciona. Consume muy pocos recursos, así que puedes instalarlo en una Raspberry Pi y alojar Matrix para tu familia, como sistema de notificaciones, amigos o empresa. El objetivo de este proyecto es simplificar al máximo la creación de un servidor de matrix. No necesitas como en su versión original del proyecto en python, crear archivos de configuración. Recuerda que este servidor a día de hoy, está en versión Beta, lo que quiere decir que puedes encontrar errores. Docker Compose Solo edita añadiendo la url de tu servidor, la variable CONDUIT_SERVER_NAME: matrix.dominio.duckdns.org version: '3' services: homeserver: ### If you already built the Conduit image with 'docker build' or want to use a registry image, ### then you are ready to go. image: matrixconduit/matrix-conduit:next #:next-alpine #latest #next-alpine # latest container_name: matrix-conduit ### If you want to build a fresh...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Conduit. El matrix escrito en rust">
+    <meta property="og:description" content="Conduit es un servidor de Matrix rápido y fácil de configurar, que simplemente funciona. Consume muy pocos recursos, así que puedes instalarlo en una Raspberry Pi y alojar Matrix para tu familia, como sistema de notificaciones, amigos o empresa. El objetivo de este proyecto es simplificar al máximo la creación de un servidor de matrix. No necesitas como en su versión original del proyecto en python, crear archivos de configuración. Recuerda que este servidor a día de hoy, está en versión Beta, lo que quiere decir que puedes encontrar errores. Docker Compose Solo edita añadiendo la url de tu servidor, la variable CONDUIT_SERVER_NAME: matrix.dominio.duckdns.org version: '3' services: homeserver: ### If you already built the Conduit image with 'docker build' or want to use a registry image, ### then you are ready to go. image: matrixconduit/matrix-conduit:next #:next-alpine #latest #next-alpine # latest container_name: matrix-conduit ### If you want to build a fresh...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="conduit-el-matrix-escrito-en-rust">
+    <meta name="twitter:title" content="Conduit. El matrix escrito en rust">
+    <meta name="twitter:description" content="Conduit es un servidor de Matrix rápido y fácil de configurar, que simplemente funciona. Consume muy pocos recursos, así que puedes instalarlo en una Raspberry Pi y alojar Matrix para tu familia, como sistema de notificaciones, amigos o empresa. El objetivo de este proyecto es simplificar al máximo la creación de un servidor de matrix. No necesitas como en su versión original del proyecto en python, crear archivos de configuración. Recuerda que este servidor a día de hoy, está en versión Beta, lo que quiere decir que puedes encontrar errores. Docker Compose Solo edita añadiendo la url de tu servidor, la variable CONDUIT_SERVER_NAME: matrix.dominio.duckdns.org version: '3' services: homeserver: ### If you already built the Conduit image with 'docker build' or want to use a registry image, ### then you are ready to go. image: matrixconduit/matrix-conduit:next #:next-alpine #latest #next-alpine # latest container_name: matrix-conduit ### If you want to build a fresh...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Conduit. El matrix escrito en rust</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 428 palabras. <a href="../categories/matrix.html">matrix</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Conduit es un servidor de Matrix rápido y fácil de configurar, que simplemente funciona.&nbsp;</p>
+<p>Consume muy pocos recursos, así que puedes instalarlo en una &nbsp;Raspberry Pi y alojar Matrix para tu familia, como sistema de notificaciones, amigos o empresa.</p>
+<p>El objetivo de este proyecto es simplificar al máximo la creación de un servidor de matrix. No necesitas como en su versión original del proyecto en python, crear archivos de configuración.</p>
+<p>Recuerda que este servidor a día de hoy, está en versión Beta, lo que quiere decir que puedes encontrar errores.</p>
+<h2>Docker Compose</h2>
+<p>Solo edita añadiendo la url de tu servidor, la variable <code>CONDUIT_SERVER_NAME: matrix.dominio.duckdns.org</code></p>
+<pre><code>
+version: '3'
+
+services:
+homeserver:
+### If you already built the Conduit image with 'docker build' or want to use a registry image,
+### then you are ready to go.
+image: matrixconduit/matrix-conduit:next #:next-alpine #latest #next-alpine # latest
+container_name: matrix-conduit
+### If you want to build a fresh image from the sources, then comment the image line and uncomment the
+### build lines. If you want meaningful labels in your built Conduit image, you should run docker-compose like this:
+### CREATED=$(date -u +'%Y-%m-%dT%H:%M:%SZ') VERSION=$(grep -m1 -o '[0-9].[0-9].[0-9]' Cargo.toml) docker-compose up -d
+# build:
+#     context: .
+#     args:
+#         CREATED: '2021-03-16T08:18:27Z'
+#         VERSION: '0.1.0'
+#         LOCAL: 'false'
+#         GIT_REF: origin/master
+restart: unless-stopped
+ports:
+- 8448:6167
+networks:
+- DockerLAN
+volumes:
+- db:/var/lib/matrix-conduit/
+environment:
+CONDUIT_SERVER_NAME: matrix.dominio.duckdns.org # EDIT THIS
+CONDUIT_DATABASE_PATH: /var/lib/matrix-conduit/
+CONDUIT_DATABASE_BACKEND: rocksdb
+CONDUIT_PORT: 6167
+CONDUIT_MAX_REQUEST_SIZE: 20_000_000 # in bytes, ~20 MB
+CONDUIT_ALLOW_REGISTRATION: 'true'
+CONDUIT_ALLOW_FEDERATION: 'false'
+CONDUIT_TRUSTED_SERVERS: '["matrix.org"]'
+#CONDUIT_MAX_CONCURRENT_REQUESTS: 100
+#CONDUIT_LOG: info,rocket=off,_=off,sled=off
+CONDUIT_ADDRESS: 0.0.0.0
+CONDUIT_CONFIG: '' # Ignore this
+#
+### Uncomment if you want to use your own Element-Web App.
+### Note: You need to provide a config.json for Element and you also need a second
+###       Domain or Subdomain for the communication between Element and Conduit
+### Config-Docs: https://github.com/vector-im/element-web/blob/develop/docs/config.md
+# element-web:
+#     image: vectorim/element-web:latest
+#     restart: unless-stopped
+#     ports:
+#         - 8009:80
+#     volumes:
+#         - ./element_config.json:/app/config.json
+#     depends_on:
+#         - homeserver
+volumes:
+db:
+</code></pre>
+<p>Ahora levanta el docker-compose.yml</p>
+<h2>Iniciando en Matrix</h2>
+<p>Para crear las cuentas de matrix, lo haremos logeandonos en el servidor y creando la nueva cuenta desde el cliente. En el docker-compose anterior aparece la siguiente variable: <code>CONDUIT_ALLOW_REGISTRATION: ‘true’</code>.&nbsp;</p>
+<p>Una vez no quieras que se registre nadie más en tu servidor, cambia el true por <code>false</code>.</p>
+<h2>Logearte con Element</h2>
+<p>Para conectarte a tu servidor de matrix con element, es necesario añadir la ruta del servidor del siguiente modo:</p>
+<ul>
+<li>https:matrix.dominio.duckdns.org</li>
+</ul>
+<p>No pongas la doble barra tras el https. En el resto de cliente si funciona</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://matrix.org/docs/projects/server/conduit">https://matrix.org/docs/projects/server/conduit</a></li>
+<li><a href="https://gitlab.com/famedly/conduit">https://gitlab.com/famedly/conduit</a></li>
+<li><a href="https://conduit.rs/">https://conduit.rs/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 11 de julio de 2022</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-01-26</em> - <a href="../posts/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li><li><em>2021-01-28</em> - <a href="../posts/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian-con-docker.html">Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

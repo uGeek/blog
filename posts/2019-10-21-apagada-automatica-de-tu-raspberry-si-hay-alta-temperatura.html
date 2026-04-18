@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apagada automática de tu Raspberry si hay alta temperatura</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 3 minutos. 366 palabras. raspberry Después de las publicaciones sobre la alta temperatura de la Raspberry, te puede entrar la paranoia de que se queme, salga ardiendo, etc … Para evitar esto, me he creado un simple script que mediante cron, monitorizará la temperatura de mi Raspberry y en caso que la temperatura suba del nivel que yo decida, se apague. Script El script es muy sencillo. En la variable TEMP añadiremos la temperatura actual y preguntaremos si la temperatura es igual o superior a 60º. Si es inferior, no sucederá nada. Si ejecutamos el script manualmente, la terminal nos devolverá Baja temperatura. Si es igual o superior a 60º, recibiremos una notificación por Telegram, Exceso de Temperatura y mediante el comando sudo shutdown now, apagara nuestra Raspberry, así puedo dormir tranquilo. Vamos a crearlo. nano /home/angel/scripts/temp.sh Y copiaremos nuestro script #!/bin/bash TEMP=$(/opt/vc/bin/vcgencmd measure_temp | cut...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Apagada automática de tu Raspberry si hay alta temperatura">
+    <meta property="og:description" content="Tiempo estimado de lectura: 3 minutos. 366 palabras. raspberry Después de las publicaciones sobre la alta temperatura de la Raspberry, te puede entrar la paranoia de que se queme, salga ardiendo, etc … Para evitar esto, me he creado un simple script que mediante cron, monitorizará la temperatura de mi Raspberry y en caso que la temperatura suba del nivel que yo decida, se apague. Script El script es muy sencillo. En la variable TEMP añadiremos la temperatura actual y preguntaremos si la temperatura es igual o superior a 60º. Si es inferior, no sucederá nada. Si ejecutamos el script manualmente, la terminal nos devolverá Baja temperatura. Si es igual o superior a 60º, recibiremos una notificación por Telegram, Exceso de Temperatura y mediante el comando sudo shutdown now, apagara nuestra Raspberry, así puedo dormir tranquilo. Vamos a crearlo. nano /home/angel/scripts/temp.sh Y copiaremos nuestro script #!/bin/bash TEMP=$(/opt/vc/bin/vcgencmd measure_temp | cut...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg">
+    <meta property="og:url" content="apagada-automatica-de-tu-raspberry-si-hay-alta-temperatura">
+    <meta name="twitter:title" content="Apagada automática de tu Raspberry si hay alta temperatura">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 3 minutos. 366 palabras. raspberry Después de las publicaciones sobre la alta temperatura de la Raspberry, te puede entrar la paranoia de que se queme, salga ardiendo, etc … Para evitar esto, me he creado un simple script que mediante cron, monitorizará la temperatura de mi Raspberry y en caso que la temperatura suba del nivel que yo decida, se apague. Script El script es muy sencillo. En la variable TEMP añadiremos la temperatura actual y preguntaremos si la temperatura es igual o superior a 60º. Si es inferior, no sucederá nada. Si ejecutamos el script manualmente, la terminal nos devolverá Baja temperatura. Si es igual o superior a 60º, recibiremos una notificación por Telegram, Exceso de Temperatura y mediante el comando sudo shutdown now, apagara nuestra Raspberry, así puedo dormir tranquilo. Vamos a crearlo. nano /home/angel/scripts/temp.sh Y copiaremos nuestro script #!/bin/bash TEMP=$(/opt/vc/bin/vcgencmd measure_temp | cut...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Apagada automática de tu Raspberry si hay alta temperatura</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 296 palabras. <a href="../categories/raspberry.html">raspberry</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 3 minutos. 366 palabras. <a href="https://ugeek.github.io/blog/categories/raspberry">raspberry</a></h5>
+<p>Después de las publicaciones sobre la alta temperatura de la Raspberry, te puede entrar la paranoia de que se queme, salga ardiendo, etc …</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" alt=""></p>
+<p>Para evitar esto, me he creado un simple script que mediante <strong>cron</strong>, monitorizará la temperatura de mi Raspberry y en caso que la temperatura suba del nivel que yo decida, se apague.</p>
+<h2>Script</h2>
+<p>El script es muy sencillo. En la variable <strong>TEMP</strong> añadiremos la temperatura actual y preguntaremos si la temperatura es igual o superior a 60º.</p>
+<p>Si es inferior, no sucederá nada. Si ejecutamos el script manualmente, la terminal nos devolverá <strong>Baja temperatura</strong>.</p>
+<p>Si es igual o superior a 60º, recibiremos una notificación por Telegram, <strong>Exceso de Temperatura</strong> y mediante el comando <strong>sudo shutdown now</strong>, apagara nuestra Raspberry, así puedo dormir tranquilo.</p>
+<p>Vamos a crearlo.</p>
+<pre><code>nano /home/angel/scripts/temp.sh
+</code></pre>
+<p>Y copiaremos nuestro script</p>
+<pre><code>#!/bin/bash
+
+TEMP=$(/opt/vc/bin/vcgencmd measure_temp | cut -d"=" -f2 | cut -d "." -f1)
+
+echo $TEMP
+
+if [ "$TEMP" -ge "60" ]
+then
+echo "Alta temperatura"
+curl -X POST https://api.telegram.org/bot&lt;TOKEN BOT&gt;/sendMessage\?chat_id\=&lt;ID USUARIO&gt;\&amp;text\="Exceso de Temperatura" 
+sudo shutdown now
+
+else
+echo "Baja temperatura"
+fi
+</code></pre>
+<p>La línea que comienza por <strong>curl</strong>, es la línea para notificarnos por Telegram el exceso de temperatura. Añade tu Token e ID.</p>
+<p>Damos permisos de ejecución</p>
+<pre><code>sudo chmod +x /home/angel/scripts/temp.sh
+</code></pre>
+<h2>Cron</h2>
+<p><strong>Cosas importantes</strong>. Vamos a utilizar cron como usuario <strong>root</strong>, si no no tendremos permisos para apagar nuestra Raspberry.</p>
+<pre><code>sudo crontab -e
+</code></pre>
+<p>Añadiremos la siguiente línea, para que ejecute el script cada cada 2 minutos. <strong>Importante</strong> especificar la ruta completa del script.</p>
+<pre><code>*/2 * * * * /home/angel/scripts/temp.sh 
+</code></pre>
+<h2>Conclusión</h2>
+<p>Un método súper sencillo de apagar nuestra Raspberry si excede la temperatura de esta. Un ejemplo más, de lo maravilloso que es <strong>cron</strong>.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 21 de octubre de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-01-18</em> - <a href="../posts/2023-01-18-instalacion-de-manjaro-en-raspberry.html">Instalación de Manjaro en Raspberry</a></li><li><em>2022-06-24</em> - <a href="../posts/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html">Configurar una ip estática en tu Raspberry Pi</a></li><li><em>2021-04-13</em> - <a href="../posts/2021-04-13-ampliar-memoria-swap.html">Ampliar memoria SWAP</a></li><li><em>2020-05-09</em> - <a href="../posts/2020-05-09-zram-doblando-la-ram-y-no-utilizando-quemando-la-sd-de-mi-raspberry.html">ZRAM. Doblando la RAM y no utilizando - quemando la SD de mi Raspberry</a></li><li><em>2020-01-22</em> - <a href="../posts/2020-01-22-nuevo-firmware-de-la-raspberry-4-para-bajar-la-temperatura.html">Nuevo firmware de la Raspberry 4 para bajar la temperatura</a></li><li><em>2019-10-31</em> - <a href="../posts/2019-10-31-habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor.html">Habilitar SSH en la Raspberry sin conectar el Monitor</a></li><li><em>2019-08-17</em> - <a href="../posts/2019-08-17-actualiza-el-firmware-de-tu-raspberry.html">Actualiza el Firmware de tu Raspberry</a></li><li><em>2019-02-01</em> - <a href="../posts/2019-02-01-cambiar-mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html"> Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

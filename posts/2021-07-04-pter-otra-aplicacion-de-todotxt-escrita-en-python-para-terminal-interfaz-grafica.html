@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu escritorio o accediendo a tu servidor vía SSH desde la terminal. Además, su punto fuerte es la cantidad de opciones mediante extensiones no standarizadas en el todo.txt tiene. pter tiene un montón de características que te ayudan a administrar su archivo todo.txt: Totalmente compatible con el estándar todo.txt Apoyo para due:, h:, t: Guarde las consultas de búsqueda para un acceso rápido Cómoda introducción de fechas Comportamiento, atajos y colores configurables Seguimiento del tiempo Instalación pip3 install pter Si deseas utilizar el qpter Qt GUI, debe instalar PyQt5: pip3 install PyQt5 Termux para Android pkg install python # Instalamos python y pip pip3 install pter # Instalamos pter qpter. Interfaz gráfica Para iniciar la GUI de Qt, puede (pero no...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica">
+    <meta property="og:description" content="Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu escritorio o accediendo a tu servidor vía SSH desde la terminal. Además, su punto fuerte es la cantidad de opciones mediante extensiones no standarizadas en el todo.txt tiene. pter tiene un montón de características que te ayudan a administrar su archivo todo.txt: Totalmente compatible con el estándar todo.txt Apoyo para due:, h:, t: Guarde las consultas de búsqueda para un acceso rápido Cómoda introducción de fechas Comportamiento, atajos y colores configurables Seguimiento del tiempo Instalación pip3 install pter Si deseas utilizar el qpter Qt GUI, debe instalar PyQt5: pip3 install PyQt5 Termux para Android pkg install python # Instalamos python y pip pip3 install pter # Instalamos pter qpter. Interfaz gráfica Para iniciar la GUI de Qt, puede (pero no...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Pter._Otra_aplicación_de_todo.txt_escrita_en_python_para_terminal_el_Interfaz_gráfica.png">
+    <meta property="og:url" content="pter-otra-aplicacion-de-todotxt-escrita-en-python-para-terminal-interfaz-grafica">
+    <meta name="twitter:title" content="Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica">
+    <meta name="twitter:description" content="Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu escritorio o accediendo a tu servidor vía SSH desde la terminal. Además, su punto fuerte es la cantidad de opciones mediante extensiones no standarizadas en el todo.txt tiene. pter tiene un montón de características que te ayudan a administrar su archivo todo.txt: Totalmente compatible con el estándar todo.txt Apoyo para due:, h:, t: Guarde las consultas de búsqueda para un acceso rápido Cómoda introducción de fechas Comportamiento, atajos y colores configurables Seguimiento del tiempo Instalación pip3 install pter Si deseas utilizar el qpter Qt GUI, debe instalar PyQt5: pip3 install PyQt5 Termux para Android pkg install python # Instalamos python y pip pip3 install pter # Instalamos pter qpter. Interfaz gráfica Para iniciar la GUI de Qt, puede (pero no...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Pter._Otra_aplicación_de_todo.txt_escrita_en_python_para_terminal_el_Interfaz_gráfica.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 8 min. 1499 palabras. <a href="../categories/todotxt.html">todo.txt</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Hoy voy a mostraros esta aplicación para gestionar tu archivos todo.txt en tu terminal y con UI gráfica. Es una fantástica aplicación desarrollada en python que puedes utilizar en tu escritorio o accediendo a tu servidor vía SSH desde la terminal.</p>
+<p>Además, su punto fuerte es la cantidad de opciones mediante extensiones no standarizadas en el todo.txt tiene.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/Pter._Otra_aplicaci%C3%B3n_de_todo.txt_escrita_en_python_para_terminal_el_Interfaz_gr%C3%A1fica.png" alt=""></p>
+<p>pter tiene un montón de características que te ayudan a administrar su archivo todo.txt:</p>
+<ul>
+<li>Totalmente compatible con el estándar todo.txt</li>
+<li>Apoyo para due:, h:, t:</li>
+<li>Guarde las consultas de búsqueda para un acceso rápido</li>
+<li>Cómoda introducción de fechas</li>
+<li>Comportamiento, atajos y colores configurables</li>
+<li>Seguimiento del tiempo</li>
+</ul>
+<h2>Instalación</h2>
+<pre><code>
+pip3 install pter
+</code></pre>
+<p>Si deseas utilizar el qpter Qt GUI, debe instalar PyQt5:</p>
+<pre><code>
+pip3 install PyQt5
+</code></pre>
+<h3>Termux para Android</h3>
+<pre><code>
+pkg install python   # Instalamos python y pip
+pip3 install pter    # Instalamos pter
+</code></pre>
+<h2>qpter. Interfaz gráfica</h2>
+<p>Para iniciar la GUI de Qt, puede (pero no es necesario) proporcionar la ubicación de su archivo todo.txt:</p>
+<pre><code>
+qpter ~/todo.txt
+</code></pre>
+<h3>Atajos versión gráfica</h3>
+<ul>
+<li>Editar, <code>Ctrl+e</code></li>
+<li>buscar, <code>Ctrl+f</code></li>
+<li>Nueva tarea, <code>Ctrl+n</code></li>
+<li>Delegar, <code>Ctrl+g</code></li>
+<li>Done, <code>Ctrl+d</code></li>
+<li>Ocultar tarea, <code>Ctrl+h</code></li>
+<li>Control del tiempo, <code>Ctrl+t</code></li>
+<li>Salir, <code>Ctrl+q</code></li>
+</ul>
+<h2>pter. Versión Terminal</h2>
+<p>Para utilizar pter tienes que decirle dónde está tu archivo todo.txt:</p>
+<pre><code>
+pter ~/todo.txt
+</code></pre>
+<p>Esto te dará una lista de todas sus tareas ordenadas fecha y qué prioridad les ha dado.</p>
+<p>Puedes navegar por las tareas con las teclas del cursor y editar las tareas seleccionadas por prensado <code>e</code>.</p>
+<h2>Atajos</h2>
+<p>Más atajos predeterminados son:</p>
+<ul>
+<li><code>e</code>, editar la tarea seleccionada</li>
+<li><code>n</code>, crea una nueva tarea</li>
+<li><code>/</code>, Buscar</li>
+<li><code>:</code>, Salta a nº de línea</li>
+<li><code>1...9</code>, Introduce el nº y pulsa <code>Enter</code> para saltar a la línea</li>
+<li><code>d</code>, marque la tarea seleccionada como hecha (o vuelva a deshacer la tarea)</li>
+<li><code>t</code>, iniciar o detener tiempo</li>
+<li><code>p</code>, mostrar todos los proyectos que coincidan con la tarea en la que estoy situado</li>
+<li><code>c</code>, mostrar todos los contextos que coincidan con la tarea en la que estoy situado</li>
+<li><code>l</code>, carga una búsqueda con nombre</li>
+<li><code>s</code>, guarda la búsqueda actual</li>
+<li><code>L</code>, carga una plantilla de tarea con nombre</li>
+<li><code>S</code>, guarda una tarea como una plantilla con nombre</li>
+<li><code>u</code>, abre una URL que aparece en la tarea seleccionada</li>
+<li><code>&gt;</code>, delega la tarea seleccionada</li>
+<li><code>?</code>, mostrar todos los atajos de teclado</li>
+<li><code>q</code>, sal del programa</li>
+</ul>
+<p>Hay una búsqueda compleja disponible (consulte el manual para obtener más detalles), pero la versión corta es:</p>
+<ul>
+<li>pulsa <code>/</code> para ingresar sus términos de búsqueda</li>
+<li>buscar <code>done:n</code> para mostrar solo las tareas incompletas</li>
+<li>buscar un contexto con <code>@contexto</code></li>
+<li>buscar un proyecto con <code>+projecto</code></li>
+<li>buscar tareas que <strong>no pertenezcan</strong> a un contexto con <code>-@contexto</code> <code>not:@context</code></li>
+<li>pulsa <code>Return</code> para devolver el foco a la lista de tareas</li>
+</ul>
+<h2>Guardar búsqueda</h2>
+<p>Busca por palabra, contexto,... Una vez realizada la búsqueda, pulsa la tecla <code>s</code> y escribe el nombre que quieres utilizar para la búsqueda.</p>
+<p>Para cargar una búsqueda, utiliza la letra <code>l</code></p>
+<p>Esto creará un archivo llamado <code>searches.txt</code> en el directorio <code>~/.config/pter</code>.</p>
+<pre><code>
+nano ~/.config/pter/searches.txt 
+</code></pre>
+<p>Copiamos el ejemplo:</p>
+<pre><code>
+trabajo = @trabajo
+personal = @personal
+podcast = @podcast
+blog = @blog
+</code></pre>
+<pre><code>
+Realizar esta semana = done:no duebefore:mon
+Realizar Hoy = done:yes completed:0
+Tareas abiertas = done:no
+</code></pre>
+<h2>Seguimiento del tiempo de las tareas</h2>
+<p>Nos situamos sobre la tarea y pulsamos la tecla <code>t</code>. Esto agregará un tracking: atributo con el local actual fecha-hora de la tarea y cambiara la tarea a color verde.</p>
+<p>Es fantástico, porque podemos salir del todo.txt y <strong>pter</strong> deja guardado el inicio del tiempo de tarea, de manera que <strong>sigue contando el tiempo</strong>.</p>
+<p>También permite <strong>controlar el tiempo de varias tareas</strong>.</p>
+<p>Cuando queramos detener el rastreo del tiempo, volveremos a pulsar la tecla <code>t</code></p>
+<p>La tarea parecerá el tiempo total desarrollado, por ejemplo spent:1m</p>
+<h2>Plantilla de tareas</h2>
+<p>Podemos guardar tareas repetitivas en una hoja de plantillas en <code>~/.config/pter/templates.txt</code>.</p>
+<p>La estructura es igual al <code>searches.txt</code></p>
+<p>Con la letra <code>L</code>, podemos cargar la tarea plantilla. Si seleccionamos <strong>none</strong>, no se cargará ninguna plantilla.</p>
+<p>Si quieres enviar una tarea a platillas, sitúate sobre la tarea y pulsa <code>S</code>.</p>
+<p>Edita</p>
+<pre><code>
+nano ~/.config/pter/templates.txt
+</code></pre>
+<p>Copia</p>
+<pre><code>
+Paper revision = @paper +revision due:+7d estimate:
+Bug fix = (A) @programming due:+2d estimate: git:
+Project X = @work +projectx due:2021-04-11 estimate:
+</code></pre>
+<h2>Marcar tarea como delegada</h2>
+<p>Nos situamos sobre la tarea y pulsamos <code>&gt;</code> o <code>Ctrl+G</code> en la versión con interfaz gráfica</p>
+<h2>Identificador único de tarea y subtareas</h2>
+<p>Podemos hacer que una subtarea de una tarea principal, donde las subtareas no serán visibles hasta que no realicemos la tarea principal.</p>
+<p>Para ello vamos a utilizar los <strong>identificadores únicos</strong>, que como su nombre indica, cada tarea tendrá un identificador único.</p>
+<p>Este identificador, si fuera el nº 1, está representado con la etiqueta <code>id:1</code>.</p>
+<p>A su subtarea le pondremos la etiqueta <code>after:1</code>. Esto quiere decir que la subtarea solo será visible en el momento que completemos la tarea con <code>id:1</code>.</p>
+<p>Podemos utilizar varias subtareas enlazadas a varios identificadores.</p>
+<p>Ejemplo: Cuando completemos la primer tarea, se mostrará la segunda y tras esta, la tercera.</p>
+<pre><code>
+Comprar patatas @tienda id:1
+Hacer papas fritas @cocina id:2 after:1
+Come papas fritas para cenar after:2
+</code></pre>
+<p>Resumen:</p>
+<p>after:4, significa que esta entrada solo se puede iniciar una vez que la entrada con id:4se ha completado. id:3, le permite asignar un identificador único a las entradas en todo.txt, como 3. pter aceptará cuando haya ID no únicos, pero por supuesto, identificar entradas de forma única será complicado.</p>
+<h3>Crear id automáticos o por grupos</h3>
+<p>Podemos crear los identificadores de forma automática, si no recuerdas el último identificador con <code>id:#auto</code></p>
+<p>También podemos agregar identificadores por grupo, por ejemplo, <code>id:supermercado#auto</code> y esto creará:</p>
+<pre><code>
+id:supermercado1
+id:supermercado2
+id:supermercado3...
+</code></pre>
+<h2>Referencias de tareas</h2>
+<p>Tareas que se refieren a otras tareas por cualquiera de los medios existentes (p.&nbsp;Ej. ref: o after:) se puede encontrar buscando ref:.</p>
+<p>Si busca utilizando varias referencias (p.&nbsp;Ej. ref:4,5o ref:4 ref:5) los ID de la tarea se consideran lógicos or.</p>
+<h2>Añadir nueva tarea desde la terminal</h2>
+<p>Añadir directamente una nueva tarea</p>
+<pre><code>
+pter -n "nueva tarea" ~/todo/todo.txt
+</code></pre>
+<h2>Extensiones a en la aplicación pter todo.txt</h2>
+<p>Para ampliar las posibilidades limitadas del <strong>todo.txt</strong>, pter también admite las siguiente etiquetas:</p>
+<ul>
+<li>after:4, significa que esta entrada solo se puede iniciar una vez que la entrada con id:4se ha completado.</li>
+<li>due:2071-01-01, define una fecha de vencimiento para esta tarea.</li>
+<li>h:1, oculta una tarea.</li>
+<li>id:3, le permite asignar un identificador único a las entradas en todo.txt, como 3. pter aceptará cuando haya ID no únicos, pero por supuesto, identificar entradas de forma única será complicado.</li>
+<li>ref:6, indique que esta tarea se refiere a la tarea con id:6. Se admiten ID separados por comas, como ref:13,9.</li>
+<li>spent:5h3m, pter se puede utilizar para el seguimiento del tiempo y almacenará la duración que se dedicó a una tarea en el spent atributo.</li>
+<li>t:2070-12-24, la etiqueta de umbral se puede utilizar para ocultar antes de que llegue la fecha indicada.</li>
+<li>to:persona, cuando se ha delegado una tarea (mediante el uso de un marcador de delegación como @delegated), to: se puede utilizar para indicar a quién se ha delegado la tarea.</li>
+<li>tracking:, una etiqueta técnica utilizada para el seguimiento del tiempo. Indica que comenzó a trabajar en la tarea y quería hacer un seguimiento del tiempo. El valor es la fecha y la hora en que comenzó a trabajar. Al detener el seguimiento, el tiempo gastado se almacenará en el spent etiqueta.</li>
+</ul>
+<h2>Clasificación</h2>
+<p>Las tareas se pueden ordenar pasando <code>sort:</code> a la búsqueda. Las propiedades de las tareas por ordenar están separadas por comas. Las siguientes propiedades pueden ser utilizado para clasificar:</p>
+<ul>
+<li><code>due_in</code></li>
+</ul>
+<p>El número de días hasta el vencimiento de la tarea, si hay un fecha dada.</p>
+<ul>
+<li><code>completed</code></li>
+</ul>
+<p>Si la tarea se ha completado o no.</p>
+<ul>
+<li><code>priority</code></li>
+</ul>
+<p>La prioridad de la tarea, si la hubiera.</p>
+<ul>
+<li><code>linenr</code></li>
+</ul>
+<p>La línea de la tarea en su archivo todo.txt</p>
+<ul>
+<li><code>file</code></li>
+</ul>
+<p>El nombre del archivo todo.txt en el que se encuentra la tarea.</p>
+<ul>
+<li><code>project</code></li>
+</ul>
+<p>El primer proyecto (ordenado alfabéticamente) de la tarea.</p>
+<ul>
+<li><code>context</code></li>
+</ul>
+<p>El primer contexto (ordenado alfabéticamente) de la tarea.</p>
+<p>El orden de clasificación predeterminado es <code>completed,due_in,priority,linenr</code></p>
+<h2>Archivo de configuración</h2>
+<p>Para personalizar atajos de teclado, colores,.... hay un <a href="https://github.com/vonshednob/pter/blob/master/extras/example.conf">archivo de configuración de ejemplo en el repositorio de GitHub</a>.</p>
+<p>Abriendo la aplicación con interfaz gráfica, si pulsamos la tecla <code>F1</code>, nos proporcionará una url con la documentación donde podremos profundizar más en la configuración.</p>
+<p>En la versión de terminal, podemos acceder pulsando la tecla <code>m</code>.</p>
+<p>También podemos encontrarla en la <a href="https://github.com/vonshednob/pter/blob/master/doc/pter.rst">siguiente url del proyecto</a></p>
+<h2>Ejemplo configuración</h2>
+<p>En mi Ubuntu 20.04, la fuente en la aplicación gráfica es muy pequeña, así que he aumentado la fuente a <strong>14</strong> siguiendo el ejemplo del archivo de configuración:</p>
+<pre><code>
+;; General options for the GUI version
+[GUI]
+
+;; Font size for the task list
+font-size = 14
+</code></pre>
+<h2>Ayuda</h2>
+<pre><code>
+usage: pter [-h] [-c CONFIG] [-v] [-u] [-n NEW_TASK] [filename [filename ...]]
+
+positional arguments:
+filename              todo.txt file(s) to open
+
+optional arguments:
+-h, --help            Mostrar ayuda
+-c CONFIG, --config CONFIG
+Location del archivo de configuration . Por defecto /home/angel/.config/pter/pter.conf.
+-v, --version         version del programa
+-u, --check-for-updates
+Checkear online si hay una nueva version disponible.
+-n NEW_TASK, --new-task NEW_TASK
+Añadir una nueva tarea.
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/vonshednob/pter">https://github.com/vonshednob/pter</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 04 de julio de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-20</em> - <a href="../posts/2021-10-20-rctodosync-comparte-tareas-del-todotxt-por-contextos-proyectos-o-palabras.html">rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</a></li><li><em>2021-04-19</em> - <a href="../posts/2021-04-19-sleek-una-aplicacion-de-todotxt-moderna-y-elegante.html">Sleek. Una aplicación de todo.txt moderna y elegante</a></li><li><em>2020-05-22</em> - <a href="../posts/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html">Gestionando mis tareas en la terminal con topydo</a></li><li><em>2020-01-31</em> - <a href="../posts/2020-01-31-a-python-tambien-le-gusta-el-todotxt-todotxt-machine.html">A python también le gusta el todo.txt. todotxt-machine</a></li><li><em>2020-01-27</em> - <a href="../posts/2020-01-27-aprendiendo-todotxt-todotxt-cli.html">Aprendiendo todo.txt. todotxt-cli</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

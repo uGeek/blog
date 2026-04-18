@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instalación de yay en Arch y Manjaro</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Yay es un asistente desarrollado en GO para instalar software de AUR (Arch User Repository). El funcionamiento es muy sencillo, ya que si estás familiarizado con pacman, muchos comandos son muy parecidos. Vamos a ver como instalarlo en Manjaro y ArchLinux, así como conocer muchos de los comandos disponibles. Instalación Puedes visitar el repositorio de Yay en el momento de la instalación por si ha cambiado algo, pero a continuación te muestro como instalarlo en Manjaro y Arch. Manjaro sudo pacman -S --needed git base-devel yay Arch sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si Primer uso Genera una base de datos de paquetes de desarrollo para *-gitpaquetes que se instalaron sin yay. Este comando solo debe ejecutarse una vez. yay -Y --gendb Buscar actualizaciones del paquete de desarrollo yay -Syu --devel Hacer actualizaciones de paquetes de desarrollo de forma permanente activado...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Instalación de yay en Arch y Manjaro">
+    <meta property="og:description" content="Yay es un asistente desarrollado en GO para instalar software de AUR (Arch User Repository). El funcionamiento es muy sencillo, ya que si estás familiarizado con pacman, muchos comandos son muy parecidos. Vamos a ver como instalarlo en Manjaro y ArchLinux, así como conocer muchos de los comandos disponibles. Instalación Puedes visitar el repositorio de Yay en el momento de la instalación por si ha cambiado algo, pero a continuación te muestro como instalarlo en Manjaro y Arch. Manjaro sudo pacman -S --needed git base-devel yay Arch sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si Primer uso Genera una base de datos de paquetes de desarrollo para *-gitpaquetes que se instalaron sin yay. Este comando solo debe ejecutarse una vez. yay -Y --gendb Buscar actualizaciones del paquete de desarrollo yay -Syu --devel Hacer actualizaciones de paquetes de desarrollo de forma permanente activado...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="instalacion-de-yay-en-arch-y-manjaro">
+    <meta name="twitter:title" content="Instalación de yay en Arch y Manjaro">
+    <meta name="twitter:description" content="Yay es un asistente desarrollado en GO para instalar software de AUR (Arch User Repository). El funcionamiento es muy sencillo, ya que si estás familiarizado con pacman, muchos comandos son muy parecidos. Vamos a ver como instalarlo en Manjaro y ArchLinux, así como conocer muchos de los comandos disponibles. Instalación Puedes visitar el repositorio de Yay en el momento de la instalación por si ha cambiado algo, pero a continuación te muestro como instalarlo en Manjaro y Arch. Manjaro sudo pacman -S --needed git base-devel yay Arch sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si Primer uso Genera una base de datos de paquetes de desarrollo para *-gitpaquetes que se instalaron sin yay. Este comando solo debe ejecutarse una vez. yay -Y --gendb Buscar actualizaciones del paquete de desarrollo yay -Syu --devel Hacer actualizaciones de paquetes de desarrollo de forma permanente activado...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Instalación de yay en Arch y Manjaro</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 534 palabras. <a href="../categories/yay.html">yay</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Yay es un asistente desarrollado en GO para instalar software de AUR (Arch User Repository).</p>
+<p>El funcionamiento es muy sencillo, ya que si estás familiarizado con <strong>pacman</strong>, muchos comandos son muy parecidos.</p>
+<p>Vamos a ver como instalarlo en Manjaro y ArchLinux, así como conocer muchos de los comandos disponibles.</p>
+<h2>Instalación</h2>
+<p>Puedes visitar <a href="https://github.com/Jguer/yay">el repositorio de Yay en el momento de la instalación</a> por si ha cambiado algo, pero a continuación te muestro como instalarlo en Manjaro y Arch.</p>
+<h3>Manjaro</h3>
+<pre><code>
+sudo pacman -S --needed git base-devel yay
+</code></pre>
+<h3>Arch</h3>
+<pre><code>
+sudo pacman -S --needed git base-devel &amp;&amp; git clone https://aur.archlinux.org/yay.git &amp;&amp; cd yay &amp;&amp; makepkg -si
+</code></pre>
+<h2>Primer uso</h2>
+<p>Genera una base de datos de paquetes de desarrollo para <code>*-git</code>paquetes que se instalaron sin yay. Este comando solo debe ejecutarse una vez.</p>
+<pre><code>
+yay -Y --gendb
+</code></pre>
+<p>Buscar actualizaciones del paquete de desarrollo</p>
+<pre><code>
+yay -Syu --devel
+</code></pre>
+<p>Hacer actualizaciones de paquetes de desarrollo de forma permanente activado ( <code>yay</code>y <code>yay -Syu</code> luego siempre verificará los paquetes de desarrollo)</p>
+<pre><code>
+yay -Y --devel --save
+</code></pre>
+<h2>Comandos básicos</h2>
+<h3>Actualizar base de datos paquetes disponibles</h3>
+<pre><code>
+yay -Sy
+</code></pre>
+<h3>Actualizar paquetes si hay actualizaciones</h3>
+<pre><code>
+yay -Syu
+</code></pre>
+<h3>Actualizar base de datos disponibles y actualizar apliciones</h3>
+<pre><code>
+yay
+</code></pre>
+<h3>Buscar un paquete</h3>
+<pre><code>
+yay [Nombre del paquete]
+</code></pre>
+<p>Te mostrará todos los paquetes disponibles</p>
+<h3>Listar paquetes instalados con yay</h3>
+<pre><code>
+yay -Qqm
+</code></pre>
+<h3>Instalar paquetes con yay</h3>
+<pre><code>
+yay -S [paquete]
+</code></pre>
+<p>Ejemplo, vamos a instalar Typora</p>
+<pre><code>
+yay typora
+
+5 aur/typoratio-git 1.0.r1.gd03e51e-1 (+0 0.00)
+A tool that calculates typographical ratios.
+4 aur/typora-free-cn 0.11.18-2 (+2 0.32)
+typora历史旧版本，中国下载地址构建。
+3 aur/typora-electron 1.4.7-2 (+3 0.62)
+A minimal markdown editor and reader. (Typora with system electron)
+2 aur/typora-free 0.11.18-4 (+21 0.65)
+A minimal markdown editor and reader.
+1 aur/typora 1.4.7-1 (+126 0.62)
+A minimal markdown editor and reader.
+==&gt; Paquetes a instalar (eg.: 1 2 3, 1-3 or ^4)
+==&gt;
+</code></pre>
+<p>Yo instalaré el paquete 3.</p>
+<h3>Borrar paquetes</h3>
+<pre><code>
+yay -R [paquete]
+</code></pre>
+<h2>Eliminar paquete y sus dependencias</h2>
+<pre><code>
+yay -Rns [paquete]
+</code></pre>
+<h2>Eliminar memoria caché</h2>
+<p>Cuando instalas nuevas actualizaciones, las versiones antiguas no son eliminadas. Si una vez probadas las nuevas actualizaciones, todo funciona correctamente, puedes eliminar las versiones antiguas almacenadas en la memoria caché con:</p>
+<pre><code>
+yay -Sc
+</code></pre>
+<h2>Resumen de más opciones disponibles en el repositorio de yay</h2>
+<ul>
+<li><code>yay</code> &gt; alias que <code>yay -Syu</code>.</li>
+<li><code>yay &lt;Search Term&gt;</code> &gt; Presentar menú de selección de instalación de paquetes.</li>
+<li><code>yay -Y --combinedupgrade --save</code> &gt; Haga que la actualización combinada sea el modo predeterminado.</li>
+<li><code>yay -Ps</code> &gt; Imprimir estadísticas del sistema.</li>
+<li><code>yay -Yc</code> &gt; Limpie las dependencias innecesarias.</li>
+<li><code>yay -G &lt;AUR Package&gt;</code> &gt; Descarga PKGBUILD desde ABS o AUR.</li>
+<li><code>yay -Gp &lt;AUR Package&gt;</code> &gt; Imprima en la salida estándar PKGBUILD desde ABS o AUR.</li>
+<li><code>yay -Y --gendb</code> &gt; Genere la base de datos del paquete de desarrollo utilizada para la actualización del desarrollo.</li>
+<li><code>yay -Syu --devel</code> &gt; Realice la actualización del sistema, pero también verifique las actualizaciones del paquete de desarrollo.</li>
+<li><code>yay -Syu --timeupdate</code> &gt; Realice la actualización del sistema y use el tiempo de modificación de PKGBUILD (no el número de versión) para determinar la actualización.</li>
+<li><code>yay -Wv &lt;AUR Package&gt;</code> &gt; Votar por paquete (Requiere configuración <code>AUR_USERNAME</code>y <code>AUR_PASSWORD</code>Variables de entorno). (yay v11.3+)</li>
+<li><code>yay -Wu &lt;AUR Package&gt;</code> &gt; Dejar de votar por el paquete (requiere configuración <code>AUR_USERNAME</code>y <code>AUR_PASSWORD</code>variables de entorno) (yay v11.3+)</li>
+</ul>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/Jguer/yay">https://github.com/Jguer/yay</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 10 de enero de 2023</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

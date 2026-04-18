@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidor de Mensajería Matrix para Raspberry. Cliente Riot</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 4 minutos. 467 palabras. mensajeria Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor. Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos. Características: Mensajería Ilimitadas Salas donde poder compartir mensajes, imágenes, archivos,… Llamadas Video Llamadas Doble Cifrados Varios Clientes y totalmente multiplataforma INSTALACIÓN DEL SERVIDOR EN RASPBIAN sudo apt-get install build-essential python2.7-dev libffi-dev \...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Servidor de Mensajería Matrix para Raspberry. Cliente Riot">
+    <meta property="og:description" content="Tiempo estimado de lectura: 4 minutos. 467 palabras. mensajeria Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor. Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos. Características: Mensajería Ilimitadas Salas donde poder compartir mensajes, imágenes, archivos,… Llamadas Video Llamadas Doble Cifrados Varios Clientes y totalmente multiplataforma INSTALACIÓN DEL SERVIDOR EN RASPBIAN sudo apt-get install build-essential python2.7-dev libffi-dev \...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="servidor-de-mensajeria-matrix-para-raspberry-cliente-riot">
+    <meta name="twitter:title" content="Servidor de Mensajería Matrix para Raspberry. Cliente Riot">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 4 minutos. 467 palabras. mensajeria Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor. Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos. Características: Mensajería Ilimitadas Salas donde poder compartir mensajes, imágenes, archivos,… Llamadas Video Llamadas Doble Cifrados Varios Clientes y totalmente multiplataforma INSTALACIÓN DEL SERVIDOR EN RASPBIAN sudo apt-get install build-essential python2.7-dev libffi-dev \...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Servidor de Mensajería Matrix para Raspberry. Cliente Riot</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 421 palabras. <a href="../categories/mensajeria.html">mensajeria</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 4 minutos. 467 palabras. <a href="https://ugeek.github.io/blog/categories/mensajeria">mensajeria</a></h5>
+<p>Hace algo mas de un mes, estoy utilizando Matrix Synapse, juntamente con el cliente Riot, a través de mi servidor-raspberry de forma totalmente privada y teniendo la totalidad de la gestión del servicio como los usuarios registrados. De momento, no he federado mi servidor, de manera que únicamente podremos comunicarnos los usuarios registrados en este servidor.</p>
+<p>Voy a explicaros paso a paso, como crear vuestro servidor en raspbian y si abrís los puertos del servicio, podréis comunicaros dentro y fuera de vuestra red local, con una de las aplicaciones de comunicación de Software Libre, mas seguras que existen en la actualidad, ya que posee de doble cifrado de datos.</p>
+<p>Características:</p>
+<ul>
+<li>Mensajería</li>
+<li>Ilimitadas Salas donde poder compartir mensajes, imágenes, archivos,…</li>
+<li>Llamadas</li>
+<li>Video Llamadas</li>
+<li>Doble Cifrados</li>
+<li>Varios Clientes y totalmente multiplataforma</li>
+</ul>
+<h2>INSTALACIÓN DEL SERVIDOR EN RASPBIAN</h2>
+<pre><code>sudo apt-get install build-essential python2.7-dev libffi-dev \
+                     python-pip python-setuptools sqlite3 \
+                     libssl-dev python-virtualenv libjpeg-dev
+sudo pip install --upgrade pip
+sudo pip install --upgrade ndg-httpsclient
+sudo pip install --upgrade virtualenv
+</code></pre>
+<p>Este segunda comando ten paciencia, se crearan los certificados, etc … y <strong>tardará mucho tiempo, probablemente una hora</strong>, recomiendo detener servicios</p>
+<pre><code>virtualenv -p python2.7 ~/.synapse
+source ~/.synapse/bin/activate
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install https://github.com/matrix-org/synapse/tarball/master
+</code></pre>
+<p>Instala también el modulo para synapse.app.</p>
+<p><code>pip install (--upgrade) synapseclient</code></p>
+<h2>CONFIGURAR SYNAPSE</h2>
+<p>Recuerda sustituir el nombre del servidor <strong>my.domain.name</strong> En –report-stats= tienes que seleccionar <strong>yes o no</strong>.</p>
+<p><code>cd ~/.synapse</code></p>
+<pre><code>python2.7 -B -m synapse.app.homeserver \
+    --server-name=my.domain.name \
+    --config-path=homeserver.yaml \
+    --generate-config \
+    --report-stats=[yes|no]
+</code></pre>
+<h2>INICIAR SERVIDOR</h2>
+<ol>
+<li>Nos situamos en la carpeta de <strong>synapse</strong></li>
+</ol>
+<p><code>cd ~/.synapse</code></p>
+<ol>
+<li>Iniciar el servidor</li>
+</ol>
+<p><code>source ./bin/activate ; synctl start</code></p>
+<p>La Terminal nos devolverá que por el puerto 8008, encontraremos una inferfaz de gestión. Esta es antigua, <strong>no te recomiendo que la uses</strong>, te recomiendo crear ususarios mediante el comando que veremos mas adelante. <strong>Detener el servicio, si lo deseamos:</strong></p>
+<p><code>source ./bin/activate ; synctl stop</code></p>
+<p>CREAR USUARIOS</p>
+<p>Iniciamos el servidor y situándonos dentro del directorio <strong>.synapse</strong></p>
+<p><code>cd ~/.synapse</code></p>
+<p>Ejecutaremos el siguiente comando:</p>
+<p><code>register_new_matrix_user -c homeserver.yaml https://localhost:8448</code></p>
+<p>Ahora nos preguntará por el usuario, contraseña y si este usuario es administrador o no.</p>
+<h2>UTILIZAR EL CLIENTE RIOT</h2>
+<p><img src="https://ugeek.github.io/blog/images-blog/riot.png" alt=""></p>
+<ol>
+<li>Pondermos en nombre de usuario y contraseña</li>
+<li>Habilitamos opciones de servidor propietarias</li>
+<li>En servidor, ponemos <a href="https://ip:8448/">https://ip:8448</a></li>
+</ol>
+<p>ENCONTRARSE LOS USUARIOS</p>
+<ol>
+<li>Creamos una sala</li>
+<li>En configuración de la sala, en <strong>acceso a la Sala</strong> y seleccionamos:</li>
+</ol>
+<p>“Los que saben el enlace de la sala, incluso huespedes”</p>
+<p>3 )Ahora en <strong>Avanzado</strong>, compartimos al otro usuario <strong>La identificación interna de esta Sala</strong></p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 20 de enero de 2019</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

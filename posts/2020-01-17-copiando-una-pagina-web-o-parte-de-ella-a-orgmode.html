@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copiando una página web o parte de ella a OrgMode</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Vamos a utilizar un paquete que nos va a permitir copiar el contenido de una página web o parte de él, con enlaces, etc... a orgmode Este paquete no está en los repositorios de Melpa, así que vamos crearlo en nuestro disco duro y cargarlo al inicio. Paquete org-w3m.el Vamos a crear el archivo org-w3m.el, por ejemplo en la siguiente ruta ~/dotfile/emacs/paquetes/org-w3m.el. nano ~/dotfile/emacs/paquetes/org-w3m.el Copia el siguiente contenido. ;; org-w3m.el --- Support from copy and paste from w3m to Org-mode ;; Copyright (C) 2008-2012 Free Software Foundation, Inc. ;; Author: Andy Stewart <lazycat dot manatee at gmail dot com> ;; Keywords: outlines, hypermedia, calendar, wp ;; Homepage: http://orgmode.org ;; ;; This file is part of GNU Emacs. ;; ;; GNU Emacs is free software: you can redistribute it and/or modify ;; it under the terms of the GNU General Public License as published by ;; the Free Software Foundation, either...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Copiando una página web o parte de ella a OrgMode">
+    <meta property="og:description" content="Vamos a utilizar un paquete que nos va a permitir copiar el contenido de una página web o parte de él, con enlaces, etc... a orgmode Este paquete no está en los repositorios de Melpa, así que vamos crearlo en nuestro disco duro y cargarlo al inicio. Paquete org-w3m.el Vamos a crear el archivo org-w3m.el, por ejemplo en la siguiente ruta ~/dotfile/emacs/paquetes/org-w3m.el. nano ~/dotfile/emacs/paquetes/org-w3m.el Copia el siguiente contenido. ;; org-w3m.el --- Support from copy and paste from w3m to Org-mode ;; Copyright (C) 2008-2012 Free Software Foundation, Inc. ;; Author: Andy Stewart <lazycat dot manatee at gmail dot com> ;; Keywords: outlines, hypermedia, calendar, wp ;; Homepage: http://orgmode.org ;; ;; This file is part of GNU Emacs. ;; ;; GNU Emacs is free software: you can redistribute it and/or modify ;; it under the terms of the GNU General Public License as published by ;; the Free Software Foundation, either...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/w3m.png">
+    <meta property="og:url" content="copiando-una-pagina-web-o-parte-de-ella-a-orgmode">
+    <meta name="twitter:title" content="Copiando una página web o parte de ella a OrgMode">
+    <meta name="twitter:description" content="Vamos a utilizar un paquete que nos va a permitir copiar el contenido de una página web o parte de él, con enlaces, etc... a orgmode Este paquete no está en los repositorios de Melpa, así que vamos crearlo en nuestro disco duro y cargarlo al inicio. Paquete org-w3m.el Vamos a crear el archivo org-w3m.el, por ejemplo en la siguiente ruta ~/dotfile/emacs/paquetes/org-w3m.el. nano ~/dotfile/emacs/paquetes/org-w3m.el Copia el siguiente contenido. ;; org-w3m.el --- Support from copy and paste from w3m to Org-mode ;; Copyright (C) 2008-2012 Free Software Foundation, Inc. ;; Author: Andy Stewart <lazycat dot manatee at gmail dot com> ;; Keywords: outlines, hypermedia, calendar, wp ;; Homepage: http://orgmode.org ;; ;; This file is part of GNU Emacs. ;; ;; GNU Emacs is free software: you can redistribute it and/or modify ;; it under the terms of the GNU General Public License as published by ;; the Free Software Foundation, either...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/w3m.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Copiando una página web o parte de ella a OrgMode</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 5 min. 905 palabras. <a href="../categories/emacs.html">emacs</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Vamos a utilizar un paquete que nos va a permitir copiar el contenido de una página web o parte de él, con enlaces, etc... a orgmode</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/w3m.png" alt=""></p>
+<p>Este paquete no está en los repositorios de Melpa, así que vamos crearlo en nuestro disco duro y cargarlo al inicio.</p>
+<h2>Paquete org-w3m.el</h2>
+<p>Vamos a crear el archivo <strong>org-w3m.el</strong>, por ejemplo en la siguiente ruta <code>~/dotfile/emacs/paquetes/org-w3m.el</code>.</p>
+<pre><code>
+nano ~/dotfile/emacs/paquetes/org-w3m.el
+</code></pre>
+<p>Copia el siguiente contenido.</p>
+<pre><code>
+;; org-w3m.el --- Support from copy and paste from w3m to Org-mode
+
+;; Copyright (C) 2008-2012 Free Software Foundation, Inc.
+
+;; Author: Andy Stewart &lt;lazycat dot manatee at gmail dot com&gt;
+;; Keywords: outlines, hypermedia, calendar, wp
+;; Homepage: http://orgmode.org
+;;
+;; This file is part of GNU Emacs.
+;;
+;; GNU Emacs is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; GNU Emacs is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with GNU Emacs.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;; Commentary:
+
+;; This file implements copying HTML content from a w3m buffer and
+;; transforming the text on the fly so that it can be pasted into
+;; an org-mode buffer with hot links.  It will also work for regions
+;; in gnus buffers that have been washed with w3m.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;; Acknowledgments:
+
+;; Richard Riley &lt;rileyrgdev at googlemail dot com&gt;
+;;
+;;      The idea of transforming the HTML content with org-mode style is
+;;      proposed by Richard, I'm just coding it.
+;;
+
+;;; Code:
+
+(require 'org)
+
+(defun org-w3m-copy-for-org-mode ()
+  "Copy current buffer content or active region with `org-mode' style links.
+This will encode `link-title' and `link-location' with
+`org-make-link-string', and insert the transformed test into the kill ring,
+so that it can be yanked into an Org-mode buffer with links working correctly."
+  (interactive)
+  (let* ((regionp (org-region-active-p))
+         (transform-start (point-min))
+         (transform-end (point-max))
+         return-content
+         link-location link-title
+         temp-position out-bound)
+    (when regionp
+      (setq transform-start (region-beginning))
+      (setq transform-end (region-end))
+      ;; Deactivate mark if current mark is activate.
+      (if (fboundp 'deactivate-mark) (deactivate-mark)))
+    (message "Transforming links...")
+    (save-excursion
+      (goto-char transform-start)
+      (while (and (not out-bound)                 ; still inside region to copy
+                  (not (org-w3m-no-next-link-p))) ; no next link current buffer
+        ;; store current point before jump next anchor
+        (setq temp-position (point))
+        ;; move to next anchor when current point is not at anchor
+        (or (get-text-property (point) 'w3m-href-anchor) (org-w3m-get-next-link-start))
+        (if (&lt;= (point) transform-end)  ; if point is inside transform bound
+            (progn
+              ;; get content between two links.
+              (if (&gt; (point) temp-position)
+                  (setq return-content (concat return-content
+                                               (buffer-substring
+                                                temp-position (point)))))
+              ;; get link location at current point.
+              (setq link-location (get-text-property (point) 'w3m-href-anchor))
+              ;; get link title at current point.
+              (setq link-title (buffer-substring (point)
+                                                 (org-w3m-get-anchor-end)))
+              ;; concat `org-mode' style url to `return-content'.
+              (setq return-content (concat return-content
+                                           (org-make-link-string
+                                            link-location link-title))))
+          (goto-char temp-position)     ; reset point before jump next anchor
+          (setq out-bound t)            ; for break out `while' loop
+          ))
+      ;; add the rest until end of the region to be copied
+      (if (&lt; (point) transform-end)
+          (setq return-content
+                (concat return-content
+                        (buffer-substring (point) transform-end))))
+      (org-kill-new return-content)
+      (message "Transforming links...done, use C-y to insert text into Org-mode file")
+      (message "Copy with link transformation complete."))))
+
+(defun org-w3m-get-anchor-start ()
+  "Move cursor to the start of current anchor.  Return point."
+  ;; get start position of anchor or current point
+  (goto-char (or (previous-single-property-change (point) 'w3m-anchor-sequence)
+                 (point))))
+
+(defun org-w3m-get-anchor-end ()
+  "Move cursor to the end of current anchor.  Return point."
+  ;; get end position of anchor or point
+  (goto-char (or (next-single-property-change (point) 'w3m-anchor-sequence)
+		 (point))))
+
+(defun org-w3m-get-next-link-start ()
+  "Move cursor to the start of next link.  Return point."
+  (catch 'reach
+    (while (next-single-property-change (point) 'w3m-anchor-sequence)
+      ;; jump to next anchor
+      (goto-char (next-single-property-change (point) 'w3m-anchor-sequence))
+      (when (get-text-property (point) 'w3m-href-anchor)
+        ;; return point when current is valid link
+        (throw 'reach nil))))
+  (point))
+
+(defun org-w3m-get-prev-link-start ()
+  "Move cursor to the start of previous link.  Return point."
+  (catch 'reach
+    (while (previous-single-property-change (point) 'w3m-anchor-sequence)
+      ;; jump to previous anchor
+      (goto-char (previous-single-property-change (point) 'w3m-anchor-sequence))
+      (when (get-text-property (point) 'w3m-href-anchor)
+        ;; return point when current is valid link
+        (throw 'reach nil))))
+  (point))
+
+(defun org-w3m-no-next-link-p ()
+  "Whether there is no next link after the cursor.
+Return t if there is no next link; otherwise, return nil."
+  (save-excursion
+    (equal (point) (org-w3m-get-next-link-start))))
+
+(defun org-w3m-no-prev-link-p ()
+  "Whether there is no previous link after the cursor.
+Return t if there is no previous link; otherwise, return nil."
+  (save-excursion
+    (equal (point) (org-w3m-get-prev-link-start))))
+
+;; Install keys into the w3m keymap
+(defvar w3m-mode-map)
+(defvar w3m-minor-mode-map)
+(when (and (boundp 'w3m-mode-map)
+           (keymapp w3m-mode-map))
+  (define-key w3m-mode-map "\C-c\C-x\M-w" 'org-w3m-copy-for-org-mode)
+  (define-key w3m-mode-map "\C-c\C-x\C-w" 'org-w3m-copy-for-org-mode))
+(when (and (boundp 'w3m-minor-mode-map)
+           (keymapp w3m-minor-mode-map))
+  (define-key w3m-minor-mode-map "\C-c\C-x\M-w" 'org-w3m-copy-for-org-mode)
+  (define-key w3m-minor-mode-map "\C-c\C-x\C-w" 'org-w3m-copy-for-org-mode))
+(add-hook
+ 'w3m-mode-hook
+ (lambda ()
+   (define-key w3m-mode-map "\C-c\C-x\M-w" 'org-w3m-copy-for-org-mode)
+   (define-key w3m-mode-map "\C-c\C-x\C-w" 'org-w3m-copy-for-org-mode)))
+(add-hook
+ 'w3m-minor-mode-hook
+ (lambda ()
+   (define-key w3m-minor-mode-map "\C-c\C-x\M-w" 'org-w3m-copy-for-org-mode)
+   (define-key w3m-minor-mode-map "\C-c\C-x\C-w" 'org-w3m-copy-for-org-mode)))
+
+(provide 'org-w3m)
+
+;;; org-w3m.el ends here
+</code></pre>
+<h2>Archivo de configuración</h2>
+<p>Ahora en el archivo <strong>.emacs</strong> o <strong>init.el</strong>, vamos a añadir la siguiente línea para cargar el paquete que acabamos de crear, al arranca Emacs.</p>
+<pre><code>
+(load-file "~/dotfile/emacs/paquetes/org-w3m.el")
+</code></pre>
+<h2>Copiar y Pegar en el archivo OrgMode</h2>
+<ol>
+<li>Seleccionamos el texto a copiar</li>
+<li>Pulsamos <strong>C-c C-x C-w</strong> o introducimos: <strong>M-x org-w3m-copy-for-org-mode</strong></li>
+<li>Pegamos en nuestro org</li>
+</ol>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 17 de enero de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-03-18</em> - <a href="../posts/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li><li><em>2022-03-08</em> - <a href="../posts/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li><li><em>2021-07-28</em> - <a href="../posts/2021-07-28-editando-csv-usando-emacs.html">Editando CSV usando Emacs</a></li><li><em>2021-04-15</em> - <a href="../posts/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li><li><em>2020-10-26</em> - <a href="../posts/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html">Borrando líneas en blanco de un texto con Emacs</a></li><li><em>2020-10-24</em> - <a href="../posts/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li><li><em>2020-09-03</em> - <a href="../posts/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html">Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li><li><em>2020-08-12</em> - <a href="../posts/2020-08-12-compilar-emacs-271-para-ubuntu-debian-raspbian-y-derivadas.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li><li><em>2020-06-16</em> - <a href="../posts/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li><li><em>2020-02-12</em> - <a href="../posts/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

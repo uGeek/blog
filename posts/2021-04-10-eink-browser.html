@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eink Browser</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="EinkBrowser es un navegador simple, liviano, rápido, especialmente diseñado para dispositivos de tinta electrónica. Es un navegador basado en webview que no necesita permisos innecesarios. Me gusta mucho ya que es super rápido y aunque rompe un poco con el modo de uso de los navegadores convencionales, una vez que te habituas a su uso, es muy práctico. Me gusta mucho la opción que tiene de crear dos botones en la pantalla, para hacer scroll hacia abajo o hacia arriba. Este modo hace que el visionado de las webs seam más rápido. Funciones específicas de E-Ink barra de herramientas del botón pageUp / pageDown pageUp / pageDown tocando en el lado izquierdo / derecho de la pantalla pageUp / pageDown usando las teclas de volumen configurar fácilmente el tamaño de fuente función de modo de escritorio todos los iconos están en colores de alto contraste eliminar animaciones innecesarias admite combinaciones...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Eink Browser">
+    <meta property="og:description" content="EinkBrowser es un navegador simple, liviano, rápido, especialmente diseñado para dispositivos de tinta electrónica. Es un navegador basado en webview que no necesita permisos innecesarios. Me gusta mucho ya que es super rápido y aunque rompe un poco con el modo de uso de los navegadores convencionales, una vez que te habituas a su uso, es muy práctico. Me gusta mucho la opción que tiene de crear dos botones en la pantalla, para hacer scroll hacia abajo o hacia arriba. Este modo hace que el visionado de las webs seam más rápido. Funciones específicas de E-Ink barra de herramientas del botón pageUp / pageDown pageUp / pageDown tocando en el lado izquierdo / derecho de la pantalla pageUp / pageDown usando las teclas de volumen configurar fácilmente el tamaño de fuente función de modo de escritorio todos los iconos están en colores de alto contraste eliminar animaciones innecesarias admite combinaciones...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Eink_Browser.png">
+    <meta property="og:url" content="eink-browser">
+    <meta name="twitter:title" content="Eink Browser">
+    <meta name="twitter:description" content="EinkBrowser es un navegador simple, liviano, rápido, especialmente diseñado para dispositivos de tinta electrónica. Es un navegador basado en webview que no necesita permisos innecesarios. Me gusta mucho ya que es super rápido y aunque rompe un poco con el modo de uso de los navegadores convencionales, una vez que te habituas a su uso, es muy práctico. Me gusta mucho la opción que tiene de crear dos botones en la pantalla, para hacer scroll hacia abajo o hacia arriba. Este modo hace que el visionado de las webs seam más rápido. Funciones específicas de E-Ink barra de herramientas del botón pageUp / pageDown pageUp / pageDown tocando en el lado izquierdo / derecho de la pantalla pageUp / pageDown usando las teclas de volumen configurar fácilmente el tamaño de fuente función de modo de escritorio todos los iconos están en colores de alto contraste eliminar animaciones innecesarias admite combinaciones...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Eink_Browser.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Eink Browser</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 331 palabras. <a href="../categories/android.html">android</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p><strong>EinkBrowser</strong> es un navegador simple, liviano, rápido, especialmente diseñado para dispositivos de tinta electrónica. Es un navegador basado en webview que no necesita permisos innecesarios.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/Eink_Browser.png" alt=""></p>
+<p>Me gusta mucho ya que es super rápido y aunque rompe un poco con el modo de uso de los navegadores convencionales, una vez que te habituas a su uso, es muy práctico.</p>
+<p>Me gusta mucho la opción que tiene de crear dos botones en la pantalla, para hacer scroll hacia abajo o hacia arriba. Este modo hace que el visionado de las webs seam más rápido.</p>
+<h2>Funciones específicas de E-Ink</h2>
+<ul>
+<li><p>barra de herramientas del botón pageUp / pageDown</p>
+</li>
+<li><p>pageUp / pageDown tocando en el lado izquierdo / derecho de la pantalla</p>
+</li>
+<li><p>pageUp / pageDown usando las teclas de volumen</p>
+</li>
+<li><p>configurar fácilmente el tamaño de fuente</p>
+</li>
+<li><p>función de modo de escritorio</p>
+</li>
+<li><p>todos los iconos están en colores de alto contraste</p>
+</li>
+<li><p>eliminar animaciones innecesarias</p>
+</li>
+<li><p>admite combinaciones de teclas VI (útil cuando el dispositivo está conectado con un teclado bluetooth)</p>
+</li>
+<li><p>b: abrir marcadores</p>
+</li>
+<li><p>d: eliminar pestaña actual</p>
+</li>
+<li><p>gg: ir al principio</p>
+</li>
+<li><p>j: página abajo</p>
+</li>
+<li><p>k: retroceder página</p>
+</li>
+<li><p>h: volver</p>
+</li>
+<li><p>l: adelante</p>
+</li>
+<li><p>o: focos donde url bar</p>
+</li>
+<li><p>t: nueva pestaña</p>
+</li>
+<li><p>vi: ampliar la fuente</p>
+</li>
+<li><p>vo: alejar la fuente</p>
+</li>
+<li><p>/: buscar en la página</p>
+</li>
+<li><p>G: ir al final</p>
+</li>
+<li><p>J: muestra la siguiente pestaña</p>
+</li>
+<li><p>K: mostrar pestaña anterior</p>
+</li>
+</ul>
+<h2>Interfaz de usuario básica / manejo:</h2>
+<ul>
+<li>optimizado para el manejo con una mano (barra de herramientas en la parte inferior)</li>
+<li>control de pestañas (cambiar, abrir, cerrar pestañas ilimitadas)</li>
+<li>diseño de material completo</li>
+<li>navegación a pantalla completa (opcional)</li>
+<li>botón de navegación en modo de pantalla completa</li>
+<li>alternar rápido para la configuración más importante</li>
+<li>control de gestos avanzado para la barra de herramientas y el botón de navegación</li>
+</ul>
+<h2>Características adicionales</h2>
+<ul>
+<li>buscar en el sitio</li>
+<li>abrir enlaces en segundo plano</li>
+<li>búsqueda web (desde el menú contextual de texto marcado)</li>
+<li>capturas de pantalla de todo el sitio web</li>
+<li>compartir / guardar como PDF</li>
+<li>abrir enlaces en otras aplicaciones (por ejemplo, YouTube)</li>
+</ul>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://android.izzysoft.de/repo/apk/info.plateaukao.einkbro">https://android.izzysoft.de/repo/apk/info.plateaukao.einkbro</a></li>
+<li><a href="https://github.com/plateaukao/browser">https://github.com/plateaukao/browser</a></li>
+<li><a href="https://github.com/plateaukao/browser/releases">https://github.com/plateaukao/browser/releases</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el sábado, 10 de abril de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-12-12</em> - <a href="../posts/2023-12-12-android-descargando-videos-de-youtube-como-podcast.html">Android. Descargando vídeos de YouTube como podcast</a></li><li><em>2023-09-03</em> - <a href="../posts/2023-09-03-android-teclado-fisico-bluetooth-en-ingles-configurarlo-en-espanol.html">Android. Teclado Físico Bluetooth en Inglés, configurarlo en Español</a></li><li><em>2023-08-13</em> - <a href="../posts/2023-08-13-android-mis-nuevas-apps-imprescindibles-2023.html">Android. Mis Nuevas Apps imprescindibles 2023</a></li><li><em>2023-03-25</em> - <a href="../posts/2023-03-25-sd-maid-se-manten-limpio-tu-dispositivo-android.html">SD Maid SE. Mantén limpio tu dispositivo Android</a></li><li><em>2021-05-30</em> - <a href="../posts/2021-05-30-anadiendo-mas-repositorios-a-f-droid-o-foxy-droid.html">Añadiendo más repositorios a F-Droid o Foxy Droid</a></li><li><em>2021-05-05</em> - <a href="../posts/2021-05-05-styx-el-mejor-navegador-open-source-para-android.html">Styx. El mejor Navegador Open Source para Android</a></li><li><em>2021-03-27</em> - <a href="../posts/2021-03-27-pielauncher-mi-nuevo-lanzador-de-aplicaciones-para-android.html">PieLauncher. Mi nuevo Lanzador de aplicaciones para Android</a></li><li><em>2020-12-30</em> - <a href="../posts/2020-12-30-launchers-opensource-para-android-personalizando-tu-movil.html">Launchers opensource para Android. Personalizando tu móvil</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

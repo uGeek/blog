@@ -1,0 +1,195 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #mensaje {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+body {
+  margin: 2%;
+}
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .exito-mensaje {
+            color: green;
+            font-weight: bold;
+        }
+
+        .palabras-especiales {
+            margin: 20px;
+        }
+
+        .palabras-especiales a {
+            text-decoration: none;
+            color: #008CBA;
+            margin-right: 10px;
+        }
+
+        .editar-input {
+            width: 100%;
+        }
+
+        .acciones-buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+				a:link {
+  color: #00668E; /* Cambiar el color del hipervínculo no visitado */
+				text-decoration: none; /* Eliminar la línea debajo del hipervínculo no visitado */
+					font-size: 20px;
+}
+
+a:visited {
+  color: purple; /* Cambiar el color del hipervínculo visitado */
+  text-decoration: none; /* Eliminar la línea debajo del hipervínculo visitado */
+				}
+
+
+		</style>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 3%;
+}
+
+a {
+  color: #5599ff;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+a:hover {
+  color: #80bfff;
+}
+
+a:visited {
+  color: red;
+}
+
+.menu-links {
+  display: inline;
+}
+
+.menu-links h5 {
+  display: inline;
+  margin-right: 20px; /* Espacio entre enlaces */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor relativo para anclar el botón */
+.code-container {
+    position: relative; /* ← Fundamental para el posicionamiento absoluto del botón */
+}
+
+/* Botón flotando arriba a la derecha */
+.copy-btn {
+    position: absolute;  /* ← Se posiciona dentro de .code-container */
+    top: 8px;            /* ← Distancia desde arriba */
+    right: 8px;          /* ← Distancia desde la derecha */
+    z-index: 10;         /* ← Se muestra por encima del código */
+
+    /* Estilos visuales */
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    background-color: #3a3a3a;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;                          /* ← Oculto por defecto */
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+/* Mostrar el botón al pasar el ratón por el bloque */
+.code-container:hover .copy-btn {
+    opacity: 1; /* ← Aparece solo cuando haces hover */
+}
+
+/* Estado copiado */
+.copy-btn.copied {
+    background-color: #2d6a2d;
+    border-color: #4caf50;
+    opacity: 1; /* ← Se mantiene visible al copiar */
+}
+
+/* Asegura que el pre no tape el botón */
+.code-container pre {
+    margin: 0;
+    padding-top: 2.5rem; /* ← Espacio para que el botón no tape el código */
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Micro. Un editor normal para terminal</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano. Micro es un editor de texto basado en terminal que pretende ser fácil de usar e intuitivo, al mismo tiempo que aprovecha todas las capacidades de los terminales modernos. Viene como un único binario estático, con baterías incluidas, sin dependencias, y puede descargarlo y usarlo ahora mismo. Como su nombre lo indica, micro pretende ser algo así como un sucesor del editor nano al ser fácil de instalar y usar en caso de apuro, pero micro también pretende ser agradable de usar a tiempo completo, ya sea que trabaje en la terminal o lo prefiera. Instalación Si descargamos el binario en su última versión, lo haremos con: curl https://getmic.ro | bash Si deseas hacerlo desde los repositorios: sudo apt install micro Ratón Aunque es una aplicación...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Micro. Un editor normal para terminal">
+    <meta property="og:description" content="No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano. Micro es un editor de texto basado en terminal que pretende ser fácil de usar e intuitivo, al mismo tiempo que aprovecha todas las capacidades de los terminales modernos. Viene como un único binario estático, con baterías incluidas, sin dependencias, y puede descargarlo y usarlo ahora mismo. Como su nombre lo indica, micro pretende ser algo así como un sucesor del editor nano al ser fácil de instalar y usar en caso de apuro, pero micro también pretende ser agradable de usar a tiempo completo, ya sea que trabaje en la terminal o lo prefiera. Instalación Si descargamos el binario en su última versión, lo haremos con: curl https://getmic.ro | bash Si deseas hacerlo desde los repositorios: sudo apt install micro Ratón Aunque es una aplicación...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Micro._Un_editor_normal_para_terminal.png">
+    <meta property="og:url" content="micro-un-editor-normal-para-terminal">
+    <meta name="twitter:title" content="Micro. Un editor normal para terminal">
+    <meta name="twitter:description" content="No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano. Micro es un editor de texto basado en terminal que pretende ser fácil de usar e intuitivo, al mismo tiempo que aprovecha todas las capacidades de los terminales modernos. Viene como un único binario estático, con baterías incluidas, sin dependencias, y puede descargarlo y usarlo ahora mismo. Como su nombre lo indica, micro pretende ser algo así como un sucesor del editor nano al ser fácil de instalar y usar en caso de apuro, pero micro también pretende ser agradable de usar a tiempo completo, ya sea que trabaje en la terminal o lo prefiera. Instalación Si descargamos el binario en su última versión, lo haremos con: curl https://getmic.ro | bash Si deseas hacerlo desde los repositorios: sudo apt install micro Ratón Aunque es una aplicación...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Micro._Un_editor_normal_para_terminal.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Micro. Un editor normal para terminal</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 6 min. 1005 palabras. <a href="../categories/editor.html">editor</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>No puede ser tan dificil utilizar la terminal y menos, un editor de texto con tantos atajos raros como en Emacs, Vim o Nano.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/Micro._Un_editor_normal_para_terminal.png" alt=""></p>
+<p>Micro es un editor de texto basado en terminal que pretende ser fácil de usar e intuitivo, al mismo tiempo que aprovecha todas las capacidades de los terminales modernos. Viene como un único binario estático, con baterías incluidas, sin dependencias, y puede descargarlo y usarlo ahora mismo.</p>
+<p>Como su nombre lo indica, micro pretende ser algo así como un sucesor del editor nano al ser fácil de instalar y usar en caso de apuro, pero micro también pretende ser agradable de usar a tiempo completo, ya sea que trabaje en la terminal o lo prefiera.</p>
+<h2>Instalación</h2>
+<p>Si descargamos el binario en su última versión, lo haremos con:</p>
+<pre><code>
+curl https://getmic.ro | bash
+</code></pre>
+<p>Si deseas hacerlo desde los repositorios:</p>
+<pre><code>
+sudo apt install micro
+</code></pre>
+<h2>Ratón</h2>
+<p>Aunque es una aplicación para terminal, <strong>micro</strong> se destaca por el hecho de poder utilizar el ratón.</p>
+<h2>Atajos</h2>
+<p>Con <code>Alt+g</code> micro mostrará un resumen de los atajos más importantes:</p>
+<ul>
+<li>Salir o Cancelar último comando <code>Ctrl-q</code></li>
+<li>Guardar <code>Ctrl+s</code></li>
+<li>Ayuda <code>Ctrl+g</code></li>
+<li>Abrir un archivo. Previsualiza en parte inferior y ayúdate de Tabulado <code>Ctrl+o</code></li>
+<li>Zoom <code>Ctrl+ +</code> y <code>Ctrl + -</code></li>
+<li>Buscar <code>Ctrl+f</code>. Buscar siguiente palabra <code>Ctrl+n</code> y anterior <code>Ctrl+p</code></li>
+<li>Seleccionar bloque de texto. <code>Shift+Izq/Arriba/abajo/Derecha</code></li>
+<li>Seleccionar todo el texto <code>Ctrl+a</code></li>
+<li>Copiar <code>Ctrl-c</code></li>
+<li>Cortar texto seleccionado <code>Ctrl+x</code></li>
+<li>Pegar <code>Ctrl + V</code></li>
+<li>Cortar la línea actual <code>Ctrl + K</code></li>
+<li>Duplicar la línea actual <code>Ctrl+D</code></li>
+<li>Deshacer <code>Ctrl + Z</code></li>
+<li>Rehacer <code>Ctrl + Y</code></li>
+<li>Mover la línea actual hacia arriba <code>Alt + flecha arriba</code></li>
+<li>Mover la línea actual hacia abajo <code>Alt + flecha abajo</code></li>
+</ul>
+<h3>Personalizar atajos</h3>
+<p>Mediante el archivo de configuración <code>~/.config/micro/bindings.json</code>, podemos personalizar los atajos:</p>
+<p><a href="https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md#bindable-actions-and-bindable-keys">En esta página</a> tenemos todas las opciones para personalizar los atajos.</p>
+<p>Si quisiéramos que el atajo <code>Ctrl-Tab</code> para ir a la siguiente pestaña:</p>
+<pre><code>
+{
+"Ctrl-Tab": "NextTab"
+}
+</code></pre>
+<p>Salir y Guardar:</p>
+<pre><code>
+{
+"Alt-s": "Save,Quit"
+}
+</code></pre>
+<p>Los atajos de teclado disponibles por defecto, podemos entrontrarlo en <a href="https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md#default-keybinding-configuration">esta web</a></p>
+<h2>Pestañas</h2>
+<ul>
+<li>Abrir nueva Pestaña <code>Ctrl+t</code></li>
+<li>Pestaña Anterior <code>Ctrl+,</code></li>
+<li>Pestaña siguiente <code>Ctrl+.</code></li>
+</ul>
+<h2>Introducir Comandos</h2>
+<p>Con <code>Ctrl+e</code> podemos introducir comando a <strong>Micro</strong>. Por ejemplo el comando de ayuda a plugins <code>help plugins</code></p>
+<h3>Ir a una nº de línea concreto:</h3>
+<ul>
+<li>goto [nº linea]</li>
+</ul>
+<h3>Reemplazar palabras</h3>
+<p>Reemplaza la palabra 'búsqueda' con la palabra 'valor'. La flag -a se puede usar para reemplazar todas las ocurrencias a la vez.</p>
+<ul>
+<li>replace [búsqueda] [valor] [flag]</li>
+</ul>
+<h3>Ejecutar comandos</h3>
+<p>Permite ejecutar comandos bash desde <strong>micro</strong>. - run '[Bash command]'</p>
+<h3>Configurar Opciones</h3>
+<ul>
+<li>set [option] [value]</li>
+</ul>
+<h2>Plugins</h2>
+<p><a href="https://github.com/micro-editor/plugin-channel">Estos son los plugins oficiales</a> de <strong>micro</strong>.</p>
+<p><a href="https://micro-editor.github.io/plugins.html">Los Plugins</a> podemos instalarlos desde la web de Micro.</p>
+<h3>Corrector ortográfico</h3>
+<p>Antes de instalar el plugin, es necesario instalar los paquetes de aspell.</p>
+<p>Para instalar por ejemplo, los diccionarios Castellano y Catalán:</p>
+<pre><code>
+sudo apt install aspell aspell-es aspell-ca
+</code></pre>
+<p>Instalación del Plugin:</p>
+<pre><code>
+micro -plugin install aspell
+</code></pre>
+<p>Resaltado de palabras con introduciendo en comando (<code>Ctrl+e</code>) set</p>
+<pre><code>
+{
+"aspell.check": "on",
+}
+</code></pre>
+<p>Es genial porque si y hay una falta de ortografía en una línea, en la <strong>parte iaquierda</strong> aparece <code>&gt;&gt;</code></p>
+<h3>Resaltar palabras mal escritas</h3>
+<p>complemento que corrige palabras comúnmente mal escritas</p>
+<pre><code>
+micro -plugin install misspell
+</code></pre>
+<h3>Plugin snippets</h3>
+<p>Instalación:</p>
+<pre><code>
+micro plugin install snippets
+</code></pre>
+<p>O introducimos el comando dentro de micro con: <code>Ctrl+e</code> y después <code>plugin install snippets</code></p>
+<h3>filemanager. Explorador de archivos</h3>
+<p>Ejecutando el comando <code>Ctrl+e</code></p>
+<pre><code>
+plugin install filemanager
+</code></pre>
+<p>Reinicia</p>
+<h4>Iniciando</h4>
+<p>Para initroduce el comando <code>tree</code></p>
+<p>Ahora con <code>TAB</code> podemos abrir el archivo.</p>
+<p>Aquí dejo un resumen disponible en el repositorio de GitHub.</p>
+<p>Command</p>
+<p>Keybinding(s)</p>
+<p>What it does</p>
+<p>API for <code>bindings.json</code></p>
+<p><code>tree</code></p>
+<p>-</p>
+<p>Open/close the tree</p>
+<p><code>filemanager.toggle_tree</code></p>
+<p>-</p>
+<p>Tab &amp; MouseLeft</p>
+<p>Open a file, or go into the directory. Goes back a dir if on <code>..</code></p>
+<p><code>filemanager.try_open_at_cursor</code></p>
+<p>-</p>
+<p>→</p>
+<p>Expand directory in tree listing</p>
+<p><code>filemanager.uncompress_at_cursor</code></p>
+<p>-</p>
+<p>←</p>
+<p>Collapse directory listing</p>
+<p><code>filemanager.compress_at_cursor</code></p>
+<p>-</p>
+<p>Shift ⬆</p>
+<p>Go to the target's parent directory</p>
+<p><code>filemanager.goto_parent_dir</code></p>
+<p>-</p>
+<p>Alt Shift {</p>
+<p>Jump to the previous directory in the view</p>
+<p><code>filemanager.goto_next_dir</code></p>
+<p>-</p>
+<p>Alt Shift }</p>
+<p>Jump to the next directory in the view</p>
+<p><code>filemanager.goto_prev_dir</code></p>
+<p><code>rm</code></p>
+<p>-</p>
+<p>Prompt to delete the target file/directory your cursor is on</p>
+<p><code>filemanager.prompt_delete_at_cursor</code></p>
+<p><code>rename</code></p>
+<p>-</p>
+<p>Rename the file/directory your cursor is on, using the passed name</p>
+<p><code>filemanager.rename_at_cursor</code></p>
+<p><code>touch</code></p>
+<p>-</p>
+<p>Make a new file under/into the file/directory your cursor is on, using the passed name</p>
+<p><code>filemanager.new_file</code></p>
+<p><code>mkdir</code></p>
+<p>-</p>
+<p>Make a new directory under/into the file/directory your cursor is on, using the passed name</p>
+<p><code>filemanager.new_dir</code></p>
+<p><a href="https://github.com/NicolaiSoeborg/filemanager-plugin">GitHub - NicolaiSoeborg/filemanager-plugin: A file manager plugin for the editor "Micro"</a></p>
+<h2>Configuración</h2>
+<h3>Salto de línea</h3>
+<p>Para que las líneas no salgan de la pantalla y haga un salto de línea automático, activaremos el <strong>softwrap</strong></p>
+<p>Utilizaremos nano para editar el archivo de configuración:</p>
+<pre><code>
+nano ~/.config/micro/settings.json
+</code></pre>
+<pre><code>
+{
+"softwrap": true
+}
+</code></pre>
+<h3>Autoguardado</h3>
+<p>Lanzando el comando, podemos agregar la opción autosave con:</p>
+<pre><code>
+micro -autosave 5 archivo.md
+</code></pre>
+<p>Podemos establecer cada cuanto tiempo queremos que se guarde en una sesión con el comando <code>set</code>. Pulsamos <code>Ctrl+e</code></p>
+<ul>
+<li>set autosave [número de segundos]</li>
+</ul>
+<p>Una vez introducido el comando, quedará guardado en el archivo de configuración <code>nano ~/.config/micro/settings.json</code>.</p>
+<pre><code>
+{
+"autosave": 3,
+"softwrap": true
+}
+</code></pre>
+<h2>Configurar Atajos</h2>
+<pre><code>
+~/.config/micro/bindings.json
+</code></pre>
+<h2>Ir a la línea nº</h2>
+<p>Para ir por ejemplo a la línea 33, lo haríamos así:</p>
+<pre><code>
+micro +33 archivo.md
+</code></pre>
+<h2>Reemplazar palabras por otras</h2>
+<p>El proceso sería:</p>
+<ul>
+<li>Introducimos el comando con <code>Ctrl+e</code></li>
+<li>Escribimos <code>replace palabra palabra_a_reemplazar</code></li>
+<li>Pulsamos Enter y palabra a palabra, micro nos preguntará si deseeamos sustituirla. Para sustituir <code>y</code>, para no sustituila <code>n</code>.</li>
+</ul>
+<p>Con el comando <code>replaceall palabra palabra_a_reemplazar</code>, reemplazaremos todas las palabras de un archivo.</p>
+<h2>Tema. Cambio de color</h2>
+<p>Podemos cambiar el tema de <strong>micro</strong> y acceder a la ayuda, lo haremos con el comando:</p>
+<pre><code>
+help colors
+</code></pre>
+<p>Ejemplo: Introducimos el siguiente comando</p>
+<pre><code>
+set colorscheme twilight
+</code></pre>
+<p>Hay varios temas disponibles como: monokai, darcula,</p>
+<ul>
+<li><code>monokai</code> (also the <code>default</code> colorscheme)</li>
+<li><code>zenburn</code></li>
+<li><code>gruvbox</code></li>
+<li><code>darcula</code></li>
+<li><code>twilight</code></li>
+<li><code>railscast</code></li>
+<li><code>bubblegum</code> (light theme)</li>
+</ul>
+<p>Yo he optado de momento por:</p>
+<pre><code>
+set colorscheme simple
+</code></pre>
+<p>O instalando el plugin <code>monokai-dark</code> introduciendo también desde el propio micro con <code>Ctrl+e</code></p>
+<pre><code>
+plugin install monokai-dark
+</code></pre>
+<h2>Ayuda</h2>
+<pre><code>
+micro --help
+</code></pre>
+<pre><code>
+micro -options
+</code></pre>
+<h2>Ayuda</h2>
+<ul>
+<li>help</li>
+</ul>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://micro-editor.github.io/">Micro - Inicio</a></li>
+<li><a href="https://cheatography.com/mynocksonmyfalcon/cheat-sheets/micro-text-editor/">Micro Text Editor Cheat Sheet por mynocksonmyfalcon - Descargar gratis desde Cheatography - Cheatography.com: Cheat Sheets para cada ocasión</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el jueves, 24 de marzo de 2022</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

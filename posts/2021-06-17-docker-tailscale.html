@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker. Tailscale</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en minutos, creando una red segura entre tus servidores, PC's de escritorio e instancias en la nube. Incluso cuando está detrás de firewalls o subredes como un CG-NAT o un NAT, Tailscale simplemente funciona. La VPN que utiliza para crear esta red es Wireguard, así que ya te puedes hacer una idea del potencial que tiene Tailscale. Registrarse Nos registramos en la web https://tailscale.com/ o nos logeamos con nuestra cuenta de Google, Microsoft o GitHub. Instalación Puedes encontrar los métodos de instalación para cualquier distro en https://tailscale.com/download. Ubuntu 20.04 Los paquetes esta disponibles para CPU x86 y ARM, tanto en 32 bits como en 64 bits variantes. Agrega la clave y el repositorio de firma de paquetes de Tailscale curl -fsSL...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Docker. Tailscale">
+    <meta property="og:description" content="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en minutos, creando una red segura entre tus servidores, PC's de escritorio e instancias en la nube. Incluso cuando está detrás de firewalls o subredes como un CG-NAT o un NAT, Tailscale simplemente funciona. La VPN que utiliza para crear esta red es Wireguard, así que ya te puedes hacer una idea del potencial que tiene Tailscale. Registrarse Nos registramos en la web https://tailscale.com/ o nos logeamos con nuestra cuenta de Google, Microsoft o GitHub. Instalación Puedes encontrar los métodos de instalación para cualquier distro en https://tailscale.com/download. Ubuntu 20.04 Los paquetes esta disponibles para CPU x86 y ARM, tanto en 32 bits como en 64 bits variantes. Agrega la clave y el repositorio de firma de paquetes de Tailscale curl -fsSL...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/tailscale.png">
+    <meta property="og:url" content="docker-tailscale">
+    <meta name="twitter:title" content="Docker. Tailscale">
+    <meta name="twitter:description" content="Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en minutos, creando una red segura entre tus servidores, PC's de escritorio e instancias en la nube. Incluso cuando está detrás de firewalls o subredes como un CG-NAT o un NAT, Tailscale simplemente funciona. La VPN que utiliza para crear esta red es Wireguard, así que ya te puedes hacer una idea del potencial que tiene Tailscale. Registrarse Nos registramos en la web https://tailscale.com/ o nos logeamos con nuestra cuenta de Google, Microsoft o GitHub. Instalación Puedes encontrar los métodos de instalación para cualquier distro en https://tailscale.com/download. Ubuntu 20.04 Los paquetes esta disponibles para CPU x86 y ARM, tanto en 32 bits como en 64 bits variantes. Agrega la clave y el repositorio de firma de paquetes de Tailscale curl -fsSL...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/tailscale.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Docker. Tailscale</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 419 palabras. <a href="../categories/docker.html">docker</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Tailscale permite crear redes virtuales instalándolo de un modo sencillo en cualquier dispositivo y sistema operativo, ya que es multiplataforma y arquitectura (Windows, Linux, Mac, Android, Raspberry,... amd64, ARM,...), en minutos, creando una red segura entre tus servidores, PC's de escritorio e instancias en la nube. Incluso cuando está detrás de firewalls o subredes como un CG-NAT o un NAT, Tailscale simplemente funciona.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/tailscale.png" alt=""></p>
+<p>La VPN que utiliza para crear esta red es Wireguard, así que ya te puedes hacer una idea del potencial que tiene Tailscale.</p>
+<h2>Registrarse</h2>
+<p>Nos registramos en la web <a href="https://tailscale.com/">https://tailscale.com/</a> o nos logeamos con nuestra cuenta de Google, Microsoft o GitHub.</p>
+<h2>Instalación</h2>
+<p>Puedes encontrar los métodos de instalación para cualquier distro en <a href="https://tailscale.com/download">https://tailscale.com/download</a>.</p>
+<h2>Ubuntu 20.04</h2>
+<p>Los paquetes esta disponibles para CPU x86 y ARM, tanto en 32 bits como en 64 bits variantes.</p>
+<ol>
+<li>Agrega la clave y el repositorio de firma de paquetes de Tailscale</li>
+</ol>
+<pre><code>
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.gpg | sudo apt-key add -
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+</code></pre>
+<ol>
+<li>Instalar Tailscale</li>
+</ol>
+<pre><code>
+sudo apt-get update
+sudo apt-get install tailscale
+</code></pre>
+<ol>
+<li>Conecta tu máquina a tu red Tailscale</li>
+</ol>
+<pre><code>
+sudo tailscale up
+</code></pre>
+<ol>
+<li><p>Visite la <a href="https://login.tailscale.com/admin">consola de administración</a>y autoriza tu nuevo terminal. Si iniciaste tu sesión con una cuenta Gmail, se autoriza automáticamente. (Nota: deberás volver a autenticarse ocasionalmente a menos que <a href="https://tailscale.com/kb/1028/key-expiry">desactive la caducidad de la clave</a>).</p>
+</li>
+<li><p>Obtén tu dirección IP de Tailscale</p>
+</li>
+</ol>
+<pre><code>
+ip addr show tailscale0
+</code></pre>
+<ol>
+<li>Consulte <a href="https://tailscale.com/kb/1030/next-steps">Pasos siguientes</a>para conocer los pasos para verificar que un único punto final está funcionando. Con múltiples puntos finales, pings simples son una buena forma de empezar.</li>
+</ol>
+<h3>Docker</h3>
+<p>Yo he creado desde el repositorio de GitHub esta imagen (ugeek/tailscale:amd64), pero tu puedes utilizar también la tuya propia.</p>
+<pre><code>
+docker run -d --name=tailscale   --restart unless-stopped -v /var/lib:/var/lib -v /dev/net/tun:/dev/net/tun --network=host --privileged ugeek/tailscale:amd64 tailscaled
+</code></pre>
+<h3>Docker Compose</h3>
+<pre><code>
+version: "2.4"
+services:
+  tailscale:
+      privileged: true
+      hostname: rp4                                          # Nombre de tu dispositivo
+      network_mode: "host"
+      container_name: tailscale
+      image: tailscale/tailscale:latest
+      volumes:
+          - "/opt/appdata/tailscale/var_lib:/var/lib"        # Los datos de estado se almacenaran en el directorio
+          - "/dev/net/tun:/dev/net/tun"                      # necesario para que tailscale funcione
+      cap_add:                                               # necesario para que tailscale funcione
+        - net_admin
+        - sys_module
+      command: tailscaled
+      restart: unless-stopped
+</code></pre>
+<h4>Logearnos</h4>
+<pre><code>
+docker exec tailscale tailscale up
+</code></pre>
+<h4>Status</h4>
+<p>Para ver todos los dispositivos de tu red y sus IP's:</p>
+<pre><code>
+docker exec tailscale tailscale status
+</code></pre>
+<h4>Tu IP en Tailscale</h4>
+<pre><code>
+docker exec -t tailscale ip addr show tailscale0
+</code></pre>
+<h3>Otros Sistemas Operativos</h3>
+<p>Puedes acceder a la web de <a href="https://tailscale.com/">https://tailscale.com</a> y descargar la aplicación para el sistema Operativo que utilices.</p>
+<p>También encontrarás otros paquetes estables o inestables en las siguientes urls.</p>
+<ul>
+<li><a href="https://pkgs.tailscale.com/stable/#static">https://pkgs.tailscale.com/stable/#static</a> (Estable)</li>
+<li><a href="https://pkgs.tailscale.com/unstable/#static">https://pkgs.tailscale.com/unstable/#static</a> (Inestable)</li>
+</ul>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/tailscale/tailscale/blob/main/Dockerfile">https://github.com/tailscale/tailscale/blob/main/Dockerfile</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el jueves, 17 de junio de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-11-25</em> - <a href="../posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li><li><em>2023-11-19</em> - <a href="../posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li><li><em>2023-03-23</em> - <a href="../posts/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li><li><em>2022-12-22</em> - <a href="../posts/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li><li><em>2022-12-07</em> - <a href="../posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li><li><em>2022-03-29</em> - <a href="../posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li><li><em>2021-07-25</em> - <a href="../posts/2021-07-25-bash-en-docker.html">Bash en Docker</a></li><li><em>2021-07-02</em> - <a href="../posts/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li><li><em>2021-06-25</em> - <a href="../posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li><li><em>2021-05-28</em> - <a href="../posts/2021-05-28-el-modo-mas-facil-de-instalar-y-administrar-wireguard.html">El modo más fácil de instalar y administrar Wireguard</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

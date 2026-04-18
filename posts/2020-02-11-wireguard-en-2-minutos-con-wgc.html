@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wireguard en 2 minutos con wgc</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Uno de los defectos que he encontrado a Wireguard, es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable y eso al final puede hacer que te desanimes. ¿Te imaginas montar un servidor y configuración de clientes en tan solo 2 minutos? Gracias al pequeño script que he creado llamado wgc, podras hacer tus sueños realidad. Vamos a conocer su funcionamiento. Descargar wgc Creamos la carpeta /etc/wireguard Tenemos que crearla como sudo. Para acceder, sudo su mkdir -p /etc/wireguard ; cd /etc/wireguard Descargamos wgc. wget https://raw.githubusercontent.com/uGeek/wgc/master/wgc Damos permisos de ejecución sudo chmod +x wgc Ejecutamos wgc y nos mostrará la ayuda ./wgc Instalar Wireguard Si no lo tienes instalado, wgc lo hará por tí. Debian ./wgc -id Raspbian ./wgc -ir Ubuntu ./wgc -iu Recuerda que tras la instalación, tu sistema se reiniciará. Conocer mi interfaz de red y ip Para...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Wireguard en 2 minutos con wgc">
+    <meta property="og:description" content="Uno de los defectos que he encontrado a Wireguard, es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable y eso al final puede hacer que te desanimes. ¿Te imaginas montar un servidor y configuración de clientes en tan solo 2 minutos? Gracias al pequeño script que he creado llamado wgc, podras hacer tus sueños realidad. Vamos a conocer su funcionamiento. Descargar wgc Creamos la carpeta /etc/wireguard Tenemos que crearla como sudo. Para acceder, sudo su mkdir -p /etc/wireguard ; cd /etc/wireguard Descargamos wgc. wget https://raw.githubusercontent.com/uGeek/wgc/master/wgc Damos permisos de ejecución sudo chmod +x wgc Ejecutamos wgc y nos mostrará la ayuda ./wgc Instalar Wireguard Si no lo tienes instalado, wgc lo hará por tí. Debian ./wgc -id Raspbian ./wgc -ir Ubuntu ./wgc -iu Recuerda que tras la instalación, tu sistema se reiniciará. Conocer mi interfaz de red y ip Para...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/wireguard.png">
+    <meta property="og:url" content="wireguard-en-2-minutos-con-wgc">
+    <meta name="twitter:title" content="Wireguard en 2 minutos con wgc">
+    <meta name="twitter:description" content="Uno de los defectos que he encontrado a Wireguard, es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable y eso al final puede hacer que te desanimes. ¿Te imaginas montar un servidor y configuración de clientes en tan solo 2 minutos? Gracias al pequeño script que he creado llamado wgc, podras hacer tus sueños realidad. Vamos a conocer su funcionamiento. Descargar wgc Creamos la carpeta /etc/wireguard Tenemos que crearla como sudo. Para acceder, sudo su mkdir -p /etc/wireguard ; cd /etc/wireguard Descargamos wgc. wget https://raw.githubusercontent.com/uGeek/wgc/master/wgc Damos permisos de ejecución sudo chmod +x wgc Ejecutamos wgc y nos mostrará la ayuda ./wgc Instalar Wireguard Si no lo tienes instalado, wgc lo hará por tí. Debian ./wgc -id Raspbian ./wgc -ir Ubuntu ./wgc -iu Recuerda que tras la instalación, tu sistema se reiniciará. Conocer mi interfaz de red y ip Para...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/wireguard.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Wireguard en 2 minutos con wgc</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 480 palabras. <a href="../categories/wireguard.html">wireguard</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Uno de los defectos que he encontrado a Wireguard, es que aunque no es complicada su configuración de servidor y clientes, la verdad es que no es nada amigable y eso al final puede hacer que te desanimes.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/wireguard.png" alt=""></p>
+<p>¿Te imaginas montar un servidor y configuración de clientes en tan solo 2 minutos?</p>
+<p>Gracias al pequeño script que he creado llamado wgc, podras hacer tus sueños realidad.</p>
+<p>Vamos a conocer su funcionamiento.</p>
+<h3>Descargar wgc</h3>
+<p>Creamos la carpeta <code>/etc/wireguard</code></p>
+<p>Tenemos que crearla como <strong>sudo</strong>. Para acceder, <code>sudo su</code></p>
+<pre><code>
+mkdir -p /etc/wireguard ; cd /etc/wireguard
+</code></pre>
+<p>Descargamos <strong>wgc</strong>.</p>
+<pre><code>
+wget https://raw.githubusercontent.com/uGeek/wgc/master/wgc
+</code></pre>
+<p>Damos permisos de ejecución</p>
+<pre><code>
+sudo chmod +x wgc
+</code></pre>
+<p>Ejecutamos <strong>wgc</strong> y nos mostrará la ayuda</p>
+<pre><code>
+./wgc
+</code></pre>
+<h2>Instalar Wireguard</h2>
+<p>Si no lo tienes instalado, <strong>wgc</strong> lo hará por tí.</p>
+<h4>Debian</h4>
+<pre><code>
+./wgc -id
+</code></pre>
+<h4>Raspbian</h4>
+<pre><code>
+./wgc -ir
+</code></pre>
+<h4>Ubuntu</h4>
+<pre><code>
+./wgc -iu
+</code></pre>
+<p>Recuerda que tras la instalación, tu sistema se reiniciará.</p>
+<h2>Conocer mi interfaz de red y ip</h2>
+<p>Para conocer nuestra interfaz de red e ip, tenemos que ejecutar en la terminal:</p>
+<pre><code>
+ip a
+</code></pre>
+<p>Nos mostrará algo parecido a esto</p>
+<pre><code>
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens172: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:0c:29:cb:b3:7e brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.111/24 brd 192.168.1.255 scope global dynamic ens172
+       valid_lft 42939sec preferred_lft 42939sec
+    inet6 fe80::22c:27ff:fecb:b57e/64 scope link 
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>La interfaz de red, en mi caso, es la número 2, <strong>ens172</strong> y la ip <strong>192.168.1.111</strong>.</p>
+<h2>Crear archivo de configuración del servidor</h2>
+<h4>Para Debian</h4>
+<pre><code>
+sudo ./wgc -sd
+</code></pre>
+<h4>Para Ubuntu</h4>
+<pre><code>
+sudo ./wgc -su
+</code></pre>
+<h4>Para Raspbian</h4>
+<pre><code>
+sudo ./wgc -sr
+</code></pre>
+<p>Creará el archivo <strong>wg0.conf</strong> de configuración del servidor.</p>
+<p>También creará 2 archivos más, la llave pública y privada del servidor.</p>
+<p><strong>Wgc</strong> nos devolverá la llave pública del servidor para que la añadas al propio <strong>wgc</strong>.</p>
+<p>Utiliza tu editor de texto favorito. En mi caso, voy a utilizar <strong>nano</strong>.</p>
+<pre><code>
+nano wgc
+</code></pre>
+<p>Ahora añadimos la <strong>ip</strong> pública, tipo ugeek.duckdns.org o en mi caso, voy a utilizar la privada, <strong>192.168.1.111</strong> y la llave pública que ha devuelto <strong>wgc</strong>.</p>
+<h2>Crear Cliente</h2>
+<p>Para crear el cliente, utilizaremos el comando <strong>wgc</strong> seguido del nombre que daremos al cliente.</p>
+<p>Yo tengo un Xiami A3, así que le pondré de nombre <strong>A3</strong>.</p>
+<pre><code>
+./wgc A3 
+</code></pre>
+<p>Añadimos el número de cliente, este será el <strong>1</strong>, ya que es el primero que creamos.</p>
+<ul>
+<li>Nos mostrará un código <strong>QR</strong> para capturarlo con nuestro móvil, tablet,...</li>
+<li>Dos líneas para añadir en el servidor</li>
+</ul>
+<p><strong>Ahora crea tantos Clientes como quieras!!!</strong></p>
+<h2>Levantar el servidor</h2>
+<p>Para levantar el servidor, utilizaremos:</p>
+<pre><code>
+sudo wg-quick up wg0
+</code></pre>
+<h2>Comprobar que Wireguard funciona correctamente</h2>
+<pre><code>
+sudo wg
+</code></pre>
+<h2>Detener el servidor</h2>
+<pre><code>
+sudo wg-quick down wg0
+</code></pre>
+<h2>Iniciar Wireguard al encender nuestra Raspberry, Servidor,...</h2>
+<p>Para ello, una vez más utilizaremos systemd.</p>
+<pre><code>
+sudo systemctl enable wg-quick@wg0.service
+</code></pre>
+<p>Iniciamos</p>
+<pre><code>
+sudo systemctl start wg-quick@wg0.service
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 11 de febrero de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-01-16</em> - <a href="../posts/2023-01-16-wireguard-en-manjaro.html">Wireguard en Manjaro</a></li><li><em>2021-10-04</em> - <a href="../posts/2021-10-04-gestionar-wireguard-sin-ser-sudo.html">Gestionar Wireguard sin ser sudo</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

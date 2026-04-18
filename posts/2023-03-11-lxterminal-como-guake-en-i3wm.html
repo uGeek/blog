@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>lxterminal como guake en i3wm</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba lxterminal (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una terminal muy ligera) en los escritorios LXDE. Como somos animales de costumbres, vuelvo a esta terminal que me gusta mucho, pero lo malo de este cambio, es que no quiero perder la función de estar en cualquier escritorio y con un simple F12, lanzar y ocultar la terminal igual que hacer guake, así que voy a mostrar como he configurado en mi gestor de ventanas i3wm para utilizarlo de ese modo. Al lanzar por primera vez lxterminal pulsando F1 o si así lo prefieres, como aparece en la primera opción que está comentada medinate #, crea una primera pesataña llamada ScratchPad. Recuerda que solo en la pestaña ScratchPad, funcionará la opción F12 para ocultar o des-ocultar la terminal. Archivo de...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="lxterminal como guake en i3wm">
+    <meta property="og:description" content="Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba lxterminal (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una terminal muy ligera) en los escritorios LXDE. Como somos animales de costumbres, vuelvo a esta terminal que me gusta mucho, pero lo malo de este cambio, es que no quiero perder la función de estar en cualquier escritorio y con un simple F12, lanzar y ocultar la terminal igual que hacer guake, así que voy a mostrar como he configurado en mi gestor de ventanas i3wm para utilizarlo de ese modo. Al lanzar por primera vez lxterminal pulsando F1 o si así lo prefieres, como aparece en la primera opción que está comentada medinate #, crea una primera pesataña llamada ScratchPad. Recuerda que solo en la pestaña ScratchPad, funcionará la opción F12 para ocultar o des-ocultar la terminal. Archivo de...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="lxterminal-como-guake-en-i3wm">
+    <meta name="twitter:title" content="lxterminal como guake en i3wm">
+    <meta name="twitter:description" content="Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba lxterminal (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una terminal muy ligera) en los escritorios LXDE. Como somos animales de costumbres, vuelvo a esta terminal que me gusta mucho, pero lo malo de este cambio, es que no quiero perder la función de estar en cualquier escritorio y con un simple F12, lanzar y ocultar la terminal igual que hacer guake, así que voy a mostrar como he configurado en mi gestor de ventanas i3wm para utilizarlo de ese modo. Al lanzar por primera vez lxterminal pulsando F1 o si así lo prefieres, como aparece en la primera opción que está comentada medinate #, crea una primera pesataña llamada ScratchPad. Recuerda que solo en la pestaña ScratchPad, funcionará la opción F12 para ocultar o des-ocultar la terminal. Archivo de...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>lxterminal como guake en i3wm</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 562 palabras. <a href="../categories/i3wm.html">i3wm</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Me he cansado de utilizar guake y hace muchísimo tiempo siempre utilizaba <strong>lxterminal</strong> (Está programada en C y utiliza la biblioteca VTE para la emulación de la terminal. Es una terminal muy ligera) en los escritorios LXDE. Como somos animales de costumbres, vuelvo a esta terminal que me gusta mucho, pero lo malo de este cambio, es que no quiero perder la función de estar en cualquier escritorio y con un simple <code>F12</code>, lanzar y ocultar la terminal igual que hacer guake, así que voy a mostrar como he configurado en mi gestor de ventanas i3wm para utilizarlo de ese modo.</p>
+<p>Al lanzar por primera vez <strong>lxterminal</strong> pulsando <code>F1</code> o si así lo prefieres, como aparece en la primera opción que está comentada medinate <code>#</code>, crea una primera pesataña llamada <strong>ScratchPad</strong>. Recuerda que <strong>solo en la pestaña ScratchPad, funcionará la opción F12 para ocultar o des-ocultar la terminal</strong>.</p>
+<h2>Archivo de configuración de i3wm</h2>
+<p>Añade a tu archivo <code>~/.config/i3/config</code></p>
+<pre><code>
+# Al iniciar la sesión, lanza lxterminal con 5 pesatañas abiertas con el nombre ScratchPad
+exec --no-startup-id lxterminal --tabs="ScratchPad","ScratchPad","ScratchPad","ScratchPad","ScratchPad"
+# Tecla Super (logo windows + F1), lanza lxterminal con una pestaña llamada ScratchPad
+bindsym $mod+F1 exec lxterminal -t ScratchPad
+assign [title="ScratchPad"] scratchpad
+bindsym F12 [title="ScratchPad"] scratchpad show; [title="ScratchPad"] move position center; [title="ScratchPad"] resize set 100 ppt 100 ppt; [title="ScratchP    ad"] fullscreen enable
+for_window [title="ScratchPad"] floating enable, move scratchpad, resize set 100 ppt 100 ppt, border none, focus, sticky enable
+</code></pre>
+<p>Explicación del archivo de configuración:</p>
+<ul>
+<li><code>#exec --no-startup-id lxterminal -t ScratchPad</code>: esta opción también se utiliza para ejecutar un programa al iniciar i3wm, en este caso, una terminal con un título específico <strong>ScratchPad</strong>.</li>
+<li><code>bindsym $mod+F1 exec lxterminal -t ScratchPad</code>: esta opción define una combinación de teclas (<code>$mod+F1</code>) que ejecuta un programa específico (lxterminal con el título "ScratchPad").</li>
+<li><code>assign [title</code>"ScratchPad"] scratchpad=: esta opción asigna la ventana con el título "ScratchPad" al scratchpad, que es una zona especial para ventanas que se pueden ocultar y mostrar rápidamente.</li>
+<li><code>bindsym F12 [title</code>"ScratchPad"] scratchpad show; [title<code>"ScratchPad"] move position center; [title</code>"ScratchPad"] resize set 100 ppt 100 ppt; [title<code>"ScratchPad"] fullscreen enable</code>: esta opción define otra combinación de teclas (<code>F12</code>) que muestra la ventana con el título "ScratchPad" y la ajusta a un tamaño y posición específicos, y luego la pone en pantalla completa.</li>
+<li><code>for_window [title</code>"ScratchPad"] floating enable, move scratchpad, resize set 100 ppt 100 ppt, border none, focus, sticky enable=: esta opción se aplica a cualquier ventana con el título "ScratchPad" y la configura para que sea flotante, se mueva al scratchpad, se ajuste a un tamaño específico, no tenga borde, tenga el enfoque y que se mantenga en la parte superior de otras ventanas.</li>
+</ul>
+<h2>Lanzar lxterminal con 5 pestañas con el nombre ScratchPad</h2>
+<pre><code>
+lxterminal --tabs="ScratchPad","ScratchPad","ScratchPad","ScratchPad","ScratchPad"
+</code></pre>
+<h2>Mi archivo de configuración de lxterminal</h2>
+<p>El archivo de configuración de <strong>lxterminal</strong> está en <code>~/.config/lxterminal/lxterminal.conf</code>.</p>
+<p>Este es mi archivo actual de configuración:</p>
+<pre><code>
+[general]
+fontname=Monospace 15
+selchars=-A-Za-z0-9,./?%&amp;#:_
+scrollback=1000
+bgcolor=rgb(0,0,0)
+fgcolor=rgb(170,170,170)
+palette_color_0=rgb(0,0,0)
+palette_color_1=rgb(170,0,0)
+palette_color_2=rgb(0,170,0)
+palette_color_3=rgb(170,85,0)
+palette_color_4=rgb(0,0,170)
+palette_color_5=rgb(170,0,170)
+palette_color_6=rgb(0,170,170)
+palette_color_7=rgb(170,170,170)
+palette_color_8=rgb(85,85,85)
+palette_color_9=rgb(255,85,85)
+palette_color_10=rgb(85,255,85)
+palette_color_11=rgb(255,255,85)
+palette_color_12=rgb(85,85,255)
+palette_color_13=rgb(255,85,255)
+palette_color_14=rgb(85,255,255)
+palette_color_15=rgb(255,255,255)
+color_preset=VGA
+disallowbold=false
+boldbright=true
+cursorblinks=false
+cursorunderline=false
+audiblebell=false
+visualbell=false
+tabpos=bottom
+geometry_columns=1000
+geometry_rows=1000
+hidescrollbar=true
+hidemenubar=true
+hideclosebutton=false
+hidepointer=false
+disablef10=false
+disablealt=false
+disableconfirm=false
+
+[shortcut]
+new_window_accel=&lt;Primary&gt;&lt;Shift&gt;n
+new_tab_accel=&lt;Primary&gt;&lt;Shift&gt;t
+close_tab_accel=&lt;Primary&gt;&lt;Shift&gt;w
+close_window_accel=&lt;Primary&gt;&lt;Shift&gt;q
+copy_accel=&lt;Primary&gt;Up
+paste_accel=&lt;Primary&gt;Down
+name_tab_accel=F2
+previous_tab_accel=&lt;Primary&gt;Left
+next_tab_accel=&lt;Primary&gt;Right
+move_tab_left_accel=&lt;Primary&gt;&lt;Shift&gt;Left
+move_tab_right_accel=&lt;Primary&gt;&lt;Shift&gt;Right
+zoom_in_accel=&lt;Primary&gt;plus
+zoom_out_accel=&lt;Primary&gt;minus
+zoom_reset_accel=&lt;Primary&gt;&lt;Shift&gt;parenright
+</code></pre>
+<p>Estos son algunos de mis atajos personalizados:</p>
+<ul>
+<li><code>Ctrl+arriba</code> = copiar</li>
+<li><code>Ctrl+abajo</code> = pegar</li>
+<li><code>Ctrl+izquierda</code> = Pestaña izquierda</li>
+<li><code>Ctrl+derecha</code> = Pestaña derecha</li>
+<li><code>Ctrl+Shi.+Izqui.</code> = Mover pestaña a la izquierda</li>
+<li><code>Ctrl+Shi.+Dere.</code> = Mover pestaña a la derecha</li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el sábado, 11 de marzo de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-07-19</em> - <a href="../posts/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html">I3wm y sus Problemas con Manjaro</a></li><li><em>2022-12-11</em> - <a href="../posts/2022-12-11-i3wm-en-arch.html">i3wm en Arch</a></li><li><em>2020-12-28</em> - <a href="../posts/2020-12-28-i3wm-en-ubuntu-debian-raspbian-desde-0.html">i3wm en Ubuntu, Debian, Raspbian,... desde 0</a></li><li><em>2020-08-16</em> - <a href="../posts/2020-08-16-compilar-i3wm-para-debian-ubuntu-y-otras-derivadas.html">Compilar i3wm para Debian, Ubuntu y otras derivadas</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

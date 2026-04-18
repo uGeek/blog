@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comandos sudo sin contraseña</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="sudoers El archivo sudoers contiene información sobre los privilegios sudo del usuario y del grupo. El acceso al usuario sudo se hace editando el archivo sudoers o agregando un archivo de configuración al directorio = /etc/sudoers.d = . Todos los archivos creados dentro del directorio /etc/sudoers.d se incluirán en el archivo sudoers. Si quieres editar de un modo manual, aunque no es recomendable: sudo nano /etc/sudoers Cambiar el editor de visudo Si no quieres utilizar vi como editor y prefieres, por ejemplo, utilizar nano: Ejecuta el siguiente comando para editar el archivo /etc/sudoers: sudo visudo -f /etc/sudoers Agrega la siguiente línea al final del archivo: Defaults editor=/usr/bin/nano A partir de este momento, sudo visudo utilizará nano como editor de texto predeterminado . Backup del sudoers Por experiencia, es muy importante crear una copia antes de cualquier cambio del archivo sudoers, ya que de lo contrario, si te equivocas, quizás no...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Comandos sudo sin contraseña">
+    <meta property="og:description" content="sudoers El archivo sudoers contiene información sobre los privilegios sudo del usuario y del grupo. El acceso al usuario sudo se hace editando el archivo sudoers o agregando un archivo de configuración al directorio = /etc/sudoers.d = . Todos los archivos creados dentro del directorio /etc/sudoers.d se incluirán en el archivo sudoers. Si quieres editar de un modo manual, aunque no es recomendable: sudo nano /etc/sudoers Cambiar el editor de visudo Si no quieres utilizar vi como editor y prefieres, por ejemplo, utilizar nano: Ejecuta el siguiente comando para editar el archivo /etc/sudoers: sudo visudo -f /etc/sudoers Agrega la siguiente línea al final del archivo: Defaults editor=/usr/bin/nano A partir de este momento, sudo visudo utilizará nano como editor de texto predeterminado . Backup del sudoers Por experiencia, es muy importante crear una copia antes de cualquier cambio del archivo sudoers, ya que de lo contrario, si te equivocas, quizás no...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bash.png">
+    <meta property="og:url" content="comandos-sudo-sin-contrasena">
+    <meta name="twitter:title" content="Comandos sudo sin contraseña">
+    <meta name="twitter:description" content="sudoers El archivo sudoers contiene información sobre los privilegios sudo del usuario y del grupo. El acceso al usuario sudo se hace editando el archivo sudoers o agregando un archivo de configuración al directorio = /etc/sudoers.d = . Todos los archivos creados dentro del directorio /etc/sudoers.d se incluirán en el archivo sudoers. Si quieres editar de un modo manual, aunque no es recomendable: sudo nano /etc/sudoers Cambiar el editor de visudo Si no quieres utilizar vi como editor y prefieres, por ejemplo, utilizar nano: Ejecuta el siguiente comando para editar el archivo /etc/sudoers: sudo visudo -f /etc/sudoers Agrega la siguiente línea al final del archivo: Defaults editor=/usr/bin/nano A partir de este momento, sudo visudo utilizará nano como editor de texto predeterminado . Backup del sudoers Por experiencia, es muy importante crear una copia antes de cualquier cambio del archivo sudoers, ya que de lo contrario, si te equivocas, quizás no...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bash.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Comandos sudo sin contraseña</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 405 palabras. <a href="../categories/sudo.html">sudo</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h2>sudoers</h2>
+<p>El <strong>archivo sudoers</strong> contiene información sobre los privilegios sudo del usuario y del grupo.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/bash.png" alt=""></p>
+<p>El acceso al usuario sudo se hace editando el archivo sudoers o agregando un archivo de configuración al directorio = /etc/sudoers.d = <strong>.</strong>&nbsp;</p>
+<p>Todos los archivos creados dentro del directorio <code>/etc/sudoers.d</code> se incluirán en el archivo sudoers.</p>
+<p>Si quieres editar de un modo manual, aunque no es recomendable:</p>
+<pre><code>
+sudo nano /etc/sudoers
+</code></pre>
+<h2>Cambiar el editor de visudo</h2>
+<p>Si no quieres utilizar vi como editor y prefieres, por ejemplo, utilizar nano:</p>
+<p>Ejecuta el siguiente comando para editar el archivo <code>/etc/sudoers</code>:</p>
+<pre><code>
+sudo visudo -f /etc/sudoers
+</code></pre>
+<p>Agrega la siguiente línea al final del archivo:</p>
+<pre><code>
+Defaults editor=/usr/bin/nano
+</code></pre>
+<p>A partir de este momento, sudo visudo utilizará nano como editor de texto predeterminado .</p>
+<h2>Backup del sudoers</h2>
+<p>Por experiencia, es muy importante crear una copia antes de cualquier cambio del archivo sudoers, ya que de lo contrario, si te equivocas, quizás no puedas volver a utilizar el comando sudo y tener muchos errores.</p>
+<p>visudo, a diferencia de un editor, también te ayudará en la edición corrigiendo posibles problemas, pero vamos primero con el backup:</p>
+<pre><code>
+sudo cp /etc/sudoers{,.backup_$(date +%Y%m%d)}
+</code></pre>
+<p>Esto creará un nuevo directorio con la copia actual, por ejemplo <code>/etc/sudoers.backup_20220628</code></p>
+<h2>Instalar vi</h2>
+<p>Es probable que tu distro ya tenga instalado vi, pero si no es así como en Manjaro Minimal, para utilizar el comando <code>visudo</code> es necesario instalarlo:</p>
+<pre><code>
+sudo pacman -S vi
+</code></pre>
+<h2>Editando el archivo sudoers</h2>
+<p>Vamos a editar el archivo para añadir comandos sudo sin necesidad de poner la contraseña:</p>
+<pre><code>
+sudo visudo
+</code></pre>
+<h2>Cualquier comando sin necesidad de poner contraseña</h2>
+<p>Agrega al final de archivo... Recuerda que en este ejemplo estoy utilizando el usuario <strong>angel</strong>, escribe tu usuario:</p>
+<pre><code>
+angel ALL=(ALL) NOPASSWD:ALL
+</code></pre>
+<h2>Algunos comandos</h2>
+<p>Estaba harto de poner la contraseña para habilitar o deshabilitar wireguard, así que lo utilizaré de ejemplo.</p>
+<p>En este caso, solo los comandos agregados tras <code>NOPASSWD:</code> y separados por comas, son los que no se solicitará la contraseña</p>
+<p>También he añadido los comandos <code>/usr/bin/mount,/usr/bin/umount</code> para poder montar discos duros sin tener que utilizar <strong>sudo</strong>.</p>
+<pre><code>
+angel ALL=(ALL) NOPASSWD:/usr/bin/wg,/usr/bin/wg-quick up wg0,/usr/bin/wg-quick down wg0,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman -Sy
+</code></pre>
+<h2>Archivos complementarios</h2>
+<p>Es probable que no quieras editar el archivo de configuración y crear otros suplementarios. En tal caso crearemos el siguiente archivo de prueba:</p>
+<pre><code>
+sudo nano /etc/sudoers.d/angel
+</code></pre>
+<p>Ahora igual que antes, dentro del archivo añadiremos la siguiente línea para no tener que poner la contraseña:</p>
+<pre><code>
+angel ALL=(ALL) NOPASSWD:ALL
+</code></pre>
+<p>En Manjaro, me ha funcionado mucho mejor esta opción.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 29 de junio de 2022</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

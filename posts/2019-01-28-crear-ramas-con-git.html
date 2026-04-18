@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear ramas con Git</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 2 minutos. 313 palabras. git Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master. Crear rama Para crear una rama, utilizaremos el comando git branch. Vamos a crear una rama que llamaremos test git branch test Cambiar de rama Ahora tenemos una nueva rama, la rama test. Para acceder a ella, utilizaremos el comando git checkout git checkout test Si hemos introducido este comando, ya no estaremos en la rama master , sino que en la rama test, de manera que podremos hacer todos los cambios que deseemos sin miedo a romper nada. Antes de volver nuevamente a la rama master, tenemos que hacer un git push...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Crear ramas con Git">
+    <meta property="og:description" content="Tiempo estimado de lectura: 2 minutos. 313 palabras. git Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master. Crear rama Para crear una rama, utilizaremos el comando git branch. Vamos a crear una rama que llamaremos test git branch test Cambiar de rama Ahora tenemos una nueva rama, la rama test. Para acceder a ella, utilizaremos el comando git checkout git checkout test Si hemos introducido este comando, ya no estaremos en la rama master , sino que en la rama test, de manera que podremos hacer todos los cambios que deseemos sin miedo a romper nada. Antes de volver nuevamente a la rama master, tenemos que hacer un git push...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="crear-ramas-con-git">
+    <meta name="twitter:title" content="Crear ramas con Git">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 2 minutos. 313 palabras. git Todos los repositorios de git, tienen la rama master (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio master. Crear rama Para crear una rama, utilizaremos el comando git branch. Vamos a crear una rama que llamaremos test git branch test Cambiar de rama Ahora tenemos una nueva rama, la rama test. Para acceder a ella, utilizaremos el comando git checkout git checkout test Si hemos introducido este comando, ya no estaremos en la rama master , sino que en la rama test, de manera que podremos hacer todos los cambios que deseemos sin miedo a romper nada. Antes de volver nuevamente a la rama master, tenemos que hacer un git push...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Crear ramas con Git</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 232 palabras. <a href="../categories/git.html">git</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 2 minutos. 313 palabras. <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<p>Todos los repositorios de <strong>git</strong>, tienen la rama <strong>master</strong> (este sería el repositorio en producción) Cuando queremos hacer una modificación de un archivo en un repositorio que está en producción, crearemos una rama alternativa con la que podremos trabajar y así no alterar el funcionamiento del repositorio <strong>master</strong>.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/git.png" alt=""></p>
+<h2>Crear rama</h2>
+<p>Para crear una rama, utilizaremos el comando <strong>git branch</strong>. Vamos a crear una rama que llamaremos <strong>test</strong></p>
+<p><code>git branch test</code></p>
+<h2>Cambiar de rama</h2>
+<p>Ahora tenemos una nueva rama, la rama <strong>test</strong>. Para acceder a ella, utilizaremos el comando <strong>git checkout</strong></p>
+<p><code>git checkout test</code></p>
+<p>Si hemos introducido este comando, ya no estaremos en la rama <strong>master</strong> , sino que en la rama test, de manera que podremos hacer todos los cambios que deseemos sin miedo a romper nada.</p>
+<p>Antes de volver nuevamente a la rama <strong>master</strong>, tenemos que hacer un <strong>git push</strong> y poner al día la rama <strong>test</strong>.</p>
+<p>Para volver a la rama <strong>master</strong>:</p>
+<p><code>git checkout master</code></p>
+<p>Ya estamos de nuevo en la rama <strong>master</strong></p>
+<h2>Borrar una rama</h2>
+<p>Si ya hemos acabado con la rama <strong>test</strong> y queremos eliminarla en el repositorio local, utilizaremos el comando <strong>git branch -d</strong></p>
+<p><code>git branch -d test</code></p>
+<p>Para forzar el borrado en caso de algún error:</p>
+<p><code>git branch -D test</code></p>
+<p>Para eliminar el repositorio remosto <strong>git push origin :</strong></p>
+<p><code>git push origin :test</code></p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 28 de enero de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-30</em> - <a href="../posts/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li><li><em>2021-04-18</em> - <a href="../posts/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li><li><em>2020-01-14</em> - <a href="../posts/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li><li><em>2020-01-06</em> - <a href="../posts/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html">Descargando un directorio de git con gitdir</a></li><li><em>2019-07-10</em> - <a href="../posts/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li><li><em>2019-04-17</em> - <a href="../posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script </a></li><li><em>2019-01-21</em> - <a href="../posts/2019-01-21-utilizando-git-con-la-terminal-github.html"> Utilizando Git con la Terminal. GitHub</a></li><li><em>2019-01-12</em> - <a href="../posts/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html"> Ignorar archivos que no queremos que suban a Git</a></li><li><em>2019-01-08</em> - <a href="../posts/2019-01-08-crear-un-blog-en-github-github-pages.html"> Crear un Blog en GitHub. GitHub Pages</a></li><li><em>2019-01-04</em> - <a href="../posts/2019-01-04-crear-un-blog-en-gitlab-gitlab-pages.html"> Crear un Blog en GitLab. GitLab Pages</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

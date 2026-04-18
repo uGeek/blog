@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cron. Ejemplos</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Cron es muy sencillo y a la vez complejo. Cuando quieres utilizar una programación en el tiempo muy concreta, entre días, meses, días de la semana, cada ciertos minutos... Puede llevar a confusión. En este artículo añado algunos de los ejemplos y así afinar el tiempo exacto que deseas, en tu programación con cron. Estructura cron # .---------------- minuto (0 - 59) # | .------------- hora (0 - 23) # | | .---------- día del mes (1 - 31) # | | | .------- mes (1 - 12) O ene, feb, mar, abr ... # | | | | .---- día de la semana (0 - 6) (domingo = 0 o 7) O dom, lun, mar, mié, jue, vie, sáb # | | | | | # * * * * * comando de nombre de usuario que se ejecutará Visualizado de otro modo: Minuto Hora Día del Mes Mes...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cron. Ejemplos">
+    <meta property="og:description" content="Cron es muy sencillo y a la vez complejo. Cuando quieres utilizar una programación en el tiempo muy concreta, entre días, meses, días de la semana, cada ciertos minutos... Puede llevar a confusión. En este artículo añado algunos de los ejemplos y así afinar el tiempo exacto que deseas, en tu programación con cron. Estructura cron # .---------------- minuto (0 - 59) # | .------------- hora (0 - 23) # | | .---------- día del mes (1 - 31) # | | | .------- mes (1 - 12) O ene, feb, mar, abr ... # | | | | .---- día de la semana (0 - 6) (domingo = 0 o 7) O dom, lun, mar, mié, jue, vie, sáb # | | | | | # * * * * * comando de nombre de usuario que se ejecutará Visualizado de otro modo: Minuto Hora Día del Mes Mes...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/cron.png">
+    <meta property="og:url" content="cron-ejemplos">
+    <meta name="twitter:title" content="Cron. Ejemplos">
+    <meta name="twitter:description" content="Cron es muy sencillo y a la vez complejo. Cuando quieres utilizar una programación en el tiempo muy concreta, entre días, meses, días de la semana, cada ciertos minutos... Puede llevar a confusión. En este artículo añado algunos de los ejemplos y así afinar el tiempo exacto que deseas, en tu programación con cron. Estructura cron # .---------------- minuto (0 - 59) # | .------------- hora (0 - 23) # | | .---------- día del mes (1 - 31) # | | | .------- mes (1 - 12) O ene, feb, mar, abr ... # | | | | .---- día de la semana (0 - 6) (domingo = 0 o 7) O dom, lun, mar, mié, jue, vie, sáb # | | | | | # * * * * * comando de nombre de usuario que se ejecutará Visualizado de otro modo: Minuto Hora Día del Mes Mes...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/cron.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Cron. Ejemplos</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 600 palabras. <a href="../categories/bash.html">bash</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Cron es muy sencillo y a la vez complejo. Cuando quieres utilizar una programación en el tiempo muy concreta, entre días, meses, días de la semana, cada ciertos minutos... Puede llevar a confusión.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/cron.png" alt=""></p>
+<p>En este artículo añado algunos de los ejemplos y así afinar el tiempo exacto que deseas, en tu programación con cron.</p>
+<h2>Estructura cron</h2>
+<pre><code>
+# Ejemplo de definición de trabajo: 
+# .---------------- minuto (0 - 59) 
+# | .------------- hora (0 - 23) 
+# | | .---------- día del mes (1 - 31)
+# | | | .------- mes (1 - 12) O ene, feb, mar, abr ... 
+# | | | | .---- día de la semana (0 - 6) (domingo = 0 o 7) O dom, lun, mar, mié, jue, vie, sáb 
+# | | | | | 
+# * * * * * comando de nombre de usuario que se ejecutará 
+</code></pre>
+<p>Visualizado de otro modo:</p>
+<pre><code>
+Minuto  Hora  Día del Mes  Mes   Dia Semana  Usuario  Comando
+  *      *       *          *        *        root    comando     
+</code></pre>
+<p>El *<strong>2todos</strong>". Todos los minutos, horas, dias,...</p>
+<h2>Comandos de cron</h2>
+<p>Establece archivo.txt como crontab del usuario</p>
+<pre><code>
+crontab archivo.txt
+</code></pre>
+<p>Abrir crontab para añadir o editar cron</p>
+<pre><code>
+crontab -e
+</code></pre>
+<p>Ver el crontab del usuario actual</p>
+<pre><code>
+crontab -l
+</code></pre>
+<p>Eliminar el crontab actual</p>
+<pre><code>
+crontab -r
+</code></pre>
+<h2>Palabras reservadas</h2>
+<p>Cron tiene una serie de palabras reservadas para simplificar:</p>
+<pre><code>
+@reboot              ## Se ejecuta cada vez que iniciamos el sistema 
+@yearly/@annually    ## Ejecutar cada año
+@monthly             ## Ejecutar cada mesuna vez al mes
+@weekly              ## Una vez a la semana
+@daily/@midnight     ## Una vez al día
+@hourly              ## Cada Hora
+</code></pre>
+<h2>Ejemplos cron</h2>
+<p>Estos son algunos de los ejemplos de cron</p>
+<pre><code>
+10 * * * *	              ## Cada hora en el minuto 10
+30 5 * * *	              ## Todos los dias a las 5:30h
+15 22 * * *	              ##  Todos los dias a las 22:15h
+00 13 * * 0	              ## Domingos a las 13h
+ * TODO 13 * *                      ## Los Domingos. Cada minuto de 13:00h a 13:55h
+00 13 5 * *	              ## Los dias 5 de cada mes, a las 13:00
+05 * 20 15 *	              ## El día 15 de Julio, cada hora al minuto 5
+15 13 * 11 2	              ## Los Martes de Noviembre, a las 13:15h
+00 22 15 * Wen	              ## Los 15 de mes, que coincidan en Miércoles, a las 22:00h 
+30 * * * 6	              ## Los Sábados, cada minuto 30
+30 * * 1 6	              ## Los Sábados de Enero, cada minuto 30
+00 13 * 1-3 1,2,3,4,5	      ## De lunes a viernes, de enero a marzo, a las 13:00h
+00 13 15-20 * 6-7	      ## Del 15 al 20 de cada mes, que sea Sábado o Domingo, a las 13:00h
+10,30,45 * * * 1,3,5	      ## Lunes, Miércoles y Viernes, en el minuto 10, 30 y 45 de todas las horas
+*/15 06-14 * * *	      ## Cada día, de 6h-14h, cada 15 minutos
+ * TODO 12 1-10/2 2,8 *	      ## Todos los minutos de las 12 del día, cada dos días  empezando por el día 1, en febrero y agosto.
+0 */5 1-10,15,20-23 * 3	      ## Cada 5 horas de los días 1 al 10, el día 15 y del día 20 al 23 de cada mes y que el día sea miércoles
+3/3 2/14 * * *	              ## Cada 3 minutos empezando por el minuto 3, cada 4 horas empezando por las 14:00h
+</code></pre>
+<h2>Restringir acceso a cron</h2>
+<p>Restringir acceso a cron a todos los usuarios</p>
+<pre><code>
+echo ALL &gt;&gt;/etc/cron.deny
+</code></pre>
+<h2>Permitir acceso a un usuario</h2>
+<p>Permitir acceso al usuario <strong>angel</strong>.</p>
+<pre><code>
+echo angel &gt;&gt;/etc/cron.allow
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://www.linuxtotal.com.mx/?cont=info_admon_006">https://www.linuxtotal.com.mx/?cont=info_admon_006</a></li>
+<li><a href="https://geekytheory.com/programar-tareas-en-linux-usando-crontab">https://geekytheory.com/programar-tareas-en-linux-usando-crontab</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 15 de octubre de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-02-18</em> - <a href="../posts/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li><li><em>2022-07-12</em> - <a href="../posts/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li><li><em>2022-07-04</em> - <a href="../posts/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html">Copiando en la terminal con barra de proceso</a></li><li><em>2022-03-27</em> - <a href="../posts/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li><li><em>2022-01-06</em> - <a href="../posts/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li><li><em>2021-11-20</em> - <a href="../posts/2021-11-20-usrbinenv-bash-o-binbash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li><li><em>2021-07-01</em> - <a href="../posts/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian-desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</a></li><li><em>2021-05-31</em> - <a href="../posts/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li><li><em>2021-04-27</em> - <a href="../posts/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li><li><em>2021-04-06</em> - <a href="../posts/2021-04-06-unrar-en-raspberry-pi.html">unrar en Raspberry Pi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

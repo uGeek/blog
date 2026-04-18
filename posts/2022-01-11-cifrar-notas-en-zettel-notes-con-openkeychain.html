@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cifrar Notas en Zettel Notes con OpenKeychain</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por terceras personas. Si utilizas un servidor que no gestionas tu, este punto es todavía más importante, ya que el administrador del servidor podría acceder al repositorio de tus notas y ver el contenido de estas. Una de las opciones muy interesantes de Zettel Notes, es la posibilidad de poder cifrar notas dentro de un repositorio. Esto permite que las notas estén cifradas tanto en el directorio de nuestro dispositivo móvil, así como la copia sincronizada en el servidor. Las notas tendrán extensión GPG. Lo bueno de la gestión de Zettel Notes, es que una vez creadas las llaves público-privada y vinculadas al repositorio, es tan sencillo como pulsar que quieres cifrar una nota y Zettel Notes la cifra. Si deseas...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cifrar Notas en Zettel Notes con OpenKeychain">
+    <meta property="og:description" content="Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por terceras personas. Si utilizas un servidor que no gestionas tu, este punto es todavía más importante, ya que el administrador del servidor podría acceder al repositorio de tus notas y ver el contenido de estas. Una de las opciones muy interesantes de Zettel Notes, es la posibilidad de poder cifrar notas dentro de un repositorio. Esto permite que las notas estén cifradas tanto en el directorio de nuestro dispositivo móvil, así como la copia sincronizada en el servidor. Las notas tendrán extensión GPG. Lo bueno de la gestión de Zettel Notes, es que una vez creadas las llaves público-privada y vinculadas al repositorio, es tan sencillo como pulsar que quieres cifrar una nota y Zettel Notes la cifra. Si deseas...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/OpenKeychain.png">
+    <meta property="og:url" content="cifrar-notas-en-zettel-notes-con-openkeychain">
+    <meta name="twitter:title" content="Cifrar Notas en Zettel Notes con OpenKeychain">
+    <meta name="twitter:description" content="Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por terceras personas. Si utilizas un servidor que no gestionas tu, este punto es todavía más importante, ya que el administrador del servidor podría acceder al repositorio de tus notas y ver el contenido de estas. Una de las opciones muy interesantes de Zettel Notes, es la posibilidad de poder cifrar notas dentro de un repositorio. Esto permite que las notas estén cifradas tanto en el directorio de nuestro dispositivo móvil, así como la copia sincronizada en el servidor. Las notas tendrán extensión GPG. Lo bueno de la gestión de Zettel Notes, es que una vez creadas las llaves público-privada y vinculadas al repositorio, es tan sencillo como pulsar que quieres cifrar una nota y Zettel Notes la cifra. Si deseas...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/OpenKeychain.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Cifrar Notas en Zettel Notes con OpenKeychain</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 415 palabras. <a href="../categories/zettel.html">zettel</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Una de las grandes preocupaciones a la hora de utilizar una aplicación de notas, es que probablemente tengas notas con información sensible y y no quieres que sean accesible por terceras personas.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/OpenKeychain.png" alt=""></p>
+<p>Si utilizas un servidor que no gestionas tu, este punto es todavía más importante, ya que el administrador del servidor podría acceder al repositorio de tus notas y ver el contenido de estas.</p>
+<p>Una de las opciones muy interesantes de Zettel Notes, es la posibilidad de poder cifrar notas dentro de un repositorio. Esto permite que las notas estén cifradas tanto en el directorio de nuestro dispositivo móvil, así como la copia sincronizada en el servidor. Las notas tendrán extensión GPG. Lo bueno de la gestión de Zettel Notes, es que una vez creadas las llaves público-privada y vinculadas al repositorio, es tan sencillo como pulsar que quieres cifrar una nota y Zettel Notes la cifra. Si deseas volver a descifrar está nota, es tan sencillo como marcar que la quieres descifrar y Zettel Notes lo hará.</p>
+<p>En este artículo os explico cómo crear las claves con la aplicación <strong>OpenKeychain</strong> y posteriormente, os explico cómo vincular esa clave a un repositorio y cifrar las notas.</p>
+<h2>Crear claves</h2>
+<p>Para cifrar las notas en Zetel Notes, vamos a utilizar la aplicación <strong>OpenKeychain</strong>. Con <strong>OpenKeychain</strong> vamos a crear 2 claves mediante GnuPG.</p>
+<ol>
+<li>En la pantalla principal, iremos al menú situado en la parte superior derecha y seleccionaremos <code>Administrar mis claves</code>.</li>
+<li>Ahora pulsaremos <code>CREAR MI CLAVE</code></li>
+<li>Introducimos un <code>Nombre</code></li>
+<li>Ahora introduciremos el correo electrónico</li>
+<li>Aparece todo lo introducido previamente y aparece un checklist para <code>Publicar en Servidores de Claves</code>. Yo en mi caso, desmarco esta opción.</li>
+<li>Para finalizar, pulsaremos <code>CREAR CLAVE</code></li>
+</ol>
+<p>Comienza a crear las claves. Una vez creadas, aparecerá en la pantalla de la aplicación.</p>
+<h2>Cifrando Notas en Zettel Notes</h2>
+<ol>
+<li>Accedemos al menú de la Izquierda y pulsamos en la Opción <strong>Repositories</strong></li>
+<li>En el repositorio que queremos cifrar las Notas, pulsaremos el menú de los 3 puntos y seleccionaremos <code>Setup Encription</code> &gt; <code>OpenPGP</code></li>
+<li>Se abrirá la aplicación OpenKeychain y la Claves previamentes creadas. Seleccionamos la que queremos utilizar.</li>
+<li>Aparecerá un mensaje de <strong>Exito</strong></li>
+</ol>
+<h2>Cifrar Notas</h2>
+<p>Abriremos el repositorio y vamos a buscar la nota que deseamos cifrar, seleccionamos la nota mediante los 3 puntos y selecciona la opción <code>Encrypt</code></p>
+<p>Tan sencillo como esto, La nota ya está cifrada!!! Ahora la nota aparecerá con un triangulo Amarillo en la esquina, especificando que esta nota está cifrada.</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://www.openkeychain.org/">OpenKeychain</a></li>
+<li><a href="https://play.google.com/store/apps/details?id%0216%02es&amp;gl=US">Zettel Notes</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 11 de enero de 2022</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-01-10</em> - <a href="../posts/2022-01-10-zettel-notes-la-mejor-aplicacion-de-notas-para-android-con-atajos-de-teclado.html">Zettel Notes. La mejor aplicación de Notas para Android con atajos de Teclado</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

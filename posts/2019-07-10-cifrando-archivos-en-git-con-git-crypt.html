@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cifrando archivos en git con GIT-CRYPT</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 3 minutos. 402 palabras. git Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git. Quizás, desearías que suban determinados archivos, para poder gestionarlos desde otra máquina, pero que no fueran accesibles si el repositorio es público, osea que estos archivos estuvieran cifrados. He leído en el blog del atareao.es, esta joya. Voy a explicar con mis palabras como utilizarlo. Instalación Súper fácil porque lo vamos a encontrar en los repositorios de nuestras distros. sudo apt install git-crypt Creamos repositorio cifrado El primer paso es tener ya un repositorio. Nos situamos dentro de la carpeta del repositorio tecleamos en la terminal: git-crypt init Creamos un archivo .gitattributes Ahora vamos a crear un archivo oculto donde especificaremos que archivos vamos a cifrar. Vamos a utilizar nano para crearlo: nano .gitattributes Indicamos que se cifren, por ejemplo,...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cifrando archivos en git con GIT-CRYPT">
+    <meta property="og:description" content="Tiempo estimado de lectura: 3 minutos. 402 palabras. git Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git. Quizás, desearías que suban determinados archivos, para poder gestionarlos desde otra máquina, pero que no fueran accesibles si el repositorio es público, osea que estos archivos estuvieran cifrados. He leído en el blog del atareao.es, esta joya. Voy a explicar con mis palabras como utilizarlo. Instalación Súper fácil porque lo vamos a encontrar en los repositorios de nuestras distros. sudo apt install git-crypt Creamos repositorio cifrado El primer paso es tener ya un repositorio. Nos situamos dentro de la carpeta del repositorio tecleamos en la terminal: git-crypt init Creamos un archivo .gitattributes Ahora vamos a crear un archivo oculto donde especificaremos que archivos vamos a cifrar. Vamos a utilizar nano para crearlo: nano .gitattributes Indicamos que se cifren, por ejemplo,...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+    <meta property="og:url" content="cifrando-archivos-en-git-con-git-crypt">
+    <meta name="twitter:title" content="Cifrando archivos en git con GIT-CRYPT">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 3 minutos. 402 palabras. git Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git. Quizás, desearías que suban determinados archivos, para poder gestionarlos desde otra máquina, pero que no fueran accesibles si el repositorio es público, osea que estos archivos estuvieran cifrados. He leído en el blog del atareao.es, esta joya. Voy a explicar con mis palabras como utilizarlo. Instalación Súper fácil porque lo vamos a encontrar en los repositorios de nuestras distros. sudo apt install git-crypt Creamos repositorio cifrado El primer paso es tener ya un repositorio. Nos situamos dentro de la carpeta del repositorio tecleamos en la terminal: git-crypt init Creamos un archivo .gitattributes Ahora vamos a crear un archivo oculto donde especificaremos que archivos vamos a cifrar. Vamos a utilizar nano para crearlo: nano .gitattributes Indicamos que se cifren, por ejemplo,...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Cifrando archivos en git con GIT-CRYPT</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 323 palabras. <a href="../categories/git.html">git</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 3 minutos. 402 palabras. <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<p><img src="https://ugeek.github.io/blog/images-blog/git.png" alt=""></p>
+<p>Hace un tiempo os hablé de .gitignore, un archivo oculto para que no suban determinados archivos a nuestro repositorio de git. Quizás, desearías que suban determinados archivos, para poder gestionarlos desde otra máquina, pero que no fueran accesibles si el repositorio es público, osea que estos archivos estuvieran cifrados. He leído en el blog del <a href="https://www.atareao.es/como/cifrado-de-repositorios-git/">atareao.es</a>, esta joya. Voy a explicar con mis palabras como utilizarlo.</p>
+<h2>Instalación</h2>
+<p>Súper fácil porque lo vamos a encontrar en los repositorios de nuestras distros.</p>
+<p><code>sudo apt install git-crypt</code></p>
+<h2>Creamos repositorio cifrado</h2>
+<p>El primer paso es tener ya un repositorio. Nos situamos dentro de la carpeta del repositorio tecleamos en la terminal:</p>
+<p><code>git-crypt init</code></p>
+<h2>Creamos un archivo .gitattributes</h2>
+<p>Ahora vamos a crear un archivo oculto donde especificaremos que archivos vamos a cifrar. Vamos a utilizar nano para crearlo:</p>
+<p><code>nano .gitattributes</code></p>
+<p>Indicamos que se cifren, por ejemplo, los archivos .html, .org, directorio:secretdir/**_secreto y archivo, con cualquier extensión o palabra que le preceda.</p>
+<pre><code>*.html filter=git-crypt diff=git-crypt`
+*.org filter=git-crypt diff=git-crypt
+directorio_secreto/** filter=git-crypt diff=git-crypt
+*archivo* filter=git-crypt diff=git-crypt
+</code></pre>
+<p>Ahora cada vez que hagamos un commit, los archivos .html y .org, subirán cifrados.</p>
+<h2>Contraseña con clave simétrica</h2>
+<p>Vamos utilizar de contraseña un archivo llave, que será este la contraseña para desbloquear el cifrado en otra máquina.</p>
+<h3>Generando Llave</h3>
+<p>Para generar el cifrado, voy a utilizar de archivo a modo de contraseña. Le pondré <strong>key</strong>, pero podría ponerle cualquier nombre, como el nombre del repositorio</p>
+<p><code>git-crypt export-key ~/carpeta/key</code></p>
+<h3>Desbloquear el cifrado mediante el archivo llave:</h3>
+<p>Ahora en mi PC de sobremesa, he clonado mi repositorio pero todos los archivos .html y .org están cifrados. Para descifrarlos necesito el <strong>key</strong> y por supuesto, <strong>instalar git-crypt</strong> en este PC:</p>
+<p><code>git-crypt unlock ~/carpeta/key</code></p>
+<p>Ya puedo ver el contenido!!!!</p>
+<h2>Conclusión</h2>
+<p>Simplemente alucinante!!!. Súper útil para cifrar aquellos archivos que queremos utilizarlos con git, pero que en un repositorio público no queremos que sean visibles.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 10 de julio de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-30</em> - <a href="../posts/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li><li><em>2021-04-18</em> - <a href="../posts/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li><li><em>2020-01-14</em> - <a href="../posts/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li><li><em>2020-01-06</em> - <a href="../posts/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html">Descargando un directorio de git con gitdir</a></li><li><em>2019-04-17</em> - <a href="../posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script </a></li><li><em>2019-01-28</em> - <a href="../posts/2019-01-28-crear-ramas-con-git.html"> Crear ramas con Git</a></li><li><em>2019-01-21</em> - <a href="../posts/2019-01-21-utilizando-git-con-la-terminal-github.html"> Utilizando Git con la Terminal. GitHub</a></li><li><em>2019-01-12</em> - <a href="../posts/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html"> Ignorar archivos que no queremos que suban a Git</a></li><li><em>2019-01-08</em> - <a href="../posts/2019-01-08-crear-un-blog-en-github-github-pages.html"> Crear un Blog en GitHub. GitHub Pages</a></li><li><em>2019-01-04</em> - <a href="../posts/2019-01-04-crear-un-blog-en-gitlab-gitlab-pages.html"> Crear un Blog en GitLab. GitLab Pages</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

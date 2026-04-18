@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instalación de Nextcloud 24 con docker Oficial</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo. Los puntos fuertes de Nextcloud son: Un gran número de aplicaciones disponibles Aplicaciones móviles y de Escritorio de buenísima calidad Multiusuario y trabajo colaborativo 100% Open Source y gratuito Voy a explicaros cómo montar el Docker, con docker-compose para arquitectura amd64, ARM64 y Raspberry Pi. Docker-compose amd64 y arm64 version: '2' volumes: nextcloud: db: services: db: image: mariadb container_name: nextclouddb command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW restart: always volumes: - db:/var/lib/mysql environment: - MYSQL_ROOT_PASSWORD=vfgku8ufg56 #Cambiar esto - MYSQL_PASSWORD=vbbyu76f6967 #Cambiar esto - MYSQL_DATABASE=nextcloud - MYSQL_USER=nextcloud app: image: nextcloud container_name: nextcloud ports: - 8080:80 links: - db volumes: - $HOME/docker/nextcloud:/var/www/html #Cambie 'nextcloud' a su volumen de unidad externa si está disponible - /almacenamiento_local:/almacenamiento_local restart: always Raspberry Pi y ARM 32bits Para montar el docker compose con su base...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Instalación de Nextcloud 24 con docker Oficial">
+    <meta property="og:description" content="Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo. Los puntos fuertes de Nextcloud son: Un gran número de aplicaciones disponibles Aplicaciones móviles y de Escritorio de buenísima calidad Multiusuario y trabajo colaborativo 100% Open Source y gratuito Voy a explicaros cómo montar el Docker, con docker-compose para arquitectura amd64, ARM64 y Raspberry Pi. Docker-compose amd64 y arm64 version: '2' volumes: nextcloud: db: services: db: image: mariadb container_name: nextclouddb command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW restart: always volumes: - db:/var/lib/mysql environment: - MYSQL_ROOT_PASSWORD=vfgku8ufg56 #Cambiar esto - MYSQL_PASSWORD=vbbyu76f6967 #Cambiar esto - MYSQL_DATABASE=nextcloud - MYSQL_USER=nextcloud app: image: nextcloud container_name: nextcloud ports: - 8080:80 links: - db volumes: - $HOME/docker/nextcloud:/var/www/html #Cambie 'nextcloud' a su volumen de unidad externa si está disponible - /almacenamiento_local:/almacenamiento_local restart: always Raspberry Pi y ARM 32bits Para montar el docker compose con su base...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png">
+    <meta property="og:url" content="instalacion-de-nextcloud-24-con-docker-oficial">
+    <meta name="twitter:title" content="Instalación de Nextcloud 24 con docker Oficial">
+    <meta name="twitter:description" content="Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo. Los puntos fuertes de Nextcloud son: Un gran número de aplicaciones disponibles Aplicaciones móviles y de Escritorio de buenísima calidad Multiusuario y trabajo colaborativo 100% Open Source y gratuito Voy a explicaros cómo montar el Docker, con docker-compose para arquitectura amd64, ARM64 y Raspberry Pi. Docker-compose amd64 y arm64 version: '2' volumes: nextcloud: db: services: db: image: mariadb container_name: nextclouddb command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW restart: always volumes: - db:/var/lib/mysql environment: - MYSQL_ROOT_PASSWORD=vfgku8ufg56 #Cambiar esto - MYSQL_PASSWORD=vbbyu76f6967 #Cambiar esto - MYSQL_DATABASE=nextcloud - MYSQL_USER=nextcloud app: image: nextcloud container_name: nextcloud ports: - 8080:80 links: - db volumes: - $HOME/docker/nextcloud:/var/www/html #Cambie 'nextcloud' a su volumen de unidad externa si está disponible - /almacenamiento_local:/almacenamiento_local restart: always Raspberry Pi y ARM 32bits Para montar el docker compose con su base...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Instalación de Nextcloud 24 con docker Oficial</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 709 palabras. <a href="../categories/nextcloud.html">nextcloud</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Llegó la versión 24 de Nextcloud y pese no haber muchos cambios en el método de instalación respecto a la versión 21, vamos a ver como instalarlo.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/nextcloud_hub.png" alt=""></p>
+<p>Los puntos fuertes de Nextcloud son:</p>
+<ul>
+<li>Un gran número de aplicaciones disponibles</li>
+<li>Aplicaciones móviles y de Escritorio de buenísima calidad</li>
+<li>Multiusuario y trabajo colaborativo</li>
+<li>100% Open Source y gratuito</li>
+</ul>
+<p>Voy a explicaros cómo montar el Docker, con docker-compose para arquitectura amd64, ARM64 y Raspberry Pi.</p>
+<h2>Docker-compose</h2>
+<h3>amd64 y arm64</h3>
+<pre><code>
+version: '2'
+
+volumes:
+  nextcloud:
+  db:
+
+services:
+  db:
+    image: mariadb
+    container_name: nextclouddb
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=vfgku8ufg56 #Cambiar esto
+      - MYSQL_PASSWORD=vbbyu76f6967 #Cambiar esto
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+
+  app:
+    image: nextcloud
+    container_name: nextcloud
+    ports:
+      - 8080:80
+    links:
+      - db
+    volumes:
+      - $HOME/docker/nextcloud:/var/www/html #Cambie 'nextcloud' a su volumen de unidad externa si está disponible
+            - /almacenamiento_local:/almacenamiento_local
+    restart: always
+</code></pre>
+<h3>Raspberry Pi y ARM 32bits</h3>
+<p>Para montar el docker compose con su base de datos en mariadb para Raspberry Pi o ARM:</p>
+<pre><code>
+version: '2'
+
+volumes:
+  nextcloud:
+  db:
+
+services:
+  db:
+    image: yobasystems/alpine-mariadb:latest
+    container_name: nextclouddb
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=vfgku8ufg56 #Cambiar esto
+      - MYSQL_PASSWORD=vbbyu76f6967 #Cambiar esto
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+
+  app:
+    image: nextcloud
+    container_name: nextcloud
+    ports:
+      - 8080:80
+    links:
+      - db
+    volumes:
+      - $HOME/docker/nextcloud:/var/www/html #Cambie 'nextcloud' a su volumen de unidad externa si está disponible
+            - /almacenamiento_local:/almacenamiento_local
+    restart: always
+</code></pre>
+<h2>Instalación</h2>
+<p>En el ejemplo que he utilizado, Nextcloud será accesible por el puerto <strong>8080</strong> .</p>
+<p>Pon el usuario y contraseña del que será el administrador, seleciona como base de datos <strong>mariadb\</strong>* , escribe la contraseña del usuario de mariadb y resto de datos como aparece en la imágen e inicia la instalación.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/nextcloud2.png" alt=""></p>
+<h2>Forzar conexión https y dominios de confianza</h2>
+<p>Para forzar a Nextcloud a utilizar <strong>https</strong> en su conexión y utilice esta como raíz de todas las páginas, editaremos el archivo <strong>config.php</strong> .</p>
+<p>En mi caso, utilizaré nano para editar el archivo.</p>
+<pre><code>
+nano ~/docker/nextcloud/config/config.php
+</code></pre>
+<p>Hay que modificar:</p>
+<ul>
+<li>overwriteprotocol = Forzar a utilizar <strong>https</strong> .</li>
+<li>trusted\_domains = Dominios de confianza</li>
+</ul>
+<p>Vamos añadir 3 dominios de confianza, para poder acceder a Nextcloud</p>
+<pre><code>
+'overwriteprotocol' =&gt; 'https',
+'trusted_domains' =&gt;
+array (
+0 =&gt; '192.168.1.100:90','nextcloud.midominio.duckdns.org','next.midominio.duckdns.org'
+</code></pre>
+<h2>Idioma por defecto, región telefónica,…</h2>
+<p>Nextcloud nos pedirá que añadamos nuestra región telefónica para el registro de usuarios mediante teléfono. Vamos a a añadir también, igual que en el paso anterior, estos valores al archivo <strong>config.php</strong> .</p>
+<ul>
+<li>force\_language = Idioma por defecto. Si quieres que sean los usuarios los que determinen su propia lengua, pon el valo</li>
+<li>default\_locale = Determinar región</li>
+<li>forcd\_locale = forzar una configuración regional para todos los usuarios</li>
+<li>default\_phoneregion = Esto establece la región predeterminada para los números de teléfono en su servidor Nextcloud</li>
+</ul>
+<pre><code>
+'force_language' =&gt; 'es',
+'default_locale' =&gt; 'es_ES',
+'force_locale' =&gt; 'es_ES',
+'default_phone_region' =&gt; 'ES',
+</code></pre>
+<ul>
+<li><a href="https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html">https://docs.nextcloud.com/server/latest/admin\_manual/configuration\_server/config\_sample\_php\_parameters.html</a></li>
+</ul>
+<h2>Corrigiendo errores que nos muestra Nexcloud con Caddy</h2>
+<p>Una vez iniciado Nextcloud, accederemos en el menú de la parte superior derecha, accederemos a la opción <strong>Configuración -&gt; Vista generas</strong> .</p>
+<p>Ahora Nextcloud analizará nuestra configuración y nos propondrá que tenemos que arreglar para que todo esté correctamente configurado, si no lo está.</p>
+<p>Yo estoy utilizando <strong>Caddy</strong> como proxy inverso. En mi caso, para solucionar todos los problemas he añadido al archivo <strong>Caddyfile</strong> la siguiente configuración:</p>
+<pre><code>
+nextcloud.midominio.duckdns.org {
+
+redir /.well-known/carddav /remote.php/carddav 301
+redir /.well-known/caldav /remote.php/caldav 301
+reverse_proxy http://192.168.1.102:92 {
+}
+encode gzip
+header {
+Strict-Transport-Security max-age=31536000;
+Referrer-Policy no-referrer-when-downgrade
+}
+}
+</code></pre>
+<p>Con esta configuración, Nextcloud me ha dicho que todo está perfecto</p>
+<h2>Acceso pasado 30 segundos</h2>
+<p>Para evitar ataques de fuerza bruta, Nextcloud si detecta que hay muchos accesos desde la misma IP, puede forzar a que cada vez que te conectes al servidor tengas que esperar 30 segundos. Para deshabilitar esta opción, tienes que añadir en el archivo de configuración:</p>
+<pre><code>
+'auth.bruteforce.protection.enabled' =&gt; false,
+</code></pre>
+<h2>Compatibilidad con archivos svg</h2>
+<p>Cuando miramos si Nextcloud está bien instalado, nos mostrará un mensaje que falta la compatibilidad con archivos svg.</p>
+<p>Esta compatibilidad está deshabilitada de manera predeterminada por razones de seguridad. Para agregar esta compatibilidad cuando instalamos un nueva imágen docker, tenemos que instalar el paquete <strong>php-imagick</strong> .</p>
+<pre><code>
+docker exec -it nextcloud apt update ; apt-get install libmagickcore-6.q16-6-extra 
+</code></pre>
+<p>Otra opción de instalación, sería:</p>
+<pre><code>
+docker exec nextcloud bash -c 'apt-get install -y --no-install-recommends $(apt-cache search libmagickcore-6.q[0-9][0-9]-[0-9]-extra | cut -d " " -f1)'
+</code></pre>
+<h2>Conclusión</h2>
+<p>Ahora solo que disfrutar de Nextcloud.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 10 de mayo de 2022</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-05-11</em> - <a href="../posts/2022-05-11-nextcloud-services-notificaciones-desde-nextcloud.html">Nextcloud services. Notificaciones desde Nextcloud</a></li><li><em>2021-03-25</em> - <a href="../posts/2021-03-25-nncli-notas-desde-el-terminal-con-nextcloud-notes.html">nncli. Notas desde el terminal con Nextcloud Notes</a></li><li><em>2021-03-16</em> - <a href="../posts/2021-03-16-optimizando-nextcloud-para-ganar-fluidez.html">Optimizando Nextcloud para ganar fluidez</a></li><li><em>2021-03-09</em> - <a href="../posts/2021-03-09-controlando-la-papelera-de-nextcloud.html">Controlando la papelera de Nextcloud</a></li><li><em>2021-03-02</em> - <a href="../posts/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html">Trabajos en segundo plano de Nextcloud y ownCloud</a></li><li><em>2021-02-25</em> - <a href="../posts/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html">Instalación de Nextcloud 21 con docker Oficial</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

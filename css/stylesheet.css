@@ -1,333 +1,82 @@
-/* adaptar la imagen a la anchura de la pantalla */
-img {
-    max-width: 100%;
-
+/* ===== BLOQUE DE CÓDIGO CON BOTÓN COPIAR ===== */
+.code-container {
+    position: relative;
+    margin: 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid #2a2a2a;
 }
 
-
-
-
-
-/* Letras centrales de uGeek */
-
-#ugeek {
+/* Botón copiar flotante arriba a la derecha */
+.copy-btn {
     position: absolute;
-    font-size: 2.00em;
-    top: 1.30em; }
+    top: 8px;
+    right: 10px;
+    z-index: 10;
 
-@media all and (min-width: 1000px){
-    #ugeek { left: 42%; } }
+    padding: 5px 13px;
+    font-size: 0.75rem;
+    font-family: Arial, sans-serif;
+    background-color: #2a2a2a;
+    color: #ccc;
+    border: 1px solid #444;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.25s ease,
+                background-color 0.2s ease,
+                color 0.2s ease;
+}
 
+/* Mostrar botón al hacer hover en el contenedor */
+.code-container:hover .copy-btn {
+    opacity: 1;
+}
 
+.copy-btn:hover {
+    background-color: #3d3d3d;
+    color: #fff;
+}
 
-body {
-    font-family: "Lato";
-    font-size: 19px; , Lato; }
+/* Estado: copiado */
+.copy-btn.copied {
+    background-color: #1e4d1e;
+    border-color: #4caf50;
+    color: #a8ffb0;
+    opacity: 1;
+}
 
-@media all and (min-width: 1000px){
-    body {
-	max-width: 80%;
-	margin: auto; } }
+/* El bloque <pre> */
+.code-container pre {
+    margin: 0;
+    padding: 2.8rem 1.2rem 1.2rem 1.2rem;
+    background-color: #111;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    border-radius: 12px;
+}
 
-@media all and (max-width: 1000px){
-    body { margin: 1em; } }
+/* El bloque <code> */
+.code-container pre code {
+    font-family: "Courier New", Courier, monospace;
+    color: #d4d4d4;
+    white-space: pre;
+}
 
+/* Scrollbar personalizada */
+.code-container pre::-webkit-scrollbar {
+    height: 6px;
+}
 
-#logo img {
+.code-container pre::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.code-container pre::-webkit-scrollbar-thumb {
+    background-color: #444;
     border-radius: 10px;
-    border-color: white;
-    position: absolute;
-    font-size: 1.50em;
-    top: 1.00em; }
-
-
-@media all and (min-width: 1000px){
-    #logo { left: 10%; } }
-
-@media all and (max-width: 1000px){
-    #logo { left: 10%; } }
-
-
-
-@media all and (min-width: 1000px){
-    #me { left: 10%; } }
-
-@media all and (max-width: 1000px){
-    #me { left: 1em; } }
-
-
-
-
-/* Artículos Podcast Tags */
-
-#menu {
-    position: absolute;
-    font-size: 1.200em;
-    top: 7.525em; }
-
-@media all and (min-width: 1000px){
-    #menu { left: 10%; } }
-
-@media all and (max-width: 1000px){
-    #menu { left: 1em; } }
-
-
-#name {
-    position: absolute;
-    top: 1.50em; }
-
-@media all and (min-width: 1000px){
-    #name { right: 10%; } }
-
-@media all and (max-width: 1000px){
-    #name { right: 1em; } }
-
-
-
-@media all and (min-width: 1000px){
-    #icon { right: 10%; } }
-
-@media all and (max-width: 1000px){
-    #icon { right: 1em; } }
-
-
-
-.title {
-    text-align: left;
-    margin-left: 10px;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray; }
-
-#table-of-contents {
-    margin-left: 10px; }
-#table-of-contents h2 {
-    margin-left: 20px;
-    display: none; }
-#table-of-contents ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0; }
-
-#outline-container-orgheadline2 li {
-    margin: 1em;
-    list-style-type: none; }
-
-
-h1 {
-    color: #3c1b66;
-
-    font-weight: normal;
-    font-size:   32px;
-    font-family: Arial;
-    text-transform: uppercase;
-
-}
-h2 {
-    color: #6c2eb9;
-    font-weight: normal;
-    font-size: 30px;
-    font-family: Arial;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
-}
-h3 {
-    color: #443963;
-    font-weight: normal;
-    font-size: 25px;
-    font-family: Arial;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
-}
-h4 {
-    color: #4f4866;
-    font-weight: normal;
-    font-size: 20px;
-    font-family: Arial;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
-}
-h5 {
-    color: #656172;
-    font-weight: normal;
-    font-size: 18px;
-    font-family: Arial;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
-}
-h6 {
-    color: #747377;
-    font-weight: normal;
-    font-size: 18px;
-    font-family: Arial;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
-}
-
-a {
-    text-decoration: none;
-    color: #4a708b; }
-
-a:hover {
-    text-decoration: underline; }
-
-.img-link a {
-    color: white; }
-
-blockquote {
-    border-left: 1px solid gray;
-    padding-left: 4px; }
-
-#doc-info {
-    margin-top: 3em;
-    margin: auto;
-    float: center;
-    text-align: center;
-    font-size: 8pt;
-    max-width: 75%; }
-
-
-
-code {
-    background-color: #f3e8fb;
-    border: 0px solid #a8a9ba;
-    color: #000000;
-    font-family: monospace;
-    /* font-size: 0.93em; */
-    margin: 25px 0px;
-    padding: 0px 2px; }
-
-
-
-
-pre {
-    background-color: #f3e8fb;
-    border: 1px solid #a8a9ba;
-    color: #000000;
-    font-family: monospace;
-    line-height: 1.14em;
-    overflow: auto;
-    /* overflow-x: auto; */
-    padding: 10px;
-    margin: 25px 1px; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-table th {
-    font:bold 15px Arial;
-    background-color:#a4a5a5;
-    text-indent: 10px;
-    color : black;
 }
 
 
-
-table {
-    width:70%;
-    font:normal 15px Verdana;
-    text-align:center;
-    border-collapse:collapse;
-}
-
-
-
-/*table.negative td[negative^="-"] {color:red;}
- td.negative { color : red; } */
-
-
-table, th, td {
-    border: 1px solid black;
-    margin: auto;
-}
-
-
-
-
-
-/* Una fila de cada color */
-
-tr:nth-child(odd) {
-
-    background-color:#f2f2f2;
-
-}
-
-tr:nth-child(even) {
-
-    background-color:#d9dcde;
-
-}
-
-/* Cambiar de color al  pasar el ratón por las filas */
-
-tr:hover {
-    background-color: #abb9b0;
-}
-
-
-
-
-
-
-
-
-
-#icon {
-    position: absolute;
-    font-size: 0.8625em;
-    top: 6.125em; }
-
-
-
-
-
-/* Docker 
-    h1,h2,h3,h4,h5 {
-	color: #D358F7;
-    }
-*/
-
-
-/*# Dark Mode*/
-@media (prefers-color-scheme: dark)
-{
-    body {
-	background-color: #111;
-	color: grey;
-    }
-    h1,h2,h3,h4,h5 {
-	color: #D358F7;
-    }
-
-    @media all and (min-width: 1000px){
-	#icon { right: 10%;
-		filter: sepia(21%) brightness(91%) hue-rotate(179deg) invert(100%);
-		-webkit-filter: sepia(21%) brightness(91%) hue-rotate(179deg) invert(100%);
-		-moz-filter: sepia(21%) brightness(91%) hue-rotate(179deg) invert(100%);
-	      } }
-
-    @media all and (max-width: 1000px){
-	#icon { right: 1em;
-		filter: sepia(21%) brightness(91%) hue-rotate(179deg) invert(100%);
-		-webkit-filter: sepia(21%) brightness(91%) hue-rotate(179deg) invert(100%);
-		-moz-filter: sepia(21%) brightness(91%) hue-rotate(179deg) invert(100%);
-	      } }
-
-    a {
-    text-decoration: none;
-    color: #337aff; }
-
-    
-}

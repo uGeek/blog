@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Un nuevo servicio en Go. Gossa es un servidor web rápido y simple para ver archivos, sin dependencia y con menos de 200 líneas de código, de modo que es muy fácil de revisar. La interfaz de usuario es muy simple y viene por defecto, con: navegador de archivos/directorios Arrastrar y soltar para subir archivos/directorios Interfaz de usuario predeterminada solo pesa 110 kb, pudiendo manejar archivos, moverlos, renombrarlos, borrarlos navegador de imágenes Reproducción video en streaming Editor de texto simple atajos de teclado servidor estático rápido de golang, llena fácilmente el ancho de banda disponible bloquear configuración fácil/segura de múltiples cuentas Instalación Nos conectamos a la release disponible en GitHub y descargamos la correspondiente a nuestra arquitectura o sistema operativo. https://github.com/pldubouilh/gossa/releases En este caso, voy a utilizar de ejemplo Linux y arquitectura ARM ARM Descargamos la release correspondiente, en el momento de redactar el artículo, está la versión 0.1.6. wget...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="gossa. Servidor ligero de archivos, multimedia, desarrollado en Go">
+    <meta property="og:description" content="Un nuevo servicio en Go. Gossa es un servidor web rápido y simple para ver archivos, sin dependencia y con menos de 200 líneas de código, de modo que es muy fácil de revisar. La interfaz de usuario es muy simple y viene por defecto, con: navegador de archivos/directorios Arrastrar y soltar para subir archivos/directorios Interfaz de usuario predeterminada solo pesa 110 kb, pudiendo manejar archivos, moverlos, renombrarlos, borrarlos navegador de imágenes Reproducción video en streaming Editor de texto simple atajos de teclado servidor estático rápido de golang, llena fácilmente el ancho de banda disponible bloquear configuración fácil/segura de múltiples cuentas Instalación Nos conectamos a la release disponible en GitHub y descargamos la correspondiente a nuestra arquitectura o sistema operativo. https://github.com/pldubouilh/gossa/releases En este caso, voy a utilizar de ejemplo Linux y arquitectura ARM ARM Descargamos la release correspondiente, en el momento de redactar el artículo, está la versión 0.1.6. wget...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/gossa.png">
+    <meta property="og:url" content="gossa-servidor-ligero-de-archivos-multimedia-desarrollado-en-go">
+    <meta name="twitter:title" content="gossa. Servidor ligero de archivos, multimedia, desarrollado en Go">
+    <meta name="twitter:description" content="Un nuevo servicio en Go. Gossa es un servidor web rápido y simple para ver archivos, sin dependencia y con menos de 200 líneas de código, de modo que es muy fácil de revisar. La interfaz de usuario es muy simple y viene por defecto, con: navegador de archivos/directorios Arrastrar y soltar para subir archivos/directorios Interfaz de usuario predeterminada solo pesa 110 kb, pudiendo manejar archivos, moverlos, renombrarlos, borrarlos navegador de imágenes Reproducción video en streaming Editor de texto simple atajos de teclado servidor estático rápido de golang, llena fácilmente el ancho de banda disponible bloquear configuración fácil/segura de múltiples cuentas Instalación Nos conectamos a la release disponible en GitHub y descargamos la correspondiente a nuestra arquitectura o sistema operativo. https://github.com/pldubouilh/gossa/releases En este caso, voy a utilizar de ejemplo Linux y arquitectura ARM ARM Descargamos la release correspondiente, en el momento de redactar el artículo, está la versión 0.1.6. wget...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/gossa.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>gossa. Servidor ligero de archivos, multimedia, desarrollado en Go</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 288 palabras. <a href="../categories/servicios.html">servicios</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Un nuevo servicio en Go. Gossa es un servidor web rápido y simple para ver archivos, sin dependencia y con menos de 200 líneas de código, de modo que es muy fácil de revisar.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/gossa.png" alt=""></p>
+<p>La interfaz de usuario es muy simple y viene por defecto, con:</p>
+<ul>
+<li>navegador de archivos/directorios</li>
+<li>Arrastrar y soltar para subir archivos/directorios</li>
+<li>Interfaz de usuario predeterminada solo pesa 110 kb, pudiendo manejar archivos, moverlos, renombrarlos, borrarlos</li>
+<li>navegador de imágenes</li>
+<li>Reproducción video en streaming</li>
+<li>Editor de texto simple</li>
+<li>atajos de teclado</li>
+<li>servidor estático rápido de golang, llena fácilmente el ancho de banda disponible</li>
+<li>bloquear configuración fácil/segura de múltiples cuentas</li>
+</ul>
+<h2>Instalación</h2>
+<p>Nos conectamos a la <strong>release</strong> disponible en GitHub y descargamos la correspondiente a nuestra arquitectura o sistema operativo.</p>
+<p><a href="https://github.com/pldubouilh/gossa/releases">https://github.com/pldubouilh/gossa/releases</a></p>
+<p>En este caso, voy a utilizar de ejemplo Linux y arquitectura ARM</p>
+<h3>ARM</h3>
+<p>Descargamos la release correspondiente, en el momento de redactar el artículo, está la versión 0.1.6.</p>
+<pre><code>
+wget https://github.com/pldubouilh/gossa/releases/download/v0.1.6/gossa-linux-arm
+</code></pre>
+<pre><code>
+mv gossa-linux-arm gossa
+</code></pre>
+<pre><code>
+./gossa -h 192.168.1.100 ~/directorio
+</code></pre>
+<p>Hacer correr, por ejemplo, por el Puerto 8888</p>
+<pre><code>
+./gossa -h 192.168.1.100 -p 8888 ~/directorio
+</code></pre>
+<h3>Docker arquitectura amd64</h3>
+<pre><code>
+docker run -v ~/directorio:/shared -p 8001:8001 pldubouilh/gossa
+</code></pre>
+<h2>Ayuda</h2>
+<p>Gossa también la podemos utilizar con la terminal.</p>
+<p>Para mostrar las opciones disponibles, ejecutamos la ayuda:</p>
+<pre><code>
+./gossa -h
+</code></pre>
+<pre><code>
+flag needs an argument: -h
+
+usage: ./gossa ~/directory-to-share
+
+-h string
+host to listen to (default "127.0.0.1")
+-k
+skip hidden files (default true)
+-p string
+port to listen to (default "8001")
+-prefix string
+url prefix at which gossa can be reached, e.g. /gossa/ (slashes of importance) (default "/")
+-ro
+read only mode (no upload, rename, move, etc...)
+-symlinks
+follow symlinks WARNING: symlinks will by nature allow to escape the defined path (default: false)
+-verb
+verbosity
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/pldubouilh/gossa">https://github.com/pldubouilh/gossa</a></li>
+<li><a href="https://github.com/pldubouilh/gossa/releases">https://github.com/pldubouilh/gossa/releases</a></li>
+<li><a href="https://hub.docker.com/r/pldubouilh/gossa">https://hub.docker.com/r/pldubouilh/gossa</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 21 de agosto de 2020</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculando con mi terminal</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 5 minutos. 568 palabras. terminal Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, expr (evalúa los argumentos como una expresión) y calc (Calculadora de precisión arbitraria). Expr viene preinstalado en Ubuntu por defecto, cosa que no sucede con calc. Y os preguntareis: ¿Porque utilizar dos comandos? expr no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de calc. Otro método de hacer cálculos sería con bc, pero lo dejo para otro Post porque expr y calc diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora. Con expr vamos a ejecutar operaciones aritméticas o de comparación. Vamos a...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Calculando con mi terminal">
+    <meta property="og:description" content="Tiempo estimado de lectura: 5 minutos. 568 palabras. terminal Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, expr (evalúa los argumentos como una expresión) y calc (Calculadora de precisión arbitraria). Expr viene preinstalado en Ubuntu por defecto, cosa que no sucede con calc. Y os preguntareis: ¿Porque utilizar dos comandos? expr no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de calc. Otro método de hacer cálculos sería con bc, pero lo dejo para otro Post porque expr y calc diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora. Con expr vamos a ejecutar operaciones aritméticas o de comparación. Vamos a...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/expr.jpg">
+    <meta property="og:url" content="calculando-con-mi-terminal">
+    <meta name="twitter:title" content="Calculando con mi terminal">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 5 minutos. 568 palabras. terminal Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, expr (evalúa los argumentos como una expresión) y calc (Calculadora de precisión arbitraria). Expr viene preinstalado en Ubuntu por defecto, cosa que no sucede con calc. Y os preguntareis: ¿Porque utilizar dos comandos? expr no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de calc. Otro método de hacer cálculos sería con bc, pero lo dejo para otro Post porque expr y calc diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora. Con expr vamos a ejecutar operaciones aritméticas o de comparación. Vamos a...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/expr.jpg">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Calculando con mi terminal</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 485 palabras. <a href="../categories/terminal.html">terminal</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 5 minutos. 568 palabras. <a href="https://ugeek.github.io/blog/categories/terminal">terminal</a></h5>
+<p>Cuando comienzas a crear tus propios scripts, a veces te ves en la necesidad de hacer cálculos. Hoy os voy a explicar un par de comandos que podemos utilizar para hacer nuestros cálculos, <strong>expr</strong> (evalúa los argumentos como una expresión) y <strong>calc</strong> (Calculadora de precisión arbitraria).</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/expr.jpg" alt=""></p>
+<p><strong>Expr</strong> viene preinstalado en Ubuntu por defecto, cosa que no sucede con <strong>calc</strong>. Y os preguntareis: ¿Porque utilizar dos comandos? <strong>expr</strong> no utiliza decimales y para determinados casos nos puede ir bien, pero si queremos utilizar decimales, tendremos que echar mano de <strong>calc</strong>.</p>
+<p>Otro método de hacer cálculos sería con <strong>bc</strong>, pero lo dejo para otro Post porque <strong>expr</strong> y <strong>calc</strong> diría que es la versión de comandos para hacer cálculos seres humanos, escribiremos en la terminal igual que haríamos en una calculadora.</p>
+<p>Con <strong>expr</strong> vamos a ejecutar operaciones aritméticas o de comparación. Vamos a ver como funciona:</p>
+<p><code>expr &lt;número&gt; &lt;operador matemático&gt; &lt;número&gt;</code></p>
+<h2>Suma</h2>
+<p>Hay que dejar un espacio en blanco entre los números y símbolo de <strong>+</strong>.</p>
+<p><code>expr 8 + 4</code></p>
+<p>Suma con números negativos:</p>
+<p><code>expr -30 + 47</code></p>
+<h2>Resta</h2>
+<p><code>expr 8 - 4</code></p>
+<h2>Multiplicación</h2>
+<p>Lleva la contrabarra <strong>\</strong> para escapar del asterísco. Es la única excepción respecto como lo haríamos con la calculadora:</p>
+<p><code>expr 8 \* 4</code></p>
+<h2>División</h2>
+<p><code>expr 8 / 4</code></p>
+<h2>Porcentaje</h2>
+<p><code>expr 10 % 100</code></p>
+<h2>Comparaciones</h2>
+<p>Otra cosa que nos permite <strong>expr</strong> es ejecutar comparaciones. Si la comparación es verdadera, nos devolverá <strong>1</strong>, si es falsa <strong>0</strong>. Aquí también hay símbolos que llevan la contrabarra <strong>\</strong> para escapar.</p>
+<pre><code>expr 10 =   7   # Igual
+expr 10 !=  7   # No es igual
+expr 10 \&gt;  7   # Mayor que
+expr 10 \&lt;  7   # Menor que
+expr 10 \&lt;= 7   # Menor o igual
+expr 10 \&gt;= 7   # Mayor o igual
+</code></pre>
+<h2>Contando el número de letras</h2>
+<p>También podemos contar el número de letras que hay en una frase:</p>
+<p><code>expr length "hola mundo"</code></p>
+<p>O en un archivo de texto plano:</p>
+<p><code>expr length "$(cat mis_notas.txt)"</code></p>
+<h2>Manual</h2>
+<p>Hay muchas mas opciones. Lee en manual para conocerlas:</p>
+<p><code>man expr</code></p>
+<h2>Instalación de Calc</h2>
+<p>Calc no viene instalado por defecto en Ubuntu. Lo instalaremos así:</p>
+<p><code>sudo apt install apcalc</code></p>
+<h2>Suma</h2>
+<p>Suma con decimales:</p>
+<pre><code>calc 12.5 + 21.4
+    33.9
+</code></pre>
+<p>Aquí ya podemos sumar números negativos. Al poner el signo negativo, tiene que ir entre paréntesis.</p>
+<pre><code>calc '(-30 + 47)'
+    17
+</code></pre>
+<h2>Dos números negativos</h2>
+<pre><code>calc '(-30 - 47)'
+    -77
+</code></pre>
+<h2>Multiplicación</h2>
+<p>En el caso de la multiplicación, <strong>calc</strong> no necesita <strong>\</strong> de escape:</p>
+<pre><code>calc 30*2
+    60
+</code></pre>
+<pre><code>calc '(-2 * 10)'
+    -20
+</code></pre>
+<pre><code>calc 30\*2
+    60
+</code></pre>
+<h2>División</h2>
+<pre><code>calc 200/10
+    20
+</code></pre>
+<h2>Porcentaje</h2>
+<pre><code>calc 10%100
+    10
+</code></pre>
+<h2>Manual</h2>
+<p>Hay muchas mas en manual:</p>
+<p><code>man calc</code></p>
+<h2>Conclusión</h2>
+<p>Esto es tan solo unos ejemplos de estos comandos, pero podemos utilizarlo para contar letras entre líneas de archivos,… y muchas más cosas Ahora ya solo queda llenar tus variables de números y comenzar ha hacer montones de cálculos.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 01 de abril de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-09-24</em> - <a href="../posts/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html">Comprimiendo archivos pdf desde la terminal</a></li><li><em>2019-11-20</em> - <a href="../posts/2019-11-20-test-de-velocidad-en-la-terminal.html">Test de velocidad en la terminal</a></li><li><em>2019-10-11</em> - <a href="../posts/2019-10-11-calendario-en-la-terminal.html">Calendario en la terminal</a></li><li><em>2019-04-06</em> - <a href="../posts/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li><li><em>2019-01-26</em> - <a href="../posts/2019-01-26-castero-podcatcher-ligero-para-terminal.html"> Castero. Podcatcher ligero para Terminal</a></li><li><em>2019-01-05</em> - <a href="../posts/2019-01-05-elimina-archivos-duplicados-con-fduples.html"> Elimina archivos duplicados con fduples</a></li><li><em>2018-12-28</em> - <a href="../posts/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-wget.html">   Descargar todos los episodios de un Podcast con wget</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

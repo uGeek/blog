@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sincronizaciones remotas y locales con rsync</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado. Instalación Normalmente viene instalado pero si no es así: sudo apt install rsync rsync podemos encontrarlo en todas las distros linux y opera de forma similar a ssh, scp y cp. Funcionamiento Hay dos modos de sincronización, enviando el contenido dentro de un directorio o sincronizando el contenido del directorio en otro. Sincronizando todo el contenido del directorio1 en el directorio2 rcsync -r directorio1/ directorio2 Sincronizando el contenido del directorio1 dentro del directorio2 rcsync -r directorio1 directorio2 Sincronizando Vamos ha hacer una sincronización del directorio1 al directorio2 rcsync -r directorio1/ directorio2 -r significa de forma recursiva rcsync -a directorio1/ directorio2 -a Significa “archivo” y sincroniza de manera recursiva, además conserva los enlaces simbólicos, los archivos especiales y de dispositivo, fechas de modificación, grupo, propietario y permisos. Se utiliza con más frecuencia...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sincronizaciones remotas y locales con rsync">
+    <meta property="og:description" content="rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado. Instalación Normalmente viene instalado pero si no es así: sudo apt install rsync rsync podemos encontrarlo en todas las distros linux y opera de forma similar a ssh, scp y cp. Funcionamiento Hay dos modos de sincronización, enviando el contenido dentro de un directorio o sincronizando el contenido del directorio en otro. Sincronizando todo el contenido del directorio1 en el directorio2 rcsync -r directorio1/ directorio2 Sincronizando el contenido del directorio1 dentro del directorio2 rcsync -r directorio1 directorio2 Sincronizando Vamos ha hacer una sincronización del directorio1 al directorio2 rcsync -r directorio1/ directorio2 -r significa de forma recursiva rcsync -a directorio1/ directorio2 -a Significa “archivo” y sincroniza de manera recursiva, además conserva los enlaces simbólicos, los archivos especiales y de dispositivo, fechas de modificación, grupo, propietario y permisos. Se utiliza con más frecuencia...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="sincronizaciones-remotas-y-locales-con-rsync">
+    <meta name="twitter:title" content="Sincronizaciones remotas y locales con rsync">
+    <meta name="twitter:description" content="rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado. Instalación Normalmente viene instalado pero si no es así: sudo apt install rsync rsync podemos encontrarlo en todas las distros linux y opera de forma similar a ssh, scp y cp. Funcionamiento Hay dos modos de sincronización, enviando el contenido dentro de un directorio o sincronizando el contenido del directorio en otro. Sincronizando todo el contenido del directorio1 en el directorio2 rcsync -r directorio1/ directorio2 Sincronizando el contenido del directorio1 dentro del directorio2 rcsync -r directorio1 directorio2 Sincronizando Vamos ha hacer una sincronización del directorio1 al directorio2 rcsync -r directorio1/ directorio2 -r significa de forma recursiva rcsync -a directorio1/ directorio2 -a Significa “archivo” y sincroniza de manera recursiva, además conserva los enlaces simbólicos, los archivos especiales y de dispositivo, fechas de modificación, grupo, propietario y permisos. Se utiliza con más frecuencia...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Sincronizaciones remotas y locales con rsync</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 449 palabras. <a href="../categories/rsync.html">rsync</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>rsync es una herramienta fantástica que permite hacer sincronizaciones en un sentido, sincronizando solo los archivos que han cambiado.</p>
+<h2>Instalación</h2>
+<p>Normalmente viene instalado pero si no es así:</p>
+<pre><code>
+sudo apt install rsync
+</code></pre>
+<p>rsync podemos encontrarlo en todas las distros linux y opera de forma similar a ssh, scp y cp.</p>
+<h2>Funcionamiento</h2>
+<p>Hay dos modos de sincronización, enviando el contenido dentro de un directorio o sincronizando el contenido del directorio en otro.</p>
+<ol>
+<li>Sincronizando todo el contenido del directorio1 en el directorio2</li>
+</ol>
+<pre><code>
+rcsync -r directorio1/ directorio2
+</code></pre>
+<ol>
+<li>&nbsp;Sincronizando el contenido del directorio1 <strong>dentro</strong> del directorio2</li>
+</ol>
+<p>&nbsp;</p>
+<pre><code>
+rcsync -r directorio1 directorio2
+</code></pre>
+<h2>Sincronizando</h2>
+<p>Vamos ha hacer una sincronización del directorio1 al directorio2</p>
+<pre><code>
+rcsync -r directorio1/ directorio2
+</code></pre>
+<ul>
+<li><code>-r</code> significa de forma recursiva</li>
+</ul>
+<pre><code>
+rcsync -a directorio1/ directorio2
+</code></pre>
+<ul>
+<li>&nbsp; <code>-a</code> Significa “archivo” y sincroniza de manera recursiva, además conserva los enlaces simbólicos, los archivos especiales y de dispositivo, fechas de modificación, grupo, propietario y permisos. Se utiliza con más frecuencia que <code>-r</code></li>
+</ul>
+<p>&nbsp;</p>
+<h2>Simulación antes de sincronizar</h2>
+<p>rsync nos permite hacer una simulación de como se va a producir la sincronización con la opción. <code>-n</code> o <code>--dry-run</code>.&nbsp;</p>
+<p>Con la opción <code>-v</code> podemos visualizarlo:</p>
+<pre><code>
+rsync -anv directorio1/ directorio2
+</code></pre>
+<h2>Sincronización de directorios remotos con SSH</h2>
+<p>Para sincronizar con directorios remotos via SSH, es necesario tener instalado <strong>rsync</strong> en ambos dispositivos.</p>
+<p>Sincronización de local a remoto</p>
+<pre><code>
+rsync -a ~/directorio1 usuario@ip:directorio2
+</code></pre>
+<p>Sincronización de remoto a local</p>
+<pre><code>
+rsync -a usuario@ip:/home/usuario/directorio1 directorio2_local
+</code></pre>
+<p>Si utilizas SSH con archivo de configuración, para evitar poner el usuario e IP, puedes utilizar el nombre que hayas añadido en el archivo de configuración. Imagina que he utilizado vps como nombre del servidor. Lo haríamos así:</p>
+<pre><code>
+rsync -a vps:/home/usuario/directorio1 directorio2_local
+</code></pre>
+<h2>Otras opciones del comando rsync</h2>
+<ul>
+<li><code>-z</code> = Permite comprimir los archivos antes de enviar, para que la transferencia de datos sea más baja</li>
+<li><code>-P</code> = Es la unión de los indicadores <code>--progress</code> y <code>--partial</code>. El primero es una barra de progreso de las transferencias, el segundo permite reanudar las transferencias interrumpidas.</li>
+<li><code>--delete</code> = Elimina los archivos en el destino si se eliminan en origen</li>
+<li><code>--exclude</code>= = Excluir archivos o directorios. Si quieres añadir varias opciones, separalas con comas. Ejemplo: <code>--exclude</code>{'file1.txt','dir1/*','dir2'}=</li>
+<li><code>--exclude-from</code> = Utiliza un archivo de texto plano para añadir los archivos y directorios a excluir</li>
+<li><code>--include</code>= = Igual que exclude pero para indicar los directorios o archivos a incluir.</li>
+<li><code>--backup</code> y <code>--backup-dir</code> = Ambos van juntos, el primero almacena copias de seguridad importantes y la segunda opción indica el que directorio se guardan</li>
+<li><code>--log-file</code>= = Añade la ruta y archivo donde quieres guardar los logs. rsync guarda los archivos y directorios que se han sincronizado</li>
+</ul>
+<p>Utiliza las opciones <code>-nv</code> para comprobar los archivos incluidos o excluidos y ver como sería la sincronización antes de hacerla.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 28 de junio de 2022</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

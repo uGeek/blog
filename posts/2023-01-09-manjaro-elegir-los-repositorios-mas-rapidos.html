@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manjaro. Elegir los repositorios más rápidos</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos: Lanzaremos el siguiente comando: sudo pacman-mirrors -g Empezará a listar los servidores y hará un test de velocidad. Una vez acabado, los ordenará por velocidad y los guardará en el archivo /etc/pacman.d/mirrorlist. Una vez acabado, puedes actualizar repositorios sudo pacman -Syyu Personalice el grupo de espejos por países Crea un grupo de espejos personalizado usando los espejos de España, Alemania, Francia, Bélgica y Austria. Desde mi ubicación en Barcelona, actualmente son los más rápidos. Elige el listado de servidores más rápidos después de ejecutar el comando anterior. sudo pacman-mirrors --country Spain,Germany,France,Belgium,Austria && sudo pacman -Syu Comandos que usan valores predeterminados Actualizar la lista de espejos con los espejos más rápidos (si has acotado la lista, solo será de la lista disponible). sudo pacman-mirrors --fasttrack && sudo pacman -Syu Limite a 5 espejos Se puede proporcionar un...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Manjaro. Elegir los repositorios más rápidos">
+    <meta property="og:description" content="Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos: Lanzaremos el siguiente comando: sudo pacman-mirrors -g Empezará a listar los servidores y hará un test de velocidad. Una vez acabado, los ordenará por velocidad y los guardará en el archivo /etc/pacman.d/mirrorlist. Una vez acabado, puedes actualizar repositorios sudo pacman -Syyu Personalice el grupo de espejos por países Crea un grupo de espejos personalizado usando los espejos de España, Alemania, Francia, Bélgica y Austria. Desde mi ubicación en Barcelona, actualmente son los más rápidos. Elige el listado de servidores más rápidos después de ejecutar el comando anterior. sudo pacman-mirrors --country Spain,Germany,France,Belgium,Austria && sudo pacman -Syu Comandos que usan valores predeterminados Actualizar la lista de espejos con los espejos más rápidos (si has acotado la lista, solo será de la lista disponible). sudo pacman-mirrors --fasttrack && sudo pacman -Syu Limite a 5 espejos Se puede proporcionar un...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/manjaro.png">
+    <meta property="og:url" content="manjaro-elegir-los-repositorios-mas-rapidos">
+    <meta name="twitter:title" content="Manjaro. Elegir los repositorios más rápidos">
+    <meta name="twitter:description" content="Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos: Lanzaremos el siguiente comando: sudo pacman-mirrors -g Empezará a listar los servidores y hará un test de velocidad. Una vez acabado, los ordenará por velocidad y los guardará en el archivo /etc/pacman.d/mirrorlist. Una vez acabado, puedes actualizar repositorios sudo pacman -Syyu Personalice el grupo de espejos por países Crea un grupo de espejos personalizado usando los espejos de España, Alemania, Francia, Bélgica y Austria. Desde mi ubicación en Barcelona, actualmente son los más rápidos. Elige el listado de servidores más rápidos después de ejecutar el comando anterior. sudo pacman-mirrors --country Spain,Germany,France,Belgium,Austria && sudo pacman -Syu Comandos que usan valores predeterminados Actualizar la lista de espejos con los espejos más rápidos (si has acotado la lista, solo será de la lista disponible). sudo pacman-mirrors --fasttrack && sudo pacman -Syu Limite a 5 espejos Se puede proporcionar un...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/manjaro.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Manjaro. Elegir los repositorios más rápidos</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 331 palabras. <a href="../categories/manjaro.html">manjaro</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Es posible mejorar la velocidad de descarga de paquetes con pacman siguiendo estos pasos:</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/manjaro.png" alt=""></p>
+<p>Lanzaremos el siguiente comando:</p>
+<pre><code>
+sudo pacman-mirrors -g
+</code></pre>
+<p>Empezará a listar los servidores y hará un test de velocidad. Una vez acabado, los ordenará por velocidad y los guardará en el archivo <code>/etc/pacman.d/mirrorlist</code>.</p>
+<p>Una vez acabado, puedes actualizar repositorios</p>
+<pre><code>
+sudo pacman -Syyu
+</code></pre>
+<h2>Personalice el grupo de espejos por países</h2>
+<p>Crea un grupo de espejos personalizado usando los espejos de España, Alemania, Francia, Bélgica y Austria. Desde mi ubicación en Barcelona, actualmente son los más rápidos. Elige el listado de servidores más rápidos después de ejecutar el comando anterior.</p>
+<pre><code>
+sudo pacman-mirrors --country Spain,Germany,France,Belgium,Austria &amp;&amp; sudo pacman -Syu
+</code></pre>
+<h2>Comandos que usan valores predeterminados</h2>
+<p>Actualizar la lista de espejos con los espejos más rápidos (si has acotado la lista, solo será de la lista disponible).</p>
+<pre><code>
+sudo pacman-mirrors --fasttrack &amp;&amp; sudo pacman -Syu
+</code></pre>
+<h2>Limite a 5 espejos</h2>
+<p>Se puede proporcionar un número opcional para limitar el número de réplicas en la lista de réplicas.</p>
+<pre><code>
+sudo pacman-mirrors --fasttrack 5 &amp;&amp; sudo pacman -Syu
+</code></pre>
+<h2>Estado del espejo</h2>
+<pre><code>
+pacman-mirrors --status
+</code></pre>
+<h2>Lista de países disponibles</h2>
+<p>En el grupo de espejos predeterminado, lista de paises global</p>
+<pre><code>
+pacman-mirrors --country-list
+</code></pre>
+<h2>Descargas en paralelo</h2>
+<p>Este truquillo lo he visto en un vídeo reciente de nuestro amigo Yoyo Fernández del blog <a href="https://salmorejogeek.com/">Salmorejo Geek</a>, que un usuario le recomendaba para la descarga en paralelo <a href="https://twitter.com/xaviermazon1990/status/1610006254922899456">Xaviar Mazon</a>.</p>
+<p>Edita el siguiente archivo de configuración para tener más descargas en paralelo.</p>
+<pre><code>
+sudo nano /etc/pacman.conf
+</code></pre>
+<p>Des-comenta <code>#ParallelDownloads</code> 5=</p>
+<pre><code>
+ParallelDownloads = 5
+</code></pre>
+<p>Actualiza nuevamente con:</p>
+<pre><code>
+sudo pacman -Syyu
+</code></pre>
+<h2>Reiniciar</h2>
+<p>Llegará a un punto en el que desees restablecer los valores predeterminados.</p>
+<pre><code>
+sudo pacman-mirrors --country all --api --protocols all --set-branch stable &amp;&amp; sudo pacman -Syu
+</code></pre>
+<h2>Para eliminar la configuración personalizada ejecuta</h2>
+<p><code>sudo pacman-mirrors -c all</code></p>
+<h2>Añadir más repositorios de otras paqueterías en la tienda</h2>
+<p>Lanzar tienda de aplicaciones</p>
+<pre><code>
+sudo pamac-manager
+</code></pre>
+<ol>
+<li>Le damos a las 3 rallitas</li>
+<li>Preferencias</li>
+<li>Terceros. Dentro de esta categoría podemos habilitar los repositorios <strong>AUR</strong>, <strong>Flatpak</strong> y <strong>snap</strong>.</li>
+</ol>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://wiki.manjaro.org/index.php/Pacman-mirrors">https://wiki.manjaro.org/index.php/Pacman-mirrors</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 09 de enero de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-12-08</em> - <a href="../posts/2023-12-08-manjaro-instalando-y-actualizando-en-modo-grafico.html">Manjaro Instalando y actualizando en modo Grafico</a></li><li><em>2023-04-09</em> - <a href="../posts/2023-04-09-manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo.html">Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</a></li><li><em>2023-01-17</em> - <a href="../posts/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

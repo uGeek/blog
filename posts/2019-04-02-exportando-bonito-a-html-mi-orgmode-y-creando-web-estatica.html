@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exportando bonito a html mi OrgMode y creando web estática</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 5 minutos. 585 palabras. emacs Emacs es espectacular, pero los usuarios que lo utilizan y crean paquetes, están al mismo nivel. Hoy os traigo un paquete que está disponible en los repositorios de Melpa desarrollado por Brandon van Beekum, que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad. Por defecto emacs, exporta a html pero de un modo plano, osea código html puro y duro, necesitamos una plantilla css para que tenga formato y se vea mas bonito. Este paquete es como si llevara una plantilla css y javascript adjunta, creando la tabla de contenido del documento en la parte superior derecha, si utilizamos la versión de escritorio y en la parte inferior, si utilizamos un móvil. Esta tabla de contenido se va expandiendo conforme navegamos por nuestro orgmode en versión web. En la configuración, adjunto un ejemplo...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Exportando bonito a html mi OrgMode y creando web estática">
+    <meta property="og:description" content="Tiempo estimado de lectura: 5 minutos. 585 palabras. emacs Emacs es espectacular, pero los usuarios que lo utilizan y crean paquetes, están al mismo nivel. Hoy os traigo un paquete que está disponible en los repositorios de Melpa desarrollado por Brandon van Beekum, que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad. Por defecto emacs, exporta a html pero de un modo plano, osea código html puro y duro, necesitamos una plantilla css para que tenga formato y se vea mas bonito. Este paquete es como si llevara una plantilla css y javascript adjunta, creando la tabla de contenido del documento en la parte superior derecha, si utilizamos la versión de escritorio y en la parte inferior, si utilizamos un móvil. Esta tabla de contenido se va expandiendo conforme navegamos por nuestro orgmode en versión web. En la configuración, adjunto un ejemplo...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ox-twbs.png">
+    <meta property="og:url" content="exportando-bonito-a-html-mi-orgmode-y-creando-web-estatica">
+    <meta name="twitter:title" content="Exportando bonito a html mi OrgMode y creando web estática">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 5 minutos. 585 palabras. emacs Emacs es espectacular, pero los usuarios que lo utilizan y crean paquetes, están al mismo nivel. Hoy os traigo un paquete que está disponible en los repositorios de Melpa desarrollado por Brandon van Beekum, que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad. Por defecto emacs, exporta a html pero de un modo plano, osea código html puro y duro, necesitamos una plantilla css para que tenga formato y se vea mas bonito. Este paquete es como si llevara una plantilla css y javascript adjunta, creando la tabla de contenido del documento en la parte superior derecha, si utilizamos la versión de escritorio y en la parte inferior, si utilizamos un móvil. Esta tabla de contenido se va expandiendo conforme navegamos por nuestro orgmode en versión web. En la configuración, adjunto un ejemplo...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ox-twbs.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Exportando bonito a html mi OrgMode y creando web estática</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 495 palabras. <a href="../categories/emacs.html">emacs</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 5 minutos. 585 palabras. <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<p>Emacs es espectacular, pero los usuarios que lo utilizan y crean paquetes, están al mismo nivel. Hoy os traigo un paquete que está disponible en los repositorios de <a href="https://melpa.org/">Melpa</a> desarrollado por Brandon van Beekum, que exporta tus archivos orgmode a formato html de un modo más bonito y con más calidad.</p>
+<p>Por defecto emacs, exporta a html pero de un modo plano, osea código html puro y duro, necesitamos una plantilla css para que tenga formato y se vea mas bonito. Este paquete es como si llevara una plantilla css y javascript adjunta, creando la tabla de contenido del documento en la parte superior derecha, si utilizamos la versión de escritorio y en la parte inferior, si utilizamos un móvil. Esta tabla de contenido se va expandiendo conforme navegamos por nuestro orgmode en versión web.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/ox-twbs.png" alt=""></p>
+<p>En la configuración, adjunto un ejemplo de como tener tus archivos orgmode en una carpeta y exportar los html a otra. Esto es interesante porque podríamos apuntar a esa carpeta como raíz de un servidor web, por ejemplo siguiendo el post del <a href="https://ugeek.github.io/blog/post/2019-03-25-monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker.html">Docker de Nginx</a>, haciendo accesible estas notas en formato web en nuestra red Local o via Internet.</p>
+<p>Otra posibilidad sería publicarlo en las GitHub o GitLab Pages.</p>
+<h2>Instalación</h2>
+<p><code>M-x package-install [RET] ox-twbs [RET]</code></p>
+<p>Para exportar el archivo que estamos editando de orgmode a html con este paquete, ejecutaremos el siguiente comando en emacs:</p>
+<p><code>M-x org-twbs-export-to-html</code></p>
+<p>El archivo html resultante, estará en la misma carpeta donde está el archivo orgmode.</p>
+<h2>Configuración</h2>
+<p>Vamos a ver como exportar los html a otra carpeta que no sea la misma donde está el archivo orgmode. Copiaremos en nuestro archivo de configuración de emacs <strong>init.el</strong> o <strong>.emacs</strong>:</p>
+<pre><code>(setq org-publish-project-alist
+      '(("org-notes"
+         :base-directory "~/org/"
+         :publishing-directory "~/public_html/"
+         :publishing-function org-twbs-publish-to-html
+         :with-sub-superscript nil
+         )))
+</code></pre>
+<p>En este archivo de configuración, utilizaremos las carpetas <strong>~/org/</strong> y <strong>~/public_html/</strong>. Los archivos orgmode los guardaremos en la carpeta <strong>~/org/</strong> y cuando ejecutemos el comando dentro de emacs: <code>M-x org-publish-all</code> , será exportado en formato .html a la carpeta <strong>~/public_html/</strong>.</p>
+<p>Previamente, crearemos las carpetas desde nuestra terminal:</p>
+<p><code>mkdir -p carpeta ~/org ~/public_html</code></p>
+<p>Podemos personalizar la carpeta que deseemos, modificando la ruta de las carpetas en el archivo de configuración.</p>
+<h2>Sin tabla de contenido o índice, autor…</h2>
+<p>Si no queremos que aparezca tabla de contenido o índice, ni a pie de página el autor, fecha… añadiremos al inicio de nuestro OrgMode:</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/ox-twbs2.png" alt=""></p>
+<pre><code>#+OPTIONS: html-postamble:nil toc:nil
+</code></pre>
+<h2>Cajetilla de código de color</h2>
+<p>Si queremos que salga la cajetilla de código de color negro, en el archivo orgmode añadiremos la siguiente línea. Como todo, es personalizable cambiando el color al que tu desees.</p>
+<pre><code>#+HTML_HEAD_EXTRA: &lt;style&gt;pre { font-size: 13px; background-color: #000; color: #bbb; }&lt;/style&gt;
+</code></pre>
+<h2>Conclusión</h2>
+<p>En el repositorio de GitHub de <a href="https://github.com/marsmining/ox-twbs">ox-twbs</a> encontraras más información de este paquete. Encuentro que es un modo muy sencillo de tomar tus notas y acceder a ellas para consultar.</p>
+<h2>Fuentes</h2>
+<ul>
+<li>Fuente del paquete: <a href="https://github.com/marsmining/ox-twbs">https://github.com/marsmining/ox-twbs</a></li>
+<li><a href="http://clubctrl.com/org/prog/howto.html">http://clubctrl.com/org/prog/howto.html</a></li>
+<li><a href="http://clubctrl.com/org/prog/source.html">http://clubctrl.com/org/prog/source.html</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 02 de abril de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-03-18</em> - <a href="../posts/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li><li><em>2022-03-08</em> - <a href="../posts/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li><li><em>2021-07-28</em> - <a href="../posts/2021-07-28-editando-csv-usando-emacs.html">Editando CSV usando Emacs</a></li><li><em>2021-04-15</em> - <a href="../posts/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li><li><em>2020-10-26</em> - <a href="../posts/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html">Borrando líneas en blanco de un texto con Emacs</a></li><li><em>2020-10-24</em> - <a href="../posts/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li><li><em>2020-09-03</em> - <a href="../posts/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html">Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li><li><em>2020-08-12</em> - <a href="../posts/2020-08-12-compilar-emacs-271-para-ubuntu-debian-raspbian-y-derivadas.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li><li><em>2020-06-16</em> - <a href="../posts/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li><li><em>2020-02-12</em> - <a href="../posts/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

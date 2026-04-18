@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Cómo expliqué en el Podcast, no existe una imagen oficial del contenedor Synapse, pero black0 ha creado una para todo tipo de arquitecturas, entre ellas ARM. El contenedor de black0/synapse se crea exactamente igual que con la imagen oficial, matrixdotorg/synapse. He utilizado la versión black0/synapse:v1.20.1, porque la versión latest, he visto que no tiene compatibilidad con arquitectura ARM, en el momento de escribir este artículo. Si vas a instalarlo en un Ubuntu, Debian,... con arquitectura amd64, puedes utilizar la imagen oficial matrixdotorg/synapse. Sustituye en cada comando black0/synapse:v1.20.1 por matrixdotorg/synapse. Creando archivos de configuración Vamos a utilizar la imagen con el comando generate, para generar el archivo de configuración de nuestro servidor matrix-synapse. Crearemos un volumen en la ruta $HOME/docker/synapse-data, dónde están los archivos de configuración. Recuerda añadir en la variable SYNAPSE_SERVER_NAME, la dirección de tu servidor. Voy a utilizar matrix.ugeek.duckdns.org, como dirección de ejemplo de mi servidor. #+BEGIN_EXAMPLE docker run...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker">
+    <meta property="og:description" content="Cómo expliqué en el Podcast, no existe una imagen oficial del contenedor Synapse, pero black0 ha creado una para todo tipo de arquitecturas, entre ellas ARM. El contenedor de black0/synapse se crea exactamente igual que con la imagen oficial, matrixdotorg/synapse. He utilizado la versión black0/synapse:v1.20.1, porque la versión latest, he visto que no tiene compatibilidad con arquitectura ARM, en el momento de escribir este artículo. Si vas a instalarlo en un Ubuntu, Debian,... con arquitectura amd64, puedes utilizar la imagen oficial matrixdotorg/synapse. Sustituye en cada comando black0/synapse:v1.20.1 por matrixdotorg/synapse. Creando archivos de configuración Vamos a utilizar la imagen con el comando generate, para generar el archivo de configuración de nuestro servidor matrix-synapse. Crearemos un volumen en la ruta $HOME/docker/synapse-data, dónde están los archivos de configuración. Recuerda añadir en la variable SYNAPSE_SERVER_NAME, la dirección de tu servidor. Voy a utilizar matrix.ugeek.duckdns.org, como dirección de ejemplo de mi servidor. #+BEGIN_EXAMPLE docker run...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/matrix.png">
+    <meta property="og:url" content="servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian-con-docker">
+    <meta name="twitter:title" content="Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker">
+    <meta name="twitter:description" content="Cómo expliqué en el Podcast, no existe una imagen oficial del contenedor Synapse, pero black0 ha creado una para todo tipo de arquitecturas, entre ellas ARM. El contenedor de black0/synapse se crea exactamente igual que con la imagen oficial, matrixdotorg/synapse. He utilizado la versión black0/synapse:v1.20.1, porque la versión latest, he visto que no tiene compatibilidad con arquitectura ARM, en el momento de escribir este artículo. Si vas a instalarlo en un Ubuntu, Debian,... con arquitectura amd64, puedes utilizar la imagen oficial matrixdotorg/synapse. Sustituye en cada comando black0/synapse:v1.20.1 por matrixdotorg/synapse. Creando archivos de configuración Vamos a utilizar la imagen con el comando generate, para generar el archivo de configuración de nuestro servidor matrix-synapse. Crearemos un volumen en la ruta $HOME/docker/synapse-data, dónde están los archivos de configuración. Recuerda añadir en la variable SYNAPSE_SERVER_NAME, la dirección de tu servidor. Voy a utilizar matrix.ugeek.duckdns.org, como dirección de ejemplo de mi servidor. #+BEGIN_EXAMPLE docker run...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/matrix.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Servidor de mensajería Matrix Synapse, en Raspberry, Ubuntu, Debian... con Docker</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 485 palabras. <a href="../categories/matrix.html">matrix</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Cómo expliqué en el Podcast, no existe una &nbsp;imagen oficial del contenedor Synapse, &nbsp;pero <strong>black0</strong> ha creado una para todo tipo de arquitecturas, entre ellas ARM.&nbsp;</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/matrix.png" alt=""></p>
+<p>El contenedor de <code>black0/synapse</code> se crea exactamente igual que con la &nbsp;imagen oficial, <code>matrixdotorg/synapse</code>.</p>
+<p>He utilizado la versión <code>black0/synapse:v1.20.1</code>, &nbsp;porque la versión <strong>latest</strong>, he visto que no tiene compatibilidad con arquitectura ARM, &nbsp;en el momento de escribir este artículo.</p>
+<p>Si vas a instalarlo en un Ubuntu, Debian,... con arquitectura amd64, puedes utilizar la imagen oficial <code>matrixdotorg/synapse</code>. Sustituye en cada comando <code>black0/synapse:v1.20.1</code> por <code>matrixdotorg/synapse</code>.</p>
+<h2>Creando archivos de configuración</h2>
+<p>Vamos a utilizar la imagen con el comando <strong>generate</strong>, para generar el archivo de configuración de nuestro servidor matrix-synapse.</p>
+<p>Crearemos un volumen en la ruta <code>$HOME/docker/synapse-data</code>, dónde están los archivos de configuración.</p>
+<p>Recuerda añadir en la variable <strong>SYNAPSE_SERVER_NAME</strong>, &nbsp;la dirección de tu servidor.</p>
+<p>Voy a utilizar <code>matrix.ugeek.duckdns.org</code>, como dirección de ejemplo de mi servidor.</p>
+<p>#+BEGIN_EXAMPLE</p>
+<p>docker run -it --rm -v $HOME/docker/synapse-data:/data -e SYNAPSESERVERNAME<code>matrix.ugeek.duckdns.org -e SYNAPSE_REPORT_STATS</code>yes black0/synapse:v1.20.1 generate</p>
+<p>#+END_EXAMPLE</p>
+<h2>Crear el Contenedor</h2>
+<p>&nbsp;Ahora que tenemos los archivos de configuración, vamos a crear el contenedor con el servidor.</p>
+<p>#+BEGIN_EXAMPLE</p>
+<p>docker run -d --name matrix -v $HOME/docker/synapse-data:/data -p 8008:8008 black0/synapse:v1.20.1</p>
+<p>#+END_EXAMPLE</p>
+<p>Si todo ha salido correctamente, conectándonos a la dirección de nuestro servidor por el puerto 8008, &nbsp;veremos una página de Matrix, conforme el servidor está disponible.</p>
+<h2>Crear contenedor con traefik</h2>
+<p>Yo utilizo traefik a modo de proxy inverso y así también consigo mi certificado Let's Encrypt de un modo sencillo con este docker-compose.</p>
+<p>Recuerda sustituir la dirección del servidor en los dos lugares que aparece en este docker-compose (matrix.ugeek.duckdns.org).</p>
+<p>#+BEGIN_EXAMPLE</p>
+<p>version: "3"</p>
+<p>services:</p>
+<p>matrix:</p>
+<p>image: "black0/synapse:v1.20.1"</p>
+<p>container_name: matrix</p>
+<p># ports:</p>
+<p># - "8008:8008"</p>
+<p>networks:</p>
+<ul>
+<li>web</li>
+</ul>
+<p>volumes:</p>
+<ul>
+<li>$HOME/docker/synapse-data:/data</li>
+</ul>
+<p>environment:</p>
+<ul>
+<li>SYNAPSENOTLS=1 # La documentación dice si este valor es igual a 0, permite la federación</li>
+<li>SYNAPSESERVERNAME=matrix.ugeek.duckdns.org</li>
+<li>SYNAPSEENABLEREGISTRATION=1</li>
+<li>SYNAPSEALLOWGUEST=1</li>
+<li>SYNAPSEREPORTSTATS=1</li>
+</ul>
+<p>labels:</p>
+<ul>
+<li>traefik.frontend.rule=Host:matrix.ugeek.duckdns.org</li>
+<li>traefik.frontend.entryPoints=https</li>
+<li>traefik.port=8008</li>
+<li>traefik.backend=synapse</li>
+</ul>
+<p>networks:</p>
+<p>web:</p>
+<p>external: true</p>
+<p>#+END_EXAMPLE</p>
+<p>Permitir la federación, significa poder comunicarte con otros servidores de Matrix-Synapse</p>
+<p>Ahora para levantar el docker:</p>
+<p>#+BEGIN_EXAMPLE</p>
+<p>docker-compose up -d</p>
+<p>#+END_EXAMPLE</p>
+<h2>Creando usuarios</h2>
+<p>Para c</p>
+<pre><code>
+docker exec -it matrix register_new_matrix_user -u USUARIO" -p "CONTRASEÑA" -a -c /data/homeserver.yaml https://midominio.duckdns.org 
+</code></pre>
+<p>Los usuarios hay que crearlos desde un cliente de Matrix (fluffy Chat, Element,...), en esta web hay un amplio listado para todos los sistemas operativos <a href="https://matrix.org/clients/">https://matrix.org/clients/</a>. Pero antes tenemos que habilitar la opción en el servidor.</p>
+<p>Para permitir el registro de usuarios, hay que editar el archivo <strong>homeserver.yaml</strong> y desmarcar la "<strong>#</strong>" habilitando <code>enable_registration: true</code>.&nbsp;</p>
+<p>#+BEGIN_EXAMPLE</p>
+<p>nano ~/docker/synapse-data/homeserver.yaml</p>
+<p>#+END_EXAMPLE</p>
+<p>Desmarcamos la opción <strong>enable_registration</strong> y ponemos <strong>true</strong>.</p>
+<p>#+BEGIN_EXAMPLE</p>
+<p># Enable registration for new users.</p>
+<p>enable_registration: true</p>
+<p>#+END_EXAMPLE</p>
+<p>Reinicia el contenedor.</p>
+<p>Ahora con nuestro cliente favorito, podemos crear nuestra cuenta en el servidor.</p>
+<h2>Cerrar registro de usuarios</h2>
+<p>Si no quieres que se creen más usuarios, siempre puedes volver a marcar con "<strong>#</strong>" y poner <strong>false</strong> en enable_registration.</p>
+<p>#+BEGIN_EXAMPLE</p>
+<p># Enable registration for new users.</p>
+<p>enable_registration: false</p>
+<p>#+END_EXAMPLE</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/matrix-org/synapse">https://github.com/matrix-org/synapse</a></li>
+<li><a href="https://www.fusehunt.co.uk/post/matrix-server-raspberry-pi-docker/">https://www.fusehunt.co.uk/post/matrix-server-raspberry-pi-docker/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el jueves, 28 de enero de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-07-11</em> - <a href="../posts/2022-07-11-conduit-el-matrix-escrito-en-rust.html">Conduit. El matrix escrito en rust</a></li><li><em>2022-01-26</em> - <a href="../posts/2022-01-26-bot-matrix-en-bash.html">Bot Matrix en Bash</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

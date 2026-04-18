@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker: KodExplorer</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 2 minutos. 325 palabras. docker Ya os he hablado en más de una ocasión sobre KodExplorer. KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming,… a través del navegador web. En esta versión del docker, podemos enlazar en la sesión de administrador, con una de las carpetas de nuestro servidor, Raspberry,… La ruta de esta carpeta la tienes que introducir donde aparece . Yo he montado una nube cifrada que tengo mediante rclone, de esta manera me permite subir y bajar archivos a la nube remotamente, desde el navegador web. Puedes ver una demo aquí. Montar Docker Montar Docker para Raspberry Pi o ARM 32bits docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v <RUTA>:/var/www/html/data/User/admin/home ugeek/kodexplorer:arm Montar Docker para amd64 docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Docker: KodExplorer">
+    <meta property="og:description" content="Tiempo estimado de lectura: 2 minutos. 325 palabras. docker Ya os he hablado en más de una ocasión sobre KodExplorer. KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming,… a través del navegador web. En esta versión del docker, podemos enlazar en la sesión de administrador, con una de las carpetas de nuestro servidor, Raspberry,… La ruta de esta carpeta la tienes que introducir donde aparece . Yo he montado una nube cifrada que tengo mediante rclone, de esta manera me permite subir y bajar archivos a la nube remotamente, desde el navegador web. Puedes ver una demo aquí. Montar Docker Montar Docker para Raspberry Pi o ARM 32bits docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v <RUTA>:/var/www/html/data/User/admin/home ugeek/kodexplorer:arm Montar Docker para amd64 docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png">
+    <meta property="og:url" content="docker-kodexplorer">
+    <meta name="twitter:title" content="Docker: KodExplorer">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 2 minutos. 325 palabras. docker Ya os he hablado en más de una ocasión sobre KodExplorer. KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming,… a través del navegador web. En esta versión del docker, podemos enlazar en la sesión de administrador, con una de las carpetas de nuestro servidor, Raspberry,… La ruta de esta carpeta la tienes que introducir donde aparece . Yo he montado una nube cifrada que tengo mediante rclone, de esta manera me permite subir y bajar archivos a la nube remotamente, desde el navegador web. Puedes ver una demo aquí. Montar Docker Montar Docker para Raspberry Pi o ARM 32bits docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v <RUTA>:/var/www/html/data/User/admin/home ugeek/kodexplorer:arm Montar Docker para amd64 docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/kodexplorer.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Docker: KodExplorer</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 236 palabras. <a href="../categories/docker.html">docker</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 2 minutos. 325 palabras. <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Ya os he hablado en más de una ocasión sobre KodExplorer. KodExplorer es un servicio web, que nos permite navegar por carpetas, descargar o subir archivos, editar archivos de texto, visualizar videos o audios en streaming,… a través del navegador web.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/kodexplorer.png" alt=""></p>
+<p>En esta versión del docker, podemos enlazar en la sesión de administrador, con una de las carpetas de nuestro servidor, Raspberry,… La ruta de esta carpeta la tienes que introducir donde aparece <strong><ruta></ruta></strong>. Yo he montado una nube cifrada que tengo mediante rclone, de esta manera me permite subir y bajar archivos a la nube remotamente, desde el navegador web.</p>
+<p>Puedes <a href="http://demo.kodcloud.com/index.php?user/login">ver una demo aquí</a>.</p>
+<h2>Montar Docker</h2>
+<h3>Montar Docker para Raspberry Pi o ARM 32bits</h3>
+<pre><code>docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v &lt;RUTA&gt;:/var/www/html/data/User/admin/home ugeek/kodexplorer:arm
+</code></pre>
+<h3>Montar Docker para amd64</h3>
+<pre><code>docker run -d -p 80:80 --name kodexplorer -v $HOME/docker/kodexplorer:/var/www/html -v &lt;RUTA&gt;:/var/www/html/data/User/admin/home ugeek/kodexplorer:amd64
+</code></pre>
+<h2>Funcionamiento</h2>
+<p>La primera vez que iniciamos KodExplorer, nos pedirá que introduzcamos dos veces la contraseña de la cuenta <strong>admin</strong>, que va a ser la que vamos a utilizar para enlazar con nuestra carpeta local en la <strong><ruta></ruta></strong>.</p>
+<p>Tras iniciar el servicio, KodExplorer nos pedirá que actualicemos, ya que hay una versión más actualizada no disponible actualmente en GitHub. Le daremos a actualizar.</p>
+<p>Listo!!!! Ya tenemos nuestro KodExplorer totalmente funcional y actualizado a la última</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/kalcaddle/KodExplorer">Repositorio en GitHub</a></li>
+<li><a href="https://cloud.docker.com/u/ugeek/repository/docker/ugeek/kodexplorer">Docker en DockerHub</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 09 de septiembre de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-11-25</em> - <a href="../posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li><li><em>2023-11-19</em> - <a href="../posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li><li><em>2023-03-23</em> - <a href="../posts/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li><li><em>2022-12-22</em> - <a href="../posts/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li><li><em>2022-12-07</em> - <a href="../posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li><li><em>2022-03-29</em> - <a href="../posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li><li><em>2021-07-25</em> - <a href="../posts/2021-07-25-bash-en-docker.html">Bash en Docker</a></li><li><em>2021-07-02</em> - <a href="../posts/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li><li><em>2021-06-25</em> - <a href="../posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li><li><em>2021-06-17</em> - <a href="../posts/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

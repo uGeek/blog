@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry. Esta versión LTS nos da soporte hasta Abril del 2025 y no solo nos proporciona una versión de 32bits, sino que también la versión de 64bits. ¿Porque deberíamos probar Ubuntu?. Aquí te daré muchos de los motivos, como por ejemplo tener una versión de 64bits para Raspberry, paquetes muchos más actualizados que Raspbian Buster, Wireguard de un modo estable,... Pero no te adelanto más. Voy a explicar un poco mi experiencia instalando Ubuntu 20.04 Server en mi Raspberry 3. Ah! La misma SD la he puesto en mi Raspberry 4 y reconoce sin problemas los 4Gb de RAM. Así que todo un Win para Ubuntu!!! Una alternativa muy real a Raspbian. Grabando la SD o USB Podemos descargar la imagen de Ubuntu para Raspberry...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo">
+    <meta property="og:description" content="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry. Esta versión LTS nos da soporte hasta Abril del 2025 y no solo nos proporciona una versión de 32bits, sino que también la versión de 64bits. ¿Porque deberíamos probar Ubuntu?. Aquí te daré muchos de los motivos, como por ejemplo tener una versión de 64bits para Raspberry, paquetes muchos más actualizados que Raspbian Buster, Wireguard de un modo estable,... Pero no te adelanto más. Voy a explicar un poco mi experiencia instalando Ubuntu 20.04 Server en mi Raspberry 3. Ah! La misma SD la he puesto en mi Raspberry 4 y reconoce sin problemas los 4Gb de RAM. Así que todo un Win para Ubuntu!!! Una alternativa muy real a Raspbian. Grabando la SD o USB Podemos descargar la imagen de Ubuntu para Raspberry...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ubuntu.png">
+    <meta property="og:url" content="instalar-ubuntu-2004-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo">
+    <meta name="twitter:title" content="Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo">
+    <meta name="twitter:description" content="Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry. Esta versión LTS nos da soporte hasta Abril del 2025 y no solo nos proporciona una versión de 32bits, sino que también la versión de 64bits. ¿Porque deberíamos probar Ubuntu?. Aquí te daré muchos de los motivos, como por ejemplo tener una versión de 64bits para Raspberry, paquetes muchos más actualizados que Raspbian Buster, Wireguard de un modo estable,... Pero no te adelanto más. Voy a explicar un poco mi experiencia instalando Ubuntu 20.04 Server en mi Raspberry 3. Ah! La misma SD la he puesto en mi Raspberry 4 y reconoce sin problemas los 4Gb de RAM. Así que todo un Win para Ubuntu!!! Una alternativa muy real a Raspbian. Grabando la SD o USB Podemos descargar la imagen de Ubuntu para Raspberry...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ubuntu.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Instalar Ubuntu 20.04 en una Raspberry o Servidor ARM y Que hacer después de instalarlo</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 5 min. 959 palabras. <a href="../categories/ubuntu.html">ubuntu</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Ubuntu da un golpe de efecto y sorprende no solo para escritorio con su versión 20.04, sino que también con la versión ARM y para Raspberry.</p>
+<p>Esta versión LTS nos da soporte hasta Abril del 2025 y no solo nos proporciona una versión de 32bits, sino que también la versión de 64bits.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/ubuntu.png" alt=""></p>
+<p>¿Porque deberíamos probar Ubuntu?. Aquí te daré muchos de los motivos, como por ejemplo tener una versión de 64bits para Raspberry, paquetes muchos más actualizados que Raspbian Buster, Wireguard de un modo estable,...</p>
+<p>Pero no te adelanto más. Voy a explicar un poco mi experiencia instalando Ubuntu 20.04 Server en mi Raspberry 3.</p>
+<p>Ah! La misma SD la he puesto en mi Raspberry 4 y reconoce sin problemas los 4Gb de RAM. Así que todo un Win para Ubuntu!!! Una alternativa muy real a Raspbian.</p>
+<h2>Grabando la SD o USB</h2>
+<p>Podemos descargar la imagen de Ubuntu para Raspberry en <a href="https://ubuntu.com/download/raspberry-pi">https://ubuntu.com/download/raspberry-pi</a>, pero yo la versión que he descargado, <a href="http://cdimage.ubuntu.com/ubuntu-server/daily-preinstalled/current/HEADER.html">es la versión de Ubuntu Server</a>.</p>
+<p>Para grabar la imagen, vamos a utilizar <a href="https://www.balena.io/etcher/">Etcher</a>.</p>
+<p>Podemos instalar el AppImage o el método que desees y grabarlo de un modo súper sencillo, sin tener que pensar mucho.</p>
+<p>En mi caso he utilizado AppImage. Descargo el archivo .zip, lo descomprimo, entro como usuario root y ejecuto:</p>
+<pre><code>
+ ./balenaEtcher-1.5.81-x64.AppImage 
+</code></pre>
+<p>Si lo deseas, también puedes utilizar el comando dd como explicaba en el artículo <a href="https://ugeek.github.io/blog/post/2019-10-29-grabar-raspbian-ubuntu-debian-en-un-pendrive-o-sd.html">Grabar Raspbian, Ubuntu, Debian,… en un Pendrive o SD desde la Terminal</a>.</p>
+<h2>Iniciamos Ubuntu</h2>
+<p>Yo he conectado mi raspberry a un monitor, cable de ethernet y teclado, a ver que sucede...</p>
+<p>Conecto mi transformador USB. El inicio ha tardado un poquito, ya que es el primer arranque.</p>
+<p>Se inicia ubuntu y me pide el usuario y contraseña. El usuario y contraseña por defecto son:</p>
+<ul>
+<li>usuario: <strong>ubuntu</strong></li>
+<li>contraseña: <strong>ubuntu</strong></li>
+</ul>
+<p>Una vez iniciado, <strong>ubuntu</strong> nos pedirá el cambiar la contraseña. Primero pondremos la contraseña antigua, en este caso la que está por defecto <strong>ubuntu</strong> y escribiremos 2 veces nuestra nueva contraseña.</p>
+<p>Ya podemos utilizar <strong>ubuntu</strong>!!!</p>
+<p>Ahora podemos hacer un:</p>
+<pre><code>
+sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt dist-upgrade
+</code></pre>
+<p>Así tendremos nuestro sistema operativo actualizado.</p>
+<h2>Conocer mi ip</h2>
+<p>Voy a ver que ip ha asignado mi router a esta raspberry con ubuntu:</p>
+<pre><code>
+ip a
+</code></pre>
+<h2>Conectarme por SSH</h2>
+<p>Al iniciarse la primera vez, ubuntu ha instalado ssh, de manera que ahora desde un pc remoto puedo conectarme a mi raspberry.</p>
+<p>Conozco la ip gracias al paso anterior. Si mi ip fuera 192.168.1.100, me conectaría de la siguiente manera</p>
+<pre><code>
+ssh ubuntu@192.168.1.100
+</code></pre>
+<p><strong>FUNCIONA!!!</strong></p>
+<p>Cuando te conectas via ssh, te dice la memoria, espacio de tu sd, temperatura, swap,... La verdad es que está muy bien.</p>
+<p>Ahora no sucederá porque acabamos de actualizar, pero más adelante también te informa si hay un paquete pendiente para actualizar.</p>
+<p>Para que nos muestre que paquetes son:</p>
+<pre><code>
+apt list --upgradable
+</code></pre>
+<h2>Crear contraseña al usuario root y cambiamos el nombre de usuario</h2>
+<p>Es probable que también quieras cambiar el nombre de usuario y eliminar el de <strong>ubuntu</strong> por defecto.</p>
+<p>Para hacer esto, vamos tener que entrar como root.</p>
+<pre><code>
+sudo passwd root
+</code></pre>
+<p>Nos pedirá que introduzcamos 2 veces la contraseña.</p>
+<p>Iniciamos como root</p>
+<pre><code>
+su root
+</code></pre>
+<p>Ahora sigue los pasos para cambiar el usuario <strong>ubuntu</strong> por el usuario que tu desees <a href="https://ugeek.github.io/blog/post/2019-02-01-cambiar--mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html">siguiendo el tutorial que os dejé</a>.</p>
+<h2>Snap</h2>
+<p>Se supone que trae snap por defecto instalado, veamos...</p>
+<pre><code>
+sudo snap --version
+</code></pre>
+<p><strong>FUNCIONA!!!</strong></p>
+<p>Esto quiere decir que de un modo rápido y sencillo, podríamos instalar servicios como Nextcloud, RocketChat,...</p>
+<h3>Nextcloud</h3>
+<pre><code>
+sudo snap install nextcloud
+</code></pre>
+<h3>RocketChat</h3>
+<pre><code>
+sudo snap install rocketchat-server
+</code></pre>
+<h3>Plex</h3>
+<pre><code>
+sudo snap install plexmediaserver
+</code></pre>
+<h3>Subsonic</h3>
+<pre><code>
+sudo snap install subsonic-arubislander
+</code></pre>
+<h3>OpenHub</h3>
+<pre><code>
+sudo snap install openhab
+</code></pre>
+<h3>Homebridge</h3>
+<pre><code>
+sudo snap install homebridge
+</code></pre>
+<h3>OpenVPN</h3>
+<pre><code>
+sudo snap install easy-openvpn-server --candidate
+</code></pre>
+<h3>Servidor de Minecraft</h3>
+<pre><code>
+sudo snap install mc-server-installer
+</code></pre>
+<h2>Desisnstalar Snap</h2>
+<p>Snap viene instalado por defecto. Aún así si odias <strong>snap</strong> y no lo quieres, puedes desinstalarlo.</p>
+<pre><code>
+sudo apt purge snapd
+</code></pre>
+<h2>Instalar Docker</h2>
+<p>Vamos a instalar docker</p>
+<h3>Instalación</h3>
+<p>Lo instalaremos desde los repositorios de Ubuntu. Súper fácil.</p>
+<pre><code>
+sudo apt install docker.io
+</code></pre>
+<h3>Iniciar docker al iniciar el sistema</h3>
+<p>Creamos el servicio para que inicie docker al iniciar el sistema</p>
+<pre><code>
+sudo systemctl enable --now docker
+</code></pre>
+<h3>Darle privilegios de administración de docker a un usuario</h3>
+<p>En mi caso, mi usuario es <strong>angel</strong>. Pon tu el tuyo.</p>
+<pre><code>
+sudo usermod -aG docker angel
+</code></pre>
+<h3>Ver si todo esta ok</h3>
+<p>Vamos a ver que versión de docker hay instalada y si se ha instalado</p>
+<pre><code>
+docker --version
+</code></pre>
+<h3>Instalar docker compose</h3>
+<pre><code>
+sudo apt install docker-compose
+</code></pre>
+<h3>Ver versión de docker compose</h3>
+<pre><code>
+docker-compose version
+</code></pre>
+<h2>Instalando Wireguard</h2>
+<p>Se acabó wireguard en testing. Ubuntu 20.04 trae el kernel de Linux 5.4 y aunque no está disponible por defecto en este kernel de Linux, Ubuntu lo ha añadido para esta LTS y está disponible en sus repositorios.</p>
+<pre><code>
+sudo apt install wireguard
+</code></pre>
+<p><strong>FUNCIONA!!!</strong> Ahora si es facil tener Wireguard en una Raspberry.</p>
+<p>Para configurarlo, <a href="https://ugeek.github.io/blog/post/2020-02-11-wireguard-en-2-minutos-con-wgc.html">te recomiendo el script que hice para crear la configuración del servidor y clientes</a>.</p>
+<h2>Instalar escritorio</h2>
+<p>Si lo que deseas es tener un escritorio en tu ubuntu</p>
+<pre><code>
+sudo apt update &amp;&amp; sudo apt install ubuntu-desktop
+</code></pre>
+<p>Ten en cuenta las limitaciones de tu Raspberry, <a href="https://ubuntu.com/download/desktop">consulta la web oficial</a>.</p>
+<h2>Temperatura Raspberry con Ubuntu</h2>
+<p>Ubuntu puede mostrar a que temperatura está nuestra Raspberry, pero es diferente a Raspbian.</p>
+<p>Para conocer la temperatura:</p>
+<pre><code>
+cat /sys/class/thermal/thermal_zone0/temp
+</code></pre>
+<p>Se me ha ocurrido este comando que puedes añadirte a un alias, para que sea más clara la medición</p>
+<pre><code>
+echo "$(cat /sys/class/thermal/thermal_zone0/temp | cut -c 1,2),$(cat /sys/class/thermal/thermal_zone0/temp | cut -c 3,4)º"
+</code></pre>
+<h2>Conclusión</h2>
+<p>Ubuntu por primera vez, nos proporciona un Sistema Operativo 100% usable como alternativa real a Raspbian. Es una versión que por su sencillez y paquetes totalmente a la última, me ha encantado. Voy a testearlo más en profundidad y te recomiendo que tu también lo hagas.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 26 de abril de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-04-13</em> - <a href="../posts/2023-04-13-ubuntu-elimina-get-more-security-updates-through-ubuntu-pro.html">Ubuntu: Elimina Get more security updates through Ubuntu Pro</a></li><li><em>2021-12-30</em> - <a href="../posts/2021-12-30-nautilus-con-tema-oscuro-en-i3wm.html">Nautilus con Tema Oscuro en I3wm</a></li><li><em>2021-12-06</em> - <a href="../posts/2021-12-06-abrir-aplicaciones-de-ubuntu-desde-una-web-html.html">Abrir aplicaciones de Ubuntu desde una web html</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

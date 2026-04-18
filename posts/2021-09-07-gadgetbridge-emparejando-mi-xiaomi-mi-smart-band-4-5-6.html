@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gadgetbridge. Emparejando mi Xiaomi Mi Smart Band 4, 5, 6</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tengo buenos recuerdos de Gadgetbridge, una aplicación que con mi Xiaomi Mi Smart Band 3, me permitió utilizar la pulsera de un modo libre e independiente, sin tener que verme obligado a utilizar los servidores de XIAOMI. Cuando apareció la versión 4, 5 y 6, esto cambió. Ahora ya no es tan sencillo ya que necesitamos el token. Vamos a utilizar un script para obtener el token de acceso Bluetooth de mi Xiaomi Mi Smart Band de los servidores de Huami. Emparejado Xiaomi Mi Smart Band Lo primero que haremos será instalar la aplicación de Mi Fit de XIAOMI. Emparejaremos muestra mi band y la actualizaremos. El segundo paso será instalar la aplicación Zepp, este es un paso importante, para que funcione posteriormente el script. No te preocupes, estas 2 aplicaciones las desinstalaremos al final. Abrimos la aplicación Zepp y nos logeamos con la cuenta ver Xiaomi. Accederemos a perfil-Mis...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Gadgetbridge. Emparejando mi Xiaomi Mi Smart Band 4, 5, 6">
+    <meta property="og:description" content="Tengo buenos recuerdos de Gadgetbridge, una aplicación que con mi Xiaomi Mi Smart Band 3, me permitió utilizar la pulsera de un modo libre e independiente, sin tener que verme obligado a utilizar los servidores de XIAOMI. Cuando apareció la versión 4, 5 y 6, esto cambió. Ahora ya no es tan sencillo ya que necesitamos el token. Vamos a utilizar un script para obtener el token de acceso Bluetooth de mi Xiaomi Mi Smart Band de los servidores de Huami. Emparejado Xiaomi Mi Smart Band Lo primero que haremos será instalar la aplicación de Mi Fit de XIAOMI. Emparejaremos muestra mi band y la actualizaremos. El segundo paso será instalar la aplicación Zepp, este es un paso importante, para que funcione posteriormente el script. No te preocupes, estas 2 aplicaciones las desinstalaremos al final. Abrimos la aplicación Zepp y nos logeamos con la cuenta ver Xiaomi. Accederemos a perfil-Mis...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/Gadgetbridge._Emparejando_mi_Xiaomi_Mi_Smart_Band.png">
+    <meta property="og:url" content="gadgetbridge-emparejando-mi-xiaomi-mi-smart-band-4-5-6">
+    <meta name="twitter:title" content="Gadgetbridge. Emparejando mi Xiaomi Mi Smart Band 4, 5, 6">
+    <meta name="twitter:description" content="Tengo buenos recuerdos de Gadgetbridge, una aplicación que con mi Xiaomi Mi Smart Band 3, me permitió utilizar la pulsera de un modo libre e independiente, sin tener que verme obligado a utilizar los servidores de XIAOMI. Cuando apareció la versión 4, 5 y 6, esto cambió. Ahora ya no es tan sencillo ya que necesitamos el token. Vamos a utilizar un script para obtener el token de acceso Bluetooth de mi Xiaomi Mi Smart Band de los servidores de Huami. Emparejado Xiaomi Mi Smart Band Lo primero que haremos será instalar la aplicación de Mi Fit de XIAOMI. Emparejaremos muestra mi band y la actualizaremos. El segundo paso será instalar la aplicación Zepp, este es un paso importante, para que funcione posteriormente el script. No te preocupes, estas 2 aplicaciones las desinstalaremos al final. Abrimos la aplicación Zepp y nos logeamos con la cuenta ver Xiaomi. Accederemos a perfil-Mis...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/Gadgetbridge._Emparejando_mi_Xiaomi_Mi_Smart_Band.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Gadgetbridge. Emparejando mi Xiaomi Mi Smart Band 4, 5, 6</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 295 palabras. <a href="../categories/miband.html">miband</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Tengo buenos recuerdos de <a href="https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge">Gadgetbridge</a>, una aplicación que con mi Xiaomi Mi Smart Band 3, me permitió utilizar la pulsera de un modo libre e independiente, sin tener que verme obligado a utilizar los servidores de XIAOMI.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/Gadgetbridge._Emparejando_mi_Xiaomi_Mi_Smart_Band.png" alt=""></p>
+<p>Cuando apareció la versión 4, 5 y 6, esto cambió. Ahora ya no es tan sencillo ya que necesitamos el token.</p>
+<p>Vamos a utilizar un script para obtener el token de acceso Bluetooth de mi Xiaomi Mi Smart Band de los servidores de Huami.</p>
+<h2>Emparejado Xiaomi Mi Smart Band</h2>
+<p>Lo primero que haremos será instalar la aplicación de <a href="https://play.google.com/store/apps/details?id=com.xiaomi.hm.health">Mi Fit</a> de XIAOMI. Emparejaremos muestra mi band y la actualizaremos.</p>
+<p>El segundo paso será instalar la aplicación <a href="https://play.google.com/store/apps/details?id=com.huami.watch.hmwatchmanager">Zepp</a>, este es un paso importante, para que funcione posteriormente el script.</p>
+<p><strong>No te preocupes, estas 2 aplicaciones las desinstalaremos al final.</strong></p>
+<p>Abrimos la aplicación <strong>Zepp</strong> y nos <strong>logeamos con la cuenta ver Xiaomi</strong>.</p>
+<p>Accederemos a perfil-Mis Dispositivos.</p>
+<p>Ahora en el apartado <strong>Pulsera</strong>, si entramos saldrá nuestra pulsera. <strong>Nos conectamos con la aplicación Zeep</strong>.</p>
+<p>Una vez hechos estos pasos, ya estamos listos para utilizar el script.</p>
+<h2>Instalación Script</h2>
+<p>Primero clonamos el repositorio</p>
+<pre><code>
+git clone https://github.com/argrento/huami-token.git
+</code></pre>
+<p>accedemos al directorio</p>
+<pre><code>
+cd huami-token
+</code></pre>
+<p>Instalamos todos los paquetes necesarios</p>
+<pre><code>
+sudo pip3 install -r requirements.txt
+</code></pre>
+<p>Para extraer el token, ejecutaremos desde dentro del directorio la siguiente línea:</p>
+<pre><code>
+python3 huami_token.py  --method xiaomi  --email "introduce aqui tu email"  --password "introduce aqui tu contraseña" --bt_keys
+</code></pre>
+<h2>Importante</h2>
+<p>Cada vez que reiniciamos de fabrica la Xiaomi Mi Smart Band, cambia la MAC y Token, al menos en la Xiaomi Mi Smart Band 5. Evita el reiniciarla, sino tendrás que volver instalar las aplicables y ejecutar el script para conseguir el nuevo token.</p>
+<p>Emparejando <a href="https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge">Gadgetbridge</a> con Xiaomi Mi Smart Band</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://codeberg.org/Freeyourgadget/Gadgetbridge">Gadgetbridge</a></li>
+<li><a href="https://github.com/argrento/huami-token">https://github.com/argrento/huami-token</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 07 de septiembre de 2021</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

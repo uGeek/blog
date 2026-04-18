@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear servicio con Systemd</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="El script que va a estar corriendo en segundo plano para controlar el consumo de RAM de mi PC, necesito iniciarlo y detenerlo a determinadas horas. Iniciar el script no es problema con cron, el problema es cuando hay que detenerlo. Una buena solución para gestionar tus scripts es crear un servicio con systemd. Voy a explicar paso a paso cómo crear un servicio. Creando servicio Nos situaremos en este directorio donde están todos los servicios y crearemos la plantilla del nuevo servicio. cd /etc/systemd/system/ Al servicio lo llamaré uso-memoria. Es conveniente que la extensión del archivo sea .service sudo nano /etc/systemd/system/uso-memoria.service Este es el ejemplo plantilla que utilizaremos para crear el servicio. En este caso, el usuario que ejecutará el servicio es el usuario angel. Si el usuario fuera el root, aquí tendría que haber puesto root. [Unit] Description=Control del uso de la memoria After=network.target [Service] User=angel ExecStart=/scripts/uso-memoria/uso-memoria [Install]...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Crear servicio con Systemd">
+    <meta property="og:description" content="El script que va a estar corriendo en segundo plano para controlar el consumo de RAM de mi PC, necesito iniciarlo y detenerlo a determinadas horas. Iniciar el script no es problema con cron, el problema es cuando hay que detenerlo. Una buena solución para gestionar tus scripts es crear un servicio con systemd. Voy a explicar paso a paso cómo crear un servicio. Creando servicio Nos situaremos en este directorio donde están todos los servicios y crearemos la plantilla del nuevo servicio. cd /etc/systemd/system/ Al servicio lo llamaré uso-memoria. Es conveniente que la extensión del archivo sea .service sudo nano /etc/systemd/system/uso-memoria.service Este es el ejemplo plantilla que utilizaremos para crear el servicio. En este caso, el usuario que ejecutará el servicio es el usuario angel. Si el usuario fuera el root, aquí tendría que haber puesto root. [Unit] Description=Control del uso de la memoria After=network.target [Service] User=angel ExecStart=/scripts/uso-memoria/uso-memoria [Install]...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="crear-servicio-con-systemd">
+    <meta name="twitter:title" content="Crear servicio con Systemd">
+    <meta name="twitter:description" content="El script que va a estar corriendo en segundo plano para controlar el consumo de RAM de mi PC, necesito iniciarlo y detenerlo a determinadas horas. Iniciar el script no es problema con cron, el problema es cuando hay que detenerlo. Una buena solución para gestionar tus scripts es crear un servicio con systemd. Voy a explicar paso a paso cómo crear un servicio. Creando servicio Nos situaremos en este directorio donde están todos los servicios y crearemos la plantilla del nuevo servicio. cd /etc/systemd/system/ Al servicio lo llamaré uso-memoria. Es conveniente que la extensión del archivo sea .service sudo nano /etc/systemd/system/uso-memoria.service Este es el ejemplo plantilla que utilizaremos para crear el servicio. En este caso, el usuario que ejecutará el servicio es el usuario angel. Si el usuario fuera el root, aquí tendría que haber puesto root. [Unit] Description=Control del uso de la memoria After=network.target [Service] User=angel ExecStart=/scripts/uso-memoria/uso-memoria [Install]...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Crear servicio con Systemd</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 421 palabras. <a href="../categories/systemd.html">systemd</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>El script que va a estar corriendo en segundo plano para controlar el consumo de RAM de mi PC, necesito iniciarlo y detenerlo a determinadas horas.</p>
+<p>Iniciar el script no es problema con cron, el problema es cuando hay que detenerlo.</p>
+<p>Una buena solución para gestionar tus scripts es crear un servicio con systemd.</p>
+<p>Voy a explicar paso a paso cómo crear un servicio.</p>
+<h2>Creando servicio</h2>
+<p>Nos situaremos en este directorio donde están todos los servicios y crearemos la plantilla del nuevo servicio.</p>
+<pre><code>
+cd /etc/systemd/system/
+</code></pre>
+<p>Al servicio lo llamaré uso-memoria. Es conveniente que la extensión del archivo sea .service</p>
+<pre><code>
+sudo nano /etc/systemd/system/uso-memoria.service
+</code></pre>
+<p>Este es el ejemplo plantilla que utilizaremos para crear el servicio.</p>
+<p>En este caso, el usuario que ejecutará el servicio es el usuario <strong>angel</strong>.</p>
+<p>Si el usuario fuera el <strong>root, aquí tendría que haber puesto root.</strong></p>
+<pre><code>
+[Unit]
+Description=Control del uso de la memoria
+After=network.target
+
+[Service]
+User=angel
+ExecStart=/scripts/uso-memoria/uso-memoria
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<ul>
+<li>ExecStart: comando a ejecutar</li>
+</ul>
+<p>Le daremos todos los privilegios.</p>
+<pre><code>
+sudo chmod 777 /etc/systemd/system/uso-memoria.service
+</code></pre>
+<p>Habilitamos el servicio. Después de ejecutar este comando, cada vez que iniciemos nuestro PC el servicio se iniciará automáticamente.</p>
+<pre><code>
+sudo systemctl enable uso-memoria.service
+</code></pre>
+<p>Iniciar el servicio</p>
+<pre><code>
+sudo systemctl start uso-memoria.service
+</code></pre>
+<p>Ver el estado del servicio, si está corriendo o no.</p>
+<pre><code>
+sudo systemctl status uso-memoria.service
+</code></pre>
+<p>Detener el servicio</p>
+<pre><code>
+sudo systemctl stop uso-memoria.service
+</code></pre>
+<p>Comprobar si el servicio estará habilitado para el próximo arranque</p>
+<pre><code>
+sudo systemctl is-enabled uso-memoria.service
+</code></pre>
+<p>Deshabilitar el servicio</p>
+<pre><code>
+sudo systemctl disable uso-memoria.service
+</code></pre>
+<p>Borrar el servicio</p>
+<pre><code>
+sudo rm /etc/systemd/system/uso-memoria.service
+</code></pre>
+<h2>Resumen de opciones</h2>
+<p>Init</p>
+<p>Systemd</p>
+<p>Description</p>
+<p>service name start</p>
+<p>systemctl start name.service</p>
+<p>Inicia un servicio</p>
+<p>service name stop</p>
+<p>systemctl stop name.service</p>
+<p>Detiene un servicio</p>
+<p>service name restart</p>
+<p>systemctl restart name.service</p>
+<p>Reinicia un servicio</p>
+<p>service name condrestart</p>
+<p>systemctl try-restart name.service</p>
+<p>Reinicia un servicio solo si está en funcionamiento</p>
+<p>service name reload</p>
+<p>systemctl reload name.service</p>
+<p>Recarga la configuración de un servcio</p>
+<p>service name status</p>
+<p>systemctl status name.service systemctl is-active name.service</p>
+<p>Comprueba si un servicio está funcionando.</p>
+<p>service --status-all</p>
+<p>systemctl list-units type service all</p>
+<p>Muestra el estado de todos los servicios.</p>
+<p>chkconfig name on</p>
+<p>systemctl enable name.service</p>
+<p>Habilita un servicio</p>
+<p>chkconfig name off</p>
+<p>systemctl disable name.service</p>
+<p>Deshabilita un servicio</p>
+<p>chkconfig --list name</p>
+<p>systemctl status name.service systemctl is-enabled name.service</p>
+<p>Comprueba si un servición está habilitado</p>
+<p>chkconfig --list</p>
+<p>systemctl list-unit-files --type service</p>
+<p>Lista todos los servicios y comprueba si están habilitados</p>
+<p>chkconfig --list</p>
+<p>systemctl list-dependencies --after</p>
+<p>Lista los servicios que tienen que iniciarse antes de una unidad</p>
+<p>chkconfig --list</p>
+<p>systemctl list-dependencies --before</p>
+<p>Lista los servicios que tienen que iniciarse después de una unidad</p>
+<p>Fuente: <a href="https://atareao.es/tutorial/trabajando-con-systemd/gestionar-servicios-en-systemd/">Gestionar servicios en Systemd - Atareao</a></p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 15 de enero de 2023</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

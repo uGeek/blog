@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi nueva nube es ownCloud</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Después de probar Nextcloud, FileRun,... y otras tantas nubes, me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10, ha decidido reescribir el código a Go, aumentando muchisímo su velocidad, reduciendo consumo, temperatura de nuestro servidor, pudiendo ejecutarlo en máquinas con menos hardware... Os dejo esta traducción casi literal del blog de ownCloud donde explica los motivos. También existe la posibilidad de crear una base de datos con mariadb. Yo en este caso lo he dejado sin base de datos para que sea más sencillo y sin tantas variables, pero en la documentación de ownCloud encontrarás como hacerlo. El porque del cambio PHP ha sido durante mucho tiempo la herramienta elegida por ownCloud. Pero el lenguaje de secuencias de comandos ya no cumple con los requisitos de ownCloud para desarrollar una aplicación de colaboración de contenido moderno. Es hora de un cambio y...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mi nueva nube es ownCloud">
+    <meta property="og:description" content="Después de probar Nextcloud, FileRun,... y otras tantas nubes, me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10, ha decidido reescribir el código a Go, aumentando muchisímo su velocidad, reduciendo consumo, temperatura de nuestro servidor, pudiendo ejecutarlo en máquinas con menos hardware... Os dejo esta traducción casi literal del blog de ownCloud donde explica los motivos. También existe la posibilidad de crear una base de datos con mariadb. Yo en este caso lo he dejado sin base de datos para que sea más sencillo y sin tantas variables, pero en la documentación de ownCloud encontrarás como hacerlo. El porque del cambio PHP ha sido durante mucho tiempo la herramienta elegida por ownCloud. Pero el lenguaje de secuencias de comandos ya no cumple con los requisitos de ownCloud para desarrollar una aplicación de colaboración de contenido moderno. Es hora de un cambio y...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/owncloud.png">
+    <meta property="og:url" content="mi-nueva-nube-es-owncloud">
+    <meta name="twitter:title" content="Mi nueva nube es ownCloud">
+    <meta name="twitter:description" content="Después de probar Nextcloud, FileRun,... y otras tantas nubes, me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10, ha decidido reescribir el código a Go, aumentando muchisímo su velocidad, reduciendo consumo, temperatura de nuestro servidor, pudiendo ejecutarlo en máquinas con menos hardware... Os dejo esta traducción casi literal del blog de ownCloud donde explica los motivos. También existe la posibilidad de crear una base de datos con mariadb. Yo en este caso lo he dejado sin base de datos para que sea más sencillo y sin tantas variables, pero en la documentación de ownCloud encontrarás como hacerlo. El porque del cambio PHP ha sido durante mucho tiempo la herramienta elegida por ownCloud. Pero el lenguaje de secuencias de comandos ya no cumple con los requisitos de ownCloud para desarrollar una aplicación de colaboración de contenido moderno. Es hora de un cambio y...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/owncloud.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Mi nueva nube es ownCloud</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 5 min. 998 palabras. <a href="../categories/owncloud.html">owncloud</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Después de probar Nextcloud, FileRun,... y otras tantas nubes, me quedo con versión reescrita en Go de ownCloud. OwnCloud al pasar a su nueva Versión 10, ha decidido reescribir el código a Go, aumentando muchisímo su velocidad, reduciendo consumo, temperatura de nuestro servidor, pudiendo ejecutarlo en máquinas con menos hardware...</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/owncloud.png" alt=""></p>
+<p>Os dejo esta <a href="https://owncloud.com/es/news/ready-steady-go/">traducción casi literal del blog de ownCloud donde explica los motivos</a>.</p>
+<p>También existe la posibilidad de crear una base de datos con <strong>mariadb</strong>. Yo en este caso lo he dejado sin base de datos para que sea más sencillo y sin tantas variables, pero en la documentación de ownCloud encontrarás como hacerlo.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/owncloud1.png" alt=""></p>
+<h2>El porque del cambio</h2>
+<p>PHP ha sido durante mucho tiempo la herramienta elegida por ownCloud. Pero el lenguaje de secuencias de comandos ya no cumple con los requisitos de ownCloud para desarrollar una aplicación de colaboración de contenido moderno.</p>
+<p>Es hora de un cambio y un cambio al lenguaje de programación Go.</p>
+<p>PHP se ha vuelto cada vez más poderoso con el tiempo gracias a numerosas adaptaciones, como la orientación a objetos, el acceso estandarizado a las bases de datos, un servidor web integrado y una mejor gestión de la memoria. Los intérpretes y compiladores de PHP han aumentado aún más la velocidad de ejecución de scripts.</p>
+<p>Pero todas estas mejoras no pueden ocultar el hecho de que en los años transcurridos desde que se desarrolló ownCloud por primera vez, los requisitos relacionados con el rendimiento y la escalabilidad han cambiado. Mientras tanto, Go surgió como un nuevo lenguaje que ofrece ventajas significativas para el desarrollo de aplicaciones modernas en general y para adaptarse a la nueva visión de ownCloud en particular.</p>
+<h2>Ventajas más importantes de utilizar Go:</h2>
+<ul>
+<li>Multiplataforma: &nbsp;Go se ejecuta en todos los sistemas operativos de forma nativa. &nbsp;El conjunto de herramientas de Go proporciona excelentes utilidades para la compilación cruzada, lo que permite la implementación rápida e inmediata de la aplicación para muchas plataformas diferentes.</li>
+<li>Velocidad: Go no requiere un intérprete de scripts ni un entorno de ejecución virtual. &nbsp;Esto hace que Go sea tan rápido como el lenguaje de programación C, que normalmente se utiliza para requisitos de alto rendimiento.</li>
+<li>Concurrencia: Go ofrece la posibilidad de realizar varios cálculos en paralelo. &nbsp;"Esto hace que sea más fácil para los desarrolladores paralelizar operaciones intensivas en recursos y así desarrollar una aplicación de alto rendimiento", agrega Felix Böhm, CTO de ownCloud.</li>
+<li>Sintaxis: &nbsp;Go es muy fácil de aprender y tiene muchos paralelismos con el lenguaje de programación C. Los desarrolladores pueden ponerse al día fácilmente con Go o cambiar de su pila de herramientas anterior. &nbsp;"Es muy divertido programar en Go", enfatiza Alex Unger, desarrollador de software senior en ownCloud.</li>
+<li>Ecosistema: &nbsp;El lenguaje fue desarrollado por equipos de Google y presentado por primera vez en 2009. Es un proyecto de código abierto y se beneficia de la participación de la comunidad. &nbsp;Muchas herramientas para proyectos nativos de la nube están escritas en Go, como las soluciones de contenedor Docker y Kubernetes. &nbsp;"Go hace que ownCloud sea atractivo para una comunidad de desarrolladores mundial", concluye Felix Böhm.</li>
+</ul>
+<p>Go tiene muchos otros beneficios, como la gestión automática de la memoria y una implementación directa y flexible de la orientación a objetos.</p>
+<p>Las aplicaciones Go son más eficaces y utilizan significativamente menos recursos del servidor, lo que reduce tanto los costes de hardware como el consumo de energía.</p>
+<p>La nueva generación de ownCloud, ownCloud Infinite Scale, irá un paso más allá y almacena los metadatos de los archivos directamente con los datos en el almacenamiento y por lo tanto ya no requiere una base de datos.</p>
+<p>Fuente: &nbsp;<a href="https://owncloud.com/es/news/ready-steady-go/">https://owncloud.com/es/news/ready-steady-go/</a></p>
+<h2>Montar docker para amd64</h2>
+<p>Puedes añadir las variables de <code>ADMIN_USERNAME</code> y <code>ADMIN_PASSWORD</code> a la línea de terminal, si quieres cambiar el usuario y contraseña por defecto.</p>
+<ul>
+<li>usuario: <strong>admin</strong></li>
+<li>contraseña: <strong>admin</strong></li>
+</ul>
+<pre><code>
+docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/owncloud:/mnt/data owncloud/server
+</code></pre>
+<h3>Docker-compose amd64</h3>
+<p>Las siguientes instrucciones asumen que lo instala localmente. Para el acceso remoto, el valor de OWNCLOUD_DOMAIN debe adaptarse.</p>
+<p>Nombre de configuración</p>
+<p>Descripción</p>
+<p>Ejemplo</p>
+<p><code>OWNCLOUD_VERSION</code></p>
+<p>La versión ownCloud</p>
+<p><code>latest</code></p>
+<p><code>OWNCLOUD_DOMAIN</code></p>
+<p>El dominio ownCloud</p>
+<p><code>localhost:8080</code></p>
+<p><code>ADMIN_USERNAME</code></p>
+<p>El nombre de usuario del administrador</p>
+<p><code>admin</code></p>
+<p><code>ADMIN_PASSWORD</code></p>
+<p>La contraseña del usuario administrador</p>
+<p><code>admin</code></p>
+<p><code>HTTP_PORT</code></p>
+<p>El puerto HTTP al que enlazar</p>
+<p><code>8080</code></p>
+<p>#+BEGIN_EXAMPLE sh</p>
+<p>owncloud:</p>
+<p>container_name: owncloud</p>
+<p>image: owncloud/server</p>
+<p>ports:</p>
+<ul>
+<li>8080:8080</li>
+</ul>
+<p>environment:</p>
+<ul>
+<li>OWNCLOUD_DOMAIN=localhost:8080</li>
+<li>OWNCLOUDADMINUSERNAME=admin</li>
+<li>OWNCLOUDADMINPASSWORD=admin</li>
+</ul>
+<p>volumes:</p>
+<ul>
+<li>$HOME/docker/owncloud:/mnt/data</li>
+</ul>
+<p>#+END_EXAMPLE</p>
+<h2>Docker-compose con proxy inverso en traefik</h2>
+<p>#+BEGIN_EXAMPLE sh</p>
+<p>services:</p>
+<p>owncloud:</p>
+<p>container_name: owncloud</p>
+<p>image: owncloud/server</p>
+<p>#ports:</p>
+<p># - 8080:8080</p>
+<p>environment:</p>
+<ul>
+<li>OWNCLOUD_DOMAIN=localhost:8080</li>
+<li>OWNCLOUDADMINUSERNAME=admin</li>
+<li>OWNCLOUDADMINPASSWORD=admin</li>
+</ul>
+<p>volumes:</p>
+<ul>
+<li>$HOME/docker/owncloud:/mnt/data</li>
+</ul>
+<p>networks:</p>
+<ul>
+<li>web</li>
+</ul>
+<p>restart: always</p>
+<p>labels:</p>
+<ul>
+<li>traefik.backend=owncloud</li>
+<li>traefik.frontend.rule=Host:owncloud.midominio.duckdns.org</li>
+<li>traefik.docker.network=web</li>
+<li>traefik.port=8080</li>
+<li>traefik.enable=true</li>
+</ul>
+<p>networks:</p>
+<p>web:</p>
+<p>external: true</p>
+<p>#+END_EXAMPLE</p>
+<h2>Docker cli para Raspberry o ARM</h2>
+<p>#+BEGIN_EXAMPLE sh</p>
+<p>docker run -e OWNCLOUD_DOMAIN=localhost:8080 -p 8080:8080 -v $HOME/docker/owncloud:/mnt/data owncloud/server</p>
+<p>#+END_EXAMPLE</p>
+<h2>Docker Compose</h2>
+<p>#+BEGIN_EXAMPLE sh</p>
+<p>owncloud:</p>
+<p>container_name: owncloud</p>
+<p>image: owncloud/qnap:10.6</p>
+<p>ports:</p>
+<ul>
+<li>8080:8080</li>
+</ul>
+<p>environment:</p>
+<ul>
+<li>OWNCLOUD_DOMAIN=localhost:8080</li>
+<li>OWNCLOUDADMINUSERNAME=admin</li>
+<li>OWNCLOUDADMINPASSWORD=admin</li>
+</ul>
+<p>volumes:</p>
+<ul>
+<li>$HOME/docker/owncloud:/mnt/data</li>
+</ul>
+<p>#+END_EXAMPLE</p>
+<h2>Docker-compose ARM proxy inverso con Traefik</h2>
+<p>#+BEGIN_EXAMPLE sh</p>
+<p>services:</p>
+<p>owncloud:</p>
+<p>container_name: owncloud</p>
+<p>image: owncloud/qnap:10.6</p>
+<p>#ports:</p>
+<p># - 8080:8080</p>
+<p>environment:</p>
+<ul>
+<li>OWNCLOUD_DOMAIN=localhost:8080</li>
+<li>OWNCLOUDADMINUSERNAME=admin</li>
+<li>OWNCLOUDADMINPASSWORD=admin</li>
+</ul>
+<p>volumes:</p>
+<ul>
+<li>$HOME/docker/owncloud:/mnt/data</li>
+</ul>
+<p>networks:</p>
+<ul>
+<li>web</li>
+</ul>
+<p>restart: always</p>
+<p>labels:</p>
+<ul>
+<li>traefik.backend=owncloud</li>
+<li>traefik.frontend.rule=Host:owncloud.midominio.duckdns.org</li>
+<li>traefik.docker.network=web</li>
+<li>traefik.port=8080</li>
+<li>traefik.enable=true</li>
+</ul>
+<p>networks:</p>
+<p>web:</p>
+<p>external: true</p>
+<p>#+END_EXAMPLE</p>
+<h2>OwnCloud vs. Nextcloud</h2>
+<p>#+BEGIN_HTML</p>
+<p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><p>#+END_HTML</p><p>#+BEGIN_HTML</p><table>
+
+
+
+<tbody>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Nube</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>OwnCloud</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Nextcloud</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Página del proyecto</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>owncloud.com</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>nextcloud.com</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Desarrollador</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>ownCloud GmbH</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Nextcloud GmbH</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Año de publicación</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>2010</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>2016</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Licencia</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Open Source / propietario</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Open Source</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Modelos</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Standard, Enterprise</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Basic, Standard, Premium</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Costes</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>A partir de 3.000 euros para 50 usuarios al año</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>A partir de 1.900 euros para 50 usuarios al año</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Clientes para el acceso en la nube</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Windows, macOS, Linux, iOS, Android</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Windows, macOS, Linux, iOS, Android, Windows Phone</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Funciones de pago</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Sí</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>No</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Posibilidad de alojamiento en un servidor propio/vps/Raspberry</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Sí</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Sí</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+<tr>
+
+
+
+<th>
+
+<p>#+END_HTML</p>
+<p>Código</p>
+<p>#+BEGIN_HTML</p>
+</th>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>Go</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+<td>
+
+<p>#+END_HTML</p>
+<p>PHP</p>
+<p>#+BEGIN_HTML</p>
+</td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+<p>#+END_HTML</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://owncloud.com/">https://owncloud.com/</a></li>
+<li><a href="https://doc.owncloud.com/server/admin_manual/installation/docker/">https://doc.owncloud.com/server/admin_manual/installation/docker/</a></li>
+<li><a href="https://www.ionos.es/digitalguide/servidores/herramientas/owncloud-vs-nextcloud-ventajas-e-inconvenientes/">https://www.ionos.es/digitalguide/servidores/herramientas/owncloud-vs-nextcloud-ventajas-e-inconvenientes/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 31 de enero de 2021</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

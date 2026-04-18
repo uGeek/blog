@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instalación de Manjaro en Raspberry</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky, Socks5. Raspberry OS funciona perfectamente, pero como ahora estoy utilizando Manjaro, he pensado que sería una buena decisión probarlo en mi Raspberry. Vamos a ver como hacerlo. Quemar Imagen con Raspberry Pi Imager No lo había utilizado nunca y reconozco que Raspberry Pi Imager es una solución super sencilla y práctica de quemar o grabar imágenes en tu disco SSD, USB o tarjeta SD. Actualmente hay muchisimas versiones disponibles para instalar y correr en tu Raspberry Pi, entre ellas Manjaro. Instalación desde Manjaro o Arch Instalación de Raspberry Pi Imager yay rpi-imager Ejecutar Raspberry Pi Imager Siempre como usuario root para poder quemar el SSD o USB. sudo rpi-imager Otras opciones Hay otras formas de instalar Raspberry Pi...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Instalación de Manjaro en Raspberry">
+    <meta property="og:description" content="He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky, Socks5. Raspberry OS funciona perfectamente, pero como ahora estoy utilizando Manjaro, he pensado que sería una buena decisión probarlo en mi Raspberry. Vamos a ver como hacerlo. Quemar Imagen con Raspberry Pi Imager No lo había utilizado nunca y reconozco que Raspberry Pi Imager es una solución super sencilla y práctica de quemar o grabar imágenes en tu disco SSD, USB o tarjeta SD. Actualmente hay muchisimas versiones disponibles para instalar y correr en tu Raspberry Pi, entre ellas Manjaro. Instalación desde Manjaro o Arch Instalación de Raspberry Pi Imager yay rpi-imager Ejecutar Raspberry Pi Imager Siempre como usuario root para poder quemar el SSD o USB. sudo rpi-imager Otras opciones Hay otras formas de instalar Raspberry Pi...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg">
+    <meta property="og:url" content="instalacion-de-manjaro-en-raspberry">
+    <meta name="twitter:title" content="Instalación de Manjaro en Raspberry">
+    <meta name="twitter:description" content="He sacado después de un largo tiempo mis dos raspberry 3B del cajón. Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con los contenedores de Wireguard, blocky, Socks5. Raspberry OS funciona perfectamente, pero como ahora estoy utilizando Manjaro, he pensado que sería una buena decisión probarlo en mi Raspberry. Vamos a ver como hacerlo. Quemar Imagen con Raspberry Pi Imager No lo había utilizado nunca y reconozco que Raspberry Pi Imager es una solución super sencilla y práctica de quemar o grabar imágenes en tu disco SSD, USB o tarjeta SD. Actualmente hay muchisimas versiones disponibles para instalar y correr en tu Raspberry Pi, entre ellas Manjaro. Instalación desde Manjaro o Arch Instalación de Raspberry Pi Imager yay rpi-imager Ejecutar Raspberry Pi Imager Siempre como usuario root para poder quemar el SSD o USB. sudo rpi-imager Otras opciones Hay otras formas de instalar Raspberry Pi...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Instalación de Manjaro en Raspberry</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 641 palabras. <a href="../categories/raspberry.html">raspberry</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>He sacado después de un largo tiempo mis dos raspberry 3B del cajón.&nbsp;Hace una semana instalé Raspberry OS en su versión 64bits y puse Docker con&nbsp;los contenedores de Wireguard, blocky, Socks5.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/raspberrypi.jpg" alt=""></p>
+<p>Raspberry OS funciona perfectamente, pero como ahora estoy utilizando Manjaro, he pensado que sería una buena decisión probarlo en mi Raspberry.</p>
+<p>Vamos a ver como hacerlo.</p>
+<h2>Quemar Imagen con Raspberry&nbsp;Pi&nbsp;Imager</h2>
+<p>No lo había utilizado nunca y reconozco que <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> es una solución super sencilla y práctica de quemar o grabar imágenes en tu disco SSD, USB o tarjeta SD. Actualmente hay muchisimas versiones disponibles para instalar y correr en tu Raspberry Pi, entre ellas Manjaro.</p>
+<h3>Instalación desde Manjaro &nbsp;o Arch</h3>
+<p>Instalación de Raspberry&nbsp;Pi&nbsp;Imager</p>
+<pre><code>
+yay  rpi-imager
+</code></pre>
+<h3>Ejecutar Raspberry&nbsp;Pi&nbsp;Imager</h3>
+<p>Siempre como usuario root para poder quemar el SSD o USB.</p>
+<pre><code>
+sudo rpi-imager
+</code></pre>
+<h3>Otras opciones</h3>
+<p>Hay otras formas de instalar Raspberry&nbsp;Pi&nbsp;Imager, por snap y flatpak, pero no las he probado.</p>
+<pre><code>
+sudo snap install rpi-imager
+</code></pre>
+<h2>Selecciona Manjaro Minimal</h2>
+<p>He seleccionado la versión &nbsp;<strong>Manjaro ARM Minimal 22.12</strong> que ocupa 0.4Gb. Una versión de Manajaro sin escritorio y con el mínimo de paquetes.</p>
+<p>Una versión ideal para usarla a modo servidor.</p>
+<h2>Inicia Manjaro por primera vez en tu Raspberry Pi</h2>
+<p>En Manjaro, el truco de crear el archivo SSH en la raíz del root para no conectar el monitor, no es necesario, ya que Manjaro Minimal viene con el servidor SSH instalado por defecto. Lo que si es obligatorio por el momento conectarlo a un monitor, ya que tenemos que configurar el usuario, contraseña,... al inicio. Igual que hariamos con una versión de escritorio.</p>
+<p>Cuando arranquemos nos aparecerá el logo de Manjaro y tras unos instantes un menú para comenzar con el registro del usuario, contraseña, grupo y nombre del host. También aparece para que registres tu zona horaria y lenguaje del teclado.</p>
+<p><strong>Las preguntas del menú son</strong>:</p>
+<ul>
+<li>Nombre completo del usuario</li>
+<li>Contraseña de usuario</li>
+<li>Contraseña root (sí, hay un usuario raíz disponible)</li>
+<li>Zona horaria y configuración regional\</li>
+</ul>
+<p>Puede ingresar la primera letra para ir más rápido en estos menús y los siguientes</p>
+<ul>
+<li>Nombre de host del dispositivo</li>
+</ul>
+<p>Al finalizar todo el proceso, nuestra raspberry se reiniciará y estará lista para utilizar.</p>
+<h2>Que IP tiene mi Raspberry</h2>
+<p>Por defecto Manjaro no trae el comando ifconfig, así que utilizaremos:</p>
+<pre><code>
+ip a
+</code></pre>
+<p>De todas maneras, si quieres utilizar ipconfig, lo instalaremos con:</p>
+<pre><code>
+sudo pacman -S net-tools
+</code></pre>
+<p>Ahora ya funciona</p>
+<pre><code>
+ifconfig
+</code></pre>
+<h3>Actualizar repositorios</h3>
+<p>Antes de instalar ningún paquete, vamos a actualizar los repositorios de Manjaro</p>
+<p>Se paciente, este probablemente puede ser un proceso muy largo</p>
+<pre><code>
+sudo pacman -Syu
+</code></pre>
+<h3>Reinicia</h3>
+<p>Tras la actualización, es buen idea reiniciar</p>
+<pre><code>
+sudo reboot now
+</code></pre>
+<h2>Aplicaciones para instalar</h2>
+<p>Instala aquellos paquetes que necesites o desees. Yo principalmente he echado a faltar aplicaciones como <strong>htop</strong>.</p>
+<p>También instalaremos <strong>yay</strong>, para instalar paquetes de los repositorios <strong>AUR</strong>.</p>
+<p>Esta es algunas de mis sugerencias a instalar</p>
+<pre><code>
+sudo pacman -Syu neofetch htop yay emacs micro pcmanfm rclone docker docker-compose python-pip screen
+</code></pre>
+<p>Después de Instalar <strong>htop</strong>, he visto que Manjaro solo me estaba consumiendo 81Mb de RAM.</p>
+<p>Para buscar paquetes:</p>
+<pre><code>
+sudo pacman -Ss paquete
+</code></pre>
+<h2>Instalo mi aplicación dk para gestionar docker</h2>
+<pre><code>
+sudo curl -L https://raw.githubusercontent.com/uGeek/dk/master/dk               -o /usr/bin/dk &amp;&amp; sudo chmod +x /usr/bin/dk
+</code></pre>
+<h2>Problemas para conectarte por SSH</h2>
+<p>Si has reinstalado por algún problema tu Raspberry o previamente has utilizado la misma <strong>IP</strong> con otro servidor, el cliente de SSH te dirá que las keys del server son diferentes. Para poder conectarte:</p>
+<pre><code>
+ssh-keygen -f "/home/angel/.ssh/known_hosts" -R "192.168.1.100"
+</code></pre>
+<p>Cambia el <strong>usuario</strong> e <strong>IP</strong> por el tuyo.</p>
+<h2>Servidor SSH para versiones de Escritorio</h2>
+<p><strong>Manjaro ARM Minimal</strong> viene con un servidor SSH instalado.&nbsp;</p>
+<p>Si instalas una versión de escritorio, tendrías que instalarlo manualmente.&nbsp;</p>
+<h3>Instalación</h3>
+<pre><code>
+sudo pacman -S openssh
+</code></pre>
+<h3>Habilitar para que inicie el servidor SSH al iniciar Manjaro</h3>
+<pre><code>
+sudo systemctl enable sshd
+</code></pre>
+<h3>Inicia SSH</h3>
+<pre><code>
+sudo systemctl start sshd
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 18 de enero de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-06-24</em> - <a href="../posts/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html">Configurar una ip estática en tu Raspberry Pi</a></li><li><em>2021-04-13</em> - <a href="../posts/2021-04-13-ampliar-memoria-swap.html">Ampliar memoria SWAP</a></li><li><em>2020-05-09</em> - <a href="../posts/2020-05-09-zram-doblando-la-ram-y-no-utilizando-quemando-la-sd-de-mi-raspberry.html">ZRAM. Doblando la RAM y no utilizando - quemando la SD de mi Raspberry</a></li><li><em>2020-01-22</em> - <a href="../posts/2020-01-22-nuevo-firmware-de-la-raspberry-4-para-bajar-la-temperatura.html">Nuevo firmware de la Raspberry 4 para bajar la temperatura</a></li><li><em>2019-10-31</em> - <a href="../posts/2019-10-31-habilitar-ssh-en-la-raspberry-sin-conectar-el-monitor.html">Habilitar SSH en la Raspberry sin conectar el Monitor</a></li><li><em>2019-10-21</em> - <a href="../posts/2019-10-21-apagada-automatica-de-tu-raspberry-si-hay-alta-temperatura.html">Apagada automática de tu Raspberry si hay alta temperatura</a></li><li><em>2019-08-17</em> - <a href="../posts/2019-08-17-actualiza-el-firmware-de-tu-raspberry.html">Actualiza el Firmware de tu Raspberry</a></li><li><em>2019-02-01</em> - <a href="../posts/2019-02-01-cambiar-mover-ruta-y-contrasena-de-usuario-en-tu-raspberry-pi.html"> Cambiar, mover ruta y contraseña de usuario en tu Raspberry Pi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>El Adiós a Plex y Emby. Llega Jellyfin</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 6 minutos. 689 palabras. servidor Emby llega a la versión 3.6 y decide cerrar el código, pasando a ser privativo. Un equipo de desarrolladores, decide hacer un Fork de la versión 3.5.2 de Emby para crear una alternativa 100% Software Libre y totalmente gratuita a Plex y Emby. Nace Jellyfin. Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros… Organizados y centralizados en un único lugar. El punto fuerte de Jellyfin, no solo es que sea 100% Software Libre y gratuito, sino que tenemos la total garantía que todo nuestro contenido Multimedia, así como nuestras fotos o vídeos domésticos, mantienen la total privacidad, ya que nuestro servidor de Jellyfin, en ningún caso se conectará a servidores de terceros del mismo modo que lo hace Plex o Emby. El servidor podemos instalarlo en todo tipo de Sistemas Operativos, ya que es totalmente...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="El Adiós a Plex y Emby. Llega Jellyfin">
+    <meta property="og:description" content="Tiempo estimado de lectura: 6 minutos. 689 palabras. servidor Emby llega a la versión 3.6 y decide cerrar el código, pasando a ser privativo. Un equipo de desarrolladores, decide hacer un Fork de la versión 3.5.2 de Emby para crear una alternativa 100% Software Libre y totalmente gratuita a Plex y Emby. Nace Jellyfin. Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros… Organizados y centralizados en un único lugar. El punto fuerte de Jellyfin, no solo es que sea 100% Software Libre y gratuito, sino que tenemos la total garantía que todo nuestro contenido Multimedia, así como nuestras fotos o vídeos domésticos, mantienen la total privacidad, ya que nuestro servidor de Jellyfin, en ningún caso se conectará a servidores de terceros del mismo modo que lo hace Plex o Emby. El servidor podemos instalarlo en todo tipo de Sistemas Operativos, ya que es totalmente...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jellifin.png">
+    <meta property="og:url" content="el-adios-a-plex-y-emby-llega-jellyfin">
+    <meta name="twitter:title" content="El Adiós a Plex y Emby. Llega Jellyfin">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 6 minutos. 689 palabras. servidor Emby llega a la versión 3.6 y decide cerrar el código, pasando a ser privativo. Un equipo de desarrolladores, decide hacer un Fork de la versión 3.5.2 de Emby para crear una alternativa 100% Software Libre y totalmente gratuita a Plex y Emby. Nace Jellyfin. Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros… Organizados y centralizados en un único lugar. El punto fuerte de Jellyfin, no solo es que sea 100% Software Libre y gratuito, sino que tenemos la total garantía que todo nuestro contenido Multimedia, así como nuestras fotos o vídeos domésticos, mantienen la total privacidad, ya que nuestro servidor de Jellyfin, en ningún caso se conectará a servidores de terceros del mismo modo que lo hace Plex o Emby. El servidor podemos instalarlo en todo tipo de Sistemas Operativos, ya que es totalmente...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/jellifin.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>El Adiós a Plex y Emby. Llega Jellyfin</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 642 palabras. <a href="../categories/servidor.html">servidor</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 6 minutos. 689 palabras. <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<p>Emby llega a la versión 3.6 y decide cerrar el código, pasando a ser privativo. Un equipo de desarrolladores, decide hacer un Fork de la versión 3.5.2 de Emby para crear una alternativa 100% Software Libre y totalmente gratuita a Plex y Emby. Nace Jellyfin.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/jellifin.png" alt=""></p>
+<p>Jellyfin es un servidor Multimedia donde podremos tener todas nuestras películas, series, música, Libros… Organizados y centralizados en un único lugar.</p>
+<p>El punto fuerte de Jellyfin, no solo es que sea 100% Software Libre y gratuito, sino que tenemos la total garantía que todo nuestro contenido Multimedia, así como nuestras fotos o vídeos domésticos, mantienen la total privacidad, ya que nuestro servidor de Jellyfin, en ningún caso se conectará a servidores de terceros del mismo modo que lo hace Plex o Emby.</p>
+<p>El servidor podemos instalarlo en todo tipo de Sistemas Operativos, ya que es totalmente multiplataforma. Windows, Linux, Mac. Yo en este Post os explicaré como instalarlo mediante Docker.</p>
+<p><a href="https://repo.jellyfin.org/releases/client/">Actualmente hay clientes disponibles para Jellyfin en Android, Android TV, Amazón Fire TV o Kodi</a>. También podemos utilizar la versión web, mediante un navegador web, DLNA, Chromecast, Roku, … El equipo de Jellyfin, está abierto como todo proyecto de Software Libre, a la colaboración para el resto de dispositivos y Sistemas Operativos, como IOS, etc… Solo tiene 5 meses Jellyfin, así que irán apareciendo en breve.</p>
+<p>Las versiones de Android, siguen estando en Beta y esta previsto que en muy breve espacio de tiempo, ya estén disponibles en Google Play o F-Droid, pero en una versión ya estable.</p>
+<p>El servidor actualmente se mueve muchísimo más rápido y ligero que Emby en su versión 3.5.2. Esto es debido a que están optimizando tanto la interfaz web, mejora en el rendimiento con arquitectura para procesadores ARM de 64 Bits, registro de contraseñas mucho mas seguro, etc…. También está previsto que dividan partes del servidor para que sea el propio usuario, en función del uso que quiera darle al servidor, instale mediante Plugins aquello que desee.</p>
+<p>Esta previsto que se añada compatibilidad con clientes de Subsonic y muchísimas más sugerencias que están apareciendo en el canal en Reddit de Jellyfin.</p>
+<h2>Instalación por Docker</h2>
+<p>Las líneas para la instalación del servicio mediante Dockers, he puesto que cada vez que encendamos el servidor, PC, Raspberry… Inicie Jellyfin. También he puesto que queden expuestos todos los puertos del contenedor, así podremos hacer uso si lo deseamos, de DLNA y futuras implementaciones al servicio por otros puertos.</p>
+<p>Para ser mas correctos, deberíamos especificar el tipo de arquitectura del procesador que vamos a utilizar. Aún así, en la práctica, yo he montado estos Dockers con exactamente estas líneas en mi Raspberry y Ubuntu Server sin ningún tipo de Problema.</p>
+<p>Para tener la última versión del servidor Jellyfin, utilizaremos la siguiente líneas:</p>
+<pre><code>docker run -d \
+ --name jellyfin \
+ --restart=unless-stopped \
+ --network=host \
+ -v $HOME/docker/jellyfin/config:/config \
+ -v /media:/media \
+ -e UID=1000 -e GID=100 \
+ jellyfin/jellyfin:latest
+</code></pre>
+<p>Si queremos exponer el Jellyfin a la red mediante un Proxy Inverso, para acceder sin VPN, sería conveniente abrir solamente el puerto <strong>8096</strong>. Lo haríamos del siguiente modo:</p>
+<pre><code>docker run -d \
+ --name jellyfin \
+ --restart=unless-stopped \
+ -p 8096:8096 \
+ -v $HOME/docker/jellyfin/config:/config \
+ -v /media:/media \
+ -e UID=1000 -e GID=100 \
+ jellyfin/jellyfin:latest
+</code></pre>
+<h2>Accediendo al servicio</h2>
+<p>Para acceder al servicio, escribiremos en nuestro navegador: <a href="http://miservidor:8096/jellyfin/">http://miservidor:8096/jellyfin/</a></p>
+<h2>Enlaces</h2>
+<ul>
+<li><a href="https://jellyfin.github.io/">Web de Jellyfin</a></li>
+<li><a href="https://repo.jellyfin.org/releases/client/">Repositorio de Clientes de Jellyfin</a></li>
+<li><a href="https://github.com/jellyfin/jellyfin">Repositorio en GitHub</a></li>
+<li><a href="https://jellyfin.readthedocs.io/en/latest/">Documentación</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/">Canal en Reddit</a></li>
+</ul>
+<h2>Conclusión</h2>
+<p>Hace dos meses y medio que tengo Jellyfin corriendo en mi Raspberry y dos versiones más de Jellyfin en mi Ubuntu Server. La verdad es que estoy encantado con el servicio y cada dos semanas, aparecen mejoras importantes.</p>
+<p>Jellyfin está destinado a ser uno de los grandes servicios de Software Libre como Nextcloud o Syncthing.</p>
+<p>Os recomiendo darle una probada porque os sorprenderá.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 07 de mayo de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-04-02</em> - <a href="../posts/2021-04-02-servidor-de-samba-facil.html">Servidor de Samba fácil</a></li><li><em>2019-12-28</em> - <a href="../posts/2019-12-28-instalar-un-servidor-con-debian.html">Instalar un Servidor con Debian</a></li><li><em>2019-10-22</em> - <a href="../posts/2019-10-22-docker-servidor-webdav.html">Docker: Servidor Webdav</a></li><li><em>2019-09-16</em> - <a href="../posts/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html">Listado de Servicios con System V y Systemd</a></li><li><em>2019-06-11</em> - <a href="../posts/2019-06-11-montar-un-servidor-webdav-con-dafs2.html"> Montar un servidor webdav con dafs2</a></li><li><em>2019-05-15</em> - <a href="../posts/2019-05-15-docker-letsencript-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html">Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</a></li><li><em>2019-02-16</em> - <a href="../posts/2019-02-16-cliente-dlna-para-tu-escritorio.html"> Cliente dlna para tu escritorio</a></li><li><em>2019-02-06</em> - <a href="../posts/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html"> Instalando una Dokuwiki en 4 pasos</a></li><li><em>2019-01-06</em> - <a href="../posts/2019-01-06-nextcloudpi-nextcloud-en-raspbian-con-docker.html"> NextcloudPi. Nextcloud en Raspbian con Docker</a></li><li><em>2019-01-03</em> - <a href="../posts/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html"> Visualiza tus Notas Markdown Versión Web con MkDocs</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

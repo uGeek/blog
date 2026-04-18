@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Utilizando git en mi servidor WebDAV</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Artículos Podcasts Tags Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de git. He creado dentro de mi nube un directorio llamado git, donde voy a guardar todos mis proyectos y tener un control de versiones allí donde esté. Creando el repositorio Voy a crear el nuevo proyecto llamado repositorio. mkdir repositorio cd repositorio git init --bare git update-server-info cd .. Con git update-server-info actualizamos el archivo de información auxiliar para ayudar al servidor. Subiendo el repositorio al servidor WebDAV Ahora voy a utilizar rclone para subir el repositorio al servidor: rclone copy repositorio webdav:git/repositorio Puedes utilizar el método que más te guste para guardar el repositorio, incluso montar la nube con tu explorador de archivos favorito y hacer un copia y pega. Utilizando tu servidor git con WebDAV Llegados a este punto, ya puedes utilizar tus proyectos con...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Utilizando git en mi servidor WebDAV">
+    <meta property="og:description" content="Artículos Podcasts Tags Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de git. He creado dentro de mi nube un directorio llamado git, donde voy a guardar todos mis proyectos y tener un control de versiones allí donde esté. Creando el repositorio Voy a crear el nuevo proyecto llamado repositorio. mkdir repositorio cd repositorio git init --bare git update-server-info cd .. Con git update-server-info actualizamos el archivo de información auxiliar para ayudar al servidor. Subiendo el repositorio al servidor WebDAV Ahora voy a utilizar rclone para subir el repositorio al servidor: rclone copy repositorio webdav:git/repositorio Puedes utilizar el método que más te guste para guardar el repositorio, incluso montar la nube con tu explorador de archivos favorito y hacer un copia y pega. Utilizando tu servidor git con WebDAV Llegados a este punto, ya puedes utilizar tus proyectos con...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+    <meta property="og:url" content="utilizando-git-en-mi-servidor-webdav">
+    <meta name="twitter:title" content="Utilizando git en mi servidor WebDAV">
+    <meta name="twitter:description" content="Artículos Podcasts Tags Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de git. He creado dentro de mi nube un directorio llamado git, donde voy a guardar todos mis proyectos y tener un control de versiones allí donde esté. Creando el repositorio Voy a crear el nuevo proyecto llamado repositorio. mkdir repositorio cd repositorio git init --bare git update-server-info cd .. Con git update-server-info actualizamos el archivo de información auxiliar para ayudar al servidor. Subiendo el repositorio al servidor WebDAV Ahora voy a utilizar rclone para subir el repositorio al servidor: rclone copy repositorio webdav:git/repositorio Puedes utilizar el método que más te guste para guardar el repositorio, incluso montar la nube con tu explorador de archivos favorito y hacer un copia y pega. Utilizando tu servidor git con WebDAV Llegados a este punto, ya puedes utilizar tus proyectos con...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Utilizando git en mi servidor WebDAV</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 265 palabras. <a href="../categories/git.html">git</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p><a href="https://ugeek.github.io/blog/list.html">Artículos</a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html">Podcasts</a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html">Tags</a></p>
+<p>Pensando nuevamente en unificar todos los servicios en uno vía WebDAV, vamos a utilizar el servidor WebDAV como servidor de <strong>git</strong>. He creado dentro de mi nube un directorio llamado <strong>git</strong>, donde voy a guardar todos mis proyectos y tener un control de versiones allí donde esté.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/git.png" alt=""></p>
+<h2>Creando el repositorio</h2>
+<p>Voy a crear el nuevo proyecto llamado <code>repositorio</code>.</p>
+<pre><code>
+mkdir repositorio
+cd repositorio
+git init --bare
+git update-server-info
+cd ..
+</code></pre>
+<p>Con <code>git update-server-info</code> actualizamos el archivo de información auxiliar para ayudar al servidor.</p>
+<h2>Subiendo el repositorio al servidor WebDAV</h2>
+<p>Ahora voy a utilizar <strong>rclone</strong> para subir el repositorio al servidor:</p>
+<pre><code>
+rclone copy repositorio webdav:git/repositorio
+</code></pre>
+<p>Puedes utilizar el método que más te guste para guardar el repositorio, incluso montar la nube con tu explorador de archivos favorito y hacer un copia y pega.</p>
+<h2>Utilizando tu servidor git con WebDAV</h2>
+<p>Llegados a este punto, ya puedes utilizar tus proyectos con git y mantener tu control de versiones en tu servidor WebDAV.</p>
+<ul>
+<li>Vamos a clonar el repositorio del servidor a local especificando el usuario y URL del directorio donde hemos guardado el proyecto</li>
+<li>Creamos un archivo, por ejemplo <strong>README.md</strong></li>
+<li>Hacemos un git add, commit y push para subirlo al server y... voila!!! Ya tenemos nuestro repositorio git en el servidor funcionando.</li>
+</ul>
+<pre><code>
+git clone https://&lt;usuario&gt;@&lt;dominio_del_servidor&gt;/git/repositorio -v
+cd repositorio
+touch README.md
+git add README.md
+git commit -m "agregando el archivo README.md"
+git push
+git push origin master (solo la primera vez)
+</code></pre>
+<p>Si quieres utilizarlo en tu red local o vía VPN, también puedes utilizar la conexión sin cifrar <strong>http</strong>.</p>
+<pre><code>
+git clone http://angel@192.168.1.100:100/git/repositorio
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el sábado, 30 de octubre de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-04-18</em> - <a href="../posts/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li><li><em>2020-01-14</em> - <a href="../posts/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li><li><em>2020-01-06</em> - <a href="../posts/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html">Descargando un directorio de git con gitdir</a></li><li><em>2019-07-10</em> - <a href="../posts/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li><li><em>2019-04-17</em> - <a href="../posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script </a></li><li><em>2019-01-28</em> - <a href="../posts/2019-01-28-crear-ramas-con-git.html"> Crear ramas con Git</a></li><li><em>2019-01-21</em> - <a href="../posts/2019-01-21-utilizando-git-con-la-terminal-github.html"> Utilizando Git con la Terminal. GitHub</a></li><li><em>2019-01-12</em> - <a href="../posts/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html"> Ignorar archivos que no queremos que suban a Git</a></li><li><em>2019-01-08</em> - <a href="../posts/2019-01-08-crear-un-blog-en-github-github-pages.html"> Crear un Blog en GitHub. GitHub Pages</a></li><li><em>2019-01-04</em> - <a href="../posts/2019-01-04-crear-un-blog-en-gitlab-gitlab-pages.html"> Crear un Blog en GitLab. GitLab Pages</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

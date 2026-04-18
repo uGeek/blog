@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Papelera Reciclaje desde la Terminal</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 4 minutos. 533 palabras. bash Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer rm y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal. ¿Donde están los archivos de mi Papelera? Todos los archivos que eliminamos por interfaz gráfica, van a la papelera. La ruta de esta, es: ~/.local/share/Trash/files Instalando trash-cli La instalación de trash-cli, es muy simple, ya que está en los repositorios oficiales: sudo apt install trash-cli...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Papelera Reciclaje desde la Terminal">
+    <meta property="og:description" content="Tiempo estimado de lectura: 4 minutos. 533 palabras. bash Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer rm y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal. ¿Donde están los archivos de mi Papelera? Todos los archivos que eliminamos por interfaz gráfica, van a la papelera. La ruta de esta, es: ~/.local/share/Trash/files Instalando trash-cli La instalación de trash-cli, es muy simple, ya que está en los repositorios oficiales: sudo apt install trash-cli...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/papelera.jpg">
+    <meta property="og:url" content="papelera-reciclaje-desde-la-terminal">
+    <meta name="twitter:title" content="Papelera Reciclaje desde la Terminal">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 4 minutos. 533 palabras. bash Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer rm y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal. ¿Donde están los archivos de mi Papelera? Todos los archivos que eliminamos por interfaz gráfica, van a la papelera. La ruta de esta, es: ~/.local/share/Trash/files Instalando trash-cli La instalación de trash-cli, es muy simple, ya que está en los repositorios oficiales: sudo apt install trash-cli...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/papelera.jpg">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Papelera Reciclaje desde la Terminal</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 437 palabras. <a href="../categories/bash.html">bash</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 4 minutos. 533 palabras. <a href="https://ugeek.github.io/blog/categories/bash">bash</a></h5>
+<p><img src="https://ugeek.github.io/blog/images-blog/papelera.jpg" alt=""></p>
+<p>Cuando utilizamos cualquier tipo de escritorio con interfaz gráfica y borramos un archivo, como sabéis, este archivo en realidad no ha sido borrado, sino que ha sido movido a la papelera. Esto no sucede así cuando utilizamos nuestra terminal. Cuando borras el archivo desde la terminal, lo borras para siempre. Hoy os traigo una herramienta que en lugar de hacer <strong>rm</strong> y eliminarlo para siempre, nos va a llevar este archivo a la papelera. Así mismo, mediante una serie de comandos, nos va a permitir el gestionar todo el contenido de nuestra papelera desde la terminal.</p>
+<h2>¿Donde están los archivos de mi Papelera?</h2>
+<p>Todos los archivos que eliminamos por interfaz gráfica, van a la papelera. La ruta de esta, es:</p>
+<p><code>~/.local/share/Trash/files</code></p>
+<h2>Instalando trash-cli</h2>
+<p>La instalación de trash-cli, es muy simple, ya que está en los repositorios oficiales:</p>
+<p><code>sudo apt install trash-cli</code></p>
+<h2>Tabla de comandos</h2>
+<p>trash-put</p>
+<p>Enviar archivos a la Papelera</p>
+<p>trash-empty</p>
+<p>Vaciar la papelera</p>
+<p>trash-list</p>
+<p>Listar archivos que hay en la papelera</p>
+<p>trash-restore</p>
+<p>Restaura un archivo de la papelera</p>
+<p>trash-rm</p>
+<p>Elimina archivos individuales de la papelera</p>
+<h2>Buscar un Archivo en la Papelera</h2>
+<p>Si combinamos trash-cli con grep, podremos buscar archivos y carpetas que hay en nuestra papelera, mediante el nombre</p>
+<p><code>trash-list | grep foo</code></p>
+<p>También podriamos jugar con nuestro comandos favoritos, como conocer cuantos archivos y carpetas tenemos:</p>
+<p><code>trash-list | wc -l</code></p>
+<h2>Eliminar solo los archivos que coincidan con un patrón:</h2>
+<p>Aquí, por ejemplo, eliminaremos todos los archivos con extensión .txt</p>
+<p><code>trash-rm \ *.txt</code></p>
+<h2>Eliminar en función de los dias</h2>
+<p>Eliminar los archivos enviados a la papelera los últimos 10 dias.</p>
+<p><code>trash-empty 10</code></p>
+<h2>¿Puedo alias rm a trash-put?</h2>
+<p>Si no me acuerdo de lo que hice ayer, menos me voy a acordar de esta magnífica aplicación. Así que para no borrar de una forma drástica mis archivos o carpetas y hacer uso de esta aplicación, he sustituido mediante el archivo de configuración <strong>.bashrc</strong>, que cuando ejecute el comando <strong>rm</strong>, en realidad ejecute el comando <strong>trash-put</strong> para que lo envie a la papelera.</p>
+<p>Para hacer esto, vamos ha hacer uso de los alias:</p>
+<p>Con tu editor de texto favorito en terminal, en este caso utilizaremos nano, añadiremos al final esta línea:</p>
+<p><code>nano ~/.bashrc</code></p>
+<pre><code>alias rm='trash-put'
+</code></pre>
+<p>Ahora cada vez que hagamos un <strong>rm</strong>, enviará los archivos o carpetas a la papelera.</p>
+<p>Otra opción, sería el borrar los archivos mediante cron, programando periódicamente el borrado cada x días</p>
+<h2>Conclusión</h2>
+<p>Como veis, gracias a esta aplicación y a nuestro ingenio con la terminal, podemos automatizar y tener mas controlados nuestros archivos.</p>
+<p>Disfrutar de la terminal 😜</p>
+<ul>
+<li><a href="https://github.com/andreafrancia/trash-cli">Repositorio</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el jueves, 07 de febrero de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-02-18</em> - <a href="../posts/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li><li><em>2022-07-12</em> - <a href="../posts/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li><li><em>2022-07-04</em> - <a href="../posts/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html">Copiando en la terminal con barra de proceso</a></li><li><em>2022-03-27</em> - <a href="../posts/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li><li><em>2022-01-06</em> - <a href="../posts/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li><li><em>2021-11-20</em> - <a href="../posts/2021-11-20-usrbinenv-bash-o-binbash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li><li><em>2021-07-01</em> - <a href="../posts/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian-desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</a></li><li><em>2021-05-31</em> - <a href="../posts/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li><li><em>2021-04-27</em> - <a href="../posts/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li><li><em>2021-04-06</em> - <a href="../posts/2021-04-06-unrar-en-raspberry-pi.html">unrar en Raspberry Pi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

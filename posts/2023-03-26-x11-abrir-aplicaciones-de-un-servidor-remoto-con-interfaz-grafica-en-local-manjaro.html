@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Redireccionar X11 El reenvío de X11 es una forma de usar aplicaciones gráficas que están instaladas en un sistema remoto, como si estuvieran en nuestro sistema local. Por ejemplo, podemos conectarnos por SSH a un servidor Linux que tiene Telegram instalado y abrir desde la sesión de SSH. Telegram se ejecuta en el servidor remoto, pero la ventana del aparece en nuestro sistema local. Así podemos usar aplicaciones gráficas de otros sistemas sin tener que instalarlas en el nuestro. Para que el reenvío de X11 funcione, necesitamos tener un servidor X en nuestro sistema local, que es el encargado de mostrar las ventanas de las aplicaciones gráficas. También necesitamos tener instalado xauth en el sistema remoto, que es una utilidad que se ocupa de la autenticación de la sesión de X11. El servidor y el cliente deben estar configurados para permitir el reenvío de X11, y debemos usar el parámetro...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro">
+    <meta property="og:description" content="Redireccionar X11 El reenvío de X11 es una forma de usar aplicaciones gráficas que están instaladas en un sistema remoto, como si estuvieran en nuestro sistema local. Por ejemplo, podemos conectarnos por SSH a un servidor Linux que tiene Telegram instalado y abrir desde la sesión de SSH. Telegram se ejecuta en el servidor remoto, pero la ventana del aparece en nuestro sistema local. Así podemos usar aplicaciones gráficas de otros sistemas sin tener que instalarlas en el nuestro. Para que el reenvío de X11 funcione, necesitamos tener un servidor X en nuestro sistema local, que es el encargado de mostrar las ventanas de las aplicaciones gráficas. También necesitamos tener instalado xauth en el sistema remoto, que es una utilidad que se ocupa de la autenticación de la sesión de X11. El servidor y el cliente deben estar configurados para permitir el reenvío de X11, y debemos usar el parámetro...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="x11-abrir-aplicaciones-de-un-servidor-remoto-con-interfaz-grafica-en-local-manjaro">
+    <meta name="twitter:title" content="X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro">
+    <meta name="twitter:description" content="Redireccionar X11 El reenvío de X11 es una forma de usar aplicaciones gráficas que están instaladas en un sistema remoto, como si estuvieran en nuestro sistema local. Por ejemplo, podemos conectarnos por SSH a un servidor Linux que tiene Telegram instalado y abrir desde la sesión de SSH. Telegram se ejecuta en el servidor remoto, pero la ventana del aparece en nuestro sistema local. Así podemos usar aplicaciones gráficas de otros sistemas sin tener que instalarlas en el nuestro. Para que el reenvío de X11 funcione, necesitamos tener un servidor X en nuestro sistema local, que es el encargado de mostrar las ventanas de las aplicaciones gráficas. También necesitamos tener instalado xauth en el sistema remoto, que es una utilidad que se ocupa de la autenticación de la sesión de X11. El servidor y el cliente deben estar configurados para permitir el reenvío de X11, y debemos usar el parámetro...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>X11. Abrir aplicaciones de un servidor remoto con interfaz gráfica en Local. Manjaro</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 472 palabras. <a href="../categories/x11.html">x11</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h2>Redireccionar X11</h2>
+<p>El reenvío de X11 es una forma de usar aplicaciones gráficas que están instaladas en un sistema remoto, como si estuvieran en nuestro sistema local. Por ejemplo, podemos conectarnos por SSH a un servidor Linux que tiene Telegram instalado y abrir desde la sesión de SSH. Telegram se ejecuta en el servidor remoto, pero la ventana del aparece en nuestro sistema local. Así podemos usar aplicaciones gráficas de otros sistemas sin tener que instalarlas en el nuestro. Para que el reenvío de X11 funcione, necesitamos tener un servidor X en nuestro sistema local, que es el encargado de mostrar las ventanas de las aplicaciones gráficas.</p>
+<p>También necesitamos tener instalado xauth en el sistema remoto, que es una utilidad que se ocupa de la autenticación de la sesión de X11.</p>
+<p>El servidor y el cliente deben estar configurados para permitir el reenvío de X11, y debemos usar el parámetro -X o -Y al conectarnos por SSH. El parámetro -X es más seguro, pero el parámetro -Y puede ser más rápido.</p>
+<p>Vamos con la instalación y configuración.</p>
+<h2>Instalación</h2>
+<p>Instala los paquetes:</p>
+<pre><code>
+sudo pacman -S xorg-xauth xorg-xhost
+</code></pre>
+<h2>Editar archivo configuración</h2>
+<p>Edita el archivo sshd_config.</p>
+<pre><code>
+sudo nano /etc/ssh/sshd_config
+</code></pre>
+<p>Verifica que las opciones:</p>
+<ul>
+<li>AllowTcpForwarding yes</li>
+<li>X11UseLocalhost yes</li>
+<li>X11DisplayOffset 10</li>
+<li>X11Forwarding yes</li>
+<li>ForwardX11Trusted yes</li>
+</ul>
+<h2>Reinicia el servidor</h2>
+<p>Ahora reinicia el servidor ssh</p>
+<pre><code>
+sudo systemctl restart sshd
+</code></pre>
+<h2>Conectandonos al servidor</h2>
+<p>El comando ssh -X -C -Y usuario@servidor permite establecer una conexión segura y cifrada con un servidor remoto, usando el protocolo SSH (Secure Shell).</p>
+<pre><code>
+ssh -X -C usuario@servidor
+</code></pre>
+<p>Las opciones de este comando son las siguientes: -X: Habilita el reenvío de la interfaz gráfica de usuario (X11) desde el servidor al cliente. Esto permite ejecutar aplicaciones gráficas en el servidor y verlas en el cliente. Para que funcione, se necesita tener instalado un servidor X en el cliente. -C: Habilita la compresión de los datos que se envían y reciben por la conexión. Esto puede mejorar el rendimiento de la conexión si el ancho de banda es limitado o si se transfieren archivos grandes. -Y: Habilita el reenvío de la interfaz gráfica de usuario (X11) desde el servidor al cliente, con una verificación de seguridad menos estricta que la opción -X. Esto puede ser útil si se confía en el servidor y se quiere evitar posibles errores de autenticación. usuario: Es el nombre de usuario con el que se quiere acceder al servidor. Se debe tener una cuenta válida en el servidor y conocer la contraseña o tener una clave pública autorizada. servidor: Es el nombre o la dirección IP del servidor al que se quiere conectar. Se debe tener acceso a la red del servidor y al puerto 22, que es el que usa SSH por defecto.</p>
+<pre><code>
+ssh -Y -C usuario@servidor
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/OpenSSH_(Espa%C3%B1ol">https://wiki.archlinux.org/title/OpenSSH_(Espa%C3%B1ol</a>)</li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 26 de marzo de 2023</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

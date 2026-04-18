@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Utilizando Git con la Terminal. GitHub</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 5 minutos. 641 palabras. git Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal. Instalando Git sudo apt install git Comprobar si tenemos clave pública ssh Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en ~/.ssh y miraremos si existe el archivo **.pub*. Generando tu clave pública ssh Si no existe, vamos a generarlo. Ejecutaremos el comando: ssh-keygen Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada. Cuando termine, aparecerán un par de ficheros dentro de ~/.ssh/ se llamarán id_rsa y id_rsa.pub o adquirirán el nombre que has elegido si has puesto alguno en el paso anterior. Ahora abre...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Utilizando Git con la Terminal. GitHub">
+    <meta property="og:description" content="Tiempo estimado de lectura: 5 minutos. 641 palabras. git Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal. Instalando Git sudo apt install git Comprobar si tenemos clave pública ssh Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en ~/.ssh y miraremos si existe el archivo **.pub*. Generando tu clave pública ssh Si no existe, vamos a generarlo. Ejecutaremos el comando: ssh-keygen Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada. Cuando termine, aparecerán un par de ficheros dentro de ~/.ssh/ se llamarán id_rsa y id_rsa.pub o adquirirán el nombre que has elegido si has puesto alguno en el paso anterior. Ahora abre...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="utilizando-git-con-la-terminal-github">
+    <meta name="twitter:title" content="Utilizando Git con la Terminal. GitHub">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 5 minutos. 641 palabras. git Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal. Instalando Git sudo apt install git Comprobar si tenemos clave pública ssh Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en ~/.ssh y miraremos si existe el archivo **.pub*. Generando tu clave pública ssh Si no existe, vamos a generarlo. Ejecutaremos el comando: ssh-keygen Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada. Cuando termine, aparecerán un par de ficheros dentro de ~/.ssh/ se llamarán id_rsa y id_rsa.pub o adquirirán el nombre que has elegido si has puesto alguno en el paso anterior. Ahora abre...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Utilizando Git con la Terminal. GitHub</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 556 palabras. <a href="../categories/git.html">git</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 5 minutos. 641 palabras. <a href="https://ugeek.github.io/blog/categories/git">git</a></h5>
+<p>Como siempre os he comentado, utilizar la terminal al principio impresiona, pero hay que reconocer que no hay herramienta más productiva y potente que esta. Vamos a aprovechar que GitHub ha añadido repositorios privados, para utilizar más Git y vía terminal.</p>
+<h2>Instalando Git</h2>
+<p><code>sudo apt install git</code></p>
+<h2>Comprobar si tenemos clave pública ssh</h2>
+<p>Vamos a comprobar si tenemos clave pública ssh generada. Para ello, entramos en <strong>~/.ssh</strong> y miraremos si existe el archivo **.pub*.</p>
+<h2>Generando tu clave pública ssh</h2>
+<p>Si no existe, vamos a generarlo.</p>
+<p>Ejecutaremos el comando:</p>
+<p><code>ssh-keygen</code></p>
+<p>Saldrán una serie de preguntas. puedes ir pulsando intro para dejar los valores por defecto. eso no influye en nada.</p>
+<p>Cuando termine, aparecerán un par de ficheros dentro de <strong>~/.ssh/</strong> se llamarán <strong>id_rsa</strong> y <strong>id_rsa.pub</strong> o adquirirán el nombre que has elegido si has puesto alguno en el paso anterior.</p>
+<p>Ahora abre el fichero acabado en <strong>.pub</strong> con algún editor de textos y copia el contenido. Yo recomiendo utilizar la terminal:</p>
+<p><code>cat id_rsa.pub</code></p>
+<h2>Añadiendo la clave en GitHub</h2>
+<p>Haz click en tu foto de perfil de arriba a la derecha, después ve a <strong>settings &gt; SSH and GPG keys &gt; New SSH key</strong>. Pega la clave y pulsa finalizar.</p>
+<p>A partir de ahora ya tienes permisos para subir cambios a tus repositorios en local.</p>
+<p>Comprobaremos la conexión con GitHub</p>
+<p><code>ssh -T git@github.com</code></p>
+<h2>Iniciando cuenta con GitHub</h2>
+<p>Solo la primera vez, especificamos nuestro correo y nombre de usuario:</p>
+<p><code>git config --global user.email "tucorreo@gmail.com"</code></p>
+<p><code>git config --global user.name "Tu Nombre"</code></p>
+<p>Para ver el archivo de configuración:</p>
+<p><code>cat ~/.gitconfig</code></p>
+<h2>Clonar Repositorio en local</h2>
+<p>Ves al repositorio de GitHub y haz click en <strong>Clone or download</strong> en la zona de la derecha, te saldrá <strong>Clone with HTTPS o Clone with SSH GitHub</strong></p>
+<p>Haz click sobre <strong>Use SSH</strong> y después pulsa sobre el botón de copiar que hay debajo.</p>
+<p>Ahora vamos a la terminal y pegamos la url con <strong>git clone</strong> para clonar el repositorio:</p>
+<p><code>git clone git@github.com:ugeek/ugeek.github.io.git</code></p>
+<p>Se descargará todo el repositorio descomprimido en nuestra máquina. Ya podrás trabajar en local!</p>
+<h2>Comandos Básicos</h2>
+<p>Resumen de pasos básicos para enviar archivos a una rama master de GitHub, serian estos:</p>
+<ul>
+<li>Ver estado desde el último cambio <code>git status</code></li>
+<li>Añadimos a git todos los cambios de archivos que hemos creado o cambiado en local <code>git add .</code></li>
+<li>Igual que el anterior, pero solo una archivo <code>git add archivo</code></li>
+<li>Commit es una breve explicación del cambio o nuevo archivo que enviamos <code>git commit -m "nuevo post"</code></li>
+<li>Empujamos el archivo, ahora si, a GitHub con <code>git push origin master</code>. Si se ponemos <code>git push --set-upstream origin master</code>, las siguientes veces funcionará poniendo sólo <code>git push</code></li>
+</ul>
+<p>Si tenemos instalado GitHub en dos dispositivos, antes de editar, deberíamos verificar o descargar el contenido remoto de GitHub a local.</p>
+<ul>
+<li>Para ello escribiremos en la terminal <code>git pull origin master</code>, después, igual que el caso anterior, podremos utilizar <code>git pull</code> a secas.</li>
+</ul>
+<h2>Resumen</h2>
+<p>Esta guía sirve tanto para GitHub, GitLab y resto de servidores con Git. Como veis, parece muy complicado por ver muchos comandos, pero en el día a día, todo se resume en <strong>subir</strong> y <strong>bajar</strong>, los archivos de una carpeta al repositorio remoto.</p>
+<p>Todo se resume en:</p>
+<p>Subir</p>
+<p><code>git add . ; git commit -m "comentario" ; git push</code></p>
+<p>Bajar</p>
+<p><code>git pull</code></p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 21 de enero de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-30</em> - <a href="../posts/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li><li><em>2021-04-18</em> - <a href="../posts/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li><li><em>2020-01-14</em> - <a href="../posts/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li><li><em>2020-01-06</em> - <a href="../posts/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html">Descargando un directorio de git con gitdir</a></li><li><em>2019-07-10</em> - <a href="../posts/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li><li><em>2019-04-17</em> - <a href="../posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script </a></li><li><em>2019-01-28</em> - <a href="../posts/2019-01-28-crear-ramas-con-git.html"> Crear ramas con Git</a></li><li><em>2019-01-12</em> - <a href="../posts/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html"> Ignorar archivos que no queremos que suban a Git</a></li><li><em>2019-01-08</em> - <a href="../posts/2019-01-08-crear-un-blog-en-github-github-pages.html"> Crear un Blog en GitHub. GitHub Pages</a></li><li><em>2019-01-04</em> - <a href="../posts/2019-01-04-crear-un-blog-en-gitlab-gitlab-pages.html"> Crear un Blog en GitLab. GitLab Pages</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

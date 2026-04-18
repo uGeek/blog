@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Artículos Podcasts Tags Vamos a utilizar un script para descargar el último archivo de lanzamiento (latest releases) de un repositorio git. Es muy sencillo. Tan simple como conectarnos al apartado releases del repositorio de git y desde ahí pulsamos para descargar el archivo. Ahora mediante este scritp que he creado, vamos a automatizar la descarga y así no tener que vistar la web. #!/bash/bin # 14/01/20 # echo "Escribe el nombre del repositorio" echo " Ejemplo: uGeek/script" read URL echo "¿Que tipo de archivo quieres descargar?, zip, deb, rpm,..." read ARCHIVO curl -s https://api.github.com/repos/$URL/releases/latest \ | grep "browser_download_url.*$ARCHIVO" \ | cut -d : -f 2,3 \ | tr -d \" \ | wget -qi - Descargando el script Descarga este script desde el repositorio que he creado en GitHub. wget https://raw.githubusercontent.com/uGeek/script/master/git-latest-release.sh Fuente https://github.com/uGeek/script">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases">
+    <meta property="og:description" content="Artículos Podcasts Tags Vamos a utilizar un script para descargar el último archivo de lanzamiento (latest releases) de un repositorio git. Es muy sencillo. Tan simple como conectarnos al apartado releases del repositorio de git y desde ahí pulsamos para descargar el archivo. Ahora mediante este scritp que he creado, vamos a automatizar la descarga y así no tener que vistar la web. #!/bash/bin # 14/01/20 # echo "Escribe el nombre del repositorio" echo " Ejemplo: uGeek/script" read URL echo "¿Que tipo de archivo quieres descargar?, zip, deb, rpm,..." read ARCHIVO curl -s https://api.github.com/repos/$URL/releases/latest \ | grep "browser_download_url.*$ARCHIVO" \ | cut -d : -f 2,3 \ | tr -d \" \ | wget -qi - Descargando el script Descarga este script desde el repositorio que he creado en GitHub. wget https://raw.githubusercontent.com/uGeek/script/master/git-latest-release.sh Fuente https://github.com/uGeek/script">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+    <meta property="og:url" content="descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases">
+    <meta name="twitter:title" content="Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases">
+    <meta name="twitter:description" content="Artículos Podcasts Tags Vamos a utilizar un script para descargar el último archivo de lanzamiento (latest releases) de un repositorio git. Es muy sencillo. Tan simple como conectarnos al apartado releases del repositorio de git y desde ahí pulsamos para descargar el archivo. Ahora mediante este scritp que he creado, vamos a automatizar la descarga y así no tener que vistar la web. #!/bash/bin # 14/01/20 # echo "Escribe el nombre del repositorio" echo " Ejemplo: uGeek/script" read URL echo "¿Que tipo de archivo quieres descargar?, zip, deb, rpm,..." read ARCHIVO curl -s https://api.github.com/repos/$URL/releases/latest \ | grep "browser_download_url.*$ARCHIVO" \ | cut -d : -f 2,3 \ | tr -d \" \ | wget -qi - Descargando el script Descarga este script desde el repositorio que he creado en GitHub. wget https://raw.githubusercontent.com/uGeek/script/master/git-latest-release.sh Fuente https://github.com/uGeek/script">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 1 min. 148 palabras. <a href="../categories/git.html">git</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p><a href="https://ugeek.github.io/blog/list.html">Artículos</a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html">Podcasts</a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html">Tags</a></p>
+<p>Vamos a utilizar un script para descargar el último archivo de lanzamiento (latest releases) de un repositorio git.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/git.png" alt=""></p>
+<p>Es muy sencillo. Tan simple como conectarnos al apartado <strong>releases</strong> del repositorio de git y desde ahí pulsamos para descargar el archivo.</p>
+<p>Ahora mediante este scritp que he creado, vamos a automatizar la descarga y así no tener que vistar la web.</p>
+<pre><code>
+#!/bash/bin                                                                                                                                                                                                        
+#
+# ugeek.github.io
+# 14/01/20
+#
+
+echo "Escribe el nombre del repositorio"
+echo "            Ejemplo: uGeek/script"
+read URL
+echo "¿Que tipo de archivo quieres descargar?, zip, deb, rpm,..."
+read ARCHIVO
+
+curl -s https://api.github.com/repos/$URL/releases/latest \
+| grep "browser_download_url.*$ARCHIVO" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -
+</code></pre>
+<h2>Descargando el script</h2>
+<p>Descarga este script desde el repositorio que he creado en GitHub.</p>
+<pre><code>
+wget https://raw.githubusercontent.com/uGeek/script/master/git-latest-release.sh
+</code></pre>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://github.com/uGeek/script">https://github.com/uGeek/script</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 14 de enero de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-30</em> - <a href="../posts/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li><li><em>2021-04-18</em> - <a href="../posts/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li><li><em>2020-01-06</em> - <a href="../posts/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html">Descargando un directorio de git con gitdir</a></li><li><em>2019-07-10</em> - <a href="../posts/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li><li><em>2019-04-17</em> - <a href="../posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script </a></li><li><em>2019-01-28</em> - <a href="../posts/2019-01-28-crear-ramas-con-git.html"> Crear ramas con Git</a></li><li><em>2019-01-21</em> - <a href="../posts/2019-01-21-utilizando-git-con-la-terminal-github.html"> Utilizando Git con la Terminal. GitHub</a></li><li><em>2019-01-12</em> - <a href="../posts/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html"> Ignorar archivos que no queremos que suban a Git</a></li><li><em>2019-01-08</em> - <a href="../posts/2019-01-08-crear-un-blog-en-github-github-pages.html"> Crear un Blog en GitHub. GitHub Pages</a></li><li><em>2019-01-04</em> - <a href="../posts/2019-01-04-crear-un-blog-en-gitlab-gitlab-pages.html"> Crear un Blog en GitLab. GitLab Pages</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

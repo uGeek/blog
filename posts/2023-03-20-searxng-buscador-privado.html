@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SearXNG. Buscador privado</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="¿Qué es SearXNG y por qué deberías usarlo? SearXNG es un motor de metabúsqueda gratuito que agrega los resultados de más de 70 servicios y bases de datos de búsqueda. Los usuarios no son rastreados ni perfilados. Además, SearXNG se puede usar sobre Tor para el anonimato en línea . SearXNG es un proyecto impulsado por una comunidad abierta que se inició a mediados del 2021 como una bifurcación del proyecto searx. Su objetivo es proporcionar una alternativa privada y descentralizada a los motores de búsqueda convencionales como Google o Bing. ¿En qué se basa SearXNG? SearXNG se basa en la idea de que no hay una sola fuente de información que sea la mejor para todas las consultas. Por eso, SearXNG utiliza varios motores de búsqueda y servicios web para obtener los mejores resultados posibles para cada consulta. Algunos ejemplos son Wikipedia, DuckDuckGo, Qwant, YouTube, Reddit, etc. SearXNG no...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SearXNG. Buscador privado">
+    <meta property="og:description" content="¿Qué es SearXNG y por qué deberías usarlo? SearXNG es un motor de metabúsqueda gratuito que agrega los resultados de más de 70 servicios y bases de datos de búsqueda. Los usuarios no son rastreados ni perfilados. Además, SearXNG se puede usar sobre Tor para el anonimato en línea . SearXNG es un proyecto impulsado por una comunidad abierta que se inició a mediados del 2021 como una bifurcación del proyecto searx. Su objetivo es proporcionar una alternativa privada y descentralizada a los motores de búsqueda convencionales como Google o Bing. ¿En qué se basa SearXNG? SearXNG se basa en la idea de que no hay una sola fuente de información que sea la mejor para todas las consultas. Por eso, SearXNG utiliza varios motores de búsqueda y servicios web para obtener los mejores resultados posibles para cada consulta. Algunos ejemplos son Wikipedia, DuckDuckGo, Qwant, YouTube, Reddit, etc. SearXNG no...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="searxng-buscador-privado">
+    <meta name="twitter:title" content="SearXNG. Buscador privado">
+    <meta name="twitter:description" content="¿Qué es SearXNG y por qué deberías usarlo? SearXNG es un motor de metabúsqueda gratuito que agrega los resultados de más de 70 servicios y bases de datos de búsqueda. Los usuarios no son rastreados ni perfilados. Además, SearXNG se puede usar sobre Tor para el anonimato en línea . SearXNG es un proyecto impulsado por una comunidad abierta que se inició a mediados del 2021 como una bifurcación del proyecto searx. Su objetivo es proporcionar una alternativa privada y descentralizada a los motores de búsqueda convencionales como Google o Bing. ¿En qué se basa SearXNG? SearXNG se basa en la idea de que no hay una sola fuente de información que sea la mejor para todas las consultas. Por eso, SearXNG utiliza varios motores de búsqueda y servicios web para obtener los mejores resultados posibles para cada consulta. Algunos ejemplos son Wikipedia, DuckDuckGo, Qwant, YouTube, Reddit, etc. SearXNG no...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>SearXNG. Buscador privado</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 6 min. 1167 palabras. <a href="../categories/searxng.html">searxng</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>¿Qué es SearXNG y por qué deberías usarlo?</p>
+<p>SearXNG es un motor de metabúsqueda gratuito que agrega los resultados de más de 70 servicios y bases de datos de búsqueda. Los usuarios no son rastreados ni perfilados. Además, SearXNG se puede usar sobre Tor para el anonimato en línea .</p>
+<p>SearXNG es un proyecto impulsado por una comunidad abierta que se inició a mediados del 2021 como una bifurcación del proyecto searx. Su objetivo es proporcionar una alternativa privada y descentralizada a los motores de búsqueda convencionales como Google o Bing.</p>
+<h2>¿En qué se basa SearXNG?</h2>
+<p>SearXNG se basa en la idea de que no hay una sola fuente de información que sea la mejor para todas las consultas. Por eso, SearXNG utiliza varios motores de búsqueda y servicios web para obtener los mejores resultados posibles para cada consulta. Algunos ejemplos son Wikipedia, DuckDuckGo, Qwant, YouTube, Reddit, etc.</p>
+<p>SearXNG no almacena ningún dato sobre sus usuarios ni sus búsquedas. Tampoco envía ninguna información personal o identificable a los motores de búsqueda o servicios web que utiliza. De esta forma, SearXNG protege la privacidad y evita la personalización o el sesgo de los resultados.</p>
+<h2>¿Por qué usar SearXNG?</h2>
+<p>Hay muchas razones para usar SearXNG en lugar de otros motores de búsqueda. Aquí te presentamos algunas:</p>
+<ul>
+<li><strong>Privacidad</strong>: SearXNG respeta tu privacidad y no te rastrea ni te perfila. No guarda ningún registro ni cookie sobre tus búsquedas ni comparte ningún dato con terceros.</li>
+<li><strong>Diversidad</strong>: SearXNG te ofrece una variedad de fuentes y perspectivas para cada consulta. Puedes elegir entre diferentes categorías (general, imágenes, noticias, videos, etc.) y filtrar por idioma, país o fecha.</li>
+<li><strong>Personalización</strong>: SearXNG te permite personalizar tu experiencia de búsqueda según tus preferencias. Puedes cambiar el tema visual, el idioma, el número de resultados por página y los motores de búsqueda que quieres usar.</li>
+<li><strong>Transparencia</strong>: SearXNG es un proyecto abierto y colaborativo que puedes revisar y modificar libremente. El código fuente está disponible en GitHub y la documentación está en docs.searxng.org. También puedes unirte al canal Matrix #searxng:matrix.org para contactar con la comunidad.</li>
+<li><strong>Independencia</strong>: SearXNG es un motor de metabúsqueda descentralizado que no depende de ninguna empresa o entidad centralizada. Cualquiera puede instalar su propia instancia de SearXNG o usar una instancia pública disponible en searx.space.</li>
+</ul>
+<h2>¿Cómo usar SearXNG?</h2>
+<p>Usar SearXNG es muy fácil e intuitivo. Solo tienes que acceder a una instancia pública o privada (por ejemplo <a href="https://searx.work/">https://searx.work</a>) e introducir tu consulta en el cuadro de búsqueda.</p>
+<p>Puedes usar la sintaxis especial para afinar tu búsqueda con operadores como <code>!</code>, <code>+</code>, <code>-</code>, <code>"</code>, <code>site:</code>, <code>filetype:</code>, etc. Por ejemplo:</p>
+<ul>
+<li><code>!wikipedia searxng</code> busca "searxng" en Wikipedia</li>
+<li><code>+linux -windows</code> busca páginas que contengan "linux" pero no "windows"</li>
+<li><code>"motor de metabúsqueda"</code> busca la frase exacta "motor de metabúsqueda"</li>
+<li><code>site:github.com searxng</code> busca páginas del dominio github.com que contengan "searxng"</li>
+<li><code>filetype:pdf guía rápida</code> busca archivos PDF que contengan "guía rápida"</li>
+</ul>
+<p>También puedes seleccionar la categoría y el idioma que prefieras para tu búsqueda en el menú desplegable situado debajo del cuadro de búsqueda.</p>
+<p>Si quieres configurar tus opciones personales (tema visual, idioma predeterminado, motores activados), puedes hacer clic en el icono</p>
+<h2>Sintaxis de búsqueda</h2>
+<p>En SearXNG, tienes una sintaxis de búsqueda que te permite modificar las categorías, motores, idiomas y otros aspectos de tu búsqueda. Puedes consultar la lista de motores, categorías e idiomas en las preferencias. Para seleccionar un motor o categoría en particular, utiliza un prefijo de "!" antes del nombre del motor o categoría. Por ejemplo, "!wp" o "!wikipedia" para buscar en Wikipedia, o "!map" para buscar en la categoría de mapas. También puedes utilizar abreviaturas para los motores e idiomas. Los modificadores de motor/categoría son encadenables e inclusivos, lo que significa que puedes combinarlos para obtener resultados más específicos. Para seleccionar el filtro de idioma, utiliza el prefijo ":" antes del código de idioma, como ":fr" para buscar en francés. Además, SearXNG admite el uso de "bangs" externos de DuckDuckGo, lo que te permite buscar directamente en otros sitios web utilizando el prefijo "!!". Sin embargo, ten en cuenta que SearXNG no puede garantizar tu privacidad en estas búsquedas externas.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>Busca en wikipedia <strong>paris</strong>: <code>!wp paris</code></li>
+<li>Buscar en <strong>el mapa</strong> de categorías para <strong>paris</strong>: <code>!map paris</code></li>
+<li>Búsqueda de imágenes: <code>!images Wau Holland</code></li>
+<li>Buscar en la categoría de mapas y DuckDuckGo y Wikipedia para <strong>París</strong>: <code>!map !ddg !wp paris</code></li>
+<li>Buscar en Wikipedia por un idioma personalizado: <code>:fr !wp Wau Holland</code></li>
+<li>Buscar en Wikipedia por un idioma personalizado utilizando un "bang" externo: <code>!!wfr Wau Holland</code></li>
+</ul>
+<h2>Instancias</h2>
+<p>Si está buscando instancias en ejecución, listas para usar, visite <a href="https://searx.space/">searx.space</a> . De lo contrario <a href="https://docs.searxng.org/user">, vaya a los manuales de usuario</a> , <a href="https://docs.searxng.org/admin">administrador</a> y <a href="https://docs.searxng.org/dev">desarrollador</a> que encontrará en nuestra <a href="https://docs.searxng.org/">página</a> de inicio .</p>
+<h2>Docker Compose</h2>
+<ul>
+<li>Arranca el docker, añadiendo almohadilla ante los volumentes: Esta instrucción sirve para iniciar el contenedor de docker con la imagen de searxng, y montar los volúmenes especificados en el archivo docker-compose.yml. La almohadilla indica que se trata de un comentario y no se ejecuta como comando.</li>
+<li>Copiar la configuración una vez arrancado el docker: Esta instrucción sirve para copiar el archivo de configuración de searxng desde el contenedor al directorio local. Esto permite modificar los parámetros de searxng según las preferencias del usuario.</li>
+<li>docker cp searxng:/etc/searxng searxng/: Esta es la sintaxis del comando docker cp, que copia archivos o directorios entre un contenedor y el sistema de archivos local. En este caso, se copia el directorio /etc/searxng desde el contenedor llamado searxng al directorio local con el mismo nombre.</li>
+</ul>
+<pre><code>
+
+
+
+searxng:
+container_name: searxng
+image: searxng/searxng:latest
+ports:
+- "8080:8080"
+volumes:
+- ./searxng:/etc/searxng:rw
+environment:
+- SEARXNG_BASE_URL=http://192.168.1.100:8080
+- INSTANCE_NAME=SearXNG
+</code></pre>
+<h2>Algunas opciones</h2>
+<h3>Tema Oscuro</h3>
+<pre><code>
+theme_args:
+# style of simple theme: auto, light, dark
+simple_style: dark
+</code></pre>
+<h3>Scroll infinito</h3>
+<pre><code>
+# infinite_scroll: When true, automatically loads the next page when scrolling to bottom of the current page.
+infinite_scroll: true
+</code></pre>
+<h3>Ejemplo de más configuración</h3>
+<p>Exporta las búsquedas en diferentes formatos. Los formatos disponibles son html, rss, csv y json, permitiendo guardar las búsquedas como páginas web, feeds de noticias, tablas o objetos de texto.</p>
+<pre><code>
+search:
+# Filter results. 0: None, 1: Moderate, 2: Strict
+safe_search: 2
+# Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "yandex",
+# "seznam", "startpage", "swisscows", "qwant", "wikipedia" - leave blank to turn it off
+# by default.
+autocomplete: "duckduckgo"
+# minimun characters to type before autocompleter starts
+autocomplete_min: 3
+# Default search language - leave blank to detect from browser information or
+# use codes from 'languages.py'
+default_lang: "es"
+# Available languages
+# languages:
+#   - all
+#   - en
+#   - en-US
+#   - de
+#   - it-IT
+#   - fr
+#   - fr-BE
+# ban time in seconds after engine errors
+ban_time_on_fail: 5
+# max ban time in seconds after engine errors
+max_ban_time_on_fail: 120
+# remove format to deny access, use lower case.
+# formats: [html, csv, json, rss]
+formats:
+- html
+- rss
+- csv
+- json
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/searxng/searxng">GitHub - searxng/searxng: SearXNG es un metabuscador de Internet gratuito que agrega resultados de varios servicios de búsqueda y bases de datos. Los usuarios no son rastreados ni perfilados.</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 20 de marzo de 2023</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

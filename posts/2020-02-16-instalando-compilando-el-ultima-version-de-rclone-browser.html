@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instalando, Compilando el última versión de Rclone-Browser</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="En los repositorios oficiales de Ubuntu, Debian,... Ya encontramos Rclone-Browser, de manera que con un simple sudo apt install rclone-browser, lo tendremos instalados. Pero la versión que hay en los repositorios, es la versión 1.2 de creador de la aplicación. A parte de ser una versión antigua, con las nuevas versiones de Ubuntu, Debian,... ya no podemos ver la barra del estado del archivo cuando lo subimos o bajamos. kapitainsky ha hecho un Fork y actualizado estas deficiencias, estando hoy ya en la versión 1.7. Para poder disfrutar de esta versión, tendremos que compilar, pero veréis que es muy sencillo. Para el resto de distros o sistemas operativos, te recomiendo vistar el repositorio de GitHub que encontrarás en las fuentes del artículo. Instalación sudo apt update && sudo apt -y install git g++ cmake make qtdeclarative5-dev Clonar Repositorio y compilar git clone https://github.com/kapitainsky/RcloneBrowser.git Accedemos al interior de la carpeta cd...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Instalando, Compilando el última versión de Rclone-Browser">
+    <meta property="og:description" content="En los repositorios oficiales de Ubuntu, Debian,... Ya encontramos Rclone-Browser, de manera que con un simple sudo apt install rclone-browser, lo tendremos instalados. Pero la versión que hay en los repositorios, es la versión 1.2 de creador de la aplicación. A parte de ser una versión antigua, con las nuevas versiones de Ubuntu, Debian,... ya no podemos ver la barra del estado del archivo cuando lo subimos o bajamos. kapitainsky ha hecho un Fork y actualizado estas deficiencias, estando hoy ya en la versión 1.7. Para poder disfrutar de esta versión, tendremos que compilar, pero veréis que es muy sencillo. Para el resto de distros o sistemas operativos, te recomiendo vistar el repositorio de GitHub que encontrarás en las fuentes del artículo. Instalación sudo apt update && sudo apt -y install git g++ cmake make qtdeclarative5-dev Clonar Repositorio y compilar git clone https://github.com/kapitainsky/RcloneBrowser.git Accedemos al interior de la carpeta cd...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/rclone.png">
+    <meta property="og:url" content="instalando-compilando-el-ultima-version-de-rclone-browser">
+    <meta name="twitter:title" content="Instalando, Compilando el última versión de Rclone-Browser">
+    <meta name="twitter:description" content="En los repositorios oficiales de Ubuntu, Debian,... Ya encontramos Rclone-Browser, de manera que con un simple sudo apt install rclone-browser, lo tendremos instalados. Pero la versión que hay en los repositorios, es la versión 1.2 de creador de la aplicación. A parte de ser una versión antigua, con las nuevas versiones de Ubuntu, Debian,... ya no podemos ver la barra del estado del archivo cuando lo subimos o bajamos. kapitainsky ha hecho un Fork y actualizado estas deficiencias, estando hoy ya en la versión 1.7. Para poder disfrutar de esta versión, tendremos que compilar, pero veréis que es muy sencillo. Para el resto de distros o sistemas operativos, te recomiendo vistar el repositorio de GitHub que encontrarás en las fuentes del artículo. Instalación sudo apt update && sudo apt -y install git g++ cmake make qtdeclarative5-dev Clonar Repositorio y compilar git clone https://github.com/kapitainsky/RcloneBrowser.git Accedemos al interior de la carpeta cd...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/rclone.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Instalando, Compilando el última versión de Rclone-Browser</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 269 palabras. <a href="../categories/rclone.html">rclone</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>En los repositorios oficiales de Ubuntu, Debian,... Ya encontramos <strong>Rclone-Browser</strong>, de manera que con un simple <code>sudo apt install rclone-browser</code>, lo tendremos instalados. Pero la versión que hay en los repositorios, es la versión 1.2 de creador de la aplicación.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/rclone.png" alt=""></p>
+<p>A parte de ser una versión antigua, con las nuevas versiones de Ubuntu, Debian,... ya no podemos ver la barra del estado del archivo cuando lo subimos o bajamos.</p>
+<p><a href="https://github.com/kapitainsky">kapitainsky</a> ha hecho un Fork y actualizado estas deficiencias, estando hoy ya en la versión 1.7.</p>
+<p>Para poder disfrutar de esta versión, tendremos que compilar, pero veréis que es muy sencillo.</p>
+<p>Para el resto de distros o sistemas operativos, te recomiendo vistar el repositorio de GitHub que encontrarás en las fuentes del artículo.</p>
+<h2>Instalación</h2>
+<pre><code>
+sudo apt update &amp;&amp; sudo apt -y install git g++ cmake make qtdeclarative5-dev
+</code></pre>
+<h2>Clonar Repositorio y compilar</h2>
+<pre><code>
+git clone https://github.com/kapitainsky/RcloneBrowser.git
+</code></pre>
+<p>Accedemos al interior de la carpeta</p>
+<pre><code>
+cd RcloneBrowser
+</code></pre>
+<p>Crear nueva carpeta de compilación</p>
+<pre><code>
+mkdir build &amp;&amp; cd build
+</code></pre>
+<p>Ejecuta cmake desde la carpeta de compilación para crear un archivo MAKE</p>
+<pre><code>
+cmake ..
+</code></pre>
+<p>Ejecute make desde la carpeta de compilación para crear binario</p>
+<pre><code>
+make
+</code></pre>
+<p>Instalar sudo make install</p>
+<pre><code>
+sudo make install
+</code></pre>
+<h2>Abriendo el Rclone-Browser</h2>
+<p>Vamos ahora a teclear en la terminal</p>
+<pre><code>
+rclone-browser
+</code></pre>
+<p>Ya podemos disfrutar de esta última versión</p>
+<h2>Script de instalación</h2>
+<p>Si quieres ejecutarlo desde un script</p>
+<pre><code>
+#!/bin/bash
+#
+#  Instalar rclone-browser
+#  angel ugeekpodcast@gmail.com
+#
+
+sudo apt update &amp;&amp; sudo apt -y install git g++ cmake make qtdeclarative5-dev
+git clone https://github.com/kapitainsky/RcloneBrowser.git
+cd RcloneBrowser
+mkdir build &amp;&amp; cd build
+cmake ..
+make
+sudo make install
+
+rclone-browser
+</code></pre>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://github.com/kapitainsky/RcloneBrowser#linux">https://github.com/kapitainsky/RcloneBrowser#linux</a></li>
+<li><a href="https://github.com/Bash-Projects/RcloneBrowser">https://github.com/Bash-Projects/RcloneBrowser</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 16 de febrero de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-07-07</em> - <a href="../posts/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura.html">rclone: Montando mis notas para una rapida escritura y lectura.</a></li><li><em>2021-04-01</em> - <a href="../posts/2021-04-01-rclone-browser-a-la-ultima-muy-sencillo-para-raspberry-pi-linux-mac-windows.html">Rclone Browser a la última muy sencillo, para Raspberry Pi, Linux, Mac, Windows</a></li><li><em>2020-06-22</em> - <a href="../posts/2020-06-22-cliente-de-escritorio-para-editar-archivos-de-una-nube-privada-webdav-nextcloud-o-publica-drive-dropbox-onedrive-con-rclone.html">Cliente de escritorio para editar archivos de una nube privada (WebDav, Nextcloud,...) o pública (Drive, Dropbox, OneDrive...) con rclone</a></li><li><em>2020-06-08</em> - <a href="../posts/2020-06-08-sincronizacion-con-rclone-via-ssh-y-sftp.html">Sincronización con Rclone via SSH y SFTP</a></li><li><em>2020-03-26</em> - <a href="../posts/2020-03-26-rclone-bidireccional-con-rclonesync.html">Rclone bidireccional con Rclonesync</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

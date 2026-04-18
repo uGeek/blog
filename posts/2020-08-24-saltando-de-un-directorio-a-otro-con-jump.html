@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saltando de un directorio a otro con Jump</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía. Es un complemento súper productivo para moverte por la terminal. Jump se integra con su shell y aprende sobre sus hábitos de navegación al realizar un seguimiento de los directorios que visita. Te proporciona el directorio más visitado para el término de búsqueda más corto que escriba. Instalación Con Go Si no tienes instalado Go, busca el artículo donde explico como hacerlo. Si lo tienes instalado, la instalación es tan simple como: go get github.com/gsamokovarov/jump Ubuntu wget https://github.com/gsamokovarov/jump/releases/download/v0.30.1/jump_0.30.1_amd64.deb && sudo dpkg -i jump_0.30.1_amd64.deb Mac y otras distros Visita el repositorio de Jump donde explica como instalarlo en el resto de distros Añadir a bash o zsh Para bash y zsh, añade la siguiente línea a /.bashrc, /bash_profileo o ~/.zshrc eval "$(jump shell)"...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Saltando de un directorio a otro con Jump">
+    <meta property="og:description" content="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía. Es un complemento súper productivo para moverte por la terminal. Jump se integra con su shell y aprende sobre sus hábitos de navegación al realizar un seguimiento de los directorios que visita. Te proporciona el directorio más visitado para el término de búsqueda más corto que escriba. Instalación Con Go Si no tienes instalado Go, busca el artículo donde explico como hacerlo. Si lo tienes instalado, la instalación es tan simple como: go get github.com/gsamokovarov/jump Ubuntu wget https://github.com/gsamokovarov/jump/releases/download/v0.30.1/jump_0.30.1_amd64.deb && sudo dpkg -i jump_0.30.1_amd64.deb Mac y otras distros Visita el repositorio de Jump donde explica como instalarlo en el resto de distros Añadir a bash o zsh Para bash y zsh, añade la siguiente línea a /.bashrc, /bash_profileo o ~/.zshrc eval "$(jump shell)"...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jump.svg">
+    <meta property="og:url" content="saltando-de-un-directorio-a-otro-con-jump">
+    <meta name="twitter:title" content="Saltando de un directorio a otro con Jump">
+    <meta name="twitter:description" content="Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía. Es un complemento súper productivo para moverte por la terminal. Jump se integra con su shell y aprende sobre sus hábitos de navegación al realizar un seguimiento de los directorios que visita. Te proporciona el directorio más visitado para el término de búsqueda más corto que escriba. Instalación Con Go Si no tienes instalado Go, busca el artículo donde explico como hacerlo. Si lo tienes instalado, la instalación es tan simple como: go get github.com/gsamokovarov/jump Ubuntu wget https://github.com/gsamokovarov/jump/releases/download/v0.30.1/jump_0.30.1_amd64.deb && sudo dpkg -i jump_0.30.1_amd64.deb Mac y otras distros Visita el repositorio de Jump donde explica como instalarlo en el resto de distros Añadir a bash o zsh Para bash y zsh, añade la siguiente línea a /.bashrc, /bash_profileo o ~/.zshrc eval "$(jump shell)"...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/jump.svg">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Saltando de un directorio a otro con Jump</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 402 palabras. <a href="../categories/bash.html">bash</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Después de escuchar el Podcast de Lorenzo, atareao.es, he decidido probar este complemento para la terminal que hacía mucho tiempo que estaba buscando y no sabía que existía.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/jump.svg" alt=""></p>
+<p>Es un complemento súper productivo para moverte por la terminal.</p>
+<p>Jump se integra con su shell y aprende sobre sus hábitos de navegación al realizar un seguimiento de los directorios que visita. Te proporciona el directorio más visitado para el término de búsqueda más corto que escriba.</p>
+<h2>Instalación</h2>
+<h3>Con Go</h3>
+<p>Si no tienes instalado Go, busca el artículo donde explico como hacerlo.</p>
+<p>Si lo tienes instalado, la instalación es tan simple como:</p>
+<pre><code>
+go get github.com/gsamokovarov/jump
+</code></pre>
+<h3>Ubuntu</h3>
+<pre><code>
+wget https://github.com/gsamokovarov/jump/releases/download/v0.30.1/jump_0.30.1_amd64.deb &amp;&amp; sudo dpkg -i jump_0.30.1_amd64.deb
+</code></pre>
+<h3>Mac y otras distros</h3>
+<p>Visita el repositorio de Jump donde explica como instalarlo en el resto de distros</p>
+<h2>Añadir a bash o zsh</h2>
+<p>Para bash y zsh, añade la siguiente línea a <code>/.bashrc,</code> /bash_profileo o ~/.zshrc</p>
+<pre><code>
+eval "$(jump shell)"
+</code></pre>
+<h2>En fish</h2>
+<p>Para que funcione en fish, tenemos que añadir al archivo <code>~/.config/fish/config.fish</code></p>
+<pre><code>
+status --is-interactive; and source (jump shell fish | psub)
+</code></pre>
+<p>A mi este método no me funcionó, así que lo que hice es añadirlo en el alias así:</p>
+<pre><code>
+alias j='~/go/bin/jump shell fish |'
+</code></pre>
+<p>Ahora cuando pulso <strong>j</strong> en la terminal, ejecuta <code>~/go/bin/jump shell fish |</code></p>
+<h2>Cambiar j por z</h2>
+<p>Si deseas utilizar otra letra para ejecutar jump, por ejemplo la letra z</p>
+<pre><code>
+eval "$(jump shell --bind=z)"
+</code></pre>
+<p>Si lo has hecho mediante el alias, es tan simple como poner <strong>z</strong> en lugar de <strong>j</strong>, en el apartado anterior.</p>
+<h2>Funcionamiento</h2>
+<p>Jump usa la coincidencia difusa para encontrar el directorio deseado para saltar. Solo necesita de 2 a 5 caracteres para saltar al directorio.</p>
+<p>Para alimentar jump de los directorios que utilizamos frecuentemente, tendremos que movernos por estos de un modo normal como lo hacemos habitualmente y jump irá añadiendo estos a su base de datos.</p>
+<p>Pusamos <strong>j</strong> seguido de los <strong>caracteres que coincidan con el directorio</strong> que buscamos y pulsamos <strong>enter</strong>.</p>
+<p>Ejemplo: Buscar el directorio docker</p>
+<pre><code>
+j dk
+</code></pre>
+<p>Si no coincide con lo que buscabamos, ya que queríamos ir al directorio ~/docker/docker, escribiremos <strong>j</strong> + <strong>enter</strong> y nos aparecerá la siguiente sugerencia.</p>
+<pre><code>
+j
+</code></pre>
+<h2>Listado de directorios añadidos en la base de datos de jump</h2>
+<pre><code>
+jump top
+</code></pre>
+<h2>Eliminar una ruta de directorio</h2>
+<p>Nos situamos en ese directorio y ejecutamos</p>
+<pre><code>
+jump forget
+</code></pre>
+<h2>Ayuda</h2>
+<p>Para ver todas las opciones disponibles, veremos la ayuda</p>
+<pre><code>
+jump
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/gsamokovarov/jump">https://github.com/gsamokovarov/jump</a></li>
+<li><a href="https://www.atareao.es/podcast/personalizar-el-terminal/">https://www.atareao.es/podcast/personalizar-el-terminal/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 24 de agosto de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-02-18</em> - <a href="../posts/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li><li><em>2022-07-12</em> - <a href="../posts/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li><li><em>2022-07-04</em> - <a href="../posts/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html">Copiando en la terminal con barra de proceso</a></li><li><em>2022-03-27</em> - <a href="../posts/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li><li><em>2022-01-06</em> - <a href="../posts/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li><li><em>2021-11-20</em> - <a href="../posts/2021-11-20-usrbinenv-bash-o-binbash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li><li><em>2021-07-01</em> - <a href="../posts/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian-desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</a></li><li><em>2021-05-31</em> - <a href="../posts/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li><li><em>2021-04-27</em> - <a href="../posts/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li><li><em>2021-04-06</em> - <a href="../posts/2021-04-06-unrar-en-raspberry-pi.html">unrar en Raspberry Pi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

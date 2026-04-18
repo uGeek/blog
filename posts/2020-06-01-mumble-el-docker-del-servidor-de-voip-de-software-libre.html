@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mumble. El docker del servidor de VoIP de Software Libre.</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Artículos Podcasts Tags No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para arquitectura arm y amd64. Este contenedor parte de un Alpine Linux, así que es una imagen muy pequeña, tan solo ocupa 11.47Mb la versión para arm y 19.91Mb la de amd64. Vamos a ver como instalarlo y configurarlo ARM, Raspberry Pi docker run -d --name mumble -p 64738:64738 -p 64738:64738/udp ugeek/mumble:arm docker-compose version: '2' services: mumble: container_name: mumble image: ugeek/mumble:arm ports: - 64738:64738/udp - 64738:64738 amd64 docker run -d --name mumble -p 64738:64738 -p 64738:64738/udp ugeek/mumble:amd64 Configuración Para configurar el servicio, vamos a entrar dentro del contenedor docker exec -i -t --user root mumble sh Ahora vamos a poner una contraseña, para que solo aquellos que nosotros autoricemos, tengan acceso al servicio. Utilizaremos vi para editar el...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mumble. El docker del servidor de VoIP de Software Libre.">
+    <meta property="og:description" content="Artículos Podcasts Tags No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para arquitectura arm y amd64. Este contenedor parte de un Alpine Linux, así que es una imagen muy pequeña, tan solo ocupa 11.47Mb la versión para arm y 19.91Mb la de amd64. Vamos a ver como instalarlo y configurarlo ARM, Raspberry Pi docker run -d --name mumble -p 64738:64738 -p 64738:64738/udp ugeek/mumble:arm docker-compose version: '2' services: mumble: container_name: mumble image: ugeek/mumble:arm ports: - 64738:64738/udp - 64738:64738 amd64 docker run -d --name mumble -p 64738:64738 -p 64738:64738/udp ugeek/mumble:amd64 Configuración Para configurar el servicio, vamos a entrar dentro del contenedor docker exec -i -t --user root mumble sh Ahora vamos a poner una contraseña, para que solo aquellos que nosotros autoricemos, tengan acceso al servicio. Utilizaremos vi para editar el...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/mumble.png">
+    <meta property="og:url" content="mumble-el-docker-del-servidor-de-voip-de-software-libre">
+    <meta name="twitter:title" content="Mumble. El docker del servidor de VoIP de Software Libre.">
+    <meta name="twitter:description" content="Artículos Podcasts Tags No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para arquitectura arm y amd64. Este contenedor parte de un Alpine Linux, así que es una imagen muy pequeña, tan solo ocupa 11.47Mb la versión para arm y 19.91Mb la de amd64. Vamos a ver como instalarlo y configurarlo ARM, Raspberry Pi docker run -d --name mumble -p 64738:64738 -p 64738:64738/udp ugeek/mumble:arm docker-compose version: '2' services: mumble: container_name: mumble image: ugeek/mumble:arm ports: - 64738:64738/udp - 64738:64738 amd64 docker run -d --name mumble -p 64738:64738 -p 64738:64738/udp ugeek/mumble:amd64 Configuración Para configurar el servicio, vamos a entrar dentro del contenedor docker exec -i -t --user root mumble sh Ahora vamos a poner una contraseña, para que solo aquellos que nosotros autoricemos, tengan acceso al servicio. Utilizaremos vi para editar el...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/mumble.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Mumble. El docker del servidor de VoIP de Software Libre.</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 201 palabras. <a href="../categories/docker.html">docker</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p><a href="https://ugeek.github.io/blog/list.html">Artículos</a>&nbsp;&nbsp;<a href="https://ugeek.github.io/list.html">Podcasts</a>&nbsp;&nbsp;<a href="https://ugeek.github.io/blog/tag.html">Tags</a></p>
+<p>No es la primera vez que os hablo de Mumble. Hace unos 9 meses cree una imagen para docker con la intención de instalar rápido sin problemas el servicio para arquitectura arm y amd64.</p>
+<p>Este contenedor parte de un Alpine Linux, así que es una imagen muy pequeña, tan solo ocupa 11.47Mb la versión para arm y 19.91Mb la de amd64.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/mumble.png" alt=""></p>
+<p>Vamos a ver como instalarlo y configurarlo</p>
+<h2>ARM, Raspberry Pi</h2>
+<pre><code>
+docker run -d --name mumble -p 64738:64738  -p 64738:64738/udp ugeek/mumble:arm
+</code></pre>
+<p>docker-compose</p>
+<pre><code>
+version: '2'
+services:
+  mumble:
+    container_name: mumble
+    image: ugeek/mumble:arm
+    ports:
+      - 64738:64738/udp
+      - 64738:64738
+</code></pre>
+<h2>amd64</h2>
+<pre><code>
+docker run -d --name mumble -p 64738:64738  -p 64738:64738/udp ugeek/mumble:amd64
+</code></pre>
+<h2>Configuración</h2>
+<p>Para configurar el servicio, vamos a entrar dentro del contenedor</p>
+<pre><code>
+docker exec -i -t --user root mumble sh
+</code></pre>
+<p>Ahora vamos a poner una contraseña, para que solo aquellos que nosotros autoricemos, tengan acceso al servicio.</p>
+<p>Utilizaremos vi para editar el archivo de configuración, ya que viene instalado por defecto</p>
+<pre><code>
+vi /config/mumble-server.ini
+</code></pre>
+<p>Buscaremos donde ponga:</p>
+<pre><code>
+# Password to join server.
+serverpassword=contraseña
+</code></pre>
+<p>Y sustituimos <strong>contraseña</strong>, por la contraseña.</p>
+<p>Restaura el contenedor</p>
+<pre><code>
+docker restart mumble
+</code></pre>
+<p>Ya puedes disfrutar de tu nuevo servicio de VoIP</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 01 de junio de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-11-25</em> - <a href="../posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li><li><em>2023-11-19</em> - <a href="../posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li><li><em>2023-03-23</em> - <a href="../posts/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li><li><em>2022-12-22</em> - <a href="../posts/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li><li><em>2022-12-07</em> - <a href="../posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li><li><em>2022-03-29</em> - <a href="../posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li><li><em>2021-07-25</em> - <a href="../posts/2021-07-25-bash-en-docker.html">Bash en Docker</a></li><li><em>2021-07-02</em> - <a href="../posts/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li><li><em>2021-06-25</em> - <a href="../posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li><li><em>2021-06-17</em> - <a href="../posts/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

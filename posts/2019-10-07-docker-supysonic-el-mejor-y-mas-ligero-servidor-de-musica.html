@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker: Supysonic. El mejor y más ligero servidor de música</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 6 minutos. 699 palabras. docker Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo Spotify. He utilizado servidores como Plex, Jellyfin, DLNA,… Pero aunque todos ellos engloban todo el tema multimedia, buscaba algo más ligero y que únicamente fuera un servidor de música. De todos los que he utilizado, el que más me gustó fue Subsonic. Subsonic tiene una cuata mensual de 1€ al mes, así que aparecieron nuevos Forks gratuitos y 100% Software Libre como Libresonic, Airsonic,… Todos ellos tienen un problema y es que están desarrollados en java. Eso significa que si quieres correr este servicio en tu Raspberry, va a devorar tu Ram. Para solucionar este problema y para satisfacer a los amantes de este servidor y clientes de Subsonic, nació Supysonic. Un servidor de música desarrollado en python que utiliza la api...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Docker: Supysonic. El mejor y más ligero servidor de música">
+    <meta property="og:description" content="Tiempo estimado de lectura: 6 minutos. 699 palabras. docker Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo Spotify. He utilizado servidores como Plex, Jellyfin, DLNA,… Pero aunque todos ellos engloban todo el tema multimedia, buscaba algo más ligero y que únicamente fuera un servidor de música. De todos los que he utilizado, el que más me gustó fue Subsonic. Subsonic tiene una cuata mensual de 1€ al mes, así que aparecieron nuevos Forks gratuitos y 100% Software Libre como Libresonic, Airsonic,… Todos ellos tienen un problema y es que están desarrollados en java. Eso significa que si quieres correr este servicio en tu Raspberry, va a devorar tu Ram. Para solucionar este problema y para satisfacer a los amantes de este servidor y clientes de Subsonic, nació Supysonic. Un servidor de música desarrollado en python que utiliza la api...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/subsonic.png">
+    <meta property="og:url" content="docker-supysonic-el-mejor-y-mas-ligero-servidor-de-musica">
+    <meta name="twitter:title" content="Docker: Supysonic. El mejor y más ligero servidor de música">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 6 minutos. 699 palabras. docker Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo Spotify. He utilizado servidores como Plex, Jellyfin, DLNA,… Pero aunque todos ellos engloban todo el tema multimedia, buscaba algo más ligero y que únicamente fuera un servidor de música. De todos los que he utilizado, el que más me gustó fue Subsonic. Subsonic tiene una cuata mensual de 1€ al mes, así que aparecieron nuevos Forks gratuitos y 100% Software Libre como Libresonic, Airsonic,… Todos ellos tienen un problema y es que están desarrollados en java. Eso significa que si quieres correr este servicio en tu Raspberry, va a devorar tu Ram. Para solucionar este problema y para satisfacer a los amantes de este servidor y clientes de Subsonic, nació Supysonic. Un servidor de música desarrollado en python que utiliza la api...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/subsonic.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Docker: Supysonic. El mejor y más ligero servidor de música</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 620 palabras. <a href="../categories/docker.html">docker</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 6 minutos. 699 palabras. <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Algo que he estado buscando desde que empecé a instalar mis propios servicios, es un servidor de música tipo <a href="https://www.spotify.com/">Spotify</a>.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/subsonic.png" alt=""></p>
+<p>He utilizado servidores como <strong>Plex</strong>, <strong>Jellyfin</strong>, <strong>DLNA</strong>,… Pero aunque todos ellos engloban todo el tema multimedia, buscaba algo más ligero y que únicamente fuera un servidor de música.</p>
+<p>De todos los que he utilizado, el que más me gustó fue <a href="http://www.subsonic.org/">Subsonic</a>. Subsonic tiene una cuata mensual de 1€ al mes, así que aparecieron nuevos Forks gratuitos y 100% Software Libre como Libresonic, Airsonic,…</p>
+<p>Todos ellos tienen un problema y es que están desarrollados en <strong>java</strong>. Eso significa que si quieres correr este servicio en tu Raspberry, va a devorar tu Ram.</p>
+<p>Para solucionar este problema y para satisfacer a los amantes de este servidor y clientes de Subsonic, nació Supysonic. Un servidor de música desarrollado en <strong>python</strong> que utiliza la api de subsonic, de manera que podremos utilizar los clientes igual que lo hacemos con Subsonic.</p>
+<p>He creado el Docker para que sea más simple la instalación y lo he guardado en mi repositorio del <a href="https://hub.docker.com/r/ugeek/supysonic">DockerHub</a>.</p>
+<h2>Docker</h2>
+<p>Vamos a montar el docker dependiendo de la arquitectura que utilices.</p>
+<p>La carpeta <code>/media</code>, es la carpeta donde pondremos la música. Personalízalo a tu gusto.</p>
+<h3>Raspberry and ARM</h3>
+<ol>
+<li><p>Versión 0.4.1</p>
+<pre><code>docker run --name supysonic --restart=unless-stopped -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:arm-0.4.1
+</code></pre>
+</li>
+<li><p>Versión 0.4</p>
+<pre><code>docker run --name supysonic --restart=unless-stopped -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:arm
+</code></pre>
+</li>
+</ol>
+<h3>amd64</h3>
+<ol>
+<li><p>Versión 0.4.1</p>
+<pre><code>docker run --name supysonic -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:amd64-0.4.1
+</code></pre>
+</li>
+<li><p>Versión 0.4</p>
+<pre><code>docker run --name supysonic -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:amd64
+</code></pre>
+</li>
+</ol>
+<h3>i386</h3>
+<ol>
+<li><p>Versión 0.4.1</p>
+<pre><code>docker run --name supysonic -v $HOME/docker/supysonic:/var/lib/supysonic -v /media:/media -p 8080:8080 ugeek/supysonic:i386-0.4.1
+</code></pre>
+</li>
+</ol>
+<h2>Iniciar Servidor</h2>
+<p>Vamos a iniciar el servidor</p>
+<pre><code>docker start supysonic
+</code></pre>
+<p>Si abres tu navegador e introduces la ip:8080, aparecerá la página de administración de supysonic. Ahora no podrás acceder porque no tienes el usuario y contraseña de administración. Vamos a crearlo.</p>
+<h2>Crear usuario y contraseña de administrador</h2>
+<p>Ahora entraremos dentro del contenedor para crear el usuario administrador y contraseña.</p>
+<pre><code>docker exec -it supysonic sh
+</code></pre>
+<p>Vamos a crear el el usuario y contraseña</p>
+<pre><code>supysonic-cli user add "NOMBRE ADMINISTRADOR" -a -p "CONTRASEÑA"
+</code></pre>
+<h2>Añadir carpeta con tu música utilizando el navegador web</h2>
+<p>Ya podemos utilizar la página de administración desde tu navegador, introduce la dirección <a href="http://tu_ip:8080/">http://tu_ip:8080</a></p>
+<p>De todas maneras, si utilizas la terminal verás que es más practico.</p>
+<h2>Añadir carpeta con tu música utilizando la Terminal</h2>
+<p>Entramos al contenedor</p>
+<pre><code>docker exec -it supysonic sh
+</code></pre>
+<p>Creamos una nueva biblioteca indicando la capeta:</p>
+<pre><code>supysonic-cli folder add "NOMBRE BIBLIOTECA" /media/musica
+</code></pre>
+<p>Ejemplo: Hay una biblioteca de música que tengo y llamo <strong>Favoritos</strong>. Voy a crear la biblioteca e indicar la ruta de la carpeta</p>
+<pre><code>supysonic-cli folder add Favoritos /media/Favoritos/
+</code></pre>
+<h3>Sin entrar al contenedor</h3>
+<p>Podría haber utilizado este comando sin entrar dentro del contenedor</p>
+<pre><code>docker exec -it supysonic supysonic-cli folder add Favoritos /media/Favoritos/
+</code></pre>
+<h2>Escanear tu música</h2>
+<p>Entramos al contenedor</p>
+<pre><code>docker exec -it supysonic sh
+</code></pre>
+<p>Una vez añadida tu música, necesitas escanearla para que se añada al servidor.</p>
+<pre><code>supysonic-cli folder scan "NOMBRE BIBLIOTECA"
+</code></pre>
+<h3>Escanear sin entrar al contenedor</h3>
+<p>Escanea mediante una única línea. Puedes utilizar <strong>cron</strong>, para escanear periódicamente tu biblioteca</p>
+<pre><code>docker exec -it supysonic supysonic-cli folder scan "NOMBRE BIBLIOTECA"
+</code></pre>
+<p>Mi biblioteca <strong>Favoritos</strong> la escaneo así:</p>
+<pre><code>docker exec -it supysonic supysonic-cli folder scan Favoritos
+</code></pre>
+<h2>Clientes</h2>
+<p>Para poder escuchar tu música, puedes utilizar clientes de Android como <a href="https://play.google.com/store/apps/details?id=github.daneren2005.dsub">DSub</a> o <a href="https://play.google.com/store/apps/details?id=org.moire.ultrasonic">Ultrasonic</a>.</p>
+<p>Uno de los defectos que tiene Supysonic, es no tener reproductor web integrado en el servidor. Así que si queremos utilizarlo mediante un navegador web podemos utilizar <a href="http://jamstash.com/#/settings">Jamstash</a>. En el próximo artículo explicaré como montar el Docker de este servicio en tu servidor.</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/spl0k/supysonic">https://github.com/spl0k/supysonic</a></li>
+<li><a href="https://hub.docker.com/r/ugeek/supysonic">https://hub.docker.com/r/ugeek/supysonic</a></li>
+<li><a href="https://github.com/uGeek/docker-supysonic">https://github.com/uGeek/docker-supysonic</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 07 de octubre de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-11-25</em> - <a href="../posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li><li><em>2023-11-19</em> - <a href="../posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li><li><em>2023-03-23</em> - <a href="../posts/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li><li><em>2022-12-22</em> - <a href="../posts/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li><li><em>2022-12-07</em> - <a href="../posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li><li><em>2022-03-29</em> - <a href="../posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li><li><em>2021-07-25</em> - <a href="../posts/2021-07-25-bash-en-docker.html">Bash en Docker</a></li><li><em>2021-07-02</em> - <a href="../posts/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li><li><em>2021-06-25</em> - <a href="../posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li><li><em>2021-06-17</em> - <a href="../posts/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

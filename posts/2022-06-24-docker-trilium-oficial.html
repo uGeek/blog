@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker: Trilium Oficial</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium. Ya os expliqué como utilizarlo a modo de servidor para arquitectura arm cuando no era oficial, pero ahora que ya tenemos disponible la imagen oficial multiarquitectura, voy a explicaros un modo de montar tu servidor de Trilium, pudiendo tener un volumen persistente con tus notas. Docker Compose El docker compose sería el siguiente: version: '2.1' services: trilium: image: zadam/trilium restart: always container_name: trilium ports: - "8080:8080" Habilitar volumen Ahora vamos a habilitar el volumen persistente\\ 1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen \\ #volumes: # - ./trilium-data:/home/node/trilium-data \\ \\ 2.- Una vez iniciado del docker, copia a ruta que decidas el volumen trilium-data en el host\\ docker cp trilium:/home/node/trilium-data ./trilium-data \\ 3.- Des-comenta quitando las almohadillas y vuelve a levantar el docker con el directorio de trilium-data\\ \\ \\ \\">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Docker: Trilium Oficial">
+    <meta property="og:description" content="Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium. Ya os expliqué como utilizarlo a modo de servidor para arquitectura arm cuando no era oficial, pero ahora que ya tenemos disponible la imagen oficial multiarquitectura, voy a explicaros un modo de montar tu servidor de Trilium, pudiendo tener un volumen persistente con tus notas. Docker Compose El docker compose sería el siguiente: version: '2.1' services: trilium: image: zadam/trilium restart: always container_name: trilium ports: - "8080:8080" Habilitar volumen Ahora vamos a habilitar el volumen persistente\\ 1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen \\ #volumes: # - ./trilium-data:/home/node/trilium-data \\ \\ 2.- Una vez iniciado del docker, copia a ruta que decidas el volumen trilium-data en el host\\ docker cp trilium:/home/node/trilium-data ./trilium-data \\ 3.- Des-comenta quitando las almohadillas y vuelve a levantar el docker con el directorio de trilium-data\\ \\ \\ \\">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/trilium.png">
+    <meta property="og:url" content="docker-trilium-oficial">
+    <meta name="twitter:title" content="Docker: Trilium Oficial">
+    <meta name="twitter:description" content="Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium. Ya os expliqué como utilizarlo a modo de servidor para arquitectura arm cuando no era oficial, pero ahora que ya tenemos disponible la imagen oficial multiarquitectura, voy a explicaros un modo de montar tu servidor de Trilium, pudiendo tener un volumen persistente con tus notas. Docker Compose El docker compose sería el siguiente: version: '2.1' services: trilium: image: zadam/trilium restart: always container_name: trilium ports: - "8080:8080" Habilitar volumen Ahora vamos a habilitar el volumen persistente\\ 1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen \\ #volumes: # - ./trilium-data:/home/node/trilium-data \\ \\ 2.- Una vez iniciado del docker, copia a ruta que decidas el volumen trilium-data en el host\\ docker cp trilium:/home/node/trilium-data ./trilium-data \\ 3.- Des-comenta quitando las almohadillas y vuelve a levantar el docker con el directorio de trilium-data\\ \\ \\ \\">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/trilium.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Docker: Trilium Oficial</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 1 min. 152 palabras. <a href="../categories/trilium.html">trilium</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Una de las aplicaciones de Notas más espectacular que puedes instalar es Trilium.</p>
+<p>Ya os expliqué como utilizarlo a modo de servidor para arquitectura arm cuando no era oficial, pero ahora que ya tenemos disponible la imagen oficial multiarquitectura, voy a explicaros un modo de montar tu servidor de Trilium, pudiendo tener un volumen persistente con tus notas.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/trilium.png" alt=""></p>
+<h2>Docker Compose</h2>
+<p>El docker compose sería el siguiente:</p>
+<pre><code>
+      version: '2.1'
+    services:
+     trilium:
+       image: zadam/trilium
+       restart: always
+       container_name: trilium
+       ports:
+         - "8080:8080"
+</code></pre>
+<h2>Habilitar volumen</h2>
+<p>Ahora vamos a habilitar el volumen persistente\\</p>
+<p>1.- Pon almohadilla delante del volumen. Para iniciar el docker sin compartir volumen &nbsp;&nbsp;\\</p>
+<pre><code>
+               #volumes:
+             #  - ./trilium-data:/home/node/trilium-data
+</code></pre>
+<p>\\</p>
+<p>&nbsp; &nbsp;\\</p>
+<p>2.- Una vez iniciado del docker, copia a ruta que decidas el volumen trilium-data en el host\\</p>
+<pre><code>
+               docker cp trilium:/home/node/trilium-data ./trilium-data
+</code></pre>
+<p>\\</p>
+<p>3.- Des-comenta quitando las almohadillas y vuelve a levantar el docker con el directorio de trilium-data\\</p>
+<p>\\</p>
+<p>\\</p>
+<p>\\</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 24 de junio de 2022</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2020-12-25</em> - <a href="../posts/2020-12-25-trilium-web-clipper-importando-el-contenido-de-una-web-a-trilium.html">Trilium Web Clipper. Importando el contenido de una web a Trilium</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

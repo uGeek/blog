@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navidrome. La alternativa a Airsonic desarrollada en Go</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo móvil. ¡Es como tu Spotify personal! Aquí hay una Demo, para que veáis el servicio en acción. Cosas que me gustan: Página web del servicio Descargar canción o album en formato .zip Actualización si añades nuevo álbum Descargar archivos de listas y exportar listas en .m3u Listas públicas y privadas Características Maneja colecciones de música muy grandes Transmite prácticamente cualquier formato de audio disponible Lee y usa todos sus metadatos Gran soporte para compilaciones (álbumes de varios artistas) y conjuntos de cajas (álbumes de varios discos) Multiusuario , cada usuario tiene sus propios recuentos de reproducción, listas de reproducción, favoritos, etc. Uso de recursos muy bajo Multiplataforma , se ejecuta en macOS, Linux y Windows. También se proporcionan imágenes de...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Navidrome. La alternativa a Airsonic desarrollada en Go">
+    <meta property="og:description" content="Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo móvil. ¡Es como tu Spotify personal! Aquí hay una Demo, para que veáis el servicio en acción. Cosas que me gustan: Página web del servicio Descargar canción o album en formato .zip Actualización si añades nuevo álbum Descargar archivos de listas y exportar listas en .m3u Listas públicas y privadas Características Maneja colecciones de música muy grandes Transmite prácticamente cualquier formato de audio disponible Lee y usa todos sus metadatos Gran soporte para compilaciones (álbumes de varios artistas) y conjuntos de cajas (álbumes de varios discos) Multiusuario , cada usuario tiene sus propios recuentos de reproducción, listas de reproducción, favoritos, etc. Uso de recursos muy bajo Multiplataforma , se ejecuta en macOS, Linux y Windows. También se proporcionan imágenes de...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/navidrome.png">
+    <meta property="og:url" content="navidrome-la-alternativa-a-airsonic-desarrollada-en-go">
+    <meta name="twitter:title" content="Navidrome. La alternativa a Airsonic desarrollada en Go">
+    <meta name="twitter:description" content="Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo móvil. ¡Es como tu Spotify personal! Aquí hay una Demo, para que veáis el servicio en acción. Cosas que me gustan: Página web del servicio Descargar canción o album en formato .zip Actualización si añades nuevo álbum Descargar archivos de listas y exportar listas en .m3u Listas públicas y privadas Características Maneja colecciones de música muy grandes Transmite prácticamente cualquier formato de audio disponible Lee y usa todos sus metadatos Gran soporte para compilaciones (álbumes de varios artistas) y conjuntos de cajas (álbumes de varios discos) Multiusuario , cada usuario tiene sus propios recuentos de reproducción, listas de reproducción, favoritos, etc. Uso de recursos muy bajo Multiplataforma , se ejecuta en macOS, Linux y Windows. También se proporcionan imágenes de...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/navidrome.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Navidrome. La alternativa a Airsonic desarrollada en Go</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 339 palabras. <a href="../categories/subsonic.html">subsonic</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Navidrome es un servidor de música en streaming de código abierto basado en un servidor web. Da la libertad de escuchar tu colección de música desde cualquier navegador o dispositivo móvil. ¡Es como tu Spotify personal!</p>
+<p><a href="https://translate.googleusercontent.com/translate_c?depth%021%02es&amp;pto%022%02translate.google.com&amp;sl%023%02nmt4&amp;u%024%02ALkJrhjBly3sgwOBW24Lv39WuY7lBJAAxw">Aquí hay una Demo</a>, para que veáis el servicio en acción.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/navidrome.png" alt=""></p>
+<p>Cosas que me gustan:</p>
+<ul>
+<li>Página web del servicio</li>
+<li>Descargar canción o album en formato .zip</li>
+<li>Actualización si añades nuevo álbum</li>
+<li>Descargar archivos de listas y exportar listas en .m3u</li>
+<li>Listas públicas y privadas</li>
+</ul>
+<h2>Características</h2>
+<ul>
+<li>Maneja colecciones de música muy grandes</li>
+<li>Transmite prácticamente cualquier formato de audio disponible</li>
+<li>Lee y usa todos sus metadatos</li>
+<li>Gran soporte para compilaciones (álbumes de varios artistas) y conjuntos de cajas (álbumes de varios discos)</li>
+<li>Multiusuario , cada usuario tiene sus propios recuentos de reproducción, listas de reproducción, favoritos, etc.</li>
+<li>Uso de recursos muy bajo</li>
+<li>Multiplataforma , se ejecuta en macOS, Linux y Windows. También se proporcionan imágenes de Docker</li>
+<li>Binarios listos para usar para todas las plataformas principales, incluida Raspberry Pi</li>
+<li>Supervisa automáticamente su biblioteca en busca de cambios, importa nuevos archivos y recarga nuevos metadatos</li>
+<li>Interfaz web moderna y receptiva basada en Material UI</li>
+<li>Compatible con todos los clientes Subsonic, Madsonic, Airsonic</li>
+<li>Transcodificación sobre la marcha. Se puede configurar por usuario/reproductor. Se admite la codificación Opus</li>
+<li>Traducido a varios idiomas</li>
+</ul>
+<h2>Docker</h2>
+<p>Tenemos disponible el docker para arquitectura amd64, arm y arm64.</p>
+<pre><code>
+docker run -d    --name navidrome    --restart=unless-stopped    --user $(id -u):$(id -g)    -v $HOME/docker/media/Musica:/music    -v $HOME/navidrome:/data    -p 4533:4533
+-e ND_LOGLEVEL=info    deluan/navidrome:latest
+</code></pre>
+<h2>Docker Raspberry</h2>
+<p>Vamos, que también podemos instalarlo en nuestra Raspberry Pi.</p>
+<pre><code>
+docker run -d    --name navidrome    --restart=unless-stopped    --user $(id -u):$(id -g)    -v $HOME/docker/media/Musica:/music    -v $HOME/navidrome:/data    -p 4533:4533
+-e ND_LOGLEVEL=info    deluan/navidrome:pi
+</code></pre>
+<h2>Docker Compose</h2>
+<pre><code>
+version: "3"
+services:
+navidrome:
+image: deluan/navidrome:latest
+ports:
+- "4533:4533"
+environment:
+# All options with their default values:
+ND_MUSICFOLDER: /music
+ND_DATAFOLDER: /data
+ND_SCANINTERVAL: 1m
+ND_LOGLEVEL: info
+ND_PORT: 4533
+ND_TRANSCODINGCACHESIZE: 100MB
+ND_SESSIONTIMEOUT: 24h
+ND_BASEURL: ""
+volumes:
+- "$HOME/navidrome:/data"
+- "$HOME/docker/media/Musica:/music:ro"
+</code></pre>
+<h2>Reescanear biblioteca</h2>
+<p>Entramos dentro del docker y ejecutamos</p>
+<pre><code>
+/app/navidrome scan -f
+</code></pre>
+<h2>Ayuda</h2>
+<pre><code>
+/app/navidrome --help
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://www.navidrome.org/">https://www.navidrome.org</a></li>
+<li><a href="https://github.com/deluan/navidrome">https://github.com/deluan/navidrome</a></li>
+<li><a href="https://www.navidrome.org/docs/installation/docker/">https://www.navidrome.org/docs/installation/docker/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 16 de septiembre de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2020-05-06</em> - <a href="../posts/2020-05-06-gonic-el-mejor-y-mas-ligero-servidor-de-musica-con-api-subsonic.html">Gonic. El mejor y más ligero servidor de música con api Subsonic</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

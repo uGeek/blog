@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y además, consigo hacer esta sincronización sin necesidad de utilizar los archivos todo.txt en local, accedo directamente a la nube gracias a rclone. Instalación Instala rcsync en tu dispositivo con linux git clone https://github.com/uGeek/rctodosync.git ~/rctodosync sudo ln -s /home/$USER/rctodosync/rctodosync /usr/bin/rctodosync sudo chmod +x /usr/bin/rctodosync Instala RCLONE y curl. curl Necesitamos curl para instalar rclone sudo apt install curl RCLONE Instala la última versión de rclone con: curl https://rclone.org/install.sh | sudo bash Sincronizar dos archivos todo.txt Mediante el archivo de configuración, en este ejemplo trabajo, situado en la ruta ~/.config/rctodosync/trabajo, añadamos las siguiente variables: Especificamos el servidor 1 y 2 siguiendo las opciones que utiliza rclone. WORD es el contexto, proyecto o palabra que utilizaremos para mantener sincronizados las tareas en ambos...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras">
+    <meta property="og:description" content="Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y además, consigo hacer esta sincronización sin necesidad de utilizar los archivos todo.txt en local, accedo directamente a la nube gracias a rclone. Instalación Instala rcsync en tu dispositivo con linux git clone https://github.com/uGeek/rctodosync.git ~/rctodosync sudo ln -s /home/$USER/rctodosync/rctodosync /usr/bin/rctodosync sudo chmod +x /usr/bin/rctodosync Instala RCLONE y curl. curl Necesitamos curl para instalar rclone sudo apt install curl RCLONE Instala la última versión de rclone con: curl https://rclone.org/install.sh | sudo bash Sincronizar dos archivos todo.txt Mediante el archivo de configuración, en este ejemplo trabajo, situado en la ruta ~/.config/rctodosync/trabajo, añadamos las siguiente variables: Especificamos el servidor 1 y 2 siguiendo las opciones que utiliza rclone. WORD es el contexto, proyecto o palabra que utilizaremos para mantener sincronizados las tareas en ambos...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/rclone.png">
+    <meta property="og:url" content="rctodosync-comparte-tareas-del-todotxt-por-contextos-proyectos-o-palabras">
+    <meta name="twitter:title" content="rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras">
+    <meta name="twitter:description" content="Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y además, consigo hacer esta sincronización sin necesidad de utilizar los archivos todo.txt en local, accedo directamente a la nube gracias a rclone. Instalación Instala rcsync en tu dispositivo con linux git clone https://github.com/uGeek/rctodosync.git ~/rctodosync sudo ln -s /home/$USER/rctodosync/rctodosync /usr/bin/rctodosync sudo chmod +x /usr/bin/rctodosync Instala RCLONE y curl. curl Necesitamos curl para instalar rclone sudo apt install curl RCLONE Instala la última versión de rclone con: curl https://rclone.org/install.sh | sudo bash Sincronizar dos archivos todo.txt Mediante el archivo de configuración, en este ejemplo trabajo, situado en la ruta ~/.config/rctodosync/trabajo, añadamos las siguiente variables: Especificamos el servidor 1 y 2 siguiendo las opciones que utiliza rclone. WORD es el contexto, proyecto o palabra que utilizaremos para mantener sincronizados las tareas en ambos...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/rclone.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>rctodosync. Comparte tareas del todo.txt por contextos, proyectos o palabras</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 473 palabras. <a href="../categories/todotxt.html">todo.txt</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Uno de los problemas que me encuentro al utilizar el todo.txt, es no poder compartir tareas por contextos, proyectos o palabras. Con este sencillo script he solucionado el problema y además, consigo hacer esta sincronización sin necesidad de utilizar los archivos todo.txt en local, accedo directamente a la nube gracias a rclone.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/rclone.png" alt=""></p>
+<h2>Instalación</h2>
+<p>Instala <strong>rcsync</strong> en tu dispositivo con linux</p>
+<pre><code>
+git clone https://github.com/uGeek/rctodosync.git ~/rctodosync
+</code></pre>
+<pre><code>
+sudo ln -s /home/$USER/rctodosync/rctodosync /usr/bin/rctodosync
+sudo chmod +x /usr/bin/rctodosync
+</code></pre>
+<h3>Instala <strong>RCLONE</strong> y <strong>curl</strong>.</h3>
+<h4>curl</h4>
+<p>Necesitamos curl para instalar rclone</p>
+<pre><code>
+sudo apt install curl
+</code></pre>
+<h4>RCLONE</h4>
+<p>Instala la última versión de rclone con:</p>
+<pre><code>
+curl https://rclone.org/install.sh | sudo bash
+</code></pre>
+<h2>Sincronizar dos archivos todo.txt</h2>
+<p>Mediante el archivo de configuración, en este ejemplo <code>trabajo</code>, situado en la ruta <code>~/.config/rctodosync/trabajo</code>, añadamos las siguiente variables:</p>
+<p>Especificamos el servidor 1 y 2 siguiendo las opciones que utiliza rclone.</p>
+<p><code>WORD</code> es el contexto, proyecto o palabra que utilizaremos para mantener sincronizados las tareas en ambos todo.txt <code>TIEMPO_ACTUALIZACION</code> es el tiempo que esperará entre sincronización y sincronización En la parte inferior, encontraremos las variables <code>TOKEN</code> y <code>ID</code>para las notificaciones en Telegram. En ese mismo archivo añadiremos las notificaciones para cualquier otro servicio de notificaciones.</p>
+<pre><code>
+SERVIDOR1=dropbox:todo      # Directorio (rclone) donde está situado el archivo todo.txt
+SERVIDOR2=drive-trabajo:todo
+WORD="@trabajo"             # Palabra en común para la sincronización entre ambos todo.txt
+TIEMPO_ACTUALIZACION=5m     # Tiempo que se producirá la sincronización. 5m = 5 minutos.  s = segundos m = minutos h = horas
+</code></pre>
+<h2>Notificaiones por Telegram</h2>
+<p>Para garantizar una correcta sincronización o simplemente, saber cuando la otra persona a modificado o creado una tarea, podemos habilitar que nos lleguen notificaciones por Telegram u otra aplicación de mensajería.</p>
+<p>Con Telegram es tan sencillo como añadir el <strong>TOKEN</strong> e <strong>ID</strong>.</p>
+<pre><code>
+TOKEN="305386591:AAH5avqawerqerv8973451t4"
+ID="5834877"
+</code></pre>
+<p>Es necesario otros dos archivos de configuración: - editor: Añade variable del editor a utilizar para edición del archivo de configuración - notification: Archivo de con variables para notificaciones en cualquier servicio de notificaciones</p>
+<h2>Iniciar rctodosync</h2>
+<p>Para iniciar la sincronización del ejemplo trabajo, lo haremos del siguiente modo:</p>
+<pre><code>
+rctodosync trabajo
+</code></pre>
+<p>También puedes utilizar</p>
+<pre><code>
+rctodosync trabajo on
+</code></pre>
+<h3>Editar el archivo de configuración</h3>
+<p>Con la opción <strong>e</strong>, podemos editar el archivo de configuración.</p>
+<pre><code>
+rctodosync trabajo e
+</code></pre>
+<h3>Ciclo de sincronización</h3>
+<p>También podemos cambiar el tiempo que dedica rctodosync a sincronizar ambos todo.txt. Lo haremos editando el archivo de configuración</p>
+<pre><code>
+rctodosync trabajo e
+</code></pre>
+<h3>Detener rctodosync</h3>
+<p>Podemos detener la sincronización editando el archivo de configuración con:</p>
+<pre><code>
+rctodosync trabajo e
+</code></pre>
+<h2>Otras sincronizaciones</h2>
+<p>Crea tantos archivos de configuración como necesites.</p>
+<h2>Ayuda</h2>
+<p>Este es el comando de ayuda donde muestra todas las opciones</p>
+<pre><code>
+---------------------------------------------------------------------------------
+rctodosync      [opción]               Descripción
+---------------------------------------------------------------------------------
+rctodosync      archivo_config         Sincroniza según el archivo de configuración
+rctodosync      archivo_config  on     Igual que el anterior, pero fuerza el valor de CONTROL a 0
+rctodosync      archivo_config  off    Detener sincronización del todo.txt
+
+rctodosync      archivo_config  e      Editar archivo de configuración
+rctodosync      --help, h,...          Ayuda
+
+rctodosync v0.3
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/uGeek/rctodosync">https://github.com/uGeek/rctodosync</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 20 de octubre de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-07-04</em> - <a href="../posts/2021-07-04-pter-otra-aplicacion-de-todotxt-escrita-en-python-para-terminal-interfaz-grafica.html">Pter. Otra aplicación de todo.txt escrita en python para terminal + Interfaz gráfica</a></li><li><em>2021-04-19</em> - <a href="../posts/2021-04-19-sleek-una-aplicacion-de-todotxt-moderna-y-elegante.html">Sleek. Una aplicación de todo.txt moderna y elegante</a></li><li><em>2020-05-22</em> - <a href="../posts/2020-05-22-gestionando-mis-tareas-en-la-terminal-con-topydo.html">Gestionando mis tareas en la terminal con topydo</a></li><li><em>2020-01-31</em> - <a href="../posts/2020-01-31-a-python-tambien-le-gusta-el-todotxt-todotxt-machine.html">A python también le gusta el todo.txt. todotxt-machine</a></li><li><em>2020-01-27</em> - <a href="../posts/2020-01-27-aprendiendo-todotxt-todotxt-cli.html">Aprendiendo todo.txt. todotxt-cli</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

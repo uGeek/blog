@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conectarse a una red Wifi desde la Terminal</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi. Ha sido muy sencillo volver a conectarme, utilizando la terminal. Como siempre he comentado, aunque al principio puede dar un poco de miedo la terminal, el conocerla un poco más a fondo te permite comunicarte más directamente con tu máquina. En este caso utilizar la terminal para conectarte a tu red Wi-Fi es mucho más sencillo y rápido que hacerlo de forma gráfica. En este artículo os explico de un modo sencillo cómo hacerlo. Conocer tu dispositivo Wifi Introduciremos el comando #+begin_example iwconfig #+end_example El resultado será todos los dispositivos de red que tenemos en nuestra máquina. Para filtrar el contenido solo de nuestra Wifi, podemos utilizar grep. #+begin_example ip link sho | grep w #+end_example Antiguamente el resultado sería wlan0, ahora Ubuntu, Debian,... toma por defecto otro nombre aleatorio, en mi caso wlp5s0, pero vamos...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Conectarse a una red Wifi desde la Terminal">
+    <meta property="og:description" content="Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi. Ha sido muy sencillo volver a conectarme, utilizando la terminal. Como siempre he comentado, aunque al principio puede dar un poco de miedo la terminal, el conocerla un poco más a fondo te permite comunicarte más directamente con tu máquina. En este caso utilizar la terminal para conectarte a tu red Wi-Fi es mucho más sencillo y rápido que hacerlo de forma gráfica. En este artículo os explico de un modo sencillo cómo hacerlo. Conocer tu dispositivo Wifi Introduciremos el comando #+begin_example iwconfig #+end_example El resultado será todos los dispositivos de red que tenemos en nuestra máquina. Para filtrar el contenido solo de nuestra Wifi, podemos utilizar grep. #+begin_example ip link sho | grep w #+end_example Antiguamente el resultado sería wlan0, ahora Ubuntu, Debian,... toma por defecto otro nombre aleatorio, en mi caso wlp5s0, pero vamos...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/wifi.png">
+    <meta property="og:url" content="conectarse-a-una-red-wifi-desde-la-terminal">
+    <meta name="twitter:title" content="Conectarse a una red Wifi desde la Terminal">
+    <meta name="twitter:description" content="Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi. Ha sido muy sencillo volver a conectarme, utilizando la terminal. Como siempre he comentado, aunque al principio puede dar un poco de miedo la terminal, el conocerla un poco más a fondo te permite comunicarte más directamente con tu máquina. En este caso utilizar la terminal para conectarte a tu red Wi-Fi es mucho más sencillo y rápido que hacerlo de forma gráfica. En este artículo os explico de un modo sencillo cómo hacerlo. Conocer tu dispositivo Wifi Introduciremos el comando #+begin_example iwconfig #+end_example El resultado será todos los dispositivos de red que tenemos en nuestra máquina. Para filtrar el contenido solo de nuestra Wifi, podemos utilizar grep. #+begin_example ip link sho | grep w #+end_example Antiguamente el resultado sería wlan0, ahora Ubuntu, Debian,... toma por defecto otro nombre aleatorio, en mi caso wlp5s0, pero vamos...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/wifi.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Conectarse a una red Wifi desde la Terminal</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 268 palabras. <a href="../categories/wifi.html">wifi</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Estoy lejos de mi router y mi pc se ha desconectado de la Wi-Fi. Ha</p>
+<p>sido muy sencillo volver a conectarme, utilizando la terminal.</p>
+<p>Como siempre he comentado, aunque al principio puede dar un poco de</p>
+<p>miedo la terminal, el conocerla un poco más a fondo te permite</p>
+<p>comunicarte más directamente con tu máquina.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/wifi.png" alt=""></p>
+<p>En este caso utilizar la terminal para conectarte a tu red Wi-Fi es</p>
+<p>mucho más sencillo y rápido que hacerlo de forma gráfica.</p>
+<p>En este artículo os explico de un modo sencillo cómo hacerlo.</p>
+<h2>Conocer tu dispositivo Wifi</h2>
+<p>Introduciremos el comando</p>
+<p>#+begin_example</p>
+<p>iwconfig</p>
+<p>#+end_example</p>
+<p>El resultado será todos los dispositivos de red que tenemos en nuestra</p>
+<p>máquina. Para filtrar el contenido solo de nuestra Wifi, podemos</p>
+<p>utilizar grep.</p>
+<p>#+begin_example</p>
+<p>ip link sho | grep w</p>
+<p>#+end_example</p>
+<p>Antiguamente el resultado sería <code>wlan0</code>, ahora Ubuntu, Debian,... toma por defecto otro nombre aleatorio, en mi caso <code>wlp5s0</code>, pero vamos a considerar ahora en el tutorial que el nombre de mi dispositivo wifi es <code>wlan0</code>.</p>
+<h2>Activar tu tarjeta Wifi</h2>
+<p>Para activar tu tarjeta wifi:</p>
+<p>#+begin_example</p>
+<p>sudo iwconfig wlan0</p>
+<p>#+end_example</p>
+<h2>Conectarse a un punto de acceso Wifi</h2>
+<p>Introduciremos este comando, sustituyendo <code>nombre_punto_acceso</code> por tu</p>
+<p>nombre de acceso, en este caso sería el nombre de tu red Wifi.</p>
+<p>#+begin_example</p>
+<p>iwconfig wlan0 essid nombrepuntoacceso</p>
+<p>#+end_example</p>
+<p>Si en un futuro se desconecta nuestra red wifi, sería tan fácil como</p>
+<p>ejecutar este comando.</p>
+<p>Ahora introduciremos nuestra contraseña</p>
+<p>#+begin_example</p>
+<p>iwconfig wlan0 essid nombrepuntoacceso key contraseña</p>
+<p>#+end_example</p>
+<h2>Ping para saber si tenemos internet</h2>
+<p>Vamos ha hacer un ping a los servidores de cloudflare.</p>
+<p>#+begin_example</p>
+<p>ping 1.1.1.1</p>
+<p>#+end_example</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el sábado, 26 de diciembre de 2020</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidor SSH en Termux Android</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Crear tus scripts para termux con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC conectado vía SSH al móvil. Vamos a ver como instalar un servidor SSH en mi móvil Android y acceder remotamente. Instalar OpenSSH pkg upgrade pkg install openssh Iniciar el servidor SSH Para iniciar el demonio, ejecutamos el siguiente comando: sshd Si queremos cambiar la contraseña de nuestro servidor SSH, lo haremos con el siguiente comando: passwd usuario Nos pedirá la contraseña. Conectarnos remotamente vía SSH El servidor SSH de termux no corre por el puerto 22 como es habitual, si no que lo hace por el puerto 8022. ssh usuario@localhost -p 8022 Otros paquetes Saber nuestra IP Para conocer nuestra IP instalaremos el paquete net-tools. pkg install net-tools Vamos a ver que IP estamos utilizando con: ifconfig Matar Procesos Para...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Servidor SSH en Termux Android">
+    <meta property="og:description" content="Crear tus scripts para termux con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC conectado vía SSH al móvil. Vamos a ver como instalar un servidor SSH en mi móvil Android y acceder remotamente. Instalar OpenSSH pkg upgrade pkg install openssh Iniciar el servidor SSH Para iniciar el demonio, ejecutamos el siguiente comando: sshd Si queremos cambiar la contraseña de nuestro servidor SSH, lo haremos con el siguiente comando: passwd usuario Nos pedirá la contraseña. Conectarnos remotamente vía SSH El servidor SSH de termux no corre por el puerto 22 como es habitual, si no que lo hace por el puerto 8022. ssh usuario@localhost -p 8022 Otros paquetes Saber nuestra IP Para conocer nuestra IP instalaremos el paquete net-tools. pkg install net-tools Vamos a ver que IP estamos utilizando con: ifconfig Matar Procesos Para...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="servidor-ssh-en-termux-android">
+    <meta name="twitter:title" content="Servidor SSH en Termux Android">
+    <meta name="twitter:description" content="Crear tus scripts para termux con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC conectado vía SSH al móvil. Vamos a ver como instalar un servidor SSH en mi móvil Android y acceder remotamente. Instalar OpenSSH pkg upgrade pkg install openssh Iniciar el servidor SSH Para iniciar el demonio, ejecutamos el siguiente comando: sshd Si queremos cambiar la contraseña de nuestro servidor SSH, lo haremos con el siguiente comando: passwd usuario Nos pedirá la contraseña. Conectarnos remotamente vía SSH El servidor SSH de termux no corre por el puerto 22 como es habitual, si no que lo hace por el puerto 8022. ssh usuario@localhost -p 8022 Otros paquetes Saber nuestra IP Para conocer nuestra IP instalaremos el paquete net-tools. pkg install net-tools Vamos a ver que IP estamos utilizando con: ifconfig Matar Procesos Para...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Servidor SSH en Termux Android</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 253 palabras. <a href="../categories/termux.html">termux</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Crear tus scripts para <strong>termux</strong> con el teclado del móvil es un poco complejo. En mi caso utilizo un teclado bluetooth, pero la mejor opción sería hacerlo desde mi PC conectado vía <strong>SSH</strong> al móvil.</p>
+<p>Vamos a ver como instalar un servidor <strong>SSH</strong> en mi móvil Android y acceder remotamente.</p>
+<h2>Instalar OpenSSH</h2>
+<pre><code>
+pkg upgrade
+pkg install openssh
+</code></pre>
+<h2>Iniciar el servidor SSH</h2>
+<p>Para iniciar el demonio, ejecutamos el siguiente comando:</p>
+<pre><code>
+sshd
+</code></pre>
+<p>Si queremos cambiar la contraseña de nuestro servidor SSH, lo haremos con el siguiente comando:</p>
+<pre><code>
+passwd usuario
+</code></pre>
+<p>Nos pedirá la contraseña.</p>
+<h2>Conectarnos remotamente vía SSH</h2>
+<p>El servidor <strong>SSH</strong> de termux no corre por el puerto <strong>22</strong> como es habitual, si no que lo hace por el puerto <strong>8022</strong>.</p>
+<pre><code>
+ssh usuario@localhost -p 8022
+</code></pre>
+<h2>Otros paquetes</h2>
+<h3>Saber nuestra IP</h3>
+<p>Para conocer nuestra IP instalaremos el paquete <strong>net-tools</strong>.</p>
+<pre><code>
+pkg install net-tools
+</code></pre>
+<p>Vamos a ver que IP estamos utilizando con:</p>
+<pre><code>
+ifconfig
+</code></pre>
+<h3>Matar Procesos</h3>
+<p>Para matar procesos utilizaremos el paquete <strong>procps</strong>, que es quien contiene el comando <strong>pkill</strong>:</p>
+<pre><code>
+pkg install procps
+</code></pre>
+<p>Ahora, para matar el servidor <strong>SSH</strong></p>
+<pre><code>
+pkill sshd
+</code></pre>
+<h2>Copiar por SSH de un movil con termux a otro</h2>
+<h3>Copiar todo un directorio</h3>
+<p>Copiaré todos los archivos del directorio <code>$HOME/.shortcuts/.</code> dentro del directorio <code>.shortcuts</code> del otro movil.</p>
+<ul>
+<li><code>-P 8022</code> Puerto de SSH en termux</li>
+<li><code>-r</code> Recursivamente, todos los archivos y directorios dentro del directorio</li>
+</ul>
+<pre><code>
+scp -P 8022 -r $HOME/.shortcuts/.  angel@192.168.1.100:$HOME/.shortcuts
+</code></pre>
+<h3>Copiar un archivo</h3>
+<p>Situado dentro del directorio <code>.ssh</code>, voy a copiar el archivo <strong>config</strong>.</p>
+<pre><code>
+scp -P 8022  config   angel@192.168.1.100:$HOME/.ssh
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://rubikcuv.medium.com/instalar-servidor-ssh-sobre-termux-en-android-2aabfe7a47e">https://rubikcuv.medium.com/instalar-servidor-ssh-sobre-termux-en-android-2aabfe7a47e</a></li>
+<li><a href="https://dylanmeca.github.io/2021/04/27/Crear-servidor-SSH-en-Termux.html">https://dylanmeca.github.io/2021/04/27/Crear-servidor-SSH-en-Termux.html</a></li>
+<li><a href="https://parzibyte.me/blog/2019/07/31/servidor-ssh-termux-android/">https://parzibyte.me/blog/2019/07/31/servidor-ssh-termux-android/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 06 de febrero de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-03-25</em> - <a href="../posts/2022-03-25-termux-una-distro-linux-en-android-con-la-que-crear-tus-aplicaciones.html">Termux. Una distro Linux en Android con la que crear tus aplicaciones</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

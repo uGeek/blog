@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendario en la terminal</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 5 minutos. 576 palabras. terminal Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el uso de scripts, Vamos a ver algunos ejemplos del uso de cal y ncal cal y ncal cal Con el comando cal, nos presenta el calendario con los días en la parte superior Septiembre 2019 do lu ma mi ju vi sá 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ncal Con ncal, nos muestra los días de la semana a la izquierda Septiembre 2019 lu 2 9 16 23 30 ma 3 10 17 24 mi 4 11 18 25 ju 5 12 19 26 vi 6 13...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Calendario en la terminal">
+    <meta property="og:description" content="Tiempo estimado de lectura: 5 minutos. 576 palabras. terminal Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el uso de scripts, Vamos a ver algunos ejemplos del uso de cal y ncal cal y ncal cal Con el comando cal, nos presenta el calendario con los días en la parte superior Septiembre 2019 do lu ma mi ju vi sá 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ncal Con ncal, nos muestra los días de la semana a la izquierda Septiembre 2019 lu 2 9 16 23 30 ma 3 10 17 24 mi 4 11 18 25 ju 5 12 19 26 vi 6 13...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/calendar.jpg">
+    <meta property="og:url" content="calendario-en-la-terminal">
+    <meta name="twitter:title" content="Calendario en la terminal">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 5 minutos. 576 palabras. terminal Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el uso de scripts, Vamos a ver algunos ejemplos del uso de cal y ncal cal y ncal cal Con el comando cal, nos presenta el calendario con los días en la parte superior Septiembre 2019 do lu ma mi ju vi sá 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ncal Con ncal, nos muestra los días de la semana a la izquierda Septiembre 2019 lu 2 9 16 23 30 ma 3 10 17 24 mi 4 11 18 25 ju 5 12 19 26 vi 6 13...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/calendar.jpg">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Calendario en la terminal</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 490 palabras. <a href="../categories/terminal.html">terminal</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 5 minutos. 576 palabras. <a href="https://ugeek.github.io/blog/categories/terminal">terminal</a></h5>
+<p>Desde la terminal, podemos hacer que nos muestre un calendario de muchas maneras. Este calendario puede ser útil como información, así como poder exportar o modificar el resultado para el uso de scripts,</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/calendar.jpg" alt=""></p>
+<p>Vamos a ver algunos ejemplos del uso de <strong>cal</strong> y <strong>ncal</strong></p>
+<h2>cal y ncal</h2>
+<h3>cal</h3>
+<p>Con el comando <strong>cal</strong>, nos presenta el calendario con los días en la parte superior</p>
+<pre><code>  Septiembre 2019     
+do lu ma mi ju vi sá  
+ 1  2  3  4  5  6  7  
+ 8  9 10 11 12 13 14  
+15 16 17 18 19 20 21  
+22 23 24 25 26 27 28  
+29 30     
+</code></pre>
+<h3>ncal</h3>
+<p>Con <strong>ncal</strong>, nos muestra los días de la semana a la izquierda</p>
+<pre><code>    Septiembre 2019   
+lu     2  9 16 23 30
+ma     3 10 17 24   
+mi     4 11 18 25   
+ju     5 12 19 26   
+vi     6 13 20 27   
+sá     7 14 21 28   
+do  1  8 15 22 29   
+</code></pre>
+<h2>Ejemplos de cal y ncal</h2>
+<h3>Calendario mes actual</h3>
+<pre><code>cal
+</code></pre>
+<pre><code>ncal
+</code></pre>
+<h3>Calendario de un mes en concreto.</h3>
+<p>Ejemplo: Mes número 3, (<strong>-m3</strong>).</p>
+<pre><code>cal -m3
+</code></pre>
+<h3>Año completo</h3>
+<p>Por ejemplo 2019. Opción <strong>-y</strong> de year, año.</p>
+<pre><code>cal -y 2019
+</code></pre>
+<h3>Mes y un año en concreto</h3>
+<p>Ejemplo el mes 7 del año 2017</p>
+<pre><code>cal -d 2017-07
+</code></pre>
+<h3>Número de Semana</h3>
+<pre><code>ncal -w
+</code></pre>
+<p>Para saber en que número de semana estamos, necesitamos utilizar <strong>ncal</strong> y la opción <strong>-w</strong> de week.</p>
+<pre><code>    Septiembre 2019   
+lu     2  9 16 23 30
+ma     3 10 17 24   
+mi     4 11 18 25   
+ju     5 12 19 26   
+vi     6 13 20 27   
+sá     7 14 21 28   
+do  1  8 15 22 29   
+   35 36 37 38 39 40
+</code></pre>
+<h3>Meses precedentes, posterior…</h3>
+<p>Mostrar el mes actual, precedente y posterior. Este comanda vale tanto para <strong>cal</strong> como <strong>ncal</strong>.</p>
+<pre><code>cal -3
+</code></pre>
+<p>Mostrar los 2 meses posteriores</p>
+<pre><code>cal -A2
+</code></pre>
+<p>Mostrar los 2 meses anteriores</p>
+<pre><code>cal -B2
+</code></pre>
+<p>Podemos combinar ambas opciones</p>
+<pre><code>cal -B1 -A2
+</code></pre>
+<h3>Número del día en el año</h3>
+<p>Número del día del año</p>
+<pre><code>cal -j
+</code></pre>
+<p>Mostrar todos los días del año</p>
+<pre><code>cal -j 2019
+</code></pre>
+<h3>Iniciar semana en Lunes</h3>
+<p>Iniciar la semana en Lunes. Esta opción solo está disponible con <strong>ncal</strong></p>
+<pre><code>ncal -M
+</code></pre>
+<p>Para mostrar el calendario, comenzando por el lunes como lo haría <strong>cal</strong>, vanos a ejecutar este miniscript:</p>
+<pre><code>cal | awk '{ print " "$0; getline; print " Lu Ma Mi Ju Vi Sa Do"; \
+getline; if (substr($0,1,2) == " 1") print "                    1 "; \
+do { prevline=$0; if (getline == 0) exit; print " " \
+substr(prevline,4,17) " " substr($0,1,2) " "; } while (1) }'
+</code></pre>
+<h3>Filtrar con grep</h3>
+<p>Filtrar los miércoles del mes actual</p>
+<pre><code>ncal | grep mi
+</code></pre>
+<pre><code>mi     4 11 18 25
+</code></pre>
+<h3>Que pasó el día de hoy hace años</h3>
+<p>La opción <strong>-l</strong>, muestra lo que pasó y <strong>0</strong> en el día de hoy</p>
+<pre><code>calendar -l 0
+</code></pre>
+<p>En los próximos 5 días</p>
+<pre><code>calendar -l 5
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://www.computerhope.com/unix/ucal.htm">https://www.computerhope.com/unix/ucal.htm</a></li>
+<li><a href="https://www.howtoforge.com/linux-cal-ncal-command/">https://www.howtoforge.com/linux-cal-ncal-command/</a></li>
+<li><a href="https://pixabay.com/es/photos/calendario-calendario-mural-d%C3%ADas-1990453/">imagen</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 11 de octubre de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-09-24</em> - <a href="../posts/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html">Comprimiendo archivos pdf desde la terminal</a></li><li><em>2019-11-20</em> - <a href="../posts/2019-11-20-test-de-velocidad-en-la-terminal.html">Test de velocidad en la terminal</a></li><li><em>2019-04-06</em> - <a href="../posts/2019-04-06-atajos-de-terminal.html">Atajos de Terminal</a></li><li><em>2019-04-01</em> - <a href="../posts/2019-04-01-calculando-con-mi-terminal.html">Calculando con mi terminal</a></li><li><em>2019-01-26</em> - <a href="../posts/2019-01-26-castero-podcatcher-ligero-para-terminal.html"> Castero. Podcatcher ligero para Terminal</a></li><li><em>2019-01-05</em> - <a href="../posts/2019-01-05-elimina-archivos-duplicados-con-fduples.html"> Elimina archivos duplicados con fduples</a></li><li><em>2018-12-28</em> - <a href="../posts/2018-12-28-descargar-todos-los-episodios-de-un-podcast-con-wget.html">   Descargar todos los episodios de un Podcast con wget</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

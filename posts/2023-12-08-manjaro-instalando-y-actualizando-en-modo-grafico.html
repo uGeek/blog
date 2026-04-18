@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manjaro Instalando y actualizando en modo Grafico</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Últimamente están habiendo problemas con las actualizaciones en Manjaro y el único modo de solucionarlo ha sido actualizar con pamac en modo gráfico. Este problema lo he tenido tanto en la versión de escritorio como en la versión de mi Raspberry Pi. En la parte final explico como hacerlo en la Raspberry Pi o dispositivo sin interfaz gráfica a modo de servidor. Lanzar pamac Si deseas utilizar la versión gráfica de Pamac para actualizar el sistema, puedes hacerlo a través de la interfaz gráfica de usuario. Para lanzar Pamac desde la terminal, puedes usar el siguiente comando: pamac-manager Esto abrirá la interfaz gráfica de Pamac, donde podrás buscar, instalar y actualizar aplicaciones. Si deseas actualizar todo el sistema, haz clic en el botón "Actualizar" en la pestaña "Actualizaciones". Si deseas actualizar solo los paquetes de software instalados, haz clic en el botón "Sincronizar" en la pestaña "Instalado". Permisos para Instalar,...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Manjaro Instalando y actualizando en modo Grafico">
+    <meta property="og:description" content="Últimamente están habiendo problemas con las actualizaciones en Manjaro y el único modo de solucionarlo ha sido actualizar con pamac en modo gráfico. Este problema lo he tenido tanto en la versión de escritorio como en la versión de mi Raspberry Pi. En la parte final explico como hacerlo en la Raspberry Pi o dispositivo sin interfaz gráfica a modo de servidor. Lanzar pamac Si deseas utilizar la versión gráfica de Pamac para actualizar el sistema, puedes hacerlo a través de la interfaz gráfica de usuario. Para lanzar Pamac desde la terminal, puedes usar el siguiente comando: pamac-manager Esto abrirá la interfaz gráfica de Pamac, donde podrás buscar, instalar y actualizar aplicaciones. Si deseas actualizar todo el sistema, haz clic en el botón "Actualizar" en la pestaña "Actualizaciones". Si deseas actualizar solo los paquetes de software instalados, haz clic en el botón "Sincronizar" en la pestaña "Instalado". Permisos para Instalar,...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="manjaro-instalando-y-actualizando-en-modo-grafico">
+    <meta name="twitter:title" content="Manjaro Instalando y actualizando en modo Grafico">
+    <meta name="twitter:description" content="Últimamente están habiendo problemas con las actualizaciones en Manjaro y el único modo de solucionarlo ha sido actualizar con pamac en modo gráfico. Este problema lo he tenido tanto en la versión de escritorio como en la versión de mi Raspberry Pi. En la parte final explico como hacerlo en la Raspberry Pi o dispositivo sin interfaz gráfica a modo de servidor. Lanzar pamac Si deseas utilizar la versión gráfica de Pamac para actualizar el sistema, puedes hacerlo a través de la interfaz gráfica de usuario. Para lanzar Pamac desde la terminal, puedes usar el siguiente comando: pamac-manager Esto abrirá la interfaz gráfica de Pamac, donde podrás buscar, instalar y actualizar aplicaciones. Si deseas actualizar todo el sistema, haz clic en el botón "Actualizar" en la pestaña "Actualizaciones". Si deseas actualizar solo los paquetes de software instalados, haz clic en el botón "Sincronizar" en la pestaña "Instalado". Permisos para Instalar,...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Manjaro Instalando y actualizando en modo Grafico</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 346 palabras. <a href="../categories/manjaro.html">manjaro</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Últimamente están habiendo problemas con las actualizaciones en <strong>Manjaro</strong> y el único modo de solucionarlo ha sido actualizar con <strong>pamac</strong> en modo gráfico.</p>
+<p>Este problema lo he tenido tanto en la versión de escritorio como en la versión de mi <strong>Raspberry Pi</strong>.</p>
+<p>En la parte final explico como hacerlo en la <strong>Raspberry Pi</strong> o dispositivo sin interfaz gráfica a modo de servidor.</p>
+<h2>Lanzar pamac</h2>
+<p>Si deseas utilizar la versión gráfica de Pamac para actualizar el sistema, puedes hacerlo a través de la interfaz gráfica de usuario. Para lanzar Pamac desde la terminal, puedes usar el siguiente comando:</p>
+<pre><code>
+pamac-manager
+</code></pre>
+<p>Esto abrirá la interfaz gráfica de Pamac, donde podrás buscar, instalar y actualizar aplicaciones. Si deseas actualizar todo el sistema, haz clic en el botón "Actualizar" en la pestaña "Actualizaciones".</p>
+<p>Si deseas actualizar solo los paquetes de software instalados, haz clic en el botón "Sincronizar" en la pestaña "Instalado".</p>
+<h2>Permisos para Instalar, Actualizar,...</h2>
+<p>Si te aparece un mensaje de error de autenticación al intentar actualizar el sistema a través de Pamac, es posible que debas habilitar Polkit en tu sistema.</p>
+<p>Polkit es un marco de autorización utilizado por Pamac para realizar tareas administrativas.</p>
+<p>Para solucionar este problema, puedes intentar lo siguiente:</p>
+<p>Abre una terminal y ejecuta el siguiente comando para instalar Polkit:</p>
+<pre><code>
+sudo pacman -S polkit polkit-gnome
+</code></pre>
+<p>Asegúrate de que el agente de autenticación de Polkit esté en ejecución. Puedes hacerlo ejecutando el siguiente comando:</p>
+<pre><code>
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &amp;
+</code></pre>
+<p>Ahora al intenta actualizar o instalar en el sistema a través de Pamac, te pedirá la contraseña de usuario <strong>root</strong>.</p>
+<h2>En Raspberry Pi y versión de servidor</h2>
+<p>Para conectarte al servidor y ver la versión gráfica en tu escritorio Linux:</p>
+<pre><code>
+ssh -YC usuario@ip
+</code></pre>
+<p>El parámetro -Y le dice a ssh que habilite el reenvío de X11, lo que te permite ejecutar aplicaciones gráficas desde el servidor remoto y mostrarlas en tu pantalla local. El parámetro -C le dice a ssh que comprima los datos antes de enviarlos, lo que puede mejorar el rendimiento de la conexión.</p>
+<p>Ahora ya puedes acceder a <strong>pamac</strong> para actualizar.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 08 de diciembre de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-04-09</em> - <a href="../posts/2023-04-09-manjaro-manteniendolo-al-dia-desinstalando-paquetes-pacman-y-yay-que-no-utilizo.html">Manjaro. Manteniendolo al día. Desinstalando paquetes pacman y yay que no utilizo</a></li><li><em>2023-01-17</em> - <a href="../posts/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html">Liberar el puerto 53 utilizado por systemd-resolved</a></li><li><em>2023-01-09</em> - <a href="../posts/2023-01-09-manjaro-elegir-los-repositorios-mas-rapidos.html">Manjaro. Elegir los repositorios más rápidos</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

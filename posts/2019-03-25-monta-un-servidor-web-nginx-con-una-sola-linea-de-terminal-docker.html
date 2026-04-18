@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 4 minutos. 447 palabras. docker Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de Nginx es una buenísima solución. Hay tres motivos por los cuales instalar este Docker: Versión oficial a la última Solo una línea de Terminal Funciona con todas las arquitecturas (amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x) También podemos instalar Nginx, partiendo de Alpine Linux, ocupando aproximadamente una décima parte. En próximos Post y Podcast, os hablaré más de Alpine Linux que para Docker que es espectacular. Nos permite montar montones de servicios con un mínimo espacio. Para utilizar otro puerto que no sea el 80, por ejemplo el puerto 90, ejecutaremos en la línea de terminal -p 90:80. Montando el Docker oficial de Nginx para arquitectura 64bits Este Docker funciona con todas las arquitecturas especificando o no el TAG de la misma. El...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Monta un servidor web Nginx, con una sola línea de Terminal (Docker)">
+    <meta property="og:description" content="Tiempo estimado de lectura: 4 minutos. 447 palabras. docker Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de Nginx es una buenísima solución. Hay tres motivos por los cuales instalar este Docker: Versión oficial a la última Solo una línea de Terminal Funciona con todas las arquitecturas (amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x) También podemos instalar Nginx, partiendo de Alpine Linux, ocupando aproximadamente una décima parte. En próximos Post y Podcast, os hablaré más de Alpine Linux que para Docker que es espectacular. Nos permite montar montones de servicios con un mínimo espacio. Para utilizar otro puerto que no sea el 80, por ejemplo el puerto 90, ejecutaremos en la línea de terminal -p 90:80. Montando el Docker oficial de Nginx para arquitectura 64bits Este Docker funciona con todas las arquitecturas especificando o no el TAG de la misma. El...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/nginx.png">
+    <meta property="og:url" content="monta-un-servidor-web-nginx-con-una-sola-linea-de-terminal-docker">
+    <meta name="twitter:title" content="Monta un servidor web Nginx, con una sola línea de Terminal (Docker)">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 4 minutos. 447 palabras. docker Si quieres montar un servidor web en un pispás y no complicarte la vida, el Docker oficial de Nginx es una buenísima solución. Hay tres motivos por los cuales instalar este Docker: Versión oficial a la última Solo una línea de Terminal Funciona con todas las arquitecturas (amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x) También podemos instalar Nginx, partiendo de Alpine Linux, ocupando aproximadamente una décima parte. En próximos Post y Podcast, os hablaré más de Alpine Linux que para Docker que es espectacular. Nos permite montar montones de servicios con un mínimo espacio. Para utilizar otro puerto que no sea el 80, por ejemplo el puerto 90, ejecutaremos en la línea de terminal -p 90:80. Montando el Docker oficial de Nginx para arquitectura 64bits Este Docker funciona con todas las arquitecturas especificando o no el TAG de la misma. El...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/nginx.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Monta un servidor web Nginx, con una sola línea de Terminal (Docker)</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 362 palabras. <a href="../categories/docker.html">docker</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 4 minutos. 447 palabras. <a href="https://ugeek.github.io/blog/categories/docker">docker</a></h5>
+<p>Si quieres montar un servidor web en un pispás y no complicarte la vida, el <a href="https://hub.docker.com/_/nginx">Docker oficial de Nginx</a> es una buenísima solución. Hay tres motivos por los cuales instalar este Docker:</p>
+<ul>
+<li>Versión oficial a la última</li>
+<li>Solo una línea de Terminal</li>
+<li>Funciona con todas las arquitecturas (amd64, arm32v6, arm32v7, arm64v8, i386, ppc64le, s390x)</li>
+</ul>
+<p><img src="https://ugeek.github.io/blog/images-blog/nginx.png" alt=""></p>
+<p>También podemos instalar Nginx, partiendo de Alpine Linux, ocupando aproximadamente una décima parte. En próximos Post y Podcast, os hablaré más de Alpine Linux que para Docker que es espectacular. Nos permite montar montones de servicios con un mínimo espacio.</p>
+<p>Para utilizar otro puerto que no sea el 80, por ejemplo el puerto 90, ejecutaremos en la línea de terminal <code>-p 90:80</code>.</p>
+<h2>Montando el Docker oficial de Nginx para arquitectura 64bits</h2>
+<p>Este Docker funciona con todas las arquitecturas especificando o no el TAG de la misma. El tamaño de la Imagen es de 109MB. Vamos a instalarlo y probar: La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
+<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx</code></p>
+<h2>Docker oficial de Nginx, arquitectura 64bits. Alpine Linux</h2>
+<p>Ahora vamos a Instalar el mismo Docker oficial, pero partiendo de un Alpine Linux. Tan solo 16.1MB de Imagen!!! La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
+<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro amd64/nginx:alpine</code></p>
+<h2>Docker oficial de Nginx en Raspberry</h2>
+<p>Me he emocionado tanto instalando Nginx desde un Alpine Linux, que ahora quiero hacer lo propio en mi Raspberry. Tamaño de la Imagen de 13,4 Mb en mi Raspberry.</p>
+<p>Como veis, he utilizado el mismo comando que el apartado anterior. La carpeta <strong>$HOME/docker/nginx</strong>, será la raiz del servidor web.</p>
+<p><code>docker run --name nginx -d -p 80:80 -v $HOME/docker/nginx:/usr/share/nginx/html:ro nginx:alpine</code></p>
+<h2>Docker Compose</h2>
+<pre><code>version: '2.1'
+services:
+ web:
+  image: nginx:alpine
+  container_name: nginx
+  volumes:
+    - /data:/usr/share/nginx/html:ro
+  ports:
+   - "80:80"
+  environment:
+   - NGINX_HOST=url.com
+   - NGINX_PORT=80
+  restart: unless-stopped
+</code></pre>
+<h2>Conclusión</h2>
+<p>Estoy comenzando a tener Dockerdependencia y es que es inevitable. Poder montar tantos servidores web como quiera con un puerto diferente y con la última versión… Como dice el anuncio, no tiene precio, jejeje</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 25 de marzo de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-11-25</em> - <a href="../posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html">Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria</a></li><li><em>2023-11-19</em> - <a href="../posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html">Docker. Dockge Gestionando mis Docker Compose de forma gráfica</a></li><li><em>2023-03-23</em> - <a href="../posts/2023-03-23-docker-wikitten-una-wiki-markdown.html">Docker. Wikitten. Una wiki markdown</a></li><li><em>2022-12-22</em> - <a href="../posts/2022-12-22-docker-borrar-logs.html">Docker. Borrar logs</a></li><li><em>2022-12-07</em> - <a href="../posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html">Docker. Instalar docker, docker compose y Portainer en Arch Linux</a></li><li><em>2022-03-29</em> - <a href="../posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html">Gotty. Terminal en tu Navegador Web</a></li><li><em>2021-07-25</em> - <a href="../posts/2021-07-25-bash-en-docker.html">Bash en Docker</a></li><li><em>2021-07-02</em> - <a href="../posts/2021-07-02-comandos-docker-para-guardar-imagen.html">Comandos docker para guardar imagen</a></li><li><em>2021-06-25</em> - <a href="../posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html">Docker: DLNA no esta muerto. Me gusta Gerbera</a></li><li><em>2021-06-17</em> - <a href="../posts/2021-06-17-docker-tailscale.html">Docker. Tailscale</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

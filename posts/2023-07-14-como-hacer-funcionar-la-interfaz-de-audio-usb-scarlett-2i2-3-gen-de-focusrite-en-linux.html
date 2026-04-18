@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="La interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite es una interfaz de audio de 2 entradas y 2 salidas con conexión USB-C que permite grabar y reproducir audio con alta calidad y bajo ruido . En este artículo te explicare cómo hacerla funcionar en Linux. Inhabilitar el montado como interfaz de almacenamiento Cuando conectamos por primera vez nuestra interfaz Scarlett 2i2, por defecto se monta en nuestro sistema linux como si fuera una unidad de almacenamiento USB. Dentro de este directorio hay una serie de archivos para registrar nuestra interfaz. Para que esto no suceda y funcione correctamente en el sistema linux, es necesario seguir los siguientes pasos: - Desconecta la interfaz del cable usb - Mantén pulsado el botón de 48v durante un mínimo de 5 segundo a la vez que conectes el cable USB-C al PC. - Ahora ya no volverá a montarse al inicio...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux">
+    <meta property="og:description" content="La interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite es una interfaz de audio de 2 entradas y 2 salidas con conexión USB-C que permite grabar y reproducir audio con alta calidad y bajo ruido . En este artículo te explicare cómo hacerla funcionar en Linux. Inhabilitar el montado como interfaz de almacenamiento Cuando conectamos por primera vez nuestra interfaz Scarlett 2i2, por defecto se monta en nuestro sistema linux como si fuera una unidad de almacenamiento USB. Dentro de este directorio hay una serie de archivos para registrar nuestra interfaz. Para que esto no suceda y funcione correctamente en el sistema linux, es necesario seguir los siguientes pasos: - Desconecta la interfaz del cable usb - Mantén pulsado el botón de 48v durante un mínimo de 5 segundo a la vez que conectes el cable USB-C al PC. - Ahora ya no volverá a montarse al inicio...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="como-hacer-funcionar-la-interfaz-de-audio-usb-scarlett-2i2-3-gen-de-focusrite-en-linux">
+    <meta name="twitter:title" content="Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux">
+    <meta name="twitter:description" content="La interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite es una interfaz de audio de 2 entradas y 2 salidas con conexión USB-C que permite grabar y reproducir audio con alta calidad y bajo ruido . En este artículo te explicare cómo hacerla funcionar en Linux. Inhabilitar el montado como interfaz de almacenamiento Cuando conectamos por primera vez nuestra interfaz Scarlett 2i2, por defecto se monta en nuestro sistema linux como si fuera una unidad de almacenamiento USB. Dentro de este directorio hay una serie de archivos para registrar nuestra interfaz. Para que esto no suceda y funcione correctamente en el sistema linux, es necesario seguir los siguientes pasos: - Desconecta la interfaz del cable usb - Mantén pulsado el botón de 48v durante un mínimo de 5 segundo a la vez que conectes el cable USB-C al PC. - Ahora ya no volverá a montarse al inicio...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 356 palabras. <a href="../categories/scarlett.html">scarlett</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>La interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite es una interfaz de audio de 2 entradas y 2 salidas con conexión USB-C que permite grabar y reproducir audio con alta calidad y bajo ruido . En este artículo te explicare cómo hacerla funcionar en Linux.</p>
+<h2>Inhabilitar el montado como interfaz de almacenamiento</h2>
+<p>Cuando conectamos por primera vez nuestra interfaz Scarlett 2i2, por defecto se monta en nuestro sistema linux como si fuera una unidad de almacenamiento USB. Dentro de este directorio hay una serie de archivos para registrar nuestra interfaz. Para que esto no suceda y funcione correctamente en el sistema linux, es necesario seguir los siguientes pasos: - Desconecta la interfaz del cable <strong>usb</strong> - Mantén pulsado el botón de <strong>48v</strong> durante un mínimo de 5 segundo a la vez que conectes el cable USB-C al PC. - Ahora ya no volverá a montarse al inicio como una unidad de almacenamiento y si como interfaz de sonido</p>
+<h2>Configurar la interfaz Scarlett en tu sistema linux</h2>
+<ul>
+<li>Localiza tu modelo y copia el texto que hay a continuación para añadirlo a un archivo de configuración que vamos a crear.</li>
+</ul>
+<p>Gen 2:</p>
+<ul>
+<li>6i6: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8203 device_setup</code>1=</li>
+<li>18i8: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8204 device_setup</code>1=</li>
+<li>18i20: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8201 device_setup</code>1=</li>
+</ul>
+<p>Gen 3:</p>
+<ul>
+<li>Solo: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8211 device_setup</code>1=</li>
+<li>2i2: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8210 device_setup</code>1=</li>
+<li>4i4: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8212 device_setup</code>1=</li>
+<li>8i6: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8213 device_setup</code>1=</li>
+<li>18i8: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8214 device_setup</code>1=</li>
+<li>18i20: <code>options snd_usb_audio vid</code>0x1235 pid<code>0x8215 device_setup</code>1=</li>
+</ul>
+<p>Vamos a crear una archivo de configuración, es muy importante que acabe con la extensión <strong>.conf</strong>.</p>
+<pre><code>
+sudo nano /etc/modprobe.d/scarlett.conf
+</code></pre>
+<p>Añade la línea de la interfaz que tengas, en mi caso la 2i2 3ª Generación</p>
+<p>En mi caso pego:</p>
+<pre><code>
+options snd_usb_audio vid=0x1235 pid=0x8210 device_setup=1
+</code></pre>
+<p><strong>Reinicia el PC</strong></p>
+<h2>Alsamixer</h2>
+<p>Vamos a ver que todo funciona correctamente. Para ello abriremos nuevamente nuestra terminal y ejecutaremos <code>alsamixer</code>: - Pulsaremos <code>F6</code> para seleccionar la tarjeta a utilizar (en mi caso <code>Scarlett 2i2 USB</code>) - Ahora pulsa <code>F5</code> para ver todos las opciones</p>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v">https://www.youtube.com/watch?v</a><code>5zFA5piXf8Q&amp;t</code>290s</li>
+<li><a href="https://www.youtube.com/watch?v">https://www.youtube.com/watch?v</a><code>1N4Ch-Ygbgk&amp;t</code>2s</li>
+<li><a href="https://github.com/Focusrite-Scarlett-on-Linux/sound-usb-kernel-module#habilitaci%C3%B3n-nueva-funcionalidad-en-tiempo-de-carga">https://github.com/Focusrite-Scarlett-on-Linux/sound-usb-kernel-module#habilitaci%C3%B3n-nueva-funcionalidad-en-tiempo-de-carga</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 14 de julio de 2023</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

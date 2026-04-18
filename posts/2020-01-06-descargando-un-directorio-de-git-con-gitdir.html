@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descargando un directorio de git con gitdir</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Hoy ojeando Reddit, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural, tenemos que tener instalado tanto Python 3, así como Pip3. Instalación Desde Pip3 pip3 install --user gitdir En Debian y Raspbian, he tenido que buscar donde se había guardado gitdir. /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py Cambia angel, por tu usuario. python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py -h La opción -h, es para ofrecernos la ayuda. usage: gitdir [-h] [--flatten] url Download directories/folders from GitHub positional arguments: url optional arguments: -h, --help show this help message and exit --flatten, -f Flatten directory structures. Do not create extra directory and download found files to current directory. Creando un alias He creado un alias para en cualquier lugar de mi máquina, cuando escriba gitdir, pueda utilizar esta aplicación. alias gitdir="python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py" Clonando el Repositorio Otro método de instalación, sería instalando gitdir...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Descargando un directorio de git con gitdir">
+    <meta property="og:description" content="Hoy ojeando Reddit, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural, tenemos que tener instalado tanto Python 3, así como Pip3. Instalación Desde Pip3 pip3 install --user gitdir En Debian y Raspbian, he tenido que buscar donde se había guardado gitdir. /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py Cambia angel, por tu usuario. python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py -h La opción -h, es para ofrecernos la ayuda. usage: gitdir [-h] [--flatten] url Download directories/folders from GitHub positional arguments: url optional arguments: -h, --help show this help message and exit --flatten, -f Flatten directory structures. Do not create extra directory and download found files to current directory. Creando un alias He creado un alias para en cualquier lugar de mi máquina, cuando escriba gitdir, pueda utilizar esta aplicación. alias gitdir="python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py" Clonando el Repositorio Otro método de instalación, sería instalando gitdir...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+    <meta property="og:url" content="descargando-un-directorio-de-git-con-gitdir">
+    <meta name="twitter:title" content="Descargando un directorio de git con gitdir">
+    <meta name="twitter:description" content="Hoy ojeando Reddit, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural, tenemos que tener instalado tanto Python 3, así como Pip3. Instalación Desde Pip3 pip3 install --user gitdir En Debian y Raspbian, he tenido que buscar donde se había guardado gitdir. /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py Cambia angel, por tu usuario. python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py -h La opción -h, es para ofrecernos la ayuda. usage: gitdir [-h] [--flatten] url Download directories/folders from GitHub positional arguments: url optional arguments: -h, --help show this help message and exit --flatten, -f Flatten directory structures. Do not create extra directory and download found files to current directory. Creando un alias He creado un alias para en cualquier lugar de mi máquina, cuando escriba gitdir, pueda utilizar esta aplicación. alias gitdir="python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py" Clonando el Repositorio Otro método de instalación, sería instalando gitdir...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Descargando un directorio de git con gitdir</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 279 palabras. <a href="../categories/git.html">git</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Hoy ojeando <strong>Reddit</strong>, he visto esta magnífica utilidad que nos permite bajar una carpeta determinada de un repositorio de git. La aplicación está desarrollada en Python y como es natural, tenemos que tener instalado tanto <strong>Python 3</strong>, así como <strong>Pip3</strong>.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/git.png" alt=""></p>
+<h2>Instalación</h2>
+<h3>Desde Pip3</h3>
+<pre><code>
+pip3 install --user gitdir
+</code></pre>
+<p>En Debian y Raspbian, he tenido que buscar donde se había guardado <strong>gitdir</strong>. <code>/home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py</code></p>
+<p>Cambia <strong>angel</strong>, por tu usuario.</p>
+<pre><code>
+python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py  -h
+</code></pre>
+<p>La opción <strong>-h</strong>, es para ofrecernos la ayuda.</p>
+<pre><code>
+usage: gitdir [-h] [--flatten] url
+
+Download directories/folders from GitHub
+
+positional arguments:
+  url
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --flatten, -f  Flatten directory structures. Do not create extra directory
+                 and download found files to current directory.
+</code></pre>
+<h3>Creando un alias</h3>
+<p>He creado un alias para en cualquier lugar de mi máquina, cuando escriba <strong>gitdir</strong>, pueda utilizar esta aplicación.</p>
+<pre><code>
+alias gitdir="python3 /home/angel/.local/lib/python3.7/site-packages/gitdir/gitdir.py"
+</code></pre>
+<h3>Clonando el Repositorio</h3>
+<p>Otro método de instalación, sería instalando <strong>gitdir</strong> clonando el repositorio de <strong>GitHub</strong>. Primero voy a situarme en raíz del home.</p>
+<pre><code>
+cd
+</code></pre>
+<p>Ahora clonamos el repositorio</p>
+<pre><code>
+git clone https://github.com/sdushantha/gitdir.git
+</code></pre>
+<p>Desde esta misma ruta, recién clonado el repositorio, ya podemos correr <strong>gitdir</strong>.</p>
+<pre><code>
+python3 gitdir/gitdir/gitdir.py
+</code></pre>
+<p>Como veis, está en el directorio <code>gitdir/gitdir.py</code> dentro del repositorio.</p>
+<h3>Creando alias</h3>
+<p>Si hemos clonado el respositorio en la raíz del Home, vamos a crear también el alias.</p>
+<pre><code>
+alias gitdir="python3 ~/gitdir/gitdir/gitdir.py"
+</code></pre>
+<h2>Funcionamiento</h2>
+<p>Ya tenemos <strong>gitdir</strong> en nuestro sistema, ahora vamos a utilizarlo.</p>
+<p>Navega por la web de <strong>GitHub</strong>, por ejemplo, y copia la <strong>url</strong> de una carpeta de un repositorio.</p>
+<pre><code>
+gitdir &lt;URL&gt;
+</code></pre>
+<p>Voy a utilizar esta: <a href="https://github.com/sdushantha/gitdir/tree/master/gitdir">https://github.com/sdushantha/gitdir/tree/master/gitdir</a></p>
+<pre><code>
+gitdir https://github.com/sdushantha/gitdir/tree/master/gitdir
+</code></pre>
+<p>Se descargará la carpeta con todos los archivos que contiene.</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://www.reddit.com/r/commandline/comments/avbai1/gitdir_download_a_single_directoryfolder_from_a/">https://www.reddit.com/r/commandline/comments/avbai1/gitdir_download_a_single_directoryfolder_from_a/</a></li>
+<li><a href="https://github.com/sdushantha/gitdir">https://github.com/sdushantha/gitdir</a></li>
+<li>He forqueado el Repositorio: <a href="https://github.com/Bash-Projects/gitdir">https://github.com/Bash-Projects/gitdir</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 06 de enero de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-30</em> - <a href="../posts/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li><li><em>2021-04-18</em> - <a href="../posts/2021-04-18-crear-un-servidor-git-con-ssh.html">Crear un Servidor git con SSH</a></li><li><em>2020-01-14</em> - <a href="../posts/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li><li><em>2019-07-10</em> - <a href="../posts/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li><li><em>2019-04-17</em> - <a href="../posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script </a></li><li><em>2019-01-28</em> - <a href="../posts/2019-01-28-crear-ramas-con-git.html"> Crear ramas con Git</a></li><li><em>2019-01-21</em> - <a href="../posts/2019-01-21-utilizando-git-con-la-terminal-github.html"> Utilizando Git con la Terminal. GitHub</a></li><li><em>2019-01-12</em> - <a href="../posts/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html"> Ignorar archivos que no queremos que suban a Git</a></li><li><em>2019-01-08</em> - <a href="../posts/2019-01-08-crear-un-blog-en-github-github-pages.html"> Crear un Blog en GitHub. GitHub Pages</a></li><li><em>2019-01-04</em> - <a href="../posts/2019-01-04-crear-un-blog-en-gitlab-gitlab-pages.html"> Crear un Blog en GitLab. GitLab Pages</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simplenote en Emacs</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 8 minutos. 891 palabras. emacs Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS… Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa. Simplenote va a permitir la sincronización de nuestras notas en texto plano o markdown por defecto. Pero ya que estamos en Emacs, voy a habilitar el modo org y tener sincronizado mis archivos orgmode. El paquete simplenote2, crea una carpeta oculta en la raíz de nuestro Home, llamada .simplenote2. Dentro, encontraremos todas nuestras notas de un modo transparente, igual que si fuera una carpeta de sincronización de Dropbox. Así nuestras notas también estarán siempre en nuestro PC. Si utilizamos Emacs en versión terminal, también podremos utilizar el paquete. Así que ya...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Simplenote en Emacs">
+    <meta property="og:description" content="Tiempo estimado de lectura: 8 minutos. 891 palabras. emacs Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS… Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa. Simplenote va a permitir la sincronización de nuestras notas en texto plano o markdown por defecto. Pero ya que estamos en Emacs, voy a habilitar el modo org y tener sincronizado mis archivos orgmode. El paquete simplenote2, crea una carpeta oculta en la raíz de nuestro Home, llamada .simplenote2. Dentro, encontraremos todas nuestras notas de un modo transparente, igual que si fuera una carpeta de sincronización de Dropbox. Así nuestras notas también estarán siempre en nuestro PC. Si utilizamos Emacs en versión terminal, también podremos utilizar el paquete. Así que ya...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/simplenote.png">
+    <meta property="og:url" content="simplenote-en-emacs">
+    <meta name="twitter:title" content="Simplenote en Emacs">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 8 minutos. 891 palabras. emacs Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS… Y lo mejor de todo, podemos utilizarla en Emacs con el paquete simplenote2, disponible en los repositorios de Melpa. Simplenote va a permitir la sincronización de nuestras notas en texto plano o markdown por defecto. Pero ya que estamos en Emacs, voy a habilitar el modo org y tener sincronizado mis archivos orgmode. El paquete simplenote2, crea una carpeta oculta en la raíz de nuestro Home, llamada .simplenote2. Dentro, encontraremos todas nuestras notas de un modo transparente, igual que si fuera una carpeta de sincronización de Dropbox. Así nuestras notas también estarán siempre en nuestro PC. Si utilizamos Emacs en versión terminal, también podremos utilizar el paquete. Así que ya...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/simplenote.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1> Simplenote en Emacs</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 754 palabras. <a href="../categories/emacs.html">emacs</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 8 minutos. 891 palabras. <a href="https://ugeek.github.io/blog/categories/emacs">emacs</a></h5>
+<p><img src="https://ugeek.github.io/blog/images-blog/simplenote.png" alt=""></p>
+<p>Simplenote, es una aplicación de notas muy conocida de Software Libre, totalmente multiplataforma y gratuita. Podemos utilizar Simplenote en nuestro navegador web, aplicaciones de escritorio (incluso con paquete snap), Android, iOS… Y lo mejor de todo, podemos utilizarla en Emacs con el paquete <strong>simplenote2</strong>, disponible en los repositorios de Melpa.</p>
+<p>Simplenote va a permitir la sincronización de nuestras notas en texto plano o markdown por defecto. Pero ya que estamos en Emacs, <strong>voy a habilitar el modo org y tener sincronizado mis archivos orgmode</strong>.</p>
+<p>El paquete <strong>simplenote2</strong>, crea una carpeta oculta en la raíz de nuestro Home, llamada <strong>.simplenote2</strong>. Dentro, encontraremos todas nuestras notas de un modo transparente, igual que si fuera una carpeta de sincronización de Dropbox. Así nuestras notas también estarán siempre en nuestro PC.</p>
+<p>Si utilizamos Emacs en versión terminal, también podremos utilizar el paquete. Así que ya tenemos aplicación de notas desde nuestra terminal.</p>
+<p>Recuerda que una de las virtudes de Simplenote, es compartir nuestras notas o documentos orgmode, tener un control de versiones y colaborar en equipo editando simultaneamente estas, varios usuarios.</p>
+<p>Te recomiendo escuchar el Podcast donde hablo de todo esto.</p>
+<h2>Instalación</h2>
+<p>Instalaremos desde Melpa:</p>
+<p><code>M-x package-install RET simplenote2 RET</code></p>
+<h2>Configuración</h2>
+<p>Añadiremos en nuestro archivo de configuración, ya sea <strong>.emacs</strong> o <strong>init.el</strong>, los siguientes requisitos:</p>
+<pre><code>(require 'simplenote2)
+(setq simplenote2-email "email@ejemplo.com")
+(setq simplenote2-password "tu_contraseña")
+(simplenote2-setup)
+</code></pre>
+<p>Para acceder a la pantalla principal de Simplenote mediante un atajo (C-c C-s), he añadido el siguiente código:</p>
+<p><code>(global-set-key (kbd "C-c C-s") 'simplenote2-browse)</code></p>
+<p>Estas líneas son opcionales. Permiten crear mediante atajos: tags, así como empujar o descargar la nota que estamos editando en ese momento.</p>
+<pre><code>(add-hook 'simplenote2-note-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-c C-t") 'simplenote2-add-tag)
+            (local-set-key (kbd "C-c C-c") 'simplenote2-push-buffer)
+            (local-set-key (kbd "C-c C-d") 'simplenote2-pull-buffer)))
+</code></pre>
+<h2>Utilizando Simplenote</h2>
+<p>Para acceder a la pantalla principal de Simplenote sin el atajo antes descrito, introduciremos el comando:</p>
+<p><code>M-x simplenote2-browse</code></p>
+<p>La primera vez que accedas, estará sin contenido, ejecuta en la parte superior <strong>[Sync with server]</strong>, para que descargue tus notas del servidor a la aplicación. Si no añadiste tu correo y contraseña, Simplenote te preguntará por ellas para que lo introduzcas.</p>
+<p>A la parte derecha de cada nota, nos aparece <strong>[Delete]</strong>. Si pulsamos para borrar y después pulsamos <strong>[Sync with server]</strong> o sincronizamos pulsando la letra <strong>g</strong> (En el siguiente apartado, aparecen todos estos atajo), actualizará todas las notas y borrará la que habíamos seleccionado, enviándola a la papelera.</p>
+<p>Como ves, la interfaz es muy intuitiva, podemos crear nuevas notas, editar o eliminar notas existentes…</p>
+<h2>Atajos</h2>
+<p>Estando <strong>dentro de la ventana de Simplenote en Emacs</strong>, podremos utilizar los siguientes atajos:</p>
+<p>Tecla</p>
+<p>Acción</p>
+<p>g</p>
+<p>sincronizar con el servidor (igual que M-x simplenote2-sync-notes)</p>
+<p>a</p>
+<p>crear una nueva nota</p>
+<p>Enter</p>
+<p>nota abierta sobre la linea actual</p>
+<p>d</p>
+<p>marca nota en la línea actual para eliminar</p>
+<p>u</p>
+<p>desmarque la nota en la línea actual para eliminar</p>
+<p>t</p>
+<p>establecer etiquetas para el filtrado (igual que M-x simplenote2-filter-note-by-tag)</p>
+<p>'^'</p>
+<p>alternar las condiciones de filtrado de etiquetas entre "AND" y "OR"</p>
+<p>'/'</p>
+<p>establecer regexp para el filtrado</p>
+<h2>Enviando todo a Simplenote</h2>
+<p>Si estás en cualquier buffer, fuera de Simplenote, creando una nota o escribiendo cualquier texto, si ejecutamos el siguiente comando, este bufer será enviado en forma de nota a Simplenote.</p>
+<p><code>M-x simplenote2-create-note-from-buffer</code></p>
+<h2>Sincronizando las modificaciones</h2>
+<p>Tal como hacemos en git, podemos empujar la nota actual que estamos editando al servidor o descargarla:</p>
+<ul>
+<li>Empujar nota al servidor: <code>M-x simplenote2-push-buffer</code></li>
+<li>Descargar la nota del servidor. Cuando la nota se modifique localmente, preguntará si la envía al servidor. Si la respuesta es afirmativa, este comando actúa como <code>M-x simplenote2-push-buffer</code>: <code>M-x simplenote2-pull-buffer</code></li>
+</ul>
+<p>Para salir, utilizaremos <code>C-u M-x</code></p>
+<h2>Etiquetas</h2>
+<p>Simplenote utiliza etiquetas para poder clasificar y posteriormente filtrarlas medieante <code>M-x simplenote2-filter-notes-by-tag</code>. Este comando, preguntará el nombre de la etiqueta.</p>
+<h2>Creando atajo preestablecido</h2>
+<p>En Nuestro archivo de configuración <strong>.emacs</strong> o <strong>init.el</strong>, podemos añadir un filtro preestablecido con un atajo de teclado. Ejemplo:</p>
+<p><code>(setq simplenote2-filter-note-tag-list '("tag1" "tag2" "tag3"))</code></p>
+<h2>Añadir etiquetas o atributos</h2>
+<p>Puede establecer etiquetas o atributos para nuevas notas de forma predeterminada utilizando la variable de personalización <code>simplenote2-create-note-hook</code></p>
+<pre><code>(add-hook 'simplenote2-create-note-hook
+      (lambda ()
+        (simplenote2-set-markdown)
+        (simplenote2-add-tag "tag1")))
+</code></pre>
+<h2>Anclar Notas En la parte superior</h2>
+<p>Para anclar en la parte superior las notas que deseemos, estando dentro de esta nota ejecutaremos el comando:</p>
+<p><code>M-x simplenote2-set-pinned</code></p>
+<h2>Conclusión</h2>
+<p>Una herramienta fantástica para aquellos que necesitan una aplicación de notas que podemos compartir, trabajar en equipo, tener un control de versiones… Y lo mejor de todo, en texto plano, markdown y en Emacs, habilitando el modo org, orgmode.</p>
+<p>Mas Información en el repositorio de simplenote2: <a href="https://github.com/alpha22jp/simplenote2.el">https://github.com/alpha22jp/simplenote2.el</a></p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 10 de marzo de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-03-18</em> - <a href="../posts/2023-03-18-eddif-en-emacs-el-meld-de-terminal.html">eddif en emacs, el Meld de terminal</a></li><li><em>2022-03-08</em> - <a href="../posts/2022-03-08-reemplazar-texto-de-uno-o-varios-archivos-con-dired-en-emacs.html">Reemplazar texto de uno o varios archivos con dired en Emacs</a></li><li><em>2021-07-28</em> - <a href="../posts/2021-07-28-editando-csv-usando-emacs.html">Editando CSV usando Emacs</a></li><li><em>2021-04-15</em> - <a href="../posts/2021-04-15-wallabag-en-emacs.html">Wallabag en Emacs</a></li><li><em>2020-10-26</em> - <a href="../posts/2020-10-26-borrando-lineas-en-blanco-de-un-texto-con-emacs.html">Borrando líneas en blanco de un texto con Emacs</a></li><li><em>2020-10-24</em> - <a href="../posts/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html">Añadiendo texto al principio de cada línea en Emacs</a></li><li><em>2020-09-03</em> - <a href="../posts/2020-09-03-visualizar-aparte-una-cabecera-de-un-orgmode-en-emacs.html">Visualizar aparte una Cabecera de un OrgMode en Emacs</a></li><li><em>2020-08-12</em> - <a href="../posts/2020-08-12-compilar-emacs-271-para-ubuntu-debian-raspbian-y-derivadas.html">Compilar Emacs 27.1 para Ubuntu, Debian, Raspbian y derivadas</a></li><li><em>2020-06-16</em> - <a href="../posts/2020-06-16-habilitar-el-modo-org-en-emacs-cuando-abras-un-archivo-txt-o-markdown.html">Habilitar el modo-org en Emacs, cuando abras un archivo txt o markdown</a></li><li><em>2020-02-12</em> - <a href="../posts/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html">Archivar tareas de tu OrgMode en Emacs</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Renombrando archivos masivamente</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 2 minutos. 224 palabras. unix Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en sed, o tr, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog ochobitshacenunbyte.com donde explica, en este caso, sustituir los espacios en blanco por "_". Yo siguiendo con mi ejemplo, vamos a renombrar unos archivos mp3 que todos contienen la palabra "Supertramp": for FILE in *.mp3 ; do NUEVOFICHERO=`echo $FILE | sed 's/Supertramp//g'`; mv "$FILE" $NUEVOFICHERO; done con for listamos todos los archivos .mp3, añadimos el nombre del archivo a la variable NUEVOFICHERO, con sed lo renombramos y finalmente con mv movemos el nombre antiguo al nombre renombrado. Resumiendo y si no te interesa el funcionamiento, sustituye la...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Renombrando archivos masivamente">
+    <meta property="og:description" content="Tiempo estimado de lectura: 2 minutos. 224 palabras. unix Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en sed, o tr, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog ochobitshacenunbyte.com donde explica, en este caso, sustituir los espacios en blanco por "_". Yo siguiendo con mi ejemplo, vamos a renombrar unos archivos mp3 que todos contienen la palabra "Supertramp": for FILE in *.mp3 ; do NUEVOFICHERO=`echo $FILE | sed 's/Supertramp//g'`; mv "$FILE" $NUEVOFICHERO; done con for listamos todos los archivos .mp3, añadimos el nombre del archivo a la variable NUEVOFICHERO, con sed lo renombramos y finalmente con mv movemos el nombre antiguo al nombre renombrado. Resumiendo y si no te interesa el funcionamiento, sustituye la...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/unix.png">
+    <meta property="og:url" content="renombrando-archivos-masivamente">
+    <meta name="twitter:title" content="Renombrando archivos masivamente">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 2 minutos. 224 palabras. unix Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en sed, o tr, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog ochobitshacenunbyte.com donde explica, en este caso, sustituir los espacios en blanco por "_". Yo siguiendo con mi ejemplo, vamos a renombrar unos archivos mp3 que todos contienen la palabra "Supertramp": for FILE in *.mp3 ; do NUEVOFICHERO=`echo $FILE | sed 's/Supertramp//g'`; mv "$FILE" $NUEVOFICHERO; done con for listamos todos los archivos .mp3, añadimos el nombre del archivo a la variable NUEVOFICHERO, con sed lo renombramos y finalmente con mv movemos el nombre antiguo al nombre renombrado. Resumiendo y si no te interesa el funcionamiento, sustituye la...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/unix.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Renombrando archivos masivamente</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 1 min. 167 palabras. <a href="../categories/unix.html">unix</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 2 minutos. 224 palabras. <a href="https://ugeek.github.io/blog/categories/unix">unix</a></h5>
+<p>Quería eliminar masivamente el nombre de unos archivos .mp3, donde había añadido el nombre del grupo. UNIX es ideal para estas tareas. Pensé primero en <strong>sed</strong>, o <strong>tr</strong>, aunque tr no es tan recomendable ya que toda coincidencia la renombraría. Mi tercer pensamiento fue buscar en Internet, y ahí encontré un magnífico Post del Blog <a href="https://www.ochobitshacenunbyte.com/2015/09/14/renombrar-multiples-nombres-ficheros-linux/">ochobitshacenunbyte.com</a> donde explica, en este caso, sustituir los espacios en blanco por "_".</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/unix.png" alt=""></p>
+<p>Yo siguiendo con mi ejemplo, vamos a renombrar unos archivos mp3 que todos contienen la palabra "Supertramp":</p>
+<pre><code>for FILE in *.mp3 ; do NUEVOFICHERO=`echo $FILE | sed 's/Supertramp//g'`; mv "$FILE" $NUEVOFICHERO; done
+</code></pre>
+<p>con <strong>for</strong> listamos todos los archivos <strong>.mp3</strong>, añadimos el nombre del archivo a la variable <strong>NUEVOFICHERO</strong>, con <strong>sed</strong> lo renombramos y finalmente con <strong>mv</strong> movemos el nombre antiguo al nombre renombrado.</p>
+<p>Resumiendo y si no te interesa el funcionamiento, sustituye la extensión <strong>.mp3</strong> y la palabra <strong>Supertramp</strong>, por la extensión o palabra que quieras renombrar.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el sábado, 06 de julio de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2019-01-03</em> - <a href="../posts/2019-01-03-el-poder-de-la-terminal-y-el-scripting.html"> El poder de la terminal y el scripting</a></li><li><em>2018-12-30</em> - <a href="../posts/2018-12-30-eliminar-comentarios-de-nuestros-script.html">   Eliminar comentarios de nuestros script</a></li><li><em>2018-12-27</em> - <a href="../posts/2018-12-27-eliminar-lineas-en-blanco-con-sed.html">   Eliminar líneas en Blanco con sed</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

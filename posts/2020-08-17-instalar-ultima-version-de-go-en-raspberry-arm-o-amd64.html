@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instalar última versión de Go en Raspberry, ARM o amd64</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Cada vez utilizo más aplicaciones en Go y aunque en las últimas versiones de Debian, Ubuntu, Raspbian,... viene en los repositorios oficiales, no disponemos de la última versión. Vamos a ver como descargarla e instalarla, veréis que sencillo Yo pongo de ejemplo arquitectura para ARM y amd64, si utilizas alguna otra arquitectura, descarga la correspondiente siguiendo los mismos pasos que muestro. Desde los repositorios Desde los repositorios oficiales de Ubuntu, Debian, Raspberry OS, sería: sudo apt install golang Como he comentado, no tendríamos la última versión. Instalar Go en Raspberry o ARM Descargando en instalando Go Descargamos la versión más reciente desde la página de go. wget https://storage.googleapis.com/golang/go1.20.3.linux-arm64.tar.gz sudo tar -C /usr/local -xvf go1.20.3.linux-arm64.tar.gz Añadimos a .bashr o .zshrc export GOPATH=$HOME/go export PATH=/usr/local/go/bin:$PATH:$GOPATH/bin Volvemos a cargar el archivo .bashrc o .zshrc source ~/.bashrc o source ~/.zshrc Comprobamos que esta todo ok y que versión tenemos go version Instalar Go en...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Instalar última versión de Go en Raspberry, ARM o amd64">
+    <meta property="og:description" content="Cada vez utilizo más aplicaciones en Go y aunque en las últimas versiones de Debian, Ubuntu, Raspbian,... viene en los repositorios oficiales, no disponemos de la última versión. Vamos a ver como descargarla e instalarla, veréis que sencillo Yo pongo de ejemplo arquitectura para ARM y amd64, si utilizas alguna otra arquitectura, descarga la correspondiente siguiendo los mismos pasos que muestro. Desde los repositorios Desde los repositorios oficiales de Ubuntu, Debian, Raspberry OS, sería: sudo apt install golang Como he comentado, no tendríamos la última versión. Instalar Go en Raspberry o ARM Descargando en instalando Go Descargamos la versión más reciente desde la página de go. wget https://storage.googleapis.com/golang/go1.20.3.linux-arm64.tar.gz sudo tar -C /usr/local -xvf go1.20.3.linux-arm64.tar.gz Añadimos a .bashr o .zshrc export GOPATH=$HOME/go export PATH=/usr/local/go/bin:$PATH:$GOPATH/bin Volvemos a cargar el archivo .bashrc o .zshrc source ~/.bashrc o source ~/.zshrc Comprobamos que esta todo ok y que versión tenemos go version Instalar Go en...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/go.png">
+    <meta property="og:url" content="instalar-ultima-version-de-go-en-raspberry-arm-o-amd64">
+    <meta name="twitter:title" content="Instalar última versión de Go en Raspberry, ARM o amd64">
+    <meta name="twitter:description" content="Cada vez utilizo más aplicaciones en Go y aunque en las últimas versiones de Debian, Ubuntu, Raspbian,... viene en los repositorios oficiales, no disponemos de la última versión. Vamos a ver como descargarla e instalarla, veréis que sencillo Yo pongo de ejemplo arquitectura para ARM y amd64, si utilizas alguna otra arquitectura, descarga la correspondiente siguiendo los mismos pasos que muestro. Desde los repositorios Desde los repositorios oficiales de Ubuntu, Debian, Raspberry OS, sería: sudo apt install golang Como he comentado, no tendríamos la última versión. Instalar Go en Raspberry o ARM Descargando en instalando Go Descargamos la versión más reciente desde la página de go. wget https://storage.googleapis.com/golang/go1.20.3.linux-arm64.tar.gz sudo tar -C /usr/local -xvf go1.20.3.linux-arm64.tar.gz Añadimos a .bashr o .zshrc export GOPATH=$HOME/go export PATH=/usr/local/go/bin:$PATH:$GOPATH/bin Volvemos a cargar el archivo .bashrc o .zshrc source ~/.bashrc o source ~/.zshrc Comprobamos que esta todo ok y que versión tenemos go version Instalar Go en...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/go.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Instalar última versión de Go en Raspberry, ARM o amd64</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 214 palabras. <a href="../categories/go.html">go</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Cada vez utilizo más aplicaciones en Go y aunque en las últimas versiones de Debian, Ubuntu, Raspbian,... viene en los repositorios oficiales, no disponemos de la última versión.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/go.png" alt=""></p>
+<p>Vamos a ver como descargarla e instalarla, veréis que sencillo</p>
+<p>Yo pongo de ejemplo arquitectura para ARM y amd64, si utilizas alguna otra arquitectura, descarga la correspondiente siguiendo los mismos pasos que muestro.</p>
+<h2>Desde los repositorios</h2>
+<p>Desde los repositorios oficiales de Ubuntu, Debian, Raspberry OS, sería:</p>
+<pre><code>
+sudo apt install golang
+</code></pre>
+<p>Como he comentado, no tendríamos la última versión.</p>
+<h2>Instalar Go en Raspberry o ARM</h2>
+<h3>Descargando en instalando Go</h3>
+<p>Descargamos la versión más reciente <a href="https://golang.org/doc/install">desde la página de go</a>.</p>
+<pre><code>
+wget https://storage.googleapis.com/golang/go1.20.3.linux-arm64.tar.gz
+sudo tar -C /usr/local -xvf go1.20.3.linux-arm64.tar.gz
+</code></pre>
+<h3>Añadimos a .bashr o .zshrc</h3>
+<pre><code>
+export GOPATH=$HOME/go
+export PATH=/usr/local/go/bin:$PATH:$GOPATH/bin
+</code></pre>
+<h3>Volvemos a cargar el archivo .bashrc o .zshrc</h3>
+<pre><code>
+source ~/.bashrc
+</code></pre>
+<p>o</p>
+<pre><code>
+source ~/.zshrc
+</code></pre>
+<h3>Comprobamos que esta todo ok y que versión tenemos</h3>
+<pre><code>
+go version
+</code></pre>
+<h2>Instalar Go en amd64</h2>
+<h3>Descargando en instalando Go</h3>
+<p>Versión del 10/04/2023 para amd64</p>
+<pre><code>
+wget https://storage.googleapis.com/golang/go1.20.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xvf go1.20.3.linux-amd64.tar.gz
+</code></pre>
+<h3>Añadimos a .bashr o .zshrc</h3>
+<pre><code>
+export GOPATH=$HOME/go
+export PATH=/usr/local/go/bin:$PATH:$GOPATH/bin
+</code></pre>
+<h3>Volvemos a cargar el archivo .bashrc o .zshrc</h3>
+<pre><code>
+source ~/.bashrc
+</code></pre>
+<p>o</p>
+<pre><code>
+source ~/.zshrc
+</code></pre>
+<h3>Comprobamos que esta todo ok y que versión tenemos</h3>
+<pre><code>
+go version
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://golang.org/dl/">https://golang.org/dl/</a></li>
+<li><a href="https://golang.org/doc/install">https://golang.org/doc/install</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 17 de agosto de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-04-22</em> - <a href="../posts/2021-04-22-golink.html">Golink</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sincronización de nuestros bookmarks con floccus</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive. Floccus no te rastrea. El único tráfico de red iniciado por floccus es sincronizar sus marcadores con el servidor de su elección. Floccus es compatible con Chromium, Google Chrome, Mozilla Firefox, Opera, Brave, Vivaldi y Microsoft Edge. > Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive El único navegador móvil que admite extensiones que interactúan con los marcadores es actualmente el navegador gratuito Kiwi. Ahora también hay una aplicación para Android. Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor Utilice cualquier navegador que sea compatible con la API de extensión web Crea tantos perfiles de sincronización como quieras Control de la estrategia de sincronización, es decir, sincronización unidireccional o bidireccional...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sincronización de nuestros bookmarks con floccus">
+    <meta property="og:description" content="Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive. Floccus no te rastrea. El único tráfico de red iniciado por floccus es sincronizar sus marcadores con el servidor de su elección. Floccus es compatible con Chromium, Google Chrome, Mozilla Firefox, Opera, Brave, Vivaldi y Microsoft Edge. > Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive El único navegador móvil que admite extensiones que interactúan con los marcadores es actualmente el navegador gratuito Kiwi. Ahora también hay una aplicación para Android. Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor Utilice cualquier navegador que sea compatible con la API de extensión web Crea tantos perfiles de sincronización como quieras Control de la estrategia de sincronización, es decir, sincronización unidireccional o bidireccional...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/floccus.png">
+    <meta property="og:url" content="sincronizacion-de-nuestros-bookmarks-con-floccus">
+    <meta name="twitter:title" content="Sincronización de nuestros bookmarks con floccus">
+    <meta name="twitter:description" content="Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive. Floccus no te rastrea. El único tráfico de red iniciado por floccus es sincronizar sus marcadores con el servidor de su elección. Floccus es compatible con Chromium, Google Chrome, Mozilla Firefox, Opera, Brave, Vivaldi y Microsoft Edge. > Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive El único navegador móvil que admite extensiones que interactúan con los marcadores es actualmente el navegador gratuito Kiwi. Ahora también hay una aplicación para Android. Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor Utilice cualquier navegador que sea compatible con la API de extensión web Crea tantos perfiles de sincronización como quieras Control de la estrategia de sincronización, es decir, sincronización unidireccional o bidireccional...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/floccus.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Sincronización de nuestros bookmarks con floccus</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 383 palabras. <a href="../categories/bookmarks.html">bookmarks</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive.</p>
+<p>Floccus no te rastrea.&nbsp;El único tráfico de red iniciado por floccus es sincronizar sus marcadores con el servidor de su elección.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/floccus.png" alt=""></p>
+<p>Floccus es compatible con Chromium, Google Chrome, Mozilla Firefox, Opera, Brave, Vivaldi y Microsoft Edge. &gt; Sincronice sus marcadores en todos los navegadores a través de Nextcloud, WebDAV o Google Drive</p>
+<p>El único navegador móvil que admite extensiones que interactúan con los marcadores es actualmente el navegador gratuito Kiwi.</p>
+<p>Ahora también hay una aplicación para Android.</p>
+<p>Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor</p>
+<ul>
+<li>Sincroniza cualquier carpeta de marcadores local con cualquier carpeta del lado del servidor</li>
+<li>Utilice cualquier navegador que sea compatible con la API de extensión web</li>
+<li>Crea tantos perfiles de sincronización como quieras</li>
+<li>Control de la estrategia de sincronización, es decir, sincronización unidireccional o bidireccional</li>
+<li>Intervalo de sincronización de control</li>
+<li>Exporta fácilmente tu configuración</li>
+<li>Manten sus credenciales seguras con una frase de contraseña de cifrado</li>
+<li>Crea tantos perfiles de sincronización como quieras</li>
+<li>Control de la sincronización, unidireccional o bidireccional</li>
+<li>Manten sus credenciales seguras con una frase de contraseña de cifrado</li>
+</ul>
+<h2>Servidor WebDAV</h2>
+<p>Primero deberás ingresar la URL WebDAV de tu servidor. La URL debe terminar con una barra. Luego ingresa tu nombre de usuario y contraseña.</p>
+<p>Por defecto, floccus colocará un archivo llamado&nbsp;bookmarks.xbel</p>
+<p>Presionar 'Guardar' y vuelve al panel de descripción general.</p>
+<p>Floccus se sincronizará automáticamente cada 15 minutos y 1 minuto, pero puedes activar una sincronización manualmente haciendo clic en "SINCRONIZAR AHORA".</p>
+<p>A veces, deseas tener un dispositivo como dispositivo principal y otros dispositivos solo como receptor.&nbsp;Para este escenario, es necesario configurar la sincronización como unidireccional.</p>
+<p>Ocasionalmente, deseas anular los cambios de otros dispositivos.&nbsp;Para esto, puede usar un empujón de una sola vez.</p>
+<h2>Sincronización de pestañas</h2>
+<p>En lugar de sincronizar una carpeta de marcadores local, floccus puede sincronizar opcionalmente las pestañas abiertas del navegador.</p>
+<p>Habilita la sincronización automática para configurar la sincronización para empujar.&nbsp;Esto enviará automáticamente las pestañas abiertas al servidor.&nbsp;Siempre que necesite las pestañas en un navegador diferente o después de un bloqueo, puede tirar una vez para recuperar las pestañas.</p>
+<h2>Navegador</h2>
+<p>Instala la <a href="https://addons.mozilla.org/es/firefox/addon/floccus/">extensión para Firefox</a> o para <a href="https://chrome.google.com/webstore/detail/floccus-bookmarks-sync/fnaicdffflnofjppbagibeoednhnbjhg">Google Chrome</a>.</p>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://floccus.org/">https://floccus.org/</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/floccus/">https://addons.mozilla.org/en-US/firefox/addon/floccus/</a></li>
+<li><a href="https://github.com/floccusaddon/floccus">https://github.com/floccusaddon/floccus</a></li>
+</ul>
+<p><img src="https://ugeek.github.io/blog/images-blog/floccus.png" alt=""></p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 12 de enero de 2022</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear un Servidor git con SSH</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de git utilizando SSH. Este servidor va permitirme tener mis propios repositorios de un modo privado en mi Raspberry. Voy a explicarte paso a paso como crearlo y verás que es muy sencillo. Creando un nuevo usuario Vamos a crear un nuevo usuario en nuestro servidor. Lo llamaremos git. sudo adduser git Tendrás que poner la contraseña para acceder via SSH a este usuario. Copiamos .SSH en el nuevo usuario Podrias crear una nueva configuración de SSH, pero yo en mi caso, como el servidor git solo voy a utilizarlo yo, voy a copiar todos los archivos de configuración de mi servidor SSH del usuario que utilizo, en el nuevo usuario git. Así podré acceder con las mismas llaves SSH a...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Crear un Servidor git con SSH">
+    <meta property="og:description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de git utilizando SSH. Este servidor va permitirme tener mis propios repositorios de un modo privado en mi Raspberry. Voy a explicarte paso a paso como crearlo y verás que es muy sencillo. Creando un nuevo usuario Vamos a crear un nuevo usuario en nuestro servidor. Lo llamaremos git. sudo adduser git Tendrás que poner la contraseña para acceder via SSH a este usuario. Copiamos .SSH en el nuevo usuario Podrias crear una nueva configuración de SSH, pero yo en mi caso, como el servidor git solo voy a utilizarlo yo, voy a copiar todos los archivos de configuración de mi servidor SSH del usuario que utilizo, en el nuevo usuario git. Así podré acceder con las mismas llaves SSH a...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+    <meta property="og:url" content="crear-un-servidor-git-con-ssh">
+    <meta name="twitter:title" content="Crear un Servidor git con SSH">
+    <meta name="twitter:description" content="No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de git utilizando SSH. Este servidor va permitirme tener mis propios repositorios de un modo privado en mi Raspberry. Voy a explicarte paso a paso como crearlo y verás que es muy sencillo. Creando un nuevo usuario Vamos a crear un nuevo usuario en nuestro servidor. Lo llamaremos git. sudo adduser git Tendrás que poner la contraseña para acceder via SSH a este usuario. Copiamos .SSH en el nuevo usuario Podrias crear una nueva configuración de SSH, pero yo en mi caso, como el servidor git solo voy a utilizarlo yo, voy a copiar todos los archivos de configuración de mi servidor SSH del usuario que utilizo, en el nuevo usuario git. Así podré acceder con las mismas llaves SSH a...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/git.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Crear un Servidor git con SSH</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 395 palabras. <a href="../categories/git.html">git</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>No es necesario instalar un servidor tipo GitLab, Gogs, GitTea,... para crear tus repositorios y tener tu control de versiones. En mi raspberry, me he creado mi propio servidor de git utilizando SSH.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/git.png" alt=""></p>
+<p>Este servidor va permitirme tener mis propios repositorios de un modo privado en mi Raspberry.</p>
+<p>Voy a explicarte paso a paso como crearlo y verás que es muy sencillo.</p>
+<h2>Creando un nuevo usuario</h2>
+<p>Vamos a crear un nuevo usuario en nuestro servidor. Lo llamaremos <strong>git</strong>.</p>
+<pre><code>
+sudo adduser git
+</code></pre>
+<p>Tendrás que poner la contraseña para acceder via SSH a este usuario.</p>
+<h2>Copiamos .SSH en el nuevo usuario</h2>
+<p>Podrias crear una nueva configuración de SSH, pero yo en mi caso, como el servidor git solo voy a utilizarlo yo, voy a copiar todos los archivos de configuración de mi servidor SSH del usuario que utilizo, en el nuevo usuario <strong>git</strong>. Así podré acceder con las mismas llaves SSH a los dos usuarios.</p>
+<p>Situado en mi sesión de usuario normal, voy a enviar todos los archivos de SSH al usuario <strong>git</strong>.</p>
+<pre><code>
+sudo cp -r .ssh/ /home/git/
+</code></pre>
+<h2>Creando el primer repositorio en el servidor</h2>
+<p>Voy a crear el primer repositorio llamado <strong>dotfile</strong>.</p>
+<pre><code>
+mkdir dotfile
+cd dotfile
+git --bare init
+</code></pre>
+<p><code>git --bare init</code> Inicializa un repositorio de Git vacío.</p>
+<h2>Clonando el repositorios</h2>
+<p>Si la IP del servidor fuera 192.168.1.100, para clonar el repositorio en el PC local utilizaríamos:</p>
+<pre><code>
+git clone git@192.168.1.100:dotfile
+</code></pre>
+<h2>Creando nombre</h2>
+<p>La primera vez que utilicemos git con el nuevo servidor, git me pedirá que correo de usuario y nombre voy a utilizar, para que en cada commit, aparezca que usuario lo ha subido, modificado, etc...</p>
+<pre><code>
+
+git config --global user.email "you@example.com"
+git config --global user.name "Tu Nombre"
+</code></pre>
+<h2>Creando el README</h2>
+<p>Recuerda que el repositorio está totalemente vacio y no hay ningún archivo ni directorio. Voy a crear el primero, el README.md.</p>
+<pre><code>
+nano README.md
+</code></pre>
+<p>Subo a mi repositorio de git.</p>
+<pre><code>
+git add .
+git commit -m "creo el archivo README.md"
+git push origin master
+</code></pre>
+<h2>Interfaz gráfica para git</h2>
+<h3>gitk</h3>
+<p>Si no te aclaras mucho con la terminal, siempre puedes utilzar <strong>gitk</strong> para ver el historial de commits, comparar commits, buscar texto y ver los cambios en el historial,...</p>
+<p>Instalaremos en nuestra máquina local:</p>
+<pre><code>
+sudo apt install gitk
+</code></pre>
+<p>Ahora dentro del repositorio, escribiremos el siguiente comando:</p>
+<pre><code>
+gitk
+</code></pre>
+<h3>Git Cola</h3>
+<p>Otra opción mejor, sería git-cola</p>
+<pre><code>
+sudo apt install git-cola
+</code></pre>
+<p>Lanza despues</p>
+<pre><code>
+git-dag
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 18 de abril de 2021</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-10-30</em> - <a href="../posts/2021-10-30-utilizando-git-en-mi-servidor-webdav.html">Utilizando git en mi servidor WebDAV</a></li><li><em>2020-01-14</em> - <a href="../posts/2020-01-14-descargando-el-ultimo-archivo-de-lanzamiento-de-un-repositorio-git-latest-releases.html">Descargando el último archivo de lanzamiento de un repositorio git. Latest Releases</a></li><li><em>2020-01-06</em> - <a href="../posts/2020-01-06-descargando-un-directorio-de-git-con-gitdir.html">Descargando un directorio de git con gitdir</a></li><li><em>2019-07-10</em> - <a href="../posts/2019-07-10-cifrando-archivos-en-git-con-git-crypt.html">Cifrando archivos en git con GIT-CRYPT</a></li><li><em>2019-04-17</em> - <a href="../posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html">Crear archivos .gitkeep de forma recursiva mediante un script </a></li><li><em>2019-01-28</em> - <a href="../posts/2019-01-28-crear-ramas-con-git.html"> Crear ramas con Git</a></li><li><em>2019-01-21</em> - <a href="../posts/2019-01-21-utilizando-git-con-la-terminal-github.html"> Utilizando Git con la Terminal. GitHub</a></li><li><em>2019-01-12</em> - <a href="../posts/2019-01-12-ignorar-archivos-que-no-queremos-que-suban-a-git.html"> Ignorar archivos que no queremos que suban a Git</a></li><li><em>2019-01-08</em> - <a href="../posts/2019-01-08-crear-un-blog-en-github-github-pages.html"> Crear un Blog en GitHub. GitHub Pages</a></li><li><em>2019-01-04</em> - <a href="../posts/2019-01-04-crear-un-blog-en-gitlab-gitlab-pages.html"> Crear un Blog en GitLab. GitLab Pages</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

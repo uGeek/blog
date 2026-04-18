@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navegando sin publicidad con Blocky, SOCKS5 y Wireguard</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Me encanta blocky porque es un servidor DNS que me permite bloquear toda la publicidad de un modo fácil y liviano en mi red local. Wireguard es la mejor solución como VPN y SOCKS5 como servidor proxy para la navegación remota desde mi navegador, pero.... Que lástima no poder hacer las peticiones DNS de SOCKS5 y Wireguard a Blocky.... ¿Sería posible?... Si que es posible y te voy a explicar como. Archivo Configuración Blocky Para que funcione blocky, es necesario primero crear el archivo config.yml. Esta es una plantilla muy básica del archivo de configuración: upstream: default: - tcp-tls:1.1.1.1 # cloudflare TLS blocking: blackLists: ads: - blacklists/blacklist.txt - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts - https://adaway.org/hosts.txt whiteLists: ads: - whitelist.txt clientGroupsBlock: default: - ads port: 53 httpPort: 4000 En el apartado ads, puedes agregar más listas para filtrar publicidad o el acceso a determinados servidores. Funcionamiento del Docker Compose Este sería el docker compose. Está...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Navegando sin publicidad con Blocky, SOCKS5 y Wireguard">
+    <meta property="og:description" content="Me encanta blocky porque es un servidor DNS que me permite bloquear toda la publicidad de un modo fácil y liviano en mi red local. Wireguard es la mejor solución como VPN y SOCKS5 como servidor proxy para la navegación remota desde mi navegador, pero.... Que lástima no poder hacer las peticiones DNS de SOCKS5 y Wireguard a Blocky.... ¿Sería posible?... Si que es posible y te voy a explicar como. Archivo Configuración Blocky Para que funcione blocky, es necesario primero crear el archivo config.yml. Esta es una plantilla muy básica del archivo de configuración: upstream: default: - tcp-tls:1.1.1.1 # cloudflare TLS blocking: blackLists: ads: - blacklists/blacklist.txt - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts - https://adaway.org/hosts.txt whiteLists: ads: - whitelist.txt clientGroupsBlock: default: - ads port: 53 httpPort: 4000 En el apartado ads, puedes agregar más listas para filtrar publicidad o el acceso a determinados servidores. Funcionamiento del Docker Compose Este sería el docker compose. Está...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="navegando-sin-publicidad-con-blocky-socks5-y-wireguard">
+    <meta name="twitter:title" content="Navegando sin publicidad con Blocky, SOCKS5 y Wireguard">
+    <meta name="twitter:description" content="Me encanta blocky porque es un servidor DNS que me permite bloquear toda la publicidad de un modo fácil y liviano en mi red local. Wireguard es la mejor solución como VPN y SOCKS5 como servidor proxy para la navegación remota desde mi navegador, pero.... Que lástima no poder hacer las peticiones DNS de SOCKS5 y Wireguard a Blocky.... ¿Sería posible?... Si que es posible y te voy a explicar como. Archivo Configuración Blocky Para que funcione blocky, es necesario primero crear el archivo config.yml. Esta es una plantilla muy básica del archivo de configuración: upstream: default: - tcp-tls:1.1.1.1 # cloudflare TLS blocking: blackLists: ads: - blacklists/blacklist.txt - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts - https://adaway.org/hosts.txt whiteLists: ads: - whitelist.txt clientGroupsBlock: default: - ads port: 53 httpPort: 4000 En el apartado ads, puedes agregar más listas para filtrar publicidad o el acceso a determinados servidores. Funcionamiento del Docker Compose Este sería el docker compose. Está...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Navegando sin publicidad con Blocky, SOCKS5 y Wireguard</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 517 palabras. <a href="../categories/blocky.html">blocky</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Me encanta <strong>blocky</strong> porque es un servidor <strong>DNS</strong> que me permite bloquear toda la publicidad de un modo fácil y liviano en mi red local.</p>
+<p><strong>Wireguard</strong> es la mejor solución como <strong>VPN y SOCKS5</strong> como servidor proxy para la navegación remota desde mi navegador, pero.... Que lástima no poder hacer las peticiones <strong>DNS</strong> de SOCKS5 y Wireguard a Blocky.... ¿Sería posible?...</p>
+<p><strong>Si que es posible y te voy a explicar como.</strong></p>
+<h2>Archivo Configuración Blocky</h2>
+<p>Para que funcione <strong>blocky</strong>, es necesario primero crear el archivo <strong>config.yml</strong>.</p>
+<p>Esta es una plantilla muy básica del archivo de configuración:</p>
+<pre><code>
+      upstream:
+      default:
+          - tcp-tls:1.1.1.1   # cloudflare  TLS
+    blocking:
+      blackLists:
+        ads:
+          - blacklists/blacklist.txt
+          - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+          - https://adaway.org/hosts.txt
+      whiteLists:
+        ads:
+          - whitelist.txt
+      clientGroupsBlock:
+        default:
+          - ads    
+
+
+    port: 53
+    httpPort: 4000
+</code></pre>
+<p>En el apartado <strong>ads</strong>, puedes agregar más listas para filtrar publicidad o el acceso a determinados servidores.</p>
+<h2>Funcionamiento del Docker Compose</h2>
+<p>Este sería el docker compose. Está compuesto de los 3 servicios en un único docker-compose.yml</p>
+<p>El secreto para que todo funcione, es crear una red ( <code>172.21.0.0/24</code>) y otorgar &nbsp;a cada servicio (docker) una <strong>IP</strong> fija. De este modo, al tener <strong>blocky</strong> una IP fija, desde los otros servicios podemos especificar que las peticiones DNS las haga a la IP de blocky.</p>
+<p>En este ejemplo <strong>blocky</strong> tiene la IP <code>172.21.0.7</code>:</p>
+<pre><code>
+      networks:
+            containers:
+              ipv4_address: 172.21.0.7
+</code></pre>
+<p><strong>SOCKS5 tiene la IP</strong> <code>172.21.0.8</code> y hace las peticiones DNS a la IP <code>172.21.0.7</code>, que es la IP de blocky.</p>
+<p>Si no utilizáramos blocky y quisieras hacer las peticiones DNS a un servidor que ya te filtra la publicidad como <strong>AdguardHome</strong>, sería tan sencillo como añadir la ruta del servidor DNS.</p>
+<pre><code>
+      dns:
+            - 172.21.0.7
+          networks:
+            containers:
+              ipv4_address: 172.21.0.8
+</code></pre>
+<p>Wireguard tiene la IP <code>172.21.0.9</code> y hace las peticiones DNS a blocky a su IP <code>172.21.0.7</code>.</p>
+<pre><code>
+       dns:
+            - 172.21.0.7
+          networks:
+            containers:
+              ipv4_address: 172.21.0.9
+</code></pre>
+<h2>Docker Compose</h2>
+<pre><code>
+      version: '3.7'
+    services:
+        blocky:
+          image: spx01/blocky
+          container_name: blocky
+          restart: unless-stopped
+          ports:
+            - "53:53/tcp"
+            - "53:53/udp"
+            - "4000:4000/tcp" # Prometheus stats (if enabled).
+          environment:
+            - TZ=Europe/Madrid
+          expose:
+            - "53"
+          volumes:
+            # config file
+            - ./config.yml:/app/config.yml
+            # write query logs in this directory. You can also use a volume
+            # put your custom white and blacklists in these directories
+            - ./blacklists:/app/blacklists
+            - ./whitelists:/app/whitelists/
+            # write query logs in this volume
+            - ./logs:/logs
+          cap_add:
+            - NET_ADMIN
+          restart: unless-stopped
+          networks:
+            containers:
+              ipv4_address: 172.21.0.7
+       
+                                                                                                                                                                                                                        
+        socks5:                                                                                                                                                                                                         
+          image: serjs/go-socks5-proxy                                                                                                                                                                                
+          container_name: socks5                                                                                                                                                                                      
+          environment:                                                                                                                                                                                                
+            - PROXY_USER=usuario                                                                                                                                                                                     
+            - PROXY_PASSWORD=contraseña                                                                                                                                                                              
+          restart: always                                                                                                                                                                                             
+          ports:                                                                                                                                                                                                      
+            - 1080:1080      
+          dns:
+            - 172.21.0.7
+          networks:
+            containers:
+              ipv4_address: 172.21.0.8
+
+
+
+        wg-easy:
+          environment:
+            # ⚠️ Required:
+            # Change this to your host's public address
+            - WG_HOST=midominio.duckdns.org
+            # Optional:
+            - PASSWORD=contraseña
+            - WG_PORT=51800
+            # - WG_DEFAULT_ADDRESS=10.8.0.x
+            - WG_DEFAULT_DNS=1.1.1.1
+          image: weejewel/wg-easy 
+          container_name: wg-easy
+          restart: unless-stopped    
+          volumes:
+            - .:/etc/wireguard
+          ports:
+            - "55000:51820/udp"
+            - "85:51821/tcp"
+          restart: unless-stopped
+          cap_add:
+            - NET_ADMIN
+            - SYS_MODULE
+          sysctls:
+            - net.ipv4.conf.all.src_valid_mark=1
+            - net.ipv4.ip_forward=1
+          dns:
+            - 172.21.0.7
+          networks:
+            containers:
+              ipv4_address: 172.21.0.9
+       
+
+
+
+    networks:
+      containers:
+        ipam:
+          config:
+            - subnet: 172.21.0.0/24
+</code></pre>
+<h2>Conclusión</h2>
+<p>Buenísimo el poder navegar desde tu PC o móvil filtrando la publicidad gracias a estos tres servicios.</p>
+<p>Ahora puedes sacarle más partido a <strong>blocky</strong>, porque no solo filtra la publicidad en tu red local, sino que también fuera de ella.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el lunes, 04 de julio de 2022</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escuchando música de mi servidor Jellyfin con jellycli</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar. Y es que Jellycli es una aplicación desarrollada por el finlandés Tero Vierimaa, que nos permite el poder escuchar toda la biblioteca musical que tenemos en Jellyfin, en nuestro escritorio y a través de la terminal. Jellycli está desarrollada en Go y actualmente tiene las siguientes características: Reproducir canciones Reproducir álbumes Agregar canciones a la cola Controla (y ve) el estado de reproducción a través de la integración Dbus Control desde otros clientes a través de websocket. Actualmente implementado: Reproducir / pausar / detener Regular volumen Siguiente pista Acaba de actualizar la aplicación a la versión 0.2.0 y gracias a una consulta/sugerencia que hice, el desarrollador ha implementado el que podamos tener un archivo de configuración y gracias a esto, el poder exportarlo a otra cliente o crear múltiples archivos de configuración para varios servidores. Instalar Go No...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Escuchando música de mi servidor Jellyfin con jellycli">
+    <meta property="og:description" content="Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar. Y es que Jellycli es una aplicación desarrollada por el finlandés Tero Vierimaa, que nos permite el poder escuchar toda la biblioteca musical que tenemos en Jellyfin, en nuestro escritorio y a través de la terminal. Jellycli está desarrollada en Go y actualmente tiene las siguientes características: Reproducir canciones Reproducir álbumes Agregar canciones a la cola Controla (y ve) el estado de reproducción a través de la integración Dbus Control desde otros clientes a través de websocket. Actualmente implementado: Reproducir / pausar / detener Regular volumen Siguiente pista Acaba de actualizar la aplicación a la versión 0.2.0 y gracias a una consulta/sugerencia que hice, el desarrollador ha implementado el que podamos tener un archivo de configuración y gracias a esto, el poder exportarlo a otra cliente o crear múltiples archivos de configuración para varios servidores. Instalar Go No...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/jellifin.png">
+    <meta property="og:url" content="escuchando-musica-de-mi-servidor-jellyfin-con-jellycli">
+    <meta name="twitter:title" content="Escuchando música de mi servidor Jellyfin con jellycli">
+    <meta name="twitter:description" content="Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar. Y es que Jellycli es una aplicación desarrollada por el finlandés Tero Vierimaa, que nos permite el poder escuchar toda la biblioteca musical que tenemos en Jellyfin, en nuestro escritorio y a través de la terminal. Jellycli está desarrollada en Go y actualmente tiene las siguientes características: Reproducir canciones Reproducir álbumes Agregar canciones a la cola Controla (y ve) el estado de reproducción a través de la integración Dbus Control desde otros clientes a través de websocket. Actualmente implementado: Reproducir / pausar / detener Regular volumen Siguiente pista Acaba de actualizar la aplicación a la versión 0.2.0 y gracias a una consulta/sugerencia que hice, el desarrollador ha implementado el que podamos tener un archivo de configuración y gracias a esto, el poder exportarlo a otra cliente o crear múltiples archivos de configuración para varios servidores. Instalar Go No...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/jellifin.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Escuchando música de mi servidor Jellyfin con jellycli</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 458 palabras. <a href="../categories/jellyfin.html">jellyfin</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Esta una de esas aplicaciones que me encantan. Parece magia verla funcionar.</p>
+<p>Y es que Jellycli es una aplicación desarrollada por el finlandés <a href="https://github.com/tryffel">Tero Vierimaa</a>, que nos permite el poder escuchar toda la biblioteca musical que tenemos en Jellyfin, en nuestro escritorio y a través de la terminal.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/jellifin.png" alt=""></p>
+<p>Jellycli está desarrollada en Go y actualmente tiene las siguientes características:</p>
+<ul>
+<li>Reproducir canciones</li>
+<li>Reproducir álbumes</li>
+<li>Agregar canciones a la cola</li>
+<li>Controla (y ve) el estado de reproducción a través de la integración Dbus</li>
+</ul>
+<p>Control desde otros clientes a través de websocket. Actualmente implementado:</p>
+<ul>
+<li>Reproducir / pausar / detener</li>
+<li>Regular volumen</li>
+<li>Siguiente pista</li>
+</ul>
+<p><img src="https://ugeek.github.io/blog/images-blog/jellycli.png" alt=""></p>
+<p>Acaba de actualizar la aplicación a la versión 0.2.0 y gracias a una consulta/sugerencia que hice, el desarrollador ha implementado el que podamos tener un archivo de configuración y gracias a esto, el poder exportarlo a otra cliente o crear múltiples archivos de configuración para varios servidores.</p>
+<h2>Instalar Go</h2>
+<p>No voy a extenderme a explicar en este artículo como instalar Go ya que no es el propósito del mismo, pero si quieres instalarlo de un modo rápido y sin complicarte, podemos instalarlo con snap.</p>
+<pre><code>
+sudo snap install go --classic
+</code></pre>
+<h2>Instalar Jellycli</h2>
+<p>Clonaremos el repositorio desde GitHub y vamos a construir el paquete</p>
+<h3>Con Go instalado en el sistema</h3>
+<pre><code>
+git clone https://github.com/tryffel/jellycli.git
+cd jellycli
+go build .
+./jellycli
+</code></pre>
+<h3>Con Go instalado mediante snap</h3>
+<pre><code>
+git clone https://github.com/tryffel/jellycli.git
+cd jellycli
+/snap/bin/go build .
+./jellycli
+</code></pre>
+<h2>Iniciando Jellycli</h2>
+<p>Vamos a iniciar la aplicación dentro del directorio, una vez construido el paquete de Jellycli y conectarlo con mi servidor Jellyfin, siguiendo mi ejemplo.</p>
+<p>La primera vez que iniciamos, la aplicación solicita:</p>
+<ul>
+<li>El host Jellyfin: <a href="http://192.168.1.100:8096/">http://192.168.1.100:8096</a></li>
+<li>Nombre de usuario: angel</li>
+<li>Contraseña: 1234</li>
+<li>Número de Biblioteca donde está la música: En mi caso es el 1</li>
+</ul>
+<h2>Archivo de Configuración</h2>
+<p>Una vez iniciada la sesión, se crea una archivo de configuración en la siguiente ruta <code>~/.config/jellycli/jellycli.yaml</code>.</p>
+<p>Puedes usar varios servidores con sus diferentes archivos de configuración, ejecutando:</p>
+<pre><code>
+jellycli --config /home/angel/.config/jellycli/rp4.yaml
+</code></pre>
+<pre><code>
+jellycli --config /home/angel/.config/jellycli/debian.yaml
+</code></pre>
+<h2>Uso</h2>
+<p>Una vez abierta la aplicación, veremos que tenemos disponible la ayuda pulsando la tecla <strong>F1</strong>.</p>
+<p>Todas las funciones visibles de la aplicación, al lado tienen a que tecla corresponden.</p>
+<p>Para movernos por los paneles, utilizaremos la tecla <strong>TAB</strong>, para seleccionar la tecla <strong>ENTER</strong> y para salir de la aplicación <strong>Ctrl+c</strong>.</p>
+<p>Subir y bajar por las canciones, artistas,... podemos utilizar tanto las flechas del teclado, así como los atajos de Vim.</p>
+<ul>
+<li>Subir y bajar -&gt; j,k</li>
+<li>Arriba de la página o Abajo -&gt; g,G</li>
+<li>Página arriba, página abajo -&gt; CtrlF , CtrlB</li>
+</ul>
+<h2>Alias</h2>
+<p>He creado un alias para no tener que acceder a la carpeta de jellycli cada vez que quiero utilizarlo. Así con un simple <strong>jellycli</strong>, estoy escuchando mi música favorita.</p>
+<pre><code>
+alias jellycli='/home/angel/jellycli/jellycli'
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/tryffel/jellycli">https://github.com/tryffel/jellycli</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el martes, 10 de marzo de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-09-28</em> - <a href="../posts/2022-09-28-notificaciones-de-jellyfin-en-telegram.html">Notificaciones de Jellyfin en Telegram</a></li><li><em>2021-12-29</em> - <a href="../posts/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html">Sonixd. Player para Jellyfin y Subsonic</a></li><li><em>2021-08-09</em> - <a href="../posts/2021-08-09-lista-de-repositorios-de-jellyfin.html">Lista de repositorios de Jellyfin.</a></li><li><em>2020-11-15</em> - <a href="../posts/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html">Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin</a></li><li><em>2020-08-19</em> - <a href="../posts/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html">Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li><li><em>2020-03-09</em> - <a href="../posts/2020-03-09-el-mejor-y-mas-ligero-cliente-para-tu-escritorio-de-jellyfin-jellyfin-cli.html">El mejor y más ligero cliente para tu Escritorio de Jellyfin. Jellyfin-cli</a></li><li><em>2019-11-27</em> - <a href="../posts/2019-11-27-ordena-renombra-y-actualiza-tus-metadatos-con-tiny-media-manager.html">Ordena, renombra y actualiza tus metadatos con Tiny Media Manager</a></li><li><em>2019-08-21</em> - <a href="../posts/2019-08-21-cada-vez-mas-clientes-de-jellyfin-aplicaciones-para-escritorio-linux-windows-mac-android-kodi.html">Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

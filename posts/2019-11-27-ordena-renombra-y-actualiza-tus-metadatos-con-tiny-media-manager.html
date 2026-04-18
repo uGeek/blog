@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordena, renombra y actualiza tus metadatos con Tiny Media Manager</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Si tienes un servidor multimedia como Jellyfin o Plex, en muchas ocasiones, es probable que la información de tus películas o series, no aparezcan correctamente. No estaría mal el ayudar a tu servidor con esta dura tarea de indexar tus archivos. Para ello, vamos a instalar una aplicación como Tiny Media Manager. Tiny Media Manager nos va a renombrar, modificar correctamente los metadatos y descargar portadas de nuestro contenido multimedia. La había probado hace muchísimo tiempo, pero no hace mucho, me la recomendó nuevamente Carlos del Blog de Lazaro. Instalación Java Tiny Media Manager, está desarrollado en Java, así que es necesario instalar JDK u OpenJDK, si tu distro no lo trae instalado. Es probable que tu distro traiga una versión incluso mas actualizada. sudo apt install openjdk-8-jdk sudo apt install libmediainfo Descargando y ejecutando Tiny Media Manager Tan sencillo como ir a la página oficial de TiniMediaManager y descargar...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ordena, renombra y actualiza tus metadatos con Tiny Media Manager">
+    <meta property="og:description" content="Si tienes un servidor multimedia como Jellyfin o Plex, en muchas ocasiones, es probable que la información de tus películas o series, no aparezcan correctamente. No estaría mal el ayudar a tu servidor con esta dura tarea de indexar tus archivos. Para ello, vamos a instalar una aplicación como Tiny Media Manager. Tiny Media Manager nos va a renombrar, modificar correctamente los metadatos y descargar portadas de nuestro contenido multimedia. La había probado hace muchísimo tiempo, pero no hace mucho, me la recomendó nuevamente Carlos del Blog de Lazaro. Instalación Java Tiny Media Manager, está desarrollado en Java, así que es necesario instalar JDK u OpenJDK, si tu distro no lo trae instalado. Es probable que tu distro traiga una versión incluso mas actualizada. sudo apt install openjdk-8-jdk sudo apt install libmediainfo Descargando y ejecutando Tiny Media Manager Tan sencillo como ir a la página oficial de TiniMediaManager y descargar...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/tmm.png">
+    <meta property="og:url" content="ordena-renombra-y-actualiza-tus-metadatos-con-tiny-media-manager">
+    <meta name="twitter:title" content="Ordena, renombra y actualiza tus metadatos con Tiny Media Manager">
+    <meta name="twitter:description" content="Si tienes un servidor multimedia como Jellyfin o Plex, en muchas ocasiones, es probable que la información de tus películas o series, no aparezcan correctamente. No estaría mal el ayudar a tu servidor con esta dura tarea de indexar tus archivos. Para ello, vamos a instalar una aplicación como Tiny Media Manager. Tiny Media Manager nos va a renombrar, modificar correctamente los metadatos y descargar portadas de nuestro contenido multimedia. La había probado hace muchísimo tiempo, pero no hace mucho, me la recomendó nuevamente Carlos del Blog de Lazaro. Instalación Java Tiny Media Manager, está desarrollado en Java, así que es necesario instalar JDK u OpenJDK, si tu distro no lo trae instalado. Es probable que tu distro traiga una versión incluso mas actualizada. sudo apt install openjdk-8-jdk sudo apt install libmediainfo Descargando y ejecutando Tiny Media Manager Tan sencillo como ir a la página oficial de TiniMediaManager y descargar...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/tmm.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Ordena, renombra y actualiza tus metadatos con Tiny Media Manager</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 375 palabras. <a href="../categories/jellyfin.html">jellyfin</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Si tienes un servidor multimedia como Jellyfin o Plex, en muchas ocasiones, es probable que la información de tus películas o series, no aparezcan correctamente. No estaría mal el ayudar a tu servidor con esta dura tarea de indexar tus archivos.</p>
+<p>Para ello, vamos a instalar una aplicación como Tiny Media Manager.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/tmm.png" alt=""></p>
+<p>Tiny Media Manager nos va a renombrar, modificar correctamente los metadatos y descargar portadas de nuestro contenido multimedia.</p>
+<p>La había probado hace muchísimo tiempo, pero no hace mucho, me la recomendó nuevamente <a href="https://elblogdelazaro.gitlab.io/">Carlos del Blog de Lazaro</a>.</p>
+<h2>Instalación</h2>
+<h3>Java</h3>
+<p>Tiny Media Manager, está desarrollado en Java, así que es necesario instalar JDK u OpenJDK, si tu distro no lo trae instalado. Es probable que tu distro traiga una versión incluso mas actualizada.</p>
+<pre><code>
+sudo apt install openjdk-8-jdk
+sudo apt install libmediainfo
+</code></pre>
+<h3>Descargando y ejecutando Tiny Media Manager</h3>
+<p>Tan sencillo como ir a la página oficial de TiniMediaManager y <a href="https://www.tinymediamanager.org/download/">descargar el archivo comprimido, em mi caso, para linux</a>.</p>
+<p>Una vez descargado, descomprimimos el contenido del archivo en una carpeta, accederemos al interior de esta y ejecutaremos el script que encontraremos llamado: <strong>tinyMediaManagerUpdater.sh</strong></p>
+<pre><code>
+./tinyMediaManagerUpdater.sh
+</code></pre>
+<h2>Docker</h2>
+<p>Gracias una vez más al trabajo de <a href="https://github.com/romancin">Román Martín</a>, ha creado este contenedor de Tiny Media Manager para arquitectura 64bits, donde nos vamos a evitar todo el tedioso proceso del apartado anterior y podremos montar este contenedor, que nos permitirá acceder a Tiny Media Manager desde nuestro navegador web. Esto nos va a permitir tanto en nuestro PC local, así como si tenemos un servidor, el poder utilizar esta aplicación remotamente.</p>
+<pre><code>
+docker run -d --name=tinymediamanager \
+-v $HOME/tinymediamanager/config:/config \
+-v $HOME/docker/media:/media \
+-e GROUP_ID=0 -e USER_ID=0 -e TZ=Europe/Madrid \
+-p 5800:5800 \
+-p 5900:5900 \
+romancin/tinymediamanager:latest
+</code></pre>
+<p>Una vez montado el contenedor, accederemos en este caso a la ip:5800</p>
+<h2>Uso</h2>
+<p>La verdad es que esta aplicación es de todo, menos amigable. Gracias a Mc Josan del Blog de <a href="https://naseros.com/">NASeros</a> (os recomiendo totalmente su blog y <a href="https://www.youtube.com/channel/UCuxoUnuGxFSHbR5_I4YbA1Q">Canal de vídeos en youtube</a>), que hace unos vídeos muy pero que muy bien explicados, nos dejó esta explicación de su uso, que aunque la versión que explica, es una versión anterior de Tiny Media Manager, su uso es exactamente el mismo.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1XVnQoTLW5k">https://www.youtube.com/watch?v=1XVnQoTLW5k</a></li>
+</ul>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://www.tinymediamanager.org/">https://www.tinymediamanager.org/</a></li>
+<li><a href="https://github.com/romancin/tinymediamanager-docker">https://github.com/romancin/tinymediamanager-docker</a></li>
+<li><a href="https://naseros.com/2015/12/11/tiny-media-manager-series-2a-parte/">https://naseros.com/2015/12/11/tiny-media-manager-series-2a-parte/</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 27 de noviembre de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2022-09-28</em> - <a href="../posts/2022-09-28-notificaciones-de-jellyfin-en-telegram.html">Notificaciones de Jellyfin en Telegram</a></li><li><em>2021-12-29</em> - <a href="../posts/2021-12-29-sonixd-player-para-jellyfin-y-subsonic.html">Sonixd. Player para Jellyfin y Subsonic</a></li><li><em>2021-08-09</em> - <a href="../posts/2021-08-09-lista-de-repositorios-de-jellyfin.html">Lista de repositorios de Jellyfin.</a></li><li><em>2020-11-15</em> - <a href="../posts/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html">Jellyfin Skin Manager. Repositorio para cambiar el tema de tu Jellyfin</a></li><li><em>2020-08-19</em> - <a href="../posts/2020-08-19-jellycon-la-mejor-experiencia-de-jellyfin-en-kodi.html">Jellycon. La mejor experiencia de Jellyfin en Kodi</a></li><li><em>2020-03-10</em> - <a href="../posts/2020-03-10-escuchando-musica-de-mi-servidor-jellyfin-con-jellycli.html">Escuchando música de mi servidor Jellyfin con jellycli</a></li><li><em>2020-03-09</em> - <a href="../posts/2020-03-09-el-mejor-y-mas-ligero-cliente-para-tu-escritorio-de-jellyfin-jellyfin-cli.html">El mejor y más ligero cliente para tu Escritorio de Jellyfin. Jellyfin-cli</a></li><li><em>2019-08-21</em> - <a href="../posts/2019-08-21-cada-vez-mas-clientes-de-jellyfin-aplicaciones-para-escritorio-linux-windows-mac-android-kodi.html">Cada vez mas clientes de Jellyfin. Aplicaciones para Escritorio Linux, Windows, Mac, Android, Kodi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

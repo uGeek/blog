@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="He conectado 5 relés y 4 Discos Duros a mi Raspberry para hacer backups. Ahora tengo que crear un script para automatizar el montaje de estos discos y siempre cada uno de ellos tiene que montarse en el mismo directorio. Vamos a ver como podemos hacer esto. Voy a utilizar un ejemplo con un disco. Conocer el UUID Para conocer todos los discos duros que tenemos: lsblk -nl | grep -i disk Primero necesitamos conocer el UUID de un disco. sudo blkid El resultado que me ha dado es: UUID="54C2D371C2D447BD" También podríamos utilizar ls -l /dev/disk/by-uuid También podemos ver todas las unidades conectadas a nuestro dispositivo con: ls -l /dev/sd* Montar Disco Ya lo tenemos resuelto. Ahora vamos a montar el disco. En mi ejemplo el disco está en formato NTFS, tal como venía de la tienda y he pasado de formatearlo. Si el disco tiene otro tipo de formato,...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux">
+    <meta property="og:description" content="He conectado 5 relés y 4 Discos Duros a mi Raspberry para hacer backups. Ahora tengo que crear un script para automatizar el montaje de estos discos y siempre cada uno de ellos tiene que montarse en el mismo directorio. Vamos a ver como podemos hacer esto. Voy a utilizar un ejemplo con un disco. Conocer el UUID Para conocer todos los discos duros que tenemos: lsblk -nl | grep -i disk Primero necesitamos conocer el UUID de un disco. sudo blkid El resultado que me ha dado es: UUID="54C2D371C2D447BD" También podríamos utilizar ls -l /dev/disk/by-uuid También podemos ver todas las unidades conectadas a nuestro dispositivo con: ls -l /dev/sd* Montar Disco Ya lo tenemos resuelto. Ahora vamos a montar el disco. En mi ejemplo el disco está en formato NTFS, tal como venía de la tienda y he pasado de formatearlo. Si el disco tiene otro tipo de formato,...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/sd.png">
+    <meta property="og:url" content="montar-un-usb-tarjeta-sd-disco-duro-o-ssd-formateado-en-ext4-fat32-o-ntfs-en-un-directorio-con-linux">
+    <meta name="twitter:title" content="Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux">
+    <meta name="twitter:description" content="He conectado 5 relés y 4 Discos Duros a mi Raspberry para hacer backups. Ahora tengo que crear un script para automatizar el montaje de estos discos y siempre cada uno de ellos tiene que montarse en el mismo directorio. Vamos a ver como podemos hacer esto. Voy a utilizar un ejemplo con un disco. Conocer el UUID Para conocer todos los discos duros que tenemos: lsblk -nl | grep -i disk Primero necesitamos conocer el UUID de un disco. sudo blkid El resultado que me ha dado es: UUID="54C2D371C2D447BD" También podríamos utilizar ls -l /dev/disk/by-uuid También podemos ver todas las unidades conectadas a nuestro dispositivo con: ls -l /dev/sd* Montar Disco Ya lo tenemos resuelto. Ahora vamos a montar el disco. En mi ejemplo el disco está en formato NTFS, tal como venía de la tienda y he pasado de formatearlo. Si el disco tiene otro tipo de formato,...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/sd.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Montar un usb, tarjeta SD, disco duro o SSD formateado en EXT4, FAT32 o NTFS, en un directorio con Linux</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 643 palabras. <a href="../categories/bash.html">bash</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>He conectado 5 relés y 4 Discos Duros a mi Raspberry para hacer backups.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/sd.png" alt=""></p>
+<p>Ahora tengo que crear un script para automatizar el montaje de estos discos y siempre cada uno de ellos tiene que montarse en el mismo directorio.</p>
+<p>Vamos a ver como podemos hacer esto. Voy a utilizar un ejemplo con un disco.</p>
+<h2>Conocer el UUID</h2>
+<p>Para conocer todos los discos duros que tenemos:</p>
+<pre><code>
+lsblk -nl | grep -i disk
+</code></pre>
+<p>Primero necesitamos conocer el UUID de un disco.</p>
+<pre><code>
+sudo blkid
+</code></pre>
+<p>El resultado que me ha dado es:</p>
+<pre><code>
+UUID="54C2D371C2D447BD"
+</code></pre>
+<p>También podríamos utilizar</p>
+<pre><code>
+ls -l /dev/disk/by-uuid
+</code></pre>
+<p>También podemos ver todas las unidades conectadas a nuestro dispositivo con:</p>
+<pre><code>
+ls -l /dev/sd*
+</code></pre>
+<h2>Montar Disco</h2>
+<p>Ya lo tenemos resuelto. Ahora vamos a montar el disco. En mi ejemplo el disco está en formato NTFS, tal como venía de la tienda y he pasado de formatearlo. Si el disco tiene otro tipo de formato, tienes que especificarlo en le montaje.</p>
+<pre><code>
+sudo mount -t ntfs-3g  UUID="54C2D371C2D447BD" /home/angel/Disco1
+</code></pre>
+<h2>Desmontar Disco</h2>
+<p>Para desmontar un disco:</p>
+<pre><code>
+sudo umount directorio
+</code></pre>
+<p>Para desmontar varios discos:</p>
+<pre><code>
+sudo umount directorio1 directorio2 directorio3 directorio4
+</code></pre>
+<h4>Forzar desmontar</h4>
+<p>En ocasiones el sistema kernel considera que el sistema de archivos está ocupado, en estos casos, puedes forzar con el desmontaje <code>umount -f</code>.</p>
+<p>Averigua el porque no puedes desmontarlo antes de forzar, porque quizás si hay un motivo.</p>
+<pre><code>
+sudo umount -f directorio
+</code></pre>
+<h2>Ver todas las unidades montadas</h2>
+<pre><code>
+mount
+</code></pre>
+<h2>Montar unidad EXT4</h2>
+<pre><code>
+sudo mount -t ext4 -o defaults /dev/sda1 /media/usb
+</code></pre>
+<h2>Montar unidad FAT32</h2>
+<pre><code>
+sudo mount -t vfat /dev/sdb1 /media/usb
+</code></pre>
+<h2>Montar unidad NTFS</h2>
+<p>Para montar una partición NTFS, utilizaremos:</p>
+<pre><code>
+sudo mount -t ntfs-3g /dev/sdb1 /media/usb
+</code></pre>
+<h2>Montaje de otro tipo de formatos</h2>
+<p>Para verlo de un modo más simplificado y sin opciones especiales de montaje:</p>
+<h4>FAT16 o FAT32</h4>
+<pre><code>
+sudo mount -t vfat UUID="54C2D371C2D447BD" /home/angel/Disco1
+</code></pre>
+<h4>NTFS</h4>
+<pre><code>
+sudo mount -t ntfs UUID="54C2D371C2D447BD" /home/angel/Disco1
+</code></pre>
+<h4>EXT3</h4>
+<pre><code>
+sudo mount -t ext3 UUID="54C2D371C2D447BD" /home/angel/Disco1
+</code></pre>
+<h4>EXT4</h4>
+<pre><code>
+sudo mount -t ext4 UUID="54C2D371C2D447BD" /home/angel/Disco1
+</code></pre>
+<h4>UFS</h4>
+<pre><code>
+sudo mount -t ufs -o ro UUID="54C2D371C2D447BD" /home/angel/Disco1
+</code></pre>
+<h4>UFS2</h4>
+<pre><code>
+sudo mount -t ufs -o ro,ufstype=ufs2 UUID="54C2D371C2D447BD" /home/angel/Disco1
+</code></pre>
+<h4>Montar un directorio en otro dentro de nuestro sistema</h4>
+<pre><code>
+sudo mount /home/angel/directorio1 /home/angel/directorio2
+</code></pre>
+<h2>Comprobar si la unidad se ha montado correctamente</h2>
+<p>Sería tan fácil como hacer un <strong>ls</strong> en el directorio donde hemos montado la unidad, pero para ver un resumen del resto de unidades:</p>
+<pre><code>
+df -l
+</code></pre>
+<h2>Montar al inicio con el sistema</h2>
+<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code>/etc/fstab</code>.</p>
+<p>Vamos a editarlo:</p>
+<pre><code>
+sudo nano /etc/fstab
+</code></pre>
+<p>Es importante que los espacios son <strong>Tabulados.</strong></p>
+<pre><code>
+UUID="54C2D371C2D447BD"  /home/angel/Disco1   ext    defaults,auto 0    0
+</code></pre>
+<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code>defaults</code>.</p>
+<h2>Montar todos los discos</h2>
+<p>Para montar todos los disco que hay en el archivo <code>/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
+<pre><code>
+sudo mount -a
+</code></pre>
+<h2>Desmontar una unidad</h2>
+<pre><code>
+sudo umount /media/usb
+</code></pre>
+<p>Puede que la unidad esté ocupada realizando un proceso. Para forzar y desmontar la unidad:</p>
+<pre><code>
+sudo umount -l /dev/sdb1
+</code></pre>
+<p>Para desmontar varios discos</p>
+<pre><code>
+sudo umount directorio1 directorio2 directorio3 directorio4
+</code></pre>
+<h3>Montar al inicio con el sistema</h3>
+<p>Montar automáticamente con el sistema, sería añadirlo en el archivo de configuración <code>/etc/fstab</code>.</p>
+<p>Vamos a editarlo:</p>
+<pre><code>
+sudo nano /etc/fstab
+</code></pre>
+<p>Es importante que los espacios son <strong>Tabulados.</strong></p>
+<pre><code>
+UUID="54C2D371C2D447BD"  /home/angel/Disco1   ext    defaults,auto 0    0
+</code></pre>
+<p>Si en las opciones de montaje no utilizamos ningún valor, como en la línea anterior, podremos <code>defaults</code>.</p>
+<h3>Montar todos los discos</h3>
+<p>Para montar todos los disco que hay en el archivo <code>/etc/fstab</code> a la vez, en el caso que hayamos desmontado alguno, utilizaremos el siguiente comando.</p>
+<pre><code>
+sudo mount -a
+</code></pre>
+<h2>Visudo</h2>
+<p>Utilizando el comando visudo, podemos evitar el utilizar sudo cada vez que montamos o desmontamos un disco.</p>
+<pre><code>
+sudo visudo
+</code></pre>
+<p>Si el usuario es <strong>angel</strong>, agrega al final la siguiente línea:</p>
+<pre><code>
+angel ALL=(ALL) NOPASSWD:/usr/bin/mount,/usr/bin/umount
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 07 de octubre de 2020</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-02-18</em> - <a href="../posts/2023-02-18-borrar-directorios-vacios-sin-archivos-con-find.html">Borrar directorios vacios, sin archivos con find</a></li><li><em>2022-07-12</em> - <a href="../posts/2022-07-12-opciones-de-tiempo-en-el-comando-sleep-en-bash.html">Opciones de tiempo en el comando sleep en bash</a></li><li><em>2022-07-04</em> - <a href="../posts/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html">Copiando en la terminal con barra de proceso</a></li><li><em>2022-03-27</em> - <a href="../posts/2022-03-27-scripts-ejecutables-en-cualquier-directorio-de-nuestra-raspberry-o-distro-linux.html">Scripts ejecutables en cualquier directorio de nuestra Raspberry o Distro Linux</a></li><li><em>2022-01-06</em> - <a href="../posts/2022-01-06-cambiar-editor-por-defecto-en-crontab.html">Cambiar editor por defecto en Crontab</a></li><li><em>2021-11-20</em> - <a href="../posts/2021-11-20-usrbinenv-bash-o-binbash.html">¿#!/usr/bin/env bash o #!/bin/bash?</a></li><li><em>2021-07-01</em> - <a href="../posts/2021-07-01-silenciar-de-silenciar-o-cambiar-el-volumen-de-tu-ubuntu-debian-desde-la-terminal.html">Silenciar, De-silenciar o cambiar el volumen de tu Ubuntu, Debian,... desde la terminal</a></li><li><em>2021-05-31</em> - <a href="../posts/2021-05-31-sensors-y-psensor-controlando-la-temperatura-de-mi-pc.html">Sensors y psensor. Controlando la temperatura de mi PC</a></li><li><em>2021-04-27</em> - <a href="../posts/2021-04-27-conocer-la-ip-y-mac-de-los-dispositivos-que-hay-en-tu-red-local-desde-terminal.html">Conocer la IP y MAC de los dispositivos que hay en tu red local desde terminal</a></li><li><em>2021-04-06</em> - <a href="../posts/2021-04-06-unrar-en-raspberry-pi.html">unrar en Raspberry Pi</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IP estática o fija en Manjaro</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una IP fija en Manjaro. Si no deseas utilizar NetworkManager, lo siguiente más fácil es configurar una IP estática en systemd. Configurar IP estática con systemd Primero, asegúrate de no estar ejecutando NetworkManager sudo systemctl disable --now NetworkManager.service Para conocer el nombre del dispositivo de red, utiliza el comando ip a: ip a 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: entd0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000 link/ether dc:a6:32:0e:f7:75 brd ff:ff:ff:ff:ff:ff inet 192.168.1.35/24 brd 192.168.1.255 scope global end0 valid_lft forever preferred_lft forever El nombre es entd0 y su...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="IP estática o fija en Manjaro">
+    <meta property="og:description" content="Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una IP fija en Manjaro. Si no deseas utilizar NetworkManager, lo siguiente más fácil es configurar una IP estática en systemd. Configurar IP estática con systemd Primero, asegúrate de no estar ejecutando NetworkManager sudo systemctl disable --now NetworkManager.service Para conocer el nombre del dispositivo de red, utiliza el comando ip a: ip a 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: entd0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000 link/ether dc:a6:32:0e:f7:75 brd ff:ff:ff:ff:ff:ff inet 192.168.1.35/24 brd 192.168.1.255 scope global end0 valid_lft forever preferred_lft forever El nombre es entd0 y su...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="ip-estatica-o-fija-en-manjaro">
+    <meta name="twitter:title" content="IP estática o fija en Manjaro">
+    <meta name="twitter:description" content="Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una IP fija en Manjaro. Si no deseas utilizar NetworkManager, lo siguiente más fácil es configurar una IP estática en systemd. Configurar IP estática con systemd Primero, asegúrate de no estar ejecutando NetworkManager sudo systemctl disable --now NetworkManager.service Para conocer el nombre del dispositivo de red, utiliza el comando ip a: ip a 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: entd0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000 link/ether dc:a6:32:0e:f7:75 brd ff:ff:ff:ff:ff:ff inet 192.168.1.35/24 brd 192.168.1.255 scope global end0 valid_lft forever preferred_lft forever El nombre es entd0 y su...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>IP estática o fija en Manjaro</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 337 palabras. <a href="../categories/ip.html">ip</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>Para abrir los servicios a la red, lo más importante es establecer una IP fija. Así nuestro router siempre encontrará nuestro servidor. En este artículo os explico como establecer una IP fija en Manjaro.</p>
+<p>Si no deseas utilizar NetworkManager, lo siguiente más fácil es configurar una IP estática en systemd.</p>
+<h2>Configurar IP estática con systemd</h2>
+<p>Primero, asegúrate de no estar ejecutando NetworkManager</p>
+<pre><code>
+sudo systemctl disable --now NetworkManager.service
+</code></pre>
+<p>Para conocer el nombre del dispositivo de red, utiliza el comando <code>ip a</code>:</p>
+<pre><code>
+ip a
+</code></pre>
+<pre><code>
+
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+inet 127.0.0.1/8 scope host lo
+valid_lft forever preferred_lft forever
+inet6 ::1/128 scope host
+valid_lft forever preferred_lft forever
+2: entd0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000
+link/ether dc:a6:32:0e:f7:75 brd ff:ff:ff:ff:ff:ff
+inet 192.168.1.35/24 brd 192.168.1.255 scope global end0
+valid_lft forever preferred_lft forever
+</code></pre>
+<p>El nombre es <code>entd0</code> y su ip local 192.168.1.35. Necesitaremos este nombre en el siguiente paso.</p>
+<h2>Configuración de red</h2>
+<p>Ahora crearemos un archivo para contener la configuración de la red, con la siguiente estructura <code>/etc/systemd/network/NOMBRE_RED.network</code>, donde <code>NOMBRE_RED</code> lo sustituiremos por nuestro nombre de red. <strong>Recuerda que en cada dispositivo, el sistema generará un nombre de red aleatorio al azahar</strong></p>
+<p>Creamos el archivo y lo editamos</p>
+<pre><code>
+sudo nano /etc/systemd/network/entd0.network
+</code></pre>
+<p>En <code>Address</code>= pondremos la IP que deseemos. yo en este ejemplo he elegido <code>192.168.1.100</code>.</p>
+<p>También puedes personalizar las <strong>DNS</strong>.</p>
+<p><strong>IMPORTANTE CAMBIAR EL NOMBRE DE RED POR EL TUYO</strong></p>
+<ul>
+<li>Name=entd0</li>
+<li>También en el nombre de archivo <code>/etc/systemd/network/NOMBRE_RED.network</code></li>
+</ul>
+<pre><code>
+[Match]
+Name=entd0
+
+[Network]
+Address=192.168.1.100/24
+Gateway=192.168.1.1
+DNS=1.1.1.1
+DNS=8.8.8.8
+</code></pre>
+<p>Ahora solo queda iniciar y habilitar el servicio usando:</p>
+<pre><code>
+sudo systemctl enable --now systemd-networkd.service
+</code></pre>
+<p>NetworkManager es la solución predeterminada para redes en la mayoría de las ediciones de Manjaro. Si prefiere usar dhcpcd, también es compatible.</p>
+<h2>Usando dhcpcd en lugar de NetworkManager</h2>
+<p>Primero, asegúrese de que NetworkManager esté deshabilitado y no se esté ejecutando</p>
+<pre><code>
+sudo systemctl disabled --now NetworkManager.service
+</code></pre>
+<p>A continuación, inicie y habilite el servicio dhcpcd</p>
+<pre><code>
+usuario $ sudo systemctl start --now dhcpcd.service
+</code></pre>
+<h2>Fuente</h2>
+<ul>
+<li><a href="https://wiki.manjaro.org/index.php/Networking">https://wiki.manjaro.org/index.php/Networking</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 27 de enero de 2023</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2023-04-12</em> - <a href="../posts/2023-04-12-geolocalizacion-de-una-ip-en-la-terminal-y-offline.html">Geolocalización de una ip en la terminal y offline</a></li><li><em>2023-04-11</em> - <a href="../posts/2023-04-11-geolocalizando-y-mostrando-rutas-por-la-ip.html">Geolocalizando y mostrando rutas por la ip.</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

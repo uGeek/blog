@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matar procesos con ps, sar, kill, killall, pkill</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Qué procesos consumen más y como detenerlos De tanto en tanto, me gusta echar un vistazo a todos los procesos que están corriendo en mi máquina Linux. Es interesante ver todos los procesos que más recursos están consumiendo, en el caso que ese proceso no sea importante para ti, detenerlo. En este artículo vamos a ver cómo visualizar todos los procesos que más CPU consume así como RAM y segundo bloque del artículo veremos como detenerlos de diferentes maneras. ps Con ps podemos visualizar los procesos. Podemos utilizar estas 2 opciones que nos mostraran los procesos de diferentes maneras: ps ax ps -e Mostrar los procesos que consumen más cpu ps aux --sort=-pcpu Con el comando head, podemos mostrar las 10 primeras líneas: ps aux --sort=-pcpu | head Aquí vemos el resultado de la salida ordenada, usando %cpu en lugar de pcpu: ps aux --sort -%cpu Refresco del comando El...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Matar procesos con ps, sar, kill, killall, pkill">
+    <meta property="og:description" content="Qué procesos consumen más y como detenerlos De tanto en tanto, me gusta echar un vistazo a todos los procesos que están corriendo en mi máquina Linux. Es interesante ver todos los procesos que más recursos están consumiendo, en el caso que ese proceso no sea importante para ti, detenerlo. En este artículo vamos a ver cómo visualizar todos los procesos que más CPU consume así como RAM y segundo bloque del artículo veremos como detenerlos de diferentes maneras. ps Con ps podemos visualizar los procesos. Podemos utilizar estas 2 opciones que nos mostraran los procesos de diferentes maneras: ps ax ps -e Mostrar los procesos que consumen más cpu ps aux --sort=-pcpu Con el comando head, podemos mostrar las 10 primeras líneas: ps aux --sort=-pcpu | head Aquí vemos el resultado de la salida ordenada, usando %cpu en lugar de pcpu: ps aux --sort -%cpu Refresco del comando El...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+    <meta property="og:url" content="matar-procesos-con-ps-sar-kill-killall-pkill">
+    <meta name="twitter:title" content="Matar procesos con ps, sar, kill, killall, pkill">
+    <meta name="twitter:description" content="Qué procesos consumen más y como detenerlos De tanto en tanto, me gusta echar un vistazo a todos los procesos que están corriendo en mi máquina Linux. Es interesante ver todos los procesos que más recursos están consumiendo, en el caso que ese proceso no sea importante para ti, detenerlo. En este artículo vamos a ver cómo visualizar todos los procesos que más CPU consume así como RAM y segundo bloque del artículo veremos como detenerlos de diferentes maneras. ps Con ps podemos visualizar los procesos. Podemos utilizar estas 2 opciones que nos mostraran los procesos de diferentes maneras: ps ax ps -e Mostrar los procesos que consumen más cpu ps aux --sort=-pcpu Con el comando head, podemos mostrar las 10 primeras líneas: ps aux --sort=-pcpu | head Aquí vemos el resultado de la salida ordenada, usando %cpu en lugar de pcpu: ps aux --sort -%cpu Refresco del comando El...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/ugeek.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Matar procesos con ps, sar, kill, killall, pkill</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 3 min. 449 palabras. <a href="../categories/cpu.html">cpu</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h2>Qué procesos consumen más y como detenerlos</h2>
+<p>De tanto en tanto, me gusta echar un vistazo a todos los procesos que están corriendo en mi máquina Linux. Es interesante ver todos los procesos que más recursos están consumiendo, en el caso que ese proceso no sea importante para ti, detenerlo.</p>
+<p>En este artículo vamos a ver cómo visualizar todos los procesos que más CPU consume así como RAM y segundo bloque del artículo veremos como detenerlos de diferentes maneras.</p>
+<h2>ps</h2>
+<p>Con ps podemos visualizar los procesos. Podemos utilizar estas 2 opciones que nos mostraran los procesos de diferentes maneras:</p>
+<pre><code>
+ps ax
+ps -e
+</code></pre>
+<h3>Mostrar los procesos que consumen más cpu</h3>
+<pre><code>
+ps aux --sort=-pcpu
+</code></pre>
+<p>Con el comando <code>head</code>, podemos mostrar las 10 primeras líneas:</p>
+<pre><code>
+ps aux --sort=-pcpu | head
+</code></pre>
+<p>Aquí vemos el resultado de la salida ordenada, usando %cpu en lugar de pcpu:</p>
+<pre><code>
+ps aux --sort -%cpu
+</code></pre>
+<h3>Refresco del comando</h3>
+<p>El comando <code>watch</code> ejecuta un comando mostrando su salida por pantalla cada x segundos.</p>
+<pre><code>
+watch -n 1 'ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head'
+</code></pre>
+<p><code>-n</code> es el intervalo en segundos y <code>ps -o</code> utiliza un formato definido por el usuario.</p>
+<h3>Monitorizar la cpu con sar</h3>
+<p>Para instalarlo, lo encontraremos en los repositorios con:</p>
+<pre><code>
+sudo apt install sysstat
+</code></pre>
+<p>Vamos a mostrar el uso de la CPU en tiempo real, cada 1 segundo, 10 veces en total.</p>
+<pre><code>
+sar -u 1 10
+</code></pre>
+<p>Al final muestra una media.</p>
+<p>Para guardar la información en un archivo:</p>
+<pre><code>
+sar 1 10 -o /tmp/datos &gt; /dev/null 2&gt;&amp;1
+</code></pre>
+<p>La opción <code>-o</code> permite exportarlo a un archivo. Para consultar el archivo:</p>
+<pre><code>
+sar -f /tmp/datos
+</code></pre>
+<h3>Informe de memoria</h3>
+<p>Para el informe de memoria, utilizaremos la opción <code>-r</code></p>
+<pre><code>
+sar -r 1 10
+</code></pre>
+<h2>Matar procesos con kill, killall y pkill</h2>
+<p>Para matar el proceso con kill, necesitamos conocer el identificador del proceso. Para ello utilizaremos el comando <code>ps</code></p>
+<p>Voy a detener una conversión de un proceso con pandoc, filtrando también con <code>grep</code></p>
+<pre><code>
+ps aux | grep pandoc
+</code></pre>
+<p>La terminal en sus primeras</p>
+<pre><code>
+angel  1649126  0.0  0.0   5920   708 pts/2
+</code></pre>
+<p>En este caso el identificador sería <code>1649126</code>. Por lo tanto utilizaremos para matar el proceso:</p>
+<pre><code>
+kill 1649126
+</code></pre>
+<h3>killall</h3>
+<p>Con Killall es mucho más sencillo. Para matar un proceso utilizaremos el nombre de la aplicación. Ejemplo:</p>
+<pre><code>
+killall firefox
+</code></pre>
+<h3>Para matar todos los PIDs asociados a un nombre de proceso</h3>
+<pre><code>
+sudo killall -9 pcmanfm
+</code></pre>
+<h3>Reiniciar todos los PIDs asociados a un nombre de proceso</h3>
+<pre><code>
+sudo killall -HUP pcmanfm
+</code></pre>
+<h3>Cerrar todos los procesos de un usuario y salir de sesión</h3>
+<p>Con pkill podemos matar procesos, cerrando la totalidad o parte del nombre</p>
+<pre><code>
+sudo pkill firefox
+</code></pre>
+<h3>Matar todos los procesos y salir de sesión de usuario con pkill</h3>
+<pre><code>
+pkill -u angel
+</code></pre>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el viernes, 01 de julio de 2022</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="Tiempo estimado de lectura: 8 minutos. 884 palabras. servidor Este fin de semana, con la ayuda de Carlos del Blog de Lazaro, a quien agradezco todo el tiempo dedicado a responder todas mis preguntas, he montado por fin el Docker de Let's Encrypt de la comunidad Linux Server, que no solo te permite generar un certificado automáticamente y totalmente gratuito, para acceder a un servicio fuera de tu red local, si no que ademas permite crear un servidor de Proxy Inverso, permitiendo gracias a los subdominios de Duck DNS, poder acceder a mas de un servicio, teniendo solo un puerto abierto. Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios. También podremos dar acceso a otros usuarios,...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN">
+    <meta property="og:description" content="Tiempo estimado de lectura: 8 minutos. 884 palabras. servidor Este fin de semana, con la ayuda de Carlos del Blog de Lazaro, a quien agradezco todo el tiempo dedicado a responder todas mis preguntas, he montado por fin el Docker de Let's Encrypt de la comunidad Linux Server, que no solo te permite generar un certificado automáticamente y totalmente gratuito, para acceder a un servicio fuera de tu red local, si no que ademas permite crear un servidor de Proxy Inverso, permitiendo gracias a los subdominios de Duck DNS, poder acceder a mas de un servicio, teniendo solo un puerto abierto. Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios. También podremos dar acceso a otros usuarios,...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/mountain-man.jpg">
+    <meta property="og:url" content="docker-letsencript-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn">
+    <meta name="twitter:title" content="Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN">
+    <meta name="twitter:description" content="Tiempo estimado de lectura: 8 minutos. 884 palabras. servidor Este fin de semana, con la ayuda de Carlos del Blog de Lazaro, a quien agradezco todo el tiempo dedicado a responder todas mis preguntas, he montado por fin el Docker de Let's Encrypt de la comunidad Linux Server, que no solo te permite generar un certificado automáticamente y totalmente gratuito, para acceder a un servicio fuera de tu red local, si no que ademas permite crear un servidor de Proxy Inverso, permitiendo gracias a los subdominios de Duck DNS, poder acceder a mas de un servicio, teniendo solo un puerto abierto. Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios. También podremos dar acceso a otros usuarios,...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/mountain-man.jpg">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Docker: Letsencript. Accediendo a todos mis servicios desde cualquier lugar sin VPN</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 4 min. 776 palabras. <a href="../categories/servidor.html">servidor</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<h5>Tiempo estimado de lectura: 8 minutos. 884 palabras. <a href="https://ugeek.github.io/blog/categories/servidor">servidor</a></h5>
+<p><img src="https://ugeek.github.io/blog/images-blog/mountain-man.jpg" alt=""></p>
+<p>Este fin de semana, con la ayuda de <a href="https://elblogdelazaro.gitlab.io/">Carlos del Blog de Lazaro</a>, a quien agradezco todo el tiempo dedicado a responder todas mis preguntas, he montado por fin el <a href="https://hub.docker.com/r/lsioarmhf/letsencrypt">Docker de Let's Encrypt de la comunidad Linux Server</a>, que no solo te permite generar un certificado automáticamente y totalmente gratuito, para acceder a un servicio fuera de tu red local, si no que ademas permite crear un servidor de Proxy Inverso, permitiendo gracias a los <a href="https://www.duckdns.org/">subdominios de Duck DNS</a>, poder acceder a mas de un servicio, teniendo solo un puerto abierto.</p>
+<p>Esto nos permitirá poder acceder a muchos de los servicios que os he hablado durante más de dos años de Podcast, desde cualquier lugar, dispositivo, sin necesidad de utilizar una VPN y disfrutando de la totalidad de características disponibles en estos servicios.</p>
+<p>También podremos dar acceso a otros usuarios, amigos, familiares, etc… Ya que nosotros como administradores del servicio, tenemos el control total del mismo.</p>
+<p>Servicios como Nextcloud, Jellyfin, tt-rss, Dokuwiki, Wordpress, etc… Los podremos utilizar en cualquier lugar, teniéndolos en nuestra Raspberry o Servidor y manteniendo el control total de todos nuestros datos.</p>
+<p>Recuerda que gracias al certificado de Let's Encrypt, todos los datos entre servidor y cliente, irán totalmente cifrados.</p>
+<p>Yo os voy a explicar como montarlo en Raspbian o cualquier servidor Linux, pero si eres de los que utilizan <a href="https://www.openmediavault.org/">Open Media Vault,</a> en breve <a href="https://elblogdelazaro.gitlab.io/">Carlos</a> publicará un Post paso a paso de como hacerlo.</p>
+<h2>Subdominio de Duck DNS</h2>
+<p>Accediendo a <a href="https://www.duckdns.org/">https://www.duckdns.org/</a>, podremos dar de alta hasta cinco subdominios totalmente gratuitos. Dalos de alta y apunta el <strong>TOKEN</strong> que será necesario para el montaje del contenedor.</p>
+<h2>Montar el Docker</h2>
+<p>Este es un ejemplo de lo que tenemos que introducir en la terminal para la montaje del Docker de Proxy inverso, donde debes de sustituir los siguiente valores:</p>
+<ul>
+<li>SUBDOMAINS</li>
+<li>DUCKDNSTOKEN</li>
+<li>EMAIL</li>
+</ul>
+<pre><code>docker create \
+  --name=letsencrypt \
+  --cap-add=NET_ADMIN \
+  --restart unless-stopped \
+  -e ONLY_SUBDOMAINS=true \
+  -e PUID=1000 \
+  -e PGID=100 \
+  -e TZ=Europe/Madrid \
+  -e URL=duckdns.org \
+  -e SUBDOMAINS=subdominio-uno,subdominio-dos,subdominio-tres \
+  -e VALIDATION=http \
+  -e DUCKDNSTOKEN=41fc1578-7fev7-4fb9-b20d-6d8vgemj6a9359 \
+  -e EMAIL=ugeekpodcast@gmail.com \
+  -e DHLEVEL=2048 \
+  -p 443:443 \
+  -p 80:80 \
+  -v $HOME/docker/letsencript:/config \
+  linuxserver/letsencrypt
+</code></pre>
+<p>En el caso de la Raspberry, yo he utilizado estas misma líneas de terminal y me ha funcionado perfectamente sin problemas</p>
+<h2>Archivos de Configuración</h2>
+<p>Ya tenemos creado nuestro Docker. Ahora accederemos a la carpeta donde están los archivos de configuración de muestra (Hay muchos servicios de ejemplo) y vamos a modificar el archivo, añadiendo nuestra <strong>IP</strong> y <strong>puerto</strong> del servicio que queramos añadir en el Proxy Inverso.</p>
+<pre><code>~/docker/letsencript/nginx/proxy-confs
+</code></pre>
+<p>Recuerda renombrar el archivo, dejando que acabe en <strong>.conf</strong>, para que el servidor interprete que es un archivo de configuración válido.</p>
+<h3>Ejemplo de archivo</h3>
+<p>Vamos a crear un archivo para Nextcloud, pero en realidad puedes hacer lo mismo para cualquier servicio.</p>
+<p>Creamos el nuevo archivo de configuración para Nexcloud.</p>
+<pre><code>nano ~/docker/letsencript/nginx/proxy-confs/nextcloud.subdomain.conf
+</code></pre>
+<p>Sustituye las siguientes líneas y pon tus datos. Dominio, ip, puerto.</p>
+<p>Nextcloud lo tengo montado con letsencript, por eso la ruta del servidor es https. Si tu servicio utiliza http, ponlo así.</p>
+<ul>
+<li><code>server_name mi_dominio.duckdns.org;</code></li>
+<li><code>proxy_pass https://192.168.1.100:81;</code></li>
+</ul>
+<pre><code>server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    server_name mi_dominio.duckdns.org;
+    include /config/nginx/ssl.conf;
+    client_max_body_size 0;
+
+    # enable for ldap auth, fill in ldap details in ldap.conf                                                                                                                                                                                                
+    #include /config/nginx/ldap.conf;                                                                                                                                                                                                                        
+
+    location / {
+        # enable the next two lines for http auth                                                                                                                                                                                                            
+        #auth_basic "Restricted";                                                                                                                                                                                                                            
+        #auth_basic_user_file /config/nginx/.htpasswd;                                                                                                                                                                                                       
+
+        # enable the next two lines for ldap auth                                                                                                                                                                                                            
+        #auth_request /auth;                                                                                                                                                                                                                                 
+        #error_page 401 =200 /login;                                                                                                                                                                                                                         
+
+        include /config/nginx/proxy.conf;
+        resolver 127.0.0.11 valid=30s;
+        set $upstream_nextcloud nextcloud;
+        proxy_pass https://192.168.1.100:81;
+    }    
+}
+</code></pre>
+<h3>Indexado de buscadores</h3>
+<p>Para que los buscadores como Google <strong>no</strong> indexen el servicio que tienes expuesto en el docker de Letsencrypt, añade al archivo de configuración las siguientes lineas:</p>
+<pre><code>add_header X-Robots-Tag "noindex, nofollow, nosnippet, noarchive";
+add_header X-Robots-Tag "none";
+</code></pre>
+<h2>Iniciar, detener, reiniciar el Docker</h2>
+<p>Iniciar, reiniciar o detener el contenedor, no va a ser diferente a cualquier Docker que tengamos corriendo en nuestro servidor:</p>
+<h3>Iniciar</h3>
+<pre><code>docker start letsencrypt
+</code></pre>
+<h3>Detener</h3>
+<pre><code>docker stop letsencrypt
+</code></pre>
+<h3>Reiniciar</h3>
+<pre><code>docker restart letsencrypt
+</code></pre>
+<h2>Comprobar que todo vaya bien</h2>
+<p>Es recomendable la primera vez que iniciamos el Docker, comprobar que todo funciona correctamente y no hay ningún error en algún archivo de configuración.</p>
+<p>Si lo hubiera, el <strong>log</strong> nos mostrará donde está este error.</p>
+<pre><code>docker logs -f letsencrypt
+</code></pre>
+<h2>Conclusión</h2>
+<p>Os puedo garantizar que el poder acceder desde el exterior de tu red local, a todos estos servicios de un modo seguro y teniendo el control de tus datos tu, es una sensación muy agradable. Montar el Docker no lleva mas de 5 minutos, así que te recomiendo el probarlo y que me cuentes tu experiencia.</p>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el miércoles, 15 de mayo de 2019</p><br><div class="related-posts"><h3>También te puede interesar:</h3><ul><li><em>2021-04-02</em> - <a href="../posts/2021-04-02-servidor-de-samba-facil.html">Servidor de Samba fácil</a></li><li><em>2019-12-28</em> - <a href="../posts/2019-12-28-instalar-un-servidor-con-debian.html">Instalar un Servidor con Debian</a></li><li><em>2019-10-22</em> - <a href="../posts/2019-10-22-docker-servidor-webdav.html">Docker: Servidor Webdav</a></li><li><em>2019-09-16</em> - <a href="../posts/2019-09-16-listado-de-servicios-con-system-v-y-systemd.html">Listado de Servicios con System V y Systemd</a></li><li><em>2019-06-11</em> - <a href="../posts/2019-06-11-montar-un-servidor-webdav-con-dafs2.html"> Montar un servidor webdav con dafs2</a></li><li><em>2019-05-07</em> - <a href="../posts/2019-05-07-el-adios-a-plex-y-emby-llega-jellyfin.html">El Adiós a Plex y Emby. Llega Jellyfin</a></li><li><em>2019-02-16</em> - <a href="../posts/2019-02-16-cliente-dlna-para-tu-escritorio.html"> Cliente dlna para tu escritorio</a></li><li><em>2019-02-06</em> - <a href="../posts/2019-02-06-instalando-una-dokuwiki-en-4-pasos.html"> Instalando una Dokuwiki en 4 pasos</a></li><li><em>2019-01-06</em> - <a href="../posts/2019-01-06-nextcloudpi-nextcloud-en-raspbian-con-docker.html"> NextcloudPi. Nextcloud en Raspbian con Docker</a></li><li><em>2019-01-03</em> - <a href="../posts/2019-01-03-visualiza-tus-notas-markdown-version-web-con-mkdocs.html"> Visualiza tus Notas Markdown Versión Web con MkDocs</a></li></ul></div><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>

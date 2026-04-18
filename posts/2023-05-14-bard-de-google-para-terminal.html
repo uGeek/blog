@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bard de google para terminal</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://ugeek.github.io/css/stylesheet.css">
+    <link rel="alternate" type="application/rss+xml" href="https://ugeek.github.io/blog/feed.xml" title=":TITLE_BLOG:">
+    <link rel="shortcut icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" type="image/x-icon">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="32x32">
+    <link rel="icon" href="https://ugeek.github.io/icon/ugeek-256x256.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://ugeek.github.io/icon/ugeek-256x256.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:site" content="@ugeekpodcast">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="uGeek. Blog de Tecnología" href="https://ugeek.github.io/blog/feed/">
+    <meta name="author" content="Angel">
+    <meta name="description" content="El proyecto de Bard para terminal está liderado por acheong08 en GitHub igual que el de edge-gpt, es una obra de ingeniería inversa de la API de Bard de Google. Permite a los usuarios interactuar con Bard a través de la terminal. El proyecto Bard está todavía en desarrollo, pero ya ha aprendido a realizar muchos tipos de tareas, como: Seguir instrucciones y completar solicitudes con atención. Responder a preguntas de forma exhaustiva e informativa, incluso si son abiertas, difíciles o extrañas. Generar diferentes formatos creativos de texto, como poemas, código, guiones, piezas musicales, correo electrónico, cartas, etc. Para usar Bard, necesitarás obtener la Cookie de Bard de Google. Una vez que tengas estos elementos, puedes seguir las instrucciones en la documentación de Bard para empezar. Recuerda que hay países en los que todavía no funciona Bard. ## Instalación pip3 install --upgrade GoogleBard Ayuda python3 -m Bard -h Obtener la...">
+    <meta property="og:site_name" content="uGeek Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Bard de google para terminal">
+    <meta property="og:description" content="El proyecto de Bard para terminal está liderado por acheong08 en GitHub igual que el de edge-gpt, es una obra de ingeniería inversa de la API de Bard de Google. Permite a los usuarios interactuar con Bard a través de la terminal. El proyecto Bard está todavía en desarrollo, pero ya ha aprendido a realizar muchos tipos de tareas, como: Seguir instrucciones y completar solicitudes con atención. Responder a preguntas de forma exhaustiva e informativa, incluso si son abiertas, difíciles o extrañas. Generar diferentes formatos creativos de texto, como poemas, código, guiones, piezas musicales, correo electrónico, cartas, etc. Para usar Bard, necesitarás obtener la Cookie de Bard de Google. Una vez que tengas estos elementos, puedes seguir las instrucciones en la documentación de Bard para empezar. Recuerda que hay países en los que todavía no funciona Bard. ## Instalación pip3 install --upgrade GoogleBard Ayuda python3 -m Bard -h Obtener la...">
+    <meta property="og:image" content="https://ugeek.github.io/blog/images-blog/bard.png">
+    <meta property="og:url" content="bard-de-google-para-terminal">
+    <meta name="twitter:title" content="Bard de google para terminal">
+    <meta name="twitter:description" content="El proyecto de Bard para terminal está liderado por acheong08 en GitHub igual que el de edge-gpt, es una obra de ingeniería inversa de la API de Bard de Google. Permite a los usuarios interactuar con Bard a través de la terminal. El proyecto Bard está todavía en desarrollo, pero ya ha aprendido a realizar muchos tipos de tareas, como: Seguir instrucciones y completar solicitudes con atención. Responder a preguntas de forma exhaustiva e informativa, incluso si son abiertas, difíciles o extrañas. Generar diferentes formatos creativos de texto, como poemas, código, guiones, piezas musicales, correo electrónico, cartas, etc. Para usar Bard, necesitarás obtener la Cookie de Bard de Google. Una vez que tengas estos elementos, puedes seguir las instrucciones en la documentación de Bard para empezar. Recuerda que hay países en los que todavía no funciona Bard. ## Instalación pip3 install --upgrade GoogleBard Ayuda python3 -m Bard -h Obtener la...">
+    <meta name="twitter:image" content="https://ugeek.github.io/blog/images-blog/bard.png">
+</head>
+<div id="logo"><a href="https://ugeek.github.io"><img src="https://ugeek.github.io/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+<br><br><br><br><br><br><br><br><br>
+<script src="../js/main.js"></script>
+<script src="../js/search.js"></script>
+<div id="name"><a href="https://ugeek.github.io/"><tt>Blog del Podcast</tt></div></a> <div id="icon"> <a href="https://ugeek.github.io/podcast.xml" title="rss" alt="rss"><img src="https://ugeek.github.io/icon/podcast.png" width="25" height="25" alt="podcast"></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/feed.xml" alt="rss"><img src="https://ugeek.github.io/icon/rss.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://github.com/ugeek"><img src="https://ugeek.github.io/icon/github.png" width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp; <a href="https://hub.docker.com/search?q=ugeek&type=image" alt="rss"><img src="https://ugeek.github.io/icon/docker.png" width="25" height="25"></a>&nbsp;&nbsp; <a href="https://twitter.com/ugeekpodcast"><img src="https://ugeek.github.io/icon/twitter.png" width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp; <a href="https://t.me/uGeek"><img src="https://ugeek.github.io/icon/telegram.png" width="25" height="25" alt="Telegram"></a></div> <div id="menu"> <a href="https://ugeek.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/list.html"><tt>Podcasts</tt></a>&nbsp;&nbsp; <a href="https://ugeek.github.io/blog/tag.html"><tt>Tags</tt></a></div>
+<!-- SEARCH BOX -->
+<input type="text" name="q" placeholder="buscar..." id="tipue_search_input" required> 
+<div align="center" id="tipue_search_content"></div> 
+
+<h1>Bard de google para terminal</h1><div style="font-size:0.9em;color:#666;display:flex;align-items:center;margin-bottom:1em;"><span>Lectura: 2 min. 306 palabras. <a href="../categories/bard.html">bard</a></span> 
+        <button onclick="toggleWdBlogTTS(this)" title="Escuchar artículo" style="background:none;border:none;cursor:pointer;color:inherit;padding:0;display:flex;align-items:center;margin-left:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+        </button>
+        </div>
+<p>El proyecto de Bard para terminal está liderado por acheong08 en GitHub igual que el de <strong>edge-gpt</strong>, es una obra de ingeniería inversa de la API de Bard de Google. Permite a los usuarios interactuar con Bard a través de la terminal.</p>
+<p><img src="https://ugeek.github.io/blog/images-blog/bard.png" alt=""></p>
+<p>El proyecto Bard está todavía en desarrollo, pero ya ha aprendido a realizar muchos tipos de tareas, como:</p>
+<ul>
+<li>Seguir instrucciones y completar solicitudes con atención.</li>
+<li>Responder a preguntas de forma exhaustiva e informativa, incluso si son abiertas, difíciles o extrañas.</li>
+<li>Generar diferentes formatos creativos de texto, como poemas, código, guiones, piezas musicales, correo electrónico, cartas, etc.</li>
+</ul>
+<p>Para usar Bard, necesitarás obtener la Cookie de Bard de Google. Una vez que tengas estos elementos, puedes seguir las instrucciones en la documentación de Bard para empezar.</p>
+<p>Recuerda que hay países en los que todavía no funciona Bard. ## Instalación</p>
+<pre><code>
+pip3 install --upgrade GoogleBard
+</code></pre>
+<h2>Ayuda</h2>
+<pre><code>
+python3 -m Bard -h
+</code></pre>
+<h2>Obtener la Coockie</h2>
+<p>Abre en el navegador la web <a href="https://bard.google.com/">https://bard.google.com/</a> - <strong>Firefox</strong>: Clica el botón derecho del ratón y selecciona la opción <code>Inspeccionar propiedades de accesibilidad</code> &gt; Accede a la sección <code>Storage</code> &gt; <code>Coockies</code> &gt; Copia el número que aparece en el apartado <code>__Secure-1PSID</code> - <strong>Otros navegadores</strong>: Pulsa la tecla <code>F12</code> para abrir la consola y copiar de : Ir a la aplicación &gt; Cookies &gt; __Secure-1PSID. Copia el valor de la cookie.</p>
+<h2>Ejecutar Bard desde la terminal</h2>
+<pre><code>
+python3 -m Bard --session "contenido de __Secure-1PSID"
+</code></pre>
+<p>Puedes crear un alias como he hecho yo:</p>
+<pre><code>
+alias bard='python3 -m Bard --session "contenido de __Secure-1PSID"'
+</code></pre>
+<h2>Conectándome vía SSH a mi VPS</h2>
+<pre><code>
+alias bard='ssh -t usuario@IP_Servidor python3 -m Bard --session "xxxxxxxxxxxxxxxxxxxxxx"'
+</code></pre>
+<h2>Utilizando Gotty</h2>
+<p>Correrá por el puerto 8094, permitirá 3 conexiones simultáneamente y se conectará vía SSH.</p>
+<pre><code>
+gotty -w  -c usuario:contraseña -p 8094  --title-format "Bard"  --max-connection 3  ssh -t vps 'python3 -m Bard --session "xxxxxxxxxxxxxxxxxxxxxxx"
+</code></pre>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://github.com/acheong08/Bard/issues/10">https://github.com/acheong08/Bard/issues/10</a></li>
+<li><a href="https://github.com/acheong08/Bard">https://github.com/acheong08/Bard</a></li>
+</ul>
+
+
+        <script>
+        let wdblogTtsSpeaking = false;
+        function toggleWdBlogTTS(btn) {
+          if (!('speechSynthesis' in window)) return alert('Tu navegador no soporta Text-to-Speech.');
+          if (wdblogTtsSpeaking) {
+            window.speechSynthesis.cancel();
+            wdblogTtsSpeaking = false;
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            return;
+          }
+          const clone = document.body.cloneNode(true);
+          clone.querySelectorAll('pre, code, nav, header, footer, script, style, .related-posts').forEach(e => e.remove());
+          const text = clone.textContent;
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'es-ES';
+          u.onend = () => { 
+            wdblogTtsSpeaking = false; 
+            btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'; 
+          };
+          window.speechSynthesis.speak(u);
+          wdblogTtsSpeaking = true;
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        }
+        </script>
+        <br><p>Publicado el domingo, 14 de mayo de 2023</p><br><br><br><br><br><p style="text-align: center;">Powered by <a href="https://github.com/ugeek/wdblog" target="_blank" rel="noopener">wdblog</a></p><p style="text-align: center;">Written from my<a href="https://en.wikipedia.org/wiki/WebDAV"> WebDAV</a> server and transformed from Markdown to HTML using JavaScript and <a href="https://github.com/showdownjs/showdown">showdown</a>.</p>
+</p> <p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>
