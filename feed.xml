@@ -21,132 +21,12 @@
       <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2026-04-20-desinstalar-ollama.html</guid>
     </item>
     <item>
-      <title><![CDATA[Brave Origin. No más Excusas para utilizar Brave]]></title>
-      <link>https://ugeek.github.io/posts/2026-04-16-brave-origin-no-mas-excusas-para-utilizar-brave.html</link>
-      <description><![CDATA[Estamos de suerte porque el mejor navegador, que tenía esta pequeña carencia de incluir un montón de complementos innecesarios para mucha gente, ahora nos da la posibilidad de utilizarse con las características básicas. Tenemos todas las virtudes y todo lo mejor de Brave en una versión, Brave Origin.]]></description>
-      <pubDate>Thu, 16 Apr 2026 20:51:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2026-04-16-brave-origin-no-mas-excusas-para-utilizar-brave.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Actualizado el Blog, Arch Linux y más...]]></title>
-      <link>https://ugeek.github.io/posts/2026-04-14-actualizado-el-blog-arch-linux-y-mas.html</link>
-      <description><![CDATA[En este podcast hablo de cómo he actualizado el blog con un nuevo sistema mediante mi servidor WebDAV. He apagado la Raspberry para tener como servidor mi mini PC. Además, he instalado Arch Linux y otras cosas, como la IA local.]]></description>
-      <pubDate>Tue, 14 Apr 2026 17:43:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2026-04-14-actualizado-el-blog-arch-linux-y-mas.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Actualizando el blog y haciendo cambios]]></title>
-      <link>https://ugeek.github.io/posts/2026-01-17-actualizando-el-blog-y-haciendo-cambios.html</link>
-      <description><![CDATA[Hablo un poco de todos los cambios que estoy haciendo en el blog... Post: Actualizando el blog y haciendo cambios]]></description>
-      <pubDate>Sat, 17 Jan 2026 19:40:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2026-01-17-actualizando-el-blog-y-haciendo-cambios.html</guid>
-    </item>
-    <item>
       <title><![CDATA[Actualización del Editor de Texto Micro a la Última Versión]]></title>
       <link>https://ugeek.github.io/blog/posts/2026-01-14-actualizacion-del-editor-de-texto-micro-a-la-ultima-version.html</link>
       <description><![CDATA[Este artículo explica detalladamente el procedimiento necesario para actualizar el editor de texto Micro, asegurándose de que la instalación incluya el binario más reciente obtenido directamente desde el repositorio oficial. Descarga e Instalación del Binario Para asegurar que el editor de texto Micro esté a la última versión, es indispensable obtener el archivo binario compatible con la arquitectura del sistema directamente desde el repositorio oficial de GitHub. Paso 1: Descargar el archivo binario Se recomienda utilizar el comando wget para obtener la versión más reciente. A continuación, se muestra un ejemplo utilizando la versión 2.0.15 para la arquitectura linux-arm64: wget github.com/zyedidia/micro/releases/download/v2.0.15/micro-2.0.15-linux-arm64.tar.gz Paso 2: Descomprimir el archivo Una vez descargado, se debe utilizar el comando tar para extraer el contenido del archivo comprimido: tar -xzf micro-2.0.15-linux-arm64.tar.gz Paso 3: Ejecución de prueba Se aconseja acceder al nuevo directorio creado y ejecutar el binario directamente para confirmar que la instalación se realizó con...]]></description>
       <pubDate>Tue, 13 Jan 2026 23:00:00 GMT</pubDate>
       <category><![CDATA[micro]]></category>
       <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2026-01-14-actualizacion-del-editor-de-texto-micro-a-la-ultima-version.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Replica de tu servidor WebDAV en tu móvil]]></title>
-      <link>https://ugeek.github.io/posts/2025-12-01-replica-de-tu-servidor-webdav-en-tu-movil.html</link>
-      <description><![CDATA[Replica de tu servidor WebDAV en tu móvil Post: Replica de tu servidor WebDAV en tu móvil]]></description>
-      <pubDate>Mon, 01 Dec 2025 06:57:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-12-01-replica-de-tu-servidor-webdav-en-tu-movil.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Creando Apps Android Y Extensiones del Navegador Con Gemini-cli]]></title>
-      <link>https://ugeek.github.io/posts/2025-08-11-creando-apps-android-y-extensiones-del-navegador-con-gemini-cli.html</link>
-      <description><![CDATA[Creando Apps Android Y Extensiones del Navegador Con Gemini-cli Post: Creando Apps Android Y Extensiones del Navegador Con Gemini-cli]]></description>
-      <pubDate>Mon, 11 Aug 2025 08:08:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-08-11-creando-apps-android-y-extensiones-del-navegador-con-gemini-cli.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Gemini-cli y mis IA's Favoritas]]></title>
-      <link>https://ugeek.github.io/posts/2025-07-07-gemini-cli-y-mis-ias-favoritas.html</link>
-      <description><![CDATA[Gemini-cli y mis IA's Favoritas Post: Gemini-cli y mis IA's Favoritas]]></description>
-      <pubDate>Mon, 07 Jul 2025 06:18:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-07-07-gemini-cli-y-mis-ias-favoritas.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Gemini 2.5 es buenísima]]></title>
-      <link>https://ugeek.github.io/posts/2025-05-27-gemini-25-es-buenisima.html</link>
-      <description><![CDATA[Gemini 2.5 es buenísima Post: Gemini 2.5 es buenísima]]></description>
-      <pubDate>Tue, 27 May 2025 08:34:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-05-27-gemini-25-es-buenisima.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[wdblog. Reescribiendo el código del blog y como tu puedes modificalo y adaptarlo]]></title>
-      <link>https://ugeek.github.io/posts/2025-04-24-wdblog-reescribiendo-el-codigo-del-blog-y-como-tu-puedes-modificalo-y-adaptarlo.html</link>
-      <description><![CDATA[wdblog. Reescribiendo el código del blog y como tu puedes modificalo Post: wdblog. Reescribiendo el código del blog y como tu puedes modificalo y adaptarlo]]></description>
-      <pubDate>Thu, 24 Apr 2025 07:27:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-04-24-wdblog-reescribiendo-el-codigo-del-blog-y-como-tu-puedes-modificalo-y-adaptarlo.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Pocketcast, Telegram, Deepseek, Mistral,...]]></title>
-      <link>https://ugeek.github.io/posts/2025-03-19-pocketcast-telegram-deepseek-mistral.html</link>
-      <description><![CDATA[Pocketcast, Telegram, Deepseek, Mistral,... Post: Pocketcast, Telegram, Deepseek, Mistral,...]]></description>
-      <pubDate>Wed, 19 Mar 2025 06:17:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-03-19-pocketcast-telegram-deepseek-mistral.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Dashboard y Actualidad]]></title>
-      <link>https://ugeek.github.io/posts/2025-02-28-dashboard-y-actualidad.html</link>
-      <description><![CDATA[Dashboard y Actualidad Post: Dashboard y Actualidad]]></description>
-      <pubDate>Fri, 28 Feb 2025 06:37:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-02-28-dashboard-y-actualidad.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Brave , Duck Duck Go]]></title>
-      <link>https://ugeek.github.io/posts/2025-02-17-brave-duck-duck-go.html</link>
-      <description><![CDATA[Brave , Duck Duck Go Post: Brave , Duck Duck Go]]></description>
-      <pubDate>Mon, 17 Feb 2025 10:07:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-02-17-brave-duck-duck-go.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Ollama en Raspberry o vps, Mistral, ...]]></title>
-      <link>https://ugeek.github.io/posts/2025-02-14-ollama-en-raspberry-o-vps-mistral.html</link>
-      <description><![CDATA[Ollama en Raspberry o vps, Mistral, ... Post: Ollama en Raspberry o vps, Mistral, ...]]></description>
-      <pubDate>Fri, 14 Feb 2025 08:05:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-02-14-ollama-en-raspberry-o-vps-mistral.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Fallos en cadena]]></title>
-      <link>https://ugeek.github.io/posts/2025-02-13-fallos-en-cadena.html</link>
-      <description><![CDATA[Fallos en cadena Post: Fallos en cadena]]></description>
-      <pubDate>Thu, 13 Feb 2025 06:30:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-02-13-fallos-en-cadena.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[Como avanza la IA y Fastidiando al personal]]></title>
-      <link>https://ugeek.github.io/posts/2025-02-12-como-avanza-la-ia-y-fastidiando-al-personal.html</link>
-      <description><![CDATA[Como avanza la IA y Fastidiando al personal Post: Como avanza la IA y Fastidiando al personal]]></description>
-      <pubDate>Wed, 12 Feb 2025 09:41:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-02-12-como-avanza-la-ia-y-fastidiando-al-personal.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[La que se está liando con la IA]]></title>
-      <link>https://ugeek.github.io/posts/2025-01-29-la-que-se-esta-liando-con-la-ia.html</link>
-      <description><![CDATA[La que se está liando con la IA Post: La que se está liando con la IA]]></description>
-      <pubDate>Wed, 29 Jan 2025 19:36:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2025-01-29-la-que-se-esta-liando-con-la-ia.html</guid>
     </item>
     <item>
       <title><![CDATA[Docker. Merino, un servidor proxy SOCKS5 en rust]]></title>
@@ -165,12 +45,132 @@
       <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2024-03-25-rss-google-news-generando-feeds-de-temas-personalizados.html</guid>
     </item>
     <item>
-      <title><![CDATA[Gestionando audios y vídeos en local con AntennaPod]]></title>
-      <link>https://ugeek.github.io/posts/2024-03-19-gestionando-audios-y-videos-en-local-con-antennapod.html</link>
-      <description><![CDATA[Gestionando audios y vídeos en local con AntennaPod Post: Gestionando audios y vídeos en local con AntennaPod]]></description>
-      <pubDate>Tue, 19 Mar 2024 08:19:00 GMT</pubDate>
-      <category><![CDATA[Podcast]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/posts/2024-03-19-gestionando-audios-y-videos-en-local-con-antennapod.html</guid>
+      <title><![CDATA[Android. Descargando vídeos de YouTube como podcast]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-12-12-android-descargando-videos-de-youtube-como-podcast.html</link>
+      <description><![CDATA[Quizás no sea tan importante generar un Feed de podcast para consumir los audios de YouTube. Con estas aplicaciones puedes escuchar o ver videos de todos los sitios web complatibles con yt-dlp offline. YouTube, Vimeo, Dailymotion, SoundCloud y más de 1600 sitios web son algunos de los sitios web de contenido multimedia compatibles. Aplicaciones Android Seal. Descargar videos Con Seal descargaremos todos los audios, compartiendo desde LibreTube o tu navegador con Seal. Es un Descargador de video/audio para Android basado en yt-dlp, diseñado con Material You. Caracteristicas: - Interfaz intuitiva: Seal cuenta con una interfaz de usuario fácil de usar y atractiva, lo que facilita la navegación y la reproducción de música. - Reproducción de música sin interrupciones: La aplicación garantiza una reproducción de música fluida y sin anuncios, lo que te permite disfrutar de tus canciones favoritas sin interrupciones. - Personalización avanzada: Seal te permite personalizar la apariencia de...]]></description>
+      <pubDate>Mon, 11 Dec 2023 23:00:00 GMT</pubDate>
+      <category><![CDATA[android]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-12-12-android-descargando-videos-de-youtube-como-podcast.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Manjaro Instalando y actualizando en modo Grafico]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-12-08-manjaro-instalando-y-actualizando-en-modo-grafico.html</link>
+      <description><![CDATA[Últimamente están habiendo problemas con las actualizaciones en Manjaro y el único modo de solucionarlo ha sido actualizar con pamac en modo gráfico. Este problema lo he tenido tanto en la versión de escritorio como en la versión de mi Raspberry Pi. En la parte final explico como hacerlo en la Raspberry Pi o dispositivo sin interfaz gráfica a modo de servidor. Lanzar pamac Si deseas utilizar la versión gráfica de Pamac para actualizar el sistema, puedes hacerlo a través de la interfaz gráfica de usuario. Para lanzar Pamac desde la terminal, puedes usar el siguiente comando: pamac-manager Esto abrirá la interfaz gráfica de Pamac, donde podrás buscar, instalar y actualizar aplicaciones. Si deseas actualizar todo el sistema, haz clic en el botón "Actualizar" en la pestaña "Actualizaciones". Si deseas actualizar solo los paquetes de software instalados, haz clic en el botón "Sincronizar" en la pestaña "Instalado". Permisos para Instalar,...]]></description>
+      <pubDate>Thu, 07 Dec 2023 23:00:00 GMT</pubDate>
+      <category><![CDATA[manjaro]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-12-08-manjaro-instalando-y-actualizando-en-modo-grafico.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Docker. Habilitar el cgroup memory en una Raspberry Pi para ver % de Memoria]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html</link>
+      <description><![CDATA[Artículos Podcasts Tags Si haces un docker stats y no ves el porcentaje de memoria que consumen tus dockers, es probable que no tengas habilitado del cggroup memory. Para habilitar el cgroup memory en una Raspberry Pi, necesitas modificar el archivo /boot/cmdline.txt y añadir los siguientes parámetros al final de la línea: cgroup_enable=memory cgroup_memory=1 cgroup_enable=cpuset Debes añadir todo en la misma línea, separado por un espacio. Por ejemplo, si tu archivo /boot/cmdline.txt tiene esta línea: console=serial0,115200 console=tty1 root=PARTUUID=738a4d67-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles Debes modificarla para que quede así: console=serial0,115200 console=tty1 root=PARTUUID=738a4d67-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles cgroup_enable=memory cgroup_memory=1 cgroup_enable=cpuset Estos parámetros le indican al kernel que active el subsistema de control de memoria y que lo monte en /sys/fs/cgroup/memory. Después de añadir estos parámetros, debes reiniciar la Raspberry Pi para que los cambios surtan efecto. Puedes comprobar si el cgroup memory está habilitado usando el...]]></description>
+      <pubDate>Fri, 24 Nov 2023 23:00:00 GMT</pubDate>
+      <category><![CDATA[docker]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-11-25-docker-habilitar-el-cgroup-memory-en-una-raspberry-pi-para-ver-de-memoria.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Docker. Dockge Gestionando mis Docker Compose de forma gráfica]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html</link>
+      <description><![CDATA[Un administrador orientado gestionar los Docker Compose en archivos compose.yaml, de un modo elegante, fácil y autohospedado. https://github.com/louislam/dockge]]></description>
+      <pubDate>Sat, 18 Nov 2023 23:00:00 GMT</pubDate>
+      <category><![CDATA[docker]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Brave Barra Lateral con Bing Cha]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-10-08-brave-barra-lateral-con-bing-cha.html</link>
+      <description><![CDATA[Si usas el navegador Brave o cualquier navegador basado en Chromium, puedes aprovechar para utilizar Bing Chat desde la barra lateral de tu navegador. Así podrás buscar y aprender sin tener que abrir una nueva pestaña o ventana. Lo mejor es que utilizar esta extensión para la barra lateral, hace posible que estes navegando mientras te respone a tus consultas y lo mejor de todo, la extensión hace de Bing Chat una experiencia más liviana que conectarte a bing desde otra pestaña. Instalación Instalar la extensión 3 para Brave o cualquier derivado de Chromium, puedes instalarla desde AI Chat sidebar for Chrome, del chrome web store y puedes acceder a su codigo en GitHub. Ahora: Logeate a tu cuenta de hotmail Ancla la extensión en la barra de extensiones Uso Si pulsas la extensión que puedes anclar en la barra de extensiones, se abrirá la barra lateral, pero hay un...]]></description>
+      <pubDate>Sat, 07 Oct 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[brave]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-10-08-brave-barra-lateral-con-bing-cha.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Caddy. Certificado https autofirmado red local]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-10-05-caddy-certificado-https-autofirmado-red-local.html</link>
+      <description><![CDATA[Hay servicios como Vaultwarden o floccus que necesitan una conexión https para que funcione en su versión web y quizás no quieres abrir esos servicio a la internet, siendo solo accesibles en red local pero con la conexiones cifradas. Voy a mostrarte como crear un certificado autofirmado para utilizarlo con Caddy y mediante proxy inverso habilitar a cualquier servicio la conexión https. Genera un certificado autofirmado Puedes generar un certificado autofirmado utilizando OpenSSL. Ejecuta el siguiente comandos en tu terminal: openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificado.crt Puedes ampliar mucho más días 9999 (27 años, 4 meses y 9 días) para despreocuparte con: openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout privateKey.key -out certificado.crt Te hará una serie de preguntas que se tienen que responder para que Caddy no de ningún error: A continuación, te muestro un ejemplo: Country Name (2 letter code): Respuesta:...]]></description>
+      <pubDate>Wed, 04 Oct 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[caddy]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-10-05-caddy-certificado-https-autofirmado-red-local.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[MPV. Solucionando el audio desincronizado por defecto en MPV]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html</link>
+      <description><![CDATA[Os hablé en el podcast que al conectar mis altavoces con Bluetooth Xiaomi con Google Home, sincronizados ambos en modo Stereo, cuando se reproduzco vídeos en mi proyector, hay una desincronización (delay) del audio de -1,3 segundos. Para solucionar este problema, al iniciar la reproducción tienes que acceder a: Ajustes (El icono de la tuerca) - Avanzado... - Retraso de audio y introducir el valor deseado. Esto hacerlo un momento puntual, está bien, pero cuando reproduces una y otra vez y siempre tienes el mismo problema, lo ideal sería añadirlo en el archivo de configuración de MPV y así siempre que reproduzcamos con MPV, el audio ya esté sincronizado por defecto. Modificando el archivo de configuración de MPV Para ajustar el retraso del audio en mpv, puedes usar la opción audio-delay en el archivo de configuración mpv.conf. Esta opción acepta un valor en segundos, que puede ser positivo o negativo....]]></description>
+      <pubDate>Sun, 03 Sep 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[mpv]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Android. Teclado Físico Bluetooth en Inglés, configurarlo en Español]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-09-03-android-teclado-fisico-bluetooth-en-ingles-configurarlo-en-espanol.html</link>
+      <description><![CDATA[Artículos Podcasts Tags Me he comprado un teclado Bluetooth en Aliexpress por unos 10 euros. Mi intención es convertir mi tablet de 10 pulgadas en un especie de portátil con Android. Pero como las letras del teclado están en Inglés, si no estás acostumbrado, puede ser una infierno cuando tienes que poner acentos o la letra ñ. Voy a explicaros como he cambiado el idioma al Español. Cambiando el Idioma del teclado de Inglés por defecto a Español Nos vamos a la sección Ajustes de tu tablet o móvil y en la cajetilla de búsqueda, escribiremos teclado. Entre las diferentes opciones, clicaremos sobre Teclado Físico. Es posible que por defecto esté en Inglés (ese es el problema). Si es así, cámbialo a Español. Si tienes varios teclados como yo, pon todos en Español. Ahora ya tendrás configurado tu teclado en Español. En cualquier aplicación escribe la tecla que hay a...]]></description>
+      <pubDate>Sat, 02 Sep 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[android]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-09-03-android-teclado-fisico-bluetooth-en-ingles-configurarlo-en-espanol.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Android. Mis Nuevas Apps imprescindibles 2023]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-08-13-android-mis-nuevas-apps-imprescindibles-2023.html</link>
+      <description><![CDATA[Tal como explicaba en mi último podcast, aquí os dejo los enlaces de las aplicaciones más interesantes para Android del 2023, o al menos hasta el momento. Plexamp Hace un tiempo Plex mejoró la posibilidad de tener integrado tu servidor de música con tu servidor multimedia de Plex. Para mejorar la experiencia, creo dos aplicaciones: una de escritorio y otra para dispositivos móviles que hasta hace unas semana eran de pago. Ahora es totalmente gratuita para todo el mundo pese a tener algunas pequeñas limitaciones. Puedes instalarla desde el Google Play en la siguiente URL: https://play.google.com/store/apps/details?id=tv.plex.labs.plexamp Llamafin Ahora que Plexamp es totalmente gratuita, un desarrollador sudafricano ha creado una aplicación similar, pero esta vez compatible con nuestro servidor Jellyfin. Está animada temprana de desarrollo, la verdad es que promete mucho. De Fomento no Open Source y puedes descargarla desde el Google Play Store en la siguiente URL: https://play.google.com/store/apps/details?id=com.llamafin.app Squawker Con...]]></description>
+      <pubDate>Sat, 12 Aug 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[android]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-08-13-android-mis-nuevas-apps-imprescindibles-2023.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[I3wm y sus Problemas con Manjaro]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html</link>
+      <description><![CDATA[Artículos Podcasts Tags Hay un problema conocido con la última versión de Manjaro y el escritorio i3wm que causa que las aplicaciones se abran lentamente. El problema es con xdg-desktop-portal-gnome que afecta a las aplicaciones basadas en gtk. Una solución temporal es eliminar este paquete con el siguiente comando: sudo pacman -Rdd xdg-desktop-portal-gnome.]]></description>
+      <pubDate>Tue, 18 Jul 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[i3wm]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[SSH. Solucionar el problema de conexión WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed.html</link>
+      <description><![CDATA[Si alguna vez te has encontrado con el mensaje de error "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" al intentar conectarte a un servidor SSH, no te preocupes, hay una solución simple. Este error ocurre cuando la identificación del host remoto ha cambiado desde la última vez que te conectaste, lo que puede ser resultado de varios escenarios, como una reinstalación del sistema operativo del servidor o cambios en la configuración de red. Para solucionar este problema, puedes utilizar el comando ssh-keygen -R. Este comando es parte de OpenSSH y se utiliza para eliminar las claves de host anteriores almacenadas en el archivo known_hosts. A continuación, te mostraremos cómo utilizar este comando para solucionar el problema de conexión SSH. Paso 1: Ejecuta ssh-keygen -R Abre una terminal y ejecuta el siguiente comando: ssh-keygen -R angel@192.168.1.100 Este comando elimina la clave de host asociada con el nombre de usuario angel y la...]]></description>
+      <pubDate>Sun, 16 Jul 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[ssh]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-07-17-ssh-solucionar-el-problema-de-conexion-warning-remote-host-identification-has-changed.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Cómo hacer funcionar la interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite en Linux]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-07-14-como-hacer-funcionar-la-interfaz-de-audio-usb-scarlett-2i2-3-gen-de-focusrite-en-linux.html</link>
+      <description><![CDATA[La interfaz de audio USB Scarlett 2i2 3.ª gen. de Focusrite es una interfaz de audio de 2 entradas y 2 salidas con conexión USB-C que permite grabar y reproducir audio con alta calidad y bajo ruido . En este artículo te explicare cómo hacerla funcionar en Linux. Inhabilitar el montado como interfaz de almacenamiento Cuando conectamos por primera vez nuestra interfaz Scarlett 2i2, por defecto se monta en nuestro sistema linux como si fuera una unidad de almacenamiento USB. Dentro de este directorio hay una serie de archivos para registrar nuestra interfaz. Para que esto no suceda y funcione correctamente en el sistema linux, es necesario seguir los siguientes pasos: - Desconecta la interfaz del cable usb - Mantén pulsado el botón de 48v durante un mínimo de 5 segundo a la vez que conectes el cable USB-C al PC. - Ahora ya no volverá a montarse al inicio...]]></description>
+      <pubDate>Thu, 13 Jul 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[scarlett]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-07-14-como-hacer-funcionar-la-interfaz-de-audio-usb-scarlett-2i2-3-gen-de-focusrite-en-linux.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[Firefox. Reducir el tamaño de las pestañas como en Brave, quitar marcadores y cambiar el tema]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-07-10-firefox-reducir-el-tamano-de-las-pestanas-como-en-brave-quitar-marcadores-y-cambiar-el-tema.html</link>
+      <description><![CDATA[Estoy utilizando Firefox nuevamente, pero después de estar utilizando Brave, veo las pestañas muy grandes. Vamos a ver como reducir el tamaño de las pestañas y dejarlas aproximadamente como Brave y de pasada, poner el tema oscuro. Cambiar el tamaño de las pestañas Para reducir el tamaño de las pestañas de Firefox, puedes seguir estos pasos: En la barra de direcciones de Firefox, escribe about:config y presiona Enter. Busca la preferencia browser.compactmode.show y cámbiala al valor true. Reinicia Firefox. Haz clic con el botón derecho del ratón en la barra de pestañas y selecciona Personalizar la barra de herramientas.... En el menú desplegable del botón Densidad, selecciona la opción Compacto (No mantenido). Haz clic en el botón Hecho. Ocultar Barra de Marcadores Para ocultar la barra de marcadores en Firefox, debes hacer lo siguiente: Haz clic en el espacio al lado de donde están las pestañas, clica al botón derecho...]]></description>
+      <pubDate>Sun, 09 Jul 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[firefox]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-07-10-firefox-reducir-el-tamano-de-las-pestanas-como-en-brave-quitar-marcadores-y-cambiar-el-tema.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[SilverBullet. Mi página Índice]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-07-08-silverbullet-mi-pagina-indice.html</link>
+      <description><![CDATA[Con SilverBullet puedes crearte una buena página índice con muchísimas opciones e información. Te dejo algunos ejemplos de los que tengo yo creados. Botones Es posible crear unos botones para diversas opciones, yo tengo 5 botones en la página de inicio: - Crear una nueva pagina - Buscar notas - Cambiar a tema oscuro - Mostrar Información sobre la nota actual y recuento del total de notas - Reindexar todas las notas {[Page: New]} {[Search Space]} {[Editor: Toggle Dark Mode]} {[Stats: Show]} {[Space: Reindex]} Plantillas Es necesario primero crear unas plantantillas, que nos permitirá listar las notas como si fueran hipervínculos interactivos, así será muy sencillo acceder a las notas con solo un clik: templete/link Crea la nota templete/link.md y copia: - [[{{name}}]] Esta plantilla solo mostrará el título de la nota templete/page Crea la nota templete/page.md y copia uno de los siguiente ejemplo. Te dejo tres opciones que puedes...]]></description>
+      <pubDate>Fri, 07 Jul 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[silverbullet]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-07-08-silverbullet-mi-pagina-indice.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[rclone: Montando mis notas para una rapida escritura y lectura.]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura.html</link>
+      <description><![CDATA[En los últimos años, he almacenado mis notas en un servidor remoto y he utilizado un script de mi creación para editarlas. Esto me ha permitido seleccionar la nota que deseo modificar y trabajar en ella localmente. Al editar notas en Markdown, es importante tener en cuenta algunos aspectos, como: - Manejar y sincronizar cientos o miles de archivos - Trabajar con archivos de pequeño tamaño Vamos a ver la mejor opción que me ha servidor a mi para montar mis notas y que sean accesibles desde otros servicios sin tener conflictos de sincronización entre local y nube remota. Comando de montaje de rclone en docker y su explicación En un foro he encontrado algunas de las opciones que hay aquí mezcladas con otras que ya utilizaba. Adjunto abajo la explicación por si quieres personalizarla, pero esta ha sido la mejor opción para montar mis notas markdown en local. -...]]></description>
+      <pubDate>Thu, 06 Jul 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[rclone]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-07-07-rclone-montando-mis-notas-para-una-rapida-escritura-y-lectura.html</guid>
+    </item>
+    <item>
+      <title><![CDATA[SilverBullet. Un servicio para editar y crear tus notas, tareas,... Markdown]]></title>
+      <link>https://ugeek.github.io/blog/posts/2023-06-13-silverbullet-un-servicio-para-editar-y-crear-tus-notas-tareas-markdown.html</link>
+      <description><![CDATA[SilverBullet es un servicio muy liviano que permite crear y editar notas en Markdown con muchisimas opciones personalizables. Es un proyecto de código abierto que nace con la idea de ofrecer una plataforma de escritura basada en Markdown que sea limpia, simple y potente. Su objetivo es facilitar la creación y publicación de documentos en línea, así como la gestión del conocimiento personal mediante el uso de extensiones llamadas /plugs/. Se basa en el concepto de /espacio/, que es una carpeta donde se almacenan los documentos (notas) en formato Markdown. Los documentos se pueden enlazar entre sí usando la sintaxis [ [enlace a otro documento]], lo que permite crear una red de conocimiento interconectado. Además, se pueden usar etiquetas, comentarios, imágenes y otros elementos para enriquecer el contenido. SilverBullet se implementa como una PWA (Progressive Web App) que funciona sin conexión después de la primera carga. Esto significa que se...]]></description>
+      <pubDate>Mon, 12 Jun 2023 22:00:00 GMT</pubDate>
+      <category><![CDATA[silverbullet]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-06-13-silverbullet-un-servicio-para-editar-y-crear-tus-notas-tareas-markdown.html</guid>
     </item>
   </channel>
 </rss>
