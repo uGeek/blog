@@ -1,19 +1,10 @@
 function initCopyButtons() {
-    // Elimina cualquier botón de copiar que ya exista en el DOM
-    document.querySelectorAll('.copy-btn').forEach(btn => btn.remove());
-    
-    // Elimina contenedores duplicados y saca los <pre> de vuelta
-    document.querySelectorAll('.code-container').forEach(container => {
-        const pre = container.querySelector('pre');
-        if (pre) {
-            container.parentNode.insertBefore(pre, container);
-        }
-        container.remove();
-    });
-
     const codeBlocks = document.querySelectorAll('pre');
 
     codeBlocks.forEach((pre) => {
+        // Evita duplicar el contenedor si ya existe
+        if (pre.parentNode.classList.contains('code-container')) return;
+
         const container = document.createElement('div');
         container.className = 'code-container';
         pre.parentNode.insertBefore(container, pre);
@@ -27,8 +18,11 @@ function initCopyButtons() {
         copyBtn.addEventListener('click', () => {
             const code = pre.querySelector('code');
             const element = code ? code : pre;
+
+            // Recoge el texto preservando el formato
             const textToCopy = element.innerText;
 
+            // Intenta copiar con la API moderna
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(textToCopy).then(() => {
                     showCopied(copyBtn);
