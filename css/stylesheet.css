@@ -22,10 +22,10 @@ body {
    INPUT DE BÚSQUEDA (Estilo Google - Alineado izquierda)
    ============================================================ */
 #tipue_search_input {
-    width: 60%;
-    max-width: 400px;
+    width: 30%; /* Reducido a la mitad (era 60%) */
+    max-width: 200px; /* Reducido a la mitad (era 400px) */
     padding: 12px 20px;
-    margin: 20px 0; /* Cambiado de 'auto' a '0' para alinear a la izquierda */
+    margin: 20px 0;
     display: block;
     border: 1px solid #dfe1e5;
     border-radius: 24px;
@@ -62,10 +62,9 @@ pre {
     padding: 15px;
     margin: 25px 0;
     border-radius: 8px;
-    position: relative; /* Necesario para posicionar el botón de copiar */
+    position: relative;
 }
 
-/* Estilos para el botón de copiar */
 .copy-btn {
     position: absolute;
     top: 8px;
@@ -140,7 +139,6 @@ tr:hover { background-color: #abb9b0; }
     h1, h2, h3, h4, h5 { color: #D358F7; }
     a { color: #337aff; }
     
-    /* Input en modo oscuro */
     #tipue_search_input {
         background-color: #2d2d2d;
         color: #f8f8f2;

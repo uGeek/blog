@@ -1,135 +1,51 @@
 function initCopyButtons() {
-    // Elimina cualquier botón de copiar que ya exista en el DOM
-    document.querySelectorAll('.copy-btn').forEach(btn => btn.remove());
-    
-    // Elimina contenedores duplicados y saca los <pre> de vuelta
-    document.querySelectorAll('.code-container').forEach(container => {
-        const pre = container.querySelector('pre');
-        if (pre) {
-            container.parentNode.insertBefore(pre, container);
-        }
-        container.remove();
-    });
-
     const codeBlocks = document.querySelectorAll('pre');
-
+    
     codeBlocks.forEach((pre) => {
-        const container = document.createElement('div');
-        container.className = 'code-container';
-        pre.parentNode.insertBefore(container, pre);
-        container.appendChild(pre);
-
+        // Creamos el botón
         const copyBtn = document.createElement('button');
         copyBtn.className = 'copy-btn';
         copyBtn.textContent = 'Copiar';
-        container.appendChild(copyBtn);
-
+        
+        // Insertamos el botón directamente dentro de la cajetilla <pre>.
+        // Como tu CSS ya tiene 'position: relative' en el pre, el botón se ubicará perfectamente en su esquina superior derecha.
+        pre.appendChild(copyBtn);
+        
         copyBtn.addEventListener('click', () => {
+            // Extraemos el texto a copiar asegurándonos de no incluir el texto del propio botón "📋 Copiar"
             const code = pre.querySelector('code');
-            const element = code ? code : pre;
-            const textToCopy = element.innerText;
-
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    showCopied(copyBtn);
-                }).catch(() => {
-                    fallbackCopy(textToCopy, copyBtn);
-                });
+            let textToCopy = '';
+            
+            if (code) {
+                textToCopy = code.textContent;
             } else {
-                fallbackCopy(textToCopy, copyBtn);
+                // Si por algún motivo no hay etiqueta <code>, clonamos el pre y borramos el botón antes de copiar el texto
+                const clone = pre.cloneNode(true);
+                const btn = clone.querySelector('.copy-btn');
+                if (btn) btn.remove();
+                textToCopy = clone.textContent;
             }
+            
+            // Lógica de copiado
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            
+            // Feedback visual de copiado exitoso
+            copyBtn.textContent = '✅ Copiado!';
+            copyBtn.classList.add('copied');
+            
+            setTimeout(() => {
+                copyBtn.textContent = 'Copiar';
+                copyBtn.classList.remove('copied');
+            }, 2000);
         });
     });
 }
 
-
-function fallbackCopy(text, btn) {
-    const textarea = document.createElement('textarea');
-    textarea.value = text;
-    textarea.style.position = 'fixed';
-    textarea.style.left = '-9999px';
-    textarea.style.top = '-9999px';
-    textarea.style.opacity = '0';
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-
-    try {
-        document.execCommand('copy');
-        showCopied(btn);
-    } catch (err) {
-        console.error('Error al copiar:', err);
-        btn.textContent = '❌ Error';
-        setTimeout(() => {
-            btn.textContent = 'Copiar';
-        }, 2000);
-    }
-
-    document.body.removeChild(textarea);
-}
-
-
-function showCopied(btn) {
-    btn.textContent = '✅ Copiado!';
-    btn.classList.add('copied');
-    setTimeout(() => {
-        btn.textContent = 'Copiar';
-        btn.classList.remove('copied');
-    }, 2000);
-}
-
-
-function convertUrlsToLinks() {
-    const urlRegex = /(https?:\/\/[^\s<>"']+)/g;
-    const walker = document.createTreeWalker(
-        document.body,
-        NodeFilter.SHOW_TEXT,
-        {
-            acceptNode(node) {
-                const parent = node.parentElement;
-                if (parent.closest('pre, code, a')) {
-                    return NodeFilter.FILTER_REJECT;
-                }
-                if (urlRegex.test(node.textContent)) {
-                    urlRegex.lastIndex = 0;
-                    return NodeFilter.FILTER_ACCEPT;
-                }
-                return NodeFilter.FILTER_SKIP;
-            }
-        }
-    );
-
-    const textNodes = [];
-    let node;
-    while ((node = walker.nextNode())) {
-        textNodes.push(node);
-    }
-
-    textNodes.forEach((textNode) => {
-        const parent = textNode.parentNode;
-        const fragment = document.createDocumentFragment();
-        const parts = textNode.textContent.split(urlRegex);
-
-        parts.forEach((part) => {
-            if (urlRegex.test(part)) {
-                urlRegex.lastIndex = 0;
-                const link = document.createElement('a');
-                link.href = part;
-                link.textContent = part;
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                fragment.appendChild(link);
-            } else {
-                fragment.appendChild(document.createTextNode(part));
-            }
-        });
-
-        parent.replaceChild(fragment, textNode);
-    });
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    initCopyButtons();
-    convertUrlsToLinks();
-});
+document.addEventListener('DOMContentLoaded', initCopyButtons);

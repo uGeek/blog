@@ -7,8 +7,104 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/blog/posts/2026-04-20-desinstalar-ollama.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2026-04-16-brave-origin-no-mas-excusas-para-utilizar-brave.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2026-04-14-actualizado-el-blog-arch-linux-y-mas.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2026-01-17-actualizando-el-blog-y-haciendo-cambios.html</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2026-01-14-actualizacion-del-editor-de-texto-micro-a-la-ultima-version.html</loc>
     <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-12-01-replica-de-tu-servidor-webdav-en-tu-movil.html</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-08-11-creando-apps-android-y-extensiones-del-navegador-con-gemini-cli.html</loc>
+    <lastmod>2025-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-07-07-gemini-cli-y-mis-ias-favoritas.html</loc>
+    <lastmod>2025-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-05-27-gemini-25-es-buenisima.html</loc>
+    <lastmod>2025-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-04-24-wdblog-reescribiendo-el-codigo-del-blog-y-como-tu-puedes-modificalo-y-adaptarlo.html</loc>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-03-19-pocketcast-telegram-deepseek-mistral.html</loc>
+    <lastmod>2025-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-02-28-dashboard-y-actualidad.html</loc>
+    <lastmod>2025-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-02-17-brave-duck-duck-go.html</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-02-14-ollama-en-raspberry-o-vps-mistral.html</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-02-13-fallos-en-cadena.html</loc>
+    <lastmod>2025-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-02-12-como-avanza-la-ia-y-fastidiando-al-personal.html</loc>
+    <lastmod>2025-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2025-01-29-la-que-se-esta-liando-con-la-ia.html</loc>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -21,6 +117,24 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2024-03-25-rss-google-news-generando-feeds-de-temas-personalizados.html</loc>
     <lastmod>2024-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2024-03-19-gestionando-audios-y-videos-en-local-con-antennapod.html</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2024-03-12-escuchando-los-videos-de-youtube-en-formato-podcast-sin-servidor.html</loc>
+    <lastmod>2024-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2024-03-06-rss-funnel-gestionando-y-optimizando-mis-feeds.html</loc>
+    <lastmod>2024-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -43,8 +157,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-11-20-dockge-servicio-para-gestionar-mis-docker-compose.html</loc>
+    <lastmod>2023-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-11-19-docker-dockge-gestionando-mis-docker-compose-de-forma-grafica.html</loc>
     <lastmod>2023-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-11-01-android-y-sus-aplicaciones-en-windows-y-linux.html</loc>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,6 +187,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-09-28-creando-mis-servicios-con-ia-chatgpt.html</loc>
+    <lastmod>2023-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-09-09-recomendando-podcasts-conserva-tu-musica-vinilo-y-nuevos-dockers-en-arm64.html</loc>
+    <lastmod>2023-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-09-04-mpv-solucionando-el-audio-desincronizado-por-defecto-en-mpv.html</loc>
     <lastmod>2023-09-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -73,14 +211,44 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-08-26-mi-experiencia-con-un-proyector-economico.html</loc>
+    <lastmod>2023-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-08-20-sugerencias-preguntas-markdown-y-mas.html</loc>
+    <lastmod>2023-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-08-13-mis-apps-android-imprescindibles-del-2023-y-alguna-cosa-mas.html</loc>
+    <lastmod>2023-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-08-13-android-mis-nuevas-apps-imprescindibles-2023.html</loc>
     <lastmod>2023-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-07-31-seguridad-en-mis-servicios.html</loc>
+    <lastmod>2023-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-07-19-i3wm-y-sus-problemas-con-manjaro.html</loc>
     <lastmod>2023-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-07-17-crea-aplicaciones-de-webs-e-instala-pwa.html</loc>
+    <lastmod>2023-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -115,8 +283,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-07-05-rss-news-voice-iniciando-servicios-automaticamente-con-caddy-el-adios-del-internet-que-conocemos.html</loc>
+    <lastmod>2023-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-06-13-silverbullet-el-mejor-servicio-de-notas-que-probado.html</loc>
+    <lastmod>2023-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-06-13-silverbullet-un-servicio-para-editar-y-crear-tus-notas-tareas-markdown.html</loc>
     <lastmod>2023-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-05-31-mi-red-de-notas.html</loc>
+    <lastmod>2023-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,6 +315,18 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2023-05-28-rss-bridge-una-herramienta-para-generar-feeds-rss-de-cualquier-sitio-web.html</loc>
     <lastmod>2023-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-05-26-flatnotes.html</loc>
+    <lastmod>2023-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-05-16-bard-de-google-en-tu-terminal.html</loc>
+    <lastmod>2023-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -151,8 +349,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-05-05-gpt-4-en-tu-terminal-con-bing-chat.html</loc>
+    <lastmod>2023-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-05-04-edge-gpt-bingchat-con-chatgpt4-en-mi-terminal.html</loc>
     <lastmod>2023-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-04-15-vps-gratuito-de-oracle-deshabilitar-paro-por-inactividad.html</loc>
+    <lastmod>2023-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -229,6 +439,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-03-25-mas-sobre-ia-y-mis-ultimos-articulos.html</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-03-25-copilot-de-edge-integracion-total-de-chatgpt-en-tu-navegacion.html</loc>
     <lastmod>2023-03-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -283,14 +499,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-03-17-dotfiles-con-chatgtp-bing-chat-sin-edge.html</loc>
+    <lastmod>2023-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-03-13-edge-en-manjaro-para-utilizar-bing-chat.html</loc>
     <lastmod>2023-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-03-11-chatgpt-y-mi-dashboard.html</loc>
+    <lastmod>2023-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-03-11-lxterminal-como-guake-en-i3wm.html</loc>
     <lastmod>2023-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-03-01-sendcroc-enviando-archivos-directorios-y-texto-entre-todos-tus-dispositivos.html</loc>
+    <lastmod>2023-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-02-21-brave-vs-firefox.html</loc>
+    <lastmod>2023-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -307,6 +547,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-02-14-notas-audiobookshelf-jellyfin.html</loc>
+    <lastmod>2023-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-02-06-servidor-ssh-en-termux-android.html</loc>
     <lastmod>2023-02-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -319,8 +565,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-01-26-encendido-remoto-de-pc-zsh-modo-markdown.html</loc>
+    <lastmod>2023-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-01-20-zsh-en-manjaro.html</loc>
     <lastmod>2023-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-01-19-multiapp-traduccion-de-zettel-notes-floccus-extensiones-firefox-mull.html</loc>
+    <lastmod>2023-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -333,6 +591,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2023-01-17-liberar-el-puerto-53-utilizado-por-systemd-resolved.html</loc>
     <lastmod>2023-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-01-16-raspberry-pi-con-manjaro.html</loc>
+    <lastmod>2023-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -355,6 +619,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-01-13-pc-de-solo-2gb-de-ram-actualizacion-zn-y-mas-cosas.html</loc>
+    <lastmod>2023-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-01-13-acceso-usando-credenciales-en-la-url-autenticacion-basica-por-http.html</loc>
     <lastmod>2023-01-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -363,6 +633,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2023-01-12-editar-markdown-con-gedit.html</loc>
     <lastmod>2023-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2023-01-11-autenticacion-con-usuario-y-contrasena-en-la-misma-url.html</loc>
+    <lastmod>2023-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -397,6 +673,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2023-01-06-full-text-rss-y-poner-usuario-contrasena-a-tus-servicios-con-caddy.html</loc>
+    <lastmod>2023-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2023-01-06-tigervnc-servidor-vnc-en-manjaro.html</loc>
     <lastmod>2023-01-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -423,6 +705,18 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2022-12-31-servidor-ssh-en-manjaro.html</loc>
     <lastmod>2022-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-12-29-el-porque-de-manjaro-y-no-ubuntu.html</loc>
+    <lastmod>2022-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-12-23-notas-manjaro-jellyfin-podcast.html</loc>
+    <lastmod>2022-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -463,6 +757,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-12-07-charla-con-atareao-sobre-servicios-y-mucho-mas.html</loc>
+    <lastmod>2022-12-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-12-07-docker-instalar-docker-docker-compose-y-portainer-en-arch-linux.html</loc>
     <lastmod>2022-12-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -487,6 +787,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-10-26-capturando-informacion-de-internet.html</loc>
+    <lastmod>2022-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-10-22-firefox-para-movil-en-2-minutos.html</loc>
+    <lastmod>2022-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-10-19-shaarli-cambiando-el-tema.html</loc>
     <lastmod>2022-10-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -499,8 +811,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-10-10-no-lo-dudes-freshrss-y-shaarli-son-la-mejor-opcion.html</loc>
+    <lastmod>2022-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-10-04-just-video-player-reproduccion-desde-la-nube.html</loc>
+    <lastmod>2022-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-09-30-firefox-navegador-movil.html</loc>
     <lastmod>2022-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-09-28-jellyfin-siempre-acaba-siendo-la-mejor-opcion.html</loc>
+    <lastmod>2022-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -513,6 +843,48 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2022-09-24-comprimiendo-archivos-pdf-desde-la-terminal.html</loc>
     <lastmod>2022-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-09-22-servidor-de-libros-comics-y-mangas-kavita.html</loc>
+    <lastmod>2022-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-09-14-utilizando-servicios-populares-manteniendo-tu-privacidad-los-backends.html</loc>
+    <lastmod>2022-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-09-08-guardando-el-contenido-de-mis-servicios.html</loc>
+    <lastmod>2022-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-09-05-servicios-para-podcast-audiolibros-aplicaciones-opensource-de-youtube-y-twitch.html</loc>
+    <lastmod>2022-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-09-02-algunas-de-las-aplicaciones-moviles-que-utilizo.html</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-08-24-domotica-y-mi-nuevo-navegador-en-android.html</loc>
+    <lastmod>2022-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-08-09-bloqueo-a-internet-o-servicios-por-tiempos.html</loc>
+    <lastmod>2022-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -571,6 +943,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-07-04-navega-rapido-y-filtrando-toda-la-publicidad-con-el-3-en-1.html</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-07-04-copiando-en-la-terminal-con-barra-de-proceso.html</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -619,6 +997,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-06-26-telegram-premium-conduit-vimusic.html</loc>
+    <lastmod>2022-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-06-24-configurar-una-ip-estatica-en-tu-raspberry-pi.html</loc>
     <lastmod>2022-06-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -631,8 +1015,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-06-13-kernel-panic-y-vuelta-a-empezar.html</loc>
+    <lastmod>2022-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-06-12-convertir-pagina-web-a-orgmode-con-pandoc.html</loc>
     <lastmod>2022-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-05-30-notas-servicios-con-arm64-y-aplicaciones-android.html</loc>
+    <lastmod>2022-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-05-17-mas-nubes-kodbox-aplicaciones-android.html</loc>
+    <lastmod>2022-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -649,6 +1051,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-05-12-profundizando-en-nextcloud.html</loc>
+    <lastmod>2022-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-05-11-nextcloud-services-notificaciones-desde-nextcloud.html</loc>
     <lastmod>2022-05-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -661,8 +1069,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-05-04-mis-aplicaciones-rss.html</loc>
+    <lastmod>2022-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-04-21-la-nube-no-siempre-es-la-mejor-opcion.html</loc>
+    <lastmod>2022-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-04-21-viendo-que-trae-de-nuevo-nextcloud-24.html</loc>
+    <lastmod>2022-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-03-29-gotty-terminal-en-tu-navegador-web.html</loc>
     <lastmod>2022-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-03-28-editor-micro-y-tus-scripts-con-termux.html</loc>
+    <lastmod>2022-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -691,6 +1123,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-03-21-consumiendo-twitch-y-youtube-como-podcast-con-audiobookshelf.html</loc>
+    <lastmod>2022-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-03-21-newpipe-la-aplicacion-predeterminada-en-android.html</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -699,6 +1137,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2022-03-15-twitch-dl-aplicacion-cli-para-descargar-videos-de-twitchtv.html</loc>
     <lastmod>2022-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-03-10-servidor-de-audiolibros-audiobookshelf.html</loc>
+    <lastmod>2022-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -721,6 +1165,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-02-24-youtube-sin-publicidad-y-con-aplicaciones-de-software-libre.html</loc>
+    <lastmod>2022-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-02-24-youtube-y-youtube-music-aplicaciones-open-source.html</loc>
     <lastmod>2022-02-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -733,8 +1183,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-02-14-navegador-librewolf-y-terminal-lilyterm.html</loc>
+    <lastmod>2022-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-02-08-raspberry-os-de-64bits-vale-la-pena-actualizar-y-te-explico-porque.html</loc>
+    <lastmod>2022-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-01-26-bot-matrix-en-bash.html</loc>
     <lastmod>2022-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-01-25-agrupando-todas-tus-nubes-en-una-con-rclone-ampliando-fire-tv-stick-y-uso-como-escritorio-remoto.html</loc>
+    <lastmod>2022-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -747,6 +1215,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2022-01-13-exportar-e-importar-claves-de-openkeychain.html</loc>
     <lastmod>2022-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2022-01-12-sincronizando-tus-bookmarks-con-floccus.html</loc>
+    <lastmod>2022-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -775,6 +1249,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2022-01-04-de-bitwarden-a-keepass-telegramtui-el-telegram-para-terminal-sonixd-player-para-jellyfin-y-subsonic.html</loc>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2022-01-04-telethon-downloader-bot-de-descargas-para-telegram.html</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -799,6 +1279,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-12-21-matrix-esta-de-moda.html</loc>
+    <lastmod>2021-12-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-12-16-volviendo-a-kodi.html</loc>
+    <lastmod>2021-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-12-13-startpages-lanzando-aplicaciones-desde-la-web.html</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-12-08-typora-como-lo-tengo-configurado.html</loc>
+    <lastmod>2021-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-12-08-typora-el-mejor-editor-multiplataforma-sale-de-la-beta-como-utilizarlo-y-configurarlo.html</loc>
     <lastmod>2021-12-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -811,8 +1315,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-12-02-blocky-servidor-dns-en-go-con-filosofia-kiss.html</loc>
+    <lastmod>2021-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-11-22-corriendo-aplicaciones-android-en-un-entorno-aislado.html</loc>
+    <lastmod>2021-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-11-20-usrbinenv-bash-o-binbash.html</loc>
     <lastmod>2021-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-11-10-prolongar-la-vida-de-tu-movil-cloudtunes-player-droif-ify-y-mas.html</loc>
+    <lastmod>2021-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -835,6 +1357,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-11-01-cifrado-de-notas-con-zettel-notes-y-todas-las-novedades.html</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-11-01-instalar-realvnc-en-ubuntu-con-appimage.html</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -847,14 +1375,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-10-29-utilizando-cualquier-nube-publico-privada-como-servidor-de-git.html</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-10-20-sincronizacion-de-tareas-compartidas.html</loc>
+    <lastmod>2021-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-10-20-rctodosync-comparte-tareas-del-todotxt-por-contextos-proyectos-o-palabras.html</loc>
     <lastmod>2021-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-10-13-gestionando-tareas-y-calendarios-en-texto-plano.html</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-10-09-montar-nubes-webdav-con-davfs2.html</loc>
     <lastmod>2021-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-10-07-pedro-hace-un-alto-en-el-camino.html</loc>
+    <lastmod>2021-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -883,8 +1435,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-09-28-el-servidor-de-musica-mas-ligero.html</loc>
+    <lastmod>2021-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-09-22-como-estoy-tomando-mis-notas-hoy.html</loc>
+    <lastmod>2021-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-09-15-rss-y-caldav-descentralizados-con-decsync.html</loc>
+    <lastmod>2021-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-09-13-omega-launcher-otro-interesante-lanzador-floss.html</loc>
     <lastmod>2021-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-09-09-utilizando-la-ram-de-tu-maquina-como-disco-duro.html</loc>
+    <lastmod>2021-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-09-07-xiaomi-mi-smart-band-de-un-modo-libre.html</loc>
+    <lastmod>2021-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -895,8 +1477,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-08-29-zettel-notes-mas-que-una-aplicacion-markdown-de-zettelkasten.html</loc>
+    <lastmod>2021-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-08-29-zettel-notes-la-mejor-aplicacion-zettelkasten-para-android.html</loc>
     <lastmod>2021-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-08-24-notas-y-tareas-multiplataforma-con-opentodolist.html</loc>
+    <lastmod>2021-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-08-15-charla-con-joan-de-geekland.html</loc>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -925,8 +1525,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-07-22-hablando-un-poco-de-todo.html</loc>
+    <lastmod>2021-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-07-19-conexion-segura-por-tls-al-dns-de-cloudflare.html</loc>
     <lastmod>2021-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-07-12-filestash.html</loc>
+    <lastmod>2021-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -939,6 +1551,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2021-07-04-pter-otra-aplicacion-de-todotxt-escrita-en-python-para-terminal-interfaz-grafica.html</loc>
     <lastmod>2021-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-07-02-servidor-de-geolocalizacion.html</loc>
+    <lastmod>2021-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -961,6 +1579,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-06-26-mis-servicios-favoritos-2021-eslibre2021.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-06-25-docker-dlna-no-esta-muerto-me-gusta-gerbera.html</loc>
     <lastmod>2021-06-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -973,8 +1597,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-06-22-fritter-y-kiss.html</loc>
+    <lastmod>2021-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-06-17-creando-redes-virtuales-y-saltando-todas-la-barreras-y-cg-nat-con-tailscale.html</loc>
+    <lastmod>2021-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-06-17-docker-tailscale.html</loc>
     <lastmod>2021-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-05-31-el-modo-mas-sencillo-de-instalar-y-administrar-wireguard-con-wg-easy.html</loc>
+    <lastmod>2021-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -997,8 +1639,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-05-24-homer-mi-dashboard-favorito.html</loc>
+    <lastmod>2021-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-05-24-homer-mi-dashboard.html</loc>
     <lastmod>2021-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-05-13-la-combinacion-perfecta-webdav-rclone-y-filestash.html</loc>
+    <lastmod>2021-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1011,6 +1665,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2021-05-07-joplin-para-terminal-llega-a-snap.html</loc>
     <lastmod>2021-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-05-05-styx-el-mejor-navegador-de-android-gestion-notas.html</loc>
+    <lastmod>2021-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1029,6 +1689,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2021-04-22-golink.html</loc>
     <lastmod>2021-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-04-20-servidor-privado-de-git-con-solo-ssh.html</loc>
+    <lastmod>2021-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1059,6 +1725,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2021-04-16-docker-filtrando-la-publicidad-y-el-acceso-a-redes-sociales-con-adguard-home.html</loc>
     <lastmod>2021-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-04-15-youtube-twitch-jellyfin-desde-mpv.html</loc>
+    <lastmod>2021-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1135,6 +1807,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-03-27-nekogram-x-alternativa-open-source-a-telegram-oficial.html</loc>
+    <lastmod>2021-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-03-27-pielauncher-mi-nuevo-lanzador-de-aplicaciones-para-android.html</loc>
     <lastmod>2021-03-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -1159,8 +1837,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-03-23-analizando-cual-es-la-mejor-nube.html</loc>
+    <lastmod>2021-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-03-21-mpv-chuleta-con-atajos-de-teclado.html</loc>
     <lastmod>2021-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-03-18-comandos-sin-sudo-nextcloud.html</loc>
+    <lastmod>2021-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1173,6 +1863,18 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2021-03-16-optimizando-nextcloud-para-ganar-fluidez.html</loc>
     <lastmod>2021-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-03-15-actualizacion-de-jellyfin-jellyfin-en-fdroid-nextcloud-radio.html</loc>
+    <lastmod>2021-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-03-10-tu-pornhub-autohospedado-y-privado.html</loc>
+    <lastmod>2021-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1213,6 +1915,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-03-05-servidor-de-musica-en-nextcloud-con-api-de-subsonic.html</loc>
+    <lastmod>2021-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-03-02-ganando-fluidez-en-nextcloud-owncloud.html</loc>
+    <lastmod>2021-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-03-02-trabajos-en-segundo-plano-de-nextcloud-y-owncloud.html</loc>
     <lastmod>2021-03-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -1225,14 +1939,44 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-02-25-nextcloud-21-porque-nextcloud-siempre-marca-la-diferencia.html</loc>
+    <lastmod>2021-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-02-25-instalacion-de-nextcloud-21-con-docker-oficial.html</loc>
     <lastmod>2021-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-02-19-tsacdop-un-nuevo-podcatchers-open-source.html</loc>
+    <lastmod>2021-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-02-19-proxy-inverso-con-caddy.html</loc>
     <lastmod>2021-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-02-17-nginx-proxy-manager-certificados-lets-encrypt-para-seres-humanos.html</loc>
+    <lastmod>2021-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-02-11-actualizacion-del-servidor-webdav-zerotier.html</loc>
+    <lastmod>2021-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-02-08-owncloud-con-almacenamiento-externo-gonic-podgrab.html</loc>
+    <lastmod>2021-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1249,8 +1993,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-02-05-gonic-con-soporte-podcast.html</loc>
+    <lastmod>2021-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-02-05-instalando-la-ultima-version-de-qutebrowser.html</loc>
     <lastmod>2021-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-02-03-nube-loca-solucion-a-dudas.html</loc>
+    <lastmod>2021-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-01-31-renovarse-o-morir-owncloud-se-reescribe-en-go-y-se-convierte-en-la-mejor-nube.html</loc>
+    <lastmod>2021-01-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1267,8 +2029,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2021-01-28-montando-mi-servidor-de-mensajeria-matrix-synapse.html</loc>
+    <lastmod>2021-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2021-01-28-servidor-de-mensajeria-matrix-synapse-en-raspberry-ubuntu-debian-con-docker.html</loc>
     <lastmod>2021-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-01-26-ni-whatsapp-signal-o-telegram-tu-propio-servidor-de-mensajeria.html</loc>
+    <lastmod>2021-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-01-19-tiddlywiki-en-webdav.html</loc>
+    <lastmod>2021-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2021-01-14-podgrab-mi-nuevo-servidor-de-podcast.html</loc>
+    <lastmod>2021-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1315,6 +2101,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-12-31-launchers-open-source-android.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-12-30-grabar-lo-que-suena-en-tu-ordenador.html</loc>
     <lastmod>2020-12-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -1351,6 +2143,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-12-14-vim-vs-emacs-con-atareao.html</loc>
+    <lastmod>2020-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-12-08-telegram-en-android-tv-y-amazon-fire-tv-stick-con-telegram-media-player.html</loc>
+    <lastmod>2020-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-12-07-conectandote-por-ssh-introduciendo-la-contrasena-en-una-unica-linea-de-terminal.html</loc>
     <lastmod>2020-12-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -1363,6 +2167,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-12-04-alternativas-a-google-fotos-con-mosqueteroweb.html</loc>
+    <lastmod>2020-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-11-15-jellyfin-skin-manager-repositorio-para-cambiar-el-tema-de-tu-jellyfin.html</loc>
     <lastmod>2020-11-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1371,6 +2181,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2020-10-29-nuevas-dns-de-cloudflare.html</loc>
     <lastmod>2020-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-10-28-s-screen-procesos-en-segundo-plano-de-un-modo-sencillo.html</loc>
+    <lastmod>2020-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1389,6 +2205,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2020-10-24-anadiendo-texto-al-principio-de-cada-linea-en-emacs.html</loc>
     <lastmod>2020-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-10-19-el-sustituto-natural-a-google-keep-de-software-libre.html</loc>
+    <lastmod>2020-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1417,14 +2239,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-10-05-xiaomi-mi-smart-band-4c-no-es-tan-mala-como-la-pintan.html</loc>
+    <lastmod>2020-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-10-05-crear-enlaces-simbolicos-a-otros-directorios-o-archivos.html</loc>
     <lastmod>2020-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-09-28-ahora-si-arrancando-mi-raspberry-4-desde-un-ssd.html</loc>
+    <lastmod>2020-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-09-21-compartiendo-archivos-directorios-o-texto-con-croc.html</loc>
+    <lastmod>2020-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-09-20-croc-la-aplicacion-que-nos-permite-enviar-o-compartir-archivos-directorios-texto-a-cualquier-dispositivo-este-donde-este-de-un-modo-facil-con-la-terminal.html</loc>
     <lastmod>2020-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-09-17-servidor-de-musica-la-alternativa-a-airsonic-es-navidrome.html</loc>
+    <lastmod>2020-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1495,6 +2341,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-07-29-novedades-jellyfin.html</loc>
+    <lastmod>2020-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-07-11-escritorio-remoto-con-nomachine-nuevos-clientes-jellyfin-y-telemetria-de-ubuntu.html</loc>
+    <lastmod>2020-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-07-07-filerun-utilizando-tu-hora-local.html</loc>
     <lastmod>2020-07-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -1503,6 +2361,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2020-07-06-filerun-cambiando-el-idioma-por-defecto.html</loc>
     <lastmod>2020-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-07-02-filerun-nube-de-sincronizacion-de-archivos-similar-a-nextcloud-owncloud-pero-mas-liviana.html</loc>
+    <lastmod>2020-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1537,8 +2401,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-06-13-la-mejor-aplicacion-de-notas-multiplataforma-de-software-libre-joplin.html</loc>
+    <lastmod>2020-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-06-13-joplin-desktop-joplin-para-terminal-y-webclipper.html</loc>
     <lastmod>2020-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-06-11-mejora-la-velocidad-de-ttrss-y-proximo-podcast.html</loc>
+    <lastmod>2020-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1563,6 +2439,18 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2020-06-01-mumble-el-docker-del-servidor-de-voip-de-software-libre.html</loc>
     <lastmod>2020-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-05-30-plus-messenger-ahora-permite-traducir-mensajes-de-telegram.html</loc>
+    <lastmod>2020-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-05-27-disfrutando-mas-que-nunca-de-mis-suscripciones-rss-con-freshrss-shaarli-wallabag-y-feedme.html</loc>
+    <lastmod>2020-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1597,8 +2485,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-05-18-velocidad-en-ubuntu-2004.html</loc>
+    <lastmod>2020-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-05-09-zram-doblando-la-ram-y-no-utilizando-quemando-la-sd-de-mi-raspberry.html</loc>
     <lastmod>2020-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-05-07-el-mejor-y-mas-rapido-servidor-de-musica-con-la-api-de-subsonic.html</loc>
+    <lastmod>2020-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1615,8 +2515,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-05-04-ubuntu-2004-en-nuestra-raspberry-y-placa-arm.html</loc>
+    <lastmod>2020-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-04-26-instalar-ubuntu-2004-en-una-raspberry-o-servidor-arm-y-que-hacer-despues-de-instalarlo.html</loc>
     <lastmod>2020-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-04-16-zerotier-alternativa-a-una-vpn-tambien-por-docker.html</loc>
+    <lastmod>2020-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1635,6 +2547,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2020-04-08-varias-cuentas-de-telegram-en-un-mismo-pc.html</loc>
     <lastmod>2020-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-04-07-servidor-de-calendario-tareas-y-contactos.html</loc>
+    <lastmod>2020-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1663,6 +2581,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-04-01-podcast-crear-contenedores-con-dockerc.html</loc>
+    <lastmod>2020-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-04-01-etesync-tareas-contactos-y-calendarios-sincronizadas-de-extremo-a-extremo.html</loc>
     <lastmod>2020-04-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -1687,6 +2611,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-03-09-como-hago-el-backup-de-mis-fotos.html</loc>
+    <lastmod>2020-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-03-09-el-mejor-y-mas-ligero-cliente-para-tu-escritorio-de-jellyfin-jellyfin-cli.html</loc>
     <lastmod>2020-03-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -1695,6 +2625,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2020-02-28-telegram-desktop-atajos-de-teclado.html</loc>
     <lastmod>2020-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-02-27-la-mejor-aplicacion-de-notas-para-terminal-simplenote-cli.html</loc>
+    <lastmod>2020-02-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1711,6 +2647,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-02-12-configurar-wireguard-con-wgc.html</loc>
+    <lastmod>2020-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-02-12-archivar-tareas-de-tu-orgmode-en-emacs.html</loc>
     <lastmod>2020-02-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1719,6 +2661,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2020-02-11-wireguard-en-2-minutos-con-wgc.html</loc>
     <lastmod>2020-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-02-06-wireguard-en-tu-raspberry-pi.html</loc>
+    <lastmod>2020-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1741,6 +2689,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2020-01-28-tus-tareas-con-todotxt.html</loc>
+    <lastmod>2020-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2020-01-27-aprendiendo-todotxt-todotxt-cli.html</loc>
     <lastmod>2020-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -1749,6 +2703,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2020-01-22-nuevo-firmware-de-la-raspberry-4-para-bajar-la-temperatura.html</loc>
     <lastmod>2020-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2020-01-21-recuperando-un-viejo-monitor-con-mi-raspberry.html</loc>
+    <lastmod>2020-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1867,8 +2827,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-12-12-creando-nuevas-maquinas-virtuales-con-esxi.html</loc>
+    <lastmod>2019-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-12-11-instalando-ssh-en-fedora-centos-o-redhat.html</loc>
     <lastmod>2019-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-12-05-renombra-y-actualiza-tu-contenido-multimedia-con-tiny-media-manager.html</loc>
+    <lastmod>2019-12-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1887,6 +2859,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-11-20-test-de-velocidad-en-la-terminal.html</loc>
     <lastmod>2019-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-11-14-compilando-emacs-y-nano.html</loc>
+    <lastmod>2019-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1921,6 +2899,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-11-07-gotify-un-servidor-de-notificaciones-muy-sencillo-de-instalar.html</loc>
+    <lastmod>2019-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-11-06-docker-gotify-tu-servidor-de-notificaciones.html</loc>
     <lastmod>2019-11-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -1935,6 +2919,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-11-01-rclone-instalando-la-ultima-version.html</loc>
     <lastmod>2019-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-10-31-bsync-el-rsync-bidireccional.html</loc>
+    <lastmod>2019-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1981,6 +2971,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-10-23-servidor-de-archivos-webdav.html</loc>
+    <lastmod>2019-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-10-23-crea-tu-cron-de-un-modo-grafico.html</loc>
     <lastmod>2019-10-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -2005,6 +3001,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-10-20-dos-recomendaciones.html</loc>
+    <lastmod>2019-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-10-15-cron-ejemplos.html</loc>
     <lastmod>2019-10-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -2013,6 +3015,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-10-11-calendario-en-la-terminal.html</loc>
     <lastmod>2019-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-10-09-el-mejor-y-mas-ligero-servidor-de-musica-supysonic.html</loc>
+    <lastmod>2019-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2041,6 +3049,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-10-03-wallabag-en-2-minutos.html</loc>
+    <lastmod>2019-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-10-01-comando-dockers-en-2-minutos.html</loc>
+    <lastmod>2019-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-10-01-docker-wallabag.html</loc>
     <lastmod>2019-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -2049,6 +3069,18 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-09-30-extraer-audio-de-un-video-con-ffmpeg.html</loc>
     <lastmod>2019-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-09-27-probablemente-el-mejor-editor-markdown-text.html</loc>
+    <lastmod>2019-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-09-25-nextcloud-en-2-minutos.html</loc>
+    <lastmod>2019-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2071,8 +3103,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-09-20-lo-que-no-te-cuentan-de-la-xiaomi-mi-band-4.html</loc>
+    <lastmod>2019-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-09-18-emacs-siempre-a-la-ultima-version-betas-edge-gracias-a-snap.html</loc>
     <lastmod>2019-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-09-17-telegram-desktop-y-rclone-browser-en-tu-servidor-o-raspberry.html</loc>
+    <lastmod>2019-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2089,8 +3133,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-09-12-redmi-airdots-en-2-minutos.html</loc>
+    <lastmod>2019-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-09-11-convertir-de-h265-a-h264.html</loc>
     <lastmod>2019-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-09-10-docker-a-otro-nivel.html</loc>
+    <lastmod>2019-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2113,8 +3169,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-09-06-raspberry-4-temperatura-neutralizada.html</loc>
+    <lastmod>2019-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-09-01-descarga-automatizada-de-mis-notas-en-paper-dropbox.html</loc>
+    <lastmod>2019-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-09-01-backup-de-mis-notas-de-paper-dropbox.html</loc>
     <lastmod>2019-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-08-29-borrar-contenedores-imagenes-volumenes-y-redes-de-tus-dockers-con-prune.html</loc>
+    <lastmod>2019-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2185,6 +3259,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-08-01-fire-stick-amazon-vs-xiaomi-mi-tv-vs-chromecast-en-2-minutos.html</loc>
+    <lastmod>2019-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-07-26-actualizacion-automatica-de-tus-dockers-con-watchtower-o-ouroboros.html</loc>
     <lastmod>2019-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2197,6 +3277,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-07-23-ugeek-en-2-minutos.html</loc>
+    <lastmod>2019-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-07-23-docker-en-ubuntu-1804.html</loc>
     <lastmod>2019-07-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -2205,6 +3291,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-07-23-plugin-zsh-autosuggestions-autocompletado-en-la-terminal.html</loc>
     <lastmod>2019-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-07-22-mi-nuevo-minipc.html</loc>
+    <lastmod>2019-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2223,6 +3315,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-07-13-anadir-cajetilla-de-codigo-en-orgmode-como-antes.html</loc>
     <lastmod>2019-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-07-11-entre-una-tostadora-o-una-raspberry-pi-4-con-atareao-bonus-track.html</loc>
+    <lastmod>2019-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2263,8 +3361,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-07-04-almacenamiento-ilimitado-en-tu-raspberry-o-servidor-con-rclone.html</loc>
+    <lastmod>2019-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-07-03-dale-almacenamiento-ilimitado-a-tu-raspberry-servidor-o-pc-con-rclone.html</loc>
     <lastmod>2019-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-06-25-raspberry-4-se-acabo-el-cuello-de-botella.html</loc>
+    <lastmod>2019-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-06-17-muy-buena-aplicacion-de-podcast-capsule.html</loc>
+    <lastmod>2019-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2281,14 +3397,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-06-06-domotica-facil-y-para-todos.html</loc>
+    <lastmod>2019-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-06-02-descargando-videos-de-internet-con-youtube-dl.html</loc>
     <lastmod>2019-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-05-15-podcast-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html</loc>
+    <lastmod>2019-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-05-15-docker-letsencript-accediendo-a-todos-mis-servicios-desde-cualquier-lugar-sin-vpn.html</loc>
     <lastmod>2019-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-05-07-podcast-el-adios-a-plex-y-emby-llega-jellyfin.html</loc>
+    <lastmod>2019-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2319,6 +3453,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-04-17-crear-archivos-gitkeep-de-forma-recursiva-mediante-un-script.html</loc>
     <lastmod>2019-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-04-11-podcast-de-controla-tu-raspberry-servidor-o-pc-desde-telegram.html</loc>
+    <lastmod>2019-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2383,6 +3523,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-y-categorias-telegram.html</loc>
+    <lastmod>2019-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-03-28-enviando-imagenes-audios-archivos-con-mi-bot-de-telegram-de-una-sola-linea-de-terminal.html</loc>
     <lastmod>2019-03-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -2401,14 +3547,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-03-14-crea-un-bot-de-telegram-con-bash-muy-facil.html</loc>
+    <lastmod>2019-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-03-14-crea-un-bot-de-telegram-con-bash-y-una-sola-linea-de-terminal.html</loc>
     <lastmod>2019-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-03-11-notas-y-documentos-en-la-nube-para-compartir-trabajar-en-equipo.html</loc>
+    <lastmod>2019-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-03-10-simplenote-en-emacs.html</loc>
     <lastmod>2019-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-02-27-aplicaciones-a-la-ultima-en-tu-raspberry-o-servidor.html</loc>
+    <lastmod>2019-02-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2439,6 +3603,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-02-08-no-todo-es-echo-tambien-existe-printf.html</loc>
     <lastmod>2019-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-02-07-enviar-archivos-a-la-papelera-desde-la-terminal.html</loc>
+    <lastmod>2019-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2475,6 +3645,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-01-31-crear-alias.html</loc>
     <lastmod>2019-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-01-30-33-servicios-de-software-libre-en-un-servidor-gratis-que-puedes-utilizar.html</loc>
+    <lastmod>2019-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2521,6 +3697,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ugeek.github.io/posts/2019-01-23-alternativa-para-sincronizar-tus-calendarios-contactos-rss-tareas.html</loc>
+    <lastmod>2019-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ugeek.github.io/blog/posts/2019-01-21-crear-el-feed-para-el-podcast-en-tu-blog-con-jekyll.html</loc>
     <lastmod>2019-01-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -2541,6 +3723,12 @@
   <url>
     <loc>https://ugeek.github.io/blog/posts/2019-01-17-gpg-cifrado-de-archivos-simetrico.html</loc>
     <lastmod>2019-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2019-01-14-proyectos-nuevos-y-el-poder-de-la-terminal.html</loc>
+    <lastmod>2019-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2647,8 +3835,800 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ugeek.github.io/blog/posts/2026-04-20-desinstalar-ollama.html</loc>
-    <lastmod>2026-04-20</lastmod>
+    <loc>https://ugeek.github.io/posts/2018-12-13-escuchar-podcast-a-medida-y-dos-bots-de-telegram.html</loc>
+    <lastmod>2018-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-12-10-cambio-de-filosofia.html</loc>
+    <lastmod>2018-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-12-03-crea-tu-propio-docker-si-no-existe.html</loc>
+    <lastmod>2018-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-11-30-pocket-cast-en-tu-escritorio-linux-mediante-snap.html</loc>
+    <lastmod>2018-11-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-11-26-gitlab-novedades-de-syncthing-y-orgzly.html</loc>
+    <lastmod>2018-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-11-21-gnu-linux-emacs-porque.html</loc>
+    <lastmod>2018-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-11-05-como-actualizar-tus-dockers.html</loc>
+    <lastmod>2018-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-10-29-sincronizacion-selectiva-en-syncthing-markdown-en-emacs-blog-jekyll-escritorio-i3.html</loc>
+    <lastmod>2018-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-10-19-muchos-servicios-dietpi-y-mucho-mas-en-el-crossover-con-jose-jimenez.html</loc>
+    <lastmod>2018-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-10-15-como-gestiono-mis-notas-markdown.html</loc>
+    <lastmod>2018-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-10-10-podcast-iniciandonos-en-emacs-y-org-mode-de-un-modo-muy-muy-facil.html</loc>
+    <lastmod>2018-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-09-19-el-mejor-metodo-para-crear-gestionar-y-automatizar-notas-tareas-hojas-de-calculo.html</loc>
+    <lastmod>2018-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-09-16-hablando-con-atareao-y-mosqueteroweb-de-servidores-en-casa-vps.html</loc>
+    <lastmod>2018-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-09-12-xiaomi-mi-band-3-de-un-modo-libre.html</loc>
+    <lastmod>2018-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-08-27-miscelania-veraniega-maraton-linuxero-texto-plano.html</loc>
+    <lastmod>2018-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-07-27-hablando-de-servicios-y-servidores-entre-amigos.html</loc>
+    <lastmod>2018-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-07-19-xiaomi-mi-band-3-y-fileexplorer-pro.html</loc>
+    <lastmod>2018-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-07-10-existe-un-internet-sin-publicidad.html</loc>
+    <lastmod>2018-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-07-08-tres-apps-de-mensajeria-con-total-privacidad.html</loc>
+    <lastmod>2018-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-06-29-android-tv-8-y-arduino-chino.html</loc>
+    <lastmod>2018-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-06-26-son-todas-nuestras-apps-tan-seguras-a-nivel-de-privacidad.html</loc>
+    <lastmod>2018-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-06-22-la-mejor-aplicacion-de-podcast.html</loc>
+    <lastmod>2018-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-05-31-podcasts-en-plex-scripts-graficamente-con-zenity-y-yad-anchor.html</loc>
+    <lastmod>2018-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-05-25-servidor-de-ebooks-con-calibre.html</loc>
+    <lastmod>2018-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-05-23-docker-en-que-ando-liado.html</loc>
+    <lastmod>2018-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-05-17-como-montar-contenedores-docker.html</loc>
+    <lastmod>2018-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-05-08-docker-en-raspberry.html</loc>
+    <lastmod>2018-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-05-04-masterclass-plex-2-crossover-con-bateria2x100-y-rapejim.html</loc>
+    <lastmod>2018-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-04-26-la-nube-mas-segura-dentro-y-fuera-de-tu-red-local.html</loc>
+    <lastmod>2018-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-04-25-varios-temas-notas-markdown.html</loc>
+    <lastmod>2018-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-04-20-xiaomi-mi-box.html</loc>
+    <lastmod>2018-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-04-19-rclone.html</loc>
+    <lastmod>2018-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-04-16-reles-para-el-gpio-y-proximos-podcast.html</loc>
+    <lastmod>2018-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-03-23-lplayer-un-reproductor-ultra-ligero-para-linux.html</loc>
+    <lastmod>2018-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-03-22-joplin-el-evernote-del-software-libre.html</loc>
+    <lastmod>2018-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-03-18-crossover-con-bateria2x100-masterclass-plex.html</loc>
+    <lastmod>2018-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-03-15-kodexplorer-el-navegador-de-carpetas-web-para-raspberry-o-servidor.html</loc>
+    <lastmod>2018-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-03-14-el-github-gitlab-de-mi-raspberry-gitea.html</loc>
+    <lastmod>2018-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-02-23-respuestas-a-consultas-y-newpipe.html</loc>
+    <lastmod>2018-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-02-22-tiny-tiny-rss-feedme-y-voice.html</loc>
+    <lastmod>2018-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-02-21-iniciarse-en-gnulinux-y-aprender-con-la-terminal.html</loc>
+    <lastmod>2018-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-02-09-kanboard-con-notificaciones-en-telegram.html</loc>
+    <lastmod>2018-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-02-01-screen-y-la-terminal.html</loc>
+    <lastmod>2018-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-01-26-telegram-audio-y-video-en-streaming.html</loc>
+    <lastmod>2018-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-01-25-telegram-x.html</loc>
+    <lastmod>2018-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-01-23-arrancar-raspberry-desde-usb.html</loc>
+    <lastmod>2018-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-01-18-recalbox-consola-de-juegos-retrokodi.html</loc>
+    <lastmod>2018-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2018-01-15-nextcloud-talk-y-script-para-instalar-nextcloud.html</loc>
+    <lastmod>2018-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-12-20-reproductor-de-podcast-y-2-app-de-oferta.html</loc>
+    <lastmod>2017-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-12-15-nas-vs-servidor-linux.html</loc>
+    <lastmod>2017-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-12-11-slimbook-one-el-3-en-1.html</loc>
+    <lastmod>2017-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-12-03-recomendaciones-y-proximos-podcast.html</loc>
+    <lastmod>2017-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-11-09-grabadora-de-audio-en-oferta.html</loc>
+    <lastmod>2017-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-10-28-novedades-anchor-y-como-enlazo-mis-audios.html</loc>
+    <lastmod>2017-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-10-26-aplicacion-gratis-de-podcast-y-musica-streaming.html</loc>
+    <lastmod>2017-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-10-25-android-es-explorer-y-varios-exploradores-de-carpetas.html</loc>
+    <lastmod>2017-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-09-05-un-servidor-en-mi-casa-podcast-del-maraton-linuxero-2017.html</loc>
+    <lastmod>2017-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-09-02-respuestas-a-preguntas-de-los-oyentes-y-maraton-linuxero.html</loc>
+    <lastmod>2017-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-08-30-me-explicais-como-tomais-vuestras-notas-y-que-es-ugeekradio.html</loc>
+    <lastmod>2017-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-08-08-porque-se-descarga-tan-rapido-la-bateria-de-mi-android.html</loc>
+    <lastmod>2017-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-08-05-anchor.html</loc>
+    <lastmod>2017-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-07-27-copia-remota-de-vuestra-sd-mas-snaps.html</loc>
+    <lastmod>2017-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-07-12-eficiencia-de-servicios-y-aplicaciones-notas-entre-keep-onenote-paper-emacs.html</loc>
+    <lastmod>2017-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-07-05-raspberry-pi-esta-hecha-para-mi.html</loc>
+    <lastmod>2017-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-07-05-android-limpia-tu-telefono-por-dentro.html</loc>
+    <lastmod>2017-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-07-05-miscelanea-nextcloud-12-resilio-rsync.html</loc>
+    <lastmod>2017-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-06-25-nextcloud-resilio-syncthing-que-nube-elijo.html</loc>
+    <lastmod>2017-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-06-21-tiddlywiki-una-wiki-en-un-unico-archivo-y-multiplataforma.html</loc>
+    <lastmod>2017-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-06-17-resilio-una-nube-ilimitada-donde-el-control-de-tus-datos-los-tienes-tu.html</loc>
+    <lastmod>2017-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-06-14-con-linux-es-posible.html</loc>
+    <lastmod>2017-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-06-09-domotica-con-mi-raspberry-pi-usemos-el-gpio.html</loc>
+    <lastmod>2017-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-06-02-docker-en-10-minutos.html</loc>
+    <lastmod>2017-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-06-01-la-terminal-mas-facil-con-alias.html</loc>
+    <lastmod>2017-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-25-2-aplicaciones-de-notas-alternativas-que-utilizo.html</loc>
+    <lastmod>2017-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-24-android-multicuentas-gestion-de-servicios-raspberry-pi.html</loc>
+    <lastmod>2017-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-18-multicuenta-de-telegram-en-tu-pc-de-escritorio-y-wire.html</loc>
+    <lastmod>2017-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-17-android-videoder-y-llamadas-de-telegram.html</loc>
+    <lastmod>2017-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-17-nuevos-cambios.html</loc>
+    <lastmod>2017-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-12-telefonica-esta-siendo-atacada.html</loc>
+    <lastmod>2017-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-10-synapse.html</loc>
+    <lastmod>2017-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-06-jekyll-o-wordpress.html</loc>
+    <lastmod>2017-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-04-adios-blogger-hola-github.html</loc>
+    <lastmod>2017-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-05-01-que-ando-haciendo-nuevas-publicaciones-y-mas.html</loc>
+    <lastmod>2017-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-30-instalando-syncthing-en-ubuntu-antergos-y-raspberry-pi.html</loc>
+    <lastmod>2017-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-28-encuentro-de-amiguetes.html</loc>
+    <lastmod>2017-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-26-se-quemo-la-sd-comparacion-de-consumos-entre-pc-nas-microserver-raspberry-pi.html</loc>
+    <lastmod>2017-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-21-sincronizacion-de-carpetas-entre-dispositivos-syncthing-resilio-y-dukto.html</loc>
+    <lastmod>2017-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-12-crossover-con-salmorejo-geek-donde-hablamos-de-mastodon-ubuntu-telegram-y-mucho-mas.html</loc>
+    <lastmod>2017-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-11-la-web-de-jekyll-en-github-va-tomando-forma.html</loc>
+    <lastmod>2017-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-10-bot-de-telegram-ifttt.html</loc>
+    <lastmod>2017-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-09-el-atareao-visita-el-crossover-de-la-semana.html</loc>
+    <lastmod>2017-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-06-antergos-ocnews-de-nextcloud-y-jekyll.html</loc>
+    <lastmod>2017-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-06-ubuntu-y-el-adios-de-unity.html</loc>
+    <lastmod>2017-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-02-aplicacion-notes-de-nextcloud-y-crea-tus-bots-de-telegram.html</loc>
+    <lastmod>2017-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-04-01-crossover-con-mosqueteroweb-masterclass-de-freenas-docker-y-virtualizacion-mediante-proxmox-y-esxi.html</loc>
+    <lastmod>2017-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-30-llamadas-de-telegram-ya-estan-aqui-y-3-bots-que-os-encantaran.html</loc>
+    <lastmod>2017-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-30-podcast-con-frank-de-bateria2x100-servidores-linux-y-nas-lo-mismo-pero-diferente.html</loc>
+    <lastmod>2017-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-28-bots-de-telegram-sustitutos-a-shazam-y-busqueda-de-articulos-dentro-del-bot-de-pocket.html</loc>
+    <lastmod>2017-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-28-mi-hp-proliant-microserver-gen8.html</loc>
+    <lastmod>2017-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-24-bots-en-telegram-bot-de-pocket.html</loc>
+    <lastmod>2017-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-24-miscelanea-de-viernes.html</loc>
+    <lastmod>2017-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-22-keepass-como-gestiono-mis-contrasenas.html</loc>
+    <lastmod>2017-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-21-mumble-voip-de-software-libre-nextcloud-wallabag-y-kdenlive.html</loc>
+    <lastmod>2017-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-17-miscelanea-de-viernes.html</loc>
+    <lastmod>2017-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-16-instala-un-servidor-de-mensajeria-tipo-whatsapp-o-telegram-y-de-software-libre-con-xmppjabber.html</loc>
+    <lastmod>2017-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-14-instala-una-vpn-openvpn-en-ubuntu-o-raspberry-pi-con-pivpn.html</loc>
+    <lastmod>2017-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-11-podcast-con-frank-de-bateria2x100-hablamos-de-como-gestionamos-nuestras-fotos-actualidad-y-sorteo-del-libro-del-ano.html</loc>
+    <lastmod>2017-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-08-metodo-mas-completo-para-recopilar-notas-org-mode.html</loc>
+    <lastmod>2017-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-07-conectate-remotamente-a-tu-raspberry-pi-con-dataplicity.html</loc>
+    <lastmod>2017-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-04-entrevista-a-chema-y-juan-dos-desarrolladores-de-software-libre-de-igaliacom-en-el-mwc17.html</loc>
+    <lastmod>2017-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-03-02-entrevista-con-arturo-suarez-directivo-del-cloud-de-canonical-ubuntu.html</loc>
+    <lastmod>2017-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-28-ubuntu-en-el-mobile-world-congress.html</loc>
+    <lastmod>2017-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-25-podcast-con-frank-de-bateria2x100-hablamos-de-como-gestionamos-nuestra-notas-y-mucho-mas.html</loc>
+    <lastmod>2017-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-23-dokuwiki-nueva-forma-de-tomar-mis-notas-monta-tu-wiki-con-dokuwiki-o-mediawiki.html</loc>
+    <lastmod>2017-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-21-como-montar-wallabag-el-pocket-o-instapaper-de-software-libre-y-lo-mejor-de-todo-en-tu-servidor.html</loc>
+    <lastmod>2017-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-18-podcast-con-frank-de-bateria2x100-hablando-de-plex-nextcloud.html</loc>
+    <lastmod>2017-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-17-que-es-un-servidor-dudas-oyentes-servidor-web.html</loc>
+    <lastmod>2017-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-16-como-ampliar-el-almacenamiento-de-nextcloud-combinar-con-nubes-publicas-y-hacer-copias-de-mis-fotos.html</loc>
+    <lastmod>2017-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-15-notas-en-nextcloud-y-markdown.html</loc>
+    <lastmod>2017-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-14-news-y-freshrss-gestor-de-noticias-rss.html</loc>
+    <lastmod>2017-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-14-bis-f-droid-tienda-android-de-aplicaciones-de-software-libre-y-actualizar-las-noticias-en-nextcloud.html</loc>
+    <lastmod>2017-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-13-como-actualizar-nextcloud-y-salir-del-modo-de-mantenimiento.html</loc>
+    <lastmod>2017-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-11-podcast-con-frank-de-bateria2x100-hablando-un-poco-de-todo.html</loc>
+    <lastmod>2017-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-10-cloudready-el-chromium-os-de-bolsillo.html</loc>
+    <lastmod>2017-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-09-crea-tu-podcast-en-3-simples-pasos-y-totalmente-gratis.html</loc>
+    <lastmod>2017-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-08-como-gestiono-mis-notas.html</loc>
+    <lastmod>2017-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-07-linux-es-una-alternativa-real.html</loc>
+    <lastmod>2017-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-05-el-trello-de-software-libre-wekan-y-kanboard-para-raspberry-pi-el-sistema-kanban-en-tu-servidor.html</loc>
+    <lastmod>2017-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-02-paper-de-dropbox.html</loc>
+    <lastmod>2017-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-02-01-servidor-linux-vs-qnap-synology.html</loc>
+    <lastmod>2017-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-01-31-nextcloud-instalar-tu-nube-en-menos-de-2-minutos.html</loc>
+    <lastmod>2017-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-01-30-de-que-va-esto-de-ugeek.html</loc>
+    <lastmod>2017-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ugeek.github.io/posts/2017-01-26-hola-mundo.html</loc>
+    <lastmod>2017-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
