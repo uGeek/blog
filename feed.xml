@@ -13,6 +13,14 @@
     <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <generator>wdblog</generator>
     <item>
+      <title><![CDATA[Desinstalar Ollama]]></title>
+      <link>https://ugeek.github.io/blog/posts/2026-04-20-desinstalar-ollama.html</link>
+      <description><![CDATA[Tenia ollama instalado en mi máquina y la desinstalación de herramientas a veces puede resultar complicada, especialmente si quedan residuos que podrían afectar otras instalaciones, como Docker. En este artículo te muestro este script que que encontré y permite desinstalar completamente Ollama. Pasos para desinstalar Ollama: Ejecutar el Script como Administrador: Asegúrate de tener privilegios de administrador. Usa sudo para ejecutar el script. Detener Contenedores de Docker: Si Ollama se está ejecutando como un contenedor de Docker, el script lo detendrá y eliminará. Elimina la Instalación Local: Si Ollama se encuentra instalado localmente, el script detiene el servicio, deshabilita su inicio automático, elimina el archivo del servicio y el binario correspondiente. Limpieza Final: Elimina archivos restantes, usuarios y grupos asociados con Ollama. Este procedimiento asegura que Ollama se elimine completamente, permitiendo un uso óptimo de Docker sin conflictos. #!/bin/bash echo -e "${BLUE} Script de Desinstalación de Ollama${NC}"echo -e "${BLUE}-------------------------${NC}" #...]]></description>
+      <pubDate>Mon, 20 Apr 2026 15:41:00 GMT</pubDate>
+      <category><![CDATA[ollama]]></category>
+      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2026-04-20-desinstalar-ollama.html</guid>
+    </item>
+    <item>
       <title><![CDATA[Actualización del Editor de Texto Micro a la Última Versión]]></title>
       <link>https://ugeek.github.io/blog/posts/2026-01-14-actualizacion-del-editor-de-texto-micro-a-la-ultima-version.html</link>
       <description><![CDATA[Este artículo explica detalladamente el procedimiento necesario para actualizar el editor de texto Micro, asegurándose de que la instalación incluya el binario más reciente obtenido directamente desde el repositorio oficial. Descarga e Instalación del Binario Para asegurar que el editor de texto Micro esté a la última versión, es indispensable obtener el archivo binario compatible con la arquitectura del sistema directamente desde el repositorio oficial de GitHub. Paso 1: Descargar el archivo binario Se recomienda utilizar el comando wget para obtener la versión más reciente. A continuación, se muestra un ejemplo utilizando la versión 2.0.15 para la arquitectura linux-arm64: wget github.com/zyedidia/micro/releases/download/v2.0.15/micro-2.0.15-linux-arm64.tar.gz Paso 2: Descomprimir el archivo Una vez descargado, se debe utilizar el comando tar para extraer el contenido del archivo comprimido: tar -xzf micro-2.0.15-linux-arm64.tar.gz Paso 3: Ejecución de prueba Se aconseja acceder al nuevo directorio creado y ejecutar el binario directamente para confirmar que la instalación se realizó con...]]></description>
@@ -163,14 +171,6 @@
       <pubDate>Mon, 12 Jun 2023 22:00:00 GMT</pubDate>
       <category><![CDATA[silverbullet]]></category>
       <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-06-13-silverbullet-un-servicio-para-editar-y-crear-tus-notas-tareas-markdown.html</guid>
-    </item>
-    <item>
-      <title><![CDATA[gpt-cli: una herramienta para interactuar con diferentes modelos de lenguaje generativo]]></title>
-      <link>https://ugeek.github.io/blog/posts/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html</link>
-      <description><![CDATA[JH Joselu, nos recomendaba en el grupo de uGeek en Telegram una alternativa a edge-gpt. gpt-cli es una interfaz de línea de comandos chatbot. Esto le permite tener conversaciones interactivas con robots diferentes, incluyendo GPT4 GRATIS. Instalación Clona el repositorio git clone https://github.com/TheLime1/gpt-cli.git Situate dentro del directorio clonado y: pip install -r requirements.txt Ejecutar el GPT CLI app: python gpt_cli.py Conseguir - Conectate a https://poe.com/ y logeate a tu cuenta - Pulsa en el candado en la barra de direcciones de brave y selecciona Cookies - Desplega en poe.com y en la carpetita poe pulsa sobre el icono de la galleta - Copia la secuencia de números, letras y símbolos que hay en el apartado Contenido.Pegalos en un archivo que crearemos llamado token.txt dentro del directorio donde está gpt_cli.py. Ya tienes tus propias Cookies Iniciando Ejecuntado gpt-cli python gpt_cli.py y selecciona uno de los chat bots: __ _ ______ __...]]></description>
-      <pubDate>Sun, 28 May 2023 22:00:00 GMT</pubDate>
-      <category><![CDATA[chatgpt]]></category>
-      <guid isPermaLink="true">https://ugeek.github.io/blog/posts/2023-05-29-gpt-cli-una-herramienta-para-interactuar-con-diferentes-modelos-de-lenguaje-generativo.html</guid>
     </item>
   </channel>
 </rss>

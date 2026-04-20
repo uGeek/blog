@@ -9546,5 +9546,21 @@
     ],
     "audioUrl": "",
     "imageUrl": "https://ugeek.github.io/blog/images-blog/dlna.png"
+  },
+  {
+    "originalName": "Desinstalar Ollama",
+    "fileName": "desinstalar-ollama",
+    "title": "Desinstalar Ollama",
+    "description": "Tenia ollama instalado en mi máquina y la desinstalación de herramientas a veces puede resultar complicada, especialmente si quedan residuos que podrían afectar otras instalaciones, como Docker. En este artículo te muestro este script que que encontré y permite desinstalar completamente Ollama. Pasos para desinstalar Ollama: Ejecutar el Script como Administrador: Asegúrate de tener privilegios de administrador. Usa sudo para ejecutar el script. Detener Contenedores de Docker: Si Ollama se está ejecutando como un contenedor de Docker, el script lo detendrá y eliminará. Elimina la Instalación Local: Si Ollama se encuentra instalado localmente, el script detiene el servicio, deshabilita su inicio automático, elimina el archivo del servicio y el binario correspondiente. Limpieza Final: Elimina archivos restantes, usuarios y grupos asociados con Ollama. Este procedimiento asegura que Ollama se elimine completamente, permitiendo un uso óptimo de Docker sin conflictos. #!/bin/bash echo -e \"${BLUE}🤖 Script de Desinstalación de Ollama${NC}\"echo -e \"${BLUE}-------------------------${NC}\" #...",
+    "date": "2026-04-20 17:41",
+    "updatedDate": "",
+    "category": "ollama",
+    "tags": [
+      "ollama",
+      "docker",
+      "script"
+    ],
+    "audioUrl": "",
+    "imageUrl": "https://ugeek.github.io/blog/images-blog/ugeek.png"
   }
 ]
